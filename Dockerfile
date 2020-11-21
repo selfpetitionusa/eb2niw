@@ -1,6 +1,9 @@
 # develop stage
 FROM node:lts-alpine as develop-stage
+ARG VERSION
 WORKDIR /app
+RUN npm version $VERSION
+RUN echo package.json
 COPY package*.json ./
 COPY yarn.lock ./
 RUN yarn install
