@@ -5,7 +5,7 @@ WORKDIR /app
 COPY package*.json ./
 COPY yarn.lock ./
 RUN npm version $VERSION
-RUN echo package.json
+RUN cat package.json
 RUN yarn install
 COPY . .
 # build stage
