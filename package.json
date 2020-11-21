@@ -1,6 +1,6 @@
 {
   "name": "tutomy-frontend",
-  "version": "0.1.0",
+  "version": "112.1.12",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
