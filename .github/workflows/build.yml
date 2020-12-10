@@ -27,7 +27,7 @@ jobs:
         push: true
         build-args: VERSION=${{ env.BUILD_VERSION }}
         tags: |
-          pwierucki/registry:latest
-          pwierucki/registry:${{ env.BUILD_VERSION }}
+          pwierucki/tutomy-frontend:latest
+          pwierucki/tutomy-frontend:${{ env.BUILD_VERSION }}
 
 
