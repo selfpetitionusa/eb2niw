@@ -46,7 +46,7 @@
                                                         <div class="d-none d-sm-block">
                                                             <div class="row">
                                                                 <div class="col-6">
-                                                                    <p style="color: #6084a4; font-size: medium">Fill out a 6-question survey  about online tutoring</p>
+                                                                    <p style="color: #6084a4; font-size: medium">Fill out a 6-question survey about online tutoring</p>
                                                                     <a href="https://docs.google.com/forms/d/e/1FAIpQLSfVN4XavrzDgfg8XE3guult0aNoztYdFbXZs-7bL0EWc0aamQ/viewform" class="btn btn-primary mt-5 d-block mx-auto" style="text-transform:none;">Claim VIP access</a>
                                                                 </div>
                                                                 <div class="col-6">
@@ -55,7 +55,7 @@
                                                             </div>
                                                         </div>
                                                         <div class="d-block d-sm-none">
-                                                            <p style="color: #6084a4; font-size: medium">Fill out a 6-question survey  about online tutoring</p>
+                                                            <p style="color: #6084a4; font-size: medium">Fill out a 6-question survey about online tutoring</p>
                                                             <div class="row">
                                                                 <div class="col-6 align-self-end">
                                                                     <a href="https://docs.google.com/forms/d/e/1FAIpQLSfVN4XavrzDgfg8XE3guult0aNoztYdFbXZs-7bL0EWc0aamQ/viewform" class="btn btn-primary mt-5 d-block mx-auto" style="text-transform:none;">Claim VIP access</a>
