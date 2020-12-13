@@ -118,15 +118,25 @@ export default {
          addEmail(email) {
             if (!email) return;
             var noticeMessage = "🎉 Your account has been saved  🎉";
-            var modal = true;
+             const url = `/api/lead`;
+             const requestOptions = {
+                 method: "POST",
+                 headers: {"Content-Type" : "application/json"},
+                 body: JSON.stringify({ email: email })
+             };
+             fetch(url, requestOptions).then(async response => {
+                 if (response.ok) {
+                     this.$refs['modal-1'].show();
+                     this.$store.commit('setSeen');
+                 } else {
+                     noticeMessage = "This email address is already registered";
+                 }
+                 this.message = noticeMessage;
+                 this.email = '';
+             });
 
 
-            if(modal) {
-                this.$refs['modal-1'].show();
-                this.$store.commit('setSeen');
-            }
-            this.message = noticeMessage;
-            this.email = '';
+
         },
         randomPassword(length) {
             var result           = '';

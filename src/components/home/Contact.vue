@@ -74,14 +74,13 @@
                 if(!this.validateEmail(this.contact_email)) {
                     this.contact_notice = "The email address is badly formatted.";
                 } else {
-                    const url = `https://us-central1-tutor-landing.cloudfunctions.net/sendEmail?name=${this.contact_name}&email_from=${this.contact_email}&message=${this.contact_message}`;
+                    const url = `/api/contact`;
                     const requestOptions = {
-                        method: "GET",
-                        headers: {"Content-Type" : "application/json"}
+                        method: "POST",
+                        headers: {"Content-Type" : "application/json"},
+                        body: JSON.stringify({ name: this.contact_name, email: this.contact_email, message: this.contact_message })
                     };
-                    fetch(url, requestOptions);
-                    this.show_contact = false;
-
+                    fetch(url, requestOptions).then(this.show_contact = false)
                 }
             },
             validateEmail(email) {
