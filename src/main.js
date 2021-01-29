@@ -11,7 +11,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { router } from './router';
 import './assets/style/custom.scss';
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
 
 library.add(fas)
 Vue.component('font-awesome-icon', FontAwesomeIcon)

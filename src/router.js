@@ -1,6 +1,7 @@
 import VueRouter from 'vue-router';
 // Pages
 import Home from './views/Home';
+import Profile from './views/Profile';
 
 export const router = new VueRouter({
     mode: 'history',
@@ -9,6 +10,7 @@ export const router = new VueRouter({
       return { x: 0, y: 0 };
     },
     routes: [
-      { path: '/', component: Home }
+      { path: '/', component: Home },
+      { path: '/profile', component: Profile }
     ]
 });
