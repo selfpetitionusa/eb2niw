@@ -11,6 +11,6 @@ export const router = new VueRouter({
     },
     routes: [
       { path: '/', component: Home },
-      { path: '/profile', component: Profile }
+      { path: '/profile/:token', component: Profile }
     ]
 });

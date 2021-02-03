@@ -2530,22 +2530,12 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    li {
-        list-style: none;
+    div {
         display: flex;
         justify-content: center;
-        padding: 5px;
-        /* reset styles (optional): */
+
     }
 
-    li::before {
-        content: '';
-        margin-right: 7px;
-        width: 30px;
-        height: 30px;
-        display: inline-block;
-        background-image: url('../img/tick_icon.png');
-    }
 }
 
 
@@ -2562,5 +2552,29 @@ body {
 .my-carousel{
     &::-webkit-scrollbar {
         display: none;  /* Safari and Chrome */
+    }
+}
+
+@media (min-width: 576px) {
+    .tu-container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .tu-container  {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .tu-container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .tu-container {
+        max-width: 1325px;
     }
 }
