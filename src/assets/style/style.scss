@@ -2525,6 +2525,30 @@ body {
     height:100vh;
 }
 
+@media (max-width: 991px) {
+    .tu-card-container {
+        margin-top: 15px;
+        height: calc(100% - 76px);
+    }
+}
+
+@media (min-width: 992px) {
+    .tu-card-container {
+        margin-top: 15px;
+        height: calc(100% - 76px);
+        overflow-y: auto;
+    }
+}
+
+.tu-card {
+    border-radius: 15px;
+    background-color: white;
+    margin-top: 15px;
+
+    &:first-of-type {
+        margin-top: 0;
+    }
+}
 
 .ul-icon {
     display: flex;
@@ -2553,6 +2577,14 @@ body {
     &::-webkit-scrollbar {
         display: none;  /* Safari and Chrome */
     }
+}
+
+.tu-container{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 @media (min-width: 576px) {

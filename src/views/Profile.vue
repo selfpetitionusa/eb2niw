@@ -1,10 +1,10 @@
 <template>
   <div class="d-flex" style="background-color:#f9f6f6; width: 100%; height:100%;position: relative; overflow-x: hidden">
       <div class="background-rectangular" style="position: absolute"></div>
-        <div class="tu-container" style="height: 100%; margin: auto">
-          <div class="row" style="padding-top: 146px; height: 100%">
+        <div class="tu-container" style="height: 100%; padding-top: 146px; margin: auto">
+          <div class="row" style="height: 100%">
 
-            <div class="col-12 col-xl-3 col-lg-4 col-md-12 " >
+            <div class="col-12 col-xl-3 col-lg-4 col-md-12" >
                 <div style="background-color:white; border-radius: 12px; position: relative; padding: 20px">
                     <img src="../assets/img/photo.png" width="146" height="145" style="position: absolute; left:50%; margin-left: -73px; top:-64px; border: solid 7px white; border-radius: 50%; box-shadow: 1px 4px 6px #888888;" />
                     <div style="margin-top: 114px; font-size: 35px; font-weight: 700; text-align: center">{{response.profile.firstName}} {{response.profile.lastName}}</div>
@@ -30,7 +30,7 @@
             </div>
             <div class="col-12 col-xl-9  col-lg-8 col-md-12" style="height: 100%;">
                 <div style="position: relative; height: 100%;">
-                    <div class="d-none d-sm-none d-lg-block" style="position: absolute;top:0; left:0; right: 0; height: 61px; background-color: white; border-radius: 15px 15px 0 0;" >
+                    <div class="d-none d-sm-none d-lg-block" style="height: 61px; background-color: white; border-radius: 15px 15px 0 0;" >
                         <ul class="test px-xl-5 px-1" style="display: flex; justify-content: space-around; align-items: center; height: 100%; font-size: 20px; font-weight: 500; color: #6084A4;">
                             <li style="display: inline-block;">about me</li>
                             <li style="display: inline-block;">subjects</li>
@@ -40,8 +40,8 @@
                         </ul>
 
                     </div>
-                    <div style="position: relative; top: 61px;height: calc(100% - 61px); overflow-y: auto;">
-                        <div style="border-radius: 15px; background-color: white; margin-top: 15px; padding: 42px 50px 42px;" >
+                    <div class="tu-card-container">
+                        <div class="tu-card" style="padding: 42px 50px 42px;" >
                             <div><h2 style="font-size: 35px;color: black">{{response.profile.headline}}</h2></div>
                             <div style="margin-left: 48px; margin-top: 20px;">
                                     <div style="display: flex; align-items: center">
@@ -72,7 +72,7 @@
                                 <p style="color: #0E314C;font-size: 16px; line-height: 25px;"  v-for="bio in response.profile.bio.split(/\r?\n/)" :key="bio" >{{bio}}</p>
                             </div>
                         </div>
-                        <div style="border-radius: 15px; background-color: white; margin-top: 15px; padding: 42px 20px 70px;">
+                        <div class="tu-card" style="padding: 42px 20px 70px;">
                             <div style="display:flex; align-items: center">
                                 <div style="background-color: #DF7870; width:8px; height: 45px;"></div>
                                 <div style="margin-left: 10px;padding-top: 5px;"><h2 style="font-size: 35px;color: black;">Subjects</h2></div>
@@ -123,8 +123,7 @@
                                 <img src="../assets/img/students-icon.svg"/> <div style="margin-left:7px; font-size: 22px;color: #0E314C;">My students are</div> <div style="margin-left:7px;font-size: 22px;font-weight: 700;color: #5457C1;">{{response.profile.studentsProfile}}</div>
                             </div>
                         </div>
-
-                        <div style="border-radius: 15px; background-color: white; margin-top: 15px; padding: 42px 50px 104px;">
+                        <div class="tu-card" style="padding: 42px 50px 104px;">
                             <div style="display:flex; align-items: center">
                                 <div style="background-color: #DF7870; width:8px; height: 45px;"></div>
                                 <div style="margin-left: 10px;padding-top: 5px;"><h2 style="font-size: 35px;color: black;">Rate</h2></div>
@@ -166,8 +165,7 @@
                                 </div>
                             </div>
                         </div>
-
-                        <div style="border-radius: 15px; background-color: white; margin-top: 15px; padding: 42px 50px 70px;">
+                        <div class="tu-card" style="padding: 42px 50px 70px;">
                             <div style="display:flex; align-items: center">
                                 <div style="background-color: #DF7870; width:8px; height: 45px;"></div>
                                 <div style="margin-left: 10px;padding-top: 5px;"><h2 style="font-size: 35px;color: black;">Expertise</h2></div>
