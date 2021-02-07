@@ -222,7 +222,7 @@
     },
       mounted () {
           axios
-              .get('http://127.0.0.1:8081/api/profiles/' + this.$route.params.token)
+              .get('https://www.miragenetics.com/api/profiles/' + this.$route.params.token)
               .then(res => this.response = res.data)
       }
   }
