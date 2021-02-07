@@ -2447,60 +2447,57 @@ Go Top CSS
     font-size: 18px;
 }
 
-
 .social-links {
     ul {
         padding-inline-start: 0px;
     }
     li {
         display: inline-block;
-        margin-right: 10px;
-
+        margin-right: 7px;
         a {
-            width: 50px;
+            width: 40px;
             text-align: center;
-            line-height: 68px;
-            height: 50px;
+            line-height: 57px;
+            height: 40px;
             border: 1px solid $light-green-color;
             border-radius: 50%;
             color: $light-green-color;
-
             i {
-                width: 30px;
+                width: 28px;
             }
             &.facebook {
-                border-color: #4267b2;
-                color: #4267b2;
-
+                border-color: rgba(84, 87, 193, .4);
+                color: rgba(84, 87, 193, .4);
                 &:hover {
-                    background: #4267b2;
+                    border-color: #006AFF;
+                    background: #006AFF;
                     color: $white-color;
                 }
             }
-            &.twitter {
-                border-color: #38A1F3;
-                color: #38A1F3;
-
+            &.youtube {
+                border-color: rgba(84, 87, 193, .4);
+                color: rgba(84, 87, 193, .4);
                 &:hover {
-                    background: #38A1F3;
+                    border-color: #ff0000;
+                    background: #ff0000;
                     color: $white-color;
                 }
             }
             &.linkedin {
-                border-color: #0077B5;
-                color: #0077B5;
-
+                border-color: rgba(84, 87, 193, .4);
+                color: rgba(84, 87, 193, .4);
                 &:hover {
+                    border-color: #0077B5;
                     background: #0077B5;
                     color: $white-color;
                 }
             }
             &.instagram {
-                border-color: #231F20;
-                color: #231F20;
-
+                border-color: rgba(84, 87, 193, .4);
+                color: rgba(84, 87, 193, .4);
                 &:hover {
-                    background: #231F20;
+                    border-color: #bc2a8d;
+                    background: #bc2a8d;
                     color: $white-color;
                 }
             }
@@ -2513,10 +2510,11 @@ Go Top CSS
 }
 
 .test {
-    li {
-       &:hover {
-         text-decoration: underline;
-         color: #DF7870
+    li a {
+        color: #6084A4;
+
+        &:hover {
+            color: #DF7870;
        }
     }
 }
@@ -2528,14 +2526,14 @@ body {
 @media (max-width: 991px) {
     .tu-card-container {
         margin-top: 15px;
-        height: calc(100% - 76px);
+        height: calc(100% - 60px);
     }
 }
 
 @media (min-width: 992px) {
     .tu-card-container {
         margin-top: 15px;
-        height: calc(100% - 76px);
+        height: calc(100% - 60px);
         overflow-y: auto;
     }
 }
@@ -2544,6 +2542,8 @@ body {
     border-radius: 15px;
     background-color: white;
     margin-top: 15px;
+    padding: 30px 50px 40px;
+
 
     &:first-of-type {
         margin-top: 0;
@@ -2608,5 +2608,14 @@ body {
 @media (min-width: 1200px) {
     .tu-container {
         max-width: 1325px;
+    }
+}
+
+.btn-profile {
+    background: #DF7870;
+    box-shadow: 0 13px 27px 0 rgba(223, 120, 112, .25);
+
+    &:hover, &:focus, &:active {
+        background: #5457C1;
     }
 }
