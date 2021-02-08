@@ -37,42 +37,43 @@
                         </ul>
 
                     </div>
-                    <div class="tu-card-container">
+                    <div class="tu-card-container" >
                         <div id="section-about-me"  class="tu-card" >
                             <div><h2 style="font-size: 28px; font-weight: 600; color: #0E314C">{{response.profile.headline}}</h2></div>
-                            <div style="margin-left: 48px; margin-top: 5px;">
-                                    <div style="display: flex; align-items: center">
-                                        <div style="width: 550px;margin-right: 10px">
-                                            <div style="display: flex;align-items: center; margin-bottom: 14px;"  v-for="school in response.schools" :key="school.value">
-                                                <div style="width: 40px; display: flex; justify-content: center">
+                            <div style="margin-left: 48px; margin-top: 35px;">
+                                    <div style="display: flex; align-items: flex-start">
+                                        <div style="width: 550px; margin-right: 10px">
+                                            <div style="display: flex; align-items: center; margin-bottom: 20px;"  v-for="school in response.schools" :key="school.value">
+                                                <div style="min-width: 40px; display: flex; justify-content: center">
                                                     <font-awesome-icon style="font-size: 30px; color:#5457C1" class="font-icon" icon="graduation-cap" />
                                                 </div>
                                                 <div style="margin-left: 15px;">
-                                                    <p style="margin: 0px; line-height: 26px; font-size: 18px; font-weight: 600; color: #0E314C">{{school.label}}</p>
-                                                    <p style="margin: 0px; line-height:22px; font-size: 16px; color: #6084A4">{{school.value}}</p>
+                                                    <p style="margin: 0px; line-height: 20px; font-size: 18px; font-weight: 600; color: #0E314C">{{school.label}}</p>
+                                                    <p style="margin: 0px; line-height:17px; font-size: 16px; color: #6084A4">{{school.value}}</p>
                                                 </div>
                                             </div>
-                                            <div style="display: flex; align-items: center; margin-top:10px" v-for="certificate in response.certificates" :key="certificate.value">
-                                                <div style="width: 40px; display: flex; justify-content: center">
+                                            <div style="display: flex; align-items: center; margin-bottom:20px" v-for="certificate in response.certificates" :key="certificate.value">
+                                                <div style="min-width: 40px; display: flex; justify-content: center">
                                                     <font-awesome-icon style="font-size: 30px; color:#5457C1" class="font-icon" icon="star-of-life" />
                                                 </div>
-                                                <div style="margin-left: 15px;">
-                                                    <p style="margin: 0px; line-height: 26px; font-size: 18px; font-weight: 600; color: #0E314C">{{certificate.label}}</p>
-                                                    <p style="margin: 0px; line-height:22px; font-size: 16px; color: #6084A4">{{certificate.value}}</p>
+                                                <div style="margin-left: 15px">
+                                                    <p style="margin: 0px; line-height: 20px; font-size: 18px; font-weight: 600; color: #0E314C">{{certificate.label}}</p>
+                                                    <p style="margin-top: 3px; line-height:17px; font-size: 16px; color: #6084A4">{{certificate.value}}</p>
                                                 </div>
                                             </div>
                                         </div>
 
-                                        <div style="margin-right: 18px">
+                                        <div style="margin-top: -30px">
                                             <img src="../assets/img/Graphic_bio.svg" />
                                         </div>
                                     </div>
                             </div>
-                            <div style="margin-top: 20px;">
-
-                                <p style="color: #0E314C; font-size: 14px; margin: 0px; padding: 0px 40px 10px 0px; line-height: 22px;" v-for="bio in response.profile.bio.split(/\r?\n/)" :key="bio" >{{bio}}</p>
+                            <div style="margin-top: 20px">
+                                <p style="max-width: 49rem; color: #0E314C; font-size: 14px; margin: 0px; padding: 0px; line-height: 22px;" v-for="bio in response.profile.bio.split(/\r?\n/)" :key="bio" >{{bio}}</p>
                             </div>
                         </div>
+
+
                         <div id="section-subjects" class="tu-card" >
                             <div style="display:flex; align-items: center">
                                 <div style="background-color: #DF7870; width: 8px; height: 35px;"></div>
