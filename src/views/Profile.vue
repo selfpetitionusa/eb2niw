@@ -28,8 +28,8 @@
             </div>
             <div class="col-12 col-xl-9  col-lg-8 col-md-12" style="height: 100%;">
                 <div style="position: relative; height: 100%;">
-                    <div class="d-none d-sm-none d-lg-block" style="height: 45px; background-color: white; border-radius: 15px 15px 0 0;" >
-                        <ul class="test px-xl-5 px-1" style="display: flex; justify-content: space-around; align-items: center; height: 100%; font-size: 20px; font-weight: 500; color: #6084A4;">
+                    <div class="d-none d-sm-none d-lg-block" style="height: 37px; background-color: white; border-radius: 15px 15px 0 0;" >
+                        <ul class="test px-xl-5 px-1" style="display: flex; justify-content: space-around; align-items: center; height: 100%; font-size: 16px; font-weight: 500; color: #6084A4;">
                             <li style="display: inline-block;"><a href="#section-about-me">about me</a></li>
                             <li style="display: inline-block;"><a href="#section-subjects">subjects</a></li>
                             <li style="display: inline-block;"><a href="#section-rates">rates</a></li>
