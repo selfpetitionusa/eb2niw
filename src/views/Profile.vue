@@ -5,11 +5,11 @@
           <div class="row" style="height: 100%">
 
             <div class="col-12 col-xl-3 col-lg-4 col-md-12" >
-                <div style="background-color:white; border-radius: 12px; position: relative; padding: 20px">
+                <div style="background-color:white; border-radius: 12px; position: relative; padding: 10px 10px 40px">
                     <img src="../assets/img/photo.png" width="146" height="145" style="position: absolute; left:50%; margin-left: -73px; top:-64px; border: solid 7px white; border-radius: 50%; box-shadow: 1px 4px 6px #888888;" />
-                    <h2 style="margin: 103px 0px 10px; line-height: 32px; font-size: 28px; font-weight: 600; text-align: center; color: #0E314C">{{response.profile.firstName}} {{response.profile.lastName}}</h2>
+                    <h2 style="margin: 90px 0px 10px; line-height: 32px; font-size: 28px; font-weight: 600; text-align: center; color: #0E314C">{{response.profile.firstName}} {{response.profile.lastName}}</h2>
                     <div style="margin: 0px; font-size: 18px; font-weight: 500; text-align: center; color: #0E314C">{{response.categories.map(cat => cat.categoryName).join(' | ')}}</div>
-                    <div style="margin-top: 30px; font-size: 16px; font-weight: 400; text-align: center; padding: 0px 30px"><p style="margin-block-end: 0px; line-height: 22px">Hi, my name is {{response.profile.firstName}}</p><p style="line-height: 22px">and I'm {{response.categories.map(cat => cat.categoryName)[0]}} tutor.</p><p>Welcome to my website!</p></div>
+                    <div style="margin-top: 30px; font-size: 16px; font-weight: 400; text-align: center"><p style="margin-block-end: 0px; line-height: 22px">Hi, my name is {{response.profile.firstName}}</p><p style="line-height: 22px">and I'm {{response.categories.map(cat => cat.categoryName)[0]}} tutor.</p><p>Welcome to my website!</p></div>
                     <div class="social-links" style="margin-top: 20px; display: flex; justify-content: center">
                         <ul>
                             <li v-if="response.profile.links.facebookLink" ><a :href="response.profile.links.facebookLink" class="facebook"><feather type="facebook"></feather></a></li>
