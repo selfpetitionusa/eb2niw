@@ -179,16 +179,16 @@
 
                             <div class="my-carousel" style="overflow-y: scroll">
                                 <div style="margin-top: 130px; display: flex;">
-                                    <div style="width: 320px; height: 360px; margin: 6px; background: #F6F8FE; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); border-radius: 10px; flex-shrink: 0; position: relative" v-for="problemCard in response.problemCards" :key="problemCard.id" >
+                                    <div style="width: 280px; margin: 5px; background: #F6F8FE; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); border-radius: 10px; flex-shrink: 0; position: relative" v-for="problemCard in response.problemCards" :key="problemCard.id" >
                                         <div style="position: absolute; padding: 15px; background-color: white; border: 1px solid rgba(223, 120, 112, 0.3);box-sizing: border-box; border-radius: 50%; top: -40px; left: 30px; filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.05));">
                                             <img src="../assets/img/expertise.svg"  />
                                         </div>
 
                                         <div style="margin-top: 70px; margin-left: 11px; margin-right: 24px; display: flex; flex-direction: column">
                                             <div>
-                                                <p style="font-size: 16px; line-height: 22px; color: #0E314C; font-weight: 600; margin: 0; padding: 0; font-family: Poppins">{{problemCard.question}}</p>
+                                                <p style="font-size: 14px; line-height: 22px; color: #0E314C; font-weight: 600; margin: 0; padding: 0px; font-family: Poppins">{{problemCard.question}}</p>
                                             </div>
-                                            <div style="margin-top: 15px;">
+                                            <div style="margin-top: 15px; padding-bottom: 2rem">
                                                 <p style="font-family: Poppins; font-size: 14px; line-height: 22px; color: #6084A4">{{problemCard.answer}}</p>
                                             </div>
 <!--                                            <div style="position: absolute; bottom: 20px; left: 11px;">-->
