@@ -82,7 +82,7 @@
 
                             <div style="margin-top: 40px; display: flex; justify-content: center; padding: 10px" class="row"  >
                                 <div class="col-md-4"  v-for="category in response.categories" :key="category.id">
-                                    <div style="margin: 5px; border: 1px dashed rgba(84, 87, 193, 0.5);box-sizing: border-box;box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.1);border-radius: 5px;height: 100%">
+                                    <div style="margin: 5px; border: 1px dashed rgba(84, 87, 193, 0.3);box-sizing: border-box;box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.1);border-radius: 5px;height: 100%">
                                         <p style="color: #0E314C; text-align: center; margin-top: 30px; margin-bottom: 10px; font-weight: 600; font-size: 18px;">{{category.categoryName}}</p>
                                         <hr style="width: 60%; border: 1px solid rgba(223, 120, 112, 0.3)">
 
