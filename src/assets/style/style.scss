@@ -2510,6 +2510,7 @@ Go Top CSS
 }
 
 .test {
+  margin-bottom: 10px;
     li a {
         color: #6084A4;
 
@@ -2525,14 +2526,14 @@ body {
 
 @media (max-width: 991px) {
     .tu-card-container {
-        margin-top: 15px;
+        margin-top: 10px;
         height: calc(100% - 60px);
     }
 }
 
 @media (min-width: 992px) {
     .tu-card-container {
-        margin-top: 15px;
+        margin-top: 10px;
         height: calc(100% - 60px);
         overflow-y: auto;
     }
@@ -2541,14 +2542,15 @@ body {
 .tu-card {
     border-radius: 15px;
     background-color: white;
-    margin-top: 15px;
-    padding: 30px 50px 40px;
+    margin-top: 10px;
+    padding: 30px 40px 40px;
 
 
     &:first-of-type {
         margin-top: 0;
     }
 }
+
 
 .ul-icon {
     display: flex;
@@ -2614,6 +2616,7 @@ body {
 .btn-profile {
     background: #DF7870;
     box-shadow: 0 13px 27px 0 rgba(223, 120, 112, .25);
+    padding: 15px 25px;
 
     &:hover, &:focus, &:active {
         background: #5457C1;

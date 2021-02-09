@@ -5,11 +5,11 @@
           <div class="row" style="height: 100%">
 
             <div class="col-12 col-xl-3 col-lg-4 col-md-12" >
-                <div style="background-color:white; border-radius: 12px; position: relative; padding: 20px">
+                <div style="background-color:white; border-radius: 12px; position: relative; padding: 10px 10px 40px">
                     <img src="../assets/img/photo.png" width="146" height="145" style="position: absolute; left:50%; margin-left: -73px; top:-64px; border: solid 7px white; border-radius: 50%; box-shadow: 1px 4px 6px #888888;" />
-                    <h2 style="margin: 103px 0px 10px; line-height: 32px; font-size: 28px; font-weight: 600; text-align: center; color: #0E314C">{{response.profile.firstName}} {{response.profile.lastName}}</h2>
+                    <h2 style="margin: 90px 0px 10px; line-height: 32px; font-size: 28px; font-weight: 600; text-align: center; color: #0E314C">{{response.profile.firstName}} {{response.profile.lastName}}</h2>
                     <div style="margin: 0px; font-size: 18px; font-weight: 500; text-align: center; color: #0E314C">{{response.categories.map(cat => cat.categoryName).join(' | ')}}</div>
-                    <div style="margin-top: 30px; font-size: 16px; font-weight: 400; text-align: center; padding: 0px 30px"><p style="margin-block-end: 0px; line-height: 22px">Hi, my name is {{response.profile.firstName}}</p><p style="line-height: 22px">and I'm {{response.categories.map(cat => cat.categoryName)[0]}} tutor.</p><p>Welcome to my website!</p></div>
+                    <div style="margin-top: 30px; font-size: 16px; font-weight: 400; text-align: center"><p style="margin-block-end: 0px; line-height: 22px">Hi, my name is {{response.profile.firstName}}</p><p style="line-height: 22px">and I'm {{response.categories.map(cat => cat.categoryName)[0]}} tutor.</p><p>Welcome to my website!</p></div>
                     <div class="social-links" style="margin-top: 20px; display: flex; justify-content: center">
                         <ul>
                             <li v-if="response.profile.links.facebookLink" ><a :href="response.profile.links.facebookLink" class="facebook"><feather type="facebook"></feather></a></li>
@@ -28,8 +28,8 @@
             </div>
             <div class="col-12 col-xl-9  col-lg-8 col-md-12" style="height: 100%;">
                 <div style="position: relative; height: 100%;">
-                    <div class="d-none d-sm-none d-lg-block" style="height: 45px; background-color: white; border-radius: 15px 15px 0 0;" >
-                        <ul class="test px-xl-5 px-1" style="display: flex; justify-content: space-around; align-items: center; height: 100%; font-size: 20px; font-weight: 500; color: #6084A4;">
+                    <div class="d-none d-sm-none d-lg-block" style="height: 37px; background-color: white; border-radius: 15px 15px 0 0; padding: 0px 4rem" >
+                        <ul class="test px-xl-5 px-1" style="display: flex; justify-content: space-around; align-items: center; height: 100%; font-size: 16px; font-weight: 500; color: #6084A4;">
                             <li style="display: inline-block;"><a href="#section-about-me">about me</a></li>
                             <li style="display: inline-block;"><a href="#section-subjects">subjects</a></li>
                             <li style="display: inline-block;"><a href="#section-rates">rates</a></li>
@@ -37,75 +37,76 @@
                         </ul>
 
                     </div>
-                    <div class="tu-card-container">
+                    <div class="tu-card-container" >
                         <div id="section-about-me"  class="tu-card" >
                             <div><h2 style="font-size: 28px; font-weight: 600; color: #0E314C">{{response.profile.headline}}</h2></div>
-                            <div style="margin-left: 48px; margin-top: 5px;">
-                                    <div style="display: flex; align-items: center">
-                                        <div style="width: 550px;margin-right: 10px">
-                                            <div style="display: flex;align-items: center; margin-bottom: 14px;"  v-for="school in response.schools" :key="school.value">
-                                                <div style="width: 40px; display: flex; justify-content: center">
+                            <div style="margin-left: 50px; margin-top: 35px;">
+                                    <div style="display: flex; align-items: flex-start">
+                                        <div style="width: 550px; margin-right: 10px">
+                                            <div style="display: flex; align-items: center; margin-top: 5px; margin-bottom: 15px;"  v-for="school in response.schools" :key="school.value">
+                                                <div style="min-width: 40px; display: flex; justify-content: center">
                                                     <font-awesome-icon style="font-size: 30px; color:#5457C1" class="font-icon" icon="graduation-cap" />
                                                 </div>
                                                 <div style="margin-left: 15px;">
-                                                    <p style="margin: 0px; line-height: 26px; font-size: 18px; font-weight: 600; color: #0E314C">{{school.label}}</p>
-                                                    <p style="margin: 0px; line-height:22px; font-size: 16px; color: #6084A4">{{school.value}}</p>
+                                                    <p style="margin: 0px; line-height: 20px; font-size: 16px; font-weight: 600; color: #0E314C">{{school.label}}</p>
+                                                    <p style="margin: 0px; line-height:17px; font-size: 16px; color: #6084A4">{{school.value}}</p>
                                                 </div>
                                             </div>
-                                            <div style="display: flex; align-items: center; margin-top:10px" v-for="certificate in response.certificates" :key="certificate.value">
-                                                <div style="width: 40px; display: flex; justify-content: center">
+                                            <div style="display: flex; align-items: center; margin-bottom:15px" v-for="certificate in response.certificates" :key="certificate.value">
+                                                <div style="min-width: 40px; display: flex; justify-content: center">
                                                     <font-awesome-icon style="font-size: 30px; color:#5457C1" class="font-icon" icon="star-of-life" />
                                                 </div>
-                                                <div style="margin-left: 15px;">
-                                                    <p style="margin: 0px; line-height: 26px; font-size: 18px; font-weight: 600; color: #0E314C">{{certificate.label}}</p>
-                                                    <p style="margin: 0px; line-height:22px; font-size: 16px; color: #6084A4">{{certificate.value}}</p>
+                                                <div style="margin-left: 15px">
+                                                    <p style="margin: 0px; line-height: 20px; font-size: 16px; font-weight: 600; color: #0E314C">{{certificate.label}}</p>
+                                                    <p style="margin-top: 3px; line-height:17px; font-size: 16px; color: #6084A4">{{certificate.value}}</p>
                                                 </div>
                                             </div>
                                         </div>
 
-                                        <div style="margin-right: 18px">
+                                        <div style="margin-top: -20px">
                                             <img src="../assets/img/Graphic_bio.svg" />
                                         </div>
                                     </div>
                             </div>
-                            <div style="margin-top: 20px;">
-
-                                <p style="color: #0E314C; font-size: 14px; margin: 0px; padding: 0px 40px 10px 0px; line-height: 22px;" v-for="bio in response.profile.bio.split(/\r?\n/)" :key="bio" >{{bio}}</p>
+                            <div style="margin-top: 15px">
+                                <p style="max-width: 49rem; color: #0E314C; font-size: 14px; margin: 0px; padding: 0px; line-height: 22px;" v-for="bio in response.profile.bio.split(/\r?\n/)" :key="bio" >{{bio}}</p>
                             </div>
                         </div>
+
+
                         <div id="section-subjects" class="tu-card" >
                             <div style="display:flex; align-items: center">
                                 <div style="background-color: #DF7870; width: 8px; height: 35px;"></div>
                                 <div style="margin-left: 10px; padding-top: 5px"><h2 style="font-size: 28px; font-weight: 600; color: #0E314C">Subjects</h2></div>
                             </div>
 
-                            <div style="margin-top: 44px;display: flex; justify-content: space-between;padding: 20px" class="row"  >
+                            <div style="margin-top: 40px; display: flex; justify-content: center; padding: 10px" class="row"  >
                                 <div class="col-md-4"  v-for="category in response.categories" :key="category.id">
-                                    <div style="margin:5px; border: 1px dashed rgba(84, 87, 193, 0.5);box-sizing: border-box;box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.1);border-radius: 5px;height: 100%">
-                                        <p style="color: #0E314C; text-align: center; margin-top: 40px; margin-bottom: 27px; font-weight: 600; font-size: 18px;">{{category.categoryName}}</p>
+                                    <div style="margin: 5px; border: 1px dashed rgba(84, 87, 193, 0.3);box-sizing: border-box;box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.1);border-radius: 5px;height: 100%">
+                                        <p style="color: #0E314C; text-align: center; margin-top: 30px; margin-bottom: 10px; font-weight: 600; font-size: 18px;">{{category.categoryName}}</p>
                                         <hr style="width: 60%; border: 1px solid rgba(223, 120, 112, 0.3)">
 
-                                       <div class="ul-icon" style="font-size: 16px; color: #0E314C;">
-                                           <div style="display: flex;padding: 5px" v-if="category.subcategoryName1">
-                                                <img width="30px" height="30px" src="../assets/img/tick_icon.png"/>  <div v-if="category.subcategoryName1">{{category.subcategoryName1}}</div>
+                                       <div class="ul-icon" style="font-size: 14px; line-height: 17px; color: #0E314C;">
+                                           <div style="display: flex; padding: 5px 25px 10px 35px" v-if="category.subcategoryName1">
+                                                <img width="22px" height="22px" src="../assets/img/tick_icon.png"/>  <div v-if="category.subcategoryName1">{{category.subcategoryName1}}</div>
                                            </div>
-                                           <div style="display: flex;padding: 5px" v-if="category.subcategoryName2">
-                                                <img width="30px" height="30px" src="../assets/img/tick_icon.png"/> <div v-if="category.subcategoryName2">{{category.subcategoryName2}}</div>
+                                           <div style="display: flex; padding: 5px 25px 10px 35px" v-if="category.subcategoryName2">
+                                                <img width="22px" height="22px" src="../assets/img/tick_icon.png"/> <div v-if="category.subcategoryName2">{{category.subcategoryName2}}</div>
                                            </div>
-                                           <div style="display: flex;padding: 5px" v-if="category.subcategoryName3">
-                                                <img width="30px" height="30px" src="../assets/img/tick_icon.png"/> <div v-if="category.subcategoryName3">{{category.subcategoryName3}}</div>
+                                           <div style="display: flex; padding: 5px 25px 10px 35px" v-if="category.subcategoryName3">
+                                                <img width="22px" height="22px" src="../assets/img/tick_icon.png"/> <div v-if="category.subcategoryName3">{{category.subcategoryName3}}</div>
                                            </div>
-                                           <div style="display: flex;padding: 5px" v-if="category.subcategoryName4">
-                                                <img width="30px" height="30px" src="../assets/img/tick_icon.png"/> <div v-if="category.subcategoryName4">{{category.subcategoryName4}}</div>
+                                           <div style="display: flex; padding: 5px 25px 10px 35px" v-if="category.subcategoryName4">
+                                                <img width="22px" height="22px" src="../assets/img/tick_icon.png"/> <div v-if="category.subcategoryName4">{{category.subcategoryName4}}</div>
                                            </div>
-                                           <div style="display: flex;padding: 5px" v-if="category.subcategoryName5">
-                                                <img width="30px"  height="30px" src="../assets/img/tick_icon.png"/> <div v-if="category.subcategoryName5">{{category.subcategoryName5}}</div>
+                                           <div style="display: flex; padding: 5px 25px 10px 35px" v-if="category.subcategoryName5">
+                                                <img width="22px" height="22px" src="../assets/img/tick_icon.png"/> <div v-if="category.subcategoryName5">{{category.subcategoryName5}}</div>
                                            </div>
-                                           <div style="display: flex;padding: 5px" v-if="category.subcategoryName6">
-                                                <img  width="30px" height="30px" src="../assets/img/tick_icon.png"/> <div v-if="category.subcategoryName6">{{category.subcategoryName6}}</div>
+                                           <div style="display: flex; padding: 5px 25px 10px 35px" v-if="category.subcategoryName6">
+                                                <img  width="22px" height="22px" src="../assets/img/tick_icon.png"/> <div v-if="category.subcategoryName6">{{category.subcategoryName6}}</div>
                                            </div>
-                                           <div style="display: flex;padding: 5px" v-if="category.subcategoryName7">
-                                                <img width="30px" height="30px" src="../assets/img/tick_icon.png"/> <div >{{category.subcategoryName7}}</div>
+                                           <div style="display: flex; padding: 5px 25px 10px 35px" v-if="category.subcategoryName7">
+                                                <img width="22px" height="22px" src="../assets/img/tick_icon.png"/> <div >{{category.subcategoryName7}}</div>
                                            </div>
                                        </div>
                                     </div>
@@ -113,9 +114,9 @@
 
 
                             </div>
-                            <div style="display: flex; justify-content: center; margin-top: 52px; align-items: center">
+                            <div style="display: flex; justify-content: center; margin-top: 60px; margin-bottom: 10px; align-items: center">
 
-                                <img src="../assets/img/students-icon.svg"/> <div style="margin-left:7px; font-size: 18px; color: #0E314C">My students are</div> <div style="margin-left:7px; font-size: 18px; font-weight: 600; color: #5457C1">{{response.profile.studentsProfile}}</div>
+                                <img src="../assets/img/students-icon.svg"/> <div style="margin-left:7px; font-size: 16px; color: #0E314C">My students are</div> <div style="margin-left:7px; font-size: 16px; font-weight: 600; color: #5457C1">{{response.profile.studentsProfile}}</div>
                             </div>
                         </div>
                         <div id="section-rates" class="tu-card" >
@@ -125,25 +126,29 @@
                             </div>
 
                             <div style="margin-left:50px;">
-                                <div style="display: flex;margin-top: 45px;" >
+                                <div style="display: flex;margin-top: 30px;" >
                                     <div>
-                                        <div style="display: flex; align-items: flex-start; margin-bottom: 35px" v-for="rate in response.rates" :key="rate.id">
-                                            <div style="background: #5457C1; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); border-radius: 5px;min-width: 80px; font-weight: 400; font-size: 28px; text-align: center; color: white; padding: 5px 0px">{{rate.currency}}{{rate.amount}}</div>
-                                            <div style="margin-left: 15px;">
-                                                <p style="margin-bottom: 5px; line-height: 18px; color: #6084A4; font-size: 14px">{{rate.commentTop}}</p>
-                                                <p style="margin: 0px; line-height: 15px; font-size: 16px; color: #0E314C"  v-if="rate.commentBottom" >{{rate.commentBottom}}</p>
+                                        <div style="display: flex; align-items: flex-start; margin-bottom: 10px" v-for="rate in response.rates" :key="rate.id">
+                                            <div style="background: #5457C1; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); border-radius: 5px; min-width: 80px; font-weight: 400; font-size: 28px; text-align: center; color: white; padding: 5px 0px">{{rate.currency}}{{rate.amount}}</div>
+                                            <div style="margin-left: 7px;">
+                                                <p style="width: 20rem; margin-bottom: 5px; line-height: 18px; color: #6084A4; font-size: 14px">{{rate.commentTop}}</p>
+                                                <p style="width: 20rem; margin: 0px; line-height: 15px; font-size: 16px; color: #0E314C"  v-if="rate.commentBottom" >{{rate.commentBottom}}</p>
                                             </div>
+
                                         </div>
+
+                                        <div v-if="response.profile.rateInfo.rateSectionComment" style="display:flex; width: 100%; justify-content: flex-start; color: #6084A4; font-size: 14px; margin-top: 30px; line-height: 22px; padding: 0px 40px 0px 0px" >
+                                            {{response.profile.rateInfo.rateSectionComment}}
+                                        </div>
+
+
                                     </div>
-                                    <div style="display:flex; width: 100%; justify-content: center">
+                                    <div style="display:flex; width: 100%; justify-content: flex-start">
                                         <div>
                                             <img src="../assets/img/Rates_graphic.svg" />
                                         </div>
                                     </div>
 
-                                </div>
-                                <div v-if="response.profile.rateInfo.rateSectionComment" style="color: #6084A4; font-size: 14px; margin-top: 53px; line-height: 22px; padding: 0px 40px 0px 0px" >
-                                    {{response.profile.rateInfo.rateSectionComment}}
                                 </div>
                             </div>
 
@@ -152,13 +157,13 @@
                                     <img src="../assets/img/Globe_icon.svg"/><div style="min-width: 135px; line-height: 15px; margin-left: 7px; font-size: 14px; color: #0E314C">Online lessons:</div> <div style="line-height: 15px; margin-left: 7px; font-size: 14px; color: #6084A4" v-if="response.profile.rateInfo.onlineComment" >{{response.profile.rateInfo.onlineCommen}}}</div>
                                 </div>
                                 <div style="display: flex; padding: 5px; align-items: center">
-                                    <img src="../assets/img/House_icon.svg"/> <div style="min-width: 135px; line-height: 15px; margin-left: 7px; font-size: 14px; color: #0E314C">In-person lessons:</div><div style="line-height: 15px; margin-left: 7px; font-size: 14px; color: #6084A4" v-if="response.profile.rateInfo.inPersonComment" >{{response.profile.rateInfo.inPersonComment}}</div>
+                                    <img src="../assets/img/House_icon.svg"/> <div style="min-width: 135px; line-height: 15px; margin-left: 7px; font-size: 14px; color: #0E314C">In-person lessons:</div> <div style="line-height: 15px; margin-left: 7px; font-size: 14px; color: #6084A4" v-if="response.profile.rateInfo.inPersonComment" >{{response.profile.rateInfo.inPersonComment}}</div>
                                 </div>
                                 <div style="display: flex; padding: 5px; align-items: center">
                                     <img src="../assets/img/Tag_icon.svg"/> <div style="min-width: 135px; line-height: 15px; margin-left: 7px; font-size: 14px; color: #0E314C">Free consultation:</div>  <div style="line-height: 15px; margin-left: 7px; font-size: 14px; color: #6084A4" v-if="response.profile.rateInfo.freeConsultationComment" >{{response.profile.rateInfo.freeConsultationComment}}</div>
                                 </div>
                                 <div style="display: flex; padding: 5px;align-items: center">
-                                    <img src="../assets/img/Calendar_icon.svg"/> <div style="min-width: 135px; line-height: 15px; margin-left: 7px; font-size: 14px; color: #0E314C">Cancelation policy required:</div>  <div style="line-height: 15px; margin-left: 7px; font-size: 14px; color: #6084A4" v-if="response.profile.rateInfo.cancellationPolicyComment">{{response.profile.rateInfo.cancellationPolicyComment}}</div>
+                                    <img src="../assets/img/Calendar_icon.svg"/> <div style="min-width: 135px; line-height: 15px; margin-left: 7px; font-size: 14px; color: #0E314C">Cancelation policy:</div>  <div style="line-height: 15px; margin-left: 7px; font-size: 14px; color: #6084A4" v-if="response.profile.rateInfo.cancellationPolicyComment">{{response.profile.rateInfo.cancellationPolicyComment}}</div>
                                 </div>
                             </div>
                         </div>
@@ -173,17 +178,17 @@
                             </div>
 
                             <div class="my-carousel" style="overflow-y: scroll">
-                                <div style="margin-top: 130px; display: flex;">
-                                    <div style="width: 320px; height: 360px; margin: 6px; background: #F6F8FE; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); border-radius: 10px; flex-shrink: 0; position: relative" v-for="problemCard in response.problemCards" :key="problemCard.id" >
-                                        <div style="position: absolute; padding: 15px; background-color: white; border: 1px solid rgba(223, 120, 112, 0.3);box-sizing: border-box; border-radius: 50%; top: -40px; left: 30px; filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.05));">
+                                <div style="margin-top: 90px; padding: 0px 30px; display: flex">
+                                    <div style="width: 280px; min-height: 280px; margin: 5px; background: #F6F8FE; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); border-radius: 10px; flex-shrink: 0; position: relative" v-for="problemCard in response.problemCards" :key="problemCard.id" >
+                                        <div style="position: absolute; padding: 13px; background-color: white; border: 1px solid rgba(223, 120, 112, 0.3);box-sizing: border-box; border-radius: 50%; top: -40px; left: 30px; filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.05));">
                                             <img src="../assets/img/expertise.svg"  />
                                         </div>
 
-                                        <div style="margin-top: 70px; margin-left: 11px; margin-right: 24px; display: flex; flex-direction: column">
+                                        <div style="margin-top: 60px; margin-left: 11px; margin-right: 24px; display: flex; flex-direction: column">
                                             <div>
-                                                <p style="font-size: 16px; line-height: 22px; color: #0E314C; font-weight: 600; margin: 0; padding: 0; font-family: Poppins">{{problemCard.question}}</p>
+                                                <p style="font-size: 14px; line-height: 22px; color: #0E314C; font-weight: 600; margin: 0; padding: 0px; font-family: Poppins">{{problemCard.question}}</p>
                                             </div>
-                                            <div style="margin-top: 15px;">
+                                            <div style="margin-top: 15px; padding-bottom: 2rem">
                                                 <p style="font-family: Poppins; font-size: 14px; line-height: 22px; color: #6084A4">{{problemCard.answer}}</p>
                                             </div>
 <!--                                            <div style="position: absolute; bottom: 20px; left: 11px;">-->
