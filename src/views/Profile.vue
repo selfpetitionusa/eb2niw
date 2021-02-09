@@ -40,7 +40,7 @@
                     <div class="tu-card-container" >
                         <div id="section-about-me"  class="tu-card" >
                             <div><h2 style="font-size: 28px; font-weight: 600; color: #0E314C">{{response.profile.headline}}</h2></div>
-                            <div style="margin-left: 48px; margin-top: 35px;">
+                            <div style="margin-left: 50px; margin-top: 35px;">
                                     <div style="display: flex; align-items: flex-start">
                                         <div style="width: 550px; margin-right: 10px">
                                             <div style="display: flex; align-items: center; margin-top: 5px; margin-bottom: 15px;"  v-for="school in response.schools" :key="school.value">
@@ -126,7 +126,7 @@
                             </div>
 
                             <div style="margin-left:50px;">
-                                <div style="display: flex;margin-top: 45px;" >
+                                <div style="display: flex;margin-top: 30px;" >
                                     <div>
                                         <div style="display: flex; align-items: flex-start; margin-bottom: 10px" v-for="rate in response.rates" :key="rate.id">
                                             <div style="background: #5457C1; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); border-radius: 5px; min-width: 80px; font-weight: 400; font-size: 28px; text-align: center; color: white; padding: 5px 0px">{{rate.currency}}{{rate.amount}}</div>
