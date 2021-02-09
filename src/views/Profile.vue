@@ -128,23 +128,27 @@
                             <div style="margin-left:50px;">
                                 <div style="display: flex;margin-top: 45px;" >
                                     <div>
-                                        <div style="display: flex; align-items: flex-start; margin-bottom: 35px" v-for="rate in response.rates" :key="rate.id">
-                                            <div style="background: #5457C1; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); border-radius: 5px;min-width: 80px; font-weight: 400; font-size: 28px; text-align: center; color: white; padding: 5px 0px">{{rate.currency}}{{rate.amount}}</div>
-                                            <div style="margin-left: 15px;">
-                                                <p style="margin-bottom: 5px; line-height: 18px; color: #6084A4; font-size: 14px">{{rate.commentTop}}</p>
-                                                <p style="margin: 0px; line-height: 15px; font-size: 16px; color: #0E314C"  v-if="rate.commentBottom" >{{rate.commentBottom}}</p>
+                                        <div style="display: flex; align-items: flex-start; margin-bottom: 10px" v-for="rate in response.rates" :key="rate.id">
+                                            <div style="background: #5457C1; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); border-radius: 5px; min-width: 80px; font-weight: 400; font-size: 28px; text-align: center; color: white; padding: 5px 0px">{{rate.currency}}{{rate.amount}}</div>
+                                            <div style="margin-left: 7px;">
+                                                <p style="width: 20rem; margin-bottom: 5px; line-height: 18px; color: #6084A4; font-size: 14px">{{rate.commentTop}}</p>
+                                                <p style="width: 20rem; margin: 0px; line-height: 15px; font-size: 16px; color: #0E314C"  v-if="rate.commentBottom" >{{rate.commentBottom}}</p>
                                             </div>
+
                                         </div>
+
+                                        <div v-if="response.profile.rateInfo.rateSectionComment" style="display:flex; width: 100%; justify-content: flex-start; color: #6084A4; font-size: 14px; margin-top: 30px; line-height: 22px; padding: 0px 40px 0px 0px" >
+                                            {{response.profile.rateInfo.rateSectionComment}}
+                                        </div>
+
+
                                     </div>
-                                    <div style="display:flex; width: 100%; justify-content: center">
+                                    <div style="display:flex; width: 100%; justify-content: flex-start">
                                         <div>
                                             <img src="../assets/img/Rates_graphic.svg" />
                                         </div>
                                     </div>
 
-                                </div>
-                                <div v-if="response.profile.rateInfo.rateSectionComment" style="color: #6084A4; font-size: 14px; margin-top: 53px; line-height: 22px; padding: 0px 40px 0px 0px" >
-                                    {{response.profile.rateInfo.rateSectionComment}}
                                 </div>
                             </div>
 
@@ -153,13 +157,13 @@
                                     <img src="../assets/img/Globe_icon.svg"/><div style="min-width: 135px; line-height: 15px; margin-left: 7px; font-size: 14px; color: #0E314C">Online lessons:</div> <div style="line-height: 15px; margin-left: 7px; font-size: 14px; color: #6084A4" v-if="response.profile.rateInfo.onlineComment" >{{response.profile.rateInfo.onlineCommen}}}</div>
                                 </div>
                                 <div style="display: flex; padding: 5px; align-items: center">
-                                    <img src="../assets/img/House_icon.svg"/> <div style="min-width: 135px; line-height: 15px; margin-left: 7px; font-size: 14px; color: #0E314C">In-person lessons:</div><div style="line-height: 15px; margin-left: 7px; font-size: 14px; color: #6084A4" v-if="response.profile.rateInfo.inPersonComment" >{{response.profile.rateInfo.inPersonComment}}</div>
+                                    <img src="../assets/img/House_icon.svg"/> <div style="min-width: 135px; line-height: 15px; margin-left: 7px; font-size: 14px; color: #0E314C">In-person lessons:</div> <div style="line-height: 15px; margin-left: 7px; font-size: 14px; color: #6084A4" v-if="response.profile.rateInfo.inPersonComment" >{{response.profile.rateInfo.inPersonComment}}</div>
                                 </div>
                                 <div style="display: flex; padding: 5px; align-items: center">
                                     <img src="../assets/img/Tag_icon.svg"/> <div style="min-width: 135px; line-height: 15px; margin-left: 7px; font-size: 14px; color: #0E314C">Free consultation:</div>  <div style="line-height: 15px; margin-left: 7px; font-size: 14px; color: #6084A4" v-if="response.profile.rateInfo.freeConsultationComment" >{{response.profile.rateInfo.freeConsultationComment}}</div>
                                 </div>
                                 <div style="display: flex; padding: 5px;align-items: center">
-                                    <img src="../assets/img/Calendar_icon.svg"/> <div style="min-width: 135px; line-height: 15px; margin-left: 7px; font-size: 14px; color: #0E314C">Cancelation policy required:</div>  <div style="line-height: 15px; margin-left: 7px; font-size: 14px; color: #6084A4" v-if="response.profile.rateInfo.cancellationPolicyComment">{{response.profile.rateInfo.cancellationPolicyComment}}</div>
+                                    <img src="../assets/img/Calendar_icon.svg"/> <div style="min-width: 135px; line-height: 15px; margin-left: 7px; font-size: 14px; color: #0E314C">Cancelation policy:</div>  <div style="line-height: 15px; margin-left: 7px; font-size: 14px; color: #6084A4" v-if="response.profile.rateInfo.cancellationPolicyComment">{{response.profile.rateInfo.cancellationPolicyComment}}</div>
                                 </div>
                             </div>
                         </div>
