@@ -40,9 +40,9 @@
                     <div class="tu-card-container" >
                         <div id="section-about-me"  class="tu-card" >
                             <div><h2 style="font-size: 28px; font-weight: 600; color: #0E314C">{{response.profile.headline}}</h2></div>
-                            <div style="margin-left: 50px; margin-top: 35px;">
-                                    <div style="display: flex; align-items: flex-start">
-                                        <div style="width: 550px; margin-right: 10px">
+                            <div style="margin-left: 50px; margin-top: 35px;margin-right: 50px;">
+                                    <div class="row" style="display: flex; align-items: flex-start">
+                                        <div class="col-lg-8">
                                             <div style="display: flex; align-items: center; margin-top: 5px; margin-bottom: 15px;"  v-for="school in response.schools" :key="school.value">
                                                 <div style="min-width: 40px; display: flex; justify-content: center">
                                                     <font-awesome-icon style="font-size: 30px; color:#5457C1" class="font-icon" icon="graduation-cap" />
@@ -63,8 +63,10 @@
                                             </div>
                                         </div>
 
-                                        <div style="margin-top: -20px">
-                                            <img src="../assets/img/Graphic_bio.svg" />
+                                        <div class="col-lg-4" style="margin-top: -20px; display: flex; justify-content: center;">
+                                            <div>
+                                                <img src="../assets/img/Graphic_bio.svg" />
+                                            </div>
                                         </div>
                                     </div>
                             </div>
