@@ -178,7 +178,7 @@
                             </div>
 
                             <div class="my-carousel" style="overflow-y: scroll">
-                                <div style="margin-top: 90px; display: flex">
+                                <div style="margin-top: 90px; padding: 0px 30px; display: flex">
                                     <div style="width: 280px; min-height: 280px; margin: 5px; background: #F6F8FE; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); border-radius: 10px; flex-shrink: 0; position: relative" v-for="problemCard in response.problemCards" :key="problemCard.id" >
                                         <div style="position: absolute; padding: 13px; background-color: white; border: 1px solid rgba(223, 120, 112, 0.3);box-sizing: border-box; border-radius: 50%; top: -40px; left: 30px; filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.05));">
                                             <img src="../assets/img/expertise.svg"  />
