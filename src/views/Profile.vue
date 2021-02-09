@@ -43,32 +43,32 @@
                             <div style="margin-left: 48px; margin-top: 35px;">
                                     <div style="display: flex; align-items: flex-start">
                                         <div style="width: 550px; margin-right: 10px">
-                                            <div style="display: flex; align-items: center; margin-bottom: 20px;"  v-for="school in response.schools" :key="school.value">
+                                            <div style="display: flex; align-items: center; margin-top: 5px; margin-bottom: 15px;"  v-for="school in response.schools" :key="school.value">
                                                 <div style="min-width: 40px; display: flex; justify-content: center">
                                                     <font-awesome-icon style="font-size: 30px; color:#5457C1" class="font-icon" icon="graduation-cap" />
                                                 </div>
                                                 <div style="margin-left: 15px;">
-                                                    <p style="margin: 0px; line-height: 20px; font-size: 18px; font-weight: 600; color: #0E314C">{{school.label}}</p>
+                                                    <p style="margin: 0px; line-height: 20px; font-size: 16px; font-weight: 600; color: #0E314C">{{school.label}}</p>
                                                     <p style="margin: 0px; line-height:17px; font-size: 16px; color: #6084A4">{{school.value}}</p>
                                                 </div>
                                             </div>
-                                            <div style="display: flex; align-items: center; margin-bottom:20px" v-for="certificate in response.certificates" :key="certificate.value">
+                                            <div style="display: flex; align-items: center; margin-bottom:15px" v-for="certificate in response.certificates" :key="certificate.value">
                                                 <div style="min-width: 40px; display: flex; justify-content: center">
                                                     <font-awesome-icon style="font-size: 30px; color:#5457C1" class="font-icon" icon="star-of-life" />
                                                 </div>
                                                 <div style="margin-left: 15px">
-                                                    <p style="margin: 0px; line-height: 20px; font-size: 18px; font-weight: 600; color: #0E314C">{{certificate.label}}</p>
+                                                    <p style="margin: 0px; line-height: 20px; font-size: 16px; font-weight: 600; color: #0E314C">{{certificate.label}}</p>
                                                     <p style="margin-top: 3px; line-height:17px; font-size: 16px; color: #6084A4">{{certificate.value}}</p>
                                                 </div>
                                             </div>
                                         </div>
 
-                                        <div style="margin-top: -30px">
+                                        <div style="margin-top: -20px">
                                             <img src="../assets/img/Graphic_bio.svg" />
                                         </div>
                                     </div>
                             </div>
-                            <div style="margin-top: 20px">
+                            <div style="margin-top: 15px">
                                 <p style="max-width: 49rem; color: #0E314C; font-size: 14px; margin: 0px; padding: 0px; line-height: 22px;" v-for="bio in response.profile.bio.split(/\r?\n/)" :key="bio" >{{bio}}</p>
                             </div>
                         </div>
