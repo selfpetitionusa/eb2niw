@@ -4,10 +4,10 @@
         <div class="tu-container" style="height: 100%; padding-top: 120px; margin: auto">
           <div class="row" style="height: 100%">
 
-            <div class="col-12 col-xl-3 col-lg-4 col-md-12" >
+            <div class="col-xl-3 col-lg-4 col-md-12 col-sm-12 col-12" >
                 <div style="background-color:white; border-radius: 12px; position: relative; padding: 10px 10px 40px">
                     <img src="../assets/img/photo.png" width="146" height="145" style="position: absolute; left:50%; margin-left: -73px; top:-64px; border: solid 7px white; border-radius: 50%; box-shadow: 1px 4px 6px #888888;" />
-                    <h2 style="margin: 90px 0px 10px; line-height: 32px; font-size: 28px; font-weight: 600; text-align: center; color: #0E314C">{{response.profile.firstName}} {{response.profile.lastName}}</h2>
+                    <h2 style="margin: 90px 0px 10px; line-height: 32px; font-size: 28px; font-weight: 600; text-align: center">{{response.profile.firstName}} {{response.profile.lastName}}</h2>
                     <div style="margin: 0px; font-size: 18px; font-weight: 500; text-align: center; color: #0E314C">{{response.categories.map(cat => cat.categoryName).join(' | ')}}</div>
                     <div style="margin-top: 30px; font-size: 16px; font-weight: 400; text-align: center"><p style="margin-block-end: 0px; line-height: 22px">Hi, my name is {{response.profile.firstName}}</p><p style="line-height: 22px">and I'm {{response.categories.map(cat => cat.categoryName)[0]}} tutor.</p><p>Welcome to my website!</p></div>
                     <div class="social-links" style="margin-top: 20px; display: flex; justify-content: center">
@@ -26,7 +26,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-xl-9  col-lg-8 col-md-12" style="height: 100%;">
+            <div class="col-xl-9  col-lg-8 col-md-12 col-sm-12 col-12" style="height: 100%;">
                 <div style="position: relative; height: 100%;">
                     <div class="d-none d-sm-none d-lg-block" style="height: 37px; background-color: white; border-radius: 15px 15px 0 0; padding: 0px 4rem" >
                         <ul class="test px-xl-5 px-1" style="display: flex; justify-content: space-around; align-items: center; height: 100%; font-size: 16px; font-weight: 500; color: #6084A4;">
@@ -39,7 +39,7 @@
                     </div>
                     <div class="tu-card-container" >
                         <div id="section-about-me"  class="tu-card" >
-                            <div><h2 style="font-size: 28px; font-weight: 600; color: #0E314C">{{response.profile.headline}}</h2></div>
+                            <div><h2 style="font-size: 28px; font-weight: 600">{{response.profile.headline}}</h2></div>
                             <div style="margin-left: 50px; margin-top: 35px;margin-right: 50px;">
                                     <div class="row" style="display: flex; align-items: flex-start">
                                         <div class="col-lg-8">
@@ -79,7 +79,7 @@
                         <div id="section-subjects" class="tu-card" >
                             <div style="display:flex; align-items: center">
                                 <div style="background-color: #DF7870; width: 8px; height: 35px;"></div>
-                                <div style="margin-left: 10px; padding-top: 5px"><h2 style="font-size: 28px; font-weight: 600; color: #0E314C">Subjects</h2></div>
+                                <div style="margin-left: 10px; padding-top: 5px"><h2 style="font-size: 28px; font-weight: 600">Subjects</h2></div>
                             </div>
 
                             <div style="margin-top: 40px; display: flex; justify-content: center; padding: 10px" class="row"  >
@@ -124,7 +124,7 @@
                         <div id="section-rates" class="tu-card" >
                             <div style="display:flex; align-items: center">
                                 <div style="background-color: #DF7870; width: 8px; height: 35px;"></div>
-                                <div style="margin-left: 10px; padding-top: 5px"><h2 style="font-size: 28px; font-weight: 600; color: #0E314C">Rates</h2></div>
+                                <div style="margin-left: 10px; padding-top: 5px"><h2 style="font-size: 28px; font-weight: 600">Rates</h2></div>
                             </div>
 
                             <div style="margin-left:50px;">
@@ -172,7 +172,7 @@
                         <div id="section-expertise" class="tu-card">
                             <div style="display:flex; align-items: center">
                                 <div style="background-color: #DF7870; width:8px; height: 35px;"></div>
-                                <div style="margin-left: 10px; padding-top: 5px"><h2 style="font-size: 28px; font-weight: 600; color: #0E314C">Expertise</h2></div>
+                                <div style="margin-left: 10px; padding-top: 5px"><h2 style="font-size: 28px; font-weight: 600">Expertise</h2></div>
                             </div>
 
                             <div v-if="response.profile.youtubeLink"   style="margin-top: 55px; display: flex; justify-content: center">
