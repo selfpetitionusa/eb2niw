@@ -2622,3 +2622,40 @@ body {
         background: #5457C1;
     }
 }
+
+
+
+
+@media (max-width: 576px) {
+  h2 {
+      color: green;
+  }
+}
+
+
+@media (min-width: 576px) {
+  h2 {
+      color: blue;
+  }
+}
+
+
+@media (min-width: 768px) {
+  h2 {
+      color: yellow;
+  }
+}
+
+
+@media (min-width: 992px) {
+  h2 {
+      color: orange;
+  }
+}
+
+
+@media (min-width: 1200px) {
+  h2 {
+      color: red;
+  }
+}
