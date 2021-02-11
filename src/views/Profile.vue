@@ -8,8 +8,8 @@
                 <div style="background-color:white; border-radius: 12px; position: relative; padding: 10px 10px 40px">
                     <img class="photo" src="../assets/img/photo.png" style="position: absolute; left:50%; margin-left: -73px; top:-64px; border: solid 7px white; border-radius: 50%; box-shadow: 1px 4px 6px #888888;" />
                     <h2 class="name" style="line-height: 32px; font-weight: 600; text-align: center">{{response.profile.firstName}} {{response.profile.lastName}}</h2>
-                    <div class="subjectCategories" style="margin: 0px; font-weight: 500; text-align: center; color: #0E314C">{{response.categories.map(cat => cat.categoryName).join(' | ')}}</div>
-                    <div class="shortBio" style="font-weight: 400; text-align: center"><p class="lineOne" style="margin-block-end: 0px">Hi, my name is {{response.profile.firstName}}</p><p class="lineTwo">and I'm {{response.categories.map(cat => cat.categoryName)[0]}} tutor.</p><p>Welcome to my website!</p></div>
+                    <div class="subject-categories" style="margin: 0px; font-weight: 500; text-align: center; color: #0E314C">{{response.categories.map(cat => cat.categoryName).join(' | ')}}</div>
+                    <div class="short-bio" style="font-weight: 400; text-align: center"><p class="line-1" style="margin-block-end: 0px">Hi, my name is {{response.profile.firstName}}</p><p class="line-2">and I'm {{response.categories.map(cat => cat.categoryName)[0]}} tutor.</p><p>Welcome to my website!</p></div>
                     <div class="social-links" style="margin-top: 20px; display: flex; justify-content: center">
                         <ul>
                             <li v-if="response.profile.links.facebookLink" ><a :href="response.profile.links.facebookLink" class="facebook"><feather type="facebook"></feather></a></li>
@@ -124,7 +124,7 @@
                             </div>
                             <div style="display: flex; justify-content: center; margin-top: 60px; margin-bottom: 10px; align-items: center">
 
-                                <img src="../assets/img/students-icon.svg"/> <div style="margin-left:7px; font-size: 16px; color: #0E314C">My students are</div> <div style="margin-left:7px; font-size: 16px; font-weight: 600; color: #5457C1">{{response.profile.studentsProfile.toLowerCase()}}</div>
+                                <img src="../assets/img/students-icon.svg"/> <div style="margin-left:7px; font-size: 16px; color: #0E314C">My students are</div> <div class="my-students" style="margin-left: 7px; font-size: 16px; font-weight: 600; color: #5457C1">{{response.profile.studentsProfile.toLowerCase()}}</div>
                             </div>
                         </div>
                         <div id="section-rates" class="tu-card" >
@@ -140,7 +140,7 @@
                                             <div style="background: #5457C1; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); border-radius: 5px; min-width: 80px; font-weight: 400; font-size: 28px; text-align: center; color: white; padding: 5px 0px">{{rate.currency}}{{rate.amount}}</div>
                                             <div style="margin-left: 7px;">
                                                 <p style="width: 20rem; margin-bottom: 5px; line-height: 18px; color: #6084A4; font-size: 14px">{{rate.commentTop}}</p>
-                                                <p class="bottomComment" style="width: 20rem; margin: 0px; line-height: 15px; color: #0E314C"  v-if="rate.commentBottom" >{{rate.commentBottom}}</p>
+                                                <p class="bottom-comment" style="width: 20rem; margin: 0px; line-height: 15px; color: #0E314C"  v-if="rate.commentBottom" >{{rate.commentBottom}}</p>
                                             </div>
 
                                         </div>
@@ -160,7 +160,7 @@
                                 </div>
                             </div>
 
-                            <div class="termsContainer">
+                            <div class="terms-container">
                             <div class="terms">
                                 <div class="row" style="display: flex; margin: 25px; align-items: center">
                                     <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1" style="display: flex; justify-content: flex-end; padding: 0px">
