@@ -4,7 +4,7 @@
         <div class="tu-container" style="height: 100%; margin: auto">
           <div class="row" style="height: 100%">
 
-            <div class="col-xl-3 col-lg-4 col-md-12 col-sm-12 col-12" >
+            <div class="col-xl-3 col-lg-4 col-md-12 col-sm-12 col-12">
                 <div style="background-color:white; border-radius: 12px; position: relative; padding: 10px 10px 40px">
                     <img class="photo" src="../assets/img/photo.png" style="position: absolute; left:50%; margin-left: -73px; top:-64px; border: solid 7px white; border-radius: 50%; box-shadow: 1px 4px 6px #888888;" />
                     <h2 class="name" style="line-height: 32px; font-weight: 600; text-align: center">{{response.profile.firstName}} {{response.profile.lastName}}</h2>
@@ -160,53 +160,85 @@
                                 </div>
                             </div>
 
-                            <div style="margin: 59px 110px 0; border: 1px dashed #F2F2F2; box-sizing: border-box; box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.1);border-radius: 5px; padding: 24px 39px 26px">
-                                <div style="display: flex; padding: 5px; align-items: center">
-                                    <img src="../assets/img/Globe_icon.svg"/><div style="min-width: 135px; line-height: 15px; margin-left: 7px; font-size: 14px; color: #0E314C">Online lessons:</div>
-                                    <div style="line-height: 15px; margin-left: 7px; font-size: 14px; color: #6084A4" >
-                                        <div v-if="response.profile.rateInfo.online">
-                                           Yes
-                                        </div>
-                                        <div v-else>
-                                            None
-                                        </div>
+                            <div class="termsContainer">
+                            <div class="terms">
+                                <div class="row" style="display: flex; margin: 25px; align-items: center">
+                                    <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1" style="display: flex; justify-content: flex-end; padding: 0px">
+                                        <img src="../assets/img/Globe_icon.svg" style="width: 30px">
+                                    </div>
+                                    <div class="col-xl-11 col-lg-11 col-md-11 col-sm-11 col-11">
+                                      <div class="row" style="display: flex; align-items: center">
+                                          <div class="col-auto" style="padding: 0px 5px 0px 10px; line-height: 15px; font-size: 14px; color: #0E314C">Online lessons:</div>
+                                          <div class="col" style="padding: 0px; line-height: 15px; font-size: 14px; color: #6084A4">
+                                              <div v-if="response.profile.rateInfo.online">
+                                                 Yes
+                                              </div>
+                                              <div v-else>
+                                                  None
+                                              </div>
+                                          </div>
+                                      </div>
                                     </div>
                                 </div>
-                                <div style="display: flex; padding: 5px; align-items: center">
-                                    <img src="../assets/img/House_icon.svg"/> <div style="min-width: 135px; line-height: 15px; margin-left: 7px; font-size: 14px; color: #0E314C">In-person lessons:</div>
-                                    <div style="line-height: 15px; margin-left: 7px; font-size: 14px; color: #6084A4" >
-                                        <div v-if="response.profile.rateInfo.inPerson">
-                                            {{response.profile.rateInfo.inPersonComment === null ? 'Yes' : response.profile.rateInfo.inPersonComment}}
+                                <div class="row" style="display: flex; margin: 25px; align-items: center">
+                                    <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1" style="display: flex; justify-content: flex-end; padding: 0px">
+                                        <img src="../assets/img/House_icon.svg" style="width: 30px">
+                                    </div>
+                                    <div class="col-xl-11 col-lg-11 col-md-11 col-sm-11 col-11">
+                                      <div class="row" style="display: flex; align-items: center">
+                                          <div class="col-auto" style="padding: 0px 5px 0px 10px; line-height: 15px; font-size: 14px; color: #0E314C">In-person lessons:</div>
+                                          <div class="col" style="padding: 0px; line-height: 15px; font-size: 14px; color: #6084A4">
+                                              <div v-if="response.profile.rateInfo.inPerson">
+                                                  {{response.profile.rateInfo.inPersonComment === null ? 'Yes' : response.profile.rateInfo.inPersonComment}}
+                                              </div>
+                                              <div v-else >
+                                                  None
+                                              </div>
+                                          </div>
                                         </div>
-                                        <div v-else >
-                                            None
+                                      </div>
+                                  </div>
+                                <div class="row" style="display: flex; margin: 25px; align-items: center">
+                                    <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1" style="display: flex; justify-content: flex-end; padding: 0px">
+                                        <img src="../assets/img/Tag_icon.svg" style="width: 30px">
+                                    </div>
+                                    <div class="col-xl-11 col-lg-11 col-md-11 col-sm-11 col-11">
+                                      <div class="row" style="display: flex; align-items: center">
+                                        <div class="col-auto" style="padding: 0px 5px 0px 10px; line-height: 15px; font-size: 14px; color: #0E314C">Free consultation:</div>
+                                        <div class="col" style="padding: 0px; line-height: 15px; font-size: 14px; color: #6084A4">
+                                          <div v-if="response.profile.rateInfo.freeConsultation">
+                                              {{response.profile.rateInfo.freeConsultationComment === null ? 'Yes' : response.profile.rateInfo.freeConsultationComment}}
+                                          </div>
+                                          <div v-else >
+                                              None
+                                          </div>
                                         </div>
+                                      </div>
                                     </div>
                                 </div>
-                                <div style="display: flex; padding: 5px; align-items: center">
-                                    <img src="../assets/img/Tag_icon.svg"/> <div style="min-width: 135px; line-height: 15px; margin-left: 7px; font-size: 14px; color: #0E314C">Free consultation:</div>
-                                    <div style="line-height: 15px; margin-left: 7px; font-size: 14px; color: #6084A4" >
-                                        <div v-if="response.profile.rateInfo.freeConsultation">
-                                            {{response.profile.rateInfo.freeConsultationComment === null ? 'Yes' : response.profile.rateInfo.freeConsultationComment}}
-                                        </div>
-                                        <div v-else >
-                                            None
-                                        </div>
+                                <div class="row" style="display: flex; margin: 25px; align-items: center">
+                                    <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1" style="display: flex; justify-content: flex-end; padding: 0px">
+                                        <img src="../assets/img/Calendar_icon.svg" style="width: 30px">
                                     </div>
-                                </div>
-                                <div style="display: flex; padding: 5px;align-items: center">
-                                    <img src="../assets/img/Calendar_icon.svg"/> <div style="min-width: 135px; line-height: 15px; margin-left: 7px; font-size: 14px; color: #0E314C">Cancelation policy:</div>
-                                    <div style="line-height: 15px; margin-left: 7px; font-size: 14px; color: #6084A4" >
-                                        <div v-if="response.profile.rateInfo.cancellationPolicy">
-                                            {{response.profile.rateInfo.cancellationPolicyComment === null ? 'Yes' : response.profile.rateInfo.cancellationPolicyComment}}
+                                    <div class="col-xl-11 col-lg-11 col-md-11 col-sm-11 col-11">
+                                      <div class="row" style="display: flex; align-items: center">
+                                        <div class="col-auto" style="padding: 0px 5px 0px 10px; line-height: 15px; font-size: 14px; color: #0E314C">Cancelation policy:</div>
+                                        <div class="col" style="padding: 0px; line-height: 15px; font-size: 14px; color: #6084A4">
+                                          <div v-if="response.profile.rateInfo.cancellationPolicy">
+                                              {{response.profile.rateInfo.cancellationPolicyComment === null ? 'Yes' : response.profile.rateInfo.cancellationPolicyComment}}
+                                          </div>
+                                          <div v-else >
+                                              None
+                                          </div>
                                         </div>
-                                        <div v-else >
-                                            None
-                                        </div>
+                                      </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        </div>
+
+
                         <div id="section-expertise" class="tu-card" v-if="!(response.profile.youtubeIntroLink === null && response.problemCards.length === 0)">
                             <div style="display:flex; align-items: center">
                                 <div style="background-color: #DF7870; width:8px; height: 35px;"></div>

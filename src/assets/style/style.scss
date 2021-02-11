@@ -2738,6 +2738,41 @@ hr {
       }
     }
 
+.termsContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.terms {
+  margin-top: 60px;
+  width: 60%;
+  border: 1px dashed #F2F2F2;
+  box-sizing: border-box;
+  box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+    @media (max-width: 1200px) {
+      .terms {
+        margin-top: 60px;
+        width: 85%;
+      }
+    }
+
+    @media (max-width: 992px) {
+      .terms {
+        margin-top: 60px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .terms {
+        margin-top: 60px;
+        width: 100%;
+        box-shadow: none;
+        border: none;
+      }
+    }
 
 
 /*================================================
