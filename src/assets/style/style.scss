@@ -2440,8 +2440,6 @@ Profile
     box-shadow: 0px 4px 6px 0px rgba(0,0,0,0.75);
 }
 
-
-
 .carousel-indicators li {
     background-color: $light-green-color;
 }
@@ -2523,25 +2521,26 @@ Profile
        }
     }
 }
+
 body {
     width: 100vw;
     height:100vh;
 }
 
-@media (max-width: 991px) {
-    .tu-card-container {
-        margin-top: 10px;
-        height: calc(100% - 60px);
+    @media (max-width: 991px) {
+        .tu-card-container {
+            margin-top: 10px;
+            height: calc(100% - 60px);
+        }
     }
-}
 
-@media (min-width: 992px) {
-    .tu-card-container {
-        margin-top: 10px;
-        height: calc(100% - 60px);
-        overflow-y: auto;
+    @media (min-width: 992px) {
+        .tu-card-container {
+            margin-top: 10px;
+            height: calc(100% - 60px);
+            overflow-y: auto;
+        }
     }
-}
 
 .tu-card {
     border-radius: 15px;
@@ -2555,7 +2554,6 @@ body {
     }
 }
 
-
 .ul-icon {
     display: flex;
     flex-direction: column;
@@ -2567,7 +2565,6 @@ body {
     }
 
 }
-
 
 .background-rectangular {
     top: -10%;
@@ -2591,31 +2588,33 @@ body {
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
+    padding-top: 90px;
 }
 
-@media (min-width: 576px) {
-    .tu-container {
-        max-width: 540px;
+    @media (min-width: 576px) {
+        .tu-container {
+            max-width: 540px;
+        }
     }
-}
 
-@media (min-width: 768px) {
-    .tu-container  {
-        max-width: 720px;
+    @media (min-width: 768px) {
+        .tu-container  {
+            max-width: 720px;
+        }
     }
-}
 
-@media (min-width: 992px) {
-    .tu-container {
-        max-width: 960px;
+    @media (min-width: 992px) {
+        .tu-container {
+            max-width: 960px;
+            padding-top: 120px;
+        }
     }
-}
 
-@media (min-width: 1200px) {
-    .tu-container {
-        max-width: 1325px;
+    @media (min-width: 1200px) {
+        .tu-container {
+            max-width: 1325px;
+        }
     }
-}
 
 .btn-profile {
     background: #DF7870;
@@ -2631,30 +2630,105 @@ h2.section, h2.name {
     font-size: 28px;
 }
 
-@media (max-width: 1200px) {
-  h2.section {
-    font-size: 25px;
-  }
+    @media (max-width: 1200px) {
+      h2.section {
+        font-size: 25px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      h2.name {
+        font-size: 25px;
+      }
+      h2.section {
+        font-size: 22px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      h2.name {
+        font-size: 22px;
+      }
+      h2.section {
+        font-size: 20px;
+      }
+    }
+
+h2.name {
+  margin: 90px 0px 10px;
 }
 
-@media (max-width: 768px) {
-  h2.name {
-    font-size: 25px;
-  }
-  h2.section {
-    font-size: 22px;
-  }
+    @media (max-width: 768px) {
+      h2.name {
+        margin: 75px 0px 0px;
+      }
+    }
+
+.photo {
+  width: 145px;
+  height: 145px;
 }
 
-@media (max-width: 576px) {
-  h2.name {
-    font-size: 22px;
+  @media (max-width: 768px) {
+    .photo {
+      width: 130px;
+      height: 130px;
+    }
   }
-  h2.section {
-    font-size: 20px;
-  }
+
+.subjectCategories {
+  font-size: 18px;
 }
 
+    @media (max-width: 768px) {
+      .subjectCategories {
+        font-size: 16px;
+      }
+    }
+
+.shortBio {
+  font-size: 16px;
+  margin-top: 30px;
+}
+
+.lineOne, .lineTwo {
+  line-height: 22px;
+}
+
+    @media (max-width: 768px) {
+      .shortBio {
+        font-size: 14px;
+        margin-top: 10px;
+      }
+      .lineTwo {
+        margin-bottom: 5px;
+      }
+      .lineOne, .lineTwo {
+        line-height: 20px;
+      }
+    }
+
+hr {
+  width:40%;
+  margin-top: 20px;
+}
+    @media (max-width: 768px) {
+      hr {
+        width:30%;
+        margin-top: 10px;
+      }
+    }
+
+
+.bottomComment {
+  font-size: 16px;
+}
+
+    @media (max-width: 768px) {
+      .bottomComment {
+        font-size: 14px;
+      }
+    }
 
 
 

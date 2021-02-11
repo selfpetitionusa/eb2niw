@@ -1,15 +1,15 @@
 <template>
   <div class="d-flex" style="background-color:#f9f6f6; width: 100%; height:100%; position: relative; overflow-x: hidden">
       <div class="background-rectangular" style="position: absolute"></div>
-        <div class="tu-container" style="height: 100%; padding-top: 120px; margin: auto">
+        <div class="tu-container" style="height: 100%; margin: auto">
           <div class="row" style="height: 100%">
 
             <div class="col-xl-3 col-lg-4 col-md-12 col-sm-12 col-12" >
                 <div style="background-color:white; border-radius: 12px; position: relative; padding: 10px 10px 40px">
-                    <img src="../assets/img/photo.png" width="146" height="145" style="position: absolute; left:50%; margin-left: -73px; top:-64px; border: solid 7px white; border-radius: 50%; box-shadow: 1px 4px 6px #888888;" />
-                    <h2 class="name" style="margin: 90px 0px 10px; line-height: 32px; font-weight: 600; text-align: center">{{response.profile.firstName}} {{response.profile.lastName}}</h2>
-                    <div style="margin: 0px; font-size: 18px; font-weight: 500; text-align: center; color: #0E314C">{{response.categories.map(cat => cat.categoryName).join(' | ')}}</div>
-                    <div style="margin-top: 30px; font-size: 16px; font-weight: 400; text-align: center"><p style="margin-block-end: 0px; line-height: 22px">Hi, my name is {{response.profile.firstName}}</p><p style="line-height: 22px">and I'm {{response.categories.map(cat => cat.categoryName)[0]}} tutor.</p><p>Welcome to my website!</p></div>
+                    <img class="photo" src="../assets/img/photo.png" style="position: absolute; left:50%; margin-left: -73px; top:-64px; border: solid 7px white; border-radius: 50%; box-shadow: 1px 4px 6px #888888;" />
+                    <h2 class="name" style="line-height: 32px; font-weight: 600; text-align: center">{{response.profile.firstName}} {{response.profile.lastName}}</h2>
+                    <div class="subjectCategories" style="margin: 0px; font-weight: 500; text-align: center; color: #0E314C">{{response.categories.map(cat => cat.categoryName).join(' | ')}}</div>
+                    <div class="shortBio" style="font-weight: 400; text-align: center"><p class="lineOne" style="margin-block-end: 0px">Hi, my name is {{response.profile.firstName}}</p><p class="lineTwo">and I'm {{response.categories.map(cat => cat.categoryName)[0]}} tutor.</p><p>Welcome to my website!</p></div>
                     <div class="social-links" style="margin-top: 20px; display: flex; justify-content: center">
                         <ul>
                             <li v-if="response.profile.links.facebookLink" ><a :href="response.profile.links.facebookLink" class="facebook"><feather type="facebook"></feather></a></li>
@@ -19,9 +19,9 @@
                         </ul>
                     </div>
 
-                    <hr style="width:40%; margin-top: 20px">
+                    <hr>
 
-                    <div style=" margin-top: 50px; display: flex; justify-content: center">
+                    <div style="margin-top: 25px; display: flex; justify-content: center">
                         <button type="submit" class="btn btn-primary btn-profile">Contact {{response.profile.firstName}}</button>
                     </div>
                 </div>
@@ -140,7 +140,7 @@
                                             <div style="background: #5457C1; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); border-radius: 5px; min-width: 80px; font-weight: 400; font-size: 28px; text-align: center; color: white; padding: 5px 0px">{{rate.currency}}{{rate.amount}}</div>
                                             <div style="margin-left: 7px;">
                                                 <p style="width: 20rem; margin-bottom: 5px; line-height: 18px; color: #6084A4; font-size: 14px">{{rate.commentTop}}</p>
-                                                <p style="width: 20rem; margin: 0px; line-height: 15px; font-size: 16px; color: #0E314C"  v-if="rate.commentBottom" >{{rate.commentBottom}}</p>
+                                                <p class="bottomComment" style="width: 20rem; margin: 0px; line-height: 15px; color: #0E314C"  v-if="rate.commentBottom" >{{rate.commentBottom}}</p>
                                             </div>
 
                                         </div>
