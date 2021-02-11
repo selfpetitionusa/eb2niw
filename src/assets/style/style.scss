@@ -2419,6 +2419,10 @@ Go Top CSS
 }
 
 
+/*================================================
+Profile
+=================================================*/
+
 
 .modal-dialog {
     margin: 100px auto 0px auto;
@@ -2622,6 +2626,35 @@ body {
         background: #5457C1;
     }
 }
+
+h2.section, h2.name {
+    font-size: 28px;
+}
+
+@media (max-width: 1200px) {
+  h2.section {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  h2.name {
+    font-size: 25px;
+  }
+  h2.section {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 576px) {
+  h2.name {
+    font-size: 22px;
+  }
+  h2.section {
+    font-size: 20px;
+  }
+}
+
 
 
 
