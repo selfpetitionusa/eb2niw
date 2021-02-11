@@ -33,7 +33,7 @@
                             <li style="display: inline-block;"><a href="#section-about-me">about me</a></li>
                             <li style="display: inline-block;"><a href="#section-subjects">subjects</a></li>
                             <li style="display: inline-block;"><a href="#section-rates">rates</a></li>
-                            <li style="display: inline-block;"><a href="#section-expertise">expertise</a></li>
+                            <li style="display: inline-block;" v-if="!(response.profile.youtubeIntroLink === null && response.problemCards.length === 0)" ><a href="#section-expertise">expertise</a></li>
                         </ul>
 
                     </div>
@@ -123,7 +123,7 @@
                             </div>
                             <div style="display: flex; justify-content: center; margin-top: 60px; margin-bottom: 10px; align-items: center">
 
-                                <img src="../assets/img/students-icon.svg"/> <div style="margin-left:7px; font-size: 16px; color: #0E314C">My students are</div> <div style="margin-left:7px; font-size: 16px; font-weight: 600; color: #5457C1">{{response.profile.studentsProfile}}</div>
+                                <img src="../assets/img/students-icon.svg"/> <div style="margin-left:7px; font-size: 16px; color: #0E314C">My students are</div> <div style="margin-left:7px; font-size: 16px; font-weight: 600; color: #5457C1">{{response.profile.studentsProfile.toLowerCase()}}</div>
                             </div>
                         </div>
                         <div id="section-rates" class="tu-card" >
@@ -161,34 +161,66 @@
 
                             <div style="margin: 59px 110px 0; border: 1px dashed #F2F2F2; box-sizing: border-box; box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.1);border-radius: 5px; padding: 24px 39px 26px">
                                 <div style="display: flex; padding: 5px; align-items: center">
-                                    <img src="../assets/img/Globe_icon.svg"/><div style="min-width: 135px; line-height: 15px; margin-left: 7px; font-size: 14px; color: #0E314C">Online lessons:</div> <div style="line-height: 15px; margin-left: 7px; font-size: 14px; color: #6084A4" v-if="response.profile.rateInfo.onlineComment" >{{response.profile.rateInfo.onlineCommen}}}</div>
+                                    <img src="../assets/img/Globe_icon.svg"/><div style="min-width: 135px; line-height: 15px; margin-left: 7px; font-size: 14px; color: #0E314C">Online lessons:</div>
+                                    <div style="line-height: 15px; margin-left: 7px; font-size: 14px; color: #6084A4" >
+                                        <div v-if="response.profile.rateInfo.online">
+                                           Yes
+                                        </div>
+                                        <div v-else>
+                                            None
+                                        </div>
+                                    </div>
                                 </div>
                                 <div style="display: flex; padding: 5px; align-items: center">
-                                    <img src="../assets/img/House_icon.svg"/> <div style="min-width: 135px; line-height: 15px; margin-left: 7px; font-size: 14px; color: #0E314C">In-person lessons:</div> <div style="line-height: 15px; margin-left: 7px; font-size: 14px; color: #6084A4" v-if="response.profile.rateInfo.inPersonComment" >{{response.profile.rateInfo.inPersonComment}}</div>
+                                    <img src="../assets/img/House_icon.svg"/> <div style="min-width: 135px; line-height: 15px; margin-left: 7px; font-size: 14px; color: #0E314C">In-person lessons:</div>
+                                    <div style="line-height: 15px; margin-left: 7px; font-size: 14px; color: #6084A4" >
+                                        <div v-if="response.profile.rateInfo.inPerson">
+                                            {{response.profile.rateInfo.inPersonComment === null ? 'Yes' : response.profile.rateInfo.inPersonComment}}
+                                        </div>
+                                        <div v-else >
+                                            None
+                                        </div>
+                                    </div>
                                 </div>
                                 <div style="display: flex; padding: 5px; align-items: center">
-                                    <img src="../assets/img/Tag_icon.svg"/> <div style="min-width: 135px; line-height: 15px; margin-left: 7px; font-size: 14px; color: #0E314C">Free consultation:</div>  <div style="line-height: 15px; margin-left: 7px; font-size: 14px; color: #6084A4" v-if="response.profile.rateInfo.freeConsultationComment" >{{response.profile.rateInfo.freeConsultationComment}}</div>
+                                    <img src="../assets/img/Tag_icon.svg"/> <div style="min-width: 135px; line-height: 15px; margin-left: 7px; font-size: 14px; color: #0E314C">Free consultation:</div>
+                                    <div style="line-height: 15px; margin-left: 7px; font-size: 14px; color: #6084A4" >
+                                        <div v-if="response.profile.rateInfo.freeConsultation">
+                                            {{response.profile.rateInfo.freeConsultationComment === null ? 'Yes' : response.profile.rateInfo.freeConsultationComment}}
+                                        </div>
+                                        <div v-else >
+                                            None
+                                        </div>
+                                    </div>
                                 </div>
                                 <div style="display: flex; padding: 5px;align-items: center">
-                                    <img src="../assets/img/Calendar_icon.svg"/> <div style="min-width: 135px; line-height: 15px; margin-left: 7px; font-size: 14px; color: #0E314C">Cancelation policy:</div>  <div style="line-height: 15px; margin-left: 7px; font-size: 14px; color: #6084A4" v-if="response.profile.rateInfo.cancellationPolicyComment">{{response.profile.rateInfo.cancellationPolicyComment}}</div>
+                                    <img src="../assets/img/Calendar_icon.svg"/> <div style="min-width: 135px; line-height: 15px; margin-left: 7px; font-size: 14px; color: #0E314C">Cancelation policy:</div>
+                                    <div style="line-height: 15px; margin-left: 7px; font-size: 14px; color: #6084A4" >
+                                        <div v-if="response.profile.rateInfo.cancellationPolicy">
+                                            {{response.profile.rateInfo.cancellationPolicyComment === null ? 'Yes' : response.profile.rateInfo.cancellationPolicyComment}}
+                                        </div>
+                                        <div v-else >
+                                            None
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div id="section-expertise" class="tu-card">
+                        <div id="section-expertise" class="tu-card" v-if="!(response.profile.youtubeIntroLink === null && response.problemCards.length === 0)">
                             <div style="display:flex; align-items: center">
                                 <div style="background-color: #DF7870; width:8px; height: 35px;"></div>
                                 <div style="margin-left: 10px; padding-top: 5px"><h2 style="font-size: 28px; font-weight: 600">Expertise</h2></div>
                             </div>
 
-                            <div v-if="response.profile.youtubeLink"   style="margin-top: 55px; display: flex; justify-content: center">
+                            <div v-if="response.profile.youtubeIntroLink"   style="margin-top: 55px; display: flex; justify-content: center">
                                 <iframe width="560" height="315" :src="response.profile.youtubeLink" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
 
                             <div class="my-carousel" style="overflow-y: scroll">
-                                <div style="margin-top: 90px; padding: 0px 30px; display: flex">
-                                    <div style="width: 280px; min-height: 280px; margin: 5px; background: #F6F8FE; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); border-radius: 10px; flex-shrink: 0; position: relative" v-for="problemCard in response.problemCards" :key="problemCard.id" >
+                                <div style="margin-top: 90px; padding: 0px 30px; display: flex;" :style= "[response.problemCards.length < 3 ? {'justify-content': 'center'} : {}]">
+                                    <div style="width: 280px; min-height: 280px; margin: 5px; background: #F6F8FE; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); border-radius: 10px; flex-shrink: 0; position: relative" v-for="(problemCard, index) in response.problemCards" :key="problemCard.id" >
                                         <div style="position: absolute; padding: 13px; background-color: white; border: 1px solid rgba(223, 120, 112, 0.3);box-sizing: border-box; border-radius: 50%; top: -40px; left: 30px; filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.05));">
-                                            <img src="../assets/img/expertise.svg"  />
+                                            <img :src="getImgUrl(index)">
                                         </div>
 
                                         <div style="margin-top: 60px; margin-left: 11px; margin-right: 24px; display: flex; flex-direction: column">
@@ -227,7 +259,7 @@
     data () {
         return {
             response: {
-                profile: {rateInfo: {}},
+                profile: {rateInfo: {}, links: {}, bio: '', studentsProfile: ''},
                 categories: []
             }
         }
@@ -236,6 +268,12 @@
           axios
               .get('https://www.miragenetics.com/api/profiles/' + this.$route.params.token)
               .then(res => this.response = res.data)
+      },
+      methods: {
+          getImgUrl: function (index) {
+              const number =  index % 6;
+              return require('../assets/img/icon_expertise' + number + '.svg')
+          }
       }
   }
 </script>
