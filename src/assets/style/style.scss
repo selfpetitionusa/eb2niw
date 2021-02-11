@@ -2513,6 +2513,7 @@ Profile
 
 .test {
   margin-bottom: 10px;
+  font-size: 16px;
     li a {
         color: #6084A4;
 
@@ -2521,6 +2522,13 @@ Profile
        }
     }
 }
+    @media (max-width: 1200px) {
+      .test {
+        font-size: 14px;
+      }
+    }
+
+
 
 body {
     width: 100vw;
@@ -2680,7 +2688,7 @@ h2.name {
   font-size: 18px;
 }
 
-    @media (max-width: 768px) {
+    @media (max-width: 1200px) {
       .subjectCategories {
         font-size: 16px;
       }
@@ -2724,7 +2732,7 @@ hr {
   font-size: 16px;
 }
 
-    @media (max-width: 768px) {
+    @media (max-width: 1200px) {
       .bottomComment {
         font-size: 14px;
       }
