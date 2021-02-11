@@ -19,7 +19,7 @@
                         </ul>
                     </div>
 
-                    <hr>
+                    <hr style="border-style: solid; border-color: rgba(84, 87, 193, .3)">
 
                     <div style="margin-top: 25px; display: flex; justify-content: center">
                         <button type="submit" class="btn btn-primary btn-profile">Contact {{response.profile.firstName}}</button>
