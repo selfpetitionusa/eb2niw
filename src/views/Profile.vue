@@ -40,10 +40,11 @@
                     <div class="tu-card-container" >
                         <div id="section-about-me"  class="tu-card" >
                             <div><h2 style="font-size: 28px; font-weight: 600">{{response.profile.headline}}</h2></div>
-                            <div style="margin-top: 35px; margin-right: 50px;">
-                                    <div class="row" style="display: flex; align-items: flex-start">
-                                        <div class="col-xl-8 col-lg-9 col-md-9 col-sm-12 col-12">
-                                            <div class="row" style="display: flex; align-items: center; margin-top: 5px; margin-bottom: 15px;"  v-for="school in response.schools" :key="school.value">
+                            <div style="margin-top: 20px; margin-right: 50px;">
+
+                                    <div class="row" style="display: flex; align-items: center; margin: 0px">
+                                        <div class="col-xl-8 col-lg-9 col-md-9 col-sm-12 col-12" style="padding: 0px">
+                                            <div class="row" style="display: flex; align-items: center; margin: 5px 0px 15px;"  v-for="school in response.schools" :key="school.value">
                                                 <div class="col-2" style="display: flex; justify-content: flex-end; padding: 0px">
                                                     <div style="width: 35px; display: flex; justify-content: center">
                                                     <font-awesome-icon style="font-size: 30px; color:#5457C1" class="font-icon" icon="graduation-cap" />
@@ -55,7 +56,7 @@
                                                 </div>
                                             </div>
 
-                                            <div class="row" style="display: flex; align-items: center; margin-bottom:15px" v-for="certificate in response.certificates" :key="certificate.value">
+                                            <div class="row" style="display: flex; align-items: center; margin: 0px 0px 15px" v-for="certificate in response.certificates" :key="certificate.value">
                                                 <div class="col-2" style="display: flex; justify-content: flex-end; padding: 0px">
                                                     <div style="width: 35px; display: flex; justify-content: center">
                                                       <font-awesome-icon style="font-size: 30px; color:#5457C1" class="font-icon" icon="star-of-life" />
@@ -68,8 +69,8 @@
                                             </div>
                                         </div>
 
-                                        <div class="col-xl-4 col-lg-3 col-md-3 col-sm-0 col-0" style="margin-top: -20px; display: flex; justify-content: center;">
-                                            <div>
+                                        <div class="col" style="display: flex; justify-content: flex-end; padding: 0px">
+                                            <div class="bioGraphic">
                                                 <img src="../assets/img/Graphic_bio.svg" />
                                             </div>
                                         </div>
