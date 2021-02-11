@@ -2689,7 +2689,7 @@ h2.name {
 }
 
     @media (max-width: 1200px) {
-      .subjectCategories {
+      .subject-categories {
         font-size: 16px;
       }
     }
@@ -2704,14 +2704,14 @@ h2.name {
 }
 
     @media (max-width: 768px) {
-      .shortBio {
+      .short-bio {
         font-size: 14px;
         margin-top: 10px;
       }
-      .lineTwo {
+      .line-2 {
         margin-bottom: 5px;
       }
-      .lineOne, .lineTwo {
+      .line-1, .line-2 {
         line-height: 20px;
       }
     }
@@ -2728,15 +2728,27 @@ hr {
     }
 
 .my-students {
-
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+  margin-bottom: 10px;
+  align-items: center;
 }
+    @media (max-width: 768px) {
+      .my-students {
+        display: block;
+        text-align: center;
+        margin-top: 40px;
+      }
+    }
+
 
 .bottom-comment {
   font-size: 16px;
 }
 
     @media (max-width: 1200px) {
-      .bottomComment {
+      .bottom-comment {
         font-size: 14px;
       }
     }

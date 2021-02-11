@@ -122,9 +122,9 @@
 
 
                             </div>
-                            <div style="display: flex; justify-content: center; margin-top: 60px; margin-bottom: 10px; align-items: center">
+                            <div class="my-students">
 
-                                <img src="../assets/img/students-icon.svg"/> <div style="margin-left:7px; font-size: 16px; color: #0E314C">My students are</div> <div class="my-students" style="margin-left: 7px; font-size: 16px; font-weight: 600; color: #5457C1">{{response.profile.studentsProfile.toLowerCase()}}</div>
+                                <img src="../assets/img/students-icon.svg"/> <div style="margin-left: 7px; font-size: 16px; color: #0E314C">My students are</div> <div style="margin-left: 7px; font-size: 16px; font-weight: 600; color: #5457C1">{{response.profile.studentsProfile.toLowerCase()}}</div>
                             </div>
                         </div>
                         <div id="section-rates" class="tu-card" >
