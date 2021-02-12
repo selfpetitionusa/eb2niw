@@ -2765,6 +2765,15 @@ hr {
       }
     }
 
+.rates-section {
+  margin: 30px 0px 0px 0px;
+}
+
+    @media (max-width: 768px) {
+      .rates-section {
+        margin: 0px;
+      }
+    }
 
 .bottom-comment {
   font-size: 16px;
@@ -2780,6 +2789,18 @@ hr {
   display: flex;
   justify-content: center;
 }
+
+
+    @media (max-width: 768px) {
+      .graphic-rates {
+        display: none;
+      }
+      .graphic-bio {
+        display: none;
+      }
+    }
+
+
 
 .terms {
   margin-top: 60px;
@@ -2851,9 +2872,6 @@ Testing Environment
 @media (max-width: 768px) {
   h2 {
     color: blue;
-  }
-  .bioGraphic {
-    display: none;
   }
 }
 

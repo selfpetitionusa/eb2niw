@@ -70,7 +70,7 @@
                                         </div>
 
                                         <div class="col" style="display: flex; justify-content: flex-end; padding: 0px">
-                                            <div class="bioGraphic">
+                                            <div class="graphic-bio">
                                                 <img src="../assets/img/Graphic_bio.svg" />
                                             </div>
                                         </div>
@@ -127,39 +127,45 @@
                                 <img src="../assets/img/students-icon.svg"/> <div style="margin-left: 7px; font-size: 16px; color: #0E314C">My students are</div> <div style="margin-left: 7px; font-size: 16px; font-weight: 600; color: #5457C1">{{response.profile.studentsProfile.toLowerCase()}}</div>
                             </div>
                         </div>
+
+
                         <div id="section-rates" class="tu-card" >
                             <div style="display:flex; align-items: center">
                                 <div style="background-color: #DF7870; width: 8px; height: 35px;"></div>
                                 <div style="margin-left: 10px; padding-top: 5px"><h2 class="section" style="font-weight: 600">Rates</h2></div>
                             </div>
 
-                            <div class="row" style="width: 100%">
-                                <div class="col-7" style="display: flex; margin-top: 30px;">
+                            <div class="row rates-section">
+                                <div class="col-xl-6 col-lg-7 col-md-7 col-sm-12 col-12" style="margin-top: 30px;">
                                     <div class="row">
                                       <div class="col">
-                                        <div class="row" style="display: flex; align-items: flex-start" v-for="rate in response.rates" :key="rate.id">
-                                            <div class="col-3" style="padding: 0px">
-                                              <div style="width: 80px; background: #5457C1; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); border-radius: 5px; font-weight: 400; font-size: 28px; text-align: center; color: white; padding: 5px 0px; margin: 0px">{{rate.currency}}{{rate.amount}}</div>
+                                        <div class="row" style="margin-bottom: 10px" v-for="rate in response.rates" :key="rate.id">
+                                            <div class="col-xl-4 col-lg-3 col-md-4 col-sm-2 col-2" style="padding: 0px; display: flex; justify-content: flex-end">
+                                              <div style="width: 50%; min-width: 70px; background: #5457C1; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); border-radius: 5px; font-weight: 400; font-size: 28px; text-align: center; color: white; padding: 5px 0px; margin: 0px">{{rate.currency}}{{rate.amount}}</div>
                                             </div>
-                                            <div class="col-9">
+                                            <div class="col-xl-8 col-lg-9 col-md-8 col-sm-10 col-10">
                                               <div class="row">
-                                                <p class="col" style="margin-bottom: 5px; line-height: 18px; color: #6084A4; font-size: 14px">{{rate.commentTop}}</p>
-                                                  <div class="w-100"></div>
-                                                <p class="col bottom-comment" style="line-height: 15px; color: #0E314C"  v-if="rate.commentBottom" >{{rate.commentBottom}}</p>
+                                                <p class="col" style="margin-bottom: 5px; padding: 0px 0px 0px 10px; line-height: 18px; color: #6084A4; font-size: 14px">{{rate.commentTop}}</p>
+                                                    <div class="w-100"></div>
+                                                <p class="col bottom-comment" style="padding: 0px 0px 0px 10px; line-height: 15px; color: #0E314C"  v-if="rate.commentBottom" >{{rate.commentBottom}}</p>
+
                                               </div>
                                             </div>
                                         </div>
-                                      </div>
 
-                                        <div class="col-auto" v-if="response.profile.rateInfo.rateSectionComment" style="display:flex; width: 100%; justify-content: flex-start; color: #6084A4; font-size: 14px; line-height: 22px" >
-                                            {{response.profile.rateInfo.rateSectionComment}}
+                                        <div class="row">
+                                          <div class="col-xl-2 col-lg-1 col-md-2 col-sm-0 col-0"></div>
+                                          <div class="col-xl-10 col-lg-11 col-md-10 col-sm-12 col-12" v-if="response.profile.rateInfo.rateSectionComment" style="padding: 10px 0px 0px 0px; color: #6084A4; font-size: 14px; line-height: 22px" >
+                                              {{response.profile.rateInfo.rateSectionComment}}
+                                          </div>
                                         </div>
 
+                                      </div>
                                     </div>
                                 </div>
 
-                                <div class="col-5" style="display:flex; width: 100%; justify-content: flex-start">
-                                    <img src="../assets/img/Rates_graphic.svg" />
+                                <div class="col-xl-6 col-lg-5 col-md-5 col-sm-0 col-0" style="display:flex; align-items: center; padding-left: 10px">
+                                    <img class="graphic-rates" src="../assets/img/Rates_graphic.svg" />
                                 </div>
 
                             </div>
