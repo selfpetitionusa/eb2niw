@@ -2750,6 +2750,16 @@ hr {
       }
     }
 
+.school, .certificate {
+  font-size: 16px;
+}
+
+    @media (max-width: 768px) {
+      .school, .certificate {
+        font-size: 14px;
+      }
+    }
+
 .my-students {
   display: flex;
   justify-content: center;

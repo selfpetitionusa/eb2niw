@@ -52,8 +52,8 @@
                                                     <font-awesome-icon style="font-size: 30px; color:#5457C1" class="font-icon" icon="graduation-cap" />
                                                 </div>
                                                 <div class="col-10" style="padding: 0px 10px">
-                                                    <p style="margin: 0px; line-height: 20px; font-size: 16px; font-weight: 600; color: #0E314C">{{school.label}}</p>
-                                                    <p style="margin: 0px; line-height:17px; font-size: 16px; color: #6084A4">{{school.value}}</p>
+                                                    <p class="school" style="margin: 0px; line-height: 20px; font-weight: 600; color: #0E314C">{{school.label}}</p>
+                                                    <p class="school" style="margin: 0px; line-height:17px; color: #6084A4">{{school.value}}</p>
                                                 </div>
                                             </div>
 
@@ -62,8 +62,8 @@
                                                     <font-awesome-icon style="font-size: 30px; color:#5457C1" class="font-icon" icon="star-of-life" />
                                                 </div>
                                                 <div class="col-10" style="padding: 0px 10px">
-                                                    <p style="margin: 0px; line-height: 20px; font-size: 16px; font-weight: 600; color: #0E314C">{{certificate.label}}</p>
-                                                    <p style="margin-top: 3px; line-height:17px; font-size: 16px; color: #6084A4">{{certificate.value}}</p>
+                                                    <p class="certificate" style="margin: 0px; line-height: 20px; font-weight: 600; color: #0E314C">{{certificate.label}}</p>
+                                                    <p class="certificate" style="margin-top: 3px; line-height:17px; color: #6084A4">{{certificate.value}}</p>
                                                 </div>
                                             </div>
                                         </div>
