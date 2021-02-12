@@ -133,32 +133,37 @@
                                 <div style="margin-left: 10px; padding-top: 5px"><h2 class="section" style="font-weight: 600">Rates</h2></div>
                             </div>
 
-                            <div style="margin-left:50px;">
-                                <div style="display: flex;margin-top: 30px;" >
-                                    <div>
-                                        <div style="display: flex; align-items: flex-start; margin-bottom: 10px" v-for="rate in response.rates" :key="rate.id">
-                                            <div style="background: #5457C1; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); border-radius: 5px; min-width: 80px; font-weight: 400; font-size: 28px; text-align: center; color: white; padding: 5px 0px">{{rate.currency}}{{rate.amount}}</div>
-                                            <div style="margin-left: 7px;">
-                                                <p style="width: 20rem; margin-bottom: 5px; line-height: 18px; color: #6084A4; font-size: 14px">{{rate.commentTop}}</p>
-                                                <p class="bottom-comment" style="width: 20rem; margin: 0px; line-height: 15px; color: #0E314C"  v-if="rate.commentBottom" >{{rate.commentBottom}}</p>
+                            <div class="row" style="width: 100%">
+                                <div class="col-7" style="display: flex; margin-top: 30px;">
+                                    <div class="row">
+                                      <div class="col">
+                                        <div class="row" style="display: flex; align-items: flex-start" v-for="rate in response.rates" :key="rate.id">
+                                            <div class="col-3" style="padding: 0px">
+                                              <div style="width: 80px; background: #5457C1; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); border-radius: 5px; font-weight: 400; font-size: 28px; text-align: center; color: white; padding: 5px 0px; margin: 0px">{{rate.currency}}{{rate.amount}}</div>
                                             </div>
-
+                                            <div class="col-9">
+                                              <div class="row">
+                                                <p class="col" style="margin-bottom: 5px; line-height: 18px; color: #6084A4; font-size: 14px">{{rate.commentTop}}</p>
+                                                  <div class="w-100"></div>
+                                                <p class="col bottom-comment" style="line-height: 15px; color: #0E314C"  v-if="rate.commentBottom" >{{rate.commentBottom}}</p>
+                                              </div>
+                                            </div>
                                         </div>
+                                      </div>
 
-                                        <div v-if="response.profile.rateInfo.rateSectionComment" style="display:flex; width: 100%; justify-content: flex-start; color: #6084A4; font-size: 14px; margin-top: 30px; line-height: 22px; padding: 0px 40px 0px 0px" >
+                                        <div class="col-auto" v-if="response.profile.rateInfo.rateSectionComment" style="display:flex; width: 100%; justify-content: flex-start; color: #6084A4; font-size: 14px; line-height: 22px" >
                                             {{response.profile.rateInfo.rateSectionComment}}
                                         </div>
 
-
                                     </div>
-                                    <div style="display:flex; width: 100%; justify-content: flex-start">
-                                        <div>
-                                            <img src="../assets/img/Rates_graphic.svg" />
-                                        </div>
-                                    </div>
-
                                 </div>
+
+                                <div class="col-5" style="display:flex; width: 100%; justify-content: flex-start">
+                                    <img src="../assets/img/Rates_graphic.svg" />
+                                </div>
+
                             </div>
+
 
                             <div class="terms-container">
                             <div class="terms">
