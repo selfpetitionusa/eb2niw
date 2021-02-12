@@ -164,12 +164,13 @@
                             <div class="terms">
                                 <div class="row terms-row">
                                     <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1" style="display: flex; justify-content: flex-end; padding: 0px">
-                                        <img src="../assets/img/Globe_icon.svg" style="width: 30px">
+                                        <img src="../assets/img/Globe_icon.svg" style="width: 40px; margin: 0px 5px 0px 0px">
                                     </div>
-                                    <div class="col-xl-11 col-lg-11 col-md-11 col-sm-11 col-11">
+                                    <div class="col-11">
                                       <div class="row" style="display: flex; align-items: center">
-                                          <div class="col-auto" style="padding: 0px 5px 0px 10px; line-height: 15px; font-size: 14px; color: #0E314C">Online lessons:</div>
-                                          <div class="col" style="padding: 0px; line-height: 15px; font-size: 14px; color: #6084A4">
+                                          <div class="col-auto" style="padding: 0px 5px 0px 0px; line-height: 15px; font-size: 14px; color: #0E314C">Online lessons:</div>
+                                            <div class="w-100 d-sm-none"></div>
+                                          <div class="col" style="padding: 0px;; line-height: 15px; font-size: 14px; color: #6084A4">
                                               <div v-if="response.profile.rateInfo.online">
                                                  Yes
                                               </div>
@@ -182,11 +183,12 @@
                                 </div>
                                 <div class="row terms-row">
                                     <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1" style="display: flex; justify-content: flex-end; padding: 0px">
-                                        <img src="../assets/img/House_icon.svg" style="width: 30px">
+                                        <img src="../assets/img/House_icon.svg" style="width: 40px; margin: 0px 5px 0px 0px">
                                     </div>
-                                    <div class="col-xl-11 col-lg-11 col-md-11 col-sm-11 col-11">
+                                    <div class="col-11">
                                       <div class="row" style="display: flex; align-items: center">
-                                          <div class="col-auto" style="padding: 0px 5px 0px 10px; line-height: 15px; font-size: 14px; color: #0E314C">In-person lessons:</div>
+                                          <div class="col-auto" style="padding: 0px 5px 0px 0px; line-height: 15px; font-size: 14px; color: #0E314C">In-person lessons:</div>
+                                            <div class="w-100 d-sm-none"></div>
                                           <div class="col" style="padding: 0px; line-height: 15px; font-size: 14px; color: #6084A4">
                                               <div v-if="response.profile.rateInfo.inPerson">
                                                   {{response.profile.rateInfo.inPersonComment === null ? 'Yes' : response.profile.rateInfo.inPersonComment}}
@@ -199,12 +201,13 @@
                                       </div>
                                   </div>
                                 <div class="row terms-row">
-                                    <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1" style="display: flex; justify-content: flex-end; padding: 0px">
-                                        <img src="../assets/img/Tag_icon.svg" style="width: 30px">
+                                    <div class="col-1" style="display: flex; justify-content: flex-end; padding: 0px">
+                                        <img src="../assets/img/Tag_icon.svg" style="width: 40px; margin: 0px 5px 0px 0px">
                                     </div>
-                                    <div class="col-xl-11 col-lg-11 col-md-11 col-sm-11 col-11">
+                                    <div class="col-11">
                                       <div class="row" style="display: flex; align-items: center">
-                                        <div class="col-auto" style="padding: 0px 5px 0px 10px; line-height: 15px; font-size: 14px; color: #0E314C">Free consultation:</div>
+                                        <div class="col-auto" style="padding: 0px 5px 0px 0px; line-height: 15px; font-size: 14px; color: #0E314C">Free consultation:</div>
+                                          <div class="w-100 d-sm-none"></div>
                                         <div class="col" style="padding: 0px; line-height: 15px; font-size: 14px; color: #6084A4">
                                           <div v-if="response.profile.rateInfo.freeConsultation">
                                               {{response.profile.rateInfo.freeConsultationComment === null ? 'Yes' : response.profile.rateInfo.freeConsultationComment}}
@@ -217,12 +220,13 @@
                                     </div>
                                 </div>
                                 <div class="row terms-row">
-                                    <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1" style="display: flex; justify-content: flex-end; padding: 0px">
-                                        <img src="../assets/img/Calendar_icon.svg" style="width: 30px">
+                                    <div class="col-1" style="display: flex; justify-content: flex-end; padding: 0px">
+                                        <img src="../assets/img/Calendar_icon.svg" style="width: 40px; margin: 0px 5px 0px 0px">
                                     </div>
-                                    <div class="col-xl-11 col-lg-11 col-md-11 col-sm-11 col-11">
+                                    <div class="col-11">
                                       <div class="row" style="display: flex; align-items: center">
-                                        <div class="col-auto" style="padding: 0px 5px 0px 10px; line-height: 15px; font-size: 14px; color: #0E314C">Cancelation policy:</div>
+                                        <div class="col-auto" style="padding: 0px 5px 0px 0px; line-height: 15px; font-size: 14px; color: #0E314C">Cancelation policy:</div>
+                                          <div class="w-100 d-sm-none"></div>
                                         <div class="col" style="padding: 0px; line-height: 15px; font-size: 14px; color: #6084A4">
                                           <div v-if="response.profile.rateInfo.cancellationPolicy">
                                               {{response.profile.rateInfo.cancellationPolicyComment === null ? 'Yes' : response.profile.rateInfo.cancellationPolicyComment}}
