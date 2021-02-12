@@ -163,7 +163,7 @@
                             <div class="terms-container">
                             <div class="terms">
                                 <div class="row terms-row">
-                                    <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1" style="display: flex; justify-content: flex-end; padding: 0px">
+                                    <div class="col-1" style="display: flex; justify-content: flex-end; padding: 0px">
                                         <img src="../assets/img/Globe_icon.svg" style="width: 40px; margin: 0px 5px 0px 0px">
                                     </div>
                                     <div class="col-11">
@@ -182,7 +182,7 @@
                                     </div>
                                 </div>
                                 <div class="row terms-row">
-                                    <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1" style="display: flex; justify-content: flex-end; padding: 0px">
+                                    <div class="col-1" style="display: flex; justify-content: flex-end; padding: 0px">
                                         <img src="../assets/img/House_icon.svg" style="width: 40px; margin: 0px 5px 0px 0px">
                                     </div>
                                     <div class="col-11">
