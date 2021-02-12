@@ -2634,6 +2634,20 @@ body {
     }
 }
 
+.left-side {
+  background-color: white;
+  border-radius: 12px;
+  position: relative;
+  padding: 10px 10px 40px;
+}
+
+    @media (max-width: 992px) and (min-width: 768px) {
+      .left-side {
+        width: 60%;
+        margin: 0 auto;
+      }
+    }
+
 h2.section, h2.name {
     font-size: 28px;
 }
@@ -2664,11 +2678,20 @@ h2.section, h2.name {
 
 h2.name {
   margin: 90px 0px 10px;
+  line-height: 32px;
 }
+
+    @media (max-width: 992px) {
+      h2.name {
+        padding: 0px 30px;
+      }
+    }
+
 
     @media (max-width: 768px) {
       h2.name {
         margin: 75px 0px 0px;
+        line-height: 25px;
       }
     }
 
