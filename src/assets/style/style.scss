@@ -2754,6 +2754,12 @@ hr {
   font-size: 16px;
 }
 
+    @media (min-width: 992px) and (max-width: 1200px) {
+      .school, .certificate {
+        font-size: 14px;
+      }
+    }
+
     @media (max-width: 768px) {
       .school, .certificate {
         font-size: 14px;
