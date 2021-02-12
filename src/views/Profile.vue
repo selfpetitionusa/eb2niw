@@ -26,6 +26,8 @@
                     </div>
                 </div>
             </div>
+
+
             <div class="col-xl-9  col-lg-8 col-md-12 col-sm-12 col-12" style="height: 100%;">
                 <div style="position: relative; height: 100%;">
                     <div class="d-none d-sm-none d-lg-block" style="height: 37px; background-color: white; border-radius: 15px 15px 0 0; padding: 0px 4rem" >
@@ -35,44 +37,39 @@
                             <li style="display: inline-block;"><a href="#section-rates">rates</a></li>
                             <li style="display: inline-block;" v-if="!(response.profile.youtubeIntroLink === null && response.problemCards.length === 0)" ><a href="#section-expertise">expertise</a></li>
                         </ul>
-
                     </div>
+
+
                     <div class="tu-card-container" >
                         <div id="section-about-me"  class="tu-card" >
                             <div><h2 class="section" style="font-weight: 600">{{response.profile.headline}}</h2></div>
-                            <div style="margin-top: 20px; margin-right: 50px;">
+                            <div style="margin-top: 20px">
 
-                                    <div class="row" style="display: flex; align-items: center; margin: 0px">
-                                        <div class="col-xl-8 col-lg-9 col-md-9 col-sm-12 col-12" style="padding: 0px">
-                                            <div class="row" style="display: flex; align-items: center; margin: 5px 0px 15px;"  v-for="school in response.schools" :key="school.value">
-                                                <div class="col-2" style="display: flex; justify-content: flex-end; padding: 0px">
-                                                    <div style="width: 35px; display: flex; justify-content: center">
+                                    <div class="row" style="margin: 0px; display: flex; align-items: center">
+                                        <div class="col-xl-8 col-lg-9 col-md-8 col-sm-12 col-12" style="padding: 0px">
+                                            <div class="row" style="margin: 5px 0px 15px;"  v-for="school in response.schools" :key="school.value">
+                                                <div class="col-2" style="width: 35px; display: flex; justify-content: flex-end; padding: 0px">
                                                     <font-awesome-icon style="font-size: 30px; color:#5457C1" class="font-icon" icon="graduation-cap" />
-                                                    </div>
                                                 </div>
-                                                <div class="col-10">
+                                                <div class="col-10" style="padding: 0px 10px">
                                                     <p style="margin: 0px; line-height: 20px; font-size: 16px; font-weight: 600; color: #0E314C">{{school.label}}</p>
                                                     <p style="margin: 0px; line-height:17px; font-size: 16px; color: #6084A4">{{school.value}}</p>
                                                 </div>
                                             </div>
 
-                                            <div class="row" style="display: flex; align-items: center; margin: 0px 0px 15px" v-for="certificate in response.certificates" :key="certificate.value">
-                                                <div class="col-2" style="display: flex; justify-content: flex-end; padding: 0px">
-                                                    <div style="width: 35px; display: flex; justify-content: center">
-                                                      <font-awesome-icon style="font-size: 30px; color:#5457C1" class="font-icon" icon="star-of-life" />
-                                                    </div>
+                                            <div class="row" style="margin: 0px 0px 15px" v-for="certificate in response.certificates" :key="certificate.value">
+                                                <div class="col-2" style="width: 35px; display: flex; justify-content: flex-end; padding: 0px">
+                                                    <font-awesome-icon style="font-size: 30px; color:#5457C1" class="font-icon" icon="star-of-life" />
                                                 </div>
-                                                <div class="col-10">
+                                                <div class="col-10" style="padding: 0px 10px">
                                                     <p style="margin: 0px; line-height: 20px; font-size: 16px; font-weight: 600; color: #0E314C">{{certificate.label}}</p>
                                                     <p style="margin-top: 3px; line-height:17px; font-size: 16px; color: #6084A4">{{certificate.value}}</p>
                                                 </div>
                                             </div>
                                         </div>
 
-                                        <div class="col" style="display: flex; justify-content: flex-end; padding: 0px">
-                                            <div class="graphic-bio">
-                                                <img src="../assets/img/Graphic_bio.svg" />
-                                            </div>
+                                        <div class="col" style="padding: 0px">
+                                                <img class="graphic-bio" src="../assets/img/Graphic_bio.svg">
                                         </div>
                                     </div>
                             </div>
