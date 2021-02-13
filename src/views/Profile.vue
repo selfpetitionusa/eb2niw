@@ -177,7 +177,7 @@
                                     <div class="col-1" style="display: flex; justify-content: flex-end; padding: 0px">
                                         <img src="../assets/img/Globe_icon.svg" style="width: 35px; margin: 0px 10px 0px 0px">
                                     </div>
-                                    <div class="col-11">
+                                    <div class="col-11" style="display: flex; align-items: center">
                                       <div class="row">
                                           <div class="col-auto" style="padding: 0px 5px 0px 0px; line-height: 15px; font-size: 14px; color: #0E314C">Online lessons:</div>
                                             <div class="w-100 d-sm-none"></div>
@@ -196,7 +196,7 @@
                                     <div class="col-1" style="display: flex; justify-content: flex-end; padding: 0px">
                                         <img src="../assets/img/House_icon.svg" style="width: 35px; margin: 0px 10px 0px 0px">
                                     </div>
-                                    <div class="col-11">
+                                    <div class="col-11" style="display: flex; align-items: center">
                                       <div class="row">
                                           <div class="col-auto" style="padding: 0px 5px 0px 0px; line-height: 15px; font-size: 14px; color: #0E314C">In-person lessons:</div>
                                             <div class="w-100 d-sm-none"></div>
@@ -215,7 +215,7 @@
                                     <div class="col-1" style="display: flex; justify-content: flex-end; padding: 0px">
                                         <img src="../assets/img/Tag_icon.svg" style="width: 35px; margin: 0px 10px 0px 0px">
                                     </div>
-                                    <div class="col-11">
+                                    <div class="col-11" style="display: flex; align-items: center">
                                       <div class="row">
                                         <div class="col-auto" style="padding: 0px 5px 0px 0px; line-height: 15px; font-size: 14px; color: #0E314C">Free consultation:</div>
                                           <div class="w-100 d-sm-none"></div>
@@ -234,7 +234,7 @@
                                     <div class="col-1" style="display: flex; justify-content: flex-end; padding: 0px">
                                         <img src="../assets/img/Calendar_icon.svg" style="width: 35px; margin: 0px 10px 0px 0px">
                                     </div>
-                                    <div class="col-11">
+                                    <div class="col-11" style="display: flex; align-items: center">
                                       <div class="row" style="display: flex; align-items: center">
                                         <div class="col-auto" style="padding: 0px 5px 0px 0px; line-height: 15px; font-size: 14px; color: #0E314C">Cancelation policy:</div>
                                           <div class="w-100 d-sm-none"></div>
