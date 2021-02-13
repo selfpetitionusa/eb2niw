@@ -117,7 +117,6 @@
                                     </div>
                                 </div>
 
-
                             </div>
                             <div class="my-students">
 
@@ -138,7 +137,7 @@
                                       <div class="col">
                                         <div class="row" style="margin-bottom: 10px" v-for="rate in response.rates" :key="rate.id">
                                             <div class="col-xl-4 col-lg-3 col-md-4 col-sm-2 col-2" style="padding: 0px; display: flex; justify-content: flex-end">
-                                              <div style="width: 50%; min-width: 70px; background: #5457C1; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); border-radius: 5px; font-weight: 400; font-size: 28px; text-align: center; color: white; padding: 5px 0px; margin: 0px">{{rate.currency}}{{rate.amount}}</div>
+                                              <div style="width: 50%; min-width: 70px; background: #5457C1; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); border-radius: 5px; font-weight: 400; font-size: 28px; text-align: center; color: white; padding: 5px 0px">{{rate.currency}}{{rate.amount}}</div>
                                             </div>
                                             <div class="col-xl-8 col-lg-9 col-md-8 col-sm-10 col-10">
                                               <div class="row">
@@ -161,7 +160,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-xl-6 col-lg-5 col-md-5 col-sm-0 col-0" style="display:flex; align-items: center; padding-left: 10px">
+                                <div class="col-xl-6 col-lg-5 col-md-5 col-sm-0 col-0" style="display: flex; align-items: center; padding-left: 10px">
                                     <img class="graphic-rates" src="../assets/img/Rates_graphic.svg" />
                                 </div>
 
