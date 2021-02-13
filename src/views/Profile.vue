@@ -175,7 +175,7 @@
                             <div class="terms">
                                 <div class="row terms-row">
                                     <div class="col-1" style="display: flex; justify-content: flex-end; padding: 0px">
-                                        <img src="../assets/img/Globe_icon.svg" style="width: 40px; margin: 0px 10px 0px 0px">
+                                        <img src="../assets/img/Globe_icon.svg" style="width: 35px; margin: 0px 10px 0px 0px">
                                     </div>
                                     <div class="col-11">
                                       <div class="row">
@@ -194,7 +194,7 @@
                                 </div>
                                 <div class="row terms-row">
                                     <div class="col-1" style="display: flex; justify-content: flex-end; padding: 0px">
-                                        <img src="../assets/img/House_icon.svg" style="width: 40px; margin: 0px 10px 0px 0px">
+                                        <img src="../assets/img/House_icon.svg" style="width: 35px; margin: 0px 10px 0px 0px">
                                     </div>
                                     <div class="col-11">
                                       <div class="row">
@@ -213,7 +213,7 @@
                                   </div>
                                 <div class="row terms-row">
                                     <div class="col-1" style="display: flex; justify-content: flex-end; padding: 0px">
-                                        <img src="../assets/img/Tag_icon.svg" style="width: 40px; margin: 0px 10px 0px 0px">
+                                        <img src="../assets/img/Tag_icon.svg" style="width: 35px; margin: 0px 10px 0px 0px">
                                     </div>
                                     <div class="col-11">
                                       <div class="row">
@@ -232,7 +232,7 @@
                                 </div>
                                 <div class="row terms-row">
                                     <div class="col-1" style="display: flex; justify-content: flex-end; padding: 0px">
-                                        <img src="../assets/img/Calendar_icon.svg" style="width: 40px; margin: 0px 10px 0px 0px">
+                                        <img src="../assets/img/Calendar_icon.svg" style="width: 35px; margin: 0px 10px 0px 0px">
                                     </div>
                                     <div class="col-11">
                                       <div class="row" style="display: flex; align-items: center">
