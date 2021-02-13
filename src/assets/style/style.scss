@@ -1054,10 +1054,6 @@ Boxes CSS
         transition: $transition;
     }
 
-    .font-icon {
-        margin-top: 35px;
-        font-size: 60px;
-    }
     h3 {
         font-size: 18px;
         margin: {
@@ -2829,20 +2825,12 @@ hr {
 
     @media (max-width: 1200px) {
       .terms {
-        margin-top: 60px;
         width: 85%;
-      }
-    }
-
-    @media (max-width: 992px) {
-      .terms {
-        margin-top: 60px;
       }
     }
 
     @media (max-width: 768px) {
       .terms {
-        margin-top: 60px;
         width: 100%;
         box-shadow: none;
         border: none;
@@ -2851,8 +2839,6 @@ hr {
 
 .terms-row {
     margin: 20px 20px 20px 50px;
-    display: flex;
-    align-items: center;
 
 }
     @media (max-width: 768px) {

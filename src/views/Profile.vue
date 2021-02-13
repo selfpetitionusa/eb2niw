@@ -49,7 +49,7 @@
                                         <div class="col-xl-8 col-lg-9 col-md-8 col-sm-12 col-12" style="padding: 0px">
                                             <div class="row" style="margin: 5px 0px 15px;"  v-for="school in response.schools" :key="school.value">
                                                 <div class="col-2" style="width: 35px; display: flex; justify-content: flex-end; padding: 0px">
-                                                    <font-awesome-icon style="font-size: 30px; color:#5457C1" class="font-icon" icon="graduation-cap" />
+                                                    <font-awesome-icon style="font-size: 30px; color:#5457C1" icon="graduation-cap" />
                                                 </div>
                                                 <div class="col-10" style="padding: 0px 10px">
                                                     <p class="school" style="margin: 0px; line-height: 20px; font-weight: 600; color: #0E314C">{{school.label}}</p>
@@ -59,7 +59,7 @@
 
                                             <div class="row" style="margin: 0px 0px 15px" v-for="certificate in response.certificates" :key="certificate.value">
                                                 <div class="col-2" style="width: 35px; display: flex; justify-content: flex-end; padding: 0px">
-                                                    <font-awesome-icon style="font-size: 30px; color:#5457C1" class="font-icon" icon="star-of-life" />
+                                                    <font-awesome-icon style="font-size: 30px; color:#5457C1" icon="star-of-life" />
                                                 </div>
                                                 <div class="col-10" style="padding: 0px 10px">
                                                     <p class="certificate" style="margin: 0px; line-height: 20px; font-weight: 600; color: #0E314C">{{certificate.label}}</p>
