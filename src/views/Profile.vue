@@ -6,7 +6,7 @@
 
             <div class="col-12 col-xl-3 col-lg-4 col-md-12" >
                 <div style="background-color:white; border-radius: 12px; position: relative; padding: 10px 10px 40px">
-                    <img src="../assets/img/photo.png" width="146" height="145" style="position: absolute; left:50%; margin-left: -73px; top:-64px; border: solid 7px white; border-radius: 50%; box-shadow: 1px 4px 6px #888888;" />
+                    <img :src="response.profile.photo" width="146" height="145" style="position: absolute; left:50%; margin-left: -73px; top:-64px; border: solid 7px white; border-radius: 50%; box-shadow: 1px 4px 6px #888888;" />
                     <h2 style="margin: 90px 0px 10px; line-height: 32px; font-size: 28px; font-weight: 600; text-align: center; color: #0E314C">{{response.profile.firstName}} {{response.profile.lastName}}</h2>
                     <div style="margin: 0px; font-size: 18px; font-weight: 500; text-align: center; color: #0E314C">{{response.categories.map(cat => cat.categoryName).join(' | ')}}</div>
                     <div style="margin-top: 30px; font-size: 16px; font-weight: 400; text-align: center"><p style="margin-block-end: 0px; line-height: 22px">Hi, my name is {{response.profile.firstName}}</p><p style="line-height: 22px">and I'm {{response.categories.map(cat => cat.categoryName)[0]}} tutor.</p><p>Welcome to my website!</p></div>
@@ -22,7 +22,7 @@
                     <hr style="width:40%; margin-top: 20px">
 
                     <div style=" margin-top: 50px; display: flex; justify-content: center">
-                        <button type="submit" class="btn btn-primary btn-profile">Contact {{response.profile.firstName}}</button>
+                        <a :href="'mailto:' + response.profile.email" class="btn btn-primary btn-profile" role="button">Contact {{response.profile.firstName}}</a>
                     </div>
                 </div>
             </div>
@@ -77,14 +77,15 @@
 
 
                         <div id="section-subjects" class="tu-card" >
+                            <img src="../assets/img/subjects_figures.png" width="250px" style="position: absolute; top: 20px; right: 5px;" >
                             <div style="display:flex; align-items: center">
                                 <div style="background-color: #DF7870; width: 8px; height: 35px;"></div>
                                 <div style="margin-left: 10px; padding-top: 5px"><h2 style="font-size: 28px; font-weight: 600; color: #0E314C">Subjects</h2></div>
                             </div>
 
                             <div style="margin-top: 40px; display: flex; justify-content: center; padding: 10px" class="row"  >
-                                <div class="col-md-4"  v-for="category in response.categories" :key="category.id">
-                                    <div style="margin: 5px; border: 1px dashed rgba(84, 87, 193, 0.3);box-sizing: border-box;box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.1);border-radius: 5px;height: 100%">
+                                <div class="col-md-4"  v-for="(category, index) in response.categories" :key="category.id">
+                                    <div style="margin: 5px; background-color: white; box-sizing: border-box;box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.1);border-radius: 5px;height: 100%"  :style="[index % 2 === 0  ? {'border': '1px dashed rgba(84, 87, 193, 0.3)'} : {'border': '1px dashed rgba(223, 120, 112, 0.5)'}]" >
                                         <p style="color: #0E314C; text-align: center; margin-top: 30px; margin-bottom: 10px; font-weight: 600; font-size: 18px;">{{category.categoryName}}</p>
                                         <hr style="width: 60%; border: 1px solid rgba(223, 120, 112, 0.3)">
 
@@ -122,6 +123,9 @@
                             </div>
                         </div>
                         <div id="section-rates" class="tu-card" >
+                            <div style="position: absolute; bottom: 35px; left: 30px;">
+                                <img src="../assets/img/rates_figure.png" width="180px"  >
+                            </div>
                             <div style="display:flex; align-items: center">
                                 <div style="background-color: #DF7870; width: 8px; height: 35px;"></div>
                                 <div style="margin-left: 10px; padding-top: 5px"><h2 style="font-size: 28px; font-weight: 600; color: #0E314C">Rates</h2></div>
@@ -134,7 +138,8 @@
                                             <div style="background: #5457C1; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); border-radius: 5px; min-width: 80px; font-weight: 400; font-size: 28px; text-align: center; color: white; padding: 5px 0px">{{rate.currency}}{{rate.amount}}</div>
                                             <div style="margin-left: 7px;">
                                                 <p style="width: 20rem; margin-bottom: 5px; line-height: 18px; color: #6084A4; font-size: 14px">{{rate.commentTop}}</p>
-                                                <p style="width: 20rem; margin: 0px; line-height: 15px; font-size: 16px; color: #0E314C"  v-if="rate.commentBottom" >{{rate.commentBottom}}</p>
+                                                <p style="width: 20rem; margin: 0px; line-height: 15px; font-size: 16px; color: #0E314C"  v-if="rate.commentBottom && response.rates.length !== 1" >{{rate.commentBottom}}</p>
+                                                <p style="width: 20rem; margin: 0px; line-height: 15px; font-size: 16px; color: #0E314C"  v-if="response.rates.length === 1" >Standard rate</p>
                                             </div>
 
                                         </div>
@@ -142,6 +147,12 @@
                                         <div v-if="response.profile.rateInfo.rateSectionComment" style="display:flex; width: 100%; justify-content: flex-start; color: #6084A4; font-size: 14px; margin-top: 30px; line-height: 22px; padding: 0px 40px 0px 0px" >
                                             {{response.profile.rateInfo.rateSectionComment}}
                                         </div>
+                                        <div v-else style="display:flex; width: 100%; justify-content: flex-start; color: #6084A4; font-size: 14px; margin-top: 30px; line-height: 22px; padding: 0px 40px 0px 0px" >
+                                            Details available upon request
+                                        </div>
+
+
+
 
 
                                     </div>
@@ -154,7 +165,7 @@
                                 </div>
                             </div>
 
-                            <div style="margin: 59px 110px 0; border: 1px dashed #F2F2F2; box-sizing: border-box; box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.1);border-radius: 5px; padding: 24px 39px 26px">
+                            <div style="position:relative; background-color: white; margin: 59px 110px 0; border: 1px dashed #F2F2F2; box-sizing: border-box; box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.1);border-radius: 5px; padding: 24px 39px 26px">
                                 <div style="display: flex; padding: 5px; align-items: center">
                                     <img src="../assets/img/Globe_icon.svg"/><div style="min-width: 135px; line-height: 15px; margin-left: 7px; font-size: 14px; color: #0E314C">Online lessons:</div>
                                     <div style="line-height: 15px; margin-left: 7px; font-size: 14px; color: #6084A4" >
@@ -201,36 +212,45 @@
                                 </div>
                             </div>
                         </div>
+
                         <div id="section-expertise" class="tu-card" v-if="!(response.profile.youtubeIntroLink === null && response.problemCards.length === 0)">
                             <div style="display:flex; align-items: center">
                                 <div style="background-color: #DF7870; width:8px; height: 35px;"></div>
                                 <div style="margin-left: 10px; padding-top: 5px"><h2 style="font-size: 28px; font-weight: 600; color: #0E314C">Expertise</h2></div>
                             </div>
 
-                            <div v-if="response.profile.youtubeIntroLink"   style="margin-top: 55px; display: flex; justify-content: center">
+                            <div v-if="response.profile.youtubeIntroLink" style="margin-top: 55px; display: flex; justify-content: center">
                                 <iframe width="560" height="315" :src="response.profile.youtubeLink" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
+                            <div style="display: flex; align-items: center;">
+                                <div v-on:click="scroll('left')" style="margin-right:10px; flex: 0 0 20px; margin-top: 45px;" v-if="response.problemCards.length > 3">
+                                    <img  src="../assets/img/arrow_left.svg">
+                                </div>
 
-                            <div class="my-carousel" style="overflow-y: scroll">
-                                <div style="margin-top: 90px; padding: 0px 30px; display: flex;" :style= "[response.problemCards.length < 3 ? {'justify-content': 'center'} : {}]">
-                                    <div style="width: 280px; min-height: 280px; margin: 5px; background: #F6F8FE; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); border-radius: 10px; flex-shrink: 0; position: relative" v-for="(problemCard, index) in response.problemCards" :key="problemCard.id" >
-                                        <div style="position: absolute; padding: 13px; background-color: white; border: 1px solid rgba(223, 120, 112, 0.3);box-sizing: border-box; border-radius: 50%; top: -40px; left: 30px; filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.05));">
-                                            <img :src="getImgUrl(index)">
-                                        </div>
-
-                                        <div style="margin-top: 60px; margin-left: 11px; margin-right: 24px; display: flex; flex-direction: column">
-                                            <div>
-                                                <p style="font-size: 14px; line-height: 22px; color: #0E314C; font-weight: 600; margin: 0; padding: 0px; font-family: Poppins">{{problemCard.question}}</p>
+                                <div id="problems" class="my-carousel" style="overflow-y: scroll">
+                                    <div style="margin-top: 90px;display: flex;" :style="[response.problemCards.length < 3 ? {'justify-content': 'center'} : {}]">
+                                        <div style="width: 280px; min-height: 280px; margin: 5px; background: #F6F8FE; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); border-radius: 10px; flex-shrink: 0; position: relative" v-for="(problemCard, index) in response.problemCards.concat(response.problemCards).concat(response.problemCards)" :key="problemCard.id" >
+                                            <div style="position: absolute; padding: 13px; background-color: white; border: 1px solid rgba(223, 120, 112, 0.3);box-sizing: border-box; border-radius: 50%; top: -40px; left: 30px; filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.05));">
+                                                <img :src="getImgUrl(index)" >
                                             </div>
-                                            <div style="margin-top: 15px; padding-bottom: 2rem">
-                                                <p style="font-family: Poppins; font-size: 14px; line-height: 22px; color: #6084A4">{{problemCard.answer}}</p>
-                                            </div>
-<!--                                            <div style="position: absolute; bottom: 20px; left: 11px;">-->
-<!--                                                <p style="color:#DF7870; font-size: 14px;">Read more -></p>-->
-<!--                                            </div>-->
-                                        </div>
 
+                                            <div style="margin-top: 60px; margin-left: 11px; margin-right: 24px; display: flex; flex-direction: column">
+                                                <div>
+                                                    <p style="font-size: 14px; line-height: 22px; color: #0E314C; font-weight: 600; margin: 0; padding: 0px; font-family: Poppins">{{problemCard.question}}</p>
+                                                </div>
+                                                <div style="margin-top: 15px; padding-bottom: 2rem">
+                                                    <p style="font-family: Poppins; font-size: 14px; line-height: 22px; color: #6084A4">{{problemCard.answer}}</p>
+                                                </div>
+    <!--                                            <div style="position: absolute; bottom: 20px; left: 11px;">-->
+    <!--                                                <p style="color:#DF7870; font-size: 14px;">Read more -></p>-->
+    <!--                                            </div>-->
+                                            </div>
+
+                                        </div>
                                     </div>
+                                </div>
+                                <div v-on:click="scroll('right')"  style="margin-left:10px; flex: 0 0 20px;margin-top: 45px;" v-if="response.problemCards.length > 3">
+                                    <img src="../assets/img/arrow_right.svg">
                                 </div>
                             </div>
 
@@ -255,19 +275,38 @@
         return {
             response: {
                 profile: {rateInfo: {}, links: {}, bio: '', studentsProfile: ''},
-                categories: []
-            }
+                categories: [],
+                problemCards: []
+            },
+            offset: 0
         }
     },
       mounted () {
           axios
-              .get('https://www.miragenetics.com/api/profiles/' + this.$route.params.token)
+              .get('http://localhost:8081/api/profiles/' + this.$route.params.token)
               .then(res => this.response = res.data)
       },
       methods: {
           getImgUrl: function (index) {
               const number =  index % 6;
               return require('../assets/img/icon_expertise' + number + '.svg')
+          },
+          scroll: function (direction) {
+            const p = document.getElementById('problems');
+            if(direction === 'left') {
+                if(p.scrollLeft - p.offsetWidth < 0) {
+                    this.offset = 0;
+                } else {
+                    this.offset = p.scrollLeft - p.offsetWidth;
+                }
+                p.scrollTo({left: this.offset, behavior: 'smooth'})
+            } else {
+                if(p.scrollLeft + p.offsetWidth >= p.scrollWidth)
+                    this.offset = p.scrollWidth - p.offsetWidth;
+                else
+                    this.offset = p.scrollLeft + p.offsetWidth;
+                p.scrollTo({left: this.offset, behavior: 'smooth'})
+            }
           }
       }
   }
