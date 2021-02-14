@@ -5,13 +5,13 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <div id="hamburgerSection" class="hamburger-nav">
           <div id="myLinks">
-            <a href="#section-about-me" v-on:click="closeHamburgerMenu">About me</a>
-            <a href="#section-subjects" v-on:click="closeHamburgerMenu">Subjects</a>
-            <a href="#section-rates" v-on:click="closeHamburgerMenu">Rates</a>
-            <a v-if="!(response.profile.youtubeIntroLink === null && response.problemCards.length === 0)" v-on:click="closeHamburgerMenu" href="#section-expertise">Expertise</a>
+            <a href="#section-about-me" v-on:click="actionHamburgerMenu">About me</a>
+            <a href="#section-subjects" v-on:click="actionHamburgerMenu">Subjects</a>
+            <a href="#section-rates" v-on:click="actionHamburgerMenu">Rates</a>
+            <a v-if="!(response.profile.youtubeIntroLink === null && response.problemCards.length === 0)" v-on:click="actionHamburgerMenu" href="#section-expertise">Expertise</a>
         </div>
 
-          <a v-on:click="openHamburgerMenu" class="icon">
+          <a v-on:click="actionHamburgerMenu" class="icon">
             <i class="fa fa-bars"></i>
           </a>
         </div>
@@ -340,23 +340,14 @@
               const number =  index % 6;
               return require('../assets/img/icon_expertise' + number + '.svg')
           },
-          openHamburgerMenu: function () {
+          actionHamburgerMenu: function () {
                   var x = document.getElementById("myLinks");
                   if (x.style.display === "block") {
                     x.style.display = "none";
                   } else {
                     x.style.display = "block";
                   }
-              },
-          closeHamburgerMenu: function () {
-                  var x = document.getElementById("myLinks");
-                  if (x.style.display === "block") {
-                    x.style.display = "none";
-                  } else {
-                    x.style.display = "none";
-                  }
               }
-
       }
   }
 
