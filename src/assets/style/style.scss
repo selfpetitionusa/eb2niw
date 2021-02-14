@@ -2847,6 +2847,51 @@ hr {
       }
     }
 
+/*================================================
+Hamburger menu
+=================================================*/
+
+  .hamburger-nav {
+    overflow: hidden;
+    background-color: #333;
+    z-index: 1;
+  }
+
+    @media (min-width: 992px) {
+      .hamburger-nav {
+        display: none;
+      }
+    }
+
+  .hamburger-nav #myLinks {
+    display: none;
+  }
+
+  .hamburger-nav a {
+    color: #ddd;
+    padding: 14px 16px;
+    margin: 0px 20px 10px 0px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+    border-radius: 30%;
+  }
+
+  .hamburger-nav a.icon {
+    background-color: #6084A4;
+    opacity: 40%;
+    display: block;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+  }
+
+  .hamburger-nav a:hover {
+    background-color: #ddd;
+    opacity: 40%;
+    color: #6084A4;
+  }
+
 
 /*================================================
 Testing Environment
