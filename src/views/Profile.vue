@@ -1,24 +1,26 @@
 <template>
+
   <div class="d-flex" style="background-color:#f9f6f6; width: 100%; height:100%; position: relative; overflow-x: hidden">
-      <div class="background-rectangular" style="position: absolute"></div>
-        <div class="tu-container" style="height: 100%; margin: auto">
-          <div class="row" style="height: 100%">
 
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-          <div class="hamburger-nav">
-              <div id="myLinks">
-                <a href="#section-about-me">About me</a>
-                <a href="#section-subjects">Subjects</a>
-                <a href="#section-rates">Rates</a>
-                <a v-if="!(response.profile.youtubeIntroLink === null && response.problemCards.length === 0)" href="#section-expertise">Expertise</a>
-              </div>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <div class="hamburger-nav">
+          <div id="myLinks">
+            <a href="#section-about-me">About me</a>
+            <a href="#section-subjects">Subjects</a>
+            <a href="#section-rates">Rates</a>
+            <a v-if="!(response.profile.youtubeIntroLink === null && response.problemCards.length === 0)" href="#section-expertise">Expertise</a>
+          </div>
 
-              <a v-on:click="openHamburgerMenu" class="icon">
-                <i class="fa fa-bars"></i>
-              </a>
-            </div>
+          <a v-on:click="openHamburgerMenu" class="icon">
+            <i class="fa fa-bars"></i>
+          </a>
+        </div>
+
+    <div class="background-rectangular" style="position: absolute"></div>
+    <div class="tu-container" style="height: 100%; margin: auto">
 
 
+        <div class="row" style="height: 100%">
             <div class="col-xl-3 col-lg-4 col-md-12 col-sm-12 col-12">
                 <div class="left-side">
                     <img class="photo" src="../assets/img/photo.png" style="position: absolute; left:50%; margin-left: -73px; top:-64px; border: solid 7px white; border-radius: 50%; box-shadow: 1px 4px 6px #888888;" />
