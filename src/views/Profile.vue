@@ -3,12 +3,12 @@
   <div class="d-flex" style="background-color:#f9f6f6; width: 100%; height:100%; position: relative; overflow-x: hidden">
 
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-      <div id="hamburgerSection" class="hamburger-nav">
+      <div class="hamburger-nav">
           <div id="myLinks">
             <a href="#section-about-me" v-on:click="actionHamburgerMenu">About me</a>
             <a href="#section-subjects" v-on:click="actionHamburgerMenu">Subjects</a>
             <a href="#section-rates" v-on:click="actionHamburgerMenu">Rates</a>
-            <a v-if="!(response.profile.youtubeIntroLink === null && response.problemCards.length === 0)" v-on:click="actionHamburgerMenu" href="#section-expertise">Expertise</a>
+            <a href="#section-expertise" v-if="!(response.profile.youtubeIntroLink === null && response.problemCards.length === 0)" v-on:click="actionHamburgerMenu">Expertise</a>
         </div>
 
           <a v-on:click="actionHamburgerMenu" class="icon">
