@@ -3,13 +3,13 @@
   <div class="d-flex" style="background-color:#f9f6f6; width: 100%; height:100%; position: relative; overflow-x: hidden">
 
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-      <div class="hamburger-nav">
+      <div id="hamburgerSection" class="hamburger-nav">
           <div id="myLinks">
-            <a href="#section-about-me">About me</a>
-            <a href="#section-subjects">Subjects</a>
-            <a href="#section-rates">Rates</a>
-            <a v-if="!(response.profile.youtubeIntroLink === null && response.problemCards.length === 0)" href="#section-expertise">Expertise</a>
-          </div>
+            <a href="#section-about-me" v-on:click="closeHamburgerMenu">About me</a>
+            <a href="#section-subjects" v-on:click="closeHamburgerMenu">Subjects</a>
+            <a href="#section-rates" v-on:click="closeHamburgerMenu">Rates</a>
+            <a v-if="!(response.profile.youtubeIntroLink === null && response.problemCards.length === 0)" v-on:click="closeHamburgerMenu" href="#section-expertise">Expertise</a>
+        </div>
 
           <a v-on:click="openHamburgerMenu" class="icon">
             <i class="fa fa-bars"></i>
@@ -346,6 +346,14 @@
                     x.style.display = "none";
                   } else {
                     x.style.display = "block";
+                  }
+              },
+          closeHamburgerMenu: function () {
+                  var x = document.getElementById("myLinks");
+                  if (x.style.display === "block") {
+                    x.style.display = "none";
+                  } else {
+                    x.style.display = "none";
                   }
               }
 

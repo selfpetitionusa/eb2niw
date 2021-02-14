@@ -2853,13 +2853,6 @@ Hamburger menu
 
   .hamburger-nav {
     overflow: hidden;
-    background-color: yellow;
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     z-index: 2;
   }
 
@@ -2871,31 +2864,40 @@ Hamburger menu
 
   .hamburger-nav #myLinks {
     display: none;
+    background: linear-gradient(244.35deg, #314194 37.33%, #3B4DAB 43.75%, #5457C1 50.17%, #6B6FEA 76.06%);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    padding: 50px;
   }
 
   .hamburger-nav a {
-    color: #ddd;
+    color: #e4e9ef;
     padding: 14px 16px;
     margin: 0px 20px 10px 0px;
     text-decoration: none;
     font-size: 17px;
     display: block;
     border-radius: 30%;
+    display: flex;
+    justify-content: center;
   }
 
   .hamburger-nav a.icon {
-    background-color: #6084A4;
-    opacity: 40%;
+    background-color: #cac4eb;
     display: block;
     position: fixed;
     right: 0;
     bottom: 0;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
   }
 
   .hamburger-nav a:hover {
-    background-color: #ddd;
-    opacity: 40%;
-    color: #6084A4;
+    background-color: #e4e9ef;
+    color: #cac4eb;
   }
 
 
