@@ -10,10 +10,10 @@
                 <a href="#section-about-me">About me</a>
                 <a href="#section-subjects">Subjects</a>
                 <a href="#section-rates">Rates</a>
-                <a href="#section-expertise">Expertise</a>
+                <a v-if="!(response.profile.youtubeIntroLink === null && response.problemCards.length === 0)" href="#section-expertise">Expertise</a>
               </div>
 
-              <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <a v-on:click="openHamburgerMenu" class="icon">
                 <i class="fa fa-bars"></i>
               </a>
             </div>
@@ -337,7 +337,16 @@
           getImgUrl: function (index) {
               const number =  index % 6;
               return require('../assets/img/icon_expertise' + number + '.svg')
-          }
+          },
+          openHamburgerMenu: function () {
+                  var x = document.getElementById("myLinks");
+                  if (x.style.display === "block") {
+                    x.style.display = "none";
+                  } else {
+                    x.style.display = "block";
+                  }
+              }
+
       }
   }
 
