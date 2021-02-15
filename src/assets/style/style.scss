@@ -2867,11 +2867,21 @@ hr {
 
 .terms-row {
     margin: 20px 20px 20px 50px;
-
 }
+
     @media (max-width: 768px) {
       .terms-row {
-        margin: 20px 0px 0px 15px ;
+        margin: 20px 0px 0px 15px;
+      }
+    }
+
+.terms-column {
+  display: inline;
+}
+
+    @media (max-width: 768px) {
+      .terms-column {
+        display: block;
       }
     }
 
