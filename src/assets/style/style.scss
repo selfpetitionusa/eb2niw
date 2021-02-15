@@ -2558,18 +2558,6 @@ body {
     }
 }
 
-.ul-icon {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    div {
-        display: flex;
-        justify-content: center;
-
-    }
-
-}
-
 .background-rectangular {
     top: -10%;
     left: -25%;
@@ -2725,6 +2713,32 @@ h2.name {
         padding: 0px 20px;
       }
     }
+
+.subject-subcategories {
+   display: inline-block;
+   text-align: left;
+   list-style: none;
+   padding-left: 0px;
+}
+
+.subject-subcategories li {
+  position: relative;
+  padding-left: 25px;
+  margin: 15px 10px;
+}
+
+.subject-subcategories li:before {
+    content: '';
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    background-image: url("../../assets/img/tick_icon.png");
+    background-size: cover;
+    background-position: center;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
 
 .short-bio {
   font-size: 16px;

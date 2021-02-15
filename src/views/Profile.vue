@@ -108,39 +108,27 @@
 
                             <div class="row subjects-container">
                                 <div class="col-md-6"  v-for="category in response.categories" :key="category.id" style="padding: 20px 10px;">
-                                    <div style="max-width: 300px; border: 1px dashed rgba(84, 87, 193, 0.3); box-sizing: border-box; box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.1); border-radius: 5px; height: 100%">
+                                    <div style="max-width: 300px; border: 1px dashed rgba(84, 87, 193, 0.3); box-sizing: border-box; box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.1); border-radius: 5px; height: 100%; margin: auto">
                                         <p class="subjects" style="color: #0E314C; text-align: center; margin-top: 30px; margin-bottom: 10px; font-weight: 600;">{{category.categoryName}}</p>
                                         <hr style="width: 60%; border: 1px solid rgba(223, 120, 112, 0.3)">
 
-                                       <div class="ul-icon" style="font-size: 14px; line-height: 17px; color: #0E314C; margin-bottom: 20px">
-                                           <div v-if="category.subcategoryName1">
-                                                <img width="22px" height="22px" src="../assets/img/tick_icon.png"/>  <div v-if="category.subcategoryName1">{{category.subcategoryName1}}</div>
-                                           </div>
-                                           <div v-if="category.subcategoryName2">
-                                                <img width="22px" height="22px" src="../assets/img/tick_icon.png"/> <div v-if="category.subcategoryName2">{{category.subcategoryName2}}</div>
-                                           </div>
-                                           <div v-if="category.subcategoryName3">
-                                                <img width="22px" height="22px" src="../assets/img/tick_icon.png"/> <div v-if="category.subcategoryName3">{{category.subcategoryName3}}</div>
-                                           </div>
-                                           <div v-if="category.subcategoryName4">
-                                                <img width="22px" height="22px" src="../assets/img/tick_icon.png"/> <div v-if="category.subcategoryName4">{{category.subcategoryName4}}</div>
-                                           </div>
-                                           <div v-if="category.subcategoryName5">
-                                                <img width="22px" height="22px" src="../assets/img/tick_icon.png"/> <div v-if="category.subcategoryName5">{{category.subcategoryName5}}</div>
-                                           </div>
-                                           <div v-if="category.subcategoryName6">
-                                                <img  width="22px" height="22px" src="../assets/img/tick_icon.png"/> <div v-if="category.subcategoryName6">{{category.subcategoryName6}}</div>
-                                           </div>
-                                           <div v-if="category.subcategoryName7">
-                                                <img width="22px" height="22px" src="../assets/img/tick_icon.png"/> <div >{{category.subcategoryName7}}</div>
-                                           </div>
+                                       <div style="text-align: center; font-size: 14px; line-height: 17px; color: #0E314C">
+                                          <ul class="subject-subcategories">
+                                              <li v-if="category.subcategoryName1">{{category.subcategoryName1}}</li>
+                                              <li v-if="category.subcategoryName2">{{category.subcategoryName2}}</li>
+                                              <li v-if="category.subcategoryName3">{{category.subcategoryName3}}</li>
+                                              <li v-if="category.subcategoryName4">{{category.subcategoryName4}}</li>
+                                              <li v-if="category.subcategoryName5">{{category.subcategoryName5}}</li>
+                                              <li v-if="category.subcategoryName6">{{category.subcategoryName6}}</li>
+                                              <li v-if="category.subcategoryName7">{{category.subcategoryName7}}</li>
+                                          </ul>
                                        </div>
                                     </div>
                                 </div>
-
                             </div>
-                            <div class="my-students">
 
+
+                            <div class="my-students">
                                 <img src="../assets/img/students-icon.svg"/> <div style="margin-left: 7px; font-size: 16px; color: #0E314C">My students are</div> <div style="margin-left: 7px; font-size: 16px; font-weight: 600; color: #5457C1">{{response.profile.studentsProfile.toLowerCase()}}</div>
                             </div>
                         </div>
