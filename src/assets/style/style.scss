@@ -2558,18 +2558,6 @@ body {
     }
 }
 
-.ul-icon {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    div {
-        display: flex;
-        justify-content: center;
-
-    }
-
-}
-
 .background-rectangular {
     top: -10%;
     left: -25%;
@@ -2646,6 +2634,7 @@ body {
 
 h2.section, h2.name {
     font-size: 28px;
+    color: #0E314C;
 }
 
     @media (max-width: 1200px) {
@@ -2703,15 +2692,54 @@ h2.name {
     }
   }
 
-.subject-categories {
+.subject-categories, .subjects {
   font-size: 18px;
 }
 
     @media (max-width: 1200px) {
-      .subject-categories {
+      .subject-categories, .subjects {
         font-size: 16px;
       }
     }
+
+.subjects-container {
+  margin-top: 40px;
+  padding: 0px 80px;
+  display: flex;
+  justify-content: center;
+}
+
+    @media (max-width: 1200px) {
+      .subjects-container {
+        padding: 0px 20px;
+      }
+    }
+
+.subject-subcategories {
+   display: inline-block;
+   text-align: left;
+   list-style: none;
+   padding-left: 0px;
+}
+
+.subject-subcategories li {
+  position: relative;
+  padding-left: 25px;
+  margin: 15px 10px;
+}
+
+.subject-subcategories li:before {
+    content: '';
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    background-image: url("../../assets/img/tick_icon.png");
+    background-size: cover;
+    background-position: center;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
 
 .short-bio {
   font-size: 16px;
@@ -2841,11 +2869,21 @@ hr {
 
 .terms-row {
     margin: 20px 20px 20px 50px;
-
 }
+
     @media (max-width: 768px) {
       .terms-row {
-        margin: 20px 0px 0px 15px ;
+        margin: 20px 0px 0px 15px;
+      }
+    }
+
+.terms-column {
+  display: inline;
+}
+
+    @media (max-width: 768px) {
+      .terms-column {
+        display: block;
       }
     }
 
@@ -2907,7 +2945,7 @@ Hamburger menu
 Testing Environment
 =================================================*/
 
-
+/*
 @media (min-width: 1200px) {
   h2 {
     color: red;
@@ -2937,3 +2975,4 @@ Testing Environment
     color: green;
   }
 }
+*/
