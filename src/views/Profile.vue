@@ -113,25 +113,25 @@
                                         <hr style="width: 60%; border: 1px solid rgba(223, 120, 112, 0.3)">
 
                                        <div class="ul-icon" style="font-size: 14px; line-height: 17px; color: #0E314C; margin-bottom: 20px">
-                                           <div style="padding: 5px 25px 10px 35px" v-if="category.subcategoryName1">
+                                           <div v-if="category.subcategoryName1">
                                                 <img width="22px" height="22px" src="../assets/img/tick_icon.png"/>  <div v-if="category.subcategoryName1">{{category.subcategoryName1}}</div>
                                            </div>
-                                           <div style="padding: 5px 25px 10px 35px" v-if="category.subcategoryName2">
+                                           <div v-if="category.subcategoryName2">
                                                 <img width="22px" height="22px" src="../assets/img/tick_icon.png"/> <div v-if="category.subcategoryName2">{{category.subcategoryName2}}</div>
                                            </div>
-                                           <div style="padding: 5px 25px 10px 35px" v-if="category.subcategoryName3">
+                                           <div v-if="category.subcategoryName3">
                                                 <img width="22px" height="22px" src="../assets/img/tick_icon.png"/> <div v-if="category.subcategoryName3">{{category.subcategoryName3}}</div>
                                            </div>
-                                           <div style="padding: 5px 25px 10px 35px" v-if="category.subcategoryName4">
+                                           <div v-if="category.subcategoryName4">
                                                 <img width="22px" height="22px" src="../assets/img/tick_icon.png"/> <div v-if="category.subcategoryName4">{{category.subcategoryName4}}</div>
                                            </div>
-                                           <div style="padding: 5px 25px 10px 35px" v-if="category.subcategoryName5">
+                                           <div v-if="category.subcategoryName5">
                                                 <img width="22px" height="22px" src="../assets/img/tick_icon.png"/> <div v-if="category.subcategoryName5">{{category.subcategoryName5}}</div>
                                            </div>
-                                           <div style="padding: 5px 25px 10px 35px" v-if="category.subcategoryName6">
+                                           <div v-if="category.subcategoryName6">
                                                 <img  width="22px" height="22px" src="../assets/img/tick_icon.png"/> <div v-if="category.subcategoryName6">{{category.subcategoryName6}}</div>
                                            </div>
-                                           <div style="padding: 5px 25px 10px 35px" v-if="category.subcategoryName7">
+                                           <div v-if="category.subcategoryName7">
                                                 <img width="22px" height="22px" src="../assets/img/tick_icon.png"/> <div >{{category.subcategoryName7}}</div>
                                            </div>
                                        </div>
