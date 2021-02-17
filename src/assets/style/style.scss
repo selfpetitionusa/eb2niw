@@ -2714,6 +2714,16 @@ h2.name {
       }
     }
 
+.subjects-card {
+  padding: 10px 10px;
+}
+
+    @media (min-width: 1200px) {
+      .subjects-card {
+        padding: 1.5rem 1rem;
+      }
+    }
+
 .subject-subcategories {
    display: inline-block;
    text-align: left;
@@ -2762,7 +2772,7 @@ h2.name {
       }
     }
 
-hr {
+.left-side hr {
   width:40%;
   margin-top: 20px;
 }
@@ -2772,6 +2782,8 @@ hr {
         margin-top: 10px;
       }
     }
+
+
 
 .school, .certificate {
   font-size: 16px;
