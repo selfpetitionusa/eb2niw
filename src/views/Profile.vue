@@ -314,7 +314,7 @@
 
                     </div>
                       <div style="display: flex; justify-content: center; margin-top: 30px">
-                        <p style="display: flex; align-items: center; color: #cac4eb; margin: 0px">Powered by</p><img src="../assets/img/logo2.png" style="height: 30px; margin-left: 5px">
+                        <p style="display: flex; align-items: center; color: #cac4eb; margin: 0px">Powered by</p><img src="../assets/img/logo2.png" style="height: 25px; margin-left: 5px">
                       </div>
                 </div>
             </div>
