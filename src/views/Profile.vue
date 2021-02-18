@@ -100,7 +100,7 @@
 
 
                         <div id="section-subjects" class="tu-card" >
-                            <img src="../assets/img/subjects_figures.png" width="250px" style="position: absolute; top: 20px; right: 5px;" >
+                            <img src="../assets/img/subjects_figures.png" width="250px" style="position: absolute; top: 10px; right: 0px;" >
                             <div style="display:flex; align-items: center">
                                 <div style="background-color: #DF7870; width: 8px; height: 35px;"></div>
                                 <div style="margin-left: 10px; padding-top: 5px"><h2 class="section" style="font-weight: 600">Subjects</h2></div>
