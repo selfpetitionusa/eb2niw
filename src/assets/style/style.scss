@@ -2876,6 +2876,7 @@ h2.name {
         width: 100%;
         box-shadow: none;
         border: none;
+        background-color: transparent;
       }
     }
 
@@ -2896,6 +2897,22 @@ h2.name {
     @media (max-width: 768px) {
       .terms-column {
         display: block;
+      }
+    }
+
+.figure-rates {
+  position: absolute;
+  bottom: 0%;
+  left: 5%;
+  width: 13rem;
+}
+
+    @media (max-width: 768px) {
+      .figure-rates {
+        position: absolute;
+        bottom: 32%;
+        left: 70%;
+        width: 9rem;
       }
     }
 

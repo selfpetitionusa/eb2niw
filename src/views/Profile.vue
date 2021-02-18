@@ -136,8 +136,8 @@
 
 
                         <div id="section-rates" class="tu-card" >
-                            <div style="position: absolute; bottom: 35px; left: 30px;">
-                                <img src="../assets/img/rates_figure.png" width="180px"  >
+                            <div class="figure-rates">
+                                <img src="../assets/img/rates_figure.png">
                             </div>
                             <div style="display:flex; align-items: center">
                                 <div style="background-color: #DF7870; width: 8px; height: 35px;"></div>
