@@ -69,7 +69,7 @@
                                                     <font-awesome-icon style="font-size: 30px; color:#5457C1" icon="graduation-cap" />
                                                   </div>
                                                 </div>
-                                                <div class="col-10" style="padding: 0px 10px">
+                                                <div class="col-10" style="padding: 0px 0px 0px 10px">
                                                     <p class="school" style="margin: 0px; line-height: 20px; font-weight: 600; color: #0E314C">{{school.label}}</p>
                                                     <p class="school" style="margin: 0px; line-height:17px; color: #6084A4">{{school.value}}</p>
                                                 </div>
@@ -81,14 +81,14 @@
                                                     <font-awesome-icon style="font-size: 30px; color:#5457C1" icon="star-of-life" />
                                                   </div>
                                                 </div>
-                                                <div class="col-10" style="padding: 0px 10px">
+                                                <div class="col-10" style="padding: 0px 0px 0px 10px">
                                                     <p class="certificate" style="margin: 0px; line-height: 20px; font-weight: 600; color: #0E314C">{{certificate.label}}</p>
                                                     <p class="certificate" style="margin-top: 3px; line-height:17px; color: #6084A4">{{certificate.value}}</p>
                                                 </div>
                                             </div>
                                         </div>
 
-                                        <div class="col" style="padding: 0px">
+                                        <div class="col" style="padding: 0px 0px 0px 10px">
                                                 <img class="graphic-bio" src="../assets/img/Graphic_bio.svg">
                                         </div>
                                     </div>
