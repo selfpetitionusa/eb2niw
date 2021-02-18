@@ -269,7 +269,7 @@
                                 <div style="margin-left: 10px; padding-top: 5px"><h2 class="section" style="font-weight: 600">Expertise</h2></div>
                             </div>
 
-                            <div v-if="response.profile.youtubeIntroLink" style="margin-top: 55px; display: flex; justify-content: center">
+                            <div v-if="response.profile.youtubeIntroLink" style="margin-top: 1.5rem; display: flex; justify-content: center">
                                 <iframe width="560" height="315" :src="response.profile.youtubeLink" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
                             <div style="display: flex; align-items: center;">
@@ -278,7 +278,7 @@
                                 </div>
 
                                 <div id="problems" class="my-carousel" style="overflow-y: scroll">
-                                    <div style="margin-top: 90px;display: flex;" :style="[response.problemCards.length < 3 ? {'justify-content': 'center'} : {}]">
+                                    <div style="margin-top: 4rem; display: flex;" :style="[response.problemCards.length < 3 ? {'justify-content': 'center'} : {}]">
                                         <div style="width: 280px; min-height: 280px; margin: 5px; background: #F6F8FE; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); border-radius: 10px; flex-shrink: 0; position: relative" v-for="(problemCard, index) in response.problemCards.concat(response.problemCards).concat(response.problemCards)" :key="problemCard.id" >
                                             <div style="position: absolute; padding: 13px; background-color: white; border: 1px solid rgba(223, 120, 112, 0.3);box-sizing: border-box; border-radius: 50%; top: -40px; left: 30px; filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.05));">
                                                 <img :src="getImgUrl(index)" >
