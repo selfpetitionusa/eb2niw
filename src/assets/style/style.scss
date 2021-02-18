@@ -2558,6 +2558,13 @@ body {
     }
 }
 
+@media (max-width: 768px) {
+    .tu-card {
+        padding: 25px 20px 25px;
+    }
+}
+
+
 .background-rectangular {
     top: -10%;
     left: -25%;
