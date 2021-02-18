@@ -130,7 +130,7 @@
 
 
                             <div class="my-students">
-                                <img src="../assets/img/students-icon.svg"/> <div style="margin-left: 7px; font-size: 16px; color: #0E314C">My students are</div> <div style="margin-left: 7px; font-size: 16px; font-weight: 600; color: #5457C1">{{response.profile.studentsProfile.toLowerCase()}}</div>
+                                <font-awesome-icon style="font-size: 35px; color:#5457C1" icon="users" /> <div style="margin-left: 10px; font-size: 16px; color: #0E314C">My students are</div> <div style="margin-left: 7px; font-size: 16px; font-weight: 600; color: #5457C1">{{response.profile.studentsProfile.toLowerCase()}}</div>
                             </div>
                         </div>
 
@@ -188,10 +188,10 @@
                             <div class="terms-container">
                                 <div class="terms">
                                     <div class="row terms-row">
-                                    <div class="col-1" style="display: flex; justify-content: flex-end; padding: 0px">
-                                        <img src="../assets/img/Globe_icon.svg" style="width: 35px; margin: 0px 10px 0px 0px">
+                                    <div class="col-1" style="display: flex; justify-content: center; align-items: center; padding: 0px">
+                                        <font-awesome-icon style="font-size: 30px; color:#5457C1" icon="globe" />
                                     </div>
-                                    <div class="col-11" style="display: flex; align-items: center; padding: 0px 5px 0px 0px;">
+                                    <div class="col-11" style="display: flex; align-items: center; padding: 0rem 0.3rem 0rem 0.7rem;">
                                           <div style="line-height: 15px; font-size: 14px; color: #0E314C">Online lessons:
                                             <div class="terms-column" style="line-height: 15px; font-size: 14px; color: #6084A4">
                                               <div v-if="response.profile.rateInfo.online" style="display: inline;">
@@ -205,10 +205,10 @@
                                     </div>
                                 </div>
                                 <div class="row terms-row">
-                                    <div class="col-1" style="display: flex; justify-content: flex-end; padding: 0px">
-                                        <img src="../assets/img/House_icon.svg" style="width: 35px; margin: 0px 10px 0px 0px">
+                                    <div class="col-1" style="display: flex; justify-content: center; align-items: center; padding: 0px">
+                                        <font-awesome-icon style="font-size: 30px; color:#5457C1" icon="home" />
                                     </div>
-                                    <div class="col-11" style="display: flex; align-items: center; padding: 0px 5px 0px 0px;">
+                                    <div class="col-11" style="display: flex; align-items: center; padding: 0rem 0.3rem 0rem 0.7rem;">
                                           <div style="line-height: 15px; font-size: 14px; color: #0E314C">In-person lessons:
                                             <div class="terms-column" style="line-height: 15px; font-size: 14px; color: #6084A4">
                                               <div v-if="response.profile.rateInfo.inPerson" style="display: inline">
@@ -222,10 +222,10 @@
                                       </div>
                                     </div>
                                 <div class="row terms-row">
-                                    <div class="col-1" style="display: flex; justify-content: flex-end; padding: 0px">
-                                        <img src="../assets/img/Tag_icon.svg" style="width: 35px; margin: 0px 10px 0px 0px">
+                                    <div class="col-1" style="display: flex; justify-content: center; align-items: center; padding: 0px">
+                                        <font-awesome-icon style="font-size: 30px; color:#5457C1" icon="tag" />
                                     </div>
-                                    <div class="col-11" style="display: flex; align-items: center; padding: 0px 5px 0px 0px;">
+                                    <div class="col-11" style="display: flex; align-items: center; padding: 0rem 0.3rem 0rem 0.7rem;">
                                         <div style="line-height: 15px; font-size: 14px; color: #0E314C">Free consultation:
                                           <div class="terms-column" style="line-height: 15px; font-size: 14px; color: #6084A4">
                                             <div v-if="response.profile.rateInfo.freeConsultation" style="display: inline">
@@ -239,10 +239,10 @@
                                     </div>
                                 </div>
                                 <div class="row terms-row">
-                                    <div class="col-1" style="display: flex; justify-content: flex-end; padding: 0px">
-                                        <img src="../assets/img/Calendar_icon.svg" style="width: 35px; margin: 0px 10px 0px 0px">
+                                    <div class="col-1" style="display: flex; justify-content: center; align-items: center; padding: 0px">
+                                        <font-awesome-icon style="font-size: 30px; color:#5457C1" icon="calendar-alt" />
                                     </div>
-                                    <div class="col-11" style="display: flex; align-items: center; padding: 0px 5px 0px 0px;">
+                                    <div class="col-11" style="display: flex; align-items: center; padding: 0rem 0.3rem 0rem 0.7rem;">
                                         <div style="line-height: 15px; font-size: 14px; color: #0E314C">Cancelation policy:
                                           <div class="terms-column" style="line-height: 15px; font-size: 14px; color: #6084A4">
                                             <div v-if="response.profile.rateInfo.cancellationPolicy" style="display: inline">

@@ -2855,7 +2855,7 @@ h2.name {
 
 .terms {
   margin-top: 60px;
-  padding: 10px 0px;
+  padding: 15px 0px;
   width: 60%;
   border: 1px dashed #F2F2F2;
   box-sizing: border-box;
@@ -2882,12 +2882,12 @@ h2.name {
     }
 
 .terms-row {
-    margin: 15px 20px 15px 50px;
+    margin: 1rem 1rem 1rem 3rem;
 }
 
     @media (max-width: 768px) {
       .terms-row {
-        margin: 5px 0px 0px 0px;
+        margin: 15px 0px 0px 0px;
       }
     }
 
