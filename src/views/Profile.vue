@@ -59,7 +59,7 @@
                     <div class="tu-card-container" >
                         <div id="section-about-me"  class="tu-card" >
                             <div><h2 class="section" style="font-weight: 600">{{response.profile.headline}}</h2></div>
-                            <div style="margin-top: 20px">
+                            <div style="margin-top: 1.5rem">
 
                                     <div class="row" style="margin: 0px; display: flex; align-items: center">
                                         <div class="col-xl-8 col-lg-9 col-md-8 col-sm-12 col-12" style="padding: 0px">
@@ -93,7 +93,7 @@
                                         </div>
                                     </div>
                             </div>
-                            <div style="margin-top: 15px">
+                            <div style="margin-top: 1rem">
                                 <p style="color: #0E314C; font-size: 14px; margin: 0px; padding: 0px; line-height: 22px;" v-for="bio in response.profile.bio.split(/\r?\n/)" :key="bio" >{{bio}}</p>
                             </div>
                         </div>
@@ -174,11 +174,6 @@
                                                 Details available upon request
                                             </div>
                                         </div>
-
-
-
-
-
                                       </div>
                                     </div>
                                 </div>
@@ -186,7 +181,6 @@
                                 <div class="col-xl-6 col-lg-5 col-md-5 col-sm-0 col-0" style="display: flex; align-items: center; padding-left: 10px">
                                     <img class="graphic-rates" src="../assets/img/Rates_graphic.svg" />
                                 </div>
-
                             </div>
 
 
