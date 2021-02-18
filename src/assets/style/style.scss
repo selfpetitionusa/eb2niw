@@ -2856,12 +2856,13 @@ h2.name {
 
 .terms {
   margin-top: 60px;
+  padding: 10px 0px;
   width: 60%;
   border: 1px dashed #F2F2F2;
   box-sizing: border-box;
   box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
-  position:relative;
+  position: relative;
   background-color: white;
 }
 
@@ -2873,6 +2874,7 @@ h2.name {
 
     @media (max-width: 768px) {
       .terms {
+        margin-top: 30px;
         width: 100%;
         box-shadow: none;
         border: none;
@@ -2881,12 +2883,12 @@ h2.name {
     }
 
 .terms-row {
-    margin: 20px 20px 20px 50px;
+    margin: 15px 20px 15px 50px;
 }
 
     @media (max-width: 768px) {
       .terms-row {
-        margin: 20px 0px 0px 15px;
+        margin: 5px 0px 0px 0px;
       }
     }
 
