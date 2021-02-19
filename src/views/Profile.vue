@@ -146,37 +146,31 @@
 
 
                             <div class="row rates-section">
-                                <div class="col-xl-6 col-lg-7 col-md-7 col-sm-12 col-12" style="margin-top: 30px;">
-                                    <div class="row">
-                                      <div class="col">
+                                <div class="col-xl-6 col-lg-7 col-md-7 col-sm-12 col-12" style="margin: 30px 0px 0px; padding: 0px">
+
                                         <div class="row" style="margin-bottom: 10px" v-for="rate in response.rates" :key="rate.id">
-                                            <div class="col-xl-4 col-lg-3 col-md-4 col-sm-2 col-2" style="padding: 0px; display: flex; justify-content: flex-end">
-                                              <div style="width: 50%; min-width: 70px; background: #5457C1; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); border-radius: 5px; font-weight: 400; font-size: 28px; text-align: center; color: white; padding: 5px 0px">{{rate.currency}}{{rate.amount}}</div>
+                                            <div class="col-xl-4 col-lg-4 col-md-3 col-sm-2 col-3" style="display: flex; justify-content: flex-end">
+                                              <div class="rate-box" style="background: #5457C1; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); border-radius: 5px; font-weight: 400; text-align: center; color: white; padding: 5px 0px">200000</div>
 
                                             </div>
-                                            <div class="col-xl-8 col-lg-9 col-md-8 col-sm-10 col-10">
+                                            <div class="col-xl-8 col-lg-8 col-md-9 col-sm-10 col-9" style="padding: 0px">
                                               <div class="row">
                                                 <p class="col" style="margin-bottom: 5px; padding: 0px 0px 0px 10px; line-height: 18px; color: #6084A4; font-size: 14px">{{rate.commentTop}}</p>
                                                     <div class="w-100"></div>
                                                   <p class="col bottom-comment" style="padding: 0px 0px 0px 10px; line-height: 15px; color: #0E314C"  v-if="rate.commentBottom && response.rates.length !== 1" >{{rate.commentBottom}}</p>
                                                   <p class="col bottom-comment" style="padding: 0px 0px 0px 10px; line-height: 15px; color: #0E314C"  v-if="response.rates.length === 1" >Standard rate</p>
-
                                               </div>
                                             </div>
                                         </div>
 
-                                        <div class="row">
-                                            <div class="col-xl-2 col-lg-1 col-md-2 col-sm-0 col-0"></div>
-                                            <div class="col-xl-10 col-lg-11 col-md-10 col-sm-12 col-12" v-if="response.profile.rateInfo.rateSectionComment" style="padding: 10px 0px 0px 0px; color: #6084A4; font-size: 14px; line-height: 22px" >
+                                            <div class="rate-section-comment" v-if="response.profile.rateInfo.rateSectionComment" style="color: #6084A4; font-size: 14px; line-height: 22px" >
                                                 {{response.profile.rateInfo.rateSectionComment}}
                                             </div>
-                                            <div v-else class="col-xl-10 col-lg-11 col-md-10 col-sm-12 col-12"  style="padding: 10px 0px 0px 0px; color: #6084A4; font-size: 14px; line-height: 22px" >
+                                            <div class="rate-section-comment" v-else style="color: #6084A4; font-size: 14px; line-height: 22px" >
                                                 Details available upon request
                                             </div>
-                                        </div>
-                                      </div>
                                     </div>
-                                </div>
+
 
                                 <div class="col-xl-6 col-lg-5 col-md-5 col-sm-0 col-0" style="display: flex; align-items: center; padding-left: 10px">
                                     <img class="graphic-rates" src="../assets/img/Rates_graphic.svg" />

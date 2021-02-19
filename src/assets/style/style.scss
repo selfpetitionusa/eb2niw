@@ -2843,6 +2843,33 @@ h2.name {
       }
     }
 
+.rate-box {
+  width: 60%;
+  font-size: calc(4vw + 4vh + 2vmin);
+}
+
+.rate-section-comment {
+  padding: 0.5rem 0rem 0rem 11%;
+}
+
+    @media (max-width: 1200px) {
+      .rate-box {
+        width: 80%;
+      }
+      .rate-section-comment {
+        padding: 0.5rem 0rem 0rem 6%;
+      }
+    }
+
+    @media (max-width: 992px) {
+      .rate-box {
+        width: 100%;
+      }
+      .rate-section-comment {
+        padding: 0.5rem 0rem 0rem 0rem;
+      }
+    }
+
 .terms-container {
   display: flex;
   justify-content: center;
