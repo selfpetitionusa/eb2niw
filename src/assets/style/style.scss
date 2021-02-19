@@ -2528,20 +2528,20 @@ Profile
 
 body {
     width: 100vw;
-    height:150vh;
+    height:100vh;
 }
 
     @media (max-width: 991px) {
         .tu-card-container {
             margin-top: 10px;
-            height: calc(100% - 130px);
+            height: calc(100% - 60px);
         }
     }
 
     @media (min-width: 992px) {
         .tu-card-container {
             margin-top: 10px;
-            height: calc(100% - 130px);
+            height: calc(100% - 60px);
             overflow-y: auto;
         }
     }
