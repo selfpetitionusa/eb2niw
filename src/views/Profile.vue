@@ -1,6 +1,6 @@
 <template>
 
-  <div class="d-flex" style="background-color:#f9f6f6; width: 100%; height:100%; position: relative; overflow-x: hidden; overflow-y: hidden">
+  <div class="d-flex" style="background-color:#f9f6f6; width: 100%; height:100%; position: relative; overflow-x: hidden">
       <div class="hamburger-nav">
           <div id="myLinks">
             <a href="#section-about-me" v-on:click="actionHamburgerMenu">About me</a>
