@@ -151,7 +151,6 @@
                                         <div class="row" style="margin-bottom: 10px" v-for="rate in response.rates" :key="rate.id">
                                             <div class="col-xl-4 col-lg-4 col-md-3 col-sm-2 col-3" style="display: flex; justify-content: flex-end">
                                               <div class="rate-box" style="background: #5457C1; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); border-radius: 5px; font-weight: 400; text-align: center; color: white; padding: 5px 0px">200000</div>
-
                                             </div>
                                             <div class="col-xl-8 col-lg-8 col-md-9 col-sm-10 col-9" style="padding: 0px">
                                               <div class="row">
@@ -299,6 +298,9 @@
                             </div>
                         </div>
 
+                        <div style="display: flex; justify-content: center; margin-top: 30px">
+                          <p style="display: flex; align-items: center; color: #cac4eb; margin: 0px">Powered by</p><img src="../assets/img/logo2.png" style="height: 25px; margin-left: 5px">
+                        </div>
 
                     </div>
                 </div>
