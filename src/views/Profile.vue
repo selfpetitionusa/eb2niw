@@ -298,8 +298,10 @@
                             </div>
                         </div>
 
-                        <div style="display: flex; justify-content: center; padding: 40px 0px 10px">
-                          <p style="display: flex; align-items: center; color: #cac4eb; margin: 0px">Powered by</p><img src="../assets/img/logo2.png" style="height: 25px; margin-left: 5px">
+                        <div style="display: flex; justify-content: center; padding: 40px 0px 20px">
+                          <div style="box-sizing: border-box; background-color: rgba(249, 246, 246, 0.6); border-radius: 5px; display: flex; align-items: center; padding: 6px;">
+                            <p style="color: #6084A4; margin: 0px">Powered by</p><img src="../assets/img/logo2.png" style="height: 25px; margin-left: 5px">
+                          </div>
                         </div>
 
                     </div>
