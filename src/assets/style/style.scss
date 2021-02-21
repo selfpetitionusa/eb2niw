@@ -2564,21 +2564,33 @@ body {
     }
 }
 
+.d-flex {
+  background-color:#f9f6f6;
+}
 
 .background-rectangular {
     top: -10%;
     left: -25%;
     right: -25%;
-    height: 604px;
+    height: 1300px;
     position: fixed;
 
     background: linear-gradient(244.35deg, #314194 37.33%, #3B4DAB 43.75%, #5457C1 50.17%, #6B6FEA 76.06%);
     transform: rotate(-20deg);
 }
 
+    @media (max-width: 1500px) {
+        .background-rectangular {
+            height: 800px;
+        }
+    }
+
     @media (max-width: 768px) {
         .background-rectangular {
-            position: absolute;
+            display: none;
+        }
+        .d-flex {
+          background: linear-gradient(244.35deg, #314194 37.33%, #3B4DAB 43.75%, #5457C1 50.17%, #6B6FEA 76.06%);
         }
     }
 
