@@ -2980,6 +2980,12 @@ h2.name {
       }
     }
 
+    @media (max-width: 500px) {
+      .figure-rates {
+        display: none;
+      }
+    }
+
 .figure-subjects {
   width: 250px;
   position: absolute;
