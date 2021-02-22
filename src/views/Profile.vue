@@ -22,9 +22,13 @@
             <div class="col-xl-3 col-lg-4 col-md-12 col-sm-12 col-12">
                 <div class="left-side">
                     <img class="photo" :src="response.profile.photo" style="position: absolute; left:50%; margin-left: -73px; top:-64px; border: solid 7px white; border-radius: 50%; box-shadow: 1px 4px 6px #888888;" />
-                    <h2 class="name" style="font-weight: 600; text-align: center">{{response.profile.firstName}} {{response.profile.lastName}}</h2>
+                    <div style="display: flex; flex-wrap: wrap; margin-top: 90px;justify-content: center">
+                        <div><h2 class="name" style="font-weight: 600;text-align: center">{{response.profile.firstName}}</h2></div>
+                        <div><h2 class="name" style="font-weight: 600;margin-left: 5px">{{response.profile.lastName}}</h2></div>
+                    </div>
+
                     <div class="subject-categories" style="margin: 0px; font-weight: 500; text-align: center; color: #0E314C">{{response.categories.map(cat => cat.categoryName).join(' | ')}}</div>
-                    <div class="short-bio" style="font-weight: 400; text-align: center"><p class="line-1" style="margin-block-end: 0px">Hi, my name is {{response.profile.firstName}}</p><p class="line-2">and I'm {{response.categories.map(cat => cat.categoryName)[0]}} tutor.</p><p>Welcome to my website!</p></div>
+                    <div class="short-bio" style="font-weight: 400; text-align: center"><p class="line-1" style="margin-block-end: 0px">Hi, my name is {{response.profile.firstName}}</p><p class="line-2">and I'm {{formatArray(response.categories.map(cat => cat.categoryName))}} tutor.</p><p>Welcome to my website!</p></div>
 
                     <div class="social-links" style="margin-top: 20px; display: flex; justify-content: center">
                         <ul>
@@ -351,6 +355,17 @@
       methods: {
           handleScroll () {
               this.offset = document.getElementById('problems').scrollLeft;
+          },
+          formatArray(arr) {
+            var outStr = "";
+            if (arr.length === 1) {
+                outStr = arr[0];
+            } else if (arr.length === 2) {
+                outStr = arr.join(' and ');
+            } else if (arr.length > 2) {
+                outStr = arr.slice(0, -1).join(', ') + ' and ' + arr.slice(-1);
+            }
+            return outStr;
           },
           getImgUrl: function (index) {
               const number =  index % 6;
