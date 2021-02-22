@@ -2525,11 +2525,16 @@ Profile
     }
 
 
+html ::-webkit-scrollbar {
+    display: none;
+}
 
 body {
     width: 100vw;
     height:100vh;
+    margin-top: 1px;
 }
+
 
     @media (max-width: 991px) {
         .tu-card-container {
@@ -2546,8 +2551,25 @@ body {
         }
     }
 
+  .d-flex {
+      ::-webkit-scrollbar {
+        display: initial;
+        width: 10px;
+      }
+      ::-webkit-scrollbar-thumb {
+        background : rgba(255,255,255,0.5);
+        border-radius: 10px;
+        box-shadow:  0 0 6px rgba(0, 0, 0, 0.5);
+      }
+      ::-webkit-scrollbar-track {
+          background-color: #555999;
+          border-radius: 10px;
+        }
+      }
+
+
 .tu-card {
-    border-radius: 15px;
+    border-radius: 15px 5px 5px 15px;
     background-color: white;
     margin-top: 10px;
     padding: 30px 40px 40px;
