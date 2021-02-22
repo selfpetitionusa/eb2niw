@@ -297,6 +297,7 @@
                                 </div>
                             </div>
                         </div>
+                      </div>
 
                         <div style="display: flex; justify-content: center; padding: 80px 0px 40px">
                           <div style="box-sizing: border-box; background-color: rgba(249, 246, 246, 0.6); border-radius: 5px; display: flex; align-items: center; padding: 6px;">
@@ -304,7 +305,6 @@
                           </div>
                         </div>
 
-                    </div>
                 </div>
             </div>
           </div>
