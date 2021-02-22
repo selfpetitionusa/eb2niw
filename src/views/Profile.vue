@@ -256,7 +256,7 @@
 
 
 
-                        <div id="section-expertise" class="tu-card" v-if="!(response.profile.youtubeIntroLink === null && response.problemCards.length === 0)">
+                        <div id="section-expertise" class="tu-card" style="padding-bottom: 20px" v-if="!(response.profile.youtubeIntroLink === null && response.problemCards.length === 0)">
                             <div style="display:flex; align-items: center">
                                 <div style="background-color: #DF7870; width:8px; height: 35px;"></div>
                                 <div style="margin-left: 10px; padding-top: 5px"><h2 class="section" style="font-weight: 600">Expertise</h2></div>
@@ -296,15 +296,13 @@
                                     <img src="../assets/img/arrow_right.svg">
                                 </div>
                             </div>
+
+                            <div style="display: flex; align-items: center; justify-content: center; margin-top: 5rem; opacity: 70%">
+                              <p style="color: #6084A4; margin: 0px">Powered by</p><img src="../assets/img/logo2.png" style="height: 20px; margin-left: 5px">
+                            </div>
+
                         </div>
                       </div>
-
-                        <div style="display: flex; justify-content: center; padding: 80px 0px 40px">
-                          <div style="box-sizing: border-box; background-color: rgba(249, 246, 246, 0.6); border-radius: 5px; display: flex; align-items: center; padding: 6px;">
-                            <p style="color: #6084A4; margin: 0px">Powered by</p><img src="../assets/img/logo2.png" style="height: 25px; margin-left: 5px">
-                          </div>
-                        </div>
-
                 </div>
             </div>
           </div>
