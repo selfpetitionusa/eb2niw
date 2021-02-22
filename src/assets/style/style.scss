@@ -2829,6 +2829,20 @@ h2.name {
       }
     }
 
+.bio {
+  color: #0E314C;
+  font-size: 14px;
+  margin: 0px;
+  padding: 0px;
+  line-height: 22px;
+}
+
+@media (min-width: 1200px) {
+  .bio {
+      padding: 0rem 7rem 0rem 0rem;
+  }
+}
+
 .my-students {
   display: flex;
   justify-content: center;

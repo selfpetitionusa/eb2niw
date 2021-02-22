@@ -94,7 +94,7 @@
                                     </div>
                             </div>
                             <div style="margin-top: 1rem">
-                                <p style="color: #0E314C; font-size: 14px; margin: 0px; padding: 0px; line-height: 22px;" v-for="bio in response.profile.bio.split(/\r?\n/)" :key="bio" >{{bio}}</p>
+                                <p class="bio" v-for="bio in response.profile.bio.split(/\r?\n/)" :key="bio" >{{bio}}</p>
                             </div>
                         </div>
 
