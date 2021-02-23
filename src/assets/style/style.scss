@@ -2525,14 +2525,13 @@ Profile
     }
 
 html {
-    height  : 100%;
     background-color: #f9f6f6;
-}
 
-/* removes scrollbar for Chrome, Edge, and Safari */
-html ::-webkit-scrollbar {
-    display: none;
-}
+    /* removes scrollbar for window and divs*/
+        ::-webkit-scrollbar {
+            display: none; /* Chrome, Edge and Safari*/
+        }
+    }
 
 body {
     width: 100vw;
@@ -2556,8 +2555,10 @@ body {
         }
     }
 
-  /* adds back scroolbar for content in Chrome, Edge, and Safari */
+  /* adds back scroolbar for div in Chrome, Edge and Safari */
   .d-flex {
+    background-color:#f9f6f6;
+
       ::-webkit-scrollbar {
         display: initial;
         width: 10px;
@@ -2598,10 +2599,6 @@ body {
     }
 }
 
-.d-flex {
-  background-color:#f9f6f6;
-}
-
 .background-rectangular {
     top: -10%;
     left: -25%;
@@ -2629,8 +2626,11 @@ body {
     }
 
 .my-carousel{
-    &::-webkit-scrollbar {
-        display: none;  /* Safari and Chrome */
+    -ms-overflow-style: none; /* IE*/
+    scrollbar-width: none; /* Firefox */
+
+        &::-webkit-scrollbar {
+            display: none;  /* Safari, Edge and Chrome */
     }
 }
 
