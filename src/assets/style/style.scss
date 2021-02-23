@@ -2555,25 +2555,67 @@ body {
         }
     }
 
-  /* adds back scroolbar for div in Chrome, Edge and Safari */
   .d-flex {
     background-color:#f9f6f6;
-
-      ::-webkit-scrollbar {
-        display: initial;
-        width: 10px;
-      }
-      ::-webkit-scrollbar-thumb {
-        background : rgba(255,255,255,0.5);
-        border-radius: 10px;
-        box-shadow:  0 0 6px rgba(0, 0, 0, 0.5);
-      }
-      ::-webkit-scrollbar-track {
-          background-color: #555999;
-          border-radius: 10px;
-        }
       }
 
+      .tu-container{
+          width: 100%;
+          margin-right: auto;
+          margin-left: auto;
+          padding: 95px 15px 0px;
+      }
+
+          @media (min-width: 576px) {
+              .tu-container {
+                  max-width: 540px;
+              }
+          }
+
+          @media (min-width: 768px) {
+              .tu-container  {
+                  max-width: 720px;
+              }
+          }
+
+          @media (min-width: 992px) {
+              .tu-container {
+                  max-width: 960px;
+
+                  /* adds back scroolbar for div in Chrome, Edge and Safari */
+                  ::-webkit-scrollbar {
+                    display: initial;
+                    width: 10px;
+                  }
+                  ::-webkit-scrollbar-thumb {
+                    background : rgba(255,255,255,0.5);
+                    border-radius: 10px;
+                    box-shadow:  0 0 6px rgba(0, 0, 0, 0.5);
+                  }
+                  ::-webkit-scrollbar-track {
+                      background-color: #555999;
+                      border-radius: 10px;
+                    }
+              }
+          }
+
+          @media (min-width: 1200px) {
+              .tu-container {
+                  max-width: 1325px;
+              }
+          }
+
+          @media (min-height: 900px) {
+              .tu-container {
+                padding-top: 120px;
+              }
+          }
+
+          @media (min-height: 1300px) {
+              .tu-container {
+                padding-top: 150px;
+              }
+          }
 
 .tu-card {
     border-radius: 15px 5px 5px 15px;
@@ -2633,49 +2675,6 @@ body {
             display: none;  /* Safari, Edge and Chrome */
     }
 }
-
-.tu-container{
-    width: 100%;
-    margin-right: auto;
-    margin-left: auto;
-    padding: 95px 15px 0px;
-}
-
-    @media (min-width: 576px) {
-        .tu-container {
-            max-width: 540px;
-        }
-    }
-
-    @media (min-width: 768px) {
-        .tu-container  {
-            max-width: 720px;
-        }
-    }
-
-    @media (min-width: 992px) {
-        .tu-container {
-            max-width: 960px;
-        }
-    }
-
-    @media (min-width: 1200px) {
-        .tu-container {
-            max-width: 1325px;
-        }
-    }
-
-    @media (min-height: 900px) {
-        .tu-container {
-          padding-top: 120px;
-        }
-    }
-
-    @media (min-height: 1300px) {
-        .tu-container {
-          padding-top: 150px;
-        }
-    }
 
 .btn-profile {
     background: #DF7870;
