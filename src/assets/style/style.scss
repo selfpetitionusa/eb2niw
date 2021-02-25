@@ -2524,33 +2524,104 @@ Profile
       }
     }
 
+html {
+    background-color: #f9f6f6;
 
+    /* removes scrollbar for window and divs*/
+        ::-webkit-scrollbar {
+            display: none; /* Chrome, Edge and Safari*/
+        }
+    }
 
 body {
     width: 100vw;
     height:100vh;
+    margin-top: 1px;
+    background-color: #f9f6f6;
 }
+
 
     @media (max-width: 991px) {
         .tu-card-container {
             margin-top: 10px;
-            height: calc(100% - 60px);
         }
     }
 
     @media (min-width: 992px) {
         .tu-card-container {
             margin-top: 10px;
-            height: calc(100% - 60px);
+            height: calc(100% - 50px);
             overflow-y: auto;
         }
     }
 
+  .d-flex {
+    background-color:#f9f6f6;
+      }
+
+      .tu-container{
+          width: 100%;
+          margin-right: auto;
+          margin-left: auto;
+          padding: 95px 15px 0px;
+      }
+
+          @media (min-width: 576px) {
+              .tu-container {
+                  max-width: 540px;
+              }
+          }
+
+          @media (min-width: 768px) {
+              .tu-container  {
+                  max-width: 720px;
+              }
+          }
+
+          @media (min-width: 992px) {
+              .tu-container {
+                  max-width: 960px;
+
+                  /* adds back scroolbar for div in Chrome, Edge and Safari */
+                  ::-webkit-scrollbar {
+                    display: initial;
+                    width: 10px;
+                  }
+                  ::-webkit-scrollbar-thumb {
+                    background : rgba(255,255,255,0.5);
+                    border-radius: 10px;
+                    box-shadow:  0 0 6px rgba(0, 0, 0, 0.5);
+                  }
+                  ::-webkit-scrollbar-track {
+                      background-color: #555999;
+                      border-radius: 10px;
+                    }
+              }
+          }
+
+          @media (min-width: 1200px) {
+              .tu-container {
+                  max-width: 1325px;
+              }
+          }
+
+          @media (min-height: 900px) {
+              .tu-container {
+                padding-top: 120px;
+              }
+          }
+
+          @media (min-height: 1300px) {
+              .tu-container {
+                padding-top: 150px;
+              }
+          }
+
 .tu-card {
-    border-radius: 15px;
+    border-radius: 15px 5px 5px 15px;
     background-color: white;
     margin-top: 10px;
-    padding: 30px 40px 40px;
+    padding: 30px 40px 20px;
     position: relative;
 
     &:first-of-type {
@@ -2558,55 +2629,52 @@ body {
     }
 }
 
+@media (max-width: 992px) {
+    .tu-card {
+        border-radius: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .tu-card {
+        padding: 25px 20px 20px;
+    }
+}
+
 .background-rectangular {
     top: -10%;
     left: -25%;
     right: -25%;
-    height: 604px;
+    height: 1200px;
+    position: fixed;
 
     background: linear-gradient(244.35deg, #314194 37.33%, #3B4DAB 43.75%, #5457C1 50.17%, #6B6FEA 76.06%);
     transform: rotate(-20deg);
 }
 
+    @media (max-width: 1500px) {
+        .background-rectangular {
+            height: 900px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .background-rectangular {
+            display: none;
+        }
+        .d-flex {
+          background: linear-gradient(244.35deg, #314194 37.33%, #3B4DAB 43.75%, #5457C1 50.17%, #6B6FEA 76.06%);
+        }
+    }
+
 .my-carousel{
-    &::-webkit-scrollbar {
-        display: none;  /* Safari and Chrome */
+    -ms-overflow-style: none; /* IE*/
+    scrollbar-width: none; /* Firefox */
+
+        &::-webkit-scrollbar {
+            display: none;  /* Safari, Edge and Chrome */
     }
 }
-
-.tu-container{
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-    padding-top: 90px;
-}
-
-    @media (min-width: 576px) {
-        .tu-container {
-            max-width: 540px;
-        }
-    }
-
-    @media (min-width: 768px) {
-        .tu-container  {
-            max-width: 720px;
-        }
-    }
-
-    @media (min-width: 992px) {
-        .tu-container {
-            max-width: 960px;
-            padding-top: 120px;
-        }
-    }
-
-    @media (min-width: 1200px) {
-        .tu-container {
-            max-width: 1325px;
-        }
-    }
 
 .btn-profile {
     background: #DF7870;
@@ -2623,6 +2691,7 @@ body {
   border-radius: 12px;
   position: relative;
   padding: 10px 10px 40px;
+  margin: 0px 0px 20px;
 }
 
     @media (max-width: 992px) and (min-width: 768px) {
@@ -2634,7 +2703,7 @@ body {
 
 h2.section, h2.name {
     font-size: 28px;
-    color: #0E314C;
+  /*  color: #0E314C; */
 }
 
     @media (max-width: 1200px) {
@@ -2698,7 +2767,7 @@ h2.section, h2.name {
     }
 
 .subjects-container {
-  margin-top: 40px;
+  margin-top: 1.5rem;
   padding: 0px 80px;
   display: flex;
   justify-content: center;
@@ -2707,6 +2776,16 @@ h2.section, h2.name {
     @media (max-width: 1200px) {
       .subjects-container {
         padding: 0px 20px;
+      }
+    }
+
+.subjects-card {
+  padding: 10px 10px;
+}
+
+    @media (min-width: 1200px) {
+      .subjects-card {
+        padding: 1.5rem 1rem;
       }
     }
 
@@ -2758,7 +2837,7 @@ h2.section, h2.name {
       }
     }
 
-hr {
+.left-side hr {
   width:40%;
   margin-top: 20px;
 }
@@ -2768,6 +2847,8 @@ hr {
         margin-top: 10px;
       }
     }
+
+
 
 .school, .certificate {
   font-size: 16px;
@@ -2785,10 +2866,24 @@ hr {
       }
     }
 
+.bio {
+  color: #0E314C;
+  font-size: 14px;
+  margin: 0px;
+  padding: 0px;
+  line-height: 22px;
+}
+
+@media (min-width: 1200px) {
+  .bio {
+      padding: 0rem 7rem 0rem 0rem;
+  }
+}
+
 .my-students {
   display: flex;
   justify-content: center;
-  margin-top: 60px;
+  margin-top: 2.5rem;
   margin-bottom: 10px;
   align-items: center;
 }
@@ -2796,12 +2891,11 @@ hr {
       .my-students {
         display: block;
         text-align: center;
-        margin-top: 40px;
       }
     }
 
 .rates-section {
-  margin: 30px 0px 0px 0px;
+  margin: 0.5rem 0rem 0rem;
 }
 
     @media (max-width: 768px) {
@@ -2817,6 +2911,42 @@ hr {
     @media (max-width: 1200px) {
       .bottom-comment {
         font-size: 14px;
+      }
+    }
+
+.rate-box {
+  width: 60%;
+  font-size: calc(1.5vh + 0.5vmax);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rate-section-comment {
+  padding: 0.5rem 0rem 0rem 11%;
+}
+
+    @media (max-width: 1200px) {
+      .rate-box {
+        width: 80%;
+      }
+      .rate-section-comment {
+        padding: 0.5rem 0rem 0rem 6%;
+      }
+    }
+
+    @media (max-width: 992px) {
+      .rate-box {
+        width: 100%;
+      }
+      .rate-section-comment {
+        padding: 0.5rem 0rem 0rem 0rem;
+      }
+    }
+
+    @media (max-width: 992px) {
+      .rate-box {
+        font-size: 20px;
       }
     }
 
@@ -2839,12 +2969,13 @@ hr {
 
 .terms {
   margin-top: 60px;
+  padding: 15px 0px;
   width: 60%;
   border: 1px dashed #F2F2F2;
   box-sizing: border-box;
   box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
-  position:relative;
+  position: relative;
   background-color: white;
 }
 
@@ -2856,19 +2987,21 @@ hr {
 
     @media (max-width: 768px) {
       .terms {
+        margin-top: 30px;
         width: 100%;
         box-shadow: none;
         border: none;
+        background-color: transparent;
       }
     }
 
 .terms-row {
-    margin: 20px 20px 20px 50px;
+    margin: 1rem 1rem 1rem 3rem;
 }
 
     @media (max-width: 768px) {
       .terms-row {
-        margin: 20px 0px 0px 15px;
+        margin: 15px 0px 0px 0px;
       }
     }
 
@@ -2879,6 +3012,43 @@ hr {
     @media (max-width: 768px) {
       .terms-column {
         display: block;
+      }
+    }
+
+.figure-rates {
+  position: absolute;
+  bottom: 0%;
+  left: 5%;
+  width: 13rem;
+}
+
+    @media (max-width: 768px) {
+      .figure-rates {
+        position: absolute;
+        bottom: 32%;
+        left: 70%;
+        width: 9rem;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .figure-rates {
+        display: none;
+      }
+    }
+
+.figure-subjects {
+  width: 250px;
+  position: absolute;
+  top: 20px;
+  right: 10px;
+}
+
+    @media (max-width: 768px) {
+      .figure-subjects {
+        position: absolute;
+        top: 10px;
+        right: 0px;
       }
     }
 
@@ -2940,7 +3110,7 @@ Hamburger menu
 Testing Environment
 =================================================*/
 
-/*
+
 @media (min-width: 1200px) {
   h2 {
     color: red;
@@ -2970,4 +3140,3 @@ Testing Environment
     color: green;
   }
 }
-*/
