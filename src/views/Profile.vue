@@ -22,9 +22,9 @@
             <div class="col-xl-3 col-lg-4 col-md-12 col-sm-12 col-12">
                 <div class="left-side">
                     <img class="photo" :src="response.profile.photo" style="position: absolute; left:50%; margin-left: -73px; top:-64px; border: solid 7px white; border-radius: 50%; box-shadow: 1px 4px 6px #888888;" />
-                    <div style="display: flex; flex-wrap: wrap; margin-top: 90px;justify-content: center">
-                        <div><h2 class="name" style="font-weight: 600;text-align: center">{{response.profile.firstName}}</h2></div>
-                        <div><h2 class="name" style="font-weight: 600;margin-left: 5px">{{response.profile.lastName}}</h2></div>
+                    <div class="name-section">
+                        <div><h2 class="name">{{response.profile.firstName}}</h2></div>
+                        <div><h2 class="name" style="margin-bottom: 5px">{{response.profile.lastName}}</h2></div>
                     </div>
 
                     <div class="subject-categories" style="margin: 0px; font-weight: 500; text-align: center; color: #0E314C">{{response.categories.map(cat => cat.categoryName).join(' | ')}}</div>
