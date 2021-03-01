@@ -281,7 +281,7 @@
 
                                 <div id="problems" class="my-carousel" style="overflow-y: scroll" v-on:scroll.passive='handleScroll'>
                                     <div style="margin-top: 4.5rem;display: flex;" >
-                                        <div style="width:270px; min-height: 280px; margin: 10px; background: #F6F8FE; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); border-radius: 10px; flex-shrink: 0; position: relative" v-for="(problemCard, index) in response.problemCards" :key="problemCard.id" >
+                                        <div class="problem-card" v-for="(problemCard, index) in response.problemCards" :key="problemCard.id" >
 
                                             <div style="position: absolute; padding: 13px; background-color: white; border: 1px solid rgba(223, 120, 112, 0.3);box-sizing: border-box; border-radius: 50%; top: -40px; left: 30px; filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.05));">
                                                 <img :src="getImgUrl(index)" >
