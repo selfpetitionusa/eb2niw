@@ -2518,7 +2518,7 @@ Profile
        }
     }
 }
-    @media (max-width: 1200px) {
+    @media (max-width: 1199px) {
       .test {
         font-size: 14px;
       }
@@ -2629,13 +2629,13 @@ body {
     }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991px) {
     .tu-card {
         border-radius: 15px;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .tu-card {
         padding: 25px 20px 20px;
     }
@@ -2658,7 +2658,7 @@ body {
         }
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
         .background-rectangular {
             display: none;
         }
@@ -2694,7 +2694,7 @@ body {
   margin: 0px 0px 20px;
 }
 
-    @media (max-width: 992px) and (min-width: 768px) {
+    @media (max-width: 991px) and (min-width: 768px) {
       .left-side {
         width: 60%;
         margin: 0 auto;
@@ -2708,7 +2708,7 @@ body {
   justify-content: center
 }
 
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       .name-section {
           margin-top: 75px;
       }
@@ -2725,19 +2725,19 @@ h2.name {
   margin: 0px 2.5px;
 }
 
-    @media (max-width: 1200px) {
+    @media (max-width: 1199px) {
       h2.section {
         font-size: 25px;
       }
     }
 
-    @media (max-width: 992px) {
+    @media (max-width: 991px) {
       h2.name {
         line-height: 25px;
       }
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       h2.name {
         font-size: 25px;
       }
@@ -2746,7 +2746,7 @@ h2.name {
       }
     }
 
-    @media (max-width: 576px) {
+    @media (max-width: 575px) {
       h2.name {
         font-size: 22px;
       }
@@ -2760,7 +2760,7 @@ h2.name {
   height: 145px;
 }
 
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     .photo {
       width: 130px;
       height: 130px;
@@ -2771,7 +2771,7 @@ h2.name {
   font-size: 18px;
 }
 
-    @media (max-width: 1200px) {
+    @media (max-width: 1199px) {
       .subject-categories, .subjects {
         font-size: 16px;
       }
@@ -2784,7 +2784,7 @@ h2.name {
   justify-content: center;
 }
 
-    @media (max-width: 1200px) {
+    @media (max-width: 1199px) {
       .subjects-container {
         padding: 0px 20px;
       }
@@ -2835,7 +2835,7 @@ h2.name {
   line-height: 22px;
 }
 
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       .short-bio {
         font-size: 14px;
         margin-top: 10px;
@@ -2852,7 +2852,7 @@ h2.name {
   width:40%;
   margin-top: 20px;
 }
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       hr {
         width:30%;
         margin-top: 10px;
@@ -2865,13 +2865,13 @@ h2.name {
   font-size: 16px;
 }
 
-    @media (min-width: 992px) and (max-width: 1200px) {
+    @media (min-width: 992px) and (max-width: 1199px) {
       .school, .certificate {
         font-size: 14px;
       }
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       .school, .certificate {
         font-size: 14px;
       }
@@ -2898,7 +2898,7 @@ h2.name {
   margin-bottom: 10px;
   align-items: center;
 }
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       .my-students {
         display: block;
         text-align: center;
@@ -2909,7 +2909,7 @@ h2.name {
   margin: 0.5rem 0rem 0rem;
 }
 
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       .rates-section {
         margin: 0px;
       }
@@ -2919,7 +2919,7 @@ h2.name {
   font-size: 16px;
 }
 
-    @media (max-width: 1200px) {
+    @media (max-width: 1199px) {
       .bottom-comment {
         font-size: 14px;
       }
@@ -2937,7 +2937,7 @@ h2.name {
   padding: 0.5rem 0rem 0rem 11%;
 }
 
-    @media (max-width: 1200px) {
+    @media (max-width: 1199px) {
       .rate-box {
         width: 80%;
       }
@@ -2946,7 +2946,7 @@ h2.name {
       }
     }
 
-    @media (max-width: 992px) {
+    @media (max-width: 991px) {
       .rate-box {
         width: 100%;
       }
@@ -2955,7 +2955,7 @@ h2.name {
       }
     }
 
-    @media (max-width: 992px) {
+    @media (max-width: 991px) {
       .rate-box {
         font-size: 16px;
       }
@@ -2992,13 +2992,13 @@ h2.name {
   background-color: white;
 }
 
-    @media (max-width: 1200px) {
+    @media (max-width: 1199px) {
       .terms {
         width: 85%;
       }
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       .terms {
         margin-top: 30px;
         width: 90%;
@@ -3029,7 +3029,7 @@ h2.name {
   display: inline;
 }
 
-    @media (max-width: 576px) {
+    @media (max-width: 575px) {
       .terms-column {
         display: block;
       }
@@ -3042,7 +3042,7 @@ h2.name {
   width: 13rem;
 }
 
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       .figure-rates {
         position: absolute;
         bottom: 28%;
@@ -3051,7 +3051,7 @@ h2.name {
       }
     }
 
-    @media (max-width: 1200px) {
+    @media (max-width: 1199px) {
       .figure-rates {
         display: none;
       }
@@ -3064,7 +3064,7 @@ h2.name {
   right: 10px;
 }
 
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       .figure-subjects {
         position: absolute;
         top: 10px;
@@ -3137,25 +3137,25 @@ Testing Environment
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1199px) {
   h2 {
     color: orange;
   }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991px) {
   h2 {
     color: yellow;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   h2 {
     color: blue;
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 575px) {
   h2 {
     color: green;
   }
