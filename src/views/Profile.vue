@@ -150,13 +150,13 @@
 
 
                             <div class="row rates-section">
-                                <div class="col-xl-6 col-lg-7 col-md-7 col-sm-12 col-12" style="margin: 30px 0px 0px; padding: 0px">
+                                <div class="col-xl-6 col-lg-7 col-md-7 col-sm-7 col-12" style="margin: 30px 0px 0px; padding: 0px">
 
                                         <div class="row" style="margin-bottom: 10px" v-for="rate in response.rates" :key="rate.id">
-                                            <div class="col-xl-4 col-lg-4 col-md-3 col-sm-2 col-3" style="display: flex; justify-content: flex-end">
+                                            <div class="col-xl-4 col-lg-4 col-md-3 col-sm-3 col-3" style="display: flex; justify-content: flex-end">
                                               <div class="rate-box" style="background: #5457C1; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); border-radius: 5px; font-weight: 400; color: white; padding: 5px">{{rate.currency}}{{rate.amount}}</div>
                                             </div>
-                                            <div class="col-xl-8 col-lg-8 col-md-9 col-sm-10 col-9" style="padding: 0px">
+                                            <div class="col-xl-8 col-lg-8 col-md-9 col-sm-9 col-9" style="padding: 0px">
                                               <div class="row">
                                                 <p class="col" style="margin-bottom: 5px; padding: 0px 0px 0px 10px; line-height: 18px; color: #6084A4; font-size: 14px">{{rate.commentTop}}</p>
                                                     <div class="w-100"></div>
@@ -166,16 +166,16 @@
                                             </div>
                                         </div>
 
-                                            <div class="rate-section-comment" v-if="response.profile.rateInfo.rateSectionComment" style="color: #6084A4; font-size: 14px; line-height: 22px" >
+                                            <div class="rate-section-comment" v-if="response.profile.rateInfo.rateSectionComment" style="color: #6084A4; font-size: 14px; line-height: 18px" >
                                                 {{response.profile.rateInfo.rateSectionComment}}
                                             </div>
-                                            <div class="rate-section-comment" v-else style="color: #6084A4; font-size: 14px; line-height: 22px" >
+                                            <div class="rate-section-comment" v-else style="color: #6084A4; font-size: 14px; line-height: 18px" >
                                                 Details available upon request
                                             </div>
                                     </div>
 
 
-                                <div class="col-xl-6 col-lg-5 col-md-5 col-sm-0 col-0" style="display: flex; align-items: center; padding-left: 10px">
+                                <div class="col-xl-6 col-lg-5 col-md-5 col-sm-4 col-0" style="display: flex; align-items: center; padding-left: 10px">
                                     <img class="graphic-rates" src="../assets/img/Rates_graphic.svg" />
                                 </div>
                             </div>
@@ -189,8 +189,8 @@
                                         <font-awesome-icon style="font-size: 30px; color:#5457C1" icon="globe" />
                                     </div>
                                     <div class="col-11" style="display: flex; align-items: center; padding: 0rem 0.3rem 0rem 0.7rem;">
-                                          <div style="line-height: 15px; font-size: 14px; color: #0E314C">Online lessons:
-                                            <div class="terms-column" style="line-height: 15px; font-size: 14px; color: #6084A4">
+                                          <div style="line-height: 18px; font-size: 14px; color: #0E314C">Online lessons:
+                                            <div class="terms-column" style="line-height: 18px; font-size: 14px; color: #6084A4">
                                               <div v-if="response.profile.rateInfo.online" style="display: inline;">
                                                  Yes
                                               </div>
@@ -206,8 +206,8 @@
                                         <font-awesome-icon style="font-size: 30px; color:#5457C1" icon="home" />
                                     </div>
                                     <div class="col-11" style="display: flex; align-items: center; padding: 0rem 0.3rem 0rem 0.7rem;">
-                                          <div style="line-height: 15px; font-size: 14px; color: #0E314C">In-person lessons:
-                                            <div class="terms-column" style="line-height: 15px; font-size: 14px; color: #6084A4">
+                                          <div style="line-height: 18px; font-size: 14px; color: #0E314C">In-person lessons:
+                                            <div class="terms-column" style="line-height: 18px; font-size: 14px; color: #6084A4">
                                               <div v-if="response.profile.rateInfo.inPerson" style="display: inline">
                                                   {{response.profile.rateInfo.inPersonComment === null ? 'Yes' : response.profile.rateInfo.inPersonComment}}
                                               </div>
@@ -223,8 +223,8 @@
                                         <font-awesome-icon style="font-size: 30px; color:#5457C1" icon="tag" />
                                     </div>
                                     <div class="col-11" style="display: flex; align-items: center; padding: 0rem 0.3rem 0rem 0.7rem;">
-                                        <div style="line-height: 15px; font-size: 14px; color: #0E314C">Free consultation:
-                                          <div class="terms-column" style="line-height: 15px; font-size: 14px; color: #6084A4">
+                                        <div style="line-height: 18px; font-size: 14px; color: #0E314C">Free consultation:
+                                          <div class="terms-column" style="line-height: 18px; font-size: 14px; color: #6084A4">
                                             <div v-if="response.profile.rateInfo.freeConsultation" style="display: inline">
                                                 {{response.profile.rateInfo.freeConsultationComment === null ? 'Yes' : response.profile.rateInfo.freeConsultationComment}}
                                             </div>
@@ -240,8 +240,8 @@
                                         <font-awesome-icon style="font-size: 30px; color:#5457C1" icon="calendar-alt" />
                                     </div>
                                     <div class="col-11" style="display: flex; align-items: center; padding: 0rem 0.3rem 0rem 0.7rem;">
-                                        <div style="line-height: 15px; font-size: 14px; color: #0E314C">Cancelation policy:
-                                          <div class="terms-column" style="line-height: 15px; font-size: 14px; color: #6084A4">
+                                        <div style="line-height: 18px; font-size: 14px; color: #0E314C">Cancelation policy:
+                                          <div class="terms-column" style="line-height: 18px; font-size: 14px; color: #6084A4">
                                             <div v-if="response.profile.rateInfo.cancellationPolicy" style="display: inline">
                                                 {{response.profile.rateInfo.cancellationPolicyComment === null ? 'Yes' : response.profile.rateInfo.cancellationPolicyComment}}
                                             </div>
