@@ -2690,7 +2690,7 @@ body {
   background-color: white;
   border-radius: 12px;
   position: relative;
-  padding: 10px 20px 40px;
+  padding: 10px 15px 40px;
   margin: 0px 0px 20px;
 }
 
@@ -2828,11 +2828,18 @@ h2.name {
 
 .short-bio {
   font-size: 16px;
+  font-weight: 400;
   margin-top: 30px;
+  text-align: center;
 }
 
-.line-1, .line-2 {
+.short-bio-line-1, .short-bio-line-2 {
   line-height: 22px;
+  margin-bottom: 0px;
+}
+
+.short-bio-line-2 {
+  margin-bottom: 5px;
 }
 
     @media (max-width: 767px) {
@@ -2840,10 +2847,7 @@ h2.name {
         font-size: 14px;
         margin-top: 10px;
       }
-      .line-2 {
-        margin-bottom: 5px;
-      }
-      .line-1, .line-2 {
+      .short-bio-line-1, .short-bio-line-2 {
         line-height: 20px;
       }
     }

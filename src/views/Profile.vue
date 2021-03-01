@@ -28,7 +28,7 @@
                     </div>
 
                     <div class="subject-categories" style="margin: 0px; font-weight: 500; text-align: center; color: #0E314C">{{response.categories.map(cat => cat.categoryName).join(' | ')}}</div>
-                    <div class="short-bio" style="font-weight: 400; text-align: center"><p class="line-1" style="margin-block-end: 0px">Hi, my name is {{response.profile.firstName}}</p><p class="line-2">and I'm {{formatArray(response.categories.map(cat => cat.categoryName))}} tutor.</p><p>Welcome to my website!</p></div>
+                    <div class="short-bio"><p class="short-bio-line-1">Hi, my name is {{response.profile.firstName}}.</p><p class="short-bio-line-2">I tutor {{formatArray(response.categories.map(cat => cat.categoryName))}}.</p><p>Welcome to my website!</p></div>
 
                     <div class="social-links" style="margin-top: 20px; display: flex; justify-content: center">
                         <ul>
@@ -358,9 +358,9 @@
             if (arr.length === 1) {
                 outStr = arr[0];
             } else if (arr.length === 2) {
-                outStr = arr.join(' and ');
+                outStr = arr.join(' & ');
             } else if (arr.length > 2) {
-                outStr = arr.slice(0, -1).join(', ') + ' and ' + arr.slice(-1);
+                outStr = arr.slice(0, -1).join(', ') + ' & ' + arr.slice(-1);
             }
             return outStr;
           },
