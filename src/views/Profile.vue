@@ -281,8 +281,7 @@
 
                                 <div id="problems" class="my-carousel" style="overflow-y: scroll" v-on:scroll.passive='handleScroll'>
                                     <div style="margin-top: 4.5rem;display: flex;" >
-                                        <div class="problem-card" v-for="(problemCard, index) in response.problemCards" :key="problemCard.id" >
-
+                                        <div :id="'problem-card'+ index" class="problem-card" v-for="(problemCard, index) in response.problemCards" :key="problemCard.id" >
                                             <div style="position: absolute; padding: 13px; background-color: white; border: 1px solid rgba(223, 120, 112, 0.3);box-sizing: border-box; border-radius: 50%; top: -40px; left: 30px; filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.05));">
                                                 <img :src="getImgUrl(index)" >
                                             </div>
@@ -370,7 +369,7 @@
           },
           scroll: function (direction) {
             const p = document.getElementById('problems');
-            const offsetWidth = 290;
+            const offsetWidth = document.getElementById('problem-card1').offsetWidth + 20;
             if(direction === 'left') {
                 if(p.scrollLeft - offsetWidth < 0) {
                     this.offset = 0;

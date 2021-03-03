@@ -3155,34 +3155,22 @@ Hamburger menu
     color: #cac4eb;
   }
 
-
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
     .subject-border1{
         border: 1px dashed rgba(84, 87, 193, 0.3);
     }
     .subject-border2{
-        border: 1px dashed rgba(223, 120, 112, 0.3);
-    }
-}
-
-@media (max-width: 1199px) {
-    .subject-border1{
         border: 1px dashed rgba(84, 87, 193, 0.3);
     }
-    .subject-border2{
-        border: 1px dashed rgba(223, 120, 112, 0.3);
-    }
 }
-
 @media (max-width: 767px) {
     .subject-border1{
         border: 1px dashed rgba(84, 87, 193, 0.3);
     }
     .subject-border2{
-        border: 1px dashed rgba(84, 87, 193, 0.3);
+        border: 1px dashed rgba(223, 120, 112, 0.3);
     }
 }
-
 
 
 /*================================================
