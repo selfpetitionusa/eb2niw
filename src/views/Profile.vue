@@ -112,7 +112,7 @@
 
                             <div class="row subjects-container">
                                 <div class="col-md-6 subjects-card"  v-for="(category, index) in response.categories" :key="category.id">
-                                    <div style="background-color: white; max-width: 300px; box-sizing: border-box; box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.1); border-radius: 5px; height: 100%; margin: auto" :style="[index % 2 === 0  ? {'border': '1px dashed rgba(84, 87, 193, 0.3)'} : {'border': '1px dashed rgba(223, 120, 112, 0.3)'}]">
+                                    <div style="background-color: white; max-width: 300px; box-sizing: border-box; box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.1); border-radius: 5px; height: 100%; margin: auto" :class="[index % 2 === 0 ? 'subject-border1' : 'subject-border2']">
                                         <p class="subjects" style="color: #0E314C; text-align: center; margin: 25px 0px 0px; font-weight: 600;">{{category.categoryName}}</p>
 
                                         <hr style="width: 60%; border: 1px solid rgba(223, 120, 112, 0.3); margin: 5px auto 10px">
