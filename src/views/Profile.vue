@@ -343,7 +343,7 @@
     },
       mounted () {
           axios
-              .get('https://www.miragenetics.com/api/profiles/' + this.$route.params.token)
+              .get('https://www.tutomy.com/api/profiles/' + this.$route.params.token)
               .then(res => this.response = res.data)
               .then(() => this.scrollWidth = document.getElementById('problems').scrollWidth)
               .then(() => this.offsetWidth = document.getElementById('problems').offsetWidth)
