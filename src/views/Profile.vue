@@ -160,8 +160,8 @@
                                               <div class="row">
                                                 <p class="col" style="margin-bottom: 5px; padding: 0px 0px 0px 10px; line-height: 18px; color: #6084A4; font-size: 14px">{{rate.commentTop}}</p>
                                                     <div class="w-100"></div>
-                                                  <p class="col bottom-comment" style="padding: 0px 0px 0px 10px; line-height: 15px; color: #0E314C"  v-if="rate.commentBottom && response.rates.length !== 1" >{{rate.commentBottom}}</p>
-                                                  <p class="col bottom-comment" style="padding: 0px 0px 0px 10px; line-height: 15px; color: #0E314C"  v-if="response.rates.length === 1" >Standard rate</p>
+                                                    <p class="col bottom-comment" style="padding: 0px 0px 0px 10px; line-height: 15px; color: #0E314C"  v-if="rate.commentBottom" >{{rate.commentBottom}}</p>
+                                                    <p class="col bottom-comment" style="padding: 0px 0px 0px 10px; line-height: 15px; color: #0E314C"  v-if="rate.commentBottom === null && response.rates.length === 1" >Standard rate</p>
                                               </div>
                                             </div>
                                         </div>
