@@ -2632,7 +2632,11 @@ body {
     }
 }
 
-.height {
+.right-section {
+  height: 100%;
+}
+
+.right-left-section-split {
   height: 100%;
 }
 
@@ -2689,7 +2693,7 @@ body {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.05));
 }
 
-.tu-card-menu-container{
+.tu-card-and-menu-container{
   position: relative;
   height: 100%;
 }
@@ -2785,7 +2789,7 @@ body {
   height: 35px;
 }
 
-h2.name {
+.name-section h2 {
     font-size: 28px;
     font-weight: 600;
     color: #0E314C;
@@ -2794,25 +2798,24 @@ h2.name {
 }
 
     @media (max-width: 991px) {
-      h2.name {
+      .name-section h2 {
         line-height: 25px;
       }
     }
 
     @media (max-width: 767px) {
-      h2.name {
+      .name-section h2 {
         font-size: 25px;
       }
     }
 
     @media (max-width: 575px) {
-      h2.name {
+      .name-section h2 {
         font-size: 22px;
       }
     }
 
 .section-header {
-  margin-left: 10px;
   padding-top: 5px;
     h2 {
       font-size: 28px;
@@ -2845,7 +2848,11 @@ h2.name {
         }
     }
 
-h2.lastname {
+#section-subjects .section-header, #section-rates .section-header, #section-expertise .section-header {
+  margin-left: 10px;
+}
+
+.lastname {
   margin-bottom: 5px;
 }
 
@@ -2899,11 +2906,11 @@ h2.lastname {
   color: #5457C1;
 }
 
-.education-items-input {
+.education-item {
   padding: 0px 0px 0px 10px;
 }
 
-.subjects {
+.subjects p {
   font-size: 18px;
   color: #0E314C;
   text-align: center;
@@ -2912,7 +2919,7 @@ h2.lastname {
 }
 
     @media (max-width: 1199px) {
-      .subjects {
+      .subjects p {
         font-size: 16px;
       }
     }
@@ -2944,17 +2951,17 @@ h2.lastname {
       }
     }
 
-.subjects-card {
+.subject-cards {
   padding: 10px 10px;
 }
 
     @media (min-width: 1200px) {
-      .subjects-card {
+      .subject-cards {
         padding: 1.5rem 1rem;
       }
     }
 
-.subject-card {
+.subjects {
   background-color: white;
   max-width: 300px;
   box-sizing: border-box;
@@ -3132,12 +3139,12 @@ h2.lastname {
       }
     }
 
-.rates-items-list {
+.rates-items-all {
   margin: 30px 0px 0px;
   padding: 0px;
 }
 
-.rates-items {
+.rates-item {
   margin-bottom: 10px;
 }
 
@@ -3301,7 +3308,7 @@ h2.lastname {
   color:#5457C1;
 }
 
-.terms-item-container {
+.terms-item-text {
   display: flex;
   align-items: center;
   padding: 0rem 0.3rem 0rem 0.7rem;
@@ -3367,19 +3374,19 @@ h2.lastname {
       }
     }
 
-.youtube-container {
+.youtube-input {
   margin-top: 1.5rem;
   display: flex;
   justify-content: center;
 }
 
-.youtube {
+.expertise-arrows-container {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.youtube-click {
+.carousel-left-arrow {
   margin-right:10px;
   flex: 0 0 20px;
   margin-top: 45px;
