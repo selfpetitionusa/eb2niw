@@ -2471,7 +2471,7 @@ Profile
                 color: rgba(84, 87, 193, .4);
                 &:hover {
                     border-color: #006AFF;
-                    background: #006AFF;
+                    background-color: #006AFF;
                     color: $white-color;
                 }
             }
@@ -2480,7 +2480,7 @@ Profile
                 color: rgba(84, 87, 193, .4);
                 &:hover {
                     border-color: #ff0000;
-                    background: #ff0000;
+                    background-color: #ff0000;
                     color: $white-color;
                 }
             }
@@ -2489,7 +2489,7 @@ Profile
                 color: rgba(84, 87, 193, .4);
                 &:hover {
                     border-color: #0077B5;
-                    background: #0077B5;
+                    background-color: #0077B5;
                     color: $white-color;
                 }
             }
@@ -2498,13 +2498,9 @@ Profile
                 color: rgba(84, 87, 193, .4);
                 &:hover {
                     border-color: #bc2a8d;
-                    background: #bc2a8d;
+                    background-color: #bc2a8d;
                     color: $white-color;
                 }
-            }
-            &:hover {
-                background: $light-green-color;
-                color: $white-color;
             }
         }
     }
@@ -2740,13 +2736,13 @@ body {
 }
 
 .btn-profile {
-    background: #DF7870;
+    background-color: #DF7870;
     box-shadow: 0 13px 27px 0 rgba(223, 120, 112, .25);
     padding: 15px 25px;
     margin-top: 25px;
 
     &:hover, &:focus, &:active {
-        background: #5457C1;
+        background-color: #5457C1;
     }
 }
 
@@ -3037,14 +3033,14 @@ body {
       }
     }
 
-.left-side hr {
+.left-section hr {
   width:40%;
   margin-top: 20px;
   border-style: solid;
   border-color: rgba(84, 87, 193, .3);
 }
     @media (max-width: 767px) {
-      hr {
+      .left-section hr {
         width:30%;
         margin-top: 10px;
       }
@@ -3396,7 +3392,7 @@ body {
   width:270px;
   min-height: 280px;
   margin: 10px;
-  background: #F6F8FE;
+  background-color: #F6F8FE;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   flex-shrink: 0;
