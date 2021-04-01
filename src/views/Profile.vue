@@ -1,6 +1,10 @@
 <template>
 
     <div class="d-flex">
+
+
+<!-- HAMBURGER MENU -->
+
       <div class="hamburger-nav">
           <div id="myLinks">
             <a href="#section-about-me" v-on:click="actionHamburgerMenu">About me</a>
@@ -14,13 +18,18 @@
           </a>
         </div>
 
+
+<!-- PROFILE TEMPLATE -->
+
     <div class="background-rectangular"></div>
     <div class="tu-container">
 
 
+<!-- LEFT SECTION -->
+
         <div class="row height">
             <div class="col-xl-3 col-lg-4 col-md-12 col-sm-12 col-12">
-                <div class="left-side">
+                <div class="left-section">
                     <img class="photo" :src="response.profile.photo"/>
                     <div class="name-section">
                         <div><h2 class="name">{{response.profile.firstName}}</h2></div>
@@ -48,6 +57,8 @@
             </div>
 
 
+<!-- MENU -->
+
             <div class="col-xl-9 col-lg-8 col-md-12 col-sm-12 col-12 height">
                 <div class="tu-card-menu-container">
                     <div class="d-none d-lg-block menu">
@@ -59,7 +70,7 @@
                         </ul>
                     </div>
 
-
+<!-- ABOUT ME SECTION -->
                     <div class="tu-card-container">
                         <div id="section-about-me"  class="tu-card" >
                             <div><h2 class="section">{{response.profile.headline}}</h2></div>
@@ -103,6 +114,8 @@
                         </div>
 
 
+<!-- SUBJECTS SECTION -->
+
                         <div id="section-subjects" class="tu-card" >
                             <img class="figure-subjects" src="../assets/img/subjects_figures.png">
                             <div class="section-container">
@@ -140,6 +153,8 @@
                             </div>
                         </div>
 
+
+<!-- RATES SECTION -->
 
                         <div id="section-rates" class="tu-card" >
                             <div class="figure-rates">
@@ -183,7 +198,7 @@
                             </div>
 
 
-
+<!-- TERMS -->
                             <div class="terms-container">
                                 <div class="terms-box">
                                     <div class="row terms-item">
@@ -263,8 +278,7 @@
                         </div>
 
 
-
-
+<!-- EXPERTISE SECTION -->
 
                         <div id="section-expertise" class="tu-card" v-if="!(response.profile.youtubeIntroLink === null && response.problemCards.length === 0)">
                             <div class="section-container">
@@ -318,6 +332,8 @@
   </div>
 
 </template>
+
+
 
 <script>
     import axios from 'axios';
