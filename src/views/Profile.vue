@@ -32,7 +32,7 @@
             <div class="left-section">
 
                 <img class="photo" :src="response.profile.photo" />
-                <div class="name-section">
+                <div class="name-input">
                     <h2>{{response.profile.firstName}}</h2>
                     <h2 class="lastname">{{response.profile.lastName}}</h2>
                 </div>
@@ -169,7 +169,7 @@
 
             <div id="section-rates" class="tu-card">
 
-                <img class="figure-rates" src="../assets/img/rates_figure.png">
+                <img class="figure-terms" src="../assets/img/rates_figure.png">
                 <div class="section-container">
                     <div class="section-icon"></div>
                     <div class="section-header"><h2>Rates</h2></div>
@@ -197,7 +197,7 @@
 
                     </div>
 
-                    <div class="col-xl-6 col-lg-5 col-md-5 col-sm-4 col-0 rates-graphic-container">
+                    <div class="col-xl-6 col-lg-5 col-md-5 col-sm-4 col-0 graphic-rates-container">
                         <img class="graphic-rates" src="../assets/img/Rates_graphic.svg" />
                     </div>
 
