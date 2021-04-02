@@ -2440,9 +2440,9 @@ Go Top CSS
 }
 
 
-                      /*================================================
-                                TUTOMY PROFILE
-                      =================================================*/
+                  /*================================================
+                            TUTOMY PROFILE
+                  =================================================*/
 
 
 /*================================================
@@ -2480,10 +2480,7 @@ body {
     }
 
 #background-rectangular {
-  display: block;
-}
-
-.background-rectangular {
+    display: block;
     top: -10%;
     left: -25%;
     right: -25%;
@@ -2495,13 +2492,13 @@ body {
 }
 
     @media (max-width: 1500px) {
-        .background-rectangular {
+        #background-rectangular {
             height: 900px;
         }
     }
 
     @media (max-width: 767px) {
-        .background-rectangular {
+        #background-rectangular {
             display: none;
         }
     }
@@ -2531,18 +2528,20 @@ body {
 
             /* adds back scroolbar for div in Chrome, Edge and Safari */
             ::-webkit-scrollbar {
-              display: initial;
-              width: 10px;
+                display: initial;
+                width: 10px;
             }
+
             ::-webkit-scrollbar-thumb {
-              background : rgba(255,255,255,0.5);
-              border-radius: 10px;
-              box-shadow:  0 0 6px rgba(0, 0, 0, 0.5);
+                background : rgba(255,255,255,0.5);
+                border-radius: 10px;
+                box-shadow:  0 0 6px rgba(0, 0, 0, 0.5);
             }
+
             ::-webkit-scrollbar-track {
                 background-color: #555999;
                 border-radius: 10px;
-              }
+            }
         }
     }
 
@@ -2554,17 +2553,17 @@ body {
 
     @media (min-height: 900px) {
         .tu-container {
-          padding-top: 120px;
+            padding-top: 120px;
         }
     }
 
     @media (min-height: 1300px) {
         .tu-container {
-          padding-top: 150px;
+            padding-top: 150px;
         }
     }
 
-.right-left-section-split {
+.website-split {
     height: 100%;
 }
 
@@ -2622,25 +2621,26 @@ Sections' headers: about me, subjects, rates, expertise
 .section-container {
     display: flex;
     align-items: center;
-}
 
-.section-icon {
-    background-color: #DF7870;
-    width: 8px;
-    height: 35px;
-}
+    .icon {
+        background-color: #DF7870;
+        width: 8px;
+        height: 35px;
+    }
 
-.section-header {
-    padding-top: 5px;
+    .header {
+        padding-top: 5px;
+
         h2 {
-          font-size: 28px;
-          font-weight: 600;
-          color: #0E314C;
+            font-size: 28px;
+            font-weight: 600;
+            color: #0E314C;
         }
+    }
 }
 
     @media (max-width: 1199px) {
-        .section-header {
+        .section-container .header {
             h2 {
                 font-size: 25px;
             }
@@ -2648,7 +2648,7 @@ Sections' headers: about me, subjects, rates, expertise
     }
 
     @media (max-width: 767px) {
-        .section-header {
+        .section-container .header {
             h2 {
                 font-size: 22px;
             }
@@ -2656,14 +2656,16 @@ Sections' headers: about me, subjects, rates, expertise
     }
 
     @media (max-width: 575px) {
-        .section-header {
+        .section-container .header {
             h2 {
                 font-size: 20px;
             }
         }
     }
 
-#section-subjects .section-header, #section-rates .section-header, #section-expertise .section-header {
+#section-subjects .section-container .header,
+#section-rates .section-container .header,
+#section-expertise .section-container .header {
     margin-left: 10px;
 }
 
@@ -2678,6 +2680,13 @@ Left section
     position: relative;
     padding: 10px 15px 40px;
     margin: 0px 0px 20px;
+
+    hr {
+        width:40%;
+        margin-top: 20px;
+        border-style: solid;
+        border-color: rgba(84, 87, 193, .3);
+    }
 }
 
     @media (max-width: 991px) and (min-width: 768px) {
@@ -2686,13 +2695,6 @@ Left section
             margin: 0 auto;
         }
     }
-
-.left-section hr {
-    width:40%;
-    margin-top: 20px;
-    border-style: solid;
-    border-color: rgba(84, 87, 193, .3);
-}
 
     @media (max-width: 767px) {
         .left-section hr {
@@ -2725,20 +2727,14 @@ Left section
     flex-wrap: wrap;
     margin-top: 90px;
     justify-content: center;
-}
 
-    @media (max-width: 767px) {
-        .name-input {
-            margin-top: 75px;
-        }
+    h2 {
+        font-size: 28px;
+        font-weight: 600;
+        color: #0E314C;
+        line-height: 30px;
+        margin: 0px 2.5px;
     }
-
-.name-input h2 {
-    font-size: 28px;
-    font-weight: 600;
-    color: #0E314C;
-    line-height: 30px;
-    margin: 0px 2.5px;
 }
 
     @media (max-width: 991px) {
@@ -2748,8 +2744,12 @@ Left section
     }
 
     @media (max-width: 767px) {
-        .name-input h2 {
-            font-size: 25px;
+        .name-input {
+            margin-top: 75px;
+
+            h2 {
+                font-size: 25px;
+            }
         }
     }
 
@@ -2782,24 +2782,25 @@ Left section
     font-weight: 400;
     margin-top: 15px;
     text-align: center;
-}
 
-.short-bio-line-1, .short-bio-line-2 {
-    line-height: 22px;
-    margin-bottom: 0px;
-}
+    .line-1, .line-2 {
+        line-height: 22px;
+        margin-bottom: 0px;
+    }
 
-.short-bio-line-2 {
-    margin-bottom: 5px;
+    .line-2 {
+        margin-bottom: 5px;
+    }
 }
 
     @media (max-width: 767px) {
         .short-bio {
             font-size: 14px;
             margin-top: 10px;
-        }
-        .short-bio-line-1, .short-bio-line-2 {
-            line-height: 20px;
+
+            .line-1, .line-2 {
+                line-height: 20px;
+            }
         }
     }
 
@@ -2810,9 +2811,11 @@ Left section
         display: flex;
         justify-content: center;
     }
+
     li {
         display: inline-block;
         margin-right: 7px;
+
         a {
             width: 40px;
             text-align: center;
@@ -2821,39 +2824,48 @@ Left section
             border: 1px solid $light-green-color;
             border-radius: 50%;
             color: $light-green-color;
+
             i {
                 width: 28px;
             }
+
             &.facebook {
                 border-color: rgba(84, 87, 193, .4);
                 color: rgba(84, 87, 193, .4);
+
                 &:hover {
                     border-color: #006AFF;
                     background-color: #006AFF;
                     color: $white-color;
                 }
             }
+
             &.youtube {
                 border-color: rgba(84, 87, 193, .4);
                 color: rgba(84, 87, 193, .4);
+
                 &:hover {
                     border-color: #ff0000;
                     background-color: #ff0000;
                     color: $white-color;
                 }
             }
+
             &.linkedin {
                 border-color: rgba(84, 87, 193, .4);
                 color: rgba(84, 87, 193, .4);
+
                 &:hover {
                     border-color: #0077B5;
                     background-color: #0077B5;
                     color: $white-color;
                 }
             }
+
             &.instagram {
                 border-color: rgba(84, 87, 193, .4);
                 color: rgba(84, 87, 193, .4);
+
                 &:hover {
                     border-color: #bc2a8d;
                     background-color: #bc2a8d;
@@ -2864,19 +2876,19 @@ Left section
     }
 }
 
-.btn-profile-container {
-  display: flex;
-  justify-content: center;
-}
-
 .btn-profile {
-    background-color: #DF7870;
-    box-shadow: 0 13px 27px 0 rgba(223, 120, 112, .25);
-    padding: 15px 25px;
-    margin-top: 25px;
+    display: flex;
+    justify-content: center;
 
-    &:hover, &:focus, &:active {
-        background-color: #5457C1;
+    .inner {
+        background-color: #DF7870;
+        box-shadow: 0 13px 27px 0 rgba(223, 120, 112, .25);
+        padding: 15px 25px;
+        margin-top: 25px;
+
+        &:hover, &:focus, &:active {
+            background-color: #5457C1;
+        }
     }
 }
 
@@ -2892,6 +2904,7 @@ Regular menu
     padding: 0px 4rem;
     margin-bottom: 10px;
     font-size: 16px;
+
     ul {
         display: flex;
         justify-content: space-around;
@@ -2900,14 +2913,17 @@ Regular menu
         font-weight: 500;
         color: #6084A4;
     }
+
     li {
         display: inline-block;
-    }
-    li a {
-        color: #6084A4;
-        &:hover {
-            color: #DF7870;
-       }
+
+        a {
+            color: #6084A4;
+
+            &:hover {
+                color: #DF7870;
+           }
+        }
     }
 }
 
@@ -2925,6 +2941,44 @@ Hamburger menu
 .hamburger-nav {
     overflow: hidden;
     z-index: 2;
+
+    #myLinks {
+        display: none;
+        background: linear-gradient(244.35deg, #314194 37.33%, #3B4DAB 43.75%, #5457C1 50.17%, #6B6FEA 76.06%);
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        padding: 50px;
+    }
+
+    a {
+        color: #e4e9ef;
+        padding: 14px 16px;
+        margin: 0px 20px 10px 0px;
+        text-decoration: none;
+        font-size: 17px;
+        display: block;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+
+        .icon {
+            background-color: #cac4eb;
+            display: block;
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+        }
+
+        &:hover {
+            background-color: #e4e9ef;
+            color: #cac4eb;
+        }
+    }
 }
 
     @media (min-width: 992px) {
@@ -2932,44 +2986,6 @@ Hamburger menu
             display: none;
         }
     }
-
-.hamburger-nav #myLinks {
-    display: none;
-    background: linear-gradient(244.35deg, #314194 37.33%, #3B4DAB 43.75%, #5457C1 50.17%, #6B6FEA 76.06%);
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    padding: 50px;
-}
-
-.hamburger-nav a {
-    color: #e4e9ef;
-    padding: 14px 16px;
-    margin: 0px 20px 10px 0px;
-    text-decoration: none;
-    font-size: 17px;
-    display: block;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-}
-
-.hamburger-nav a.icon {
-    background-color: #cac4eb;
-    display: block;
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    width: 45px;
-    height: 45px;
-    display: flex;
-    align-items: center;
-}
-
-.hamburger-nav a:hover {
-    background-color: #e4e9ef;
-    color: #cac4eb;
-}
 
 
 /*================================================
@@ -2980,63 +2996,67 @@ About me section - Education
     margin: 1.5rem 0rem 0rem;
     display: flex;
     align-items: center;
+
+    .items-all {
+        padding: 5px 0px 0px;
+
+        .items {
+            margin: 0px 0px 15px;
+        }
+    }
+
+    .icons-column {
+        display: flex;
+        justify-content: flex-end;
+        padding: 0px;
+    }
+
+    .icon-container {
+        width: 35px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .icon {
+        font-size: 30px;
+        color: #5457C1;
+    }
 }
 
-.education-items-list {
-    padding: 5px 0px 0px;
-}
+.education-input {
+    padding: 0px 0px 0px 10px;
 
-.education-items {
-    margin: 0px 0px 15px;
-}
+    .label {
+        line-height: 20px;
+        font-weight: 600;
+        color: #0E314C;
+    }
 
-.icons-column {
-    display: flex;
-    justify-content: flex-end;
-    padding: 0px;
-}
+    .value {
+        line-height:17px;
+        color: #6084A4;
+    }
 
-.icon-container {
-    width: 35px;
-    display: flex;
-    justify-content: center;
-}
-
-.icon {
-    font-size: 30px;
-    color: #5457C1;
-}
-
-.school, .certificate {
-    font-size: 16px;
-    margin: 0px;
+    .school, .certificate {
+        font-size: 16px;
+        margin: 0px;
+    }
 }
 
     @media (min-width: 992px) and (max-width: 1199px) {
-        .school, .certificate {
+        .education-input .school, .education-input .certificate {
             font-size: 14px;
         }
     }
 
     @media (max-width: 767px) {
-        .school, .certificate {
+        .education-input .school, .education-input .certificate {
             font-size: 14px;
         }
     }
 
-.education-item {
+.graphic-bio {
     padding: 0px 0px 0px 10px;
-}
-
-.education-item-label {
-    line-height: 20px;
-    font-weight: 600;
-    color: #0E314C;
-}
-
-.education-item-value {
-    line-height:17px;
-    color: #6084A4;
 }
 
     @media (max-width: 767px) {
@@ -3050,20 +3070,20 @@ About me section - Education
 About me section - Bio
 =================================================*/
 
-.bio-container {
-    margin-top: 1rem;
-}
-
 .bio {
-    color: #0E314C;
-    font-size: 14px;
-    margin: 0rem 0rem 0.5rem;
-    padding: 0px;
-    line-height: 22px;
+    margin-top: 1rem;
+
+    p {
+        color: #0E314C;
+        font-size: 14px;
+        margin: 0rem 0rem 0.5rem;
+        padding: 0px;
+        line-height: 22px;
+    }
 }
 
     @media (min-width: 1200px) {
-        .bio {
+        .bio p {
             padding: 0rem 7rem 0rem 0rem;
         }
     }
@@ -3093,6 +3113,12 @@ Subjects section - Subjects
     padding: 0px 80px;
     display: flex;
     justify-content: center;
+
+    hr {
+        width: 60%;
+        border: 1px solid rgba(223, 120, 112, 0.3);
+        margin: 5px auto 10px;
+    }
 }
 
     @media (max-width: 1199px) {
@@ -3100,12 +3126,6 @@ Subjects section - Subjects
             padding: 0px 20px;
         }
     }
-
-.subjects-container hr {
-    width: 60%;
-    border: 1px solid rgba(223, 120, 112, 0.3);
-    margin: 5px auto 10px;
-}
 
 .subject-cards {
     padding: 10px 10px;
@@ -3125,14 +3145,22 @@ Subjects section - Subjects
     border-radius: 5px;
     height: 100%;
     margin: auto;
-}
 
-.subjects p {
-    font-size: 18px;
-    color: #0E314C;
-    text-align: center;
-    margin: 25px 0px 0px;
-    font-weight: 600;
+    p {
+        font-size: 18px;
+        color: #0E314C;
+        text-align: center;
+        margin: 25px 0px 0px;
+        font-weight: 600;
+    }
+
+    .border1 {
+        border: 1px dashed rgba(84, 87, 193, 0.3);
+    }
+
+    .border2 {
+        border: 1px dashed rgba(84, 87, 193, 0.3);
+    }
 }
 
     @media (max-width: 1199px) {
@@ -3141,92 +3169,84 @@ Subjects section - Subjects
         }
     }
 
-.subject-subcategories-container {
+    @media (max-width: 767px) {
+        .subjects .border1{
+            border: 1px dashed rgba(84, 87, 193, 0.3);
+        }
+        .subject .border2{
+            border: 1px dashed rgba(223, 120, 112, 0.3);
+        }
+    }
+
+.subject-subcategories {
     text-align: center;
     font-size: 14px;
     line-height: 17px;
     color: #0E314C;
-}
 
-.subject-subcategories {
-    display: inline-block;
-    text-align: left;
-    list-style: none;
-    padding-left: 0px;
-}
-
-.subject-subcategories li {
-    position: relative;
-    padding-left: 25px;
-    margin: 15px 10px;
-}
-
-.subject-subcategories li:before {
-    content: '';
-    width: 25px;
-    height: 25px;
-    position: absolute;
-    background-image: url("../../assets/img/tick_icon.png");
-    background-size: cover;
-    background-position: center;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.subject-border1 {
-    border: 1px dashed rgba(84, 87, 193, 0.3);
-}
-
-.subject-border2 {
-    border: 1px dashed rgba(84, 87, 193, 0.3);
-}
-
-    @media (max-width: 767px) {
-        .subject-border1{
-            border: 1px dashed rgba(84, 87, 193, 0.3);
-        }
-        .subject-border2{
-            border: 1px dashed rgba(223, 120, 112, 0.3);
-        }
+    ul {
+        display: inline-block;
+        text-align: left;
+        list-style: none;
+        padding-left: 0px;
     }
+
+    li {
+        position: relative;
+        padding-left: 25px;
+        margin: 15px 10px;
+    }
+
+    li:before {
+        content: '';
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        background-image: url("../../assets/img/tick_icon.png");
+        background-size: cover;
+        background-position: center;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
 
 
 /*================================================
 Subjects section - My Students
 =================================================*/
 
-.my-students-container {
+.my-students {
     display: flex;
     justify-content: center;
     margin-top: 2.5rem;
     margin-bottom: 10px;
     align-items: center;
     font-size: 16px;
+
+    .icon {
+        font-size: 35px;
+        color:#5457C1;
+    }
+
+    .label {
+        margin-left: 10px;
+        color: #0E314C;
+    }
+
+    .value {
+        margin-left: 7px;
+        font-weight: 600;
+        color: #5457C1;
+    }
 }
 
     @media (max-width: 767px) {
-        .my-students-container {
-          display: block;
-          text-align: center;
+        .my-students {
+            display: block;
+            text-align: center;
         }
     }
-
-.my-students-icon {
-    font-size: 35px;
-    color:#5457C1;
-}
-
-.my-students-text {
-    margin-left: 10px;
-    color: #0E314C;
-}
-
-.my-students-input {
-    margin-left: 7px;
-    font-weight: 600;
-    color: #5457C1;
-}
 
 
 /*================================================
@@ -3235,6 +3255,15 @@ Rates section - Rates
 
 .rates-container {
     margin: 0.5rem 0rem 0rem;
+
+    .items-all {
+        margin: 30px 0px 0px;
+        padding: 0px;
+
+        .item {
+            margin-bottom: 10px;
+        }
+    }
 }
 
     @media (max-width: 767px) {
@@ -3243,79 +3272,65 @@ Rates section - Rates
         }
     }
 
-.rates-items-all {
-    margin: 30px 0px 0px;
-    padding: 0px;
-}
-
-.rates-item {
-    margin-bottom: 10px;
-}
-
-.rate-box-container {
+.rate-box {
     display: flex;
     justify-content: flex-end;
-}
 
-.rate-box {
-    width: 60%;
-    font-size: calc(0.75vw + 0.75vh + 0.3vmin);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    .inner {
+        width: 60%;
+        font-size: calc(0.75vw + 0.75vh + 0.3vmin);
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
-    background-color: #5457C1;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    font-weight: 400;
-    color: white;
-    padding: 5px;
+        background-color: #5457C1;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        font-weight: 400;
+        color: white;
+        padding: 5px;
+    }
 }
 
     @media (max-width: 1199px) {
-        .rate-box {
+        .rate-box .inner {
             width: 80%;
         }
     }
 
     @media (max-width: 991px) {
-        .rate-box {
+        .rate-box .inner {
             width: 100%;
-        }
-    }
-
-    @media (max-width: 991px) {
-        .rate-box {
             font-size: 16px;
         }
     }
 
-.rate-comments {
+.rate-comment {
     padding: 0px;
-}
 
-.rate-comment-top {
-    margin-bottom: 5px;
-    padding: 0px 0px 0px 10px;
-    line-height: 18px;
-    color: #6084A4;
-    font-size: 14px;
-}
+    .top {
+        margin-bottom: 5px;
+        padding: 0px 0px 0px 10px;
+        line-height: 18px;
+        color: #6084A4;
+        font-size: 14px;
+    }
 
-.rate-comment-bottom {
-    font-size: 16px;
-    padding: 0px 0px 0px 10px;
-    line-height: 15px;
-    color: #0E314C;
+    .bottom {
+        font-size: 16px;
+        padding: 0px 0px 0px 10px;
+        line-height: 15px;
+        color: #0E314C;
+    }
 }
 
     @media (max-width: 1199px) {
-        .rate-comment-bottom {
+        .rate-comment .bottom {
             font-size: 14px;
         }
     }
 
-.rate-additional-comment {
+.rates-additional-comment {
     padding: 0.5rem 0rem 0rem 11%;
     color: #6084A4;
     font-size: 14px;
@@ -3323,18 +3338,18 @@ Rates section - Rates
 }
 
     @media (max-width: 1199px) {
-        .rate-additional-comment {
+        .rates-additional-comment {
             padding: 0.5rem 0rem 0rem 6%;
         }
     }
 
     @media (max-width: 991px) {
-        .rate-additional-comment {
+        .rates-additional-comment {
             padding: 0.5rem 0rem 0rem 0rem;
         }
     }
 
-.graphic-rates-container {
+.graphic-rates {
     display: flex;
     align-items: center;
     padding-left: 10px;
@@ -3356,7 +3371,7 @@ Rates section - Terms
     justify-content: center;
 }
 
-.terms-box {
+.terms {
     margin-top: 60px;
     margin-bottom: 15px;
     padding: 15px 0px;
@@ -3370,20 +3385,20 @@ Rates section - Terms
 }
 
     @media (max-width: 1199px) {
-        .terms-box {
+        .terms {
             width: 85%;
         }
     }
 
     @media (max-width: 767px) {
-        .terms-box {
+        .terms {
             margin-top: 30px;
             width: 90%;
         }
     }
 
     @media (max-width: 575px) {
-        .terms-box {
+        .terms {
             margin-top: 10px;
             margin-bottom: 0px;
             width: 100%;
@@ -3395,54 +3410,52 @@ Rates section - Terms
 
 .terms-item {
     margin: 1rem 1rem 1rem 3rem;
+
+    .icon-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+    }
+
+    .icon {
+        font-size: 30px;
+        color:#5457C1;
+    }
+
+    .text {
+        display: flex;
+        align-items: center;
+        padding: 0rem 0.3rem 0rem 0.7rem;
+
+        .label {
+            line-height: 18px;
+            font-size: 14px;
+            color: #0E314C;
+        }
+
+        .value {
+            display: inline;
+            line-height: 18px;
+            font-size: 14px;
+            color: #6084A4;
+
+            .input {
+                display: inline;
+            }
+        }
+    }
 }
 
     @media (max-width: 575px) {
         .terms-item {
             margin: 15px 0px 0px 0px;
+
+            .text .value {
+                display: block;
+            }
         }
     }
-
-.terms-item-icon-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0px;
-}
-
-.terms-item-icon {
-    font-size: 30px;
-    color:#5457C1;
-}
-
-.terms-item-text {
-    display: flex;
-    align-items: center;
-    padding: 0rem 0.3rem 0rem 0.7rem;
-}
-
-.terms-item-label {
-    line-height: 18px;
-    font-size: 14px;
-    color: #0E314C;
-}
-
-.terms-item-value {
-    display: inline;
-    line-height: 18px;
-    font-size: 14px;
-    color: #6084A4;
-}
-
-    @media (max-width: 575px) {
-        .terms-item-value {
-            display: block;
-        }
-    }
-
-.terms-item-value-input {
-    display: inline;
-}
 
 .figure-terms {
     position: absolute;
@@ -3471,31 +3484,31 @@ Rates section - Terms
 Expertise section
 =================================================*/
 
-.youtube-input {
+.youtube-display {
     margin-top: 1.5rem;
     display: flex;
     justify-content: center;
 }
 
-.expertise-arrows-container {
+.expertise-arrows {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    .left-arrow {
+        margin-right:10px;
+        flex: 0 0 20px;
+        margin-top: 45px;
+    }
+
+    .right-arrow {
+        margin-left:10px;
+        flex: 0 0 20px;
+        margin-top: 45px;
+    }
 }
 
-.carousel-left-arrow {
-    margin-right:10px;
-    flex: 0 0 20px;
-    margin-top: 45px;
-}
-
-.carousel-right-arrow {
-    margin-left:10px;
-    flex: 0 0 20px;
-    margin-top: 45px;
-}
-
-.my-carousel{
+.my-carousel {
     -ms-overflow-style: none; /* IE*/
     scrollbar-width: none; /* Firefox */
     overflow-y: scroll;
@@ -3519,6 +3532,43 @@ Expertise section
     border-radius: 10px;
     flex-shrink: 0;
     position: relative;
+
+    .icon {
+        position: absolute;
+        padding: 13px;
+        background-color: white;
+        border: 1px solid rgba(223, 120, 112, 0.3);
+        box-sizing: border-box;
+        border-radius: 50%;
+        top: -40px;
+        left: 30px;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.05));
+    }
+
+    .input {
+        margin-top: 60px;
+        margin-left: 11px;
+        margin-right: 24px;
+        display: flex;
+        flex-direction: column;
+        font-size: 14px;
+        font-family: Poppins;
+
+        .question {
+            color: #0E314C;
+            line-height: 22px;
+            font-weight: 600;
+            margin: 0;
+            padding: 0px;
+        }
+
+        .answer {
+            margin-top: 15px;
+            padding-bottom: 2rem;
+            color: #6084A4;
+            line-height: 22px;
+        }
+    }
 }
 
     @media (max-width: 420px) {
@@ -3533,43 +3583,6 @@ Expertise section
         }
     }
 
-.carousel-icon {
-    position: absolute;
-    padding: 13px;
-    background-color: white;
-    border: 1px solid rgba(223, 120, 112, 0.3);
-    box-sizing: border-box;
-    border-radius: 50%;
-    top: -40px;
-    left: 30px;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.05));
-}
-
-.problem-card-input {
-    margin-top: 60px;
-    margin-left: 11px;
-    margin-right: 24px;
-    display: flex;
-    flex-direction: column;
-    font-size: 14px;
-    font-family: Poppins;
-}
-
-.problem-card-question {
-    color: #0E314C;
-    line-height: 22px;
-    font-weight: 600;
-    margin: 0;
-    padding: 0px;
-}
-
-.problem-card-answer {
-    margin-top: 15px;
-    padding-bottom: 2rem;
-    color: #6084A4;
-    line-height: 22px;
-}
-
 
 /*================================================
 Tutomy logo
@@ -3581,16 +3594,16 @@ Tutomy logo
     justify-content: center;
     margin-top: 4rem;
     opacity: 70%;
-}
 
-.tutomy-logo p {
-    color: #6084A4;
-    margin: 0px;
-}
+    p {
+        color: #6084A4;
+        margin: 0px;
+    }
 
-.tutomy-logo img {
-    height: 20px;
-    margin-left: 5px;
+    img {
+        height: 20px;
+        margin-left: 5px;
+    }
 }
 
 
