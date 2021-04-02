@@ -2440,6 +2440,11 @@ Go Top CSS
 }
 
 
+                      /*================================================
+                                TUTOMY PROFILE
+                      =================================================*/
+
+
 /*================================================
 General and layout containers
 =================================================*/
@@ -2501,12 +2506,12 @@ body {
         }
     }
 
-.tu-container{
+.tu-container {
     width: 100%;
     height: 100%;
     margin: auto;
     padding: 95px 15px 0px;
-      }
+}
 
     @media (min-width: 576px) {
         .tu-container {
@@ -2560,16 +2565,16 @@ body {
     }
 
 .right-left-section-split {
-  height: 100%;
+    height: 100%;
 }
 
 .right-section {
-  height: 100%;
+    height: 100%;
 }
 
-.tu-card-and-menu-container{
-  position: relative;
-  height: 100%;
+.tu-card-and-menu-container {
+    position: relative;
+    height: 100%;
 }
 
 .tu-card-container {
@@ -2611,55 +2616,55 @@ body {
 
 
 /*================================================
-Section's header: about me, subjects, rates, expertise
+Sections' headers: about me, subjects, rates, expertise
 =================================================*/
 
 .section-container {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .section-icon {
-  background-color: #DF7870;
-  width: 8px;
-  height: 35px;
+    background-color: #DF7870;
+    width: 8px;
+    height: 35px;
 }
 
 .section-header {
-  padding-top: 5px;
-    h2 {
-      font-size: 28px;
-      font-weight: 600;
-      color: #0E314C;
-    }
+    padding-top: 5px;
+        h2 {
+          font-size: 28px;
+          font-weight: 600;
+          color: #0E314C;
+        }
 }
 
     @media (max-width: 1199px) {
-      .section-header {
-          h2 {
-            font-size: 25px;
-          }
-      }
+        .section-header {
+            h2 {
+                font-size: 25px;
+            }
+        }
     }
 
     @media (max-width: 767px) {
-      .section-header {
-          h2 {
-            font-size: 22px;
-          }
-      }
+        .section-header {
+            h2 {
+                font-size: 22px;
+            }
+        }
     }
 
     @media (max-width: 575px) {
-      .section-header {
-          h2 {
-            font-size: 20px;
-          }
+        .section-header {
+            h2 {
+                font-size: 20px;
+            }
         }
     }
 
 #section-subjects .section-header, #section-rates .section-header, #section-expertise .section-header {
-  margin-left: 10px;
+    margin-left: 10px;
 }
 
 
@@ -2668,63 +2673,64 @@ Left section
 =================================================*/
 
 .left-section {
-  background-color: white;
-  border-radius: 12px;
-  position: relative;
-  padding: 10px 15px 40px;
-  margin: 0px 0px 20px;
+    background-color: white;
+    border-radius: 12px;
+    position: relative;
+    padding: 10px 15px 40px;
+    margin: 0px 0px 20px;
 }
 
     @media (max-width: 991px) and (min-width: 768px) {
-      .left-section {
-        width: 60%;
-        margin: 0 auto;
-      }
+        .left-section {
+            width: 60%;
+            margin: 0 auto;
+        }
     }
 
 .left-section hr {
-  width:40%;
-  margin-top: 20px;
-  border-style: solid;
-  border-color: rgba(84, 87, 193, .3);
+    width:40%;
+    margin-top: 20px;
+    border-style: solid;
+    border-color: rgba(84, 87, 193, .3);
 }
+
     @media (max-width: 767px) {
-      .left-section hr {
-        width:30%;
-        margin-top: 10px;
-      }
+        .left-section hr {
+            width:30%;
+            margin-top: 10px;
+        }
     }
 
 .photo {
-  width: 145px;
-  height: 145px;
-  position: absolute;
-  left: 50%;
-  margin-left: -73px;
-  top:-64px;
-  border: solid 7px white;
-  border-radius: 50%;
-  box-shadow: 1px 4px 6px #888888;
-}
-
-  @media (max-width: 767px) {
-    .photo {
-      width: 130px;
-      height: 130px;
-    }
-  }
-
-.name-input {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 90px;
-  justify-content: center
+    width: 145px;
+    height: 145px;
+    position: absolute;
+    left: 50%;
+    margin-left: -73px;
+    top:-64px;
+    border: solid 7px white;
+    border-radius: 50%;
+    box-shadow: 1px 4px 6px #888888;
 }
 
     @media (max-width: 767px) {
-      .name-input {
-          margin-top: 75px;
-      }
+        .photo {
+            width: 130px;
+            height: 130px;
+        }
+    }
+
+.name-input {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 90px;
+    justify-content: center;
+}
+
+    @media (max-width: 767px) {
+        .name-input {
+            margin-top: 75px;
+        }
     }
 
 .name-input h2 {
@@ -2736,21 +2742,21 @@ Left section
 }
 
     @media (max-width: 991px) {
-      .name-input h2 {
-        line-height: 25px;
-      }
+        .name-input h2 {
+            line-height: 25px;
+        }
     }
 
     @media (max-width: 767px) {
-      .name-input h2 {
-        font-size: 25px;
-      }
+        .name-input h2 {
+            font-size: 25px;
+        }
     }
 
     @media (max-width: 575px) {
-      .name-input h2 {
-        font-size: 22px;
-      }
+        .name-input h2 {
+            font-size: 22px;
+        }
     }
 
 .lastname {
@@ -2766,35 +2772,35 @@ Left section
 }
 
     @media (max-width: 1199px) {
-      .subject-categories {
-        font-size: 16px;
-      }
+        .subject-categories {
+            font-size: 16px;
+        }
     }
 
 .short-bio {
-  font-size: 16px;
-  font-weight: 400;
-  margin-top: 15px;
-  text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 15px;
+    text-align: center;
 }
 
 .short-bio-line-1, .short-bio-line-2 {
-  line-height: 22px;
-  margin-bottom: 0px;
+    line-height: 22px;
+    margin-bottom: 0px;
 }
 
 .short-bio-line-2 {
-  margin-bottom: 5px;
+    margin-bottom: 5px;
 }
 
     @media (max-width: 767px) {
-      .short-bio {
-        font-size: 14px;
-        margin-top: 10px;
-      }
-      .short-bio-line-1, .short-bio-line-2 {
-        line-height: 20px;
-      }
+        .short-bio {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        .short-bio-line-1, .short-bio-line-2 {
+            line-height: 20px;
+        }
     }
 
 .social-links {
@@ -2880,40 +2886,36 @@ Regular menu
 =================================================*/
 
 .menu {
-  height: 37px;
-  background-color: white;
-  border-radius: 15px 15px 0 0;
-  padding: 0px 4rem;
-  margin-bottom: 10px;
-  font-size: 16px;
-
+    height: 37px;
+    background-color: white;
+    border-radius: 15px 15px 0 0;
+    padding: 0px 4rem;
+    margin-bottom: 10px;
+    font-size: 16px;
     ul {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 100%;
-    font-weight: 500;
-    color: #6084A4;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 100%;
+        font-weight: 500;
+        color: #6084A4;
     }
-
     li {
-    display: inline-block;
+        display: inline-block;
     }
-
     li a {
         color: #6084A4;
-
         &:hover {
             color: #DF7870;
        }
     }
 }
 
-  @media (max-width: 1199px) {
-    .menu {
-      font-size: 14px;
+    @media (max-width: 1199px) {
+        .menu {
+            font-size: 14px;
+        }
     }
-  }
 
 
 /*================================================
@@ -2928,7 +2930,7 @@ Hamburger menu
     @media (min-width: 992px) {
         .hamburger-nav {
             display: none;
-      }
+        }
     }
 
 .hamburger-nav #myLinks {
@@ -2975,73 +2977,73 @@ About me section - Education
 =================================================*/
 
 .education-container {
-  margin: 1.5rem 0rem 0rem;
-  display: flex;
-  align-items: center;
+    margin: 1.5rem 0rem 0rem;
+    display: flex;
+    align-items: center;
 }
 
 .education-items-list {
-  padding: 5px 0px 0px;
+    padding: 5px 0px 0px;
 }
 
 .education-items {
-  margin: 0px 0px 15px;
+    margin: 0px 0px 15px;
 }
 
 .icons-column {
-  display: flex;
-  justify-content: flex-end;
-  padding: 0px;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0px;
 }
 
 .icon-container {
-  width: 35px;
-  display: flex;
-  justify-content: center;
+    width: 35px;
+    display: flex;
+    justify-content: center;
 }
 
 .icon {
-  font-size: 30px;
-  color: #5457C1;
+    font-size: 30px;
+    color: #5457C1;
 }
 
 .school, .certificate {
-  font-size: 16px;
-  margin: 0px;
+    font-size: 16px;
+    margin: 0px;
 }
 
     @media (min-width: 992px) and (max-width: 1199px) {
-      .school, .certificate {
-        font-size: 14px;
-      }
+        .school, .certificate {
+            font-size: 14px;
+        }
     }
 
     @media (max-width: 767px) {
-      .school, .certificate {
-        font-size: 14px;
-      }
+        .school, .certificate {
+            font-size: 14px;
+        }
     }
 
 .education-item {
-  padding: 0px 0px 0px 10px;
+    padding: 0px 0px 0px 10px;
 }
 
 .education-item-label {
-  line-height: 20px;
-  font-weight: 600;
-  color: #0E314C;
+    line-height: 20px;
+    font-weight: 600;
+    color: #0E314C;
 }
 
 .education-item-value {
-  line-height:17px;
-  color: #6084A4;
+    line-height:17px;
+    color: #6084A4;
 }
 
-@media (max-width: 767px) {
-  .graphic-bio {
-    display: none;
-  }
-}
+    @media (max-width: 767px) {
+        .graphic-bio {
+            display: none;
+        }
+    }
 
 
 /*================================================
@@ -3049,22 +3051,22 @@ About me section - Bio
 =================================================*/
 
 .bio-container {
-  margin-top: 1rem;
+    margin-top: 1rem;
 }
 
 .bio {
-  color: #0E314C;
-  font-size: 14px;
-  margin: 0rem 0rem 0.5rem;
-  padding: 0px;
-  line-height: 22px;
+    color: #0E314C;
+    font-size: 14px;
+    margin: 0rem 0rem 0.5rem;
+    padding: 0px;
+    line-height: 22px;
 }
 
-@media (min-width: 1200px) {
-  .bio {
-      padding: 0rem 7rem 0rem 0rem;
-  }
-}
+    @media (min-width: 1200px) {
+        .bio {
+            padding: 0rem 7rem 0rem 0rem;
+        }
+    }
 
 
 /*================================================
@@ -3072,91 +3074,91 @@ Subjects section - Subjects
 =================================================*/
 
 .figure-subjects {
-  width: 250px;
-  position: absolute;
-  top: 20px;
-  right: 10px;
+    width: 250px;
+    position: absolute;
+    top: 20px;
+    right: 10px;
 }
 
     @media (max-width: 767px) {
-      .figure-subjects {
-        position: absolute;
-        top: 10px;
-        right: 0px;
-      }
+        .figure-subjects {
+            position: absolute;
+            top: 10px;
+            right: 0px;
+        }
     }
 
 .subjects-container {
-  margin-top: 1.5rem;
-  padding: 0px 80px;
-  display: flex;
-  justify-content: center;
+    margin-top: 1.5rem;
+    padding: 0px 80px;
+    display: flex;
+    justify-content: center;
 }
 
     @media (max-width: 1199px) {
-      .subjects-container {
-        padding: 0px 20px;
-      }
+        .subjects-container {
+            padding: 0px 20px;
+        }
     }
 
 .subjects-container hr {
-  width: 60%;
-  border: 1px solid rgba(223, 120, 112, 0.3);
-  margin: 5px auto 10px;
+    width: 60%;
+    border: 1px solid rgba(223, 120, 112, 0.3);
+    margin: 5px auto 10px;
 }
 
 .subject-cards {
-  padding: 10px 10px;
+    padding: 10px 10px;
 }
 
     @media (min-width: 1200px) {
-      .subject-cards {
-        padding: 1.5rem 1rem;
-      }
+        .subject-cards {
+            padding: 1.5rem 1rem;
+        }
     }
 
 .subjects {
-  background-color: white;
-  max-width: 300px;
-  box-sizing: border-box;
-  box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-  height: 100%;
-  margin: auto;
+    background-color: white;
+    max-width: 300px;
+    box-sizing: border-box;
+    box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    height: 100%;
+    margin: auto;
 }
 
 .subjects p {
-  font-size: 18px;
-  color: #0E314C;
-  text-align: center;
-  margin: 25px 0px 0px;
-  font-weight: 600;
+    font-size: 18px;
+    color: #0E314C;
+    text-align: center;
+    margin: 25px 0px 0px;
+    font-weight: 600;
 }
 
     @media (max-width: 1199px) {
-      .subjects p {
-        font-size: 16px;
-      }
+        .subjects p {
+            font-size: 16px;
+        }
     }
 
 .subject-subcategories-container {
-  text-align: center;
-  font-size: 14px;
-  line-height: 17px;
-  color: #0E314C;
+    text-align: center;
+    font-size: 14px;
+    line-height: 17px;
+    color: #0E314C;
 }
 
 .subject-subcategories {
-   display: inline-block;
-   text-align: left;
-   list-style: none;
-   padding-left: 0px;
+    display: inline-block;
+    text-align: left;
+    list-style: none;
+    padding-left: 0px;
 }
 
 .subject-subcategories li {
-  position: relative;
-  padding-left: 25px;
-  margin: 15px 10px;
+    position: relative;
+    padding-left: 25px;
+    margin: 15px 10px;
 }
 
 .subject-subcategories li:before {
@@ -3195,34 +3197,35 @@ Subjects section - My Students
 =================================================*/
 
 .my-students-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 2.5rem;
-  margin-bottom: 10px;
-  align-items: center;
-  font-size: 16px;
+    display: flex;
+    justify-content: center;
+    margin-top: 2.5rem;
+    margin-bottom: 10px;
+    align-items: center;
+    font-size: 16px;
 }
+
     @media (max-width: 767px) {
-      .my-students-container {
-        display: block;
-        text-align: center;
-      }
+        .my-students-container {
+          display: block;
+          text-align: center;
+        }
     }
 
 .my-students-icon {
-  font-size: 35px;
-  color:#5457C1;
+    font-size: 35px;
+    color:#5457C1;
 }
 
 .my-students-text {
-  margin-left: 10px;
-  color: #0E314C;
+    margin-left: 10px;
+    color: #0E314C;
 }
 
 .my-students-input {
-  margin-left: 7px;
-  font-weight: 600;
-  color: #5457C1;
+    margin-left: 7px;
+    font-weight: 600;
+    color: #5457C1;
 }
 
 
@@ -3231,27 +3234,27 @@ Rates section - Rates
 =================================================*/
 
 .rates-container {
-  margin: 0.5rem 0rem 0rem;
+    margin: 0.5rem 0rem 0rem;
 }
 
     @media (max-width: 767px) {
-      .rates-container {
-        margin: 0px;
-      }
+        .rates-container {
+            margin: 0px;
+        }
     }
 
 .rates-items-all {
-  margin: 30px 0px 0px;
-  padding: 0px;
+    margin: 30px 0px 0px;
+    padding: 0px;
 }
 
 .rates-item {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 .rate-box-container {
-  display: flex;
-  justify-content: flex-end;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .rate-box {
@@ -3270,77 +3273,77 @@ Rates section - Rates
 }
 
     @media (max-width: 1199px) {
-      .rate-box {
-        width: 80%;
-      }
+        .rate-box {
+            width: 80%;
+        }
     }
 
     @media (max-width: 991px) {
-      .rate-box {
-        width: 100%;
-      }
+        .rate-box {
+            width: 100%;
+        }
     }
 
     @media (max-width: 991px) {
-      .rate-box {
-        font-size: 16px;
-      }
+        .rate-box {
+            font-size: 16px;
+        }
     }
 
 .rate-comments {
-  padding: 0px;
+    padding: 0px;
 }
 
 .rate-comment-top {
-  margin-bottom: 5px;
-  padding: 0px 0px 0px 10px;
-  line-height: 18px;
-  color: #6084A4;
-  font-size: 14px;
+    margin-bottom: 5px;
+    padding: 0px 0px 0px 10px;
+    line-height: 18px;
+    color: #6084A4;
+    font-size: 14px;
 }
 
 .rate-comment-bottom {
-  font-size: 16px;
-  padding: 0px 0px 0px 10px;
-  line-height: 15px;
-  color: #0E314C;
+    font-size: 16px;
+    padding: 0px 0px 0px 10px;
+    line-height: 15px;
+    color: #0E314C;
 }
 
     @media (max-width: 1199px) {
-      .rate-comment-bottom {
-        font-size: 14px;
-      }
+        .rate-comment-bottom {
+            font-size: 14px;
+        }
     }
 
 .rate-additional-comment {
-  padding: 0.5rem 0rem 0rem 11%;
-  color: #6084A4;
-  font-size: 14px;
-  line-height: 18px;
+    padding: 0.5rem 0rem 0rem 11%;
+    color: #6084A4;
+    font-size: 14px;
+    line-height: 18px;
 }
 
     @media (max-width: 1199px) {
-      .rate-additional-comment {
-        padding: 0.5rem 0rem 0rem 6%;
-      }
+        .rate-additional-comment {
+            padding: 0.5rem 0rem 0rem 6%;
+        }
     }
 
     @media (max-width: 991px) {
-      .rate-additional-comment {
-        padding: 0.5rem 0rem 0rem 0rem;
-      }
+        .rate-additional-comment {
+            padding: 0.5rem 0rem 0rem 0rem;
+        }
     }
 
 .graphic-rates-container {
-  display: flex;
-  align-items: center;
-  padding-left: 10px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
 }
 
     @media (max-width: 575px) {
-      .graphic-rates {
-        display: none;
-      }
+        .graphic-rates {
+            display: none;
+        }
     }
 
 
@@ -3349,45 +3352,45 @@ Rates section - Terms
 =================================================*/
 
 .terms-container {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
 .terms-box {
-  margin-top: 60px;
-  margin-bottom: 15px;
-  padding: 15px 0px;
-  width: 60%;
-  border: 1px dashed #F2F2F2;
-  box-sizing: border-box;
-  box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-  position: relative;
-  background-color: white;
+    margin-top: 60px;
+    margin-bottom: 15px;
+    padding: 15px 0px;
+    width: 60%;
+    border: 1px dashed #F2F2F2;
+    box-sizing: border-box;
+    box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    position: relative;
+    background-color: white;
 }
 
     @media (max-width: 1199px) {
-      .terms-box {
-        width: 85%;
-      }
+        .terms-box {
+            width: 85%;
+        }
     }
 
     @media (max-width: 767px) {
-      .terms-box {
-        margin-top: 30px;
-        width: 90%;
-      }
+        .terms-box {
+            margin-top: 30px;
+            width: 90%;
+        }
     }
 
     @media (max-width: 575px) {
-      .terms-box {
-        margin-top: 10px;
-        margin-bottom: 0px;
-        width: 100%;
-        box-shadow: none;
-        border: none;
-        background-color: transparent;
-      }
+        .terms-box {
+            margin-top: 10px;
+            margin-bottom: 0px;
+            width: 100%;
+            box-shadow: none;
+            border: none;
+            background-color: transparent;
+        }
     }
 
 .terms-item {
@@ -3395,72 +3398,72 @@ Rates section - Terms
 }
 
     @media (max-width: 575px) {
-      .terms-item {
-        margin: 15px 0px 0px 0px;
-      }
+        .terms-item {
+            margin: 15px 0px 0px 0px;
+        }
     }
 
 .terms-item-icon-container {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
 }
 
 .terms-item-icon {
-  font-size: 30px;
-  color:#5457C1;
+    font-size: 30px;
+    color:#5457C1;
 }
 
 .terms-item-text {
-  display: flex;
-  align-items: center;
-  padding: 0rem 0.3rem 0rem 0.7rem;
+    display: flex;
+    align-items: center;
+    padding: 0rem 0.3rem 0rem 0.7rem;
 }
 
 .terms-item-label {
-  line-height: 18px;
-  font-size: 14px;
-  color: #0E314C;
+    line-height: 18px;
+    font-size: 14px;
+    color: #0E314C;
 }
 
 .terms-item-value {
-  display: inline;
-  line-height: 18px;
-  font-size: 14px;
-  color: #6084A4;
+    display: inline;
+    line-height: 18px;
+    font-size: 14px;
+    color: #6084A4;
 }
 
     @media (max-width: 575px) {
-      .terms-item-value {
-        display: block;
-      }
+        .terms-item-value {
+            display: block;
+        }
     }
 
 .terms-item-value-input {
-  display: inline;
+    display: inline;
 }
 
 .figure-terms {
-  position: absolute;
-  bottom: 0%;
-  left: 5%;
-  width: 13rem;
+    position: absolute;
+    bottom: 0%;
+    left: 5%;
+    width: 13rem;
 }
 
     @media (max-width: 767px) {
-      .figure-terms {
-        position: absolute;
-        bottom: 28%;
-        left: 68%;
-        width: 9rem;
-      }
+        .figure-terms {
+            position: absolute;
+            bottom: 28%;
+            left: 68%;
+            width: 9rem;
+        }
     }
 
     @media (max-width: 1199px) {
-      .figure-terms {
-        display: none;
-      }
+        .figure-terms {
+            display: none;
+        }
     }
 
 
@@ -3469,27 +3472,27 @@ Expertise section
 =================================================*/
 
 .youtube-input {
-  margin-top: 1.5rem;
-  display: flex;
-  justify-content: center;
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
 }
 
 .expertise-arrows-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .carousel-left-arrow {
-  margin-right:10px;
-  flex: 0 0 20px;
-  margin-top: 45px;
+    margin-right:10px;
+    flex: 0 0 20px;
+    margin-top: 45px;
 }
 
 .carousel-right-arrow {
-  margin-left:10px;
-  flex: 0 0 20px;
-  margin-top: 45px;
+    margin-left:10px;
+    flex: 0 0 20px;
+    margin-top: 45px;
 }
 
 .my-carousel{
@@ -3497,75 +3500,74 @@ Expertise section
     scrollbar-width: none; /* Firefox */
     overflow-y: scroll;
 
-        &::-webkit-scrollbar {
-            display: none;  /* Safari, Edge and Chrome */
+    &::-webkit-scrollbar {
+        display: none;  /* Safari, Edge and Chrome */
     }
 }
 
 .carousel-container {
-  margin-top: 4.5rem;
-  display: flex;
+    margin-top: 4.5rem;
+    display: flex;
 }
 
 .problem-card {
-  width:270px;
-  min-height: 280px;
-  margin: 10px;
-  background-color: #F6F8FE;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  flex-shrink: 0;
-  position: relative;
+    width:270px;
+    min-height: 280px;
+    margin: 10px;
+    background-color: #F6F8FE;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    flex-shrink: 0;
+    position: relative;
 }
 
     @media (max-width: 420px) {
-      .problem-card {
-        width: 215px;
-      }
+        .problem-card {
+            width: 215px;
+        }
     }
 
     @media (max-width: 320px) {
-      .problem-card {
-        width: 175px;
-      }
+        .problem-card {
+            width: 175px;
+        }
     }
 
 .carousel-icon {
-  position: absolute;
-  padding: 13px;
-  background-color: white;
-  border: 1px solid rgba(223, 120, 112, 0.3);
-  box-sizing: border-box;
-  border-radius: 50%;
-  top: -40px;
-  left: 30px;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.05));
+    position: absolute;
+    padding: 13px;
+    background-color: white;
+    border: 1px solid rgba(223, 120, 112, 0.3);
+    box-sizing: border-box;
+    border-radius: 50%;
+    top: -40px;
+    left: 30px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.05));
 }
 
 .problem-card-input {
-  margin-top: 60px;
-  margin-left: 11px;
-  margin-right: 24px;
-  display: flex;
-  flex-direction: column;
-  font-size: 14px;
-  font-family: Poppins;
+    margin-top: 60px;
+    margin-left: 11px;
+    margin-right: 24px;
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    font-family: Poppins;
 }
 
 .problem-card-question {
-  color: #0E314C;
-  line-height: 22px;
-  font-weight: 600;
-  margin: 0;
-  padding: 0px;
-
+    color: #0E314C;
+    line-height: 22px;
+    font-weight: 600;
+    margin: 0;
+    padding: 0px;
 }
 
 .problem-card-answer {
-  margin-top: 15px;
-  padding-bottom: 2rem;
-  color: #6084A4;
-  line-height: 22px;
+    margin-top: 15px;
+    padding-bottom: 2rem;
+    color: #6084A4;
+    line-height: 22px;
 }
 
 
@@ -3574,21 +3576,21 @@ Tutomy logo
 =================================================*/
 
 .tutomy-logo {
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   margin-top: 4rem;
-   opacity: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4rem;
+    opacity: 70%;
 }
 
 .tutomy-logo p {
-  color: #6084A4;
-  margin: 0px;
+    color: #6084A4;
+    margin: 0px;
 }
 
 .tutomy-logo img {
-  height: 20px;
-  margin-left: 5px;
+    height: 20px;
+    margin-left: 5px;
 }
 
 
@@ -3597,33 +3599,33 @@ Testing Environment
 =================================================*/
 
 /*
-@media (min-width: 1200px) {
-  h2 {
-    color: red;
-  }
-}
+    @media (min-width: 1200px) {
+        h2 {
+            color: red;
+        }
+    }
 
-@media (max-width: 1199px) {
-  h2 {
-    color: orange;
-  }
-}
+    @media (max-width: 1199px) {
+        h2 {
+            color: orange;
+        }
+    }
 
-@media (max-width: 991px) {
-  h2 {
-    color: yellow;
-  }
-}
+    @media (max-width: 991px) {
+        h2 {
+            color: yellow;
+        }
+    }
 
-@media (max-width: 767px) {
-  h2 {
-    color: blue;
-  }
-}
+    @media (max-width: 767px) {
+        h2 {
+            color: blue;
+        }
+    }
 
-@media (max-width: 575px) {
-  h2 {
-    color: green;
-  }
-}
+    @media (max-width: 575px) {
+        h2 {
+            color: green;
+        }
+    }
 */
