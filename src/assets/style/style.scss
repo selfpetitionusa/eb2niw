@@ -2461,16 +2461,16 @@ html {
 body {
     width: 100vw;
     height:100vh;
-    margin-top: 1px;
     background-color: #f9f6f6;
+    margin-top: 1px;
 }
 
 .d-flex {
-    background-color:#f9f6f6;
-    width: 100%;
-    height:100%;
     position: relative;
     overflow-x: hidden;
+    width: 100%;
+    height:100%;
+    background-color:#f9f6f6;
 }
 
     @media (max-width: 767px) {
@@ -2481,11 +2481,11 @@ body {
 
 #background-rectangular {
     display: block;
+    position: fixed;
+    height: 1200px;
     top: -10%;
     left: -25%;
     right: -25%;
-    height: 1200px;
-    position: fixed;
 
     background: linear-gradient(244.35deg, #314194 37.33%, #3B4DAB 43.75%, #5457C1 50.17%, #6B6FEA 76.06%);
     transform: rotate(-20deg);
@@ -2590,11 +2590,11 @@ body {
     }
 
 .tu-card {
-    border-radius: 15px 5px 5px 15px;
+    position: relative;
     background-color: white;
     margin-top: 10px;
     padding: 30px 40px;
-    position: relative;
+    border-radius: 15px 5px 5px 15px;
 
     &:first-of-type {
         margin-top: 0;
@@ -2623,9 +2623,9 @@ Sections' headers: about me, subjects, rates, expertise
     align-items: center;
 
     .icon {
-        background-color: #DF7870;
         width: 8px;
         height: 35px;
+        background-color: #DF7870;
     }
 
     .header {
@@ -2675,14 +2675,14 @@ Left section
 =================================================*/
 
 .left-section {
-    background-color: white;
-    border-radius: 12px;
     position: relative;
+    background-color: white;
     padding: 10px 15px 40px;
     margin: 0px 0px 20px;
+    border-radius: 12px;
 
     hr {
-        width:40%;
+        width: 40%;
         margin-top: 20px;
         border-style: solid;
         border-color: rgba(84, 87, 193, .3);
@@ -2698,18 +2698,19 @@ Left section
 
     @media (max-width: 767px) {
         .left-section hr {
-            width:30%;
+            width: 30%;
             margin-top: 10px;
         }
     }
 
 .photo {
-    width: 145px;
-    height: 145px;
     position: absolute;
     left: 50%;
+    width: 145px;
+    height: 145px;
     margin-left: -73px;
     top:-64px;
+
     border: solid 7px white;
     border-radius: 50%;
     box-shadow: 1px 4px 6px #888888;
@@ -2724,9 +2725,9 @@ Left section
 
 .name-input {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     margin-top: 90px;
-    justify-content: center;
 
     h2 {
         font-size: 28px;
@@ -2764,11 +2765,11 @@ Left section
 }
 
 .subject-categories {
-    margin: 0px;
-    font-weight: 500;
     text-align: center;
-    color: #0E314C;
     font-size: 18px;
+    font-weight: 500;
+    color: #0E314C;
+    margin: 0px;
 }
 
     @media (max-width: 1199px) {
@@ -2778,10 +2779,10 @@ Left section
     }
 
 .short-bio {
+    text-align: center;
     font-size: 16px;
     font-weight: 400;
     margin-top: 15px;
-    text-align: center;
 
     .line-1, .line-2 {
         line-height: 22px;
@@ -2806,10 +2807,10 @@ Left section
 
 .social-links {
     ul {
-        padding-inline-start: 0px;
-        margin-top: 20px;
         display: flex;
         justify-content: center;
+        padding-inline-start: 0px;
+        margin-top: 20px;
     }
 
     li {
@@ -2817,59 +2818,60 @@ Left section
         margin-right: 7px;
 
         a {
-            width: 40px;
             text-align: center;
-            line-height: 57px;
+            width: 40px;
             height: 40px;
+            line-height: 57px;
+            color: $light-green-color;
+
             border: 1px solid $light-green-color;
             border-radius: 50%;
-            color: $light-green-color;
 
             i {
                 width: 28px;
             }
 
             &.facebook {
-                border-color: rgba(84, 87, 193, .4);
                 color: rgba(84, 87, 193, .4);
+                border-color: rgba(84, 87, 193, .4);
 
                 &:hover {
-                    border-color: #006AFF;
-                    background-color: #006AFF;
                     color: $white-color;
+                    background-color: #006AFF;
+                    border-color: #006AFF;
                 }
             }
 
             &.youtube {
-                border-color: rgba(84, 87, 193, .4);
                 color: rgba(84, 87, 193, .4);
+                border-color: rgba(84, 87, 193, .4);
 
                 &:hover {
-                    border-color: #ff0000;
-                    background-color: #ff0000;
                     color: $white-color;
+                    background-color: #ff0000;
+                    border-color: #ff0000;
                 }
             }
 
             &.linkedin {
-                border-color: rgba(84, 87, 193, .4);
                 color: rgba(84, 87, 193, .4);
+                border-color: rgba(84, 87, 193, .4);
 
                 &:hover {
-                    border-color: #0077B5;
-                    background-color: #0077B5;
                     color: $white-color;
+                    background-color: #0077B5;
+                    border-color: #0077B5;
                 }
             }
 
             &.instagram {
-                border-color: rgba(84, 87, 193, .4);
                 color: rgba(84, 87, 193, .4);
+                border-color: rgba(84, 87, 193, .4);
 
                 &:hover {
-                    border-color: #bc2a8d;
-                    background-color: #bc2a8d;
                     color: $white-color;
+                    background-color: #bc2a8d;
+                    border-color: #bc2a8d;
                 }
             }
         }
@@ -2882,9 +2884,9 @@ Left section
 
     .inner {
         background-color: #DF7870;
-        box-shadow: 0 13px 27px 0 rgba(223, 120, 112, .25);
         padding: 15px 25px;
         margin-top: 25px;
+        box-shadow: 0 13px 27px 0 rgba(223, 120, 112, .25);
 
         &:hover, &:focus, &:active {
             background-color: #5457C1;
@@ -2899,11 +2901,11 @@ Regular menu
 
 .menu {
     height: 37px;
+    font-size: 16px;
     background-color: white;
-    border-radius: 15px 15px 0 0;
     padding: 0px 4rem;
     margin-bottom: 10px;
-    font-size: 16px;
+    border-radius: 15px 15px 0 0;
 
     ul {
         display: flex;
@@ -2943,40 +2945,44 @@ Hamburger menu
     z-index: 2;
 
     #myLinks {
-        display: none;
         background: linear-gradient(244.35deg, #314194 37.33%, #3B4DAB 43.75%, #5457C1 50.17%, #6B6FEA 76.06%);
+        display: none;
+        position: fixed;
         height: 100%;
         width: 100%;
-        position: fixed;
         padding: 50px;
     }
 
     a {
+        display: block;
+        display: flex;
+        justify-content: center;
+
+        font-size: 17px;
         color: #e4e9ef;
         padding: 14px 16px;
         margin: 0px 20px 10px 0px;
         text-decoration: none;
-        font-size: 17px;
-        display: block;
+
         border-radius: 50%;
-        display: flex;
-        justify-content: center;
 
         .icon {
-            background-color: #cac4eb;
-            display: block;
             position: fixed;
-            right: 0;
-            bottom: 0;
-            width: 45px;
-            height: 45px;
+            display: block;
             display: flex;
             align-items: center;
+
+            width: 45px;
+            height: 45px;
+            right: 0;
+            bottom: 0;
+
+            background-color: #cac4eb;
         }
 
         &:hover {
-            background-color: #e4e9ef;
             color: #cac4eb;
+            background-color: #e4e9ef;
         }
     }
 }
@@ -2993,9 +2999,9 @@ About me section - Education
 =================================================*/
 
 .education-container {
-    margin: 1.5rem 0rem 0rem;
     display: flex;
     align-items: center;
+    margin: 1.5rem 0rem 0rem;
 
     .items-all {
         padding: 5px 0px 0px;
@@ -3012,9 +3018,9 @@ About me section - Education
     }
 
     .icon-container {
-        width: 35px;
         display: flex;
         justify-content: center;
+        width: 35px;
     }
 
     .icon {
@@ -3027,14 +3033,14 @@ About me section - Education
     padding: 0px 0px 0px 10px;
 
     .label {
-        line-height: 20px;
         font-weight: 600;
         color: #0E314C;
+        line-height: 20px;
     }
 
     .value {
-        line-height:17px;
         color: #6084A4;
+        line-height:17px;
     }
 
     .school, .certificate {
@@ -3076,9 +3082,9 @@ About me section - Bio
     p {
         color: #0E314C;
         font-size: 14px;
+        line-height: 22px;
         margin: 0rem 0rem 0.5rem;
         padding: 0px;
-        line-height: 22px;
     }
 }
 
@@ -3094,8 +3100,8 @@ Subjects section - Subjects
 =================================================*/
 
 .figure-subjects {
-    width: 250px;
     position: absolute;
+    width: 250px;
     top: 20px;
     right: 10px;
 }
@@ -3109,10 +3115,10 @@ Subjects section - Subjects
     }
 
 .subjects-container {
-    margin-top: 1.5rem;
-    padding: 0px 80px;
     display: flex;
     justify-content: center;
+    margin-top: 1.5rem;
+    padding: 0px 80px;
 
     hr {
         width: 60%;
@@ -3138,20 +3144,21 @@ Subjects section - Subjects
     }
 
 .subjects {
-    background-color: white;
     max-width: 300px;
+    height: 100%;
+    background-color: white;
+    margin: auto;
+
     box-sizing: border-box;
     box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
-    height: 100%;
-    margin: auto;
 
     p {
-        font-size: 18px;
-        color: #0E314C;
         text-align: center;
-        margin: 25px 0px 0px;
+        font-size: 18px;
         font-weight: 600;
+        color: #0E314C;
+        margin: 25px 0px 0px;
     }
 
     .border1 {
@@ -3181,8 +3188,8 @@ Subjects section - Subjects
 .subject-subcategories {
     text-align: center;
     font-size: 14px;
-    line-height: 17px;
     color: #0E314C;
+    line-height: 17px;
 
     ul {
         display: inline-block;
@@ -3199,14 +3206,16 @@ Subjects section - Subjects
 
     li:before {
         content: '';
+        position: absolute;
         width: 25px;
         height: 25px;
-        position: absolute;
+        left: 0;
+        top: 50%;
+
         background-image: url("../../assets/img/tick_icon.png");
         background-size: cover;
         background-position: center;
-        left: 0;
-        top: 50%;
+
         transform: translateY(-50%);
     }
 }
@@ -3219,10 +3228,10 @@ Subjects section - My Students
 .my-students {
     display: flex;
     justify-content: center;
-    margin-top: 2.5rem;
-    margin-bottom: 10px;
     align-items: center;
     font-size: 16px;
+    margin-top: 2.5rem;
+    margin-bottom: 10px;
 
     .icon {
         font-size: 35px;
@@ -3230,14 +3239,14 @@ Subjects section - My Students
     }
 
     .label {
-        margin-left: 10px;
         color: #0E314C;
+        margin-left: 10px;
     }
 
     .value {
-        margin-left: 7px;
         font-weight: 600;
         color: #5457C1;
+        margin-left: 7px;
     }
 }
 
@@ -3277,18 +3286,19 @@ Rates section - Rates
     justify-content: flex-end;
 
     .inner {
-        width: 60%;
-        font-size: calc(0.75vw + 0.75vh + 0.3vmin);
         display: flex;
         align-items: center;
         justify-content: center;
+        width: 60%;
 
-        background-color: #5457C1;
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-        border-radius: 5px;
+        font-size: calc(0.75vw + 0.75vh + 0.3vmin);
         font-weight: 400;
         color: white;
+        background-color: #5457C1;
         padding: 5px;
+
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
     }
 }
 
@@ -3309,18 +3319,18 @@ Rates section - Rates
     padding: 0px;
 
     .top {
+        font-size: 14px;
+        color: #6084A4;
+        line-height: 18px;
         margin-bottom: 5px;
         padding: 0px 0px 0px 10px;
-        line-height: 18px;
-        color: #6084A4;
-        font-size: 14px;
     }
 
     .bottom {
         font-size: 16px;
-        padding: 0px 0px 0px 10px;
-        line-height: 15px;
         color: #0E314C;
+        line-height: 15px;
+        padding: 0px 0px 0px 10px;
     }
 }
 
@@ -3331,10 +3341,10 @@ Rates section - Rates
     }
 
 .rates-additional-comment {
-    padding: 0.5rem 0rem 0rem 11%;
-    color: #6084A4;
     font-size: 14px;
+    color: #6084A4;
     line-height: 18px;
+    padding: 0.5rem 0rem 0rem 11%;
 }
 
     @media (max-width: 1199px) {
@@ -3372,16 +3382,18 @@ Rates section - Terms
 }
 
 .terms {
+    position: relative;
+    width: 60%;
+    background-color: white;
+
     margin-top: 60px;
     margin-bottom: 15px;
     padding: 15px 0px;
-    width: 60%;
-    border: 1px dashed #F2F2F2;
+
     box-sizing: border-box;
     box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.1);
+    border: 1px dashed #F2F2F2;
     border-radius: 5px;
-    position: relative;
-    background-color: white;
 }
 
     @media (max-width: 1199px) {
@@ -3392,19 +3404,20 @@ Rates section - Terms
 
     @media (max-width: 767px) {
         .terms {
-            margin-top: 30px;
             width: 90%;
+            margin-top: 30px;
         }
     }
 
     @media (max-width: 575px) {
         .terms {
+            width: 100%;
+            background-color: transparent;
             margin-top: 10px;
             margin-bottom: 0px;
-            width: 100%;
+
             box-shadow: none;
             border: none;
-            background-color: transparent;
         }
     }
 
@@ -3429,16 +3442,16 @@ Rates section - Terms
         padding: 0rem 0.3rem 0rem 0.7rem;
 
         .label {
-            line-height: 18px;
             font-size: 14px;
             color: #0E314C;
+            line-height: 18px;
         }
 
         .value {
             display: inline;
-            line-height: 18px;
             font-size: 14px;
             color: #6084A4;
+            line-height: 18px;
 
             .input {
                 display: inline;
@@ -3459,17 +3472,17 @@ Rates section - Terms
 
 .figure-terms {
     position: absolute;
+    width: 13rem;
     bottom: 0%;
     left: 5%;
-    width: 13rem;
 }
 
     @media (max-width: 1199px) {
         .figure-terms {
             position: absolute;
+            width: 9rem;
             bottom: 28%;
             left: 68%;
-            width: 9rem;
         }
     }
 
@@ -3485,9 +3498,9 @@ Expertise section
 =================================================*/
 
 .youtube-display {
-    margin-top: 1.5rem;
     display: flex;
     justify-content: center;
+    margin-top: 1.5rem;
 }
 
 .expertise-arrows {
@@ -3496,15 +3509,15 @@ Expertise section
     justify-content: center;
 
     .left-arrow {
-        margin-right:10px;
         flex: 0 0 20px;
         margin-top: 45px;
+        margin-right:10px;
     }
 
     .right-arrow {
-        margin-left:10px;
         flex: 0 0 20px;
         margin-top: 45px;
+        margin-left:10px;
     }
 }
 
@@ -3519,54 +3532,56 @@ Expertise section
 }
 
 .carousel-container {
-    margin-top: 4.5rem;
     display: flex;
+    margin-top: 4.5rem;
 }
 
 .problem-card {
+    position: relative;
+    flex-shrink: 0;
     width:270px;
     min-height: 280px;
-    margin: 10px;
+
     background-color: #F6F8FE;
+    margin: 10px;
+
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    flex-shrink: 0;
-    position: relative;
 
     .icon {
         position: absolute;
-        padding: 13px;
-        background-color: white;
-        border: 1px solid rgba(223, 120, 112, 0.3);
-        box-sizing: border-box;
-        border-radius: 50%;
         top: -40px;
         left: 30px;
+        
+        background-color: white;
+        padding: 13px;
+
+        box-sizing: border-box;
+        border: 1px solid rgba(223, 120, 112, 0.3);
+        border-radius: 50%;
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.05));
     }
 
     .input {
-        margin-top: 60px;
-        margin-left: 11px;
-        margin-right: 24px;
         display: flex;
         flex-direction: column;
-        font-size: 14px;
         font-family: Poppins;
+        font-size: 14px;
+        margin-top: 60px 24px 0px 11px;
 
         .question {
+            font-weight: 600;
             color: #0E314C;
             line-height: 22px;
-            font-weight: 600;
             margin: 0;
             padding: 0px;
         }
 
         .answer {
-            margin-top: 15px;
-            padding-bottom: 2rem;
             color: #6084A4;
             line-height: 22px;
+            margin-top: 15px;
+            padding-bottom: 2rem;
         }
     }
 }
@@ -3592,8 +3607,8 @@ Tutomy logo
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 4rem;
     opacity: 70%;
+    margin-top: 4rem;
 
     p {
         color: #6084A4;
