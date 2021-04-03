@@ -3173,7 +3173,7 @@ Subjects section - Subjects
         .subjects .border1{
             border: 1px dashed rgba(84, 87, 193, 0.3);
         }
-        .subject .border2{
+        .subjects .border2{
             border: 1px dashed rgba(223, 120, 112, 0.3);
         }
     }
@@ -3464,7 +3464,7 @@ Rates section - Terms
     width: 13rem;
 }
 
-    @media (max-width: 767px) {
+    @media (max-width: 1199px) {
         .figure-terms {
             position: absolute;
             bottom: 28%;
@@ -3473,7 +3473,7 @@ Rates section - Terms
         }
     }
 
-    @media (max-width: 1199px) {
+    @media (max-width: 767px) {
         .figure-terms {
             display: none;
         }
