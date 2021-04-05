@@ -2627,20 +2627,20 @@ Sections' headers: about me, subjects, rates, expertise
         height: 35px;
         background-color: #DF7870;
     }
+}
 
-    .header {
-        padding-top: 5px;
+.header {
+    padding-top: 5px;
 
-        h2 {
-            font-size: 28px;
-            font-weight: 600;
-            color: #0E314C;
-        }
+    h2 {
+        font-size: 28px;
+        font-weight: 600;
+        color: #0E314C;
     }
 }
 
     @media (max-width: 1199px) {
-        .section-container .header {
+        .header {
             h2 {
                 font-size: 25px;
             }
@@ -2648,7 +2648,7 @@ Sections' headers: about me, subjects, rates, expertise
     }
 
     @media (max-width: 767px) {
-        .section-container .header {
+        .header {
             h2 {
                 font-size: 22px;
             }
@@ -2656,7 +2656,7 @@ Sections' headers: about me, subjects, rates, expertise
     }
 
     @media (max-width: 575px) {
-        .section-container .header {
+        .header {
             h2 {
                 font-size: 20px;
             }
