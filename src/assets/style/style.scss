@@ -2962,25 +2962,25 @@ Hamburger menu
         text-decoration: none;
 
         border-radius: 50%;
+    }
 
-        .icon {
-            position: fixed;
-            display: block;
-            display: flex;
-            align-items: center;
+    a.icon {
+        position: fixed;
+        display: block;
+        display: flex;
+        align-items: center;
 
-            width: 45px;
-            height: 45px;
-            right: 0;
-            bottom: 0;
+        width: 45px;
+        height: 45px;
+        right: 0;
+        bottom: 0;
 
-            background-color: #cac4eb;
-        }
+        background-color: #cac4eb;
+    }
 
-        &:hover {
-            color: #cac4eb;
-            background-color: #e4e9ef;
-        }
+    a:hover {
+        color: #cac4eb;
+        background-color: #e4e9ef;
     }
 }
 
