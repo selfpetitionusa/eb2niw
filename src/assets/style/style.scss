@@ -3133,11 +3133,28 @@ Subjects section - Subjects
 
 .subject-cards {
     padding: 10px 10px;
+
+    .border1 {
+        border: 1px dashed rgba(84, 87, 193, 0.3);
+    }
+
+    .border2 {
+        border: 1px dashed rgba(84, 87, 193, 0.3);
+    }
 }
 
     @media (min-width: 1200px) {
         .subject-cards {
             padding: 1.5rem 1rem;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .subject-cards .border1 {
+            border: 1px dashed rgba(84, 87, 193, 0.3);
+        }
+        .subject-cards .border2 {
+            border: 1px dashed rgba(223, 120, 112, 0.3);
         }
     }
 
@@ -3158,28 +3175,11 @@ Subjects section - Subjects
         color: #0E314C;
         margin: 25px 0px 0px;
     }
-
-    .border1 {
-        border: 1px dashed rgba(84, 87, 193, 0.3);
-    }
-
-    .border2 {
-        border: 1px dashed rgba(84, 87, 193, 0.3);
-    }
 }
 
     @media (max-width: 1199px) {
         .subjects p {
             font-size: 16px;
-        }
-    }
-
-    @media (max-width: 767px) {
-        .subjects .border1{
-            border: 1px dashed rgba(84, 87, 193, 0.3);
-        }
-        .subjects .border2{
-            border: 1px dashed rgba(223, 120, 112, 0.3);
         }
     }
 
