@@ -22,7 +22,7 @@
 <!-- PROFILE TEMPLATE -->
 
     <div class="background-rectangular"></div>
-    <div id="tu-container">
+    <div id="tu-container" class="tu-container">
     <div class="row website-split">
 
 
