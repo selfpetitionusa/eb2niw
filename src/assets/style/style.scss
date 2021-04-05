@@ -2479,8 +2479,7 @@ body {
         }
     }
 
-#background-rectangular {
-    display: block;
+.background-rectangular {
     position: fixed;
     height: 1200px;
     top: -10%;
@@ -2492,13 +2491,13 @@ body {
 }
 
     @media (max-width: 1500px) {
-        #background-rectangular {
+        .background-rectangular {
             height: 900px;
         }
     }
 
     @media (max-width: 767px) {
-        #background-rectangular {
+        .background-rectangular {
             display: none;
         }
     }
