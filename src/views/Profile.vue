@@ -22,7 +22,7 @@
 <!-- PROFILE TEMPLATE -->
 
     <div class="background-rectangular"></div>
-    <div class="tu-container">
+    <div id="tu-container">
     <div class="row website-split">
 
 
@@ -399,6 +399,12 @@
                     x.style.display = "none";
                   } else {
                     x.style.display = "block";
+                  }
+                  var y = document.getElementById("tu-container");
+                  if (y.style.display === "none") {
+                    y.style.display = "block";
+                  } else {
+                    y.style.display = "none";
                   }
               }
         }

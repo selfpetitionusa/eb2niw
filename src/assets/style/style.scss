@@ -2502,7 +2502,8 @@ body {
         }
     }
 
-.tu-container {
+#tu-container {
+    display: block;
     width: 100%;
     height: 100%;
     margin: auto;
@@ -2510,19 +2511,19 @@ body {
 }
 
     @media (min-width: 576px) {
-        .tu-container {
+        #tu-container {
             max-width: 540px;
         }
     }
 
     @media (min-width: 768px) {
-        .tu-container  {
+        #tu-container  {
             max-width: 720px;
         }
     }
 
     @media (min-width: 992px) {
-        .tu-container {
+        #tu-container {
             max-width: 960px;
 
             /* adds back scroolbar for div in Chrome, Edge and Safari */
@@ -2545,19 +2546,19 @@ body {
     }
 
     @media (min-width: 1200px) {
-        .tu-container {
+        #tu-container {
             max-width: 1325px;
         }
     }
 
     @media (min-height: 900px) {
-        .tu-container {
+        #tu-container {
             padding-top: 120px;
         }
     }
 
     @media (min-height: 1300px) {
-        .tu-container {
+        #tu-container {
             padding-top: 150px;
         }
     }
@@ -2942,7 +2943,6 @@ Hamburger menu
     z-index: 2;
 
     #myLinks {
-        background: linear-gradient(244.35deg, #314194 37.33%, #3B4DAB 43.75%, #5457C1 50.17%, #6B6FEA 76.06%);
         display: none;
         position: fixed;
         height: 100%;
