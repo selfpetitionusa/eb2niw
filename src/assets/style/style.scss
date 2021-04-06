@@ -3485,16 +3485,16 @@ Rates section - Terms
 
     @media (max-width: 1199px) {
         .figure-terms {
-            position: absolute;
-            width: 9rem;
-            bottom: 28%;
-            left: 68%;
+            display: none;
         }
     }
 
     @media (max-width: 767px) {
         .figure-terms {
-            display: none;
+            position: absolute;
+            width: 9rem;
+            bottom: 28%;
+            left: 68%;
         }
     }
 
