@@ -3033,20 +3033,21 @@ About me section - Education
 .education-input {
     padding: 0px 0px 0px 10px;
 
+    .school, .certificate {
+        font-size: 16px;
+        margin: 0px;
+    }
+
     .label {
         font-weight: 600;
         color: #0E314C;
-        line-height: 18px;
+        line-height: 17px;
     }
 
     .value {
         color: #6084A4;
-        line-height:18px;
-    }
-
-    .school, .certificate {
-        font-size: 16px;
-        margin: 0px;
+        line-height: 17px;
+        margin: 3px 0px 0px;
     }
 }
 
