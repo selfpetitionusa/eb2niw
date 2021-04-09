@@ -1042,8 +1042,6 @@ Boxes CSS
     padding: 20px 23px 50px 23px;
     text-align: center;
 
-
-
     .icon {
         text-align: center;
         width: 130px;
@@ -1052,6 +1050,11 @@ Boxes CSS
         border-radius: 50%;
         color: $light-green-color;
         transition: $transition;
+    }
+
+    .font-icon {
+        margin-top: 35px;
+        font-size: 60px;
     }
 
     h3 {

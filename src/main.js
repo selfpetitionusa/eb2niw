@@ -10,6 +10,7 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { router } from './router';
 import './assets/style/custom.scss';
+import VueMeta from 'vue-meta'
 
 Vue.config.productionTip = false;
 
@@ -23,6 +24,7 @@ Vue.use(VueScrollTo,  {
 Vue.use(BootstrapVue);
 Vue.use(VueFeather);
 Vue.use(VueRouter);
+Vue.use(VueMeta)
 
 new Vue({
   router,

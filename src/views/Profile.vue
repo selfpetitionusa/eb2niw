@@ -39,10 +39,14 @@
 
                 <div class="subject-categories">{{response.categories.map(cat => cat.categoryName).join(' | ')}}</div>
 
-                <div class="short-bio">
+                <div  v-if="!response.profile.shortBio" class="short-bio">
                     <p class="line-1">Hi, my name is {{response.profile.firstName}}.</p>
                     <p class="line-2">I tutor {{formatArray(response.categories.map(cat => cat.categoryName))}}.</p>
                     <p>Welcome to my website!</p>
+                </div>
+
+                <div v-else class="short-bio">
+                    <p class="line-1" v-for="bio in response.profile.shortBio.split(/\r?\n/)" :key="bio">{{bio}}</p>
                 </div>
 
                 <div class="social-links">
@@ -333,6 +337,20 @@
     components: {
 
     },
+      created () {
+          this.fetchData()
+      },
+      metaInfo() {
+          return {
+              title: `${this.response.profile.firstName} ${this.response.profile.lastName} - ${this.response.profile.headline}`,
+              meta: [
+                  { vmid: 'description', name: 'description', content:  this.response.profile.bio},
+                  { vmid: 'ogtitle', property: 'og:title', content: `${this.response.profile.firstName} ${this.response.profile.lastName} - ${this.response.profile.headline}`},
+                  { vmid: 'ogsite', property: 'og:site_name', content: 'Tutomy'},
+                  { vmid: 'ogtype', property: 'og:type', content: 'website'}
+              ]
+          }
+      },
     data () {
         return {
             response: {
@@ -346,14 +364,14 @@
 
         }
     },
-      mounted () {
-          axios
-              .get('https://www.tutomy.com/api/profiles/' + this.$route.params.token)
-              .then(res => this.response = res.data)
-              .then(() => this.scrollWidth = document.getElementById('problems').scrollWidth)
-              .then(() => this.offsetWidth = document.getElementById('problems').offsetWidth)
-      },
       methods: {
+          fetchData () {
+              axios
+                  .get('http://localhost:8080/api/profiles/' + this.$route.params.token)
+                  .then(res => this.response = res.data)
+                  .then(() => this.scrollWidth = document.getElementById('problems').scrollWidth)
+                  .then(() => this.offsetWidth = document.getElementById('problems').offsetWidth)
+          },
           handleScroll () {
               this.offset = document.getElementById('problems').scrollLeft;
           },
