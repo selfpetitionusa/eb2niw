@@ -1,7 +1,7 @@
 <template>
 
     <div class="d-flex">
-        <div id="response.profile.token" v-if="response.profile.token" v-show="false">elo</div>
+        <div :id="response.profile.token" v-if="response.profile.token" v-show="false">elo</div>
 
 
 <!-- HAMBURGER MENU -->
