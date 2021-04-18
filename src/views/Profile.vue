@@ -1,6 +1,7 @@
 <template>
 
     <div class="d-flex">
+        <div id="response.profile.token" v-if="response.profile.token" v-show="false">elo</div>
 
 
 <!-- HAMBURGER MENU -->
@@ -337,20 +338,21 @@
     components: {
 
     },
-      created () {
+    created () {
           this.fetchData()
-      },
-      metaInfo() {
+    },
+    metaInfo() {
           return {
               title: `${this.response.profile.firstName} ${this.response.profile.lastName} - ${this.response.profile.headline}`,
               meta: [
                   { vmid: 'description', name: 'description', content:  this.response.profile.bio},
                   { vmid: 'ogtitle', property: 'og:title', content: `${this.response.profile.firstName} ${this.response.profile.lastName} - ${this.response.profile.headline}`},
                   { vmid: 'ogsite', property: 'og:site_name', content: 'Tutomy'},
-                  { vmid: 'ogtype', property: 'og:type', content: 'website'}
+                  { vmid: 'ogtype', property: 'og:type', content: 'website'},
+                  { vmid: 'ogimage', property: 'og:image', content: `https://www.tutomy.com/api/tutors/${this.response.profile.token}/thumbnail.jpg`},
               ]
           }
-      },
+    },
     data () {
         return {
             response: {
@@ -367,7 +369,7 @@
       methods: {
           fetchData () {
               axios
-                  .get('https://www.tutomy.com/api/profiles/' + this.$route.params.token)
+                  .get('https://www.tutomy.com/api/tutors/' + this.$route.params.token)
                   .then(res => this.response = res.data)
                   .then(() => this.scrollWidth = document.getElementById('problems').scrollWidth)
                   .then(() => this.offsetWidth = document.getElementById('problems').offsetWidth)
