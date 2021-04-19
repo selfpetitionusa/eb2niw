@@ -3632,6 +3632,138 @@ Tutomy logo
 
 
 /*================================================
+Pop-ups
+=================================================*/
+
+.container.form {
+    margin-top: 2rem;
+}
+
+.form-control {
+    border-radius: 5px;
+    border-color: #949494;
+}
+
+.form-title p {
+    color: #0E314C;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+}
+
+.btn-border {
+    border: 1px solid #5457C1;
+
+    &:hover, &:focus, &:active {
+        border: none;
+    }
+
+    &.focus, &:focus {
+      border: none;
+    }
+
+    &:not(:disabled):not(.disabled).active:focus, &:not(:disabled):not(.disabled):active:focus, .show>.btn-primary.dropdown-toggle:focus {
+      border: none;
+    }
+
+    &:not(:disabled):not(.disabled).active, &:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+      border: none;
+    }
+
+    &.disabled, &:disabled {
+      border: none;
+    }
+}
+
+.btn-cancel {
+    color: #5457C1;
+    background-color: $white-color;
+    width: 9rem;
+    box-shadow: 0 13px 27px 0 rgba(84, 87, 193, .15);
+
+    &:hover {
+        color: $white-color;
+        box-shadow: 0 13px 27px 0 rgba(84, 87, 193, .25);
+    }
+
+    &::after, &::before {
+        background-color: #5457C1;
+    }
+}
+
+.btn-save {
+    width: 9rem;
+}
+
+.link-popup {
+    display: flex;
+    align-items: center;
+
+    .link-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 32px;
+        height: 32px;
+        color: rgba(84, 87, 193, .4);
+        border-color: rgba(84, 87, 193, .4);
+        border: 1px solid;
+        border-radius: 50%;
+
+        i {
+            width: 20px;
+        }
+    }
+
+    .input {
+        margin-left: 5px;
+        width: 25.5rem;
+    }
+}
+
+form .plus-minus {
+    display: flex;
+    justify-content: center;
+
+    img {
+        height: 25px;
+        margin: 5px;
+    }
+}
+
+form .plus-minus-comment {
+    display: flex;
+    justify-content: center;
+}
+
+input#shortBio-1, input#shortBio-2, input#shortBio-3  {
+    background-image: url(../img/edit.svg);
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-origin: content-box;
+    background-size: 16px;
+
+    &:focus {
+        background-image: none;
+    }
+
+    &:not(:placeholder-shown) {
+        background-image: none;
+    }
+}
+
+.count-words {
+    display: flex;
+    justify-content: flex-end;
+    color: #949494;
+    margin-top: 3px;
+}
+
+
+/*================================================
 Testing Environment
 =================================================*/
 
