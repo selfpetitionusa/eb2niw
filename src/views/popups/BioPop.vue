@@ -12,13 +12,13 @@
           <textarea class="form-control" id="bio" rows="10" @input="countWord()" placeholder="Tell parents and students about your tutoring background"></textarea>
           <div class="count-words"><span id="show">0</span> /160</div>
         </div>
+
+        <div class="btn-container">
+          <button type="reset" class="btn btn-primary btn-border btn-cancel">Cancel</button>
+          <button type="submit" class="btn btn-primary btn-border btn-save">Save</button>
+        </div>
       </form>
-
-      <div class="btn-container">
-        <button type="reset" class="btn btn-primary btn-border btn-cancel">Cancel</button>
-        <button type="submit" class="btn btn-primary btn-border btn-save">Save</button>
-      </div>
-
+      
     </div>
   </div>
 </div>

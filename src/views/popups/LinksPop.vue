@@ -46,12 +46,12 @@
             <input type="text" class="form-control" id="linkedin" placeholder="https://www.linkedin.com/in/YOUR-PROFILE">
           </div>
         </div>
-      </form>
 
-      <div class="btn-container">
-        <button type="reset" class="btn btn-primary btn-border btn-cancel">Cancel</button>
-        <button type="submit" class="btn btn-primary btn-border btn-save">Save</button>
-      </div>
+        <div class="btn-container">
+          <button type="reset" class="btn btn-primary btn-border btn-cancel">Cancel</button>
+          <button type="submit" class="btn btn-primary btn-border btn-save">Save</button>
+        </div>
+      </form>
 
     </div>
   </div>

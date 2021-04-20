@@ -42,11 +42,10 @@
               <input type="text" class="form-control" id="shortBio-3" placeholder="Welcome to my website!">
             </div>
 
-          <div class="btn-container">
-            <button type="reset" class="btn btn-primary btn-border btn-cancel">Cancel</button>
-            <button type="submit" class="btn btn-primary btn-border btn-save">Save</button>
-          </div>
-
+            <div class="btn-container">
+              <button type="reset" class="btn btn-primary btn-border btn-cancel">Cancel</button>
+              <button type="submit" class="btn btn-primary btn-border btn-save">Save</button>
+            </div>
           </form>
 
         </div>
