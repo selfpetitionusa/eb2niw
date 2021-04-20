@@ -9,7 +9,7 @@
       <form>
         <div class="form-group">
           <label for="bio">Your bio - max 160 words *</label>
-          <textarea class="form-control" id="bio" rows="10" @input="countWord()" placeholder="Tell parents and students about your tutoring background"></textarea>
+          <textarea class="form-control" id="bio" rows="10" @input="countWord()" placeholder="Tell parents and students about your tutoring background" required></textarea>
           <div class="count-words"><span id="show">0</span> /160</div>
         </div>
 
@@ -18,7 +18,7 @@
           <button type="submit" class="btn btn-primary btn-border btn-save">Save</button>
         </div>
       </form>
-      
+
     </div>
   </div>
 </div>
