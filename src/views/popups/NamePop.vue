@@ -9,17 +9,17 @@
           <form>
             <div class="form-group">
               <label for="firstName">First name *</label>
-              <input type="text" class="form-control" id="firstName">
+              <input type="text" class="form-control" id="firstName" required>
             </div>
 
             <div class="form-group">
               <label for="lastName">Last name *</label>
-              <input type="text" class="form-control" id="lastName">
+              <input type="text" class="form-control" id="lastName" required>
             </div>
 
             <div class="form-group">
               <label for="email">E-mail*</label>
-              <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+              <input type="email" class="form-control" id="email" aria-describedby="emailHelp" required>
               <small id="emailHelp" class="form-text text-muted">For website visitors to contact you</small>
             </div>
 
@@ -41,12 +41,13 @@
               <label for="shortBio-3">Introduction - third row</label>
               <input type="text" class="form-control" id="shortBio-3" placeholder="Welcome to my website!">
             </div>
-          </form>
 
           <div class="btn-container">
             <button type="reset" class="btn btn-primary btn-border btn-cancel">Cancel</button>
             <button type="submit" class="btn btn-primary btn-border btn-save">Save</button>
           </div>
+
+          </form>
 
         </div>
       </div>
