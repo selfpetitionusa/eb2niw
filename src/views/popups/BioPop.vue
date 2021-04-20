@@ -32,30 +32,23 @@
   export default {
     methods: {
       countWord: function() {
+        var words = document.getElementById("bio").value;
+        var count = 0;
+        var split = words.split(' ');
 
-          // Get the input text value
-          var words = document
-              .getElementById("bio").value;
+        for (var i = 0; i < split.length; i++) {
+            if (split[i] != "") {
+                count += 1;
+            }
+        }
 
-          // Initialize the word counter
-          var count = 0;
+        document.getElementById("show").innerHTML = count;
 
-          // Split the words on each
-          // space character
-          var split = words.split(' ');
-
-          // Loop through the words and
-          // increase the counter when
-          // each split word is not empty
-          for (var i = 0; i < split.length; i++) {
-              if (split[i] != "") {
-                  count += 1;
-              }
-          }
-
-          // Display it as output
-          document.getElementById("show")
-              .innerHTML = count;
+        if(count >= 160){
+           alert("You cannot put more than 160 words in this text area.");
+           return false;
+        }
+        return true;
       },
     }
   }
