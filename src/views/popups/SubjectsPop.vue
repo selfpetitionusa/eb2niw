@@ -19,12 +19,12 @@
         <div class="form-group cms-subject-categories">
           <label for="subject-categories">Subject categories - first is mandatory *</label>
           <input type="text" class="form-control" id="subject-categories" placeholder="Example: Precalculus *" required>
-          <input type="text" class="form-control" id="subject-categories" placeholder="Example: Calculus">
-          <input type="text" class="form-control" id="subject-categories" placeholder="Example: Algebra">
-          <input type="text" class="form-control" id="subject-categories" placeholder="Example: Geometry">
-          <input type="text" class="form-control" id="subject-categories" placeholder="Example: Trigonometry">
-          <input type="text" class="form-control" id="subject-categories" placeholder="Example: Differential Equations">
-          <input type="text" class="form-control" id="subject-categories" placeholder="Example: Logic">
+          <input type="text" class="form-control" id="subject-categories" placeholder="Example: Calculus" disabled>
+          <input type="text" class="form-control" id="subject-categories" placeholder="Example: Algebra" disabled>
+          <input type="text" class="form-control" id="subject-categories" placeholder="Example: Geometry" disabled>
+          <input type="text" class="form-control" id="subject-categories" placeholder="Example: Trigonometry" disabled>
+          <input type="text" class="form-control" id="subject-categories" placeholder="Example: Differential Equations" disabled>
+          <input type="text" class="form-control" id="subject-categories" placeholder="Example: Logic" disabled>
         </div>
 
         <div class="plus-minus">
