@@ -3739,7 +3739,7 @@ form .plus-minus-comment {
     justify-content: center;
 }
 
-input#shortBio-1, input#shortBio-2, input#shortBio-3  {
+input#shortBio-1, input#shortBio-2, input#shortBio-3, input#myStudents-age, input#myStudents-grade, input#myStudents-other {
     background-image: url(../img/edit.svg);
     background-repeat: no-repeat;
     background-position: right top;
@@ -3762,6 +3762,37 @@ input#shortBio-1, input#shortBio-2, input#shortBio-3  {
     margin-top: 3px;
 }
 
+.cms-subject-categories {
+    padding-left: 25px;
+
+    .form-control {
+        margin-bottom: 5px;
+    }
+}
+
+.radio-container {
+    margin-bottom: 50px;
+
+    .radio {
+        display: flex;
+        align-items: center;
+        margin: 5px 0px;
+
+        .item {
+            margin: 0 5px;
+        }
+    }
+}
+
+#myStudents-age.item, #myStudents-grade.item {
+    width: 120px;
+    height: 35px;
+}
+
+#myStudents-other.item {
+    width: 280px;
+    height: 35px;
+}
 
 /*================================================
 Testing Environment
