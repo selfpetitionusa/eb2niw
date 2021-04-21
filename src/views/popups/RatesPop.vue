@@ -57,18 +57,16 @@
           </table>
         </div>
 
-        <div class="form-title">
-          <p>How long is your standard lesson?</p>
-        </div>
-        <div class="lesson-length">
-          <input type="number" class="form-control" id="lesson-length">
-          <p>minutes</p>
+        <div class="form-group">
+          <label for="lesson-length">How long is your standard lesson?</label>
+          <div class="lesson">
+            <input type="number" class="form-control" id="lesson-length">
+            <p>minutes</p>
+          </div>
         </div>
 
-        <div class="form-title">
-          <p>Additional comment for rates</p>
-        </div>
-        <div>
+        <div class="form-group">
+          <label for="additional-comment">Additional comment for rates</label>
           <input type="text" class="form-control" id="additional-comment" placeholder="Example: Discounts available upon request">
         </div>
 

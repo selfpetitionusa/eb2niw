@@ -3807,6 +3807,71 @@ input#shortBio-1, input#shortBio-2, input#shortBio-3, input#myStudents-age, inpu
     height: 35px;
 }
 
+.table-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+}
+
+.table-comment {
+    width: 60px;
+    margin-top: 39px;
+
+    p {
+        font-size: 10px;
+        margin-bottom: 26px;
+    }
+}
+
+.table {
+
+    .col1, .col2 {
+        width: 65px;
+        border: none;
+    }
+
+    .col3 {
+        width: 90px;
+        border: none;
+    }
+
+    .col4 {
+        border: none;
+    }
+}
+
+.table td, .table th {
+    font-size: 10px;
+    border: none;
+
+    .form-control {
+        font-size: 10px;
+        padding: 5px;
+        height: 35px;
+    }
+}
+
+.table td {
+    padding: 5px 2px;
+}
+
+.table th {
+    padding: 5px 5px;
+}
+
+.lesson {
+    display: flex;
+    align-items: center;
+
+    input {
+        width: 100px;
+    }
+
+    p {
+        padding-left: 5px;
+    }
+}
+
 /*================================================
 Testing Environment
 =================================================*/
