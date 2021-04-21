@@ -3752,7 +3752,9 @@ form .plus-minus-comment {
     justify-content: center;
 }
 
-input#shortBio-1, input#shortBio-2, input#shortBio-3, input#myStudents-age, input#myStudents-grade, input#myStudents-other {
+input#shortBio-1, input#shortBio-2, input#shortBio-3,
+input#myStudents-age, input#myStudents-grade, input#myStudents-other,
+input#online, input#in-person, input#consultation, input#cancelation {
     background-image: url(../img/edit.svg);
     background-repeat: no-repeat;
     background-position: right top;
@@ -3871,6 +3873,27 @@ input#shortBio-1, input#shortBio-2, input#shortBio-3, input#myStudents-age, inpu
         padding-left: 5px;
     }
 }
+
+.terms-switch {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+
+    input {
+        width: 250px;
+    }
+}
+
+#in-person-help, #consultation-help {
+    text-align: right;
+    font-size: 10px;
+}
+
+.terms-margin {
+    margin-top: 26px;
+}
+
 
 /*================================================
 Testing Environment
