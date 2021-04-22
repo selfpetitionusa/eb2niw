@@ -8,7 +8,7 @@
 
       <form id="education-popup">
         <div class="form-title">
-          <p>What? Who? Where do you tutor?</p>
+          <p class="first">What? Who? Where do you tutor?</p>
         </div>
 
         <div class="form-group">

@@ -10,7 +10,7 @@
         <div class="form-group cms-photo"></div>
 
         <div class="form-group zoom-container">
-          <label for="zoom">Zoom</label>
+          <label for="zoom" class="label">Zoom</label>
           <input type="range" class="form-control-range" id="zoom">
         </div>
 

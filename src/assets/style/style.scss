@@ -3648,12 +3648,16 @@ Pop-ups
         font-size: 14px;
         font-weight: 400;
     }
+
+    .label {
+          font-size: 12px;
+    }
 }
 
 .cms .form-control {
     border-radius: 5px;
     border-color: #949494;
-    height: 35px;
+    min-height: 35px;
 
     &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
         color: #D8D8D8;
@@ -3686,7 +3690,11 @@ Pop-ups
     }
 }
 
-#rates-popup .form-title p, #subjects-popup .form-title p, #terms-popup .form-title p, #youtube-popup .form-title p {
+#rates-popup .form-title p,
+#subjects-popup .form-title p,
+#terms-popup .form-title p,
+#youtube-popup .form-title p,
+#education-popup .form-title .first {
     margin-top: 0px;
 }
 
@@ -3701,18 +3709,11 @@ Pop-ups
 }
 
 .zoom-container {
-    margin: 2rem auto 0;
+    margin: 1.5rem auto 0;
     width: 70%;
-
-    label {
-        margin: 0px;
-        color: #0E314C;
-        font-size: 12px;
-    }
 }
 
 /*Chrome*/
-@media screen and (-webkit-min-device-pixel-ratio:0) {
     input[type='range'] {
       overflow: hidden;
       -webkit-appearance: none;
@@ -3736,7 +3737,6 @@ Pop-ups
       box-shadow: -150px 0 0 150px rgba(84, 87, 193, 0.5);
     }
 
-}
     /** FF*/
     input[type="range"]::-moz-range-progress {
       background-color: rgba(84, 87, 193, 0.5);
@@ -3757,7 +3757,7 @@ Pop-ups
     justify-content: center;
 
     .icon-container {
-        margin: 40px 20px 10px;
+        margin: 10px 20px 10px;
 
         .icon {
             display: flex;
@@ -3777,7 +3777,6 @@ Pop-ups
 
         p {
             text-align: center;
-            font-weight: 500;
             color: #0E314C;
             line-height: 16px;
             font-size: 12px;
@@ -3839,7 +3838,7 @@ Pop-ups
     width: 9rem;
 }
 
-#social-media {
+#links-popup {
     label {
         margin-left: 38px;
     }
