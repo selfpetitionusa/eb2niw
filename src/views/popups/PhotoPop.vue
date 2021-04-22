@@ -15,13 +15,13 @@
         </div>
 
         <div class="photo-icons">
-          <div class="form-group icon">
-            <label for="upload" class="img"><img class="test" src="../../assets/img/camera.svg" /></label>
+          <div class="form-group icon-container">
+            <label for="upload" class="icon"><font-awesome-icon class="fas fa-camera fa-2x" icon="camera" /></label>
             <input type="file" class="form-control-file" id="upload">
             <p>Upload</p>
           </div>
-          <div class="icon">
-            <div class="img"><img src="../../assets/img/trash.svg" /></div>
+          <div class="icon-container">
+            <div class="icon"><font-awesome-icon class="fas fa-camera fa-2x" icon="trash" /></div>
             <p>Delete</p>
           </div>
         </div>
