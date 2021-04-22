@@ -3661,6 +3661,58 @@ Pop-ups
     color: #0E314C;
 }
 
+.cms-photo {
+    height: 15rem;
+    background-color: black;
+}
+
+.zoom-container {
+    margin: 2rem auto 0;
+    width: 70%;
+
+    label {
+        margin: 0px;
+    }
+}
+
+.photo-icons {
+    display: flex;
+    justify-content: center;
+
+    .icon {
+        margin: 45px;
+
+        .img {
+            display: flex;
+            justify-content: center;
+            padding: 12px 12px;
+            margin: 0px;
+            border-radius: 10px;
+
+            &:hover {
+                background-color: rgba(96, 132, 164, 0.2);
+            }
+
+            &:active {
+                background-color: rgba(96, 132, 164, 0.3);
+            }
+
+            img {
+                height: 30px;
+            }
+        }
+
+        p {
+            text-align: center;
+            font-weight: 500;
+        }
+
+        input[type="file"] {
+            display: none;
+        }
+    }
+}
+
 .btn-container {
     display: flex;
     justify-content: space-between;
