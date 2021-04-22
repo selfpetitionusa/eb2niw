@@ -349,7 +349,7 @@
                   { vmid: 'ogtitle', property: 'og:title', content: `${this.response.profile.firstName} ${this.response.profile.lastName} - ${this.response.profile.headline}`},
                   { vmid: 'ogsite', property: 'og:site_name', content: 'Tutomy'},
                   { vmid: 'ogtype', property: 'og:type', content: 'website'},
-                  { vmid: 'ogimage', property: 'og:image', content: `https://www.tutomy.com/api/tutors/${this.response.profile.token}/thumbnail.jpg`},
+                  { vmid: 'ogimage1', property: 'og:image', content: `https://www.tutomy.com/api/tutors/${this.response.profile.token}/thumbnail.png`},
               ]
           }
     },
