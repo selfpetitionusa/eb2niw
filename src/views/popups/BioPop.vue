@@ -44,7 +44,7 @@
 
         document.getElementById("show").innerHTML = count;
 
-        if(count >= 160){
+        if(count > 160){
            alert("You cannot put more than 160 words in this text area.");
            return false;
         }
