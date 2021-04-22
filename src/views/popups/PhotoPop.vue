@@ -7,8 +7,7 @@
     <div class="col-5">
 
       <form>
-        <div class="form-group cms-photo">
-        </div>
+        <div class="form-group cms-photo"></div>
 
         <div class="form-group zoom-container">
           <label for="zoom">Zoom</label>
@@ -17,7 +16,7 @@
 
         <div class="photo-icons">
           <div class="form-group icon">
-            <label for="upload" class="img"><img src="../../assets/img/camera.svg" /></label>
+            <label for="upload" class="img"><img class="test" src="../../assets/img/camera.svg" /></label>
             <input type="file" class="form-control-file" id="upload">
             <p>Upload</p>
           </div>

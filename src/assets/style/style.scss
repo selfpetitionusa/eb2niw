@@ -3672,20 +3672,68 @@ Pop-ups
 
     label {
         margin: 0px;
+        color: #0E314C;
     }
 }
+
+/*Chrome*/
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    input[type='range'] {
+      overflow: hidden;
+      -webkit-appearance: none;
+      background-color: #CECECE;
+      border-radius: 5px;
+      outline: none;
+    }
+
+    input[type='range']::-webkit-slider-runnable-track {
+      height: 9px;
+      -webkit-appearance: none;
+      margin-top: -1px;
+    }
+
+    input[type='range']::-webkit-slider-thumb {
+      width: 10px;
+      -webkit-appearance: none;
+      height: 9px;
+      cursor: ew-resize;
+      background-color: #5457C1;
+      box-shadow: -150px 0 0 150px rgba(84, 87, 193, 0.5);
+    }
+
+}
+/** FF*/
+input[type="range"]::-moz-range-progress {
+  background-color: rgba(84, 87, 193, 0.5);
+}
+input[type="range"]::-moz-range-track {
+  background-color: #CECECE;
+}
+/* IE*/
+input[type="range"]::-ms-fill-lower {
+  background-color: rgba(84, 87, 193, 0.5);
+}
+input[type="range"]::-ms-fill-upper {
+  background-color: #CECECE;
+}
+
+
+
+
+
+
 
 .photo-icons {
     display: flex;
     justify-content: center;
 
     .icon {
-        margin: 45px;
+        margin: 40px 20px 60px;
 
         .img {
             display: flex;
             justify-content: center;
-            padding: 12px 12px;
+            padding: 12px 25px;
             margin: 0px;
             border-radius: 10px;
 
@@ -3705,6 +3753,8 @@ Pop-ups
         p {
             text-align: center;
             font-weight: 500;
+            color: #0E314C;
+            line-height: 16px;
         }
 
         input[type="file"] {
