@@ -2,11 +2,11 @@
 
 
 <!-- HEADLINE & EDUCATION POPUP -->
-<div class="container form">
+<div class="container cms">
   <div class="row">
     <div class="col-5">
 
-      <form>
+      <form id="photo-popup">
         <div class="form-group cms-photo"></div>
 
         <div class="form-group zoom-container">

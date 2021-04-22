@@ -2,11 +2,11 @@
 
 
 <!-- NAME POPUP -->
-    <div class="container form">
+    <div class="container cms">
       <div class="row">
         <div class="col-5">
 
-          <form>
+          <form id="name-popup">
             <div class="form-group">
               <label for="firstName">First name *</label>
               <input type="text" class="form-control" id="firstName" required>
@@ -18,7 +18,7 @@
             </div>
 
             <div class="form-group">
-              <label for="email">E-mail*</label>
+              <label for="email">E-mail *</label>
               <input type="email" class="form-control" id="email" aria-describedby="emailHelp" required>
               <small id="emailHelp" class="form-text text-muted">For website visitors to contact you</small>
             </div>

@@ -3635,13 +3635,25 @@ Tutomy logo
 Pop-ups
 =================================================*/
 
-.container.form {
+.container.cms {
     margin-top: 2rem;
 }
 
-.form-control {
+.cms .form-group {
+    margin-bottom: 12px;
+
+    label {
+        margin-bottom: 2px;
+        margin-left: 1px;
+        font-size: 14px;
+        font-weight: 400;
+    }
+}
+
+.cms .form-control {
     border-radius: 5px;
     border-color: #949494;
+    height: 35px;
 
     &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
         color: #D8D8D8;
@@ -3657,8 +3669,30 @@ Pop-ups
     }
 }
 
-.form-title p {
-    color: #0E314C;
+.form-title {
+    font-weight: 500;
+    font-size: 14px;
+
+    p {
+        color: #0E314C;
+        margin: 2rem 0 1rem;
+        line-height: 20px;
+    }
+
+    li {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 20px;
+    }
+}
+
+#rates-popup .form-title p, #subjects-popup .form-title p, #terms-popup .form-title p, #youtube-popup .form-title p {
+    margin-top: 0px;
+}
+
+#problem-cards-popup .select {
+    font-size: 14px;
+    padding: 5px 15px 5px 10px;
 }
 
 .cms-photo {
@@ -3723,7 +3757,7 @@ Pop-ups
     justify-content: center;
 
     .icon-container {
-        margin: 40px 20px 60px;
+        margin: 40px 20px 10px;
 
         .icon {
             display: flex;
@@ -3758,7 +3792,7 @@ Pop-ups
 .btn-container {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 3rem;
+    margin: 2.5rem 0;
 }
 
 .btn-border {
@@ -3805,11 +3839,17 @@ Pop-ups
     width: 9rem;
 }
 
+#social-media {
+    label {
+        margin-left: 38px;
+    }
+}
+
 .link-popup {
     display: flex;
     align-items: center;
 
-    .link-logo {
+    .logo {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -3825,7 +3865,7 @@ Pop-ups
         }
     }
 
-    .input {
+    input {
         margin-left: 5px;
         width: 25.5rem;
     }
@@ -3872,7 +3912,7 @@ input#question {
     margin-top: 3px;
 }
 
-.cms-subject-categories {
+.cms .subject-categories {
     padding-left: 25px;
 
     .form-control {
@@ -3894,6 +3934,10 @@ input#question {
     }
 }
 
+#subjects-popup label {
+    font-weight: 400;
+}
+
 #myStudents-age.item, #myStudents-grade.item {
     width: 120px;
     height: 35px;
@@ -3907,28 +3951,17 @@ input#question {
 .table-container {
     display: flex;
     justify-content: space-around;
-    margin-bottom: 50px;
-}
-
-.table-comment {
-    width: 60px;
-    margin-top: 39px;
-
-    p {
-        font-size: 10px;
-        margin-bottom: 26px;
-    }
+    margin: 25px 0px 10px;
 }
 
 .table {
-
     .col1, .col2 {
-        width: 65px;
+        width: 55px;
         border: none;
     }
 
     .col3 {
-        width: 90px;
+        width: 115px;
         border: none;
     }
 
@@ -3938,22 +3971,31 @@ input#question {
 }
 
 .table td, .table th {
-    font-size: 10px;
+    font-size: 11px;
+    padding: 2px;
     border: none;
 
     .form-control {
-        font-size: 10px;
+        font-size: 11px;
         padding: 5px;
         height: 35px;
     }
 }
 
-.table td {
-    padding: 5px 2px;
+.table th {
+    padding-left: 3px;
+    padding-bottom: 5px;
+    font-weight: 500;
 }
 
-.table th {
-    padding: 5px 5px;
+.table td {
+    padding-bottom: 10px;
+}
+
+#rates-popup select {
+    &:disabled {
+        color: #D8D8D8;
+    }
 }
 
 .lesson {
@@ -3965,8 +4007,13 @@ input#question {
     }
 
     p {
+        color: #0E314C;
         padding-left: 5px;
     }
+}
+
+.cms-terms-container {
+    margin-top: 40px;
 }
 
 .terms-switch {

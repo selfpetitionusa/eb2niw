@@ -2,14 +2,14 @@
 
 
 <!-- HEADLINE & EDUCATION POPUP -->
-<div class="container form">
+<div class="container cms">
   <div class="row">
     <div class="col-5">
 
-      <form>
+      <form id="problem-cards-popup">
         <div class="form-group">
           <label for="select">Select or add your question</label>
-          <select class="form-control mr-sm-2" id="select">
+          <select class="form-control select" id="select">
             <option>Type your question</option>
             <option selected>What is your tutoring style?</option>
             <option>How will my child learn through online learning?</option>

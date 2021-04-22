@@ -2,11 +2,11 @@
 
 
 <!-- HEADLINE & EDUCATION POPUP -->
-<div class="container form">
+<div class="container cms">
   <div class="row">
     <div class="col-5">
 
-      <form>
+      <form id="education-popup">
         <div class="form-title">
           <p>What? Who? Where do you tutor?</p>
         </div>

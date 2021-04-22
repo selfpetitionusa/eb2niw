@@ -2,11 +2,11 @@
 
 
 <!-- HEADLINE & EDUCATION POPUP -->
-<div class="container form">
+<div class="container cms">
   <div class="row">
     <div class="col-5">
 
-      <form>
+      <form id="subjects-popup">
         <div class="form-title">
           <p>Add minimum 1 subject and 1 category for each subject</p>
         </div>
@@ -16,7 +16,7 @@
           <input type="text" class="form-control" id="subject" placeholder="Example: Math" required>
         </div>
 
-        <div class="form-group cms-subject-categories">
+        <div class="form-group subject-categories">
           <label for="subject-categories">Subject categories - first is mandatory *</label>
           <input type="text" class="form-control" id="subject-categories" placeholder="Example: Precalculus *" required>
           <input type="text" class="form-control" id="subject-categories" placeholder="Example: Calculus" disabled>

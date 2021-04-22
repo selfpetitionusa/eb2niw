@@ -2,23 +2,16 @@
 
 
 <!-- HEADLINE & EDUCATION POPUP -->
-<div class="container form">
+<div class="container cms">
   <div class="row">
     <div class="col-5">
 
-      <form>
+      <form id="rates-popup">
         <div class="form-title">
-          <p>Show up to [4] rates by editing the below example. Required is #1 rate and columns with (*).</p>
+          <p>Show up to [4] rates by editing the below example *</p>
         </div>
 
         <div class="table-container">
-          <div class="table-comment">
-            <p>Rate #1*</p>
-            <p>Rate #2</p>
-            <p>Rate #3</p>
-            <p>Rate #4</p>
-          </div>
-
           <table class="table">
             <thead>
               <tr>
@@ -30,28 +23,60 @@
             </thead>
             <tbody>
               <tr>
-                <td><input type="text" class="form-control" id="rate1" placeholder="$" required></td>
-                <td><input type="number" class="form-control" id="rate1" placeholder="00" required></td>
-                <td><input type="text" class="form-control" id="rate1" placeholder="per session" required></td>
-                <td><input type="text" class="form-control" id="rate1" placeholder="Rates starting from"></td>
+                <td><input type="text" class="form-control" id="rate1" required></td>
+                <td><input type="number" class="form-control" id="rate1" required></td>
+                <td>
+                  <select class="form-control select" id="rate1" required>
+                      <option selected>per session</option>
+                      <option>per lesson</option>
+                      <option>per hour</option>
+                      <option>per month</option>
+                      <option>Type your own</option>
+                  </select>
+                </td>
+                <td><input type="text" class="form-control" id="rate1" placeholder="Example: Rates starting from"></td>
               </tr>
               <tr>
-                <td><input type="text" class="form-control" id="rate2" placeholder="£" required disabled></td>
-                <td><input type="number" class="form-control" id="rate2" placeholder="00" required disabled></td>
-                <td><input type="text" class="form-control" id="rate2" placeholder="per month" required disabled></td>
-                <td><input type="text" class="form-control" id="rate2" placeholder="University level students" disabled></td>
+                <td><input type="text" class="form-control" id="rate2" required disabled></td>
+                <td><input type="number" class="form-control" id="rate2" required disabled></td>
+                <td>
+                  <select class="form-control select" id="rate2" required disabled>
+                      <option selected>per session</option>
+                      <option>per lesson</option>
+                      <option>per hour</option>
+                      <option>per month</option>
+                      <option>Type your own</option>
+                  </select>
+                </td>
+                <td><input type="text" class="form-control" id="rate2" placeholder="Example: University level students" disabled></td>
               </tr>
               <tr>
-                <td><input type="text" class="form-control" id="rate3" placeholder="EUR" required disabled></td>
-                <td><input type="number" class="form-control" id="rate3" placeholder="00" required disabled></td>
-                <td><input type="text" class="form-control" id="rate3" placeholder="per hour" required disabled></td>
-                <td><input type="text" class="form-control" id="rate3" placeholder="Students 5-7 years old" disabled></td>
+                <td><input type="text" class="form-control" id="rate3" required disabled></td>
+                <td><input type="number" class="form-control" id="rate3" required disabled></td>
+                <td>
+                  <select class="form-control select" id="rate3" required disabled>
+                      <option selected>per session</option>
+                      <option>per lesson</option>
+                      <option>per hour</option>
+                      <option>per month</option>
+                      <option>Type your own</option>
+                  </select>
+                </td>
+                <td><input type="text" class="form-control" id="rate3" placeholder="Example: Students 5-7 years old" disabled></td>
               </tr>
               <tr>
-                <td><input type="text" class="form-control" id="rate4" placeholder="R" required disabled></td>
-                <td><input type="number" class="form-control" id="rate4" placeholder="00" required disabled></td>
-                <td><input type="text" class="form-control" id="rate4" placeholder="per lesson" required disabled></td>
-                <td><input type="text" class="form-control" id="rate4" placeholder="English (rates by subject)" disabled></td>
+                <td><input type="text" class="form-control" id="rate4" required disabled></td>
+                <td><input type="number" class="form-control" id="rate4" required disabled></td>
+                <td>
+                  <select class="form-control select" id="rate4" required disabled>
+                      <option selected>per session</option>
+                      <option>per lesson</option>
+                      <option>per hour</option>
+                      <option>per month</option>
+                      <option>Type your own</option>
+                  </select>
+                </td>
+                <td><input type="text" class="form-control" id="rate4" placeholder="Example: English (rates by subject)" disabled></td>
               </tr>
             </tbody>
           </table>

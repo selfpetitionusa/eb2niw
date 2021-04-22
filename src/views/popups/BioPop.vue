@@ -2,11 +2,11 @@
 
 
 <!-- HEADLINE & EDUCATION POPUP -->
-<div class="container form">
+<div class="container cms">
   <div class="row">
     <div class="col-5">
 
-      <form>
+      <form id="bio-popup">
         <div class="form-group">
           <label for="bio">Your bio - max 160 words *</label>
           <textarea class="form-control" id="bio" rows="10" @input="countWord()" placeholder="Tell parents and students about your tutoring background" required></textarea>
