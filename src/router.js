@@ -2,16 +2,16 @@ import VueRouter from 'vue-router';
 // Pages
 import Home from './views/Home';
 import Profile from './views/Profile';
-import PhotoPop from './views/popups/PhotoPop';
-import NamePop from './views/popups/NamePop';
-import LinksPop from './views/popups/LinksPop';
-import EducationPop from './views/popups/EducationPop';
-import BioPop from './views/popups/BioPop';
-import SubjectsPop from './views/popups/SubjectsPop';
-import RatesPop from './views/popups/RatesPop';
-import TermsPop from './views/popups/TermsPop';
-import YouTubePop from './views/popups/YouTubePop';
-import ProblemCardsPop from './views/popups/ProblemCardsPop';
+import PhotoPop from './components/popups/PhotoPop';
+import NamePop from './components/popups/NamePop';
+import LinksPop from './components/popups/LinksPop';
+import EducationPop from './components/popups/EducationPop';
+import BioPop from './components/popups/BioPop';
+import SubjectsPop from './components/popups/SubjectsPop';
+import RatesPop from './components/popups/RatesPop';
+import TermsPop from './components/popups/TermsPop';
+import YouTubePop from './components/popups/YouTubePop';
+import ProblemCardsPop from './components/popups/ProblemCardsPop';
 
 export const router = new VueRouter({
     mode: 'history',
