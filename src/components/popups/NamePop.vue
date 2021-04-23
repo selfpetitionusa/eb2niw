@@ -9,7 +9,7 @@
           <form id="name-popup">
             <div class="form-group">
               <label for="firstName">First name *</label>
-              <input type="text" class="form-control" id="firstName" required>
+              <input type="text" class="form-control" id="firstName" v-model="firstName" required>
             </div>
 
             <div class="form-group">
@@ -29,7 +29,12 @@
 
             <div class="form-group">
               <label for="shortBio-1">Introduction - first row</label>
-              <input type="text" class="form-control" id="shortBio-1" placeholder="Hi, my name is <Name>.">
+                <div v-if="firstName">
+                  <input type="text" class="form-control" id="shortBio-1" :placeholder="'Hi, my name is ' + firstName + '.'">
+                </div>
+                <div v-else>
+                  <input type="text" class="form-control" id="shortBio-1" placeholder="Hi, my name is <name>.">
+                </div>
             </div>
 
             <div class="form-group">
@@ -53,3 +58,18 @@
     </div>
 
 </template>
+
+
+
+
+<script>
+
+export default {
+    data () {
+        return {
+            firstName: ""
+        }
+    }
+}
+
+</script>
