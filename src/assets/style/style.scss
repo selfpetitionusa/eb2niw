@@ -3874,8 +3874,12 @@ Pop-ups
     }
 }
 
-#schools {
-    margin-bottom: 30px;
+#schools, #certificates, #subjects, #problem-cards-popup select {
+    margin-bottom: 40px;
+}
+
+#problemCards {
+    margin-bottom: 15px;
 }
 
 .plus-minus {

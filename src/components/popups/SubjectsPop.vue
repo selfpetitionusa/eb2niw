@@ -11,25 +11,27 @@
           <p>Add minimum 1 subject and 1 category for each subject</p>
         </div>
 
-        <div class="form-group">
-          <label for="subject">Subject *</label>
-          <input type="text" class="form-control" id="subject" placeholder="Example: Math" required>
-        </div>
+        <div id="subjects" v-for="subject in subjects" :key="subject">
+          <div class="form-group">
+            <label for="subject">Subject *</label>
+            <input type="text" class="form-control" id="subject" placeholder="Example: Math" required>
+          </div>
 
-        <div class="form-group subject-categories">
-          <label for="subject-categories">Subject categories - first is mandatory *</label>
-          <input type="text" class="form-control" id="subject-categories" placeholder="Example: Precalculus *" required>
-          <input type="text" class="form-control" id="subject-categories" placeholder="Example: Calculus" disabled>
-          <input type="text" class="form-control" id="subject-categories" placeholder="Example: Algebra" disabled>
-          <input type="text" class="form-control" id="subject-categories" placeholder="Example: Geometry" disabled>
-          <input type="text" class="form-control" id="subject-categories" placeholder="Example: Trigonometry" disabled>
-          <input type="text" class="form-control" id="subject-categories" placeholder="Example: Differential Equations" disabled>
-          <input type="text" class="form-control" id="subject-categories" placeholder="Example: Logic" disabled>
+          <div class="form-group subject-categories">
+            <label for="subject-categories">Subject categories - first is mandatory *</label>
+            <input type="text" class="form-control" id="subject-categories" placeholder="Example: Precalculus *" required>
+            <input type="text" class="form-control" id="subject-categories" placeholder="Example: Calculus" disabled>
+            <input type="text" class="form-control" id="subject-categories" placeholder="Example: Algebra" disabled>
+            <input type="text" class="form-control" id="subject-categories" placeholder="Example: Geometry" disabled>
+            <input type="text" class="form-control" id="subject-categories" placeholder="Example: Trigonometry" disabled>
+            <input type="text" class="form-control" id="subject-categories" placeholder="Example: Differential Equations" disabled>
+            <input type="text" class="form-control" id="subject-categories" placeholder="Example: Logic" disabled>
+          </div>
         </div>
 
         <div class="plus-minus">
-          <font-awesome-icon class="icon" icon="plus-circle" />
-          <font-awesome-icon class="icon" icon="minus-circle" />
+          <font-awesome-icon class="icon" icon="plus-circle" v-on:click="addSubject" />
+          <font-awesome-icon class="icon" icon="minus-circle" v-on:click="deleteSubject" />
         </div>
         <p class="plus-minus-comment">Subject</p>
 
@@ -76,3 +78,32 @@
 </div>
 
 </template>
+
+
+
+
+<script>
+
+export default {
+    data() {
+        return {
+            subjects: [{
+                    subjectCat: "",
+                    subjectSubCat: []
+                }]
+        }
+    },
+    methods: {
+        addSubject: function() {
+            this.subjects.push({
+                subjectCat: "",
+                subjectSubCat: []
+            })
+        },
+        deleteSubject: function() {
+            this.subjects.pop()
+        }
+    }
+}
+
+</script>
