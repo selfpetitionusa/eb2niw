@@ -28,8 +28,8 @@
         </div>
 
         <div class="plus-minus">
-          <img src="../../assets/img/plus.svg">
-          <img src="../../assets/img/minus.svg">
+          <font-awesome-icon class="icon" icon="plus-circle" />
+          <font-awesome-icon class="icon" icon="minus-circle" />
         </div>
         <p class="plus-minus-comment">Subject</p>
 

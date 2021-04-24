@@ -20,19 +20,21 @@
           <p>Your education and qualifications</p>
         </div>
 
-        <div class="form-group">
-          <label for="school">University or school *</label>
-          <input type="text" class="form-control" id="school" placeholder="Example: Ohio University" required>
-        </div>
+        <div id="schools" v-for="school in schools" :key="school">
+          <div class="form-group">
+            <label for="school">University or school *</label>
+            <input type="text" class="form-control" id="school" placeholder="Example: Ohio University" v-model="schools.school" required>
+          </div>
 
-        <div class="form-group">
-          <label for="degree">Degree and field of study *</label>
-          <input type="text" class="form-control" id="degree" placeholder="Example: BS Applied Mathematics" required>
+          <div class="form-group">
+            <label for="degree">Degree and field of study *</label>
+            <input type="text" class="form-control" id="degree" placeholder="Example: BS Applied Mathematics" v-model="schools.degree" required>
+          </div>
         </div>
 
         <div class="plus-minus">
-          <img src="../../assets/img/plus.svg">
-          <img src="../../assets/img/minus.svg">
+          <font-awesome-icon class="icon" icon="plus-circle" v-on:click="addSchool" />
+          <font-awesome-icon class="icon" icon="minus-circle" v-on:click="deleteSchool"/>
         </div>
         <p class="plus-minus-comment">University / School</p>
 
@@ -47,8 +49,8 @@
         </div>
 
         <div class="plus-minus">
-          <img src="../../assets/img/plus.svg">
-          <img src="../../assets/img/minus.svg">
+          <font-awesome-icon class="icon" icon="plus-circle" />
+          <font-awesome-icon class="icon" icon="minus-circle" />
         </div>
         <p class="plus-minus-comment">Certificate</p>
 
@@ -63,3 +65,32 @@
 </div>
 
 </template>
+
+
+
+
+<script>
+
+export default {
+    data() {
+        return {
+            schools: [{
+                    school: "",
+                    degree: ""
+                }]
+        }
+    },
+    methods: {
+        addSchool: function() {
+            this.schools.push({
+                school: "",
+                degree: ""
+            })
+        },
+        deleteSchool: function() {
+            this.schools.pop()
+        }
+    }
+}
+
+</script>

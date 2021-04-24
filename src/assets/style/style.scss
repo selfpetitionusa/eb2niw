@@ -3874,13 +3874,26 @@ Pop-ups
     }
 }
 
-form .plus-minus {
+#schools {
+    margin-bottom: 30px;
+}
+
+.plus-minus {
     display: flex;
     justify-content: center;
 
-    img {
-        height: 25px;
+    .icon {
+        font-size: 26px;
         margin: 5px;
+        color: #6084A4;
+
+        &:hover {
+            color: rgba(96, 132, 164, 0.5);
+        }
+
+        &:active {
+            color: rgb(96, 132, 164);
+        }
     }
 }
 
