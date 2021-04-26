@@ -23,10 +23,10 @@
             </thead>
             <tbody>
               <tr>
-                <td><input type="text" class="form-control" id="rate1" required></td>
-                <td><input type="number" class="form-control" id="rate1" required></td>
+                <td><input type="text" class="form-control" id="rateCurrency-1" v-on:input="enableInputRate2" required></td>
+                <td><input type="number" class="form-control" id="rateAmount-1" required></td>
                 <td>
-                  <select class="form-control select" id="rate1" required>
+                  <select class="form-control select" id="rateType-1" required>
                       <option selected>per session</option>
                       <option>per lesson</option>
                       <option>per hour</option>
@@ -34,13 +34,14 @@
                       <option>Type your own</option>
                   </select>
                 </td>
-                <td><input type="text" class="form-control" id="rate1" placeholder="Example: Rates starting from"></td>
+                <td><input type="text" class="form-control" id="rateComment-1" placeholder="Example: Rates starting from"></td>
               </tr>
+
               <tr>
-                <td><input type="text" class="form-control" id="rate2" required disabled></td>
-                <td><input type="number" class="form-control" id="rate2" required disabled></td>
+                <td><input type="text" class="form-control" id="rateCurrency-2" v-on:input="enableInputRate3" disabled></td>
+                <td><input type="number" class="form-control" id="rateAmount-2" disabled></td>
                 <td>
-                  <select class="form-control select" id="rate2" required disabled>
+                  <select class="form-control select" id="rateType-2" disabled>
                       <option selected>per session</option>
                       <option>per lesson</option>
                       <option>per hour</option>
@@ -48,13 +49,14 @@
                       <option>Type your own</option>
                   </select>
                 </td>
-                <td><input type="text" class="form-control" id="rate2" placeholder="Example: University level students" disabled></td>
+                <td><input type="text" class="form-control" id="rateComment-2" placeholder="Example: University level students" disabled></td>
               </tr>
+
               <tr>
-                <td><input type="text" class="form-control" id="rate3" required disabled></td>
-                <td><input type="number" class="form-control" id="rate3" required disabled></td>
+                <td><input type="text" class="form-control" id="rateCurrency-3" v-on:input="enableInputRate4()" disabled></td>
+                <td><input type="number" class="form-control" id="rateAmount-3" disabled></td>
                 <td>
-                  <select class="form-control select" id="rate3" required disabled>
+                  <select class="form-control select" id="rateType-3" disabled>
                       <option selected>per session</option>
                       <option>per lesson</option>
                       <option>per hour</option>
@@ -62,13 +64,14 @@
                       <option>Type your own</option>
                   </select>
                 </td>
-                <td><input type="text" class="form-control" id="rate3" placeholder="Example: Students 5-7 years old" disabled></td>
+                <td><input type="text" class="form-control" id="rateComment-3" placeholder="Example: Students 5-7 years old" disabled></td>
               </tr>
+
               <tr>
-                <td><input type="text" class="form-control" id="rate4" required disabled></td>
-                <td><input type="number" class="form-control" id="rate4" required disabled></td>
+                <td><input type="text" class="form-control" id="rateCurrency-4" disabled></td>
+                <td><input type="number" class="form-control" id="rateAmount-4" disabled></td>
                 <td>
-                  <select class="form-control select" id="rate4" required disabled>
+                  <select class="form-control select" id="rateType-4" disabled>
                       <option selected>per session</option>
                       <option>per lesson</option>
                       <option>per hour</option>
@@ -76,7 +79,7 @@
                       <option>Type your own</option>
                   </select>
                 </td>
-                <td><input type="text" class="form-control" id="rate4" placeholder="Example: English (rates by subject)" disabled></td>
+                <td><input type="text" class="form-control" id="rateComment-4" placeholder="Example: English (rates by subject)" disabled></td>
               </tr>
             </tbody>
           </table>
@@ -97,7 +100,7 @@
 
         <div class="btn-container">
           <button type="reset" class="btn btn-primary btn-border btn-cancel">Cancel</button>
-          <button type="submit" class="btn btn-primary btn-border btn-save">Save</button>
+          <button type="submit" class="btn btn-primary btn-border btn-save" v-on:click="inputIsRequired">Save</button>
         </div>
       </form>
 
@@ -106,3 +109,63 @@
 </div>
 
 </template>
+
+
+
+
+<script>
+
+    export default {
+        methods: {
+            enableInputRate2: function() {
+                document.getElementById('rateCurrency-2').removeAttribute('disabled');
+                document.getElementById('rateAmount-2').removeAttribute('disabled');
+                document.getElementById('rateType-2').removeAttribute('disabled');
+                document.getElementById('rateComment-2').removeAttribute('disabled');
+            },
+            enableInputRate3: function() {
+                document.getElementById('rateCurrency-3').removeAttribute('disabled');
+                document.getElementById('rateAmount-3').removeAttribute('disabled');
+                document.getElementById('rateType-3').removeAttribute('disabled');
+                document.getElementById('rateComment-3').removeAttribute('disabled');
+            },
+            enableInputRate4: function() {
+                document.getElementById('rateCurrency-4').removeAttribute('disabled');
+                document.getElementById('rateAmount-4').removeAttribute('disabled');
+                document.getElementById('rateType-4').removeAttribute('disabled');
+                document.getElementById('rateComment-4').removeAttribute('disabled');
+            },
+            inputIsRequired: function() {
+                const v = document.forms['rates-popup']['rateCurrency-1'].value;
+                const w = document.forms['rates-popup']['rateAmount-1'].value;
+
+                const x = document.forms['rates-popup']['rateCurrency-2'].value;
+                const y = document.forms['rates-popup']['rateAmount-2'].value;
+
+                const a = document.forms['rates-popup']['rateCurrency-3'].value;
+                const b = document.forms['rates-popup']['rateAmount-3'].value;
+
+                const p = document.forms['rates-popup']['rateCurrency-4'].value;
+                const q = document.forms['rates-popup']['rateAmount-4'].value;
+
+                if ( (v !== "" && w === "") || (v === "" && w !== "") ) {
+                    alert("For each added rate provide: currency, rate amount and session type");
+                    return false;
+                    }
+                if ( (x !== "" && y === "") || (x === "" && y !== "") ) {
+                    alert("For each added rate provide: currency, rate amount and session type");
+                    return false;
+                    }
+                if ( (a !== "" && b === "") || (a === "" && b !== "") ) {
+                    alert("For each added rate provide: currency, rate amount and session type");
+                    return false;
+                    }
+                if ( (p !== "" && q === "") || (p === "" && q !== "") ) {
+                    alert("For each added rate provide: currency, rate amount and session type");
+                    return false;
+                    }
+            }
+        }
+    }
+
+</script>
