@@ -218,8 +218,8 @@
                             <div class="col-11 text">
                                 <div class="label">Online lessons:
                                     <div class="value">
-                                        <div v-if="response.profile.rateInfo.online" class="input">Yes</div>
-                                        <div v-else class="input">None</div>
+                                        <div v-if="response.profile.rateInfo.online" class="input">{{response.profile.rateInfo.onlineComment === null ? 'Yes' : response.profile.rateInfo.onlineComment}}</div>
+                                        <div v-else class="input">No</div>
                                     </div>
                                 </div>
                             </div>
@@ -231,7 +231,7 @@
                                 <div class="label">In-person lessons:
                                     <div class="value">
                                         <div v-if="response.profile.rateInfo.inPerson" class="input">{{response.profile.rateInfo.inPersonComment === null ? 'Yes' : response.profile.rateInfo.inPersonComment}}</div>
-                                        <div v-else class="input">None</div>
+                                        <div v-else class="input">No</div>
                                     </div>
                                 </div>
                             </div>
@@ -243,7 +243,7 @@
                                 <div class="label">Free consultation:
                                     <div class="value">
                                         <div v-if="response.profile.rateInfo.freeConsultation" class="input">{{response.profile.rateInfo.freeConsultationComment === null ? 'Yes' : response.profile.rateInfo.freeConsultationComment}}</div>
-                                        <div v-else class="input">None</div>
+                                        <div v-else class="input">No</div>
                                     </div>
                                 </div>
                             </div>
@@ -254,8 +254,8 @@
                             <div class="col-11 text">
                                 <div class="label">Cancelation policy:
                                     <div class="value">
-                                        <div v-if="response.profile.rateInfo.cancellationPolicy" class="input">{{response.profile.rateInfo.cancellationPolicyComment === null ? 'Yes' : response.profile.rateInfo.cancellationPolicyComment}}</div>
-                                        <div v-else class="input">None</div>
+                                        <div v-if="response.profile.rateInfo.cancellationPolicy" class="input">{{response.profile.rateInfo.cancellationPolicyComment === null ? '24h notice' : response.profile.rateInfo.cancellationPolicyComment}}</div>
+                                        <div v-else class="input">No refunds</div>
                                     </div>
                                 </div>
                             </div>
