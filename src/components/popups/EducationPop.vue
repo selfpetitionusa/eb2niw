@@ -58,7 +58,7 @@
 
         <div class="btn-container">
           <button type="reset" class="btn btn-primary btn-border btn-cancel">Cancel</button>
-          <button type="submit" class="btn btn-primary btn-border btn-save" v-on:click="fieldRequired">Save</button>
+          <button type="submit" class="btn btn-primary btn-border btn-save" v-on:click="inputIsRequired">Save</button>
         </div>
       </form>
 
@@ -105,7 +105,7 @@ export default {
         deleteCertificate: function() {
             this.certificates.pop()
         },
-        fieldRequired: function() {
+        inputIsRequired: function() {
             let x = document.forms['education-popup'].certificate.value;
             let y = document.forms['education-popup'].certDesc.value
             if ( x !== "" && y === "") {
