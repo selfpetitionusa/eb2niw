@@ -97,8 +97,8 @@
               this.problemCards.pop()
           },
           inputIsRequired: function() {
-              let x = document.forms['problem-cards-popup'].question.value;
-              let y = document.forms['problem-cards-popup'].answer.value
+              const x = document.forms['problem-cards-popup'].question.value;
+              const y = document.forms['problem-cards-popup'].answer.value
               if ( x !== "" && y === "") {
                   alert("Please provide answer for each added question");
                   return false;

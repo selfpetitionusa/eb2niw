@@ -106,8 +106,8 @@ export default {
             this.certificates.pop()
         },
         inputIsRequired: function() {
-            let x = document.forms['education-popup'].certificate.value;
-            let y = document.forms['education-popup'].certDesc.value
+            const x = document.forms['education-popup'].certificate.value;
+            const y = document.forms['education-popup'].certDesc.value
             if ( x !== "" && y === "") {
                 alert("Please provide description for each added certificate");
                 return false;
