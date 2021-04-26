@@ -32,11 +32,11 @@
   export default {
     methods: {
       countWord: function() {
-        var words = document.getElementById("bio").value;
-        var count = 0;
-        var split = words.split(' ');
+        const words = document.getElementById("bio").value;
+        let count = 0;
+        const split = words.split(' ');
 
-        for (var i = 0; i < split.length; i++) {
+        for (let i = 0; i < split.length; i++) {
             if (split[i] != "") {
                 count += 1;
             }
