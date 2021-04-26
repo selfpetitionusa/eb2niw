@@ -46,7 +46,7 @@
 
         <div class="btn-container">
           <button type="reset" class="btn btn-primary btn-border btn-cancel">Cancel</button>
-          <button type="submit" class="btn btn-primary btn-border btn-save">Save</button>
+          <button type="submit" class="btn btn-primary btn-border btn-save" v-on:click="inputIsRequired">Save</button>
         </div>
       </form>
 
@@ -95,6 +95,15 @@
           },
           deleteProblemCard: function() {
               this.problemCards.pop()
+          },
+          inputIsRequired: function() {
+              let x = document.forms['problem-cards-popup'].question.value;
+              let y = document.forms['problem-cards-popup'].answer.value
+              if ( x !== "" && y === "") {
+                  alert("Please provide answer for each added question");
+                  return false;
+                  }
+                  return true;
           }
       }
   }
