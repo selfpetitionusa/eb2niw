@@ -45,8 +45,8 @@
           </div>
 
           <div class="form-group">
-            <label for="cert-desc">Certificate description</label>
-            <input type="text" class="form-control" id="cert-desc" placeholder="Example: American Tutoring Association">
+            <label for="certDesc">Certificate description</label>
+            <input type="text" class="form-control" id="certDesc" placeholder="Example: American Tutoring Association">
           </div>
         </div>
 
@@ -58,7 +58,7 @@
 
         <div class="btn-container">
           <button type="reset" class="btn btn-primary btn-border btn-cancel">Cancel</button>
-          <button type="submit" class="btn btn-primary btn-border btn-save">Save</button>
+          <button type="submit" class="btn btn-primary btn-border btn-save" v-on:click="fieldRequired">Save</button>
         </div>
       </form>
 
@@ -104,6 +104,15 @@ export default {
         },
         deleteCertificate: function() {
             this.certificates.pop()
+        },
+        fieldRequired: function() {
+            let x = document.forms['education-popup'].certificate.value;
+            let y = document.forms['education-popup'].certDesc.value
+            if ( x !== "" && y === "") {
+                alert("Please provide description for each added certificate");
+                return false;
+                }
+                return true;
         }
     }
 }
