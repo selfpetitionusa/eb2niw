@@ -41,28 +41,28 @@
 
         <div class="radio-container">
           <div class="form-check radio">
-            <input class="form-check-input" type="radio" name="myStudents" id="myStudents-age" value="option1" required>
+            <input class="form-check-input" type="radio" name="myStudents" id="myStudents-age-radio" value="option1" v-on:click="enableDisableRadio" required>
             <div class="form-inline">
               <label class="form-check-label item" for="myStudents-age">My students are</label>
-              <input type="text" class="form-control item" id="myStudents-age" placeholder="7-12">
+              <input type="text" class="form-control item" id="myStudents-age" placeholder="7-12" disabled>
               <label class="form-check-label item" for="myStudents-age">years old</label>
             </div>
           </div>
 
           <div class="form-check radio">
-            <input class="form-check-input" type="radio" name="myStudents" id="myStudents-grade" value="option2" required>
+            <input class="form-check-input" type="radio" name="myStudents" id="myStudents-grade-radio" value="option2" v-on:click="enableDisableRadio" required>
             <div class="form-inline">
               <label class="form-check-label item" for="myStudents-grade">My students are</label>
-              <input type="text" class="form-control item" id="myStudents-grade" placeholder="7-12th">
+              <input type="text" class="form-control item" id="myStudents-grade" placeholder="7-12th" disabled>
               <label class="form-check-label item" for="myStudents-grade">grade</label>
             </div>
           </div>
 
           <div class="form-check radio">
-            <input class="form-check-input" type="radio" name="myStudents" id="myStudents-other" value="option3" required>
+            <input class="form-check-input" type="radio" name="myStudents" id="myStudents-other-radio" value="option3" v-on:click="enableDisableRadio" required>
             <div class="form-inline">
               <label class="form-check-label item" for="myStudents-other">My students are</label>
-              <input type="text" class="form-control item" id="myStudents-other" placeholder="Description">
+              <input type="text" class="form-control item" id="myStudents-other" placeholder="Description" disabled>
             </div>
           </div>
         </div>
@@ -132,6 +132,30 @@ export default {
         },
         enableInputSubcat7: function() {
             document.getElementById('subject-categories7').removeAttribute('disabled');
+        },
+        enableDisableRadio: function() {
+            let x = document.getElementById("myStudents-age-radio");
+            var y = document.getElementById("myStudents-age");
+
+            let a = document.getElementById("myStudents-grade-radio");
+            var b = document.getElementById("myStudents-grade");
+
+            let v = document.getElementById("myStudents-other-radio");
+            var w = document.getElementById("myStudents-other");
+
+            y.disabled = x.checked ? false : true;
+            b.disabled = a.checked ? false : true;
+            w.disabled = v.checked ? false : true;
+
+            if (!y.disabled) {
+              y.focus();
+              }
+            if (!b.disabled) {
+              b.focus();
+              }
+            if (!w.disabled) {
+              w.focus();
+              }
         }
     }
 }
