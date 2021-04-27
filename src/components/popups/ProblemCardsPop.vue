@@ -13,18 +13,18 @@
             <label for="question">Select or type your question</label>
             <input class="form-control" list="question">
               <datalist id="question">
-                <option value="Type your own question"></option>
-                <option value="What is your tutoring style?"></option>
-                <option value="How will my child learn through online learning?"></option>
-                <option value="How can I practice by myself between the lessons?"></option>
-                <option value="How do you motivate students?"></option>
-                <option value="How do you help students focus?"></option>
-                <option value="How to learn definitions?"></option>
-                <option value="ow do you teach &lt;your subject&gt;?"></option>
-                <option value="What is the best way to learn &lt;topic&gt;?"></option>
-                <option value="How to remember multiplication tables?"></option>
-                <option value="How to practice spelling?"></option>
-                <option value="How do you teach kids to read?"></option>
+                <option>Type your own question</option>
+                <option>What is your tutoring style?</option>
+                <option>How will my child learn through online learning</option>
+                <option>How can I practice by myself between the lessons?</option>
+                <option>How do you motivate students?</option>
+                <option>How do you help students focus?</option>
+                <option>How to learn definitions?</option>
+                <option>How do you teach &lt;your subject&gt;?</option>
+                <option>What is the best way to learn &lt;topic&gt;?</option>
+                <option>How to remember multiplication tables?</option>
+                <option>How to practice spelling?</option>
+                <option>How do you teach kids to read?</option>
               </datalist>
           </div>
 
