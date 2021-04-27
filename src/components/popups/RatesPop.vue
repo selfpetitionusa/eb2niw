@@ -28,11 +28,11 @@
                 <td>
                   <input class="form-control" list="select-1" id="rateType-1" required>
                     <datalist id="select-1">
-                      <option selected value="per session"></option>
-                      <option value="per lesson"></option>
-                      <option value="per hour"></option>
-                      <option value="per month"></option>
-                      <option value="Type your own"></option>
+                      <option selected>per session</option>
+                      <option>per lesson</option>
+                      <option>per hour</option>
+                      <option>per month</option>
+                      <option>Type your own</option>
                     </datalist>
                 </td>
                 <td><input type="text" class="form-control" id="rateComment-1" placeholder="Example: Rates starting from"></td>
@@ -44,11 +44,11 @@
                 <td>
                   <input class="form-control" list="select-2" id="rateType-2" disabled>
                     <datalist id="select-2">
-                      <option selected value="per session"></option>
-                      <option value="per lesson"></option>
-                      <option value="per hour"></option>
-                      <option value="per month"></option>
-                      <option value="Type your own"></option>
+                      <option selected>per session</option>
+                      <option>per lesson</option>
+                      <option>per hour</option>
+                      <option>per month</option>
+                      <option>Type your own</option>
                     </datalist>
                 </td>
                 <td><input type="text" class="form-control" id="rateComment-2" placeholder="Example: University level students" disabled></td>
@@ -59,12 +59,12 @@
                 <td><input type="number" class="form-control" id="rateAmount-3" disabled></td>
                 <td>
                   <input class="form-control" list="select-3" id="rateType-3" disabled>
-                    <datalist id="select-3">
-                      <option selected value="per session"></option>
-                      <option value="per lesson"></option>
-                      <option value="per hour"></option>
-                      <option value="per month"></option>
-                      <option value="Type your own"></option>
+                      <datalist id="select-3">
+                      <option selected>per session</option>
+                      <option>per lesson</option>
+                      <option>per hour</option>
+                      <option>per month</option>
+                      <option>Type your own</option>
                     </datalist>
                 </td>
                 <td><input type="text" class="form-control" id="rateComment-3" placeholder="Example: Students 5-7 years old" disabled></td>
@@ -76,11 +76,11 @@
                 <td>
                   <input class="form-control" list="select-4" id="rateType-4" disabled>
                     <datalist id="select-4">
-                      <option selected value="per session"></option>
-                      <option value="per lesson"></option>
-                      <option value="per hour"></option>
-                      <option value="per month"></option>
-                      <option value="Type your own"></option>
+                      <option selected>per session</option>
+                      <option>per lesson</option>
+                      <option>per hour</option>
+                      <option>per month</option>
+                      <option>Type your own</option>
                     </datalist>
                 </td>
                 <td><input type="text" class="form-control" id="rateComment-4" placeholder="Example: English (rates by subject)" disabled></td>
