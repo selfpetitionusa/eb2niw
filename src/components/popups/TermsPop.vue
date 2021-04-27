@@ -14,8 +14,8 @@
         <div class="cms-terms-container">
           <div class="custom-control custom-switch form-group terms-switch">
             <span>Online lessons:</span>
-            <input type="checkbox" class="custom-control-input" id="online" checked>
-            <label class="custom-control-label" for="online">
+            <input type="checkbox" class="custom-control-input" id="online-switch" v-on:click="enableDisableSwitch1" checked>
+            <label class="custom-control-label" for="online-switch">
               <input type="text" class="form-control" id="online" placeholder="Yes">
             </label>
           </div>
@@ -23,8 +23,8 @@
           <small id="in-person-help" class="form-text text-muted">Example: San Francisco area, within 10 miles</small>
           <div class="custom-control custom-switch form-group terms-switch">
             <span>In-person lessons:</span>
-            <input type="checkbox" class="custom-control-input" id="in-person" checked>
-            <label class="custom-control-label" for="in-person">
+            <input type="checkbox" class="custom-control-input" id="in-person-switch" v-on:click="enableDisableSwitch2" checked>
+            <label class="custom-control-label" for="in-person-switch">
               <input type="text" class="form-control" id="in-person" placeholder="Yes">
             </label>
           </div>
@@ -32,16 +32,16 @@
           <small id="consultation-help" class="form-text text-muted">Example: 20min level assessment and lesson trial</small>
           <div class="custom-control custom-switch form-group terms-switch">
             <span>Free consultation:</span>
-            <input type="checkbox" class="custom-control-input" id="consultation" checked>
-            <label class="custom-control-label" for="consultation">
+            <input type="checkbox" class="custom-control-input" id="consultation-switch" v-on:click="enableDisableSwitch3" checked>
+            <label class="custom-control-label" for="consultation-switch">
               <input type="text" class="form-control" id="consultation" placeholder="Yes">
             </label>
           </div>
 
           <div class="custom-control custom-switch form-group terms-switch">
             <span>Cancelation policy:</span>
-            <input type="checkbox" class="custom-control-input" id="cancelation" checked>
-            <label class="custom-control-label" for="cancelation">
+            <input type="checkbox" class="custom-control-input" id="cancelation-switch" v-on:click="enableDisableSwitch4" checked>
+            <label class="custom-control-label" for="cancelation-switch">
               <input type="text" class="form-control" id="cancelation" placeholder="24h notice">
             </label>
           </div>
@@ -58,3 +58,54 @@
 </div>
 
 </template>
+
+
+
+
+<script>
+export default {
+    methods: {
+        enableDisableSwitch1: function() {
+            let x = document.getElementById("online-switch");
+            var y = document.getElementById("online");
+
+            y.disabled = x.checked ? false : true;
+
+            if (!y.disabled) {
+              y.focus();
+              }
+        },
+        enableDisableSwitch2: function() {
+            let a = document.getElementById("in-person-switch");
+            var b = document.getElementById("in-person");
+
+            b.disabled = a.checked ? false : true;
+
+            if (!b.disabled) {
+              b.focus();
+              }
+        },
+        enableDisableSwitch3: function() {
+            let v = document.getElementById("consultation-switch");
+            var w = document.getElementById("consultation");
+
+            w.disabled = v.checked ? false : true;
+
+            if (!w.disabled) {
+              w.focus();
+              }
+        },
+        enableDisableSwitch4: function() {
+            let p = document.getElementById("cancelation-switch");
+            var q = document.getElementById("cancelation");
+
+            q.disabled = p.checked ? false : true;
+
+            if (!q.disabled) {
+              q.focus();
+              }
+        }
+    }
+}
+
+</script>
