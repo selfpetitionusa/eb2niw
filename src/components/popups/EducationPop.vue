@@ -22,13 +22,13 @@
 
         <div id="schools" v-for="school in schools" :key="school.id">
           <div class="form-group">
-            <label for="school">University or school *</label>
-            <input type="text" class="form-control" id="school" placeholder="Example: Ohio University" v-model="schools.school" required>
+            <label for="school">University or school</label>
+            <input type="text" class="form-control" id="school" placeholder="Example: Ohio University" v-model="school.school" required>
           </div>
 
           <div class="form-group">
             <label for="degree">Degree and field of study *</label>
-            <input type="text" class="form-control" id="degree" placeholder="Example: BS Applied Mathematics" v-model="schools.degree" required>
+            <input type="text" class="form-control" id="degree" placeholder="Example: BS Applied Mathematics" v-model="school.degree" required>
           </div>
         </div>
 
@@ -41,12 +41,12 @@
         <div id="certificates" v-for="certificate in certificates" :key="certificate.id">
           <div class="form-group">
             <label for="certificate">Certificate</label>
-            <input type="text" class="form-control" id="certificate" placeholder="Example: ATA Tutor">
+            <input type="text" class="form-control" id="certificate" v-model="certificate.certificate" placeholder="Example: ATA Tutor">
           </div>
 
           <div class="form-group">
             <label for="certDesc">Certificate description</label>
-            <input type="text" class="form-control" id="certDesc" placeholder="Example: American Tutoring Association">
+            <input type="text" class="form-control" id="certDesc" v-model="certificate.certDesc" placeholder="Example: American Tutoring Association">
           </div>
         </div>
 
