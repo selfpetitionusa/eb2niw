@@ -17,7 +17,7 @@
             <input type="text" class="form-control" id="subject" v-model="subject.subjectCat" placeholder="Example: Math" required>
           </div>
 
-          <div class="form-group subject-categories">
+          <div class="form-group subject-cat">
             <label for="subject-categories1">Subject categories - first is mandatory *</label>
             <input type="text" class="form-control" id="subject-categories1" v-model="subject.subCat1" placeholder="Example: Precalculus *" v-on:input="enableInputSubcat2" required>
             <input type="text" class="form-control" id="subject-categories2" v-model="subject.subCat2" placeholder="Example: Calculus" v-on:input="enableInputSubcat3" disabled>
