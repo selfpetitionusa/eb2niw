@@ -26,13 +26,14 @@
                 <td><input type="text" class="form-control" id="rateCurrency-1" v-on:input="enableInputRate2" required></td>
                 <td><input type="number" class="form-control" id="rateAmount-1" required></td>
                 <td>
-                  <select class="form-control select" id="rateType-1" required>
-                      <option selected>per session</option>
-                      <option>per lesson</option>
-                      <option>per hour</option>
-                      <option>per month</option>
-                      <option>Type your own</option>
-                  </select>
+                  <input class="form-control" list="select-1" id="rateType-1" required>
+                    <datalist id="select-1">
+                      <option selected value="per session"></option>
+                      <option value="per lesson"></option>
+                      <option value="per hour"></option>
+                      <option value="per month"></option>
+                      <option value="Type your own"></option>
+                    </datalist>
                 </td>
                 <td><input type="text" class="form-control" id="rateComment-1" placeholder="Example: Rates starting from"></td>
               </tr>
@@ -41,13 +42,14 @@
                 <td><input type="text" class="form-control" id="rateCurrency-2" v-on:input="enableInputRate3" disabled></td>
                 <td><input type="number" class="form-control" id="rateAmount-2" disabled></td>
                 <td>
-                  <select class="form-control select" id="rateType-2" disabled>
-                      <option selected>per session</option>
-                      <option>per lesson</option>
-                      <option>per hour</option>
-                      <option>per month</option>
-                      <option>Type your own</option>
-                  </select>
+                  <input class="form-control" list="select-2" id="rateType-2" disabled>
+                    <datalist id="select-2">
+                      <option selected value="per session"></option>
+                      <option value="per lesson"></option>
+                      <option value="per hour"></option>
+                      <option value="per month"></option>
+                      <option value="Type your own"></option>
+                    </datalist>
                 </td>
                 <td><input type="text" class="form-control" id="rateComment-2" placeholder="Example: University level students" disabled></td>
               </tr>
@@ -56,13 +58,14 @@
                 <td><input type="text" class="form-control" id="rateCurrency-3" v-on:input="enableInputRate4()" disabled></td>
                 <td><input type="number" class="form-control" id="rateAmount-3" disabled></td>
                 <td>
-                  <select class="form-control select" id="rateType-3" disabled>
-                      <option selected>per session</option>
-                      <option>per lesson</option>
-                      <option>per hour</option>
-                      <option>per month</option>
-                      <option>Type your own</option>
-                  </select>
+                  <input class="form-control" list="select-3" id="rateType-3" disabled>
+                    <datalist id="select-3">
+                      <option selected value="per session"></option>
+                      <option value="per lesson"></option>
+                      <option value="per hour"></option>
+                      <option value="per month"></option>
+                      <option value="Type your own"></option>
+                    </datalist>
                 </td>
                 <td><input type="text" class="form-control" id="rateComment-3" placeholder="Example: Students 5-7 years old" disabled></td>
               </tr>
@@ -71,13 +74,14 @@
                 <td><input type="text" class="form-control" id="rateCurrency-4" disabled></td>
                 <td><input type="number" class="form-control" id="rateAmount-4" disabled></td>
                 <td>
-                  <select class="form-control select" id="rateType-4" disabled>
-                      <option selected>per session</option>
-                      <option>per lesson</option>
-                      <option>per hour</option>
-                      <option>per month</option>
-                      <option>Type your own</option>
-                  </select>
+                  <input class="form-control" list="select-4" id="rateType-4" disabled>
+                    <datalist id="select-4">
+                      <option selected value="per session"></option>
+                      <option value="per lesson"></option>
+                      <option value="per hour"></option>
+                      <option value="per month"></option>
+                      <option value="Type your own"></option>
+                    </datalist>
                 </td>
                 <td><input type="text" class="form-control" id="rateComment-4" placeholder="Example: English (rates by subject)" disabled></td>
               </tr>
@@ -136,32 +140,36 @@
                 document.getElementById('rateComment-4').removeAttribute('disabled');
             },
             inputIsRequired: function() {
-                const v = document.forms['rates-popup']['rateCurrency-1'].value;
-                const w = document.forms['rates-popup']['rateAmount-1'].value;
+                const u = document.forms['rates-popup']['rateCurrency-1'].value;
+                const v = document.forms['rates-popup']['rateAmount-1'].value;
+                const w = document.forms['rates-popup']['rateType-1'].value;
 
                 const x = document.forms['rates-popup']['rateCurrency-2'].value;
                 const y = document.forms['rates-popup']['rateAmount-2'].value;
+                const z = document.forms['rates-popup']['rateType-2'].value;
 
                 const a = document.forms['rates-popup']['rateCurrency-3'].value;
                 const b = document.forms['rates-popup']['rateAmount-3'].value;
+                const c = document.forms['rates-popup']['rateType-3'].value;
 
                 const p = document.forms['rates-popup']['rateCurrency-4'].value;
                 const q = document.forms['rates-popup']['rateAmount-4'].value;
+                const r = document.forms['rates-popup']['rateType-4'].value;
 
-                if ( (v !== "" && w === "") || (v === "" && w !== "") ) {
-                    alert("For each added rate provide: currency, rate amount and session type");
+                if ( (u !== "" && v === "" && w === "") || (u === "" && v !== "" && w === "") || (u === "" && v === "" && w !== "") || (u !== "" && v !== "" && w === "") || (u !== "" && v === "" && w !== "") || (u === "" && v !== "" && w !== "") ) {
+                    alert("For each added rate provide: currency, rate and session type");
                     return false;
                     }
-                if ( (x !== "" && y === "") || (x === "" && y !== "") ) {
-                    alert("For each added rate provide: currency, rate amount and session type");
+                if ( (x !== "" && y === "" && z === "") || (x === "" && y !== "" && z === "") || (x === "" && y === "" && z !== "") || (x !== "" && y !== "" && z === "") || (x !== "" && y === "" && z !== "") || (x === "" && y !== "" && z !== "") ) {
+                    alert("For each added rate provide: currency, rate and session type");
                     return false;
                     }
-                if ( (a !== "" && b === "") || (a === "" && b !== "") ) {
-                    alert("For each added rate provide: currency, rate amount and session type");
+                if ( (a !== "" && b === "" && c === "") || (a === "" && b !== "" && c === "") || (a === "" && b === "" && c !== "") || (a !== "" && b !== "" && c === "") || (a !== "" && b === "" && c !== "") || (a === "" && b !== "" && c !== "") ) {
+                    alert("For each added rate provide: currency, rate and session type");
                     return false;
                     }
-                if ( (p !== "" && q === "") || (p === "" && q !== "") ) {
-                    alert("For each added rate provide: currency, rate amount and session type");
+                if ( (p !== "" && q === "" && r === "") || (p === "" && q !== "" && r === "") || (p === "" && q === "" && r !== "") || (p !== "" && q !== "" && r === "") || (p !== "" && q === "" && r !== "") || (p === "" && q !== "" && r !== "") ) {
+                    alert("For each added rate provide: currency, rate and session type");
                     return false;
                     }
             }
