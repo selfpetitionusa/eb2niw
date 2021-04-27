@@ -44,7 +44,7 @@
             <input class="form-check-input" type="radio" name="myStudents" id="myStudents-age-radio" value="option1" v-on:click="enableDisableRadio" required>
             <div class="form-inline">
               <label class="form-check-label item" for="myStudents-age">My students are</label>
-              <input type="text" class="form-control item" id="myStudents-age" placeholder="7-12" disabled>
+              <input type="text" class="form-control item" id="myStudents-age" placeholder="7-12" disabled required>
               <label class="form-check-label item" for="myStudents-age">years old</label>
             </div>
           </div>
@@ -53,7 +53,7 @@
             <input class="form-check-input" type="radio" name="myStudents" id="myStudents-grade-radio" value="option2" v-on:click="enableDisableRadio" required>
             <div class="form-inline">
               <label class="form-check-label item" for="myStudents-grade">My students are</label>
-              <input type="text" class="form-control item" id="myStudents-grade" placeholder="7-12th" disabled>
+              <input type="text" class="form-control item" id="myStudents-grade" placeholder="7-12th" disabled required>
               <label class="form-check-label item" for="myStudents-grade">grade</label>
             </div>
           </div>
@@ -62,7 +62,7 @@
             <input class="form-check-input" type="radio" name="myStudents" id="myStudents-other-radio" value="option3" v-on:click="enableDisableRadio" required>
             <div class="form-inline">
               <label class="form-check-label item" for="myStudents-other">My students are</label>
-              <input type="text" class="form-control item" id="myStudents-other" placeholder="Description" disabled>
+              <input type="text" class="form-control item" id="myStudents-other" placeholder="Description" disabled required>
             </div>
           </div>
         </div>
