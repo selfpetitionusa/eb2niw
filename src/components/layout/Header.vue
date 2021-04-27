@@ -38,7 +38,7 @@
 
                     </div>
                 </nav>
-            </div> 
+            </div>
         </div>
     </header>
     <!-- End Navbar Area -->
@@ -64,12 +64,6 @@ export default {
                 that.isSticky = false;
             }
         })
-    },
-
-    computed: {
-        shoppingCart(){
-            return this.$store.state.cart;
-        }
     }
 }
 </script>

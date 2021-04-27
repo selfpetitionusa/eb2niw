@@ -127,7 +127,7 @@ export default {
              fetch(url, requestOptions).then(async response => {
                  if (response.ok) {
                      this.$refs['modal-1'].show();
-                     this.$store.commit('setSeen');
+                     this.$store.commit('popup/setSeen');
                  } else {
                      noticeMessage = "This email address is already registered";
                  }

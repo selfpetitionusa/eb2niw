@@ -44,6 +44,7 @@
   import PreLoader from "../components/layout/PreLoader";
 
 
+
   export default {
     name: 'Home',
     components: {
@@ -58,10 +59,10 @@
     },
     methods: {
       mouseLeave: function() {
-        if(!this.$store.state.seen) {
+        if(!this.$store.state.popup.seen) {
           this.$refs['modal-3'].show();
         }
-        this.$store.commit('setSeen');
+        this.$store.commit('popup/setSeen');
       }
     },
     data() {

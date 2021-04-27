@@ -14,11 +14,11 @@
                         <div class="pricing-header">
                             <h3>Free Plan</h3>
                         </div>
-                        
+
                         <div class="price">
                             <span><sup>$</sup>0 <span>/Mon</span></span>
                         </div>
-                        
+
                         <div class="pricing-features">
                             <ul>
                                 <li class="active">Your tutor website with our no-code template</li>
@@ -27,23 +27,23 @@
                                 <li>Payment processing</li>
                             </ul>
                         </div>
-                        
+
                         <div class="pricing-footer">
                             <button type="submit" v-b-modal.modal-2  @click="logEvent('free')" class="btn btn-primary">Select Plan</button>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="col-lg-6 col-md-6 col-sm-6">
                     <div class="pricing-table active-plan">
                         <div class="pricing-header">
                             <h3>Paid Plan</h3>
                         </div>
-                        
+
                         <div class="price">
                             <span><sup>$</sup>18.00 <span>/Mon</span></span>
                         </div>
-                        
+
                         <div class="pricing-features">
                             <ul>
                                 <li class="active">Marketing and referral system</li>
@@ -52,7 +52,7 @@
                                 <li class="active">Payment processing</li>
                             </ul>
                         </div>
-                        
+
                         <div class="pricing-footer">
                             <button type="submit" v-b-modal.modal-2  @click="logEvent('premium')" class="btn btn-primary">Select Plan</button>
                         </div>
@@ -95,7 +95,7 @@ export default {
     name: 'Pricing',
     methods: {
         logEvent() {
-            this.$store.commit('setSeen');
+            this.$store.commit('popup/setSeen');
         }
     }
 }
