@@ -7,7 +7,7 @@
     <div class="col-5">
 
       <form id="problem-cards-popup">
-        <div class="form-group" id="problemCards" v-for="problemCard in problemCards" :key="problemCard">
+        <div class="form-group" id="problemCards" v-for="problemCard in problemCards" :key="problemCard.id">
 
           <div class="form-group">
             <label for="question">Select or type your question</label>

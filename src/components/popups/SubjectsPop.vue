@@ -11,7 +11,7 @@
           <p>Add minimum 1 subject and 1 category for each subject</p>
         </div>
 
-        <div id="subjects" v-for="subject in subjects" :key="subject">
+        <div id="subjects" v-for="subject in subjects" :key="subject.id">
           <div class="form-group">
             <label for="subject">Subject *</label>
             <input type="text" class="form-control" id="subject" placeholder="Example: Math" required>

@@ -20,7 +20,7 @@
           <p>Your education and qualifications</p>
         </div>
 
-        <div id="schools" v-for="school in schools" :key="school">
+        <div id="schools" v-for="school in schools" :key="school.id">
           <div class="form-group">
             <label for="school">University or school *</label>
             <input type="text" class="form-control" id="school" placeholder="Example: Ohio University" v-model="schools.school" required>
@@ -38,7 +38,7 @@
         </div>
         <p class="plus-minus-comment">University / School</p>
 
-        <div id="certificates" v-for="certificate in certificates" :key="certificate">
+        <div id="certificates" v-for="certificate in certificates" :key="certificate.id">
           <div class="form-group">
             <label for="certificate">Certificate</label>
             <input type="text" class="form-control" id="certificate" placeholder="Example: ATA Tutor">
