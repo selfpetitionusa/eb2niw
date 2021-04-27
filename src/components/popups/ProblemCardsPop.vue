@@ -11,7 +11,7 @@
 
           <div class="form-group">
             <label for="question">Select or type your question</label>
-            <input class="form-control" list="question">
+            <input class="form-control" list="question" v-model="problemCard.question">
               <datalist id="question">
                 <option>Type your own question</option>
                 <option>What is your tutoring style?</option>
@@ -30,7 +30,7 @@
 
           <div class="form-group">
             <label for="answer">Answer - max 70 words</label>
-            <textarea class="form-control" id="answer" rows="5" @input="countWord()"></textarea>
+            <textarea class="form-control" id="answer" v-model="problemCard.answer" rows="5" @input="countWord()"></textarea>
             <div class="count-words"><span id="show">0</span> /70</div>
           </div>
         </div>
