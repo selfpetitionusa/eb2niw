@@ -14,18 +14,18 @@
         <div id="subjects" v-for="subject in subjects" :key="subject.id">
           <div class="form-group">
             <label for="subject">Subject *</label>
-            <input type="text" class="form-control" id="subject" placeholder="Example: Math" required>
+            <input type="text" class="form-control" id="subject" v-model="subject.subjectCat" placeholder="Example: Math" required>
           </div>
 
           <div class="form-group subject-categories">
             <label for="subject-categories">Subject categories - first is mandatory *</label>
-            <input type="text" class="form-control" id="subject-categories" placeholder="Example: Precalculus *" required>
-            <input type="text" class="form-control" id="subject-categories" placeholder="Example: Calculus" disabled>
-            <input type="text" class="form-control" id="subject-categories" placeholder="Example: Algebra" disabled>
-            <input type="text" class="form-control" id="subject-categories" placeholder="Example: Geometry" disabled>
-            <input type="text" class="form-control" id="subject-categories" placeholder="Example: Trigonometry" disabled>
-            <input type="text" class="form-control" id="subject-categories" placeholder="Example: Differential Equations" disabled>
-            <input type="text" class="form-control" id="subject-categories" placeholder="Example: Logic" disabled>
+            <input type="text" class="form-control" id="subject-categories" v-model="subject.subCat1" placeholder="Example: Precalculus *" required>
+            <input type="text" class="form-control" id="subject-categories" v-model="subject.subCat2" placeholder="Example: Calculus" disabled>
+            <input type="text" class="form-control" id="subject-categories" v-model="subject.subCat3" placeholder="Example: Algebra" disabled>
+            <input type="text" class="form-control" id="subject-categories" v-model="subject.subCat4" placeholder="Example: Geometry" disabled>
+            <input type="text" class="form-control" id="subject-categories" v-model="subject.subCat5" placeholder="Example: Trigonometry" disabled>
+            <input type="text" class="form-control" id="subject-categories" v-model="subject.subCat6" placeholder="Example: Differential Equations" disabled>
+            <input type="text" class="form-control" id="subject-categories" v-model="subject.subCat7" placeholder="Example: Logic" disabled>
           </div>
         </div>
 
@@ -88,16 +88,28 @@ export default {
     data() {
         return {
             subjects: [{
-                    subjectCat: "",
-                    subjectSubCat: []
-                }]
+                subjectCat: "",
+                subCat1: "",
+                subCat2: "",
+                subCat3: "",
+                subCat4: "",
+                subCat5: "",
+                subCat6: "",
+                subCat7: ""
+            }]
         }
     },
     methods: {
         addSubject: function() {
             this.subjects.push({
                 subjectCat: "",
-                subjectSubCat: []
+                subCat1: "",
+                subCat2: "",
+                subCat3: "",
+                subCat4: "",
+                subCat5: "",
+                subCat6: "",
+                subCat7: ""
             })
         },
         deleteSubject: function() {
