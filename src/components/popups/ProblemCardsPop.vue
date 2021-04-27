@@ -10,9 +10,9 @@
         <div class="form-group" id="problemCards" v-for="problemCard in problemCards" :key="problemCard.id">
 
           <div class="form-group">
-            <label for="question">Select or type your question</label>
-            <input class="form-control" list="question" v-model="problemCard.question">
-              <datalist id="question">
+            <label for="select">Select or type your question</label>
+            <input class="form-control" list="select" id="question" v-model="problemCard.question">
+              <datalist id="select">
                 <option>Type your own question</option>
                 <option>What is your tutoring style?</option>
                 <option>How will my child learn through online learning</option>
@@ -43,7 +43,7 @@
 
         <div class="btn-container">
           <button type="reset" class="btn btn-primary btn-border btn-cancel">Cancel</button>
-          <button type="submit" class="btn btn-primary btn-border btn-save" v-on:click="inputIsRequired">Save</button>
+          <button type="submit" class="btn btn-primary btn-border btn-save">Save</button>
         </div>
       </form>
 
@@ -92,15 +92,6 @@
           },
           deleteProblemCard: function() {
               this.problemCards.pop()
-          },
-          inputIsRequired: function() {
-              const x = document.forms['problem-cards-popup'].question.value;
-              const y = document.forms['problem-cards-popup'].answer.value
-              if ( x !== "" && y === "") {
-                  alert("Please provide answer for each added question");
-                  return false;
-                  }
-                  return true;
           }
       }
   }

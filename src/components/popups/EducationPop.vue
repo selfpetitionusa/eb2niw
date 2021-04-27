@@ -22,7 +22,7 @@
 
         <div id="schools" v-for="school in schools" :key="school.id">
           <div class="form-group">
-            <label for="school">University or school</label>
+            <label for="school">University or school *</label>
             <input type="text" class="form-control" id="school" placeholder="Example: Ohio University" v-model="school.school" required>
           </div>
 
@@ -58,7 +58,7 @@
 
         <div class="btn-container">
           <button type="reset" class="btn btn-primary btn-border btn-cancel">Cancel</button>
-          <button type="submit" class="btn btn-primary btn-border btn-save" v-on:click="inputIsRequired">Save</button>
+          <button type="submit" class="btn btn-primary btn-border btn-save">Save</button>
         </div>
       </form>
 
@@ -104,15 +104,6 @@ export default {
         },
         deleteCertificate: function() {
             this.certificates.pop()
-        },
-        inputIsRequired: function() {
-            const x = document.forms['education-popup'].certificate.value;
-            const y = document.forms['education-popup'].certDesc.value
-            if ( x !== "" && y === "") {
-                alert("Please provide description for each added certificate");
-                return false;
-                }
-                return true;
         }
     }
 }
