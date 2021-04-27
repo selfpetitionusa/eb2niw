@@ -7,28 +7,25 @@
     <div class="col-5">
 
       <form id="problem-cards-popup">
-        <div class="form-group">
-          <label for="select">Select or add your question</label>
-          <select class="form-control select" id="select">
-            <option>Type your question</option>
-            <option selected>What is your tutoring style?</option>
-            <option>How will my child learn through online learning?</option>
-            <option>How can I practice by myself between the lessons?</option>
-            <option>How do you motivate students?</option>
-            <option>How do you help students focus?</option>
-            <option>How to learn definitions?</option>
-            <option>How do you teach &lt;your subject&gt;?</option>
-            <option>What is the best way to learn &lt;topic&gt;?</option>
-            <option>How to remember multiplication tables?</option>
-            <option>How to practice spelling?</option>
-            <option>How do you teach kids to read?</option>
-          </select>
-        </div>
+        <div class="form-group" id="problemCards" v-for="problemCard in problemCards" :key="problemCard">
 
-        <div id="problemCards" v-for="problemCard in problemCards" :key="problemCard">
           <div class="form-group">
-            <label for="question">Question</label>
-            <input type="text" class="form-control" id="question" placeholder="Select question above or type your own">
+            <label for="question">Select or type your question</label>
+            <input class="form-control" list="question">
+              <datalist id="question">
+                <option value="Type your own question"></option>
+                <option value="What is your tutoring style?"></option>
+                <option value="How will my child learn through online learning?"></option>
+                <option value="How can I practice by myself between the lessons?"></option>
+                <option value="How do you motivate students?"></option>
+                <option value="How do you help students focus?"></option>
+                <option value="How to learn definitions?"></option>
+                <option value="ow do you teach &lt;your subject&gt;?"></option>
+                <option value="What is the best way to learn &lt;topic&gt;?"></option>
+                <option value="How to remember multiplication tables?"></option>
+                <option value="How to practice spelling?"></option>
+                <option value="How do you teach kids to read?"></option>
+              </datalist>
           </div>
 
           <div class="form-group">
