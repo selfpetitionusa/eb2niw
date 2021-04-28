@@ -4037,6 +4037,16 @@ input#question {
 
 .cms-terms-container {
     margin-top: 40px;
+
+    .term-container {
+        height: 70px;
+        margin: 5px;
+
+        &:last-child, &:first-child {
+          display: flex;
+          align-items: center;
+        }
+    }
 }
 
 .terms-switch {
@@ -4045,14 +4055,18 @@ input#question {
     align-items: center;
     padding: 0px;
 
-    input {
-        width: 250px;
+    span {
+        width: 260px;
+    }
+
+    label.custom-control-label {
+        margin-left: 50px;
     }
 
     .custom-control-input:checked~.custom-control-label::before {
         border-color: #5457C1;
         background-color: #5457C1;
-      }
+    }
 }
 
 #in-person-help, #consultation-help {

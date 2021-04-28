@@ -12,38 +12,50 @@
         </div>
 
         <div class="cms-terms-container">
-          <div class="custom-control custom-switch form-group terms-switch">
-            <span>Online lessons:</span>
-            <input type="checkbox" class="custom-control-input" id="online-switch" v-on:click="enableDisableSwitch1" checked>
-            <label class="custom-control-label" for="online-switch">
+          <div class="term-container">
+            <div class="custom-control custom-switch form-group terms-switch">
+              <span>Online lessons:</span>
+              <div>
+                <input type="checkbox" class="custom-control-input" id="online-switch" v-on:click="enableDisableSwitch1" checked>
+                <label class="custom-control-label" for="online-switch"></label>
+              </div>
               <input type="text" class="form-control" id="online" placeholder="Yes">
-            </label>
+            </div>
           </div>
 
-          <small id="in-person-help" class="form-text text-muted">Example: San Francisco area, within 10 miles</small>
-          <div class="custom-control custom-switch form-group terms-switch">
-            <span>In-person lessons:</span>
-            <input type="checkbox" class="custom-control-input" id="in-person-switch" v-on:click="enableDisableSwitch2" checked>
-            <label class="custom-control-label" for="in-person-switch">
+          <div class="term-container">
+            <small id="in-person-help" class="form-text text-muted">Example: San Francisco area, within 10 miles</small>
+            <div class="custom-control custom-switch form-group terms-switch">
+              <span>In-person lessons:</span>
+              <div>
+                <input type="checkbox" class="custom-control-input" id="in-person-switch" v-on:click="enableDisableSwitch2" checked>
+                <label class="custom-control-label" for="in-person-switch"></label>
+              </div>
               <input type="text" class="form-control" id="in-person" placeholder="Yes">
-            </label>
+            </div>
           </div>
 
-          <small id="consultation-help" class="form-text text-muted">Example: 20min level assessment and lesson trial</small>
-          <div class="custom-control custom-switch form-group terms-switch">
-            <span>Free consultation:</span>
-            <input type="checkbox" class="custom-control-input" id="consultation-switch" v-on:click="enableDisableSwitch3" checked>
-            <label class="custom-control-label" for="consultation-switch">
+          <div class="term-container">
+            <small id="consultation-help" class="form-text text-muted">Example: 20min level assessment and lesson trial</small>
+            <div class="custom-control custom-switch form-group terms-switch">
+              <span>Free consultation:</span>
+              <div>
+                <input type="checkbox" class="custom-control-input" id="consultation-switch" v-on:click="enableDisableSwitch3" checked>
+                <label class="custom-control-label" for="consultation-switch"></label>
+              </div>
               <input type="text" class="form-control" id="consultation" placeholder="Yes">
-            </label>
+            </div>
           </div>
 
-          <div class="custom-control custom-switch form-group terms-switch">
-            <span>Cancelation policy:</span>
-            <input type="checkbox" class="custom-control-input" id="cancelation-switch" v-on:click="enableDisableSwitch4" checked>
-            <label class="custom-control-label" for="cancelation-switch">
+          <div class="term-container">
+            <div class="custom-control custom-switch form-group terms-switch">
+              <span>Cancelation policy:</span>
+              <div>
+                <input type="checkbox" class="custom-control-input" id="cancelation-switch" v-on:click="enableDisableSwitch4" checked>
+                <label class="custom-control-label" for="cancelation-switch"></label>
+              </div>
               <input type="text" class="form-control" id="cancelation" placeholder="24h notice">
-            </label>
+            </div>
           </div>
         </div>
 
