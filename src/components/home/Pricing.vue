@@ -64,7 +64,7 @@
         <b-modal id="modal-2"  style="border-radius: 30px" :return-focus="this.$parent" hide-footer hide-header >
             <div class="mt-2">
 
-                <p style="color: #CECECE; font-size: medium; font-size: 13px; text-align: center;">-- Tutomy is now in final development stage -- </p>
+                <p style="color: #949494; font-size: medium; font-size: 13px; text-align: center;">-- Tutomy is now in final development stage -- </p>
                 <p style="color: #0e314c; font-size: medium;font-weight: bold">How about VIP access for free?</p>
                 <div class="row">
                   <div class="col-7">
