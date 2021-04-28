@@ -4048,6 +4048,11 @@ input#question {
     input {
         width: 250px;
     }
+
+    .custom-control-input:checked~.custom-control-label::before {
+        border-color: #5457C1;
+        background-color: #5457C1;
+      }
 }
 
 #in-person-help, #consultation-help {
