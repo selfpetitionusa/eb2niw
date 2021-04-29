@@ -8,7 +8,7 @@
 
       <form id="rates-popup">
         <div class="form-title">
-          <p>Show up to [4] rates by editing the below example *</p>
+          <p>Show up to 4 rates by editing the below example *</p>
         </div>
 
         <div class="table-container">
