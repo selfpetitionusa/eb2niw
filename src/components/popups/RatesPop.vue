@@ -24,9 +24,9 @@
             <tbody>
               <tr>
                 <td><input type="text" class="form-control" id="rateCurrency-1" v-on:input="enableInputRate2" required></td>
-                <td><input type="number" class="form-control" id="rateAmount-1" required></td>
+                <td><input type="number" class="form-control" id="rateAmount-1" v-on:input="enableInputRate2" required></td>
                 <td>
-                  <input class="form-control" list="select-1" id="rateType-1" required>
+                  <input class="form-control" list="select-1" id="rateType-1" v-on:input="enableInputRate2" required>
                     <datalist id="select-1">
                       <option selected>per session</option>
                       <option>per lesson</option>
@@ -35,14 +35,16 @@
                       <option>Type your own</option>
                     </datalist>
                 </td>
-                <td><input type="text" class="form-control" id="rateComment-1" placeholder="Example: Rates starting from"></td>
+                <td>
+                  <input type="text" class="form-control" id="rateComment-1" v-on:input="enableInputRate2" placeholder="Example: Rates starting from">
+                </td>
               </tr>
 
               <tr>
                 <td><input type="text" class="form-control" id="rateCurrency-2" v-on:input="enableInputRate3" disabled></td>
-                <td><input type="number" class="form-control" id="rateAmount-2" disabled></td>
+                <td><input type="number" class="form-control" id="rateAmount-2" v-on:input="enableInputRate3" disabled></td>
                 <td>
-                  <input class="form-control" list="select-2" id="rateType-2" disabled>
+                  <input class="form-control" list="select-2" id="rateType-2" v-on:input="enableInputRate3" disabled>
                     <datalist id="select-2">
                       <option selected>per session</option>
                       <option>per lesson</option>
@@ -51,14 +53,16 @@
                       <option>Type your own</option>
                     </datalist>
                 </td>
-                <td><input type="text" class="form-control" id="rateComment-2" placeholder="Example: University level students" disabled></td>
+                <td>
+                  <input type="text" class="form-control" id="rateComment-2" placeholder="Example: University level students" v-on:input="enableInputRate3" disabled>
+                </td>
               </tr>
 
               <tr>
-                <td><input type="text" class="form-control" id="rateCurrency-3" v-on:input="enableInputRate4()" disabled></td>
-                <td><input type="number" class="form-control" id="rateAmount-3" disabled></td>
+                <td><input type="text" class="form-control" id="rateCurrency-3" v-on:input="enableInputRate4" disabled></td>
+                <td><input type="number" class="form-control" id="rateAmount-3" v-on:input="enableInputRate4" disabled></td>
                 <td>
-                  <input class="form-control" list="select-3" id="rateType-3" disabled>
+                  <input class="form-control" list="select-3" id="rateType-3" v-on:input="enableInputRate4" disabled>
                       <datalist id="select-3">
                       <option selected>per session</option>
                       <option>per lesson</option>
@@ -67,7 +71,9 @@
                       <option>Type your own</option>
                     </datalist>
                 </td>
-                <td><input type="text" class="form-control" id="rateComment-3" placeholder="Example: Students 5-7 years old" disabled></td>
+                <td>
+                  <input type="text" class="form-control" id="rateComment-3" placeholder="Example: Students 5-7 years old" v-on:input="enableInputRate4" disabled>
+                </td>
               </tr>
 
               <tr>
