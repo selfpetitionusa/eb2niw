@@ -56,6 +56,9 @@
         </div>
         <p class="plus-minus-comment">Certificate</p>
 
+        <div>My number schools: {{schoolsNumber}}</div>
+        <div>My number certificates: {{certificatesNumber}}</div>
+
         <div class="btn-container">
           <button type="reset" class="btn btn-primary btn-border btn-cancel">Cancel</button>
           <button type="submit" class="btn btn-primary btn-border btn-save">Save</button>
@@ -80,30 +83,44 @@ export default {
                     school: "",
                     degree: ""
                 }],
+            schoolsNumber: 1,
             certificates: [{
                     certificate: "",
                     certDesc: ""
-                }]
+                }],
+            certificatesNumber: 1
         }
     },
     methods: {
         addSchool: function() {
-            this.schools.push({
-                school: "",
-                degree: ""
-            })
+            if(this.schoolsNumber < 3) {
+                this.schools.push({
+                    school: "",
+                    degree: ""
+                });
+                this.schoolsNumber++;
+            }
         },
         deleteSchool: function() {
-            this.schools.pop()
+            if(this.schoolsNumber > 1) {
+                this.schools.pop();
+                this.schoolsNumber--;
+            }
         },
         addCertificate: function() {
-            this.certificates.push({
-                certificate: "",
-                certDesc: ""
-            })
+            if(this.certificatesNumber < 3) {
+                this.certificates.push({
+                    certificate: "",
+                    certDesc: ""
+                });
+                this.certificatesNumber++;
+            }
         },
         deleteCertificate: function() {
-            this.certificates.pop()
+            if(this.certificatesNumber > 1) {
+                this.certificates.pop();
+                this.certificatesNumber--;
+            }
         },
         descIsRequired: function() {
             let x= document.getElementById('certDesc');
