@@ -111,9 +111,7 @@ export default {
 
             if(y.value.length !== 0){
                 x.setAttribute('required', "");
-            }
-
-            if(y.value.length == 0){
+            } else {
                 x.removeAttribute('required');
             }
         }
