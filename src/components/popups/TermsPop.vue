@@ -16,10 +16,15 @@
             <div class="custom-control custom-switch form-group terms-switch">
               <span>Online lessons:</span>
               <div>
-                <input type="checkbox" class="custom-control-input" id="online-switch" v-on:click="enableDisableSwitch1" checked>
+                <input type="checkbox" class="custom-control-input" id="online-switch" v-on:click="enableDisableSwitch1" v-model="answerOnline" checked>
                 <label class="custom-control-label" for="online-switch"></label>
               </div>
-              <input type="text" class="form-control" id="online" placeholder="Yes">
+              <div v-if="answerOnline">
+                <input type="text" class="form-control" id="online" placeholder="Yes">
+              </div>
+              <div v-else>
+                <input type="text" class="form-control" id="online" placeholder="No">
+              </div>
             </div>
           </div>
 
@@ -28,10 +33,15 @@
             <div class="custom-control custom-switch form-group terms-switch">
               <span>In-person lessons:</span>
               <div>
-                <input type="checkbox" class="custom-control-input" id="in-person-switch" v-on:click="enableDisableSwitch2" checked>
+                <input type="checkbox" class="custom-control-input" id="in-person-switch" v-on:click="enableDisableSwitch2" v-model="answerInPerson" checked>
                 <label class="custom-control-label" for="in-person-switch"></label>
               </div>
-              <input type="text" class="form-control" id="in-person" placeholder="Yes">
+              <div v-if="answerInPerson">
+                <input type="text" class="form-control" id="in-person" placeholder="Yes">
+              </div>
+              <div v-else>
+                <input type="text" class="form-control" id="in-person" placeholder="No">
+              </div>
             </div>
           </div>
 
@@ -40,10 +50,15 @@
             <div class="custom-control custom-switch form-group terms-switch">
               <span>Free consultation:</span>
               <div>
-                <input type="checkbox" class="custom-control-input" id="consultation-switch" v-on:click="enableDisableSwitch3" checked>
+                <input type="checkbox" class="custom-control-input" id="consultation-switch" v-on:click="enableDisableSwitch3" v-model="answerConsultation" checked>
                 <label class="custom-control-label" for="consultation-switch"></label>
               </div>
-              <input type="text" class="form-control" id="consultation" placeholder="Yes">
+              <div v-if="answerConsultation">
+                <input type="text" class="form-control" id="consultation" placeholder="Yes">
+              </div>
+              <div v-else>
+                <input type="text" class="form-control" id="consultation" placeholder="No">
+              </div>
             </div>
           </div>
 
@@ -51,10 +66,15 @@
             <div class="custom-control custom-switch form-group terms-switch">
               <span>Cancelation policy:</span>
               <div>
-                <input type="checkbox" class="custom-control-input" id="cancelation-switch" v-on:click="enableDisableSwitch4" checked>
+                <input type="checkbox" class="custom-control-input" id="cancelation-switch" v-on:click="enableDisableSwitch4" v-model="answerCancelation" checked>
                 <label class="custom-control-label" for="cancelation-switch"></label>
               </div>
-              <input type="text" class="form-control" id="cancelation" placeholder="24h notice">
+              <div v-if="answerCancelation">
+                <input type="text" class="form-control" id="cancelation" placeholder="24h notice">
+              </div>
+              <div v-else>
+                <input type="text" class="form-control" id="cancelation" placeholder="No refunds">
+              </div>
             </div>
           </div>
         </div>
@@ -76,6 +96,14 @@
 
 <script>
 export default {
+    data () {
+        return {
+            answerOnline: "",
+            answerInPerson: "",
+            answerConsultation: "",
+            answerCancelation: ""
+        }
+    },
     methods: {
         enableDisableSwitch1: function() {
             let x = document.getElementById("online-switch");
