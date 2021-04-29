@@ -11,7 +11,7 @@
 
           <div class="form-group">
             <label for="select">Select or type your question</label>
-            <input class="form-control" list="select" id="question" v-model="problemCard.question">
+            <input class="form-control" list="select" id="question" v-model="problemCard.question" v-on:change="answerIsRequired">
               <datalist id="select">
                 <option>Type your own question</option>
                 <option>What is your tutoring style?</option>
@@ -92,6 +92,16 @@
           },
           deleteProblemCard: function() {
               this.problemCards.pop()
+          },
+          answerIsRequired: function() {
+              let x= document.getElementById('question');
+              let y= document.getElementById('answer');
+
+              if(x.value.length !== 0){
+                  y.setAttribute('required', "");
+              } else {
+                  y.removeAttribute('required');
+              }
           }
       }
   }
