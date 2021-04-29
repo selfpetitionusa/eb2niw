@@ -78,7 +78,7 @@
 
               document.getElementById("show").innerHTML = count;
 
-              if(count > 3){
+              if(count > 70){
                  alert("You cannot put more than 70 words in this text area.");
                  return false;
               }
