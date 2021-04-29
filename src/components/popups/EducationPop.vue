@@ -41,7 +41,7 @@
         <div id="certificates" v-for="certificate in certificates" :key="certificate.id">
           <div class="form-group">
             <label for="certificate">Certificate</label>
-            <input type="text" class="form-control" id="certificate" v-model="certificate.certificate" placeholder="Example: ATA Tutor">
+            <input type="text" class="form-control" id="certificate" v-model="certificate.certificate" v-on:change="descIsRequired" placeholder="Example: ATA Tutor">
           </div>
 
           <div class="form-group">
@@ -104,6 +104,18 @@ export default {
         },
         deleteCertificate: function() {
             this.certificates.pop()
+        },
+        descIsRequired: function() {
+            let x= document.getElementById('certDesc');
+            let y= document.getElementById('certificate');
+
+            if(y.value.length !== 0){
+                x.setAttribute('required', "");
+            }
+
+            if(y.value.length == 0){
+                x.removeAttribute('required');
+            }
         }
     }
 }
