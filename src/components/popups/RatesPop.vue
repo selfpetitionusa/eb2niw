@@ -24,9 +24,9 @@
             <tbody>
               <tr>
                 <td><input type="text" class="form-control" id="rateCurrency-1" v-on:input="enableInputRate2" required></td>
-                <td><input type="number" class="form-control" id="rateAmount-1" required></td>
+                <td><input type="number" class="form-control" id="rateAmount-1" v-on:input="enableInputRate2" required></td>
                 <td>
-                  <input class="form-control" list="select-1" id="rateType-1" required>
+                  <input class="form-control" list="select-1" id="rateType-1" v-on:input="enableInputRate2" required>
                     <datalist id="select-1">
                       <option selected>per session</option>
                       <option>per lesson</option>
@@ -35,14 +35,16 @@
                       <option>Type your own</option>
                     </datalist>
                 </td>
-                <td><input type="text" class="form-control" id="rateComment-1" placeholder="Example: Rates starting from"></td>
+                <td>
+                  <input type="text" class="form-control" id="rateComment-1" v-on:input="enableInputRate2" placeholder="Example: Rates starting from">
+                </td>
               </tr>
 
               <tr>
                 <td><input type="text" class="form-control" id="rateCurrency-2" v-on:input="enableInputRate3" disabled></td>
-                <td><input type="number" class="form-control" id="rateAmount-2" disabled></td>
+                <td><input type="number" class="form-control" id="rateAmount-2" v-on:input="enableInputRate3" disabled></td>
                 <td>
-                  <input class="form-control" list="select-2" id="rateType-2" disabled>
+                  <input class="form-control" list="select-2" id="rateType-2" v-on:input="enableInputRate3" disabled>
                     <datalist id="select-2">
                       <option selected>per session</option>
                       <option>per lesson</option>
@@ -51,14 +53,16 @@
                       <option>Type your own</option>
                     </datalist>
                 </td>
-                <td><input type="text" class="form-control" id="rateComment-2" placeholder="Example: University level students" disabled></td>
+                <td>
+                  <input type="text" class="form-control" id="rateComment-2" placeholder="Example: University level students" v-on:input="enableInputRate3" disabled>
+                </td>
               </tr>
 
               <tr>
                 <td><input type="text" class="form-control" id="rateCurrency-3" v-on:input="enableInputRate4()" disabled></td>
-                <td><input type="number" class="form-control" id="rateAmount-3" disabled></td>
+                <td><input type="number" class="form-control" id="rateAmount-3" v-on:input="enableInputRate4" disabled></td>
                 <td>
-                  <input class="form-control" list="select-3" id="rateType-3" disabled>
+                  <input class="form-control" list="select-3" id="rateType-3" v-on:input="enableInputRate4" disabled>
                       <datalist id="select-3">
                       <option selected>per session</option>
                       <option>per lesson</option>
@@ -67,7 +71,9 @@
                       <option>Type your own</option>
                     </datalist>
                 </td>
-                <td><input type="text" class="form-control" id="rateComment-3" placeholder="Example: Students 5-7 years old" disabled></td>
+                <td>
+                  <input type="text" class="form-control" id="rateComment-3" placeholder="Example: Students 5-7 years old" v-on:input="enableInputRate4" disabled>
+                </td>
               </tr>
 
               <tr>
@@ -122,22 +128,79 @@
     export default {
         methods: {
             enableInputRate2: function() {
-                document.getElementById('rateCurrency-2').removeAttribute('disabled');
-                document.getElementById('rateAmount-2').removeAttribute('disabled');
-                document.getElementById('rateType-2').removeAttribute('disabled');
-                document.getElementById('rateComment-2').removeAttribute('disabled');
+                let x = document.getElementById('rateCurrency-1');
+                let a = document.getElementById('rateAmount-1');
+                let b = document.getElementById('rateType-1');
+                let c = document.getElementById('rateComment-1');
+
+                let y = document.getElementById('rateCurrency-2');
+                let z = document.getElementById('rateAmount-2');
+                let v = document.getElementById('rateType-2');
+                let w = document.getElementById('rateComment-2');
+
+                if(x.value.length == 0 && a.value.length == 0 && b.value.length == 0 && c.value.length == 0){
+                    y.setAttribute('disabled', "");
+                    z.setAttribute('disabled', "");
+                    v.setAttribute('disabled', "");
+                    w.setAttribute('disabled', "");
+                }
+
+                if(x.value.length !== 0 || a.value.length !== 0 || b.value.length !== 0 || c.value.length !== 0){
+                    y.removeAttribute('disabled');
+                    z.removeAttribute('disabled');
+                    v.removeAttribute('disabled');
+                    w.removeAttribute('disabled');
+                }
             },
             enableInputRate3: function() {
-                document.getElementById('rateCurrency-3').removeAttribute('disabled');
-                document.getElementById('rateAmount-3').removeAttribute('disabled');
-                document.getElementById('rateType-3').removeAttribute('disabled');
-                document.getElementById('rateComment-3').removeAttribute('disabled');
+                let x = document.getElementById('rateCurrency-2');
+                let a = document.getElementById('rateAmount-2');
+                let b = document.getElementById('rateType-2');
+                let c = document.getElementById('rateComment-2');
+
+                let y = document.getElementById('rateCurrency-3');
+                let z = document.getElementById('rateAmount-3');
+                let v = document.getElementById('rateType-3');
+                let w = document.getElementById('rateComment-3');
+
+                if(x.value.length == 0 && a.value.length == 0 && b.value.length == 0 && c.value.length == 0){
+                    y.setAttribute('disabled', "");
+                    z.setAttribute('disabled', "");
+                    v.setAttribute('disabled', "");
+                    w.setAttribute('disabled', "");
+                }
+
+                if(x.value.length !== 0 || a.value.length !== 0 || b.value.length !== 0 || c.value.length !== 0){
+                    y.removeAttribute('disabled');
+                    z.removeAttribute('disabled');
+                    v.removeAttribute('disabled');
+                    w.removeAttribute('disabled');
+                }
             },
             enableInputRate4: function() {
-                document.getElementById('rateCurrency-4').removeAttribute('disabled');
-                document.getElementById('rateAmount-4').removeAttribute('disabled');
-                document.getElementById('rateType-4').removeAttribute('disabled');
-                document.getElementById('rateComment-4').removeAttribute('disabled');
+                let x = document.getElementById('rateCurrency-3');
+                let a = document.getElementById('rateAmount-3');
+                let b = document.getElementById('rateType-3');
+                let c = document.getElementById('rateComment-3');
+
+                let y = document.getElementById('rateCurrency-4');
+                let z = document.getElementById('rateAmount-4');
+                let v = document.getElementById('rateType-4');
+                let w = document.getElementById('rateComment-4');
+
+                if(x.value.length == 0 && a.value.length == 0 && b.value.length == 0 && c.value.length == 0){
+                    y.setAttribute('disabled', "");
+                    z.setAttribute('disabled', "");
+                    v.setAttribute('disabled', "");
+                    w.setAttribute('disabled', "");
+                }
+
+                if(x.value.length !== 0 || a.value.length !== 0 || b.value.length !== 0 || c.value.length !== 0){
+                    y.removeAttribute('disabled');
+                    z.removeAttribute('disabled');
+                    v.removeAttribute('disabled');
+                    w.removeAttribute('disabled');
+                }
             },
             inputIsRequired: function() {
                 const u = document.forms['rates-popup']['rateCurrency-1'].value;
