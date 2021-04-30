@@ -3889,6 +3889,9 @@ Pop-ups
     .icon {
         font-size: 26px;
         margin: 5px;
+    }
+
+    .active {
         color: #6084A4;
 
         &:hover {
@@ -3897,6 +3900,18 @@ Pop-ups
 
         &:active {
             color: rgb(96, 132, 164);
+        }
+    }
+
+    .disabled {
+        color: #CECECE;
+
+        &:hover {
+            color: #CECECE;
+        }
+
+        &:active {
+            color: #CECECE;
         }
     }
 }

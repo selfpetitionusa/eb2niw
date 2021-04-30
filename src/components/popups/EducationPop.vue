@@ -33,8 +33,8 @@
         </div>
 
         <div class="plus-minus">
-          <font-awesome-icon class="icon" icon="plus-circle" v-on:click="addSchool" />
-          <font-awesome-icon class="icon" icon="minus-circle" v-on:click="deleteSchool"/>
+          <font-awesome-icon class="icon" icon="plus-circle" v-bind:class="[isActiveSchoolPlus ? 'active' : 'disabled']" v-on:click="addSchool" />
+          <font-awesome-icon class="icon" icon="minus-circle" v-bind:class="[isActiveSchoolMinus ? 'active' : 'disabled']" v-on:click="deleteSchool"/>
         </div>
         <p class="plus-minus-comment">University / School</p>
 
@@ -51,13 +51,10 @@
         </div>
 
         <div class="plus-minus">
-          <font-awesome-icon class="icon" icon="plus-circle" v-on:click="addCertificate" />
-          <font-awesome-icon class="icon" icon="minus-circle" v-on:click="deleteCertificate" />
+          <font-awesome-icon class="icon" icon="plus-circle" v-bind:class="[isActiveCertificatePlus ? 'active' : 'disabled']" v-on:click="addCertificate" />
+          <font-awesome-icon class="icon" icon="minus-circle" v-bind:class="[isActiveCertificateMinus ? 'active' : 'disabled']" v-on:click="deleteCertificate" />
         </div>
         <p class="plus-minus-comment">Certificate</p>
-
-        <div>My number schools: {{schoolsNumber}}</div>
-        <div>My number certificates: {{certificatesNumber}}</div>
 
         <div class="btn-container">
           <button type="reset" class="btn btn-primary btn-border btn-cancel">Cancel</button>
@@ -83,12 +80,16 @@ export default {
                     school: "",
                     degree: ""
                 }],
-            schoolsNumber: 1,
             certificates: [{
                     certificate: "",
                     certDesc: ""
                 }],
-            certificatesNumber: 1
+            schoolsNumber: 1,
+            certificatesNumber: 1,
+            isActiveSchoolPlus: true,
+            isActiveSchoolMinus: true,
+            isActiveCertificatePlus: true,
+            isActiveCertificateMinus: true
         }
     },
     methods: {
@@ -98,13 +99,21 @@ export default {
                     school: "",
                     degree: ""
                 });
+                this.isActiveSchoolMinus = true;
                 this.schoolsNumber++;
+            }
+            if(this.schoolsNumber === 3) {
+                this.isActiveSchoolPlus = false;
             }
         },
         deleteSchool: function() {
             if(this.schoolsNumber > 1) {
                 this.schools.pop();
+                this.isActiveSchoolPlus = true;
                 this.schoolsNumber--;
+            }
+            if(this.schoolsNumber === 1) {
+                this.isActiveSchoolMinus = false;
             }
         },
         addCertificate: function() {
@@ -113,13 +122,21 @@ export default {
                     certificate: "",
                     certDesc: ""
                 });
+                this.isActiveCertificateMinus = true;
                 this.certificatesNumber++;
+            }
+            if(this.certificatesNumber === 3) {
+                this.isActiveCertificatePlus = false;
             }
         },
         deleteCertificate: function() {
             if(this.certificatesNumber > 1) {
                 this.certificates.pop();
+                this.isActiveCertificatePlus = true;
                 this.certificatesNumber--;
+            }
+            if(this.certificatesNumber === 1) {
+                this.isActiveCertificateMinus = false;
             }
         },
         descIsRequired: function() {
