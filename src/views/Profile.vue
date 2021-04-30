@@ -104,29 +104,58 @@
                     <div class="row education-container">
 
                         <div class="col-xl-8 col-lg-9 col-md-8 col-sm-12 col-12 items-all">
-                            <div class="row items" v-for="school in response.schools" :key="school.value">
+                            <div v-if="response.schools">
+                                <div class="row items" v-for="school in response.schools" :key="school.value">
+                                    <div class="col-2 icons-column">
+                                        <div class="icon-container">
+                                            <font-awesome-icon class="icon" icon="graduation-cap" />
+                                        </div>
+                                    </div>
+                                    <div class="col-10 education-input">
+                                        <p class="school label">{{school.label}}</p>
+                                        <p class="school value">{{school.value}}</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div v-else class="row items">
                                 <div class="col-2 icons-column">
                                     <div class="icon-container">
                                         <font-awesome-icon class="icon" icon="graduation-cap" />
                                     </div>
                                 </div>
                                 <div class="col-10 education-input">
-                                    <p class="school label">{{school.label}}</p>
-                                    <p class="school value">{{school.value}}</p>
+                                    <p class="school label">University / School</p>
+                                    <p class="school value">Degree and field of study</p>
                                 </div>
                             </div>
 
-                            <div class="row items" v-for="certificate in response.certificates" :key="certificate.value">
+                            <div v-if="response.profile.firstName">
+                                <div class="row items" v-for="certificate in response.certificates" :key="certificate.value">
+                                    <div class="col-2 icons-column">
+                                        <div class="icon-container">
+                                            <font-awesome-icon class="icon" icon="star-of-life" />
+                                        </div>
+                                    </div>
+                                    <div class="col-10 education-input">
+                                        <p class="certificate label">{{certificate.label}}</p>
+                                        <p class="certificate value">{{certificate.value}}</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div v-else class="row items">
                                 <div class="col-2 icons-column">
                                     <div class="icon-container">
                                         <font-awesome-icon class="icon" icon="star-of-life" />
                                     </div>
                                 </div>
                                 <div class="col-10 education-input">
-                                    <p class="certificate label">{{certificate.label}}</p>
-                                    <p class="certificate value">{{certificate.value}}</p>
+                                    <p class="certificate label">Certificate</p>
+                                    <p class="certificate value">Certificate description</p>
                                 </div>
                             </div>
+
                         </div>
 
                         <div class="col graphic-bio">
@@ -135,8 +164,11 @@
 
                     </div>
 
-                    <div class="bio">
+                    <div v-if="response.profile.bio" class="bio">
                         <p v-for="bio in response.profile.bio.split(/\r?\n/)" :key="bio">{{bio}}</p>
+                    </div>
+                    <div v-else class="bio">
+                        <p>Your bio</p>
                     </div>
 
             </div>
