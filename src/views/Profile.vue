@@ -65,6 +65,9 @@
 
                 <hr>
 
+
+<!-- ACTION BUTTON -->
+
                 <div v-if="response.profile.firstName && response.profile.email" class="btn-profile">
                     <a :href="'mailto:' + response.profile.email" class="btn btn-primary inner" role="button">Contact {{response.profile.firstName}}</a>
                 </div>
@@ -103,6 +106,9 @@
 
                     <div class="row education-container">
 
+
+<!-- SCHOOLS -->
+
                         <div class="col-xl-8 col-lg-9 col-md-8 col-sm-12 col-12 items-all">
                             <div v-if="response.schools">
                                 <div class="row items" v-for="school in response.schools" :key="school.value">
@@ -129,6 +135,9 @@
                                       <p class="school value">Degree and field of study</p>
                                   </div>
                               </div>
+
+
+<!-- CERTIFICATES -->
 
                             <div v-if="response.profile.firstName">
                                 <div class="row items" v-for="certificate in response.certificates" :key="certificate.value">
@@ -157,6 +166,9 @@
                               </div>
 
                         </div>
+
+
+<!-- BIO -->
 
                         <div class="col graphic-bio">
                             <img src="../assets/img/Graphic_bio.svg">
@@ -222,6 +234,9 @@
                           </div>
                       </div>
                   </div>
+
+
+<!-- MY STUDENTS -->
 
                 <div class="my-students">
                     <font-awesome-icon class="icon" icon="users" />
@@ -377,6 +392,9 @@
                     <div class="header"><h2>Expertise</h2></div>
                 </div>
 
+
+<!-- YOUTUBE -->
+
                 <div v-if="response.profile.firstName">
                     <div v-if="response.profile.youtubeIntroLink" class="youtube-display">
                         <iframe width="560" height="315" :src="response.profile.youtubeLink" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -385,6 +403,9 @@
                   <div v-else>
                       <div class="youtube-display cms"></div>
                   </div>
+
+
+<!-- CAROUSEL -->
 
                 <div class="expertise-arrows">
                     <div v-on:click="scroll('left')" class="left-arrow">
@@ -409,6 +430,9 @@
                     </div>
 
                 </div>
+
+
+<!-- LOGO -->
 
                 <div class="tutomy-logo">
                   <p>Powered by</p>
