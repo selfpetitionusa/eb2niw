@@ -357,6 +357,9 @@
                     </div>
                 </div>
 
+
+<!-- LOGO IF NO EXPERTISE SECTION -->
+
                 <div v-if="(response.profile.youtubeIntroLink === null && response.problemCards.length === 0)" class="tutomy-logo">
                   <p>Powered by</p>
                   <img src="../assets/img/logo2.png">
