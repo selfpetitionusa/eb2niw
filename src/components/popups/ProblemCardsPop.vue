@@ -36,8 +36,8 @@
         </div>
 
         <div class="plus-minus">
-          <font-awesome-icon class="icon" icon="plus-circle" v-on:click="addProblemCard" />
-          <font-awesome-icon class="icon" icon="minus-circle" v-on:click="deleteProblemCard" />
+          <font-awesome-icon class="icon active" icon="plus-circle" v-on:click="addProblemCard" />
+          <font-awesome-icon class="icon" icon="minus-circle" v-bind:class="[isActiveCardMinus ? 'active' : 'disabled']" v-on:click="deleteProblemCard" />
         </div>
         <p class="plus-minus-comment">Problem card</p>
 
@@ -61,7 +61,9 @@
               problemCards: [{
                       question: "",
                       answer: ""
-                  }]
+                  }],
+              cardsNumber: 1,
+              isActiveCardMinus: true
           }
       },
       methods: {
@@ -88,10 +90,18 @@
               this.problemCards.push({
                   question: "",
                   answer: ""
-              })
+              });
+              this.isActiveCardMinus = true;
+              this.cardsNumber++;
           },
           deleteProblemCard: function() {
-              this.problemCards.pop()
+              if(this.cardsNumber > 1) {
+                  this.problemCards.pop();
+                  this.cardsNumber--;
+              }
+              if(this.cardsNumber === 1) {
+                  this.isActiveCardMinus = false;
+              }
           },
           answerIsRequired: function() {
               let x= document.getElementById('question');
