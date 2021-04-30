@@ -298,10 +298,13 @@
                             <div class="col-1 icon-container"><font-awesome-icon class="icon" icon="globe" /></div>
                             <div class="col-11 text">
                                 <div class="label">Online lessons:
-                                    <div class="value">
+                                    <div v-if="response.profile.firstName" class="value">
                                         <div v-if="response.profile.rateInfo.online" class="input">{{response.profile.rateInfo.onlineComment === null ? 'Yes' : response.profile.rateInfo.onlineComment}}</div>
                                         <div v-else class="input">No</div>
                                     </div>
+                                      <div v-else class="value">
+                                          <div class="input">Yes</div>
+                                      </div>
                                 </div>
                             </div>
                         </div>
@@ -310,10 +313,13 @@
                             <div class="col-1 icon-container"><font-awesome-icon class="icon" icon="home" /></div>
                             <div class="col-11 text">
                                 <div class="label">In-person lessons:
-                                    <div class="value">
+                                    <div v-if="response.profile.firstName" class="value">
                                         <div v-if="response.profile.rateInfo.inPerson" class="input">{{response.profile.rateInfo.inPersonComment === null ? 'Yes' : response.profile.rateInfo.inPersonComment}}</div>
                                         <div v-else class="input">No</div>
                                     </div>
+                                      <div v-else class="value">
+                                          <div class="input">Yes</div>
+                                      </div>
                                 </div>
                             </div>
                         </div>
@@ -322,10 +328,13 @@
                             <div class="col-1 icon-container"><font-awesome-icon class="icon" icon="tag" /></div>
                             <div class="col-11 text">
                                 <div class="label">Free consultation:
-                                    <div class="value">
+                                    <div v-if="response.profile.firstName" class="value">
                                         <div v-if="response.profile.rateInfo.freeConsultation" class="input">{{response.profile.rateInfo.freeConsultationComment === null ? 'Yes' : response.profile.rateInfo.freeConsultationComment}}</div>
                                         <div v-else class="input">No</div>
                                     </div>
+                                      <div v-else class="value">
+                                          <div class="input">Yes</div>
+                                      </div>
                                 </div>
                             </div>
                         </div>
@@ -334,10 +343,13 @@
                             <div class="col-1 icon-container"><font-awesome-icon class="icon" icon="calendar-alt" /></div>
                             <div class="col-11 text">
                                 <div class="label">Cancelation policy:
-                                    <div class="value">
+                                    <div v-if="response.profile.firstName" class="value">
                                         <div v-if="response.profile.rateInfo.cancellationPolicy" class="input">{{response.profile.rateInfo.cancellationPolicyComment === null ? '24h notice' : response.profile.rateInfo.cancellationPolicyComment}}</div>
                                         <div v-else class="input">No refunds</div>
                                     </div>
+                                      <div v-else class="value">
+                                          <div class="input">24h notice</div>
+                                      </div>
                                 </div>
                             </div>
                         </div>
