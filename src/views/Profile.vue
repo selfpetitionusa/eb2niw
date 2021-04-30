@@ -33,15 +33,20 @@
 
                 <img class="photo" :src="response.profile.photo" />
                 <div class="name-input">
-                    <h2>{{response.profile.firstName}}</h2>
-                    <h2 class="lastname">{{response.profile.lastName}}</h2>
+                    <h2 v-if="response.profile.firstName">{{response.profile.firstName}}</h2>
+                    <h2 v-else>Your</h2>
+                    <h2 v-if="response.profile.lastName" class="lastname">{{response.profile.lastName}}</h2>
+                    <h2 v-else>name</h2>
                 </div>
 
-                <div class="subject-categories">{{response.categories.map(cat => cat.categoryName).join(' | ')}}</div>
+                <div v-if="response.categories.length > 0" class="subject-categories">{{response.categories.map(cat => cat.categoryName).join(' | ')}}</div>
+                <div v-else class="subject-categories">Subject 1</div>
 
                 <div  v-if="!response.profile.shortBio" class="short-bio">
-                    <p class="line-1">Hi, my name is {{response.profile.firstName}}.</p>
-                    <p class="line-2">I tutor {{formatArray(response.categories.map(cat => cat.categoryName))}}.</p>
+                    <p v-if="response.profile.firstName" class="line-1">Hi, my name is {{response.profile.firstName}}.</p>
+                    <p v-else class="line-1">Hi, my name is &lt; Name &gt;.</p>
+                    <p v-if="response.categories.length > 0" class="line-2">I tutor {{formatArray(response.categories.map(cat => cat.categoryName))}}.</p>
+                    <p v-else class="line-2">I tutor &lt; Subject 1 &gt;.</p>
                     <p>Welcome to my website!</p>
                 </div>
 
@@ -60,8 +65,11 @@
 
                 <hr>
 
-                <div class="btn-profile">
+                <div v-if="response.profile.firstName && response.profile.email" class="btn-profile">
                     <a :href="'mailto:' + response.profile.email" class="btn btn-primary inner" role="button">Contact {{response.profile.firstName}}</a>
+                </div>
+                <div v-else class="btn-profile">
+                    <a href="mailto:youremail@gmail.com" class="btn btn-primary inner" role="button">Contact &lt; Name &gt;</a>
                 </div>
 
             </div>
@@ -86,7 +94,12 @@
 
         <div class="tu-card-container">
             <div id="section-about-me" class="tu-card">
-                <div class="section-container header"><h2>{{response.profile.headline}}</h2></div>
+                <div v-if="response.profile.headline" class="section-container header">
+                  <h2>{{response.profile.headline}}</h2>
+                </div>
+                <div v-else class="section-container header">
+                  <h2>Your Headline</h2>
+                </div>
 
                     <div class="row education-container">
 
