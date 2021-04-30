@@ -30,7 +30,7 @@
 
           <div class="form-group">
             <label for="answer">Answer - max 70 words</label>
-            <textarea class="form-control" id="answer" v-model="problemCard.answer" rows="5" @input="countWord()"></textarea>
+            <textarea class="form-control" id="answer" v-model="problemCard.answer" rows="5" v-on:input="countWord"></textarea>
             <div class="count-words"><span id="show">0</span> /70</div>
           </div>
         </div>
@@ -68,9 +68,9 @@
       },
       methods: {
           countWord: function() {
-              const words = document.getElementById("answer").value;
+              const words = document.getElementById("answer");
               let count = 0;
-              const split = words.split(' ');
+              const split = words.value.split(' ');
 
               for (let i = 0; i < split.length; i++) {
                   if (split[i] != "") {
@@ -80,8 +80,9 @@
 
               document.getElementById("show").innerHTML = count;
 
-              if(count > 70){
+              if(count >= 70){
                  alert("You cannot put more than 70 words in this text area.");
+                 words.maxLength = words.length;
                  return false;
               }
               return true;
