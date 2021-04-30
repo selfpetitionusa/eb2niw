@@ -30,8 +30,8 @@
         </div>
 
         <div class="plus-minus">
-          <font-awesome-icon class="icon" icon="plus-circle" v-on:click="addSubject" />
-          <font-awesome-icon class="icon" icon="minus-circle" v-on:click="deleteSubject" />
+          <font-awesome-icon class="icon active" icon="plus-circle" v-on:click="addSubject" />
+          <font-awesome-icon class="icon" icon="minus-circle" v-bind:class="[isActiveSubjectMinus ? 'active' : 'disabled']" v-on:click="deleteSubject" />
         </div>
         <p class="plus-minus-comment">Subject</p>
 
@@ -96,7 +96,9 @@ export default {
                 subCat5: "",
                 subCat6: "",
                 subCat7: ""
-            }]
+            }],
+            subjectsNumber: 1,
+            isActiveSubjectMinus: true
         }
     },
     methods: {
@@ -110,10 +112,18 @@ export default {
                 subCat5: "",
                 subCat6: "",
                 subCat7: ""
-            })
+            });
+            this.isActiveSubjectMinus = true;
+            this.subjectsNumber++;
         },
         deleteSubject: function() {
-            this.subjects.pop()
+            if(this.subjectsNumber > 1) {
+                this.subjects.pop();
+                this.subjectsNumber--;
+            }
+            if(this.subjectsNumber === 1) {
+                this.isActiveSubjectMinus = false;
+            }
         },
         enableInputSubcat2: function() {
             document.getElementById('subject-categories2').removeAttribute('disabled');
