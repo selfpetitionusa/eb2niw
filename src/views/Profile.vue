@@ -34,25 +34,25 @@
                 <img class="photo" :src="response.profile.photo" />
                 <div class="name-input">
                     <h2 v-if="response.profile.firstName">{{response.profile.firstName}}</h2>
-                    <h2 v-else>Your</h2>
+                      <h2 v-else>Your</h2>
                     <h2 v-if="response.profile.lastName" class="lastname">{{response.profile.lastName}}</h2>
-                    <h2 v-else>name</h2>
+                      <h2 v-else>name</h2>
                 </div>
 
                 <div v-if="response.categories.length > 0" class="subject-categories">{{response.categories.map(cat => cat.categoryName).join(' | ')}}</div>
-                <div v-else class="subject-categories">Subject 1</div>
+                  <div v-else class="subject-categories">Subject 1</div>
 
                 <div  v-if="!response.profile.shortBio" class="short-bio">
                     <p v-if="response.profile.firstName" class="line-1">Hi, my name is {{response.profile.firstName}}.</p>
-                    <p v-else class="line-1">Hi, my name is &lt; Name &gt;.</p>
+                      <p v-else class="line-1">Hi, my name is &lt; Name &gt;.</p>
                     <p v-if="response.categories.length > 0" class="line-2">I tutor {{formatArray(response.categories.map(cat => cat.categoryName))}}.</p>
-                    <p v-else class="line-2">I tutor &lt; Subject 1 &gt;.</p>
+                      <p v-else class="line-2">I tutor &lt; Subject 1 &gt;.</p>
                     <p>Welcome to my website!</p>
                 </div>
 
-                <div v-else class="short-bio">
-                    <p class="line-1" v-for="bio in response.profile.shortBio.split(/\r?\n/)" :key="bio">{{bio}}</p>
-                </div>
+                  <div v-else class="short-bio">
+                      <p class="line-1" v-for="bio in response.profile.shortBio.split(/\r?\n/)" :key="bio">{{bio}}</p>
+                  </div>
 
                 <div class="social-links">
                     <ul>
@@ -68,9 +68,9 @@
                 <div v-if="response.profile.firstName && response.profile.email" class="btn-profile">
                     <a :href="'mailto:' + response.profile.email" class="btn btn-primary inner" role="button">Contact {{response.profile.firstName}}</a>
                 </div>
-                <div v-else class="btn-profile">
-                    <a href="mailto:youremail@gmail.com" class="btn btn-primary inner" role="button">Contact &lt; Name &gt;</a>
-                </div>
+                  <div v-else class="btn-profile">
+                      <a href="mailto:youremail@gmail.com" class="btn btn-primary inner" role="button">Contact &lt; Name &gt;</a>
+                  </div>
 
             </div>
         </div>
@@ -97,9 +97,9 @@
                 <div v-if="response.profile.headline" class="section-container header">
                   <h2>{{response.profile.headline}}</h2>
                 </div>
-                <div v-else class="section-container header">
-                  <h2>Your Headline</h2>
-                </div>
+                  <div v-else class="section-container header">
+                    <h2>Your Headline</h2>
+                  </div>
 
                     <div class="row education-container">
 
@@ -118,17 +118,17 @@
                                 </div>
                             </div>
 
-                            <div v-else class="row items">
-                                <div class="col-2 icons-column">
-                                    <div class="icon-container">
-                                        <font-awesome-icon class="icon" icon="graduation-cap" />
-                                    </div>
-                                </div>
-                                <div class="col-10 education-input">
-                                    <p class="school label">University / School</p>
-                                    <p class="school value">Degree and field of study</p>
-                                </div>
-                            </div>
+                              <div v-else class="row items">
+                                  <div class="col-2 icons-column">
+                                      <div class="icon-container">
+                                          <font-awesome-icon class="icon" icon="graduation-cap" />
+                                      </div>
+                                  </div>
+                                  <div class="col-10 education-input">
+                                      <p class="school label">University / School</p>
+                                      <p class="school value">Degree and field of study</p>
+                                  </div>
+                              </div>
 
                             <div v-if="response.profile.firstName">
                                 <div class="row items" v-for="certificate in response.certificates" :key="certificate.value">
@@ -144,17 +144,17 @@
                                 </div>
                             </div>
 
-                            <div v-else class="row items">
-                                <div class="col-2 icons-column">
-                                    <div class="icon-container">
-                                        <font-awesome-icon class="icon" icon="star-of-life" />
-                                    </div>
-                                </div>
-                                <div class="col-10 education-input">
-                                    <p class="certificate label">Certificate</p>
-                                    <p class="certificate value">Certificate description</p>
-                                </div>
-                            </div>
+                              <div v-else class="row items">
+                                  <div class="col-2 icons-column">
+                                      <div class="icon-container">
+                                          <font-awesome-icon class="icon" icon="star-of-life" />
+                                      </div>
+                                  </div>
+                                  <div class="col-10 education-input">
+                                      <p class="certificate label">Certificate</p>
+                                      <p class="certificate value">Certificate description</p>
+                                  </div>
+                              </div>
 
                         </div>
 
@@ -167,9 +167,9 @@
                     <div v-if="response.profile.bio" class="bio">
                         <p v-for="bio in response.profile.bio.split(/\r?\n/)" :key="bio">{{bio}}</p>
                     </div>
-                    <div v-else class="bio">
-                        <p>Your bio</p>
-                    </div>
+                      <div v-else class="bio">
+                          <p>Your bio</p>
+                      </div>
 
             </div>
 
@@ -184,31 +184,50 @@
                     <div class="header"><h2>Subjects</h2></div>
                 </div>
 
-                <div class="row subjects-container">
-                    <div class="col-md-6 subject-cards" v-for="(category, index) in response.categories" :key="category.id">
-                        <div class="subjects" :class="[index % 2 === 0 ? 'border1' : 'border2']">
-                            <p>{{category.categoryName}}</p>
-                            <hr>
-                            <div class="subject-subcategories">
-                                <ul>
-                                    <li v-if="category.subcategoryName1">{{category.subcategoryName1}}</li>
-                                    <li v-if="category.subcategoryName2">{{category.subcategoryName2}}</li>
-                                    <li v-if="category.subcategoryName3">{{category.subcategoryName3}}</li>
-                                    <li v-if="category.subcategoryName4">{{category.subcategoryName4}}</li>
-                                    <li v-if="category.subcategoryName5">{{category.subcategoryName5}}</li>
-                                    <li v-if="category.subcategoryName6">{{category.subcategoryName6}}</li>
-                                    <li v-if="category.subcategoryName7">{{category.subcategoryName7}}</li>
-                                </ul>
+                <div v-if="response.categories.length > 0">
+                    <div class="row subjects-container">
+                        <div class="col-md-6 subject-cards" v-for="(category, index) in response.categories" :key="category.id">
+                            <div class="subjects" :class="[index % 2 === 0 ? 'border1' : 'border2']">
+                                <p>{{category.categoryName}}</p>
+                                <hr>
+                                <div class="subject-subcategories">
+                                    <ul>
+                                        <li v-if="category.subcategoryName1">{{category.subcategoryName1}}</li>
+                                        <li v-if="category.subcategoryName2">{{category.subcategoryName2}}</li>
+                                        <li v-if="category.subcategoryName3">{{category.subcategoryName3}}</li>
+                                        <li v-if="category.subcategoryName4">{{category.subcategoryName4}}</li>
+                                        <li v-if="category.subcategoryName5">{{category.subcategoryName5}}</li>
+                                        <li v-if="category.subcategoryName6">{{category.subcategoryName6}}</li>
+                                        <li v-if="category.subcategoryName7">{{category.subcategoryName7}}</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
+                  <div v-else>
+                      <div class="row subjects-container">
+                          <div class="col-md-6 subject-cards">
+                              <div class="subjects border1">
+                                  <p>Subject 1</p>
+                                  <hr>
+                                  <div class="subject-subcategories">
+                                      <ul>
+                                          <li>Add your subjects</li>
+                                          <li>Add categories for each subject</li>
+                                      </ul>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
 
                 <div class="my-students">
                     <font-awesome-icon class="icon" icon="users" />
                     <div class="label">My students are</div>
-                    <div class="value">{{response.profile.studentsProfile.toLowerCase()}}</div>
+                    <div v-if="response.profile.studentsProfile" class="value">{{response.profile.studentsProfile.toLowerCase()}}</div>
+                      <div v-else class="value">&lt; your selection &gt;</div>
                 </div>
 
             </div>
@@ -227,22 +246,39 @@
                 <div class="row rates-container">
                     <div class="col-xl-6 col-lg-7 col-md-7 col-sm-7 col-12 items-all">
 
-                        <div class="row item" v-for="rate in response.rates" :key="rate.id">
-                            <div class="col-xl-4 col-lg-4 col-md-3 col-sm-3 col-3 rate-box">
-                                <div class="inner">{{rate.currency}}{{rate.amount}}</div>
-                            </div>
-                            <div class="col-xl-8 col-lg-8 col-md-9 col-sm-9 col-9 rate-comment">
-                                <div class="row">
-                                    <p class="col top">{{rate.commentTop}}</p>
-                                    <div class="w-100"></div>
-                                    <p class="col bottom" v-if="rate.commentBottom">{{rate.commentBottom}}</p>
-                                    <p class="col bottom" v-if="rate.commentBottom === null && response.rates.length === 1">Standard rate</p>
+                        <div v-if="response.rates">
+                            <div class="row item" v-for="rate in response.rates" :key="rate.id">
+                                <div class="col-xl-4 col-lg-4 col-md-3 col-sm-3 col-3 rate-box">
+                                    <div class="inner">{{rate.currency}}{{rate.amount}}</div>
+                                </div>
+                                <div class="col-xl-8 col-lg-8 col-md-9 col-sm-9 col-9 rate-comment">
+                                    <div class="row">
+                                        <p class="col top">{{rate.commentTop}}</p>
+                                        <div class="w-100"></div>
+                                        <p class="col bottom" v-if="rate.commentBottom">{{rate.commentBottom}}</p>
+                                        <p class="col bottom" v-if="rate.commentBottom === null && response.rates.length === 1">Standard rate</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="rates-additional-comment" v-if="response.profile.rateInfo.rateSectionComment">{{response.profile.rateInfo.rateSectionComment}}</div>
-                        <div class="rates-additional-comment" v-else>Details available upon request</div>
+                          <div v-else>
+                              <div class="row item">
+                                  <div class="col-xl-4 col-lg-4 col-md-3 col-sm-3 col-3 rate-box">
+                                      <div class="inner">$0</div>
+                                  </div>
+                                  <div class="col-xl-8 col-lg-8 col-md-9 col-sm-9 col-9 rate-comment">
+                                      <div class="row">
+                                          <p class="col top">per session</p>
+                                          <div class="w-100"></div>
+                                          <p class="col bottom">Rate comment</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+
+                        <div v-if="response.profile.rateInfo.rateSectionComment" class="rates-additional-comment">{{response.profile.rateInfo.rateSectionComment}}</div>
+                          <div v-else class="rates-additional-comment">Details available upon request</div>
 
                     </div>
 
