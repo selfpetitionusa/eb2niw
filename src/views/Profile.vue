@@ -377,9 +377,14 @@
                     <div class="header"><h2>Expertise</h2></div>
                 </div>
 
-                <div v-if="response.profile.youtubeIntroLink" class="youtube-display">
-                    <iframe width="560" height="315" :src="response.profile.youtubeLink" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div v-if="response.profile.firstName">
+                    <div v-if="response.profile.youtubeIntroLink" class="youtube-display">
+                        <iframe width="560" height="315" :src="response.profile.youtubeLink" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
                 </div>
+                  <div v-else>
+                      <div class="youtube-display cms"></div>
+                  </div>
 
                 <div class="expertise-arrows">
                     <div v-on:click="scroll('left')" class="left-arrow">

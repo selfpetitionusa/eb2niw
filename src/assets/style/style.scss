@@ -3510,6 +3510,10 @@ Expertise section
     display: flex;
     justify-content: center;
     margin-top: 1.5rem;
+
+    &.cms {
+        height: 14rem;
+    }
 }
 
 .expertise-arrows {
