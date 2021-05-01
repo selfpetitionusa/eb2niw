@@ -188,7 +188,7 @@
                     <div v-if="response.profile.bio" class="bio">
                         <p v-for="bio in response.profile.bio.split(/\r?\n/)" :key="bio">{{bio}}</p>
                     </div>
-                      <div v-else class="bio">
+                      <div v-else class="bio cms">
                           <p>Your bio</p>
                       </div>
 
