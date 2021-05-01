@@ -31,7 +31,16 @@
         <div class="col-xl-3 col-lg-4 col-md-12 col-sm-12 col-12">
             <div class="left-section">
 
-                <img class="photo" :src="response.profile.photo" />
+                <div v-if="response.profile.photo">
+                    <img class="photo" :src="response.profile.photo" />
+                </div>
+                  <div v-else>
+                    <img class="photo cms" />
+                    <div class="photo-text">
+                      <p>Your photo</p>
+                    </div>
+                  </div>
+
                 <div class="name-input">
                     <h2 v-if="response.profile.firstName">{{response.profile.firstName}}</h2>
                       <h2 v-else>Your</h2>
