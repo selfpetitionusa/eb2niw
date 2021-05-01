@@ -39,13 +39,13 @@
                       <h2 v-else>name</h2>
                 </div>
 
-                <div v-if="response.categories.length > 0" class="subject-categories">{{response.categories.map(cat => cat.categoryName).join(' | ')}}</div>
+                <div v-if="response.categories.length" class="subject-categories">{{response.categories.map(cat => cat.categoryName).join(' | ')}}</div>
                   <div v-else class="subject-categories">Subject 1</div>
 
                 <div  v-if="!response.profile.shortBio" class="short-bio">
                     <p v-if="response.profile.firstName" class="line-1">Hi, my name is {{response.profile.firstName}}.</p>
                       <p v-else class="line-1">Hi, my name is &lt; Name &gt;.</p>
-                    <p v-if="response.categories.length > 0" class="line-2">I tutor {{formatArray(response.categories.map(cat => cat.categoryName))}}.</p>
+                    <p v-if="response.categories.length" class="line-2">I tutor {{formatArray(response.categories.map(cat => cat.categoryName))}}.</p>
                       <p v-else class="line-2">I tutor &lt; Subject 1 &gt;.</p>
                     <p>Welcome to my website!</p>
                 </div>
@@ -68,7 +68,7 @@
 
 <!-- ACTION BUTTON -->
 
-                <div v-if="response.profile.firstName && response.profile.email" class="btn-profile">
+                <div v-if="response.profile.firstName" class="btn-profile">
                     <a :href="'mailto:' + response.profile.email" class="btn btn-primary inner" role="button">Contact {{response.profile.firstName}}</a>
                 </div>
                   <div v-else class="btn-profile">
@@ -196,7 +196,7 @@
                     <div class="header"><h2>Subjects</h2></div>
                 </div>
 
-                <div v-if="response.categories.length > 0">
+                <div v-if="response.categories.length">
                     <div class="row subjects-container">
                         <div class="col-md-6 subject-cards" v-for="(category, index) in response.categories" :key="category.id">
                             <div class="subjects" :class="[index % 2 === 0 ? 'border1' : 'border2']">
@@ -228,6 +228,7 @@
                                       <ul>
                                           <li>Add your subjects</li>
                                           <li>Add categories for each subject</li>
+                                          <li>Up to 7 subject's categories</li>
                                       </ul>
                                   </div>
                               </div>
@@ -413,16 +414,25 @@
                     </div>
 
                     <div id="problems" class="my-carousel" v-on:scroll.passive='handleScroll'>
-                        <div class="carousel-container">
+                        <div v-if="response.profile.firstName" class="carousel-container">
                             <div :id="'problem-card'+ index" class="problem-card" v-for="(problemCard, index) in response.problemCards" :key="problemCard.id">
                                 <div class="icon"><img :src="getImgUrl(index)"></div>
                                 <div class="input">
                                     <p class="question">{{problemCard.question}}</p>
                                     <p class="answer">{{problemCard.answer}}</p>
                                 </div>
-
                             </div>
                         </div>
+
+                          <div v-else class="carousel-container">
+                              <div class="problem-card">
+                                  <div class="icon"><img src="../assets/img/icon_expertise0.svg"></div>
+                                  <div class="input">
+                                      <p class="question">Select or add your question</p>
+                                      <p class="answer">Problem cards tell parents and students about your expertise and teaching style.</p>
+                                  </div>
+                              </div>
+                          </div>
                     </div>
 
                     <div v-on:click="scroll('right')" class="right-arrow">
