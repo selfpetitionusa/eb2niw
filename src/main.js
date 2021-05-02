@@ -11,7 +11,8 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { router } from './router';
 import './assets/style/custom.scss';
 import VueMeta from 'vue-meta'
-
+import VueCroppie from 'vue-croppie';
+import 'croppie/croppie.css' // import the croppie css manually
 
 Vue.config.productionTip = false;
 
@@ -28,6 +29,7 @@ Vue.use(BootstrapVue);
 Vue.use(VueFeather);
 Vue.use(VueRouter);
 Vue.use(VueMeta);
+Vue.use(VueCroppie);
 
 new Vue({
   router,

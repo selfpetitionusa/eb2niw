@@ -26,6 +26,9 @@ const actions = {
         userService.logout();
         commit('logout');
     },
+    uploadImage(test, id, image) {
+        userService.uploadImage(id, image);
+    },
     register({ dispatch, commit }, user) {
         commit('registerRequest', user);
 

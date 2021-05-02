@@ -3,7 +3,8 @@ import config  from "../config/config";
 export const userService = {
     login,
     logout,
-    register
+    register,
+    uploadImage
 };
 
 function login(email, password) {
@@ -40,6 +41,19 @@ function register(user) {
 
     return fetch(`${config.apiUrl}/users`, requestOptions).then(handleResponse);
 }
+
+function uploadImage(context, {id, picture}) {
+    const requestOptions = {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            picture: picture
+        })
+    };
+
+    return fetch(`${config.apiUrl}/tutors/${id}/avatar`, requestOptions).then(handleResponse);
+}
+
 
 
 function handleResponse(response) {
