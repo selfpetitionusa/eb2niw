@@ -3536,9 +3536,15 @@ Expertise section
     display: flex;
     justify-content: center;
     margin-top: 1.5rem;
+}
 
-    &.cms {
-        height: 14rem;
+.YT-cms {
+    padding: 9rem 0rem 2rem;
+    text-align: center;
+
+    p {
+        color: #949494;
+        margin: 0px;
     }
 }
 
