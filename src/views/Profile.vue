@@ -35,7 +35,7 @@
                     <img class="photo" :src="response.profile.photo" />
                 </div>
                   <div v-else>
-                    <img class="photo" />
+                    <img class="photo" src="/avatar_female.png" />
                   </div>
 
                 <div class="name-input">
