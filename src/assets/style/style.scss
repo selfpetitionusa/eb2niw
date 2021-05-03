@@ -2812,9 +2812,9 @@ h2.lastname {
     }
 
 .social-links {
-    &.cms-media li {
+    .cms-media {
         color: #949494;
-        padding: 3rem 1rem 0rem;
+        padding: 1rem 1rem 0rem;
     }
 
     ul {
@@ -3101,7 +3101,7 @@ About me section - Bio
         }
     }
 
-    &.cms {
+    .cms {
         height: 10rem;
     }
 }
