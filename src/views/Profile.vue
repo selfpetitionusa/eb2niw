@@ -63,7 +63,10 @@
                       <p class="line-1" v-for="bio in response.profile.shortBio.split(/\r?\n/)" :key="bio">{{bio}}</p>
                   </div>
 
-                <div class="social-links">
+
+<!-- SOCIAL MEDIA -->
+
+                <div v-if="response.profile.firstName" class="social-links">
                     <ul>
                         <li v-if="response.profile.links.facebookLink"><a :href="response.profile.links.facebookLink" class="facebook"><feather type="facebook"></feather></a></li>
                         <li v-if="response.profile.links.youtubeLink"><a :href="response.profile.links.youtubeLink" class="youtube"><feather type="youtube"></feather></a></li>
@@ -71,6 +74,12 @@
                         <li v-if="response.profile.links.linkedInLink"><a :href="response.profile.links.linkedInLink" class="linkedin"><feather type="linkedin"></feather></a></li>
                     </ul>
                 </div>
+
+                  <div v-else class="social-links cms-media">
+                      <ul>
+                          <li>Your social media</li>
+                      </ul>
+                  </div>
 
                 <hr>
 

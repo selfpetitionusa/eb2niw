@@ -2829,6 +2829,11 @@ h2.lastname {
     }
 
 .social-links {
+    &.cms-media li {
+        color: #949494;
+        padding: 2rem 1rem 0rem;
+    }
+
     ul {
         display: flex;
         justify-content: center;
