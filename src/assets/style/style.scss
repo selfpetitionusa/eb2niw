@@ -2720,10 +2720,6 @@ Left section
     border: solid 7px white;
     border-radius: 50%;
     box-shadow: 1px 4px 6px #888888;
-
-    &.cms {
-        background-color: #CECECE
-    }
 }
 
     @media (max-width: 767px) {
@@ -2732,19 +2728,6 @@ Left section
             height: 130px;
         }
     }
-
-.photo-text {
-    position: absolute;
-    margin-left: -73px;
-    left: 58%;
-    top: -2%;
-
-    p {
-      font-size: 18px;
-      font-weight: 500;
-      color: white;
-    }
-}
 
 .name-input {
     display: flex;

@@ -35,10 +35,7 @@
                     <img class="photo" :src="response.profile.photo" />
                 </div>
                   <div v-else>
-                    <img class="photo cms" />
-                    <div class="photo-text">
-                      <p>Your photo</p>
-                    </div>
+                    <img class="photo" />
                   </div>
 
                 <div class="name-input">
