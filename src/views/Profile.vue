@@ -36,50 +36,55 @@
                     <img v-if="!response.profile.photo" class="photo" src="/avatar_female.png" />
                 </div>
 
-                <div class="name-input">
-                    <h2>{{response.profile.firstName}}</h2>
-                      <h2 v-if="!response.profile.firstName && cmsToggle">Your</h2>
-                    <h2 class="lastname">{{response.profile.lastName}}</h2>
-                      <h2 v-if="!response.profile.lastName && cmsToggle" class="lastname">name</h2>
-                </div>
+                <div :class="[cmsToggle && 'section-frame']">
+                    <img v-if="cmsToggle" src="../assets/img/edit2.svg">
 
-                <div class="subject-categories">{{response.categories.map(cat => cat.categoryName).join(' | ')}}</div>
-                  <div v-if="!response.categories.length && cmsToggle" class="subject-categories">Subject 1</div>
+                    <div class="name-input">
+                        <h2>{{response.profile.firstName}}</h2>
+                          <h2 v-if="!response.profile.firstName && cmsToggle">Your</h2>
+                        <h2 class="lastname">{{response.profile.lastName}}</h2>
+                          <h2 v-if="!response.profile.lastName && cmsToggle" class="lastname">name</h2>
+                    </div>
 
-                <div v-if="!response.profile.shortBio" class="short-bio">
-                    <p v-if="response.profile.firstName" class="line-1">Hi, my name is {{response.profile.firstName}}.</p>
-                      <p v-if="!response.profile.firstName && cmsToggle" class="line-1">Hi, my name is &lt; Name &gt;.</p>
-                    <p v-if="response.categories.length" class="line-2">I tutor {{formatArray(response.categories.map(cat => cat.categoryName))}}.</p>
-                      <p v-if="!response.categories.length && cmsToggle" class="line-2">I tutor &lt; Subject 1 &gt;.</p>
-                    <p>Welcome to my website!</p>
-                </div>
+                    <div class="subject-categories">{{response.categories.map(cat => cat.categoryName).join(' | ')}}</div>
+                      <div v-if="!response.categories.length && cmsToggle" class="subject-categories">Subject 1</div>
 
-                  <div v-else class="short-bio">
-                      <p class="line-1" v-for="bio in response.profile.shortBio.split(/\r?\n/)" :key="bio">{{bio}}</p>
-                  </div>
+                    <div v-if="!response.profile.shortBio" class="short-bio">
+                        <p v-if="response.profile.firstName" class="line-1">Hi, my name is {{response.profile.firstName}}.</p>
+                          <p v-if="!response.profile.firstName && cmsToggle" class="line-1">Hi, my name is &lt; Name &gt;.</p>
+                        <p v-if="response.categories.length" class="line-2">I tutor {{formatArray(response.categories.map(cat => cat.categoryName))}}.</p>
+                          <p v-if="!response.categories.length && cmsToggle" class="line-2">I tutor &lt; Subject 1 &gt;.</p>
+                        <p>Welcome to my website!</p>
+                    </div>
+
+                      <div v-else class="short-bio">
+                          <p class="line-1" v-for="bio in response.profile.shortBio.split(/\r?\n/)" :key="bio">{{bio}}</p>
+                      </div>
 
 
 <!-- SOCIAL MEDIA -->
 
-                <div class="social-links">
-                    <ul>
-                        <li v-if="response.profile.links.facebookLink"><a :href="response.profile.links.facebookLink" class="facebook"><feather type="facebook"></feather></a></li>
-                        <li v-if="response.profile.links.youtubeLink"><a :href="response.profile.links.youtubeLink" class="youtube"><feather type="youtube"></feather></a></li>
-                        <li v-if="response.profile.links.instagramLink"><a :href="response.profile.links.instagramLink" class="instagram"><feather type="instagram"></feather></a></li>
-                        <li v-if="response.profile.links.linkedInLink"><a :href="response.profile.links.linkedInLink" class="linkedin"><feather type="linkedin"></feather></a></li>
-                    </ul>
-                </div>
+                    <div class="social-links" :class="[cmsToggle && 'section-frame inner-frame']">
+                        <img v-if="cmsToggle" src="../assets/img/edit2.svg">
 
-                <LinksCms v-if="cmsToggle"></LinksCms>
+                        <ul>
+                            <li v-if="response.profile.links.facebookLink"><a :href="response.profile.links.facebookLink" class="facebook"><feather type="facebook"></feather></a></li>
+                            <li v-if="response.profile.links.youtubeLink"><a :href="response.profile.links.youtubeLink" class="youtube"><feather type="youtube"></feather></a></li>
+                            <li v-if="response.profile.links.instagramLink"><a :href="response.profile.links.instagramLink" class="instagram"><feather type="instagram"></feather></a></li>
+                            <li v-if="response.profile.links.linkedInLink"><a :href="response.profile.links.linkedInLink" class="linkedin"><feather type="linkedin"></feather></a></li>
+                            <li v-if="cmsToggle && !response.profile.links.facebookLink && !response.profile.links.youtubeLink && !response.profile.links.instagramLink && !response.profile.links.linkedInLink" class="cms-media">Your social media</li>
+                        </ul>
+                    </div>
 
-                <hr>
+                    <hr>
 
 
 <!-- ACTION BUTTON -->
 
-                <div class="btn-profile">
-                    <a v-if="response.profile.firstName && response.profile.email" :href="'mailto:' + response.profile.email" class="btn btn-primary inner" role="button">Contact {{response.profile.firstName}}</a>
-                    <a v-if="!response.profile.firstName && !response.profile.email && cmsToggle" href="mailto:youremail@gmail.com" class="btn btn-primary inner" role="button">Contact &lt; Name &gt;</a>
+                    <div class="btn-profile">
+                        <a v-if="response.profile.firstName && response.profile.email" :href="'mailto:' + response.profile.email" class="btn btn-primary inner" role="button">Contact {{response.profile.firstName}}</a>
+                        <a v-if="!response.profile.firstName && !response.profile.email && cmsToggle" href="mailto:youremail@gmail.com" class="btn btn-primary inner" role="button">Contact &lt; Name &gt;</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -391,7 +396,6 @@
 <script>
     import axios from 'axios';
 
-    import LinksCms from './../components/cms/LinksCms';
     import SchoolCms from './../components/cms/SchoolCms';
     import CertificateCms from './../components/cms/CertificateCms';
     import SubjectCms from './../components/cms/SubjectCms';
@@ -402,13 +406,12 @@
   export default {
     name: 'Profile',
     components: {
-      LinksCms,
       SchoolCms,
       CertificateCms,
       SubjectCms,
       RateCms,
       YouTubeCms,
-      ProblemCardCms,
+      ProblemCardCms
     },
       created () {
           this.fetchData()
