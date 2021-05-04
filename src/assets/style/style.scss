@@ -3527,6 +3527,14 @@ Expertise section
     .fa-plus-circle {
         margin: 15px;
         color: #949494;
+
+        &:hover {
+            color: rgba(96, 132, 164, 0.5);
+        }
+
+        &:active {
+            color: rgb(96, 132, 164);
+        }
     }
 
     p {
