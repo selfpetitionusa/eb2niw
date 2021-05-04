@@ -37,7 +37,7 @@
                 </div>
 
                 <div :class="[cmsToggle && 'section-frame']">
-                    <img v-if="cmsToggle" src="../assets/img/edit2.svg">
+                    <img v-if="cmsToggle" class="edit" src="../assets/img/edit2.svg">
 
                     <div class="name-input">
                         <h2>{{response.profile.firstName}}</h2>
@@ -65,7 +65,7 @@
 <!-- SOCIAL MEDIA -->
 
                     <div class="social-links" :class="[cmsToggle && 'section-frame inner-frame']">
-                        <img v-if="cmsToggle" src="../assets/img/edit2.svg">
+                        <img v-if="cmsToggle" class="edit" src="../assets/img/edit2.svg">
 
                         <ul>
                             <li v-if="response.profile.links.facebookLink"><a :href="response.profile.links.facebookLink" class="facebook"><feather type="facebook"></feather></a></li>
@@ -108,10 +108,16 @@
 
         <div class="tu-card-container">
             <div id="section-about-me" class="tu-card">
-                <div class="section-container header">
-                  <h2>{{response.profile.headline}}</h2>
-                  <h2 v-if="!response.profile.headline && cmsToggle">Your Headline</h2>
-                </div>
+                <div :class="[cmsToggle && 'section-frame tu-card-frame']">
+                    <img v-if="cmsToggle" class="edit" src="../assets/img/edit2.svg">
+
+
+<!-- HEADLINE -->
+
+                    <div class="section-container header">
+                        <h2>{{response.profile.headline}}</h2>
+                        <h2 v-if="!response.profile.headline && cmsToggle">Your Headline</h2>
+                    </div>
 
 
 <!-- SCHOOLS -->
@@ -148,22 +154,24 @@
                             </div>
 
                             <CertificateCms v-if="!response.certificate && cmsToggle"></CertificateCms>
-
                         </div>
-
-
-<!-- BIO -->
 
                         <div class="col graphic-bio">
                             <img src="../assets/img/Graphic_bio.svg">
                         </div>
 
                     </div>
+                </div>
 
-                    <div class="bio">
-                        <p v-for="bio in response.profile.bio.split(/\r?\n/)" :key="bio">{{bio}}</p>
-                        <p v-if="!response.profile.bio && cmsToggle" class="cms">Your bio</p>
-                    </div>
+
+<!-- BIO -->
+
+                <div class="bio" :class="[cmsToggle && 'section-frame tu-card-frame']">
+                    <img v-if="cmsToggle" class="edit" src="../assets/img/edit2.svg">
+                    
+                    <p v-for="bio in response.profile.bio.split(/\r?\n/)" :key="bio">{{bio}}</p>
+                    <p v-if="!response.profile.bio && cmsToggle" class="cms">Your bio</p>
+                </div>
 
             </div>
 
