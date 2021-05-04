@@ -4119,7 +4119,7 @@ input#question {
     border-radius: 5px;
     padding: 0px 5px 15px;
 
-    .edit {
+    img.edit {
         position: absolute;
         right: 1rem;
         height: 16px;
@@ -4129,7 +4129,7 @@ input#question {
     &.inner-frame {
         margin: 15px 15px 0px;
 
-        .edit {
+        img.edit {
             right: 2.5rem;
         }
     }
@@ -4137,8 +4137,12 @@ input#question {
     &.tu-card-frame {
         padding: 10px;
 
-        .edit {
-            margin: 0px 10px 0px;
+        &.subjects-frame {
+            margin-top: 15px;
+        }
+
+        img.edit {
+            margin: 0px 10px;
             right: 2.5rem;
         }
     }

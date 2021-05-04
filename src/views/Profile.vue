@@ -168,7 +168,7 @@
 
                 <div class="bio" :class="[cmsToggle && 'section-frame tu-card-frame']">
                     <img v-if="cmsToggle" class="edit" src="../assets/img/edit2.svg">
-                    
+
                     <p v-for="bio in response.profile.bio.split(/\r?\n/)" :key="bio">{{bio}}</p>
                     <p v-if="!response.profile.bio && cmsToggle" class="cms">Your bio</p>
                 </div>
@@ -180,44 +180,49 @@
 
             <div id="section-subjects" class="tu-card">
 
-                <img class="figure-subjects" src="../assets/img/subjects_figures.png">
+                <img v-if="!cmsToggle" class="figure-subjects" src="../assets/img/subjects_figures.png">
+
                 <div class="section-container">
                     <div class="icon"></div>
                     <div class="header"><h2>Subjects</h2></div>
                 </div>
 
-                <div class="row subjects-container">
-                    <div class="col-md-6 subject-cards" v-for="(category, index) in response.categories" :key="category.id">
-                        <div class="subjects" :class="[index % 2 === 0 ? 'border1' : 'border2']">
-                            <p>{{category.categoryName}}</p>
-                            <hr>
-                            <div class="subject-subcategories">
-                                <ul>
-                                    <li v-if="category.subcategoryName1">{{category.subcategoryName1}}</li>
-                                    <li v-if="category.subcategoryName2">{{category.subcategoryName2}}</li>
-                                    <li v-if="category.subcategoryName3">{{category.subcategoryName3}}</li>
-                                    <li v-if="category.subcategoryName4">{{category.subcategoryName4}}</li>
-                                    <li v-if="category.subcategoryName5">{{category.subcategoryName5}}</li>
-                                    <li v-if="category.subcategoryName6">{{category.subcategoryName6}}</li>
-                                    <li v-if="category.subcategoryName7">{{category.subcategoryName7}}</li>
-                                </ul>
+                <div :class="[cmsToggle && 'section-frame tu-card-frame subjects-frame']">
+                    <img v-if="cmsToggle" class="edit" src="../assets/img/edit2.svg">
+
+                    <div v-if="response.categories.length" class="row subjects-container">
+                        <div class="col-md-6 subject-cards" v-for="(category, index) in response.categories" :key="category.id">
+                            <div class="subjects" :class="[index % 2 === 0 ? 'border1' : 'border2']">
+                                <p>{{category.categoryName}}</p>
+                                <hr>
+                                <div class="subject-subcategories">
+                                    <ul>
+                                        <li v-if="category.subcategoryName1">{{category.subcategoryName1}}</li>
+                                        <li v-if="category.subcategoryName2">{{category.subcategoryName2}}</li>
+                                        <li v-if="category.subcategoryName3">{{category.subcategoryName3}}</li>
+                                        <li v-if="category.subcategoryName4">{{category.subcategoryName4}}</li>
+                                        <li v-if="category.subcategoryName5">{{category.subcategoryName5}}</li>
+                                        <li v-if="category.subcategoryName6">{{category.subcategoryName6}}</li>
+                                        <li v-if="category.subcategoryName7">{{category.subcategoryName7}}</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <SubjectCms v-if="!response.categories.length && cmsToggle"></SubjectCms>
+                    <SubjectCms v-if="!response.categories.length && cmsToggle"></SubjectCms>
 
 
 <!-- MY STUDENTS -->
 
-                <div class="my-students">
-                    <font-awesome-icon class="icon" icon="users" />
-                    <div class="label">My students are</div>
-                    <div class="value">{{response.profile.studentsProfile.toLowerCase()}}</div>
-                      <div v-if="!response.profile.studentsProfile && cmsToggle" class="value">&lt; your selection &gt;</div>
-                </div>
+                    <div class="my-students">
+                        <font-awesome-icon class="icon" icon="users" />
+                        <div class="label">My students are</div>
+                        <div class="value">{{response.profile.studentsProfile.toLowerCase()}}</div>
+                          <div v-if="!response.profile.studentsProfile && cmsToggle" class="value">&lt; your selection &gt;</div>
+                    </div>
 
+                </div>
             </div>
 
 
