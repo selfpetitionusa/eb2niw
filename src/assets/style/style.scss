@@ -2690,7 +2690,7 @@ Left section
 
     hr {
         width: 40%;
-        margin-top: 20px;
+        margin-top: 36px;
         border-style: solid;
         border-color: rgba(84, 87, 193, .3);
     }
@@ -2821,7 +2821,7 @@ h2.lastname {
         justify-content: center;
         padding-inline-start: 0px;
         margin-top: 20px;
-        margin-bottom: 36px;
+        margin-bottom: 20px;
     }
 
     li {
@@ -4138,6 +4138,7 @@ img.edit {
 
     &.inner-frame {
         margin: 15px 15px 0px;
+        padding: 0px;
 
         img.edit {
             right: 2.5rem;
