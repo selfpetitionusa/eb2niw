@@ -3521,8 +3521,13 @@ Expertise section
 }
 
 .YT-cms {
-    padding: 9rem 0rem 2rem;
+    padding: 2rem 0rem 2rem;
     text-align: center;
+
+    .fa-plus-circle {
+        margin: 15px;
+        color: #949494;
+    }
 
     p {
         color: #949494;

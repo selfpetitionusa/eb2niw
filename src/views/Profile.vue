@@ -350,7 +350,7 @@
 <!-- YOUTUBE -->
 
                 <div :class="[cmsToggle && 'cms-frame tu-card-frame margin-frame']">
-                    <img v-if="cmsToggle" class="edit" src="../assets/img/edit2.svg">
+                    <img v-if="response.profile.youtubeIntroLink && cmsToggle" class="edit" src="../assets/img/edit2.svg">
 
                     <div v-if="response.profile.youtubeIntroLink" class="youtube-display">
                         <iframe width="560" height="315" :src="response.profile.youtubeLink" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
