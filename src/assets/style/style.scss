@@ -4114,16 +4114,26 @@ input#question {
     margin-top: 26px;
 }
 
-.section-frame {
+img.edit {
+    position: absolute;
+    right: 1rem;
+    height: 16px;
+    margin: 0 10px;
+
+    &.edit-terms {
+        margin: 0px;
+    }
+}
+
+.cms-frame {
     border: 1px solid #CECECE;
     border-radius: 5px;
     padding: 0px 5px 15px;
 
-    img.edit {
-        position: absolute;
-        right: 1rem;
-        height: 16px;
-        margin: 10px;
+    &.outer-frame {
+        img.edit {
+            margin: 10px;
+        }
     }
 
     &.inner-frame {
@@ -4131,19 +4141,28 @@ input#question {
 
         img.edit {
             right: 2.5rem;
+            margin: 10px;
         }
     }
 
     &.tu-card-frame {
         padding: 10px;
 
-        &.subjects-frame {
+        &.margin-frame {
             margin-top: 15px;
+            padding-bottom: 15px;
         }
 
         img.edit {
-            margin: 0px 10px;
             right: 2.5rem;
+        }
+    }
+
+    &.frame-rates {
+        padding: 15px 0px;
+
+        img.edit {
+            right: 0px;
         }
     }
 }

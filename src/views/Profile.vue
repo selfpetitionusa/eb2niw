@@ -36,7 +36,7 @@
                     <img v-if="!response.profile.photo" class="photo" src="/avatar_female.png" />
                 </div>
 
-                <div :class="[cmsToggle && 'section-frame']">
+                <div :class="[cmsToggle && 'cms-frame outer-frame']">
                     <img v-if="cmsToggle" class="edit" src="../assets/img/edit2.svg">
 
                     <div class="name-input">
@@ -64,7 +64,7 @@
 
 <!-- SOCIAL MEDIA -->
 
-                    <div class="social-links" :class="[cmsToggle && 'section-frame inner-frame']">
+                    <div class="social-links" :class="[cmsToggle && 'cms-frame inner-frame']">
                         <img v-if="cmsToggle" class="edit" src="../assets/img/edit2.svg">
 
                         <ul>
@@ -108,7 +108,7 @@
 
         <div class="tu-card-container">
             <div id="section-about-me" class="tu-card">
-                <div :class="[cmsToggle && 'section-frame tu-card-frame']">
+                <div :class="[cmsToggle && 'cms-frame tu-card-frame']">
                     <img v-if="cmsToggle" class="edit" src="../assets/img/edit2.svg">
 
 
@@ -166,7 +166,7 @@
 
 <!-- BIO -->
 
-                <div class="bio" :class="[cmsToggle && 'section-frame tu-card-frame']">
+                <div class="bio" :class="[cmsToggle && 'cms-frame tu-card-frame']">
                     <img v-if="cmsToggle" class="edit" src="../assets/img/edit2.svg">
 
                     <p v-for="bio in response.profile.bio.split(/\r?\n/)" :key="bio">{{bio}}</p>
@@ -187,7 +187,7 @@
                     <div class="header"><h2>Subjects</h2></div>
                 </div>
 
-                <div :class="[cmsToggle && 'section-frame tu-card-frame subjects-frame']">
+                <div :class="[cmsToggle && 'cms-frame tu-card-frame margin-frame']">
                     <img v-if="cmsToggle" class="edit" src="../assets/img/edit2.svg">
 
                     <div v-if="response.categories.length" class="row subjects-container">
@@ -237,7 +237,8 @@
                 </div>
 
                 <div class="row rates-container">
-                    <div class="col-xl-6 col-lg-7 col-md-7 col-sm-7 col-12 items-all">
+                    <div class="col-xl-6 col-lg-7 col-md-7 col-sm-7 col-12 items-all" :class="[cmsToggle && 'cms-frame frame-rates']">
+                        <img v-if="cmsToggle" class="edit" src="../assets/img/edit2.svg">
 
                         <div class="row item" v-for="rate in response.rates" :key="rate.id">
                             <div class="col-xl-4 col-lg-4 col-md-3 col-sm-3 col-3 rate-box">
@@ -272,6 +273,7 @@
 
                 <div class="terms-container">
                     <div class="terms">
+                        <img v-if="cmsToggle" class="edit edit-terms" src="../assets/img/edit2.svg">
 
                         <div class="row terms-item">
                             <div class="col-1 icon-container"><font-awesome-icon class="icon" icon="globe" /></div>
@@ -347,40 +349,47 @@
 
 <!-- YOUTUBE -->
 
-                  <div v-if="response.profile.youtubeIntroLink" class="youtube-display">
-                      <iframe width="560" height="315" :src="response.profile.youtubeLink" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                  </div>
+                <div :class="[cmsToggle && 'cms-frame tu-card-frame margin-frame']">
+                    <img v-if="cmsToggle" class="edit" src="../assets/img/edit2.svg">
 
-                  <YouTubeCms v-if="!response.profile.youtubeIntroLink && cmsToggle"></YouTubeCms>
+                    <div v-if="response.profile.youtubeIntroLink" class="youtube-display">
+                        <iframe width="560" height="315" :src="response.profile.youtubeLink" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <YouTubeCms v-if="!response.profile.youtubeIntroLink && cmsToggle"></YouTubeCms>
+                </div>
 
 
 <!-- CAROUSEL -->
 
-                <div class="expertise-arrows">
-                    <div v-on:click="scroll('left')" class="left-arrow">
-                        <img v-if="offset !== 0" src="../assets/img/arrow_left.svg">
-                    </div>
+                <div :class="[cmsToggle && 'cms-frame tu-card-frame margin-frame']">
+                    <img v-if="cmsToggle" class="edit" src="../assets/img/edit2.svg">
 
-                    <div id="problems" class="my-carousel" v-on:scroll.passive='handleScroll'>
-                        <div class="carousel-container">
-
-                            <div :id="'problem-card'+ index" class="problem-card" v-for="(problemCard, index) in response.problemCards" :key="problemCard.id">
-                                <div class="icon"><img :src="getImgUrl(index)"></div>
-                                <div class="input">
-                                    <p class="question">{{problemCard.question}}</p>
-                                    <p class="answer">{{problemCard.answer}}</p>
-                                </div>
-                            </div>
-
-                            <ProblemCardCms v-if="response.problemCards && cmsToggle"></ProblemCardCms>
-
+                    <div class="expertise-arrows">
+                        <div v-on:click="scroll('left')" class="left-arrow">
+                            <img v-if="offset !== 0" src="../assets/img/arrow_left.svg">
                         </div>
-                    </div>
 
-                    <div v-on:click="scroll('right')" class="right-arrow">
-                        <img v-if="offset + offsetWidth <scrollWidth" src="../assets/img/arrow_right.svg">
-                    </div>
+                        <div id="problems" class="my-carousel" v-on:scroll.passive='handleScroll'>
+                            <div class="carousel-container">
 
+                                <div :id="'problem-card'+ index" class="problem-card" v-for="(problemCard, index) in response.problemCards" :key="problemCard.id">
+                                    <div class="icon"><img :src="getImgUrl(index)"></div>
+                                    <div class="input">
+                                        <p class="question">{{problemCard.question}}</p>
+                                        <p class="answer">{{problemCard.answer}}</p>
+                                    </div>
+                                </div>
+
+                                <ProblemCardCms v-if="response.problemCards && cmsToggle"></ProblemCardCms>
+
+                            </div>
+                        </div>
+
+                        <div v-on:click="scroll('right')" class="right-arrow">
+                            <img v-if="offset + offsetWidth <scrollWidth" src="../assets/img/arrow_right.svg">
+                        </div>
+
+                    </div>
                 </div>
 
 
