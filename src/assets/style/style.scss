@@ -4123,27 +4123,43 @@ input#question {
     position: absolute;
     top: 5%;
     right: 23%;
-    height: 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.1rem;
     width: 35px;
-    text-align: center;
+    height: 35px;
+    color: #949494;
     background-color: white;
+
     border: 7px solid white;
     border-radius: 50%;
     box-shadow: 1px 4px 6px #888888;
 
-    img {
-        height: 16px;
+    &:hover {
+        color: rgba(96, 132, 164, 0.5);
+    }
+
+    &:active {
+        color: rgb(96, 132, 164);
     }
 }
 
-img.edit {
+.edit {
     position: absolute;
     right: 1rem;
-    height: 16px;
+    font-size: 1.1rem;
+    color: #949494;
     margin: 0 10px;
 
-    &.edit-terms {
-        margin: 0px;
+    &:hover {
+        color: rgba(96, 132, 164, 0.5);
+    }
+
+    &:active {
+        color: rgb(96, 132, 164);
     }
 }
 
@@ -4153,7 +4169,7 @@ img.edit {
     padding: 0px 5px 15px;
 
     &.outer-frame {
-        img.edit {
+        .edit {
             margin: 10px;
         }
     }
@@ -4162,8 +4178,8 @@ img.edit {
         margin: 15px 15px 0px;
         padding: 0px;
 
-        img.edit {
-            right: 2.5rem;
+        .edit {
+            right: 2.3rem;
             margin: 10px;
         }
     }
@@ -4176,7 +4192,7 @@ img.edit {
             padding-bottom: 15px;
         }
 
-        img.edit {
+        .edit {
             right: 2.5rem;
         }
     }
@@ -4184,8 +4200,9 @@ img.edit {
     &.frame-rates {
         padding: 15px 0px;
 
-        img.edit {
+        .edit {
             right: 0px;
+            z-index: 99;
         }
     }
 }

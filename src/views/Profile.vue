@@ -34,13 +34,13 @@
                 <div>
                     <img class="photo" :src="response.profile.photo" />
                     <img v-if="!response.profile.photo" class="photo" src="/avatar_female.png" />
-                    <div class="pic-edit">
-                        <img v-if="cmsToggle" src="../assets/img/edit2.svg">
+                    <div v-if="cmsToggle" class="pic-edit">
+                        <font-awesome-icon icon="edit" />
                     </div>
                 </div>
 
                 <div :class="[cmsToggle && 'cms-frame outer-frame']">
-                    <img v-if="cmsToggle" class="edit" src="../assets/img/edit2.svg">
+                    <font-awesome-icon v-if="cmsToggle" class="edit" icon="edit" />
 
                     <div class="name-input">
                         <h2>{{response.profile.firstName}}</h2>
@@ -68,7 +68,7 @@
 <!-- SOCIAL MEDIA -->
 
                     <div class="social-links" :class="[cmsToggle && 'cms-frame inner-frame']">
-                        <img v-if="cmsToggle" class="edit" src="../assets/img/edit2.svg">
+                        <font-awesome-icon v-if="cmsToggle" class="edit" icon="edit" />
 
                         <ul>
                             <li v-if="response.profile.links.facebookLink"><a :href="response.profile.links.facebookLink" class="facebook"><feather type="facebook"></feather></a></li>
@@ -112,7 +112,7 @@
         <div class="tu-card-container">
             <div id="section-about-me" class="tu-card">
                 <div :class="[cmsToggle && 'cms-frame tu-card-frame']">
-                    <img v-if="cmsToggle" class="edit" src="../assets/img/edit2.svg">
+                    <font-awesome-icon v-if="cmsToggle" class="edit" icon="edit" />
 
 
 <!-- HEADLINE -->
@@ -170,7 +170,7 @@
 <!-- BIO -->
 
                 <div class="bio" :class="[cmsToggle && 'cms-frame tu-card-frame']">
-                    <img v-if="cmsToggle" class="edit" src="../assets/img/edit2.svg">
+                    <font-awesome-icon v-if="cmsToggle" class="edit" icon="edit" />
 
                     <p v-for="bio in response.profile.bio.split(/\r?\n/)" :key="bio">{{bio}}</p>
                     <p v-if="!response.profile.bio && cmsToggle" class="cms">Your bio</p>
@@ -191,7 +191,7 @@
                 </div>
 
                 <div :class="[cmsToggle && 'cms-frame tu-card-frame margin-frame']">
-                    <img v-if="cmsToggle" class="edit" src="../assets/img/edit2.svg">
+                    <font-awesome-icon v-if="cmsToggle" class="edit" icon="edit" />
 
                     <div v-if="response.categories.length" class="row subjects-container">
                         <div class="col-md-6 subject-cards" v-for="(category, index) in response.categories" :key="category.id">
@@ -241,7 +241,7 @@
 
                 <div class="row rates-container">
                     <div class="col-xl-6 col-lg-7 col-md-7 col-sm-7 col-12 items-all" :class="[cmsToggle && 'cms-frame frame-rates']">
-                        <img v-if="cmsToggle" class="edit" src="../assets/img/edit2.svg">
+                        <font-awesome-icon v-if="cmsToggle" class="edit" icon="edit" />
 
                         <div class="row item" v-for="rate in response.rates" :key="rate.id">
                             <div class="col-xl-4 col-lg-4 col-md-3 col-sm-3 col-3 rate-box">
@@ -276,7 +276,7 @@
 
                 <div class="terms-container">
                     <div class="terms">
-                        <img v-if="cmsToggle" class="edit edit-terms" src="../assets/img/edit2.svg">
+                        <font-awesome-icon v-if="cmsToggle" class="edit" icon="edit" />
 
                         <div class="row terms-item">
                             <div class="col-1 icon-container"><font-awesome-icon class="icon" icon="globe" /></div>
@@ -353,7 +353,7 @@
 <!-- YOUTUBE -->
 
                 <div :class="[cmsToggle && 'cms-frame tu-card-frame margin-frame']">
-                    <img v-if="response.profile.youtubeIntroLink && cmsToggle" class="edit" src="../assets/img/edit2.svg">
+                    <font-awesome-icon v-if="response.profile.youtubeIntroLink && cmsToggle" class="edit" icon="edit" />
 
                     <div v-if="response.profile.youtubeIntroLink" class="youtube-display">
                         <iframe width="560" height="315" :src="response.profile.youtubeLink" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -365,7 +365,7 @@
 <!-- CAROUSEL -->
 
                 <div :class="[cmsToggle && 'cms-frame tu-card-frame margin-frame']">
-                    <img v-if="cmsToggle" class="edit" src="../assets/img/edit2.svg">
+                    <font-awesome-icon v-if="cmsToggle" class="edit" icon="edit" />
 
                     <div class="expertise-arrows">
                         <div v-on:click="scroll('left')" class="left-arrow">
