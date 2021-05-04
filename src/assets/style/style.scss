@@ -4119,6 +4119,23 @@ input#question {
     margin-top: 26px;
 }
 
+.pic-edit {
+    position: absolute;
+    top: 5%;
+    right: 23%;
+    height: 35px;
+    width: 35px;
+    text-align: center;
+    background-color: white;
+    border: 7px solid white;
+    border-radius: 50%;
+    box-shadow: 1px 4px 6px #888888;
+
+    img {
+        height: 16px;
+    }
+}
+
 img.edit {
     position: absolute;
     right: 1rem;

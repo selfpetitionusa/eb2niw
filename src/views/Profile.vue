@@ -34,6 +34,9 @@
                 <div>
                     <img class="photo" :src="response.profile.photo" />
                     <img v-if="!response.profile.photo" class="photo" src="/avatar_female.png" />
+                    <div class="pic-edit">
+                        <img v-if="cmsToggle" src="../assets/img/edit2.svg">
+                    </div>
                 </div>
 
                 <div :class="[cmsToggle && 'cms-frame outer-frame']">
