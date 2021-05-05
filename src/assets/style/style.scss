@@ -4139,35 +4139,22 @@ input#question {
     font-size: 1.1rem;
     width: 35px;
     height: 35px;
-    color: #949494;
     background-color: white;
 
     border: 7px solid white;
     border-radius: 50%;
     box-shadow: 1px 4px 6px #888888;
-
-    &:hover {
-        color: rgba(96, 132, 164, 0.5);
-    }
-
-    &:active {
-        color: rgb(96, 132, 164);
-    }
 }
 
 .edit {
     position: absolute;
-    right: 1rem;
+    right: 9%;
     font-size: 1.1rem;
-    color: #949494;
-    margin: 0 10px;
+    margin-top: -5px;
 
-    &:hover {
-        color: rgba(96, 132, 164, 0.5);
-    }
-
-    &:active {
-        color: rgb(96, 132, 164);
+    &.edit-terms {
+        right: 4%;
+        margin-top: -10px;
     }
 }
 
@@ -4176,19 +4163,12 @@ input#question {
     border-radius: 5px;
     padding: 0px 5px 15px;
 
-    &.outer-frame {
-        .edit {
-            margin: 10px;
-        }
-    }
-
     &.inner-frame {
         margin: 15px 15px 0px;
         padding: 0px;
 
         .edit {
-            right: 2.3rem;
-            margin: 10px;
+            right: 15%;
         }
     }
 
@@ -4201,7 +4181,8 @@ input#question {
         }
 
         .edit {
-            right: 2.5rem;
+            right: 6%;
+            margin-top: -10px;
         }
     }
 
@@ -4209,7 +4190,8 @@ input#question {
         padding: 15px 0px;
 
         .edit {
-            right: 0px;
+            right: 3%;
+            margin-top: -15px;
             z-index: 99;
         }
     }
