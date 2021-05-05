@@ -45,22 +45,26 @@
                                                         <p style="color: #0e314c; font-size: medium;font-weight: bold">How about VIP access for free?</p>
                                                         <div class="d-none d-sm-block">
                                                             <div class="row">
-                                                                <div class="col-6">
-                                                                    <p style="color: #6084a4; font-size: medium">Fill out a 6-question survey about online tutoring</p>
-                                                                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfVN4XavrzDgfg8XE3guult0aNoztYdFbXZs-7bL0EWc0aamQ/viewform" class="btn btn-primary mt-5 d-block mx-auto" style="text-transform:none;">Claim VIP access</a>
+                                                                <div class="col-8">
+                                                                  <p style="color: #6084a4; font-size: 13px">We are <span style="font-weight: bold; text-decoration: underline;">looking for 20 tutors</span> to test our new website dashboard.</p>
+                                                                  <p style="color: #6084a4; font-size: 13px; margin-bottom: 0px;">Get FREE website for 3 months.</p>
+                                                                  <p style="color: #6084a4; font-size: 13px; margin-bottom: 0px;">Contact us for details.</p>
+                                                                  <a href="mailto:ceo@tutomy.com?subject=Testing website dashboard" class="btn btn-primary mt-5 d-block mx-auto" style="text-transform:none;">Claim VIP access</a>
                                                                 </div>
-                                                                <div class="col-6">
+                                                                <div class="col-4">
                                                                     <img src="../../assets/img/survey.svg" alt="video-pic">
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <div class="d-block d-sm-none">
-                                                            <p style="color: #6084a4; font-size: medium">Fill out a 6-question survey about online tutoring</p>
+                                                          <p style="color: #6084a4; font-size: 13px">We are <span style="font-weight: bold; text-decoration: underline;">looking for 20 tutors</span> to test our new website dashboard.</p>
+                                                          <p style="color: #6084a4; font-size: 13px; margin-bottom: 0px;">Get FREE website for 3 months.</p>
+                                                          <p style="color: #6084a4; font-size: 13px; margin-bottom: 0px;">Contact us for details.</p>
                                                             <div class="row">
-                                                                <div class="col-6 align-self-end">
-                                                                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfVN4XavrzDgfg8XE3guult0aNoztYdFbXZs-7bL0EWc0aamQ/viewform" class="btn btn-primary mt-5 d-block mx-auto" style="text-transform:none;">Claim VIP access</a>
+                                                                <div class="col-8 align-self-end">
+                                                                      <a href="mailto:ceo@tutomy.com?subject=Testing website dashboard" class="btn btn-primary mt-5 d-block mx-auto" style="text-transform:none;">Claim VIP access</a>
                                                                 </div>
-                                                                <div class="col-6">
+                                                                <div class="col-4">
                                                                     <img src="../../assets/img/survey.svg" alt="video-pic">
                                                                 </div>
                                                             </div>

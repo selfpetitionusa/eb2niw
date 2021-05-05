@@ -64,16 +64,18 @@
         <b-modal id="modal-2"  style="border-radius: 30px" :return-focus="this.$parent" hide-footer hide-header >
             <div class="mt-2">
 
-                <p style="color: #6084a4; font-size: medium">Tutomy is now in final development</p>
+                <p style="color: #949494; font-size: medium; font-size: 13px; text-align: center;">-- Tutomy is now in final development stage -- </p>
                 <p style="color: #0e314c; font-size: medium;font-weight: bold">How about VIP access for free?</p>
                 <div class="row">
-                    <div class="col-6">
-                        <p style="color: #6084a4; font-size: medium">Fill out a 6-question survey about online tutoring</p>
-                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfVN4XavrzDgfg8XE3guult0aNoztYdFbXZs-7bL0EWc0aamQ/viewform" class="btn btn-primary mt-5 d-block mx-auto" style="text-transform:none;">Claim VIP access</a>
-                    </div>
-                    <div class="col-6">
-                        <img src="../../assets/img/survey.svg" alt="video-pic">
-                    </div>
+                  <div class="col-8">
+                    <p style="color: #6084a4; font-size: 13px">We are <span style="font-weight: bold; text-decoration: underline;">looking for 20 tutors</span> to test our new website dashboard.</p>
+                    <p style="color: #6084a4; font-size: 13px; margin-bottom: 0px;">Get FREE website for 3 months.</p>
+                    <p style="color: #6084a4; font-size: 13px; margin-bottom: 0px;">Contact us for details.</p>
+                    <a href="mailto:ceo@tutomy.com?subject=Testing website dashboard" class="btn btn-primary mt-5 d-block mx-auto" style="text-transform:none;">Claim VIP access</a>
+                  </div>
+                  <div class="col-4">
+                    <img src="../../assets/img/survey.svg" alt="video-pic">
+                  </div>
                 </div>
             </div>
 

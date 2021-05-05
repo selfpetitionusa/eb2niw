@@ -39,8 +39,7 @@
         { vmid: 'ogtitle', property: 'og:title', content: "Tutomy - Software tools for tutors"},
         { vmid: 'ogsite', property: 'og:site_name', content: 'Tutomy'},
         { vmid: 'ogtype', property: 'og:type', content: 'website'},
-        { vmid: 'ogimage1', property: 'og:image', content: `https://www.tutomy.com/thumbnail.png`},
-        { vmid: 'ogimage2', property: 'og:image', content: `https://www.tutomy.com/thumbnail2.png`},
+        { vmid: 'ogimage1', property: 'og:image', content: `https://www.tutomy.com/thumbnail.png`}
       ]
     }
   }
