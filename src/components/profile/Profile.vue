@@ -24,6 +24,11 @@
 
     <div class="background-rectangular"></div>
     <div id="tu-container" class="tu-container">
+
+    <div v-if="cmsToggle" class="preview">
+      <button type="submit" class="btn btn-primary btn-preview">Preview</button>
+    </div>
+
     <div class="row website-split">
 
 
@@ -32,39 +37,70 @@
         <div class="col-xl-3 col-lg-4 col-md-12 col-sm-12 col-12">
             <div class="left-section">
 
-                <img class="photo" :src="response.profile.photo" />
-                <div class="name-input">
-                    <h2>{{response.profile.firstName}}</h2>
-                    <h2 class="lastname">{{response.profile.lastName}}</h2>
+                <div>
+                    <img class="photo" :src="response.profile.photo" />
+                    <img v-if="!response.profile.photo" class="photo" src="/avatar_female.png" />
+                    <div v-if="cmsToggle" class="pic-edit">
+                        <a href="src/views#">
+                            <font-awesome-icon icon="edit" />
+                        </a>
+                    </div>
                 </div>
 
-                <div class="subject-categories">{{response.categories.map(cat => cat.categoryName).join(' | ')}}</div>
+                <div :class="[cmsToggle && 'cms-frame']">
+                    <a v-if="cmsToggle" class="edit outer" href="src/views#">
+                        <font-awesome-icon icon="edit" />
+                    </a>
 
-                <div  v-if="!response.profile.shortBio" class="short-bio">
-                    <p class="line-1">Hi, my name is {{response.profile.firstName}}.</p>
-                    <p class="line-2">I tutor {{formatArray(response.categories.map(cat => cat.categoryName))}}.</p>
-                    <p>Welcome to my website!</p>
+                    <div class="name-input">
+                        <h2>{{response.profile.firstName}}</h2>
+                          <h2 v-if="!response.profile.firstName && cmsToggle">Your</h2>
+                        <h2 class="lastname">{{response.profile.lastName}}</h2>
+                          <h2 v-if="!response.profile.lastName && cmsToggle" class="lastname">name</h2>
+                    </div>
+
+                    <div class="subject-categories">{{response.categories.map(cat => cat.categoryName).join(' | ')}}</div>
+                      <div v-if="!response.categories.length && cmsToggle" class="subject-categories">Subject 1</div>
+
+                    <div v-if="!response.profile.shortBio" class="short-bio">
+                        <p v-if="response.profile.firstName" class="line-1">Hi, my name is {{response.profile.firstName}}.</p>
+                          <p v-if="!response.profile.firstName && cmsToggle" class="line-1">Hi, my name is &lt; Name &gt;.</p>
+                        <p v-if="response.categories.length" class="line-2">I tutor {{formatArray(response.categories.map(cat => cat.categoryName))}}.</p>
+                          <p v-if="!response.categories.length && cmsToggle" class="line-2">I tutor &lt; Subject 1 &gt;.</p>
+                        <p>Welcome to my website!</p>
+                    </div>
+
+                      <div v-else class="short-bio">
+                          <p class="line-1" v-for="bio in response.profile.shortBio.split(/\r?\n/)" :key="bio">{{bio}}</p>
+                      </div>
+
+
+<!-- SOCIAL MEDIA -->
+
+                    <div class="social-links" :class="[cmsToggle && 'cms-frame inner-frame']">
+                        <a v-if="cmsToggle" class="edit" href="src/views#">
+                            <font-awesome-icon icon="edit" />
+                        </a>
+
+                        <ul>
+                            <li v-if="response.profile.links.facebookLink"><a :href="response.profile.links.facebookLink" class="facebook"><feather type="facebook"></feather></a></li>
+                            <li v-if="response.profile.links.youtubeLink"><a :href="response.profile.links.youtubeLink" class="youtube"><feather type="youtube"></feather></a></li>
+                            <li v-if="response.profile.links.instagramLink"><a :href="response.profile.links.instagramLink" class="instagram"><feather type="instagram"></feather></a></li>
+                            <li v-if="response.profile.links.linkedInLink"><a :href="response.profile.links.linkedInLink" class="linkedin"><feather type="linkedin"></feather></a></li>
+                            <li v-if="cmsToggle && !response.profile.links.facebookLink && !response.profile.links.youtubeLink && !response.profile.links.instagramLink && !response.profile.links.linkedInLink" class="cms-media">Your social media</li>
+                        </ul>
+                    </div>
+
+                    <hr>
+
+
+<!-- ACTION BUTTON -->
+
+                    <div class="btn-profile">
+                        <a v-if="response.profile.firstName && response.profile.email" :href="'mailto:' + response.profile.email" class="btn btn-primary inner" role="button">Contact {{response.profile.firstName}}</a>
+                        <a v-if="!response.profile.firstName && !response.profile.email && cmsToggle" href="mailto:youremail@gmail.com" class="btn btn-primary inner" role="button">Contact &lt; Name &gt;</a>
+                    </div>
                 </div>
-
-                <div v-else class="short-bio">
-                    <p class="line-1" v-for="bio in response.profile.shortBio.split(/\r?\n/)" :key="bio">{{bio}}</p>
-                </div>
-
-                <div class="social-links">
-                    <ul>
-                        <li v-if="response.profile.links.facebookLink"><a :href="response.profile.links.facebookLink" class="facebook"><feather type="facebook"></feather></a></li>
-                        <li v-if="response.profile.links.youtubeLink"><a :href="response.profile.links.youtubeLink" class="youtube"><feather type="youtube"></feather></a></li>
-                        <li v-if="response.profile.links.instagramLink"><a :href="response.profile.links.instagramLink" class="instagram"><feather type="instagram"></feather></a></li>
-                        <li v-if="response.profile.links.linkedInLink"><a :href="response.profile.links.linkedInLink" class="linkedin"><feather type="linkedin"></feather></a></li>
-                    </ul>
-                </div>
-
-                <hr>
-
-                <div class="btn-profile">
-                    <a :href="'mailto:' + response.profile.email" class="btn btn-primary inner" role="button">Contact {{response.profile.firstName}}</a>
-                </div>
-
             </div>
         </div>
 
@@ -87,10 +123,22 @@
 
         <div class="tu-card-container">
             <div id="section-about-me" class="tu-card">
-                <div class="section-container header"><h2>{{response.profile.headline}}</h2></div>
+                <div :class="[cmsToggle && 'cms-frame tu-card-frame']">
+                    <a v-if="cmsToggle" class="edit" href="src/views#">
+                        <font-awesome-icon icon="edit" />
+                    </a>
+
+<!-- HEADLINE -->
+
+                    <div class="section-container header">
+                        <h2>{{response.profile.headline}}</h2>
+                        <h2 v-if="!response.profile.headline && cmsToggle">Your Headline</h2>
+                    </div>
+
+
+<!-- SCHOOLS -->
 
                     <div class="row education-container">
-
                         <div class="col-xl-8 col-lg-9 col-md-8 col-sm-12 col-12 items-all">
                             <div class="row items" v-for="school in response.schools" :key="school.value">
                                 <div class="col-2 icons-column">
@@ -104,6 +152,11 @@
                                 </div>
                             </div>
 
+                            <SchoolCms v-if="!response.schools && cmsToggle"></SchoolCms>
+
+
+<!-- CERTIFICATES -->
+
                             <div class="row items" v-for="certificate in response.certificates" :key="certificate.value">
                                 <div class="col-2 icons-column">
                                     <div class="icon-container">
@@ -115,17 +168,28 @@
                                     <p class="certificate value">{{certificate.value}}</p>
                                 </div>
                             </div>
+
+                            <CertificateCms v-if="!response.certificate && cmsToggle"></CertificateCms>
                         </div>
 
                         <div class="col graphic-bio">
-                            <img src="../assets/img/Graphic_bio.svg">
+                            <img src="../../assets/img/Graphic_bio.svg">
                         </div>
 
                     </div>
+                </div>
 
-                    <div class="bio">
-                        <p v-for="bio in response.profile.bio.split(/\r?\n/)" :key="bio">{{bio}}</p>
-                    </div>
+
+<!-- BIO -->
+
+                <div class="bio" :class="[cmsToggle && 'cms-frame tu-card-frame']">
+                    <a v-if="cmsToggle" class="edit" href="src/views#">
+                        <font-awesome-icon icon="edit" />
+                    </a>
+
+                    <p v-for="bio in response.profile.bio.split(/\r?\n/)" :key="bio">{{bio}}</p>
+                    <p v-if="!response.profile.bio && cmsToggle" class="cms">Your bio</p>
+                </div>
 
             </div>
 
@@ -134,39 +198,51 @@
 
             <div id="section-subjects" class="tu-card">
 
-                <img class="figure-subjects" src="../assets/img/subjects_figures.png">
+                <img v-if="!cmsToggle" class="figure-subjects" src="../../assets/img/subjects_figures.png">
+
                 <div class="section-container">
                     <div class="icon"></div>
                     <div class="header"><h2>Subjects</h2></div>
                 </div>
 
-                <div class="row subjects-container">
-                    <div class="col-md-6 subject-cards" v-for="(category, index) in response.categories" :key="category.id">
-                        <div class="subjects" :class="[index % 2 === 0 ? 'border1' : 'border2']">
-                            <p>{{category.categoryName}}</p>
-                            <hr>
-                            <div class="subject-subcategories">
-                                <ul>
-                                    <li v-if="category.subcategoryName1">{{category.subcategoryName1}}</li>
-                                    <li v-if="category.subcategoryName2">{{category.subcategoryName2}}</li>
-                                    <li v-if="category.subcategoryName3">{{category.subcategoryName3}}</li>
-                                    <li v-if="category.subcategoryName4">{{category.subcategoryName4}}</li>
-                                    <li v-if="category.subcategoryName5">{{category.subcategoryName5}}</li>
-                                    <li v-if="category.subcategoryName6">{{category.subcategoryName6}}</li>
-                                    <li v-if="category.subcategoryName7">{{category.subcategoryName7}}</li>
-                                </ul>
+                <div :class="[cmsToggle && 'cms-frame tu-card-frame margin-frame']">
+                    <a v-if="cmsToggle" class="edit" href="src/views#">
+                        <font-awesome-icon icon="edit" />
+                    </a>
+
+                    <div v-if="response.categories.length" class="row subjects-container">
+                        <div class="col-md-6 subject-cards" v-for="(category, index) in response.categories" :key="category.id">
+                            <div class="subjects" :class="[index % 2 === 0 ? 'border1' : 'border2']">
+                                <p>{{category.categoryName}}</p>
+                                <hr>
+                                <div class="subject-subcategories">
+                                    <ul>
+                                        <li v-if="category.subcategoryName1">{{category.subcategoryName1}}</li>
+                                        <li v-if="category.subcategoryName2">{{category.subcategoryName2}}</li>
+                                        <li v-if="category.subcategoryName3">{{category.subcategoryName3}}</li>
+                                        <li v-if="category.subcategoryName4">{{category.subcategoryName4}}</li>
+                                        <li v-if="category.subcategoryName5">{{category.subcategoryName5}}</li>
+                                        <li v-if="category.subcategoryName6">{{category.subcategoryName6}}</li>
+                                        <li v-if="category.subcategoryName7">{{category.subcategoryName7}}</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
+
+                    <SubjectCms v-if="!response.categories.length && cmsToggle"></SubjectCms>
+
+
+<!-- MY STUDENTS -->
+
+                    <div class="my-students">
+                        <font-awesome-icon class="icon" icon="users" />
+                        <div class="label">My students are</div>
+                        <div class="value">{{response.profile.studentsProfile.toLowerCase()}}</div>
+                          <div v-if="!response.profile.studentsProfile && cmsToggle" class="value">&lt; your selection &gt;</div>
+                    </div>
+
                 </div>
-
-
-                <div class="my-students">
-                    <font-awesome-icon class="icon" icon="users" />
-                    <div class="label">My students are</div>
-                    <div class="value">{{response.profile.studentsProfile.toLowerCase()}}</div>
-                </div>
-
             </div>
 
 
@@ -174,14 +250,17 @@
 
             <div id="section-rates" class="tu-card">
 
-                <img class="figure-terms" src="../assets/img/rates_figure.png">
+                <img class="figure-terms" src="../../assets/img/rates_figure.png">
                 <div class="section-container">
                     <div class="icon"></div>
                     <div class="header"><h2>Rates</h2></div>
                 </div>
 
                 <div class="row rates-container">
-                    <div class="col-xl-6 col-lg-7 col-md-7 col-sm-7 col-12 items-all">
+                    <div class="col-xl-6 col-lg-7 col-md-7 col-sm-7 col-12 items-all" :class="[cmsToggle && 'cms-frame frame-rates']">
+                        <a v-if="cmsToggle" class="edit" href="src/views#">
+                            <font-awesome-icon icon="edit" />
+                        </a>
 
                         <div class="row item" v-for="rate in response.rates" :key="rate.id">
                             <div class="col-xl-4 col-lg-4 col-md-3 col-sm-3 col-3 rate-box">
@@ -197,13 +276,16 @@
                             </div>
                         </div>
 
-                        <div class="rates-additional-comment" v-if="response.profile.rateInfo.rateSectionComment">{{response.profile.rateInfo.rateSectionComment}}</div>
-                        <div class="rates-additional-comment" v-else>Details available upon request</div>
+                        <RateCms v-if="!response.rates && cmsToggle"></RateCms>
+
+
+                        <div class="rates-additional-comment">{{response.profile.rateInfo.rateSectionComment}}</div>
+                          <div v-if="!response.profile.rateInfo.rateSectionComment" class="rates-additional-comment">Details available upon request</div>
 
                     </div>
 
                     <div class="col-xl-6 col-lg-5 col-md-5 col-sm-4 col-0 graphic-rates">
-                        <img src="../assets/img/Rates_graphic.svg" />
+                        <img src="../../assets/img/Rates_graphic.svg" />
                     </div>
 
                 </div>
@@ -213,14 +295,17 @@
 
                 <div class="terms-container">
                     <div class="terms">
+                        <a v-if="cmsToggle" class="edit edit-terms" href="src/views#">
+                            <font-awesome-icon icon="edit" />
+                        </a>
 
                         <div class="row terms-item">
                             <div class="col-1 icon-container"><font-awesome-icon class="icon" icon="globe" /></div>
                             <div class="col-11 text">
                                 <div class="label">Online lessons:
                                     <div class="value">
-                                        <div v-if="response.profile.rateInfo.online" class="input">Yes</div>
-                                        <div v-else class="input">None</div>
+                                        <div v-if="response.profile.rateInfo.online" class="input">{{response.profile.rateInfo.onlineComment === null ? 'Yes' : response.profile.rateInfo.onlineComment}}</div>
+                                        <div v-else class="input">No</div>
                                     </div>
                                 </div>
                             </div>
@@ -232,7 +317,7 @@
                                 <div class="label">In-person lessons:
                                     <div class="value">
                                         <div v-if="response.profile.rateInfo.inPerson" class="input">{{response.profile.rateInfo.inPersonComment === null ? 'Yes' : response.profile.rateInfo.inPersonComment}}</div>
-                                        <div v-else class="input">None</div>
+                                        <div v-else class="input">No</div>
                                     </div>
                                 </div>
                             </div>
@@ -244,7 +329,7 @@
                                 <div class="label">Free consultation:
                                     <div class="value">
                                         <div v-if="response.profile.rateInfo.freeConsultation" class="input">{{response.profile.rateInfo.freeConsultationComment === null ? 'Yes' : response.profile.rateInfo.freeConsultationComment}}</div>
-                                        <div v-else class="input">None</div>
+                                        <div v-else class="input">No</div>
                                     </div>
                                 </div>
                             </div>
@@ -255,8 +340,8 @@
                             <div class="col-11 text">
                                 <div class="label">Cancelation policy:
                                     <div class="value">
-                                        <div v-if="response.profile.rateInfo.cancellationPolicy" class="input">{{response.profile.rateInfo.cancellationPolicyComment === null ? 'Yes' : response.profile.rateInfo.cancellationPolicyComment}}</div>
-                                        <div v-else class="input">None</div>
+                                        <div v-if="response.profile.rateInfo.cancellationPolicy" class="input">{{response.profile.rateInfo.cancellationPolicyComment === null ? '24h notice' : response.profile.rateInfo.cancellationPolicyComment}}</div>
+                                        <div v-else class="input">No refunds</div>
                                     </div>
                                 </div>
                             </div>
@@ -265,9 +350,12 @@
                     </div>
                 </div>
 
+
+<!-- LOGO IF NO EXPERTISE SECTION -->
+
                 <div v-if="(response.profile.youtubeIntroLink === null && response.problemCards.length === 0)" class="tutomy-logo">
                   <p>Powered by</p>
-                  <img src="../assets/img/logo2.png">
+                  <img src="../../assets/img/logo2.png">
                 </div>
 
             </div>
@@ -282,37 +370,62 @@
                     <div class="header"><h2>Expertise</h2></div>
                 </div>
 
-                <div v-if="response.profile.youtubeIntroLink" class="youtube-display">
-                    <iframe width="560" height="315" :src="response.profile.youtubeLink" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<!-- YOUTUBE -->
+
+                <div :class="[cmsToggle && 'cms-frame tu-card-frame margin-frame']">
+                    <a v-if="response.profile.youtubeIntroLink && cmsToggle" class="edit" href="src/views#">
+                        <font-awesome-icon icon="edit" />
+                    </a>
+
+                    <div v-if="response.profile.youtubeIntroLink" class="youtube-display">
+                        <iframe width="560" height="315" :src="response.profile.youtubeLink" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <YouTubeCms v-if="!response.profile.youtubeIntroLink && cmsToggle"></YouTubeCms>
                 </div>
 
-                <div class="expertise-arrows">
-                    <div v-on:click="scroll('left')" class="left-arrow">
-                        <img v-if="offset !== 0" src="../assets/img/arrow_left.svg">
-                    </div>
 
-                    <div id="problems" class="my-carousel" v-on:scroll.passive='handleScroll'>
-                        <div class="carousel-container">
-                            <div :id="'problem-card'+ index" class="problem-card" v-for="(problemCard, index) in response.problemCards" :key="problemCard.id">
-                                <div class="icon"><img :src="getImgUrl(index)"></div>
-                                <div class="input">
-                                    <p class="question">{{problemCard.question}}</p>
-                                    <p class="answer">{{problemCard.answer}}</p>
+<!-- CAROUSEL -->
+
+                <div :class="[cmsToggle && 'cms-frame tu-card-frame margin-frame']">
+                    <a v-if="cmsToggle" class="edit" href="src/views#">
+                        <font-awesome-icon icon="edit" />
+                    </a>
+
+                    <div class="expertise-arrows">
+                        <div v-on:click="scroll('left')" class="left-arrow">
+                            <img v-if="offset !== 0" src="../../assets/img/arrow_left.svg">
+                        </div>
+
+                        <div id="problems" class="my-carousel" v-on:scroll.passive='handleScroll'>
+                            <div class="carousel-container">
+
+                                <div :id="'problem-card'+ index" class="problem-card" v-for="(problemCard, index) in response.problemCards" :key="problemCard.id">
+                                    <div class="icon"><img :src="getImgUrl(index)"></div>
+                                    <div class="input">
+                                        <p class="question">{{problemCard.question}}</p>
+                                        <p class="answer">{{problemCard.answer}}</p>
+                                    </div>
                                 </div>
+
+                                <ProblemCardCms v-if="response.problemCards && cmsToggle"></ProblemCardCms>
 
                             </div>
                         </div>
-                    </div>
 
-                    <div v-on:click="scroll('right')" class="right-arrow">
-                        <img v-if="offset + offsetWidth <scrollWidth" src="../assets/img/arrow_right.svg">
-                    </div>
+                        <div v-on:click="scroll('right')" class="right-arrow">
+                            <img v-if="offset + offsetWidth <scrollWidth" src="../../assets/img/arrow_right.svg">
+                        </div>
 
+                    </div>
                 </div>
+
+
+<!-- LOGO -->
 
                 <div class="tutomy-logo">
                   <p>Powered by</p>
-                  <img src="../assets/img/logo2.png">
+                  <img src="../../assets/img/logo2.png">
                 </div>
 
             </div>
@@ -333,11 +446,24 @@
 <script>
     import axios from 'axios';
 
+    import SchoolCms from '../cms/SchoolCms';
+    import CertificateCms from '../cms/CertificateCms';
+    import SubjectCms from '../cms/SubjectCms';
+    import RateCms from '../cms/RateCms';
+    import YouTubeCms from '../cms/YouTubeCms';
+    import ProblemCardCms from '../cms/ProblemCardCms';
+
   export default {
     name: 'Profile',
     components: {
-
+      SchoolCms,
+      CertificateCms,
+      SubjectCms,
+      RateCms,
+      YouTubeCms,
+      ProblemCardCms
     },
+    props: ['cmsToggleProp', 'tokenProp'],
     created () {
           this.fetchData()
     },
@@ -363,13 +489,13 @@
             offset: 0,
             scrollWidth: 0,
             offsetWidth: 0,
-
+            cmsToggle: this.cmsToggleProp
         }
     },
       methods: {
           fetchData () {
               axios
-                  .get('https://www.tutomy.com/api/tutors/' + this.$route.params.token)
+                  .get('https://www.tutomy.com/api/tutors/' + this.tokenProp)
                   .then(res => this.response = res.data)
                   .then(() => this.scrollWidth = document.getElementById('problems').scrollWidth)
                   .then(() => this.offsetWidth = document.getElementById('problems').offsetWidth)
@@ -390,7 +516,7 @@
           },
           getImgUrl: function (index) {
               const number = index % 6;
-              return require('../assets/img/icon_expertise' + number + '.svg')
+              return require('../../assets/img/icon_expertise' + number + '.svg')
           },
           scroll: function (direction) {
             const p = document.getElementById('problems');

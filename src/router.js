@@ -1,11 +1,12 @@
 import VueRouter from 'vue-router';
 // Pages
 import Home from './views/Home';
-import Profile from './views/Profile';
+import ProfileView from './views/ProfileView';
+import EditProfileView from './views/EditProfileView';
 import Login from './views/Login'
 import Register from './views/Register'
-import Dashboard from "./views/Dashboard";
 import PhotoPopup from "./views/PhotoPopup";
+
 
 export const router = new VueRouter({
     mode: 'history',
@@ -15,10 +16,10 @@ export const router = new VueRouter({
     },
     routes: [
       { path: '/', component: Home },
-      { path: '/tutor/:token', component: Profile },
+      { path: '/tutor/:token', component: ProfileView },
       { path: '/login', component: Login },
       { path: '/register', component: Register },
-      { path: '/dashboard', component: Dashboard },
+      { path: '/dashboard', component: EditProfileView },
       { path: '/photopopup', component: PhotoPopup },
       // otherwise redirect to home
       { path: '*', redirect: '/' }
@@ -28,13 +29,12 @@ export const router = new VueRouter({
 
 router.beforeEach((to, from, next) => {
     // redirect to login page if not logged in and trying to access a restricted page
-    const publicPages = ["/", '/login', '/register', '/tutor/:token', '/photopopup' ];
-    const authRequired = !publicPages.includes(to.path);
+    const publicPages = ["/", '/login', '/register', '/photopopup' ];
+    const publicPrefixes = ["/tutor" ];
+    const authRequired = !publicPages.includes(to.path) && !publicPrefixes.some(prefix => to.path.startsWith(prefix));
     const loggedIn = localStorage.getItem('user');
-    console.log(loggedIn);
 
     if (authRequired && !loggedIn) {
-        console.log("pajacasdasdasdada")
         return next('/login');
     }
 

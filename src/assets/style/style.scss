@@ -2690,7 +2690,7 @@ Left section
 
     hr {
         width: 40%;
-        margin-top: 20px;
+        margin-top: 36px;
         border-style: solid;
         border-color: rgba(84, 87, 193, .3);
     }
@@ -2812,12 +2812,16 @@ h2.lastname {
     }
 
 .social-links {
+    .cms-media {
+        color: #949494;
+    }
+
     ul {
         display: flex;
         justify-content: center;
         padding-inline-start: 0px;
         margin-top: 20px;
-        margin-bottom: 36px;
+        margin-bottom: 20px;
     }
 
     li {
@@ -3094,6 +3098,10 @@ About me section - Bio
         &:last-child {
             margin-bottom: 0px;
         }
+    }
+
+    .cms {
+        height: 10rem;
     }
 }
 
@@ -3512,6 +3520,25 @@ Expertise section
     margin-top: 1.5rem;
 }
 
+.YT-cms {
+    padding: 2rem 0rem 2rem;
+    text-align: center;
+
+    .fa-plus-circle {
+        margin: 15px;
+
+        &:active, &:focus {
+            color: #0e314c;
+            transition: $transition;
+        }
+    }
+
+    p {
+        color: #949494;
+        margin: 0px;
+    }
+}
+
 .expertise-arrows {
     display: flex;
     align-items: center;
@@ -3632,7 +3659,7 @@ Tutomy logo
 
 
 /*================================================
-Pop-ups
+Pop-ups & CMS
 =================================================*/
 
 .container.cms {
@@ -3718,43 +3745,45 @@ Pop-ups
 }
 
 /*Chrome*/
+
 input[type='range'] {
-    overflow: hidden;
-    -webkit-appearance: none;
-    background-color: #CECECE;
-    border-radius: 5px;
-    outline: none;
+  overflow: hidden;
+  -webkit-appearance: none;
+  background-color: #CECECE;
+  border-radius: 5px;
+  outline: none;
 }
 
 input[type='range']::-webkit-slider-runnable-track {
-    height: 9px;
-    -webkit-appearance: none;
-    margin-top: -1px;
+  height: 9px;
+  -webkit-appearance: none;
+  margin-top: -1px;
 }
 
 input[type='range']::-webkit-slider-thumb {
-    width: 10px;
-    -webkit-appearance: none;
-    height: 9px;
-    cursor: ew-resize;
-    background-color: #5457C1;
-    box-shadow: -150px 0 0 150px rgba(84, 87, 193, 0.5);
+  width: 10px;
+  -webkit-appearance: none;
+  height: 9px;
+  cursor: ew-resize;
+  background-color: #5457C1;
+  box-shadow: -150px 0 0 150px rgba(84, 87, 193, 0.5);
 }
 
 /** FF*/
 input[type="range"]::-moz-range-progress {
-    background-color: rgba(84, 87, 193, 0.5);
+  background-color: rgba(84, 87, 193, 0.5);
 }
 input[type="range"]::-moz-range-track {
-    background-color: #CECECE;
+  background-color: #CECECE;
 }
 /* IE*/
 input[type="range"]::-ms-fill-lower {
-    background-color: rgba(84, 87, 193, 0.5);
+  background-color: rgba(84, 87, 193, 0.5);
 }
 input[type="range"]::-ms-fill-upper {
-    background-color: #CECECE;
+  background-color: #CECECE;
 }
+
 
 .photo-icons {
     display: flex;
@@ -3806,19 +3835,19 @@ input[type="range"]::-ms-fill-upper {
     }
 
     &.focus, &:focus {
-        border: none;
+      border: none;
     }
 
     &:not(:disabled):not(.disabled).active:focus, &:not(:disabled):not(.disabled):active:focus, .show>.btn-primary.dropdown-toggle:focus {
-        border: none;
+      border: none;
     }
 
     &:not(:disabled):not(.disabled).active, &:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
-        border: none;
+      border: none;
     }
 
     &.disabled, &:disabled {
-        border: none;
+      border: none;
     }
 }
 
@@ -3841,6 +3870,30 @@ input[type="range"]::-ms-fill-upper {
 .btn-save {
     width: 9rem;
 }
+
+.preview {
+    display: flex;
+    justify-content: center;
+
+    .btn-preview {
+        position: absolute;
+        top: 4%;
+        background-color: $light-green-color;
+
+        &::after, &::before {
+            background-color: #DF7870;
+        }
+
+        &:hover, &:focus, &:active {
+            background-color: #5457C1;
+        }
+
+        &.focus, &:focus {
+            background-color: #5457C1;
+        }
+    }
+}
+
 
 #links-popup {
     label {
@@ -3925,7 +3978,7 @@ input#shortBio-1, input#shortBio-2, input#shortBio-3,
 input#myStudents-age, input#myStudents-grade, input#myStudents-other,
 input#online, input#in-person, input#consultation, input#cancelation,
 input#question {
-    //background-image: url(../img/edit.svg);
+    background-image: url(../img/edit.svg);
     background-repeat: no-repeat;
     background-position: right top;
     background-origin: content-box;
@@ -4058,8 +4111,8 @@ input#question {
         margin: 5px;
 
         &:last-child, &:first-child {
-            display: flex;
-            align-items: center;
+          display: flex;
+          align-items: center;
         }
     }
 }
@@ -4078,7 +4131,7 @@ input#question {
     }
 
     input {
-        width: 240px;
+     width: 240px;
     }
 
     .custom-control-input:checked~.custom-control-label::before {
@@ -4094,6 +4147,88 @@ input#question {
 
 .terms-margin {
     margin-top: 26px;
+}
+
+
+.pic-edit {
+    position: absolute;
+    top: 5%;
+    right: 23%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.1rem;
+    width: 35px;
+    height: 35px;
+    background-color: white;
+
+    border: 7px solid white;
+    border-radius: 50%;
+    box-shadow: 1px 4px 6px #888888;
+
+    a:active, a:focus {
+        color: #0e314c;
+        transition: $transition;
+    }
+}
+
+a.edit {
+    position: absolute;
+    right: 9%;
+    font-size: 1.1rem;
+
+    &.outer {
+        margin-top: 0.3rem;
+    }
+
+    &.edit-terms {
+        right: 4%;
+    }
+
+    &:active, &:focus {
+        color: #0e314c;
+        transition: $transition;
+    }
+}
+
+.cms-frame {
+    border: 1px solid #CECECE;
+    border-radius: 5px;
+    padding: 0px 5px 15px;
+
+    &.inner-frame {
+        margin: 15px 15px 0px;
+        padding: 0px;
+
+        .edit {
+            right: 15%;
+        }
+    }
+
+    &.tu-card-frame {
+        padding: 10px;
+
+        &.margin-frame {
+            margin-top: 15px;
+            padding-bottom: 15px;
+        }
+
+        .edit {
+            right: 6%;
+        }
+    }
+
+    &.frame-rates {
+        padding: 15px 0px;
+
+        .edit {
+            right: 3%;
+            margin-top: -0.5rem;
+            z-index: 99;
+        }
+    }
 }
 
 
