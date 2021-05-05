@@ -47,8 +47,8 @@
                 </div>
 
                 <div :class="[cmsToggle && 'cms-frame']">
-                    <a href="./#">
-                        <font-awesome-icon v-if="cmsToggle" class="edit" icon="edit" />
+                    <a v-if="cmsToggle" href="./#">
+                        <font-awesome-icon class="edit" icon="edit" />
                     </a>
 
                     <div class="name-input">
@@ -77,8 +77,8 @@
 <!-- SOCIAL MEDIA -->
 
                     <div class="social-links" :class="[cmsToggle && 'cms-frame inner-frame']">
-                        <a href="./#">
-                            <font-awesome-icon v-if="cmsToggle" class="edit" icon="edit" />
+                        <a v-if="cmsToggle" href="./#">
+                            <font-awesome-icon class="edit" icon="edit" />
                         </a>
 
                         <ul>
@@ -123,8 +123,8 @@
         <div class="tu-card-container">
             <div id="section-about-me" class="tu-card">
                 <div :class="[cmsToggle && 'cms-frame tu-card-frame']">
-                    <a href="./#">
-                        <font-awesome-icon v-if="cmsToggle" class="edit" icon="edit" />
+                    <a v-if="cmsToggle" href="./#">
+                        <font-awesome-icon class="edit" icon="edit" />
                     </a>
 
 <!-- HEADLINE -->
@@ -182,8 +182,8 @@
 <!-- BIO -->
 
                 <div class="bio" :class="[cmsToggle && 'cms-frame tu-card-frame']">
-                    <a href="./#">
-                        <font-awesome-icon v-if="cmsToggle" class="edit" icon="edit" />
+                    <a v-if="cmsToggle" href="./#">
+                        <font-awesome-icon class="edit" icon="edit" />
                     </a>
 
                     <p v-for="bio in response.profile.bio.split(/\r?\n/)" :key="bio">{{bio}}</p>
@@ -205,8 +205,8 @@
                 </div>
 
                 <div :class="[cmsToggle && 'cms-frame tu-card-frame margin-frame']">
-                    <a href="./#">
-                        <font-awesome-icon v-if="cmsToggle" class="edit" icon="edit" />
+                    <a v-if="cmsToggle" href="./#">
+                        <font-awesome-icon class="edit" icon="edit" />
                     </a>
 
                     <div v-if="response.categories.length" class="row subjects-container">
@@ -257,8 +257,8 @@
 
                 <div class="row rates-container">
                     <div class="col-xl-6 col-lg-7 col-md-7 col-sm-7 col-12 items-all" :class="[cmsToggle && 'cms-frame frame-rates']">
-                        <a href="./#">
-                            <font-awesome-icon v-if="cmsToggle" class="edit" icon="edit" />
+                        <a v-if="cmsToggle" href="./#">
+                            <font-awesome-icon class="edit" icon="edit" />
                         </a>
 
                         <div class="row item" v-for="rate in response.rates" :key="rate.id">
@@ -294,8 +294,8 @@
 
                 <div class="terms-container">
                     <div class="terms">
-                        <a href="./#">
-                            <font-awesome-icon v-if="cmsToggle" class="edit edit-terms" icon="edit" />
+                        <a v-if="cmsToggle" href="./#">
+                            <font-awesome-icon class="edit edit-terms" icon="edit" />
                         </a>
 
                         <div class="row terms-item">
@@ -373,8 +373,8 @@
 <!-- YOUTUBE -->
 
                 <div :class="[cmsToggle && 'cms-frame tu-card-frame margin-frame']">
-                    <a href="./#">
-                        <font-awesome-icon v-if="response.profile.youtubeIntroLink && cmsToggle" class="edit" icon="edit" />
+                    <a v-if="response.profile.youtubeIntroLink && cmsToggle" href="./#">
+                        <font-awesome-icon class="edit" icon="edit" />
                     </a>
 
                     <div v-if="response.profile.youtubeIntroLink" class="youtube-display">
@@ -387,8 +387,8 @@
 <!-- CAROUSEL -->
 
                 <div :class="[cmsToggle && 'cms-frame tu-card-frame margin-frame']">
-                    <a href="./#">
-                        <font-awesome-icon v-if="cmsToggle" class="edit" icon="edit" />
+                    <a v-if="cmsToggle" href="./#">
+                        <font-awesome-icon class="edit" icon="edit" />
                     </a>
 
                     <div class="expertise-arrows">
