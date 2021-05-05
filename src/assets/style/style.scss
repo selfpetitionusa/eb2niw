@@ -3526,6 +3526,11 @@ Expertise section
 
     .fa-plus-circle {
         margin: 15px;
+
+        &:active, &:focus {
+            color: #0e314c;
+            transition: $transition;
+        }
     }
 
     p {
@@ -4159,12 +4164,13 @@ input#question {
     border-radius: 50%;
     box-shadow: 1px 4px 6px #888888;
 
-    a:active {
-        color: blue;
+    a:active, a:focus {
+        color: #0e314c;
+        transition: $transition;
     }
 }
 
-.edit {
+a.edit {
     position: absolute;
     right: 9%;
     font-size: 1.1rem;
@@ -4177,6 +4183,10 @@ input#question {
         right: 4%;
     }
 
+    &:active, &:focus {
+        color: #0e314c;
+        transition: $transition;
+    }
 }
 
 .cms-frame {
