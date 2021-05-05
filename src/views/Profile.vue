@@ -294,8 +294,8 @@
 
                 <div class="terms-container">
                     <div class="terms">
-                        <a v-if="cmsToggle" href="./#">
-                            <font-awesome-icon class="edit edit-terms" icon="edit" />
+                        <a v-if="cmsToggle" class="edit edit-terms" href="./#">
+                            <font-awesome-icon icon="edit" />
                         </a>
 
                         <div class="row terms-item">

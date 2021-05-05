@@ -4158,6 +4158,10 @@ input#question {
     border: 7px solid white;
     border-radius: 50%;
     box-shadow: 1px 4px 6px #888888;
+
+    a:active {
+        color: blue;
+    }
 }
 
 .edit {
@@ -4171,8 +4175,8 @@ input#question {
 
     &.edit-terms {
         right: 4%;
-        margin-top: -1rem;
     }
+
 }
 
 .cms-frame {
