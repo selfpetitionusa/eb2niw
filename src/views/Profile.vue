@@ -23,6 +23,11 @@
 
     <div class="background-rectangular"></div>
     <div id="tu-container" class="tu-container">
+
+    <div v-if="cmsToggle" class="preview">
+      <button type="submit" class="btn btn-primary btn-preview">Preview</button>
+    </div>
+
     <div class="row website-split">
 
 

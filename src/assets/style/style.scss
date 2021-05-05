@@ -3873,6 +3873,29 @@ Pop-ups & CMS
     width: 9rem;
 }
 
+.preview {
+    display: flex;
+    justify-content: center;
+
+    .btn-preview {
+        position: absolute;
+        top: 4%;
+        background-color: $light-green-color;
+
+        &::after, &::before {
+            background-color: #DF7870;
+        }
+
+        &:hover, &:focus, &:active {
+            background-color: #5457C1;
+        }
+
+        &.focus, &:focus {
+            background-color: #5457C1;
+        }
+    }
+}
+
 #links-popup {
     label {
         margin-left: 38px;
