@@ -39,7 +39,7 @@
 
                 <div>
                     <img class="photo" :src="response.profile.photo" />
-                    <img v-if="!response.profile.photo" class="photo" src="/avatar_female.png" />
+                    <img v-if="!response.profile.photo" class="photo" src="/avatar_female_cropped.png" />
                     <div v-if="cmsToggle" class="pic-edit">
                         <a href="src/views#">
                             <font-awesome-icon icon="edit" />
