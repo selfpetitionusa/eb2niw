@@ -3749,24 +3749,25 @@ Pop-ups & CMS
 input[type='range'] {
   overflow: hidden;
   -webkit-appearance: none;
+  height: 1px;
   background-color: #CECECE;
-  border-radius: 5px;
+  border-radius: 50px;
   outline: none;
 }
 
 input[type='range']::-webkit-slider-runnable-track {
-  height: 9px;
+  height: 5px;
   -webkit-appearance: none;
-  margin-top: -1px;
 }
 
 input[type='range']::-webkit-slider-thumb {
-  width: 10px;
+
+  width: 16px;
   -webkit-appearance: none;
-  height: 9px;
+  height: 16px;
   cursor: ew-resize;
   background-color: #5457C1;
-  box-shadow: -150px 0 0 150px rgba(84, 87, 193, 0.5);
+  box-shadow: -150px 0 0 142px rgba(84, 87, 193, 0.5);
 }
 
 /** FF*/
