@@ -5,7 +5,7 @@ import ProfileView from './views/ProfileView';
 import EditProfileView from './views/EditProfileView';
 import Login from './views/Login'
 import Register from './views/Register'
-import PhotoPopup from "./views/PhotoPopup";
+import PhotoPopup from './components/popups/PhotoPopup';
 
 
 export const router = new VueRouter({
@@ -29,7 +29,7 @@ export const router = new VueRouter({
 
 router.beforeEach((to, from, next) => {
     // redirect to login page if not logged in and trying to access a restricted page
-    const publicPages = ["/", '/login', '/register', '/photopopup' ];
+    const publicPages = ["/", '/login', '/register', '/photopopup'];
     const publicPrefixes = ["/tutor" ];
     const authRequired = !publicPages.includes(to.path) && !publicPrefixes.some(prefix => to.path.startsWith(prefix));
     const loggedIn = localStorage.getItem('user');
