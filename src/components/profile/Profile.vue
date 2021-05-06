@@ -3,7 +3,6 @@
     <div class="d-flex">
         <div :id="response.profile.token" v-if="response.profile.token" v-show="false"></div>
 
-
 <!-- HAMBURGER MENU -->
 
     <div class="hamburger-nav">
@@ -41,7 +40,8 @@
                     <img class="photo" :src="response.profile.photo" />
                     <img v-if="!response.profile.photo" class="photo" src="/avatar_female.png" />
                     <div v-if="cmsToggle" class="pic-edit">
-                        <a href="src/views#">
+                        <PhotoPopup></PhotoPopup>
+                        <a href="#" v-b-modal.photo-modal>
                             <font-awesome-icon icon="edit" />
                         </a>
                     </div>
@@ -170,6 +170,7 @@
                             </div>
 
                             <CertificateCms v-if="!response.certificate && cmsToggle"></CertificateCms>
+
                         </div>
 
                         <div class="col graphic-bio">
@@ -452,6 +453,7 @@
     import RateCms from '../cms/RateCms';
     import YouTubeCms from '../cms/YouTubeCms';
     import ProblemCardCms from '../cms/ProblemCardCms';
+    import PhotoPopup from '../popups/PhotoPopup';
 
   export default {
     name: 'Profile',
@@ -461,7 +463,8 @@
       SubjectCms,
       RateCms,
       YouTubeCms,
-      ProblemCardCms
+      ProblemCardCms,
+      PhotoPopup
     },
     props: ['cmsToggleProp', 'tokenProp'],
     created () {
