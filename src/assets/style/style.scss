@@ -3683,6 +3683,27 @@ Pop-ups & CMS
     }
 }
 
+.login {
+    h2 {
+        margin-bottom: 2rem;
+    }
+
+    .form-control {
+        border-radius: 5px;
+    }
+
+    .form-group {
+        margin-bottom: 12px;
+
+        label {
+            margin-bottom: 2px;
+            margin-left: 1px;
+            font-size: 14px;
+            font-weight: 400;
+        }
+    }
+}
+
 .cms {
     .form-control {
         border-radius: 5px;
