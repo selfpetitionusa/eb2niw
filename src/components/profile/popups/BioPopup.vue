@@ -21,29 +21,30 @@
 
 
 <script>
+
   export default {
-    methods: {
-      countWord: function() {
-        const words = document.getElementById("bio");
-        let count = 0;
-        const split = words.value.split(' ');
+      methods: {
+          countWord: function() {
+              const words = document.getElementById("bio");
+              let count = 0;
+              const split = words.value.split(' ');
 
-        for (let i = 0; i < split.length; i++) {
-            if (split[i] != "") {
-                count += 1;
-            }
-        }
+              for (let i = 0; i < split.length; i++) {
+                  if (split[i] != "") {
+                      count += 1;
+                  }
+              }
 
-        document.getElementById("show").innerHTML = count;
+              document.getElementById("show").innerHTML = count;
 
-        if(count >= 160){
-           alert("You cannot put more than 160 words in this text area.");
-           words.maxLength = words.length;
-           return false;
-        }
-        return true;
-      },
-    }
+              if(count >= 160){
+                 alert("You cannot put more than 160 words in this text area.");
+                 words.maxLength = words.length;
+                 return false;
+              }
+              return true;
+          }
+      }
   }
 
 </script>

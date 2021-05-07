@@ -76,90 +76,90 @@
 
 <script>
 
-export default {
-    data() {
-        return {
-            subjects: [{
-                subjectCat: "",
-                subCat1: "",
-                subCat2: "",
-                subCat3: "",
-                subCat4: "",
-                subCat5: "",
-                subCat6: "",
-                subCat7: ""
-            }],
-            subjectsNumber: 1,
-            isActiveSubjectMinus: true
-        }
-    },
-    methods: {
-        addSubject: function() {
-            this.subjects.push({
-                subjectCat: "",
-                subCat1: "",
-                subCat2: "",
-                subCat3: "",
-                subCat4: "",
-                subCat5: "",
-                subCat6: "",
-                subCat7: ""
-            });
-            this.isActiveSubjectMinus = true;
-            this.subjectsNumber++;
-        },
-        deleteSubject: function() {
-            if(this.subjectsNumber > 1) {
-                this.subjects.pop();
-                this.subjectsNumber--;
-            }
-            if(this.subjectsNumber === 1) {
-                this.isActiveSubjectMinus = false;
-            }
-        },
-        enableInputSubcat2: function() {
-            document.getElementById('subject-categories2').removeAttribute('disabled');
-        },
-        enableInputSubcat3: function() {
-            document.getElementById('subject-categories3').removeAttribute('disabled');
-        },
-        enableInputSubcat4: function() {
-            document.getElementById('subject-categories4').removeAttribute('disabled');
-        },
-        enableInputSubcat5: function() {
-            document.getElementById('subject-categories5').removeAttribute('disabled');
-        },
-        enableInputSubcat6: function() {
-            document.getElementById('subject-categories6').removeAttribute('disabled');
-        },
-        enableInputSubcat7: function() {
-            document.getElementById('subject-categories7').removeAttribute('disabled');
-        },
-        enableDisableRadio: function() {
-            let x = document.getElementById("myStudents-age-radio");
-            var y = document.getElementById("myStudents-age");
-
-            let a = document.getElementById("myStudents-grade-radio");
-            var b = document.getElementById("myStudents-grade");
-
-            let v = document.getElementById("myStudents-other-radio");
-            var w = document.getElementById("myStudents-other");
-
-            y.disabled = x.checked ? false : true;
-            b.disabled = a.checked ? false : true;
-            w.disabled = v.checked ? false : true;
-
-            if (!y.disabled) {
-              y.focus();
+  export default {
+      data() {
+          return {
+              subjects: [{
+                  subjectCat: "",
+                  subCat1: "",
+                  subCat2: "",
+                  subCat3: "",
+                  subCat4: "",
+                  subCat5: "",
+                  subCat6: "",
+                  subCat7: ""
+              }],
+              subjectsNumber: 1,
+              isActiveSubjectMinus: true
+          }
+      },
+      methods: {
+          addSubject: function() {
+              this.subjects.push({
+                  subjectCat: "",
+                  subCat1: "",
+                  subCat2: "",
+                  subCat3: "",
+                  subCat4: "",
+                  subCat5: "",
+                  subCat6: "",
+                  subCat7: ""
+              });
+              this.isActiveSubjectMinus = true;
+              this.subjectsNumber++;
+          },
+          deleteSubject: function() {
+              if(this.subjectsNumber > 1) {
+                  this.subjects.pop();
+                  this.subjectsNumber--;
               }
-            if (!b.disabled) {
-              b.focus();
+              if(this.subjectsNumber === 1) {
+                  this.isActiveSubjectMinus = false;
               }
-            if (!w.disabled) {
-              w.focus();
-              }
-        }
-    }
-}
+          },
+          enableInputSubcat2: function() {
+              document.getElementById('subject-categories2').removeAttribute('disabled');
+          },
+          enableInputSubcat3: function() {
+              document.getElementById('subject-categories3').removeAttribute('disabled');
+          },
+          enableInputSubcat4: function() {
+              document.getElementById('subject-categories4').removeAttribute('disabled');
+          },
+          enableInputSubcat5: function() {
+              document.getElementById('subject-categories5').removeAttribute('disabled');
+          },
+          enableInputSubcat6: function() {
+              document.getElementById('subject-categories6').removeAttribute('disabled');
+          },
+          enableInputSubcat7: function() {
+              document.getElementById('subject-categories7').removeAttribute('disabled');
+          },
+          enableDisableRadio: function() {
+              let x = document.getElementById("myStudents-age-radio");
+              var y = document.getElementById("myStudents-age");
+
+              let a = document.getElementById("myStudents-grade-radio");
+              var b = document.getElementById("myStudents-grade");
+
+              let v = document.getElementById("myStudents-other-radio");
+              var w = document.getElementById("myStudents-other");
+
+              y.disabled = x.checked ? false : true;
+              b.disabled = a.checked ? false : true;
+              w.disabled = v.checked ? false : true;
+
+              if (!y.disabled) {
+                y.focus();
+                }
+              if (!b.disabled) {
+                b.focus();
+                }
+              if (!w.disabled) {
+                w.focus();
+                }
+          }
+      }
+  }
 
 </script>

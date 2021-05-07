@@ -84,57 +84,57 @@
 
 
 <script>
-export default {
-    data () {
-        return {
-            answerOnline: "",
-            answerInPerson: "",
-            answerConsultation: "",
-            answerCancelation: ""
-        }
-    },
-    methods: {
-        enableDisableSwitch1: function() {
-            let x = document.getElementById("online-switch");
-            var y = document.getElementById("online");
+  export default {
+      data () {
+          return {
+              answerOnline: "",
+              answerInPerson: "",
+              answerConsultation: "",
+              answerCancelation: ""
+          }
+      },
+      methods: {
+          enableDisableSwitch1: function() {
+              let x = document.getElementById("online-switch");
+              var y = document.getElementById("online");
 
-            y.disabled = x.checked ? false : true;
+              y.disabled = x.checked ? false : true;
 
-            if (!y.disabled) {
-              y.focus();
+              if (!y.disabled) {
+                  y.focus();
               }
-        },
-        enableDisableSwitch2: function() {
-            let a = document.getElementById("in-person-switch");
-            var b = document.getElementById("in-person");
+          },
+          enableDisableSwitch2: function() {
+              let a = document.getElementById("in-person-switch");
+              var b = document.getElementById("in-person");
 
-            b.disabled = a.checked ? false : true;
+              b.disabled = a.checked ? false : true;
 
-            if (!b.disabled) {
-              b.focus();
+              if (!b.disabled) {
+                b.focus();
               }
-        },
-        enableDisableSwitch3: function() {
-            let v = document.getElementById("consultation-switch");
-            var w = document.getElementById("consultation");
+          },
+          enableDisableSwitch3: function() {
+              let v = document.getElementById("consultation-switch");
+              var w = document.getElementById("consultation");
 
-            w.disabled = v.checked ? false : true;
+              w.disabled = v.checked ? false : true;
 
-            if (!w.disabled) {
-              w.focus();
+              if (!w.disabled) {
+                  w.focus();
               }
-        },
-        enableDisableSwitch4: function() {
-            let p = document.getElementById("cancelation-switch");
-            var q = document.getElementById("cancelation");
+          },
+          enableDisableSwitch4: function() {
+              let p = document.getElementById("cancelation-switch");
+              var q = document.getElementById("cancelation");
 
-            q.disabled = p.checked ? false : true;
+              q.disabled = p.checked ? false : true;
 
-            if (!q.disabled) {
-              q.focus();
+              if (!q.disabled) {
+                q.focus();
               }
-        }
-    }
-}
+          }
+      }
+  }
 
 </script>

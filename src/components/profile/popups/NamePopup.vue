@@ -56,12 +56,12 @@
 
 <script>
 
-export default {
-    data () {
-        return {
-            firstName: ""
-        }
-    }
-}
+  export default {
+      data () {
+          return {
+              firstName: ""
+          }
+      }
+  }
 
 </script>

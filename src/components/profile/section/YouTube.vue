@@ -18,12 +18,12 @@
 
 <script>
 
-        import YouTubePopup from '../../profile/popups/YouTubePopup';
+      import YouTubePopup from '../../profile/popups/YouTubePopup';
 
-    export default {
-        components: {
-            YouTubePopup
-        }
-    }
+  export default {
+      components: {
+          YouTubePopup
+      }
+  }
 
 </script>

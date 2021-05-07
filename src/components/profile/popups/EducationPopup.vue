@@ -65,83 +65,83 @@
 
 <script>
 
-export default {
-    data() {
-        return {
-            schools: [{
-                    school: "",
-                    degree: ""
-                }],
-            certificates: [{
-                    certificate: "",
-                    certDesc: ""
-                }],
-            schoolsNumber: 1,
-            certificatesNumber: 1,
-            isActiveSchoolPlus: true,
-            isActiveSchoolMinus: true,
-            isActiveCertificatePlus: true,
-            isActiveCertificateMinus: true
-        }
-    },
-    methods: {
-        addSchool: function() {
-            if(this.schoolsNumber < 3) {
-                this.schools.push({
-                    school: "",
-                    degree: ""
-                });
-                this.isActiveSchoolMinus = true;
-                this.schoolsNumber++;
-            }
-            if(this.schoolsNumber === 3) {
-                this.isActiveSchoolPlus = false;
-            }
-        },
-        deleteSchool: function() {
-            if(this.schoolsNumber > 1) {
-                this.schools.pop();
-                this.isActiveSchoolPlus = true;
-                this.schoolsNumber--;
-            }
-            if(this.schoolsNumber === 1) {
-                this.isActiveSchoolMinus = false;
-            }
-        },
-        addCertificate: function() {
-            if(this.certificatesNumber < 3) {
-                this.certificates.push({
-                    certificate: "",
-                    certDesc: ""
-                });
-                this.isActiveCertificateMinus = true;
-                this.certificatesNumber++;
-            }
-            if(this.certificatesNumber === 3) {
-                this.isActiveCertificatePlus = false;
-            }
-        },
-        deleteCertificate: function() {
-            if(this.certificatesNumber > 1) {
-                this.certificates.pop();
-                this.isActiveCertificatePlus = true;
-                this.certificatesNumber--;
-            }
-            if(this.certificatesNumber === 1) {
-                this.isActiveCertificateMinus = false;
-            }
-        },
-        descIsRequired: function() {
-            let x= document.getElementById('certDesc');
-            let y= document.getElementById('certificate');
+  export default {
+      data() {
+          return {
+              schools: [{
+                  school: "",
+                  degree: ""
+              }],
+              certificates: [{
+                  certificate: "",
+                  certDesc: ""
+              }],
+              schoolsNumber: 1,
+              certificatesNumber: 1,
+              isActiveSchoolPlus: true,
+              isActiveSchoolMinus: true,
+              isActiveCertificatePlus: true,
+              isActiveCertificateMinus: true
+          }
+      },
+      methods: {
+          addSchool: function() {
+              if(this.schoolsNumber < 3) {
+                  this.schools.push({
+                      school: "",
+                      degree: ""
+                  });
+                  this.isActiveSchoolMinus = true;
+                  this.schoolsNumber++;
+              }
+              if(this.schoolsNumber === 3) {
+                  this.isActiveSchoolPlus = false;
+              }
+          },
+          deleteSchool: function() {
+              if(this.schoolsNumber > 1) {
+                  this.schools.pop();
+                  this.isActiveSchoolPlus = true;
+                  this.schoolsNumber--;
+              }
+              if(this.schoolsNumber === 1) {
+                  this.isActiveSchoolMinus = false;
+              }
+          },
+          addCertificate: function() {
+              if(this.certificatesNumber < 3) {
+                  this.certificates.push({
+                      certificate: "",
+                      certDesc: ""
+                  });
+                  this.isActiveCertificateMinus = true;
+                  this.certificatesNumber++;
+              }
+              if(this.certificatesNumber === 3) {
+                  this.isActiveCertificatePlus = false;
+              }
+          },
+          deleteCertificate: function() {
+              if(this.certificatesNumber > 1) {
+                  this.certificates.pop();
+                  this.isActiveCertificatePlus = true;
+                  this.certificatesNumber--;
+              }
+              if(this.certificatesNumber === 1) {
+                  this.isActiveCertificateMinus = false;
+              }
+          },
+          descIsRequired: function() {
+              let x= document.getElementById('certDesc');
+              let y= document.getElementById('certificate');
 
-            if(y.value.length !== 0){
-                x.setAttribute('required', "");
-            } else {
-                x.removeAttribute('required');
-            }
-        }
-    }
-}
+              if(y.value.length !== 0){
+                  x.setAttribute('required', "");
+              } else {
+                  x.removeAttribute('required');
+              }
+          }
+      }
+  }
 
 </script>

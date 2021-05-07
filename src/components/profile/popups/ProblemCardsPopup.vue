@@ -46,66 +46,70 @@
 </template>
 
 
+
+
 <script>
-    export default {
-        data() {
-            return {
-                problemCards: [{
-                        question: "",
-                        answer: ""
-                    }],
-                cardsNumber: 1,
-                isActiveCardMinus: true
-            }
-        },
-        methods: {
-            countWord: function() {
-                const words = document.getElementById("answer");
-                let count = 0;
-                const split = words.value.split(' ');
 
-                for (let i = 0; i < split.length; i++) {
-                    if (split[i] != "") {
-                        count += 1;
-                    }
-                }
+  export default {
+      data() {
+          return {
+              problemCards: [{
+                  question: "",
+                  answer: ""
+              }],
+              cardsNumber: 1,
+              isActiveCardMinus: true
+          }
+      },
+      methods: {
+          countWord: function() {
+              const words = document.getElementById("answer");
+              let count = 0;
+              const split = words.value.split(' ');
 
-                document.getElementById("show").innerHTML = count;
+              for (let i = 0; i < split.length; i++) {
+                  if (split[i] != "") {
+                      count += 1;
+                  }
+              }
 
-                if(count >= 70){
-                   alert("You cannot put more than 70 words in this text area.");
-                   words.maxLength = words.length;
-                   return false;
-                }
-                return true;
-            },
-            addProblemCard: function() {
-                this.problemCards.push({
-                    question: "",
-                    answer: ""
-                });
-                this.isActiveCardMinus = true;
-                this.cardsNumber++;
-            },
-            deleteProblemCard: function() {
-                if(this.cardsNumber > 1) {
-                    this.problemCards.pop();
-                    this.cardsNumber--;
-                }
-                if(this.cardsNumber === 1) {
-                    this.isActiveCardMinus = false;
-                }
-            },
-            answerIsRequired: function() {
-                let x= document.getElementById('question');
-                let y= document.getElementById('answer');
+              document.getElementById("show").innerHTML = count;
 
-                if(x.value.length !== 0){
-                    y.setAttribute('required', "");
-                } else {
-                    y.removeAttribute('required');
-                }
-            }
-        }
-    }
+              if(count >= 70){
+                 alert("You cannot put more than 70 words in this text area.");
+                 words.maxLength = words.length;
+                 return false;
+              }
+              return true;
+          },
+          addProblemCard: function() {
+              this.problemCards.push({
+                  question: "",
+                  answer: ""
+              });
+              this.isActiveCardMinus = true;
+              this.cardsNumber++;
+          },
+          deleteProblemCard: function() {
+              if(this.cardsNumber > 1) {
+                  this.problemCards.pop();
+                  this.cardsNumber--;
+              }
+              if(this.cardsNumber === 1) {
+                  this.isActiveCardMinus = false;
+              }
+          },
+          answerIsRequired: function() {
+              let x= document.getElementById('question');
+              let y= document.getElementById('answer');
+
+              if(x.value.length !== 0){
+                  y.setAttribute('required', "");
+              } else {
+                  y.removeAttribute('required');
+              }
+          }
+      }
+  }
+  
 </script>

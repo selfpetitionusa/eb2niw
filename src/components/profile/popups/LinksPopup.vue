@@ -42,11 +42,11 @@
                 </div>
             </div>
 
-          <div class="btn-container">
-              <a class="btn btn-primary btn-border btn-cancel" @click="$bvModal.hide('links-modal')">Cancel</a>
-              <button type="submit" class="btn btn-primary btn-border btn-save">Save</button>
-          </div>
-      </form>
-</b-modal>
+            <div class="btn-container">
+                <a class="btn btn-primary btn-border btn-cancel" @click="$bvModal.hide('links-modal')">Cancel</a>
+                <button type="submit" class="btn btn-primary btn-border btn-save">Save</button>
+            </div>
+        </form>
+    </b-modal>
 
 </template>

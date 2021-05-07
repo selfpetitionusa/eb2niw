@@ -30,9 +30,7 @@
                                     <option>Type your own</option>
                                 </datalist>
                             </td>
-                            <td>
-                                <input type="text" class="form-control" id="rateComment-1" v-on:input="enableInputRate2" placeholder="Example: Rates starting from">
-                            </td>
+                            <td><input type="text" class="form-control" id="rateComment-1" v-on:input="enableInputRate2" placeholder="Example: Rates starting from"></td>
                         </tr>
 
                         <tr>
@@ -48,9 +46,7 @@
                                     <option>Type your own</option>
                                 </datalist>
                             </td>
-                            <td>
-                                <input type="text" class="form-control" id="rateComment-2" placeholder="Example: University level students" v-on:input="enableInputRate3" disabled>
-                            </td>
+                            <td><input type="text" class="form-control" id="rateComment-2" placeholder="Example: University level students" v-on:input="enableInputRate3" disabled></td>
                         </tr>
 
                         <tr>
@@ -66,9 +62,7 @@
                                     <option>Type your own</option>
                                 </datalist>
                             </td>
-                            <td>
-                                <input type="text" class="form-control" id="rateComment-3" placeholder="Example: Students 5-7 years old" v-on:input="enableInputRate4" disabled>
-                            </td>
+                            <td><input type="text" class="form-control" id="rateComment-3" placeholder="Example: Students 5-7 years old" v-on:input="enableInputRate4" disabled></td>
                         </tr>
 
                         <tr>
@@ -117,61 +111,61 @@
 
 <script>
 
-    export default {
-        methods: {
-            enableInputRate2: function() {
-                document.getElementById('rateCurrency-2').removeAttribute('disabled');
-                document.getElementById('rateAmount-2').removeAttribute('disabled');
-                document.getElementById('rateType-2').removeAttribute('disabled');
-                document.getElementById('rateComment-2').removeAttribute('disabled');
-            },
-            enableInputRate3: function() {
-                document.getElementById('rateCurrency-3').removeAttribute('disabled');
-                document.getElementById('rateAmount-3').removeAttribute('disabled');
-                document.getElementById('rateType-3').removeAttribute('disabled');
-                document.getElementById('rateComment-3').removeAttribute('disabled');
-            },
-            enableInputRate4: function() {
-                document.getElementById('rateCurrency-4').removeAttribute('disabled');
-                document.getElementById('rateAmount-4').removeAttribute('disabled');
-                document.getElementById('rateType-4').removeAttribute('disabled');
-                document.getElementById('rateComment-4').removeAttribute('disabled');
-            },
-            inputIsRequired: function() {
-                const u = document.forms['rates-popup']['rateCurrency-1'].value;
-                const v = document.forms['rates-popup']['rateAmount-1'].value;
-                const w = document.forms['rates-popup']['rateType-1'].value;
+  export default {
+      methods: {
+          enableInputRate2: function() {
+              document.getElementById('rateCurrency-2').removeAttribute('disabled');
+              document.getElementById('rateAmount-2').removeAttribute('disabled');
+              document.getElementById('rateType-2').removeAttribute('disabled');
+              document.getElementById('rateComment-2').removeAttribute('disabled');
+          },
+          enableInputRate3: function() {
+              document.getElementById('rateCurrency-3').removeAttribute('disabled');
+              document.getElementById('rateAmount-3').removeAttribute('disabled');
+              document.getElementById('rateType-3').removeAttribute('disabled');
+              document.getElementById('rateComment-3').removeAttribute('disabled');
+          },
+          enableInputRate4: function() {
+              document.getElementById('rateCurrency-4').removeAttribute('disabled');
+              document.getElementById('rateAmount-4').removeAttribute('disabled');
+              document.getElementById('rateType-4').removeAttribute('disabled');
+              document.getElementById('rateComment-4').removeAttribute('disabled');
+          },
+          inputIsRequired: function() {
+              const u = document.forms['rates-popup']['rateCurrency-1'].value;
+              const v = document.forms['rates-popup']['rateAmount-1'].value;
+              const w = document.forms['rates-popup']['rateType-1'].value;
 
-                const x = document.forms['rates-popup']['rateCurrency-2'].value;
-                const y = document.forms['rates-popup']['rateAmount-2'].value;
-                const z = document.forms['rates-popup']['rateType-2'].value;
+              const x = document.forms['rates-popup']['rateCurrency-2'].value;
+              const y = document.forms['rates-popup']['rateAmount-2'].value;
+              const z = document.forms['rates-popup']['rateType-2'].value;
 
-                const a = document.forms['rates-popup']['rateCurrency-3'].value;
-                const b = document.forms['rates-popup']['rateAmount-3'].value;
-                const c = document.forms['rates-popup']['rateType-3'].value;
+              const a = document.forms['rates-popup']['rateCurrency-3'].value;
+              const b = document.forms['rates-popup']['rateAmount-3'].value;
+              const c = document.forms['rates-popup']['rateType-3'].value;
 
-                const p = document.forms['rates-popup']['rateCurrency-4'].value;
-                const q = document.forms['rates-popup']['rateAmount-4'].value;
-                const r = document.forms['rates-popup']['rateType-4'].value;
+              const p = document.forms['rates-popup']['rateCurrency-4'].value;
+              const q = document.forms['rates-popup']['rateAmount-4'].value;
+              const r = document.forms['rates-popup']['rateType-4'].value;
 
-                if ( (u !== "" && v === "" && w === "") || (u === "" && v !== "" && w === "") || (u === "" && v === "" && w !== "") || (u !== "" && v !== "" && w === "") || (u !== "" && v === "" && w !== "") || (u === "" && v !== "" && w !== "") ) {
-                    alert("For each added rate provide: currency, rate and session type");
-                    return false;
-                    }
-                if ( (x !== "" && y === "" && z === "") || (x === "" && y !== "" && z === "") || (x === "" && y === "" && z !== "") || (x !== "" && y !== "" && z === "") || (x !== "" && y === "" && z !== "") || (x === "" && y !== "" && z !== "") ) {
-                    alert("For each added rate provide: currency, rate and session type");
-                    return false;
-                    }
-                if ( (a !== "" && b === "" && c === "") || (a === "" && b !== "" && c === "") || (a === "" && b === "" && c !== "") || (a !== "" && b !== "" && c === "") || (a !== "" && b === "" && c !== "") || (a === "" && b !== "" && c !== "") ) {
-                    alert("For each added rate provide: currency, rate and session type");
-                    return false;
-                    }
-                if ( (p !== "" && q === "" && r === "") || (p === "" && q !== "" && r === "") || (p === "" && q === "" && r !== "") || (p !== "" && q !== "" && r === "") || (p !== "" && q === "" && r !== "") || (p === "" && q !== "" && r !== "") ) {
-                    alert("For each added rate provide: currency, rate and session type");
-                    return false;
-                    }
-            }
-        }
-    }
+              if ( (u !== "" && v === "" && w === "") || (u === "" && v !== "" && w === "") || (u === "" && v === "" && w !== "") || (u !== "" && v !== "" && w === "") || (u !== "" && v === "" && w !== "") || (u === "" && v !== "" && w !== "") ) {
+                  alert("For each added rate provide: currency, rate and session type");
+                  return false;
+                  }
+              if ( (x !== "" && y === "" && z === "") || (x === "" && y !== "" && z === "") || (x === "" && y === "" && z !== "") || (x !== "" && y !== "" && z === "") || (x !== "" && y === "" && z !== "") || (x === "" && y !== "" && z !== "") ) {
+                  alert("For each added rate provide: currency, rate and session type");
+                  return false;
+                  }
+              if ( (a !== "" && b === "" && c === "") || (a === "" && b !== "" && c === "") || (a === "" && b === "" && c !== "") || (a !== "" && b !== "" && c === "") || (a !== "" && b === "" && c !== "") || (a === "" && b !== "" && c !== "") ) {
+                  alert("For each added rate provide: currency, rate and session type");
+                  return false;
+                  }
+              if ( (p !== "" && q === "" && r === "") || (p === "" && q !== "" && r === "") || (p === "" && q === "" && r !== "") || (p !== "" && q !== "" && r === "") || (p !== "" && q === "" && r !== "") || (p === "" && q !== "" && r !== "") ) {
+                  alert("For each added rate provide: currency, rate and session type");
+                  return false;
+                  }
+          }
+      }
+  }
 
 </script>
