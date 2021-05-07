@@ -32,8 +32,8 @@
             </div>
 
             <div class="btn-container">
-                <a class="btn btn-primary btn-border btn-cancel" @click="$bvModal.hide('photo-modal')" style="margin-right: 20px">Cancel</a>
-                <button type="submit" class="btn btn-primary btn-border btn-save" >Save</button>
+                <a class="btn btn-primary btn-border btn-cancel" @click="$bvModal.hide('photo-modal')">Cancel</a>
+                <button type="submit" class="btn btn-primary btn-border btn-save">Save</button>
             </div>
         </form>
     </b-modal>

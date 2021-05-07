@@ -2418,7 +2418,7 @@ Go Top CSS
 }
 
 .modal-dialog {
-    margin: 60px auto 0px auto;
+    margin: 60px auto 20px auto;
 }
 
 .modal-content {
@@ -3662,10 +3662,6 @@ Tutomy logo
 Pop-ups & CMS
 =================================================*/
 
-.container.cms {
-    margin-top: 2rem;
-}
-
 .cms {
     .form-group {
         margin-bottom: 12px;
@@ -3679,6 +3675,33 @@ Pop-ups & CMS
 
         .label {
             font-size: 12px;
+        }
+    }
+
+    .form-control {
+        border-radius: 5px;
+        border-color: #949494;
+        min-height: 35px;
+
+        &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: #D8D8D8;
+            opacity: 1; /* Firefox */
+        }
+
+        &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+            color: #D8D8D8;
+        }
+
+        &::-ms-input-placeholder { /* Microsoft Edge */
+            color: #D8D8D8;
+        }
+    }
+
+    .subject-cat {
+        padding-left: 25px;
+
+        .form-control {
+            margin-bottom: 5px;
         }
     }
 }
@@ -3700,27 +3723,6 @@ Pop-ups & CMS
             margin-left: 1px;
             font-size: 14px;
             font-weight: 400;
-        }
-    }
-}
-
-.cms {
-    .form-control {
-        border-radius: 5px;
-        border-color: #949494;
-        min-height: 35px;
-
-        &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-            color: #D8D8D8;
-            opacity: 1; /* Firefox */
-        }
-
-        &:-ms-input-placeholder { /* Internet Explorer 10-11 */
-            color: #D8D8D8;
-        }
-
-        &::-ms-input-placeholder { /* Microsoft Edge */
-            color: #D8D8D8;
         }
     }
 }
@@ -3856,7 +3858,7 @@ input[type="range"]::-ms-fill-upper {
 .btn-container {
     display: flex;
     justify-content: flex-end;
-    margin: 2.5rem 0;
+    margin: 2.5rem 0 1rem;
 }
 
 .btn-border {
@@ -3887,6 +3889,7 @@ input[type="range"]::-ms-fill-upper {
     color: #5457C1;
     background-color: $white-color;
     width: 9rem;
+    margin-right: 20px;
     box-shadow: 0 13px 27px 0 rgba(84, 87, 193, .15);
 
     &:hover {
@@ -4030,16 +4033,6 @@ input#question {
     justify-content: flex-end;
     color: #949494;
     margin-top: 3px;
-}
-
-.cms {
-    .subject-cat {
-        padding-left: 25px;
-
-        .form-control {
-            margin-bottom: 5px;
-        }
-    }
 }
 
 .radio-container {

@@ -48,10 +48,12 @@
                 </div>
 
                 <div :class="[cmsToggle && 'cms-frame']">
-                    <a v-if="cmsToggle" class="edit outer" href="src/views#">
-                        <font-awesome-icon icon="edit" />
-                    </a>
-
+                    <div v-if="cmsToggle">
+                        <NamePopup></NamePopup>
+                        <a href="#" v-b-modal.name-modal class="edit outer" >
+                            <font-awesome-icon icon="edit" />
+                        </a>
+                    </div>
                     <div class="name-input">
                         <h2>{{response.profile.firstName}}</h2>
                           <h2 v-if="!response.profile.firstName && cmsToggle">Your</h2>
@@ -454,6 +456,7 @@
     import YouTube from './section/YouTube';
     import ProblemCard from './section/ProblemCard';
     import PhotoPopup from '../profile/popups/PhotoPopup';
+    import NamePopup from '../profile/popups/NamePopup';
 
   export default {
     name: 'Profile',
@@ -464,7 +467,8 @@
       Rate,
       YouTube,
       ProblemCard,
-      PhotoPopup
+      PhotoPopup,
+      NamePopup
     },
     props: ['cmsToggleProp', 'tokenProp'],
     created () {
