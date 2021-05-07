@@ -19,13 +19,13 @@
 
             <div class="photo-icons">
                 <div class="form-group icon-container">
-                    <label for="upload" class="icon"><font-awesome-icon class="fas fa-camera fa-2x" icon="camera" /></label>
+                    <label for="upload" class="icon camera"><font-awesome-icon icon="camera" /></label>
                     <input type="file" class="form-control-file" id="upload" @change="croppie" >
                     <p>Upload</p>
                 </div>
                 <div class="icon-container">
-                    <a class="icon" v-on:click="clear">
-                        <font-awesome-icon class="fas fa-camera fa-2x" icon="trash" />
+                    <a class="icon trash" v-on:click="clear">
+                        <font-awesome-icon icon="trash" />
                     </a>
                     <p>Delete</p>
                 </div>

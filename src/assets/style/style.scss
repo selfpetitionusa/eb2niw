@@ -3799,6 +3799,14 @@ input[type="range"]::-ms-fill-upper {
             margin: 0px;
             border-radius: 10px;
 
+            &.camera {
+                font-size: 1.6rem;
+            }
+
+            &.trash {
+                font-size: 1.6rem;
+            }
+
             &:hover {
                 background-color: rgba(96, 132, 164, 0.2);
                 color: $black-color;
