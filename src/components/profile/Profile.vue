@@ -309,10 +309,12 @@
 
                 <div class="terms-container">
                     <div class="terms">
-                        <a v-if="cmsToggle" class="edit edit-terms" href="src/views#">
-                            <font-awesome-icon icon="edit" />
-                        </a>
-
+                        <div v-if="cmsToggle">
+                            <TermsPopup></TermsPopup>
+                                <a href="#" class="edit edit-terms" v-b-modal.terms-modal>
+                                    <font-awesome-icon icon="edit" />
+                                </a>
+                        </div>      
                         <div class="row terms-item">
                             <div class="col-1 icon-container"><font-awesome-icon class="icon" icon="globe" /></div>
                             <div class="col-11 text">
@@ -477,6 +479,7 @@
     import BioPopup from '../profile/popups/BioPopup';
     import SubjectsPopup from '../profile/popups/SubjectsPopup';
     import RatesPopup from '../profile/popups/RatesPopup';
+    import TermsPopup from '../profile/popups/TermsPopup';
     import ProblemCardsPopup from '../profile/popups/ProblemCardsPopup';
 
 
@@ -496,6 +499,7 @@
       BioPopup,
       SubjectsPopup,
       RatesPopup,
+      TermsPopup,
       ProblemCardsPopup,
     },
     props: ['cmsToggleProp', 'tokenProp'],
