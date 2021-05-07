@@ -1,6 +1,6 @@
 <template>
 
-    <b-modal static id="education-modal" title="Bio" hide-footer>
+    <b-modal static id="education-modal" title="Schools and certificates" hide-footer>
         <form id="education-popup" class="cms">
             <div class="form-title">
                 <p class="first">What? Who? Where do you tutor?</p>

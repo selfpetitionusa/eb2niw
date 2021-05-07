@@ -1,6 +1,6 @@
 <template>
 
-    <b-modal static id="subjects-modal" title="Subjects" hide-footer>
+    <b-modal static id="subjects-modal" title="What do you teach" hide-footer>
         <form id="subjects-popup" class="cms">
             <div class="form-title">
                 <p>Add minimum 1 subject and 1 category for each subject</p>

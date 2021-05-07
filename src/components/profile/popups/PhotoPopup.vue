@@ -1,7 +1,7 @@
 <template>
 
-    <b-modal static @show="initModal" id="photo-modal" title="Profile image upload" hide-footer >
-        <form id="photo-popup" @submit.prevent="crop">
+    <b-modal static @show="initModal" id="photo-modal" title="Profile image" hide-footer >
+        <form id="photo-popup" @submit.prevent="crop" class="cms">
             <vue-croppie ref="croppieRef" :enableOrientation="false" :showZoomer="false"  :enableResize="false" :mouseWheelZoom="false"  :boundary="{ width: 230, height: 230}" :viewport="{ width:200, height:200, 'type':'circle' }">
             </vue-croppie>
 

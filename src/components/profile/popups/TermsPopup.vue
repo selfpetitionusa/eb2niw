@@ -1,6 +1,6 @@
 <template>
 
-    <b-modal static id="terms-modal" title="Tutoring terms" hide-footer>
+    <b-modal static id="terms-modal" title="Teaching terms" hide-footer>
         <form id="terms-popup" class="cms">
 
             <div class="cms-terms-container">

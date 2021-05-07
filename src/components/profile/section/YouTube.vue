@@ -1,7 +1,7 @@
 <template>
 
     <div>
-        <YouTubePopup class="cms"></YouTubePopup>
+        <YouTubePopup></YouTubePopup>
         <div class="YT-cms">
             <a href="#" v-b-modal.youtube-modal>
                 <font-awesome-icon class="fas fa-plus-circle fa-3x" icon="plus-circle" />

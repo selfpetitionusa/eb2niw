@@ -1,6 +1,6 @@
 <template>
 
-    <b-modal static id="name-modal" title="Main information about you" hide-footer>
+    <b-modal static id="name-modal" title="About me" hide-footer>
         <form id="name-popup" class="cms">
             <div class="form-group">
                 <label for="firstName">First name *</label>

@@ -1,6 +1,6 @@
 <template>
 
-    <b-modal static id="rates-modal" title="Pricing" hide-footer>
+    <b-modal static id="rates-modal" title="Rates" hide-footer>
         <form id="rates-popup" class="cms">
             <div class="form-title">
                 <p>Show up to 4 rates by editing the below example *</p>

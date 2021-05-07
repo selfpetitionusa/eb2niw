@@ -1,7 +1,7 @@
 <template>
 
     <b-modal static id="youtube-modal" title="Introduction video" hide-footer>
-        <form id="youtube-popup">
+        <form id="youtube-popup" class="cms">
             <div class="form-title">
                 <p>Paste video link with your introduction, lesson tutorial, presentation of your tutoring style, or other</p>
             </div>

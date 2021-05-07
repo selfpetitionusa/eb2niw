@@ -50,10 +50,11 @@
                 <div :class="[cmsToggle && 'cms-frame']">
                     <div v-if="cmsToggle">
                         <NamePopup></NamePopup>
-                        <a href="#" v-b-modal.name-modal class="edit outer" >
+                        <a href="#" v-b-modal.name-modal class="edit outer">
                             <font-awesome-icon icon="edit" />
                         </a>
                     </div>
+
                     <div class="name-input">
                         <h2>{{response.profile.firstName}}</h2>
                           <h2 v-if="!response.profile.firstName && cmsToggle">Your</h2>
@@ -134,6 +135,7 @@
                             <font-awesome-icon icon="edit" />
                         </a>
                     </div>
+
 <!-- HEADLINE -->
 
                     <div class="section-container header">
@@ -272,10 +274,11 @@
                     <div class="col-xl-6 col-lg-7 col-md-7 col-sm-7 col-12 items-all" :class="[cmsToggle && 'cms-frame frame-rates']">
                         <div v-if="cmsToggle">
                             <RatesPopup></RatesPopup>
-                            <a href="#" class="edit">
+                            <a href="#" class="edit" v-b-modal.rates-modal>
                                 <font-awesome-icon icon="edit" />
                             </a>
                         </div>
+
                         <div class="row item" v-for="rate in response.rates" :key="rate.id">
                             <div class="col-xl-4 col-lg-4 col-md-3 col-sm-3 col-3 rate-box">
                                 <div class="inner">{{rate.currency}}{{rate.amount}}</div>
@@ -311,9 +314,9 @@
                     <div class="terms">
                         <div v-if="cmsToggle">
                             <TermsPopup></TermsPopup>
-                                <a href="#" class="edit edit-terms" v-b-modal.terms-modal>
-                                    <font-awesome-icon icon="edit" />
-                                </a>
+                            <a href="#" class="edit edit-terms" v-b-modal.terms-modal>
+                                <font-awesome-icon icon="edit" />
+                            </a>
                         </div>
                         <div class="row terms-item">
                             <div class="col-1 icon-container"><font-awesome-icon class="icon" icon="globe" /></div>
