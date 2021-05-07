@@ -5,7 +5,7 @@ import ProfileView from './views/ProfileView';
 import EditProfileView from './views/EditProfileView';
 import Login from './views/Login'
 import Register from './views/Register'
-import PhotoPopup from './views/popups/PhotoPopup';
+import PhotoPopup from './components/profile/popups/PhotoPopup';
 
 
 export const router = new VueRouter({
