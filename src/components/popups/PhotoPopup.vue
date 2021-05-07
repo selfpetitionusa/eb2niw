@@ -24,8 +24,8 @@
                     <p>Upload</p>
                 </div>
                 <div class="icon-container">
-                    <a style="background-color:rgba(0, 0, 0, 0); border: 0px;"  v-on:click="clear">
-                        <div class="icon"><font-awesome-icon class="fas fa-camera fa-2x" icon="trash" /></div>
+                    <a class="icon" v-on:click="clear">
+                        <font-awesome-icon class="fas fa-camera fa-2x" icon="trash" />
                     </a>
                     <p>Delete</p>
                 </div>

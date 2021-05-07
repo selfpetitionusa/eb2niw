@@ -3801,10 +3801,12 @@ input[type="range"]::-ms-fill-upper {
 
             &:hover {
                 background-color: rgba(96, 132, 164, 0.2);
+                color: $black-color;
             }
 
             &:active {
                 background-color: rgba(96, 132, 164, 0.3);
+                transition: 0s;
             }
         }
 
