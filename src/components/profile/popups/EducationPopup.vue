@@ -1,70 +1,62 @@
 <template>
 
+    <b-modal static id="education-modal" title="Bio" hide-footer>
+        <form id="education-popup" class="cms">
+            <div class="form-title">
+                <p class="first">What? Who? Where do you tutor?</p>
+            </div>
 
-<!-- HEADLINE & EDUCATION POPUP -->
-<div class="container cms">
-  <div class="row">
-    <div class="col-5">
+            <div class="form-group">
+                <label for="headline">Headline *</label>
+                <input type="text" class="form-control" id="headline" placeholder="Example: Math tutor for 1-12th grade in San Francisco" required>
+            </div>
 
-      <form id="education-popup">
-        <div class="form-title">
-          <p class="first">What? Who? Where do you tutor?</p>
-        </div>
+            <div class="form-title">
+                <p>Your education and qualifications</p>
+            </div>
 
-        <div class="form-group">
-          <label for="headline">Headline *</label>
-          <input type="text" class="form-control" id="headline" placeholder="Example: Math tutor for 1-12th grade in San Francisco" required>
-        </div>
+            <div id="schools" v-for="school in schools" :key="school.id">
+                <div class="form-group">
+                    <label for="school">University or school *</label>
+                    <input type="text" class="form-control" id="school" placeholder="Example: Ohio University" v-model="school.school" required>
+                </div>
 
-        <div class="form-title">
-          <p>Your education and qualifications</p>
-        </div>
+                <div class="form-group">
+                    <label for="degree">Degree and field of study *</label>
+                    <input type="text" class="form-control" id="degree" placeholder="Example: BS Applied Mathematics" v-model="school.degree" required>
+                </div>
+            </div>
 
-        <div id="schools" v-for="school in schools" :key="school.id">
-          <div class="form-group">
-            <label for="school">University or school *</label>
-            <input type="text" class="form-control" id="school" placeholder="Example: Ohio University" v-model="school.school" required>
-          </div>
+            <div class="plus-minus">
+                <font-awesome-icon class="icon" icon="plus-circle" v-bind:class="[isActiveSchoolPlus ? 'active' : 'disabled']" v-on:click="addSchool" />
+                <font-awesome-icon class="icon" icon="minus-circle" v-bind:class="[isActiveSchoolMinus ? 'active' : 'disabled']" v-on:click="deleteSchool"/>
+            </div>
+            <p class="plus-minus-comment">University / School</p>
 
-          <div class="form-group">
-            <label for="degree">Degree and field of study *</label>
-            <input type="text" class="form-control" id="degree" placeholder="Example: BS Applied Mathematics" v-model="school.degree" required>
-          </div>
-        </div>
+            <div id="certificates" v-for="certificate in certificates" :key="certificate.id">
+                <div class="form-group">
+                    <label for="certificate">Certificate</label>
+                    <input type="text" class="form-control" id="certificate" v-model="certificate.certificate" v-on:change="descIsRequired" placeholder="Example: ATA Tutor">
+                </div>
 
-        <div class="plus-minus">
-          <font-awesome-icon class="icon" icon="plus-circle" v-bind:class="[isActiveSchoolPlus ? 'active' : 'disabled']" v-on:click="addSchool" />
-          <font-awesome-icon class="icon" icon="minus-circle" v-bind:class="[isActiveSchoolMinus ? 'active' : 'disabled']" v-on:click="deleteSchool"/>
-        </div>
-        <p class="plus-minus-comment">University / School</p>
+                <div class="form-group">
+                    <label for="certDesc">Certificate description</label>
+                    <input type="text" class="form-control" id="certDesc" v-model="certificate.certDesc" placeholder="Example: American Tutoring Association">
+                </div>
+            </div>
 
-        <div id="certificates" v-for="certificate in certificates" :key="certificate.id">
-          <div class="form-group">
-            <label for="certificate">Certificate</label>
-            <input type="text" class="form-control" id="certificate" v-model="certificate.certificate" v-on:change="descIsRequired" placeholder="Example: ATA Tutor">
-          </div>
+            <div class="plus-minus">
+                <font-awesome-icon class="icon" icon="plus-circle" v-bind:class="[isActiveCertificatePlus ? 'active' : 'disabled']" v-on:click="addCertificate" />
+                <font-awesome-icon class="icon" icon="minus-circle" v-bind:class="[isActiveCertificateMinus ? 'active' : 'disabled']" v-on:click="deleteCertificate" />
+            </div>
+            <p class="plus-minus-comment">Certificate</p>
 
-          <div class="form-group">
-            <label for="certDesc">Certificate description</label>
-            <input type="text" class="form-control" id="certDesc" v-model="certificate.certDesc" placeholder="Example: American Tutoring Association">
-          </div>
-        </div>
-
-        <div class="plus-minus">
-          <font-awesome-icon class="icon" icon="plus-circle" v-bind:class="[isActiveCertificatePlus ? 'active' : 'disabled']" v-on:click="addCertificate" />
-          <font-awesome-icon class="icon" icon="minus-circle" v-bind:class="[isActiveCertificateMinus ? 'active' : 'disabled']" v-on:click="deleteCertificate" />
-        </div>
-        <p class="plus-minus-comment">Certificate</p>
-
-        <div class="btn-container">
-          <button type="reset" class="btn btn-primary btn-border btn-cancel">Cancel</button>
-          <button type="submit" class="btn btn-primary btn-border btn-save">Save</button>
-        </div>
-      </form>
-
-    </div>
-  </div>
-</div>
+            <div class="btn-container">
+                <a class="btn btn-primary btn-border btn-cancel" @click="$bvModal.hide('education-modal')">Cancel</a>
+                <button type="submit" class="btn btn-primary btn-border btn-save">Save</button>
+            </div>
+        </form>
+    </b-modal>
 
 </template>
 

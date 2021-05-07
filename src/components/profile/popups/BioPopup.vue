@@ -1,27 +1,19 @@
 <template>
 
+    <b-modal static id="bio-modal" title="Bio" hide-footer>
+        <form id="bio-popup" class="cms">
+            <div class="form-group">
+                <label for="bio">Your bio - max 160 words *</label>
+                <textarea class="form-control" id="bio" rows="10" v-on:input="countWord" placeholder="Tell parents and students about your tutoring background" required></textarea>
+                <div class="count-words"><span id="show">0</span> /160</div>
+            </div>
 
-<!-- HEADLINE & EDUCATION POPUP -->
-<div class="container cms">
-  <div class="row">
-    <div class="col-5">
-
-      <form id="bio-popup">
-        <div class="form-group">
-          <label for="bio">Your bio - max 160 words *</label>
-          <textarea class="form-control" id="bio" rows="10" v-on:input="countWord" placeholder="Tell parents and students about your tutoring background" required></textarea>
-          <div class="count-words"><span id="show">0</span> /160</div>
-        </div>
-
-        <div class="btn-container">
-          <button type="reset" class="btn btn-primary btn-border btn-cancel">Cancel</button>
-          <button type="submit" class="btn btn-primary btn-border btn-save">Save</button>
-        </div>
-      </form>
-
-    </div>
-  </div>
-</div>
+            <div class="btn-container">
+                <a class="btn btn-primary btn-border btn-cancel" @click="$bvModal.hide('bio-modal')">Cancel</a>
+                <button type="submit" class="btn btn-primary btn-border btn-save">Save</button>
+            </div>
+        </form>
+    </b-modal>
 
 </template>
 

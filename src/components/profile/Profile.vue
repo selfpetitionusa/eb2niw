@@ -126,10 +126,12 @@
         <div class="tu-card-container">
             <div id="section-about-me" class="tu-card">
                 <div :class="[cmsToggle && 'cms-frame tu-card-frame']">
-                    <a v-if="cmsToggle" class="edit" href="src/views#">
-                        <font-awesome-icon icon="edit" />
-                    </a>
-
+                    <div v-if="cmsToggle">
+                        <EducationPopup></EducationPopup>
+                        <a href="#" class="edit" v-b-modal.education-modal>
+                            <font-awesome-icon icon="edit" />
+                        </a>
+                    </div>
 <!-- HEADLINE -->
 
                     <div class="section-container header">
@@ -186,10 +188,12 @@
 <!-- BIO -->
 
                 <div class="bio" :class="[cmsToggle && 'cms-frame tu-card-frame']">
-                    <a v-if="cmsToggle" class="edit" href="src/views#">
-                        <font-awesome-icon icon="edit" />
-                    </a>
-
+                    <div v-if="cmsToggle">
+                        <BioPopup></BioPopup>
+                        <a href="#" class="edit" v-b-modal.bio-modal>
+                            <font-awesome-icon icon="edit" />
+                        </a>
+                    </div>
                     <p v-for="bio in response.profile.bio.split(/\r?\n/)" :key="bio">{{bio}}</p>
                     <p v-if="!response.profile.bio && cmsToggle" class="cms">Your bio</p>
                 </div>
@@ -455,8 +459,11 @@
     import Rate from './section/Rate';
     import YouTube from './section/YouTube';
     import ProblemCard from './section/ProblemCard';
+
     import PhotoPopup from '../profile/popups/PhotoPopup';
     import NamePopup from '../profile/popups/NamePopup';
+    import BioPopup from '../profile/popups/BioPopup';
+    import EducationPopup from '../profile/popups/EducationPopup';
 
   export default {
     name: 'Profile',
@@ -468,7 +475,9 @@
       YouTube,
       ProblemCard,
       PhotoPopup,
-      NamePopup
+      NamePopup,
+      BioPopup,
+      EducationPopup
     },
     props: ['cmsToggleProp', 'tokenProp'],
     created () {
