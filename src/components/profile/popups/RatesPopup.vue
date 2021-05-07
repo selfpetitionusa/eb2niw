@@ -1,122 +1,114 @@
 <template>
 
+    <b-modal static id="rates-modal" title="Pricing" hide-footer>
+        <form id="rates-popup" class="cms">
+            <div class="form-title">
+                <p>Show up to 4 rates by editing the below example *</p>
+            </div>
 
-<!-- HEADLINE & EDUCATION POPUP -->
-<div class="container cms">
-  <div class="row">
-    <div class="col-5">
+            <div class="table-container">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th class="col1">Currency*</th>
+                            <th class="col2">Rate*</th>
+                            <th class="col3">Session type*</th>
+                            <th class="col4">Rate comment</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" class="form-control" id="rateCurrency-1" v-on:input="enableInputRate2" required></td>
+                            <td><input type="number" class="form-control" id="rateAmount-1" v-on:input="enableInputRate2" required></td>
+                            <td>
+                                <input class="form-control" list="select-1" id="rateType-1" v-on:input="enableInputRate2" required>
+                                <datalist id="select-1">
+                                    <option selected>per session</option>
+                                    <option>per lesson</option>
+                                    <option>per hour</option>
+                                    <option>per month</option>
+                                    <option>Type your own</option>
+                                </datalist>
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" id="rateComment-1" v-on:input="enableInputRate2" placeholder="Example: Rates starting from">
+                            </td>
+                        </tr>
 
-      <form id="rates-popup">
-        <div class="form-title">
-          <p>Show up to 4 rates by editing the below example *</p>
-        </div>
+                        <tr>
+                            <td><input type="text" class="form-control" id="rateCurrency-2" v-on:input="enableInputRate3" disabled></td>
+                            <td><input type="number" class="form-control" id="rateAmount-2" v-on:input="enableInputRate3" disabled></td>
+                            <td>
+                                <input class="form-control" list="select-2" id="rateType-2" v-on:input="enableInputRate3" disabled>
+                                <datalist id="select-2">
+                                    <option selected>per session</option>
+                                    <option>per lesson</option>
+                                    <option>per hour</option>
+                                    <option>per month</option>
+                                    <option>Type your own</option>
+                                </datalist>
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" id="rateComment-2" placeholder="Example: University level students" v-on:input="enableInputRate3" disabled>
+                            </td>
+                        </tr>
 
-        <div class="table-container">
-          <table class="table">
-            <thead>
-              <tr>
-                <th class="col1">Currency*</th>
-                <th class="col2">Rate*</th>
-                <th class="col3">Session type*</th>
-                <th class="col4">Rate comment</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><input type="text" class="form-control" id="rateCurrency-1" v-on:input="enableInputRate2" required></td>
-                <td><input type="number" class="form-control" id="rateAmount-1" v-on:input="enableInputRate2" required></td>
-                <td>
-                  <input class="form-control" list="select-1" id="rateType-1" v-on:input="enableInputRate2" required>
-                    <datalist id="select-1">
-                      <option selected>per session</option>
-                      <option>per lesson</option>
-                      <option>per hour</option>
-                      <option>per month</option>
-                      <option>Type your own</option>
-                    </datalist>
-                </td>
-                <td>
-                  <input type="text" class="form-control" id="rateComment-1" v-on:input="enableInputRate2" placeholder="Example: Rates starting from">
-                </td>
-              </tr>
+                        <tr>
+                            <td><input type="text" class="form-control" id="rateCurrency-3" v-on:input="enableInputRate4" disabled></td>
+                            <td><input type="number" class="form-control" id="rateAmount-3" v-on:input="enableInputRate4" disabled></td>
+                            <td>
+                                <input class="form-control" list="select-3" id="rateType-3" v-on:input="enableInputRate4" disabled>
+                                <datalist id="select-3">
+                                    <option selected>per session</option>
+                                    <option>per lesson</option>
+                                    <option>per hour</option>
+                                    <option>per month</option>
+                                    <option>Type your own</option>
+                                </datalist>
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" id="rateComment-3" placeholder="Example: Students 5-7 years old" v-on:input="enableInputRate4" disabled>
+                            </td>
+                        </tr>
 
-              <tr>
-                <td><input type="text" class="form-control" id="rateCurrency-2" v-on:input="enableInputRate3" disabled></td>
-                <td><input type="number" class="form-control" id="rateAmount-2" v-on:input="enableInputRate3" disabled></td>
-                <td>
-                  <input class="form-control" list="select-2" id="rateType-2" v-on:input="enableInputRate3" disabled>
-                    <datalist id="select-2">
-                      <option selected>per session</option>
-                      <option>per lesson</option>
-                      <option>per hour</option>
-                      <option>per month</option>
-                      <option>Type your own</option>
-                    </datalist>
-                </td>
-                <td>
-                  <input type="text" class="form-control" id="rateComment-2" placeholder="Example: University level students" v-on:input="enableInputRate3" disabled>
-                </td>
-              </tr>
+                        <tr>
+                            <td><input type="text" class="form-control" id="rateCurrency-4" disabled></td>
+                            <td><input type="number" class="form-control" id="rateAmount-4" disabled></td>
+                            <td>
+                                <input class="form-control" list="select-4" id="rateType-4" disabled>
+                                <datalist id="select-4">
+                                    <option selected>per session</option>
+                                    <option>per lesson</option>
+                                    <option>per hour</option>
+                                    <option>per month</option>
+                                    <option>Type your own</option>
+                                </datalist>
+                            </td>
+                            <td><input type="text" class="form-control" id="rateComment-4" placeholder="Example: English (rates by subject)" disabled></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
-              <tr>
-                <td><input type="text" class="form-control" id="rateCurrency-3" v-on:input="enableInputRate4" disabled></td>
-                <td><input type="number" class="form-control" id="rateAmount-3" v-on:input="enableInputRate4" disabled></td>
-                <td>
-                  <input class="form-control" list="select-3" id="rateType-3" v-on:input="enableInputRate4" disabled>
-                      <datalist id="select-3">
-                      <option selected>per session</option>
-                      <option>per lesson</option>
-                      <option>per hour</option>
-                      <option>per month</option>
-                      <option>Type your own</option>
-                    </datalist>
-                </td>
-                <td>
-                  <input type="text" class="form-control" id="rateComment-3" placeholder="Example: Students 5-7 years old" v-on:input="enableInputRate4" disabled>
-                </td>
-              </tr>
+            <div class="form-group">
+                <label for="lesson-length">How long is your standard lesson?</label>
+                <div class="lesson">
+                    <input type="number" class="form-control" id="lesson-length">
+                    <p>minutes</p>
+                </div>
+            </div>
 
-              <tr>
-                <td><input type="text" class="form-control" id="rateCurrency-4" disabled></td>
-                <td><input type="number" class="form-control" id="rateAmount-4" disabled></td>
-                <td>
-                  <input class="form-control" list="select-4" id="rateType-4" disabled>
-                    <datalist id="select-4">
-                      <option selected>per session</option>
-                      <option>per lesson</option>
-                      <option>per hour</option>
-                      <option>per month</option>
-                      <option>Type your own</option>
-                    </datalist>
-                </td>
-                <td><input type="text" class="form-control" id="rateComment-4" placeholder="Example: English (rates by subject)" disabled></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+            <div class="form-group">
+                <label for="additional-comment">Additional comment for rates</label>
+                <input type="text" class="form-control" id="additional-comment" placeholder="Example: Discounts available upon request">
+            </div>
 
-        <div class="form-group">
-          <label for="lesson-length">How long is your standard lesson?</label>
-          <div class="lesson">
-            <input type="number" class="form-control" id="lesson-length">
-            <p>minutes</p>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label for="additional-comment">Additional comment for rates</label>
-          <input type="text" class="form-control" id="additional-comment" placeholder="Example: Discounts available upon request">
-        </div>
-
-        <div class="btn-container">
-          <button type="reset" class="btn btn-primary btn-border btn-cancel">Cancel</button>
-          <button type="submit" class="btn btn-primary btn-border btn-save" v-on:click="inputIsRequired">Save</button>
-        </div>
-      </form>
-
-    </div>
-  </div>
-</div>
+            <div class="btn-container">
+                <a class="btn btn-primary btn-border btn-cancel" @click="$bvModal.hide('rates-modal')">Cancel</a>
+                <button type="submit" class="btn btn-primary btn-border btn-save">Save</button>
+            </div>
+        </form>
+    </b-modal>
 
 </template>
 

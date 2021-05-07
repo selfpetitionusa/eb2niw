@@ -215,9 +215,12 @@
                 </div>
 
                 <div :class="[cmsToggle && 'cms-frame tu-card-frame margin-frame']">
-                    <a v-if="cmsToggle" class="edit" href="src/views#">
-                        <font-awesome-icon icon="edit" />
-                    </a>
+                    <div v-if="cmsToggle">
+                        <SubjectsPopup></SubjectsPopup>
+                        <a href="#" class="edit" v-b-modal.subjects-modal>
+                            <font-awesome-icon icon="edit" />
+                        </a>
+                    </div>
 
                     <div v-if="response.categories.length" class="row subjects-container">
                         <div class="col-md-6 subject-cards" v-for="(category, index) in response.categories" :key="category.id">
@@ -267,10 +270,12 @@
 
                 <div class="row rates-container">
                     <div class="col-xl-6 col-lg-7 col-md-7 col-sm-7 col-12 items-all" :class="[cmsToggle && 'cms-frame frame-rates']">
-                        <a v-if="cmsToggle" class="edit" href="src/views#">
-                            <font-awesome-icon icon="edit" />
-                        </a>
-
+                        <div v-if="cmsToggle">
+                            <RatesPopup></RatesPopup>
+                            <a href="#" class="edit">
+                                <font-awesome-icon icon="edit" />
+                            </a>
+                        </div>
                         <div class="row item" v-for="rate in response.rates" :key="rate.id">
                             <div class="col-xl-4 col-lg-4 col-md-3 col-sm-3 col-3 rate-box">
                                 <div class="inner">{{rate.currency}}{{rate.amount}}</div>
@@ -397,9 +402,12 @@
 <!-- CAROUSEL -->
 
                 <div :class="[cmsToggle && 'cms-frame tu-card-frame margin-frame']">
-                    <a v-if="cmsToggle" class="edit" href="src/views#">
-                        <font-awesome-icon icon="edit" />
-                    </a>
+                    <div v-if="cmsToggle">
+                        <ProblemCardsPopup></ProblemCardsPopup>
+                        <a href="#" class="edit" v-b-modal.problem-cards-modal>
+                            <font-awesome-icon icon="edit" />
+                        </a>
+                    </div>
 
                     <div class="expertise-arrows">
                         <div v-on:click="scroll('left')" class="left-arrow">
@@ -464,9 +472,13 @@
 
     import PhotoPopup from '../profile/popups/PhotoPopup';
     import NamePopup from '../profile/popups/NamePopup';
-    import BioPopup from '../profile/popups/BioPopup';
-    import EducationPopup from '../profile/popups/EducationPopup';
     import LinksPopup from '../profile/popups/LinksPopup';
+    import EducationPopup from '../profile/popups/EducationPopup';
+    import BioPopup from '../profile/popups/BioPopup';
+    import SubjectsPopup from '../profile/popups/SubjectsPopup';
+    import RatesPopup from '../profile/popups/RatesPopup';
+    import ProblemCardsPopup from '../profile/popups/ProblemCardsPopup';
+
 
   export default {
     name: 'Profile',
@@ -479,9 +491,12 @@
       ProblemCard,
       PhotoPopup,
       NamePopup,
-      BioPopup,
+      LinksPopup,
       EducationPopup,
-      LinksPopup
+      BioPopup,
+      SubjectsPopup,
+      RatesPopup,
+      ProblemCardsPopup,
     },
     props: ['cmsToggleProp', 'tokenProp'],
     created () {
