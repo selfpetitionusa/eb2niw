@@ -80,10 +80,12 @@
 <!-- SOCIAL MEDIA -->
 
                     <div class="social-links" :class="[cmsToggle && 'cms-frame inner-frame']">
-                        <a v-if="cmsToggle" class="edit" href="src/views#">
-                            <font-awesome-icon icon="edit" />
-                        </a>
-
+                        <div v-if="cmsToggle">
+                            <LinksPopup></LinksPopup>
+                            <a href="#" class="edit" v-b-modal.links-modal>
+                                <font-awesome-icon icon="edit" />
+                            </a>
+                        </div>
                         <ul>
                             <li v-if="response.profile.links.facebookLink"><a :href="response.profile.links.facebookLink" class="facebook"><feather type="facebook"></feather></a></li>
                             <li v-if="response.profile.links.youtubeLink"><a :href="response.profile.links.youtubeLink" class="youtube"><feather type="youtube"></feather></a></li>
@@ -464,6 +466,7 @@
     import NamePopup from '../profile/popups/NamePopup';
     import BioPopup from '../profile/popups/BioPopup';
     import EducationPopup from '../profile/popups/EducationPopup';
+    import LinksPopup from '../profile/popups/LinksPopup';
 
   export default {
     name: 'Profile',
@@ -477,7 +480,8 @@
       PhotoPopup,
       NamePopup,
       BioPopup,
-      EducationPopup
+      EducationPopup,
+      LinksPopup
     },
     props: ['cmsToggleProp', 'tokenProp'],
     created () {
