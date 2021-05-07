@@ -38,7 +38,7 @@
 
                 <div>
                     <img class="photo" :src="response.profile.photo" />
-                    <img v-if="!response.profile.photo" class="photo" src="/avatar_female.png" />
+                    <img v-if="!response.profile.photo" class="photo" src="/avatar_female_cropped.png" />
                     <div v-if="cmsToggle" class="pic-edit">
                         <PhotoPopup></PhotoPopup>
                         <a href="#" v-b-modal.photo-modal>
@@ -152,7 +152,7 @@
                                 </div>
                             </div>
 
-                            <SchoolCms v-if="!response.schools && cmsToggle"></SchoolCms>
+                            <School v-if="!response.schools && cmsToggle"></School>
 
 
 <!-- CERTIFICATES -->
@@ -169,8 +169,8 @@
                                 </div>
                             </div>
 
-                            <CertificateCms v-if="!response.certificate && cmsToggle"></CertificateCms>
 
+                            <Certificate v-if="!response.certificate && cmsToggle"></Certificate>
                         </div>
 
                         <div class="col graphic-bio">
@@ -231,7 +231,7 @@
                         </div>
                     </div>
 
-                    <SubjectCms v-if="!response.categories.length && cmsToggle"></SubjectCms>
+                    <Subject v-if="!response.categories.length && cmsToggle"></Subject>
 
 
 <!-- MY STUDENTS -->
@@ -277,7 +277,7 @@
                             </div>
                         </div>
 
-                        <RateCms v-if="!response.rates && cmsToggle"></RateCms>
+                        <Rate v-if="!response.rates && cmsToggle"></Rate>
 
 
                         <div class="rates-additional-comment">{{response.profile.rateInfo.rateSectionComment}}</div>
@@ -382,7 +382,7 @@
                     <div v-if="response.profile.youtubeIntroLink" class="youtube-display">
                         <iframe width="560" height="315" :src="response.profile.youtubeLink" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
-                    <YouTubeCms v-if="!response.profile.youtubeIntroLink && cmsToggle"></YouTubeCms>
+                    <YouTube v-if="!response.profile.youtubeIntroLink && cmsToggle"></YouTube>
                 </div>
 
 
@@ -409,7 +409,7 @@
                                     </div>
                                 </div>
 
-                                <ProblemCardCms v-if="response.problemCards && cmsToggle"></ProblemCardCms>
+                                <ProblemCard v-if="response.problemCards && cmsToggle"></ProblemCard>
 
                             </div>
                         </div>
@@ -447,23 +447,23 @@
 <script>
     import axios from 'axios';
 
-    import SchoolCms from '../cms/SchoolCms';
-    import CertificateCms from '../cms/CertificateCms';
-    import SubjectCms from '../cms/SubjectCms';
-    import RateCms from '../cms/RateCms';
-    import YouTubeCms from '../cms/YouTubeCms';
-    import ProblemCardCms from '../cms/ProblemCardCms';
-    import PhotoPopup from '../popups/PhotoPopup';
+    import School from './section/School';
+    import Certificate from './section/Certificate';
+    import Subject from './section/Subject';
+    import Rate from './section/Rate';
+    import YouTube from './section/YouTube';
+    import ProblemCard from './section/ProblemCard';
+    import PhotoPopup from '../profile/popups/PhotoPopup';
 
   export default {
     name: 'Profile',
     components: {
-      SchoolCms,
-      CertificateCms,
-      SubjectCms,
-      RateCms,
-      YouTubeCms,
-      ProblemCardCms,
+      School,
+      Certificate,
+      Subject,
+      Rate,
+      YouTube,
+      ProblemCard,
       PhotoPopup
     },
     props: ['cmsToggleProp', 'tokenProp'],

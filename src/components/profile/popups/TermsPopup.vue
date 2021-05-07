@@ -16,7 +16,7 @@
             <div class="custom-control custom-switch form-group terms-switch">
               <span>Online lessons:</span>
               <div>
-                <input type="checkbox" class="custom-control-input" id="online-switch" v-on:click="enableDisableSwitch1" v-model="answerOnline" checked>
+                <input type="checkbox" class="custom-control-input" id="online-switch" v-on:click="enableDisableSwitch1" v-model="answerOnline">
                 <label class="custom-control-label" for="online-switch"></label>
               </div>
               <div v-if="answerOnline">
@@ -33,7 +33,7 @@
             <div class="custom-control custom-switch form-group terms-switch">
               <span>In-person lessons:</span>
               <div>
-                <input type="checkbox" class="custom-control-input" id="in-person-switch" v-on:click="enableDisableSwitch2" v-model="answerInPerson" checked>
+                <input type="checkbox" class="custom-control-input" id="in-person-switch" v-on:click="enableDisableSwitch2" v-model="answerInPerson">
                 <label class="custom-control-label" for="in-person-switch"></label>
               </div>
               <div v-if="answerInPerson">
@@ -50,7 +50,7 @@
             <div class="custom-control custom-switch form-group terms-switch">
               <span>Free consultation:</span>
               <div>
-                <input type="checkbox" class="custom-control-input" id="consultation-switch" v-on:click="enableDisableSwitch3" v-model="answerConsultation" checked>
+                <input type="checkbox" class="custom-control-input" id="consultation-switch" v-on:click="enableDisableSwitch3" v-model="answerConsultation">
                 <label class="custom-control-label" for="consultation-switch"></label>
               </div>
               <div v-if="answerConsultation">
@@ -66,7 +66,7 @@
             <div class="custom-control custom-switch form-group terms-switch">
               <span>Cancelation policy:</span>
               <div>
-                <input type="checkbox" class="custom-control-input" id="cancelation-switch" v-on:click="enableDisableSwitch4" v-model="answerCancelation" checked>
+                <input type="checkbox" class="custom-control-input" id="cancelation-switch" v-on:click="enableDisableSwitch4" v-model="answerCancelation">
                 <label class="custom-control-label" for="cancelation-switch"></label>
               </div>
               <div v-if="answerCancelation">
