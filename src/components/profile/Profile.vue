@@ -314,7 +314,7 @@
                                 <a href="#" class="edit edit-terms" v-b-modal.terms-modal>
                                     <font-awesome-icon icon="edit" />
                                 </a>
-                        </div>      
+                        </div>
                         <div class="row terms-item">
                             <div class="col-1 icon-container"><font-awesome-icon class="icon" icon="globe" /></div>
                             <div class="col-11 text">
@@ -390,9 +390,12 @@
 <!-- YOUTUBE -->
 
                 <div :class="[cmsToggle && 'cms-frame tu-card-frame margin-frame']">
-                    <a v-if="response.profile.youtubeIntroLink && cmsToggle" class="edit" href="src/views#">
-                        <font-awesome-icon icon="edit" />
-                    </a>
+                    <div v-if="response.profile.youtubeIntroLink && cmsToggle">
+                        <YouTubePopup></YouTubePopup>
+                        <a href="#" class="edit" v-b-modal.youtube-modal>
+                            <font-awesome-icon icon="edit" />
+                        </a>
+                    </div>
 
                     <div v-if="response.profile.youtubeIntroLink" class="youtube-display">
                         <iframe width="560" height="315" :src="response.profile.youtubeLink" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -480,33 +483,35 @@
     import SubjectsPopup from '../profile/popups/SubjectsPopup';
     import RatesPopup from '../profile/popups/RatesPopup';
     import TermsPopup from '../profile/popups/TermsPopup';
+    import YouTubePopup from '../profile/popups/YouTubePopup';
     import ProblemCardsPopup from '../profile/popups/ProblemCardsPopup';
 
 
   export default {
-    name: 'Profile',
-    components: {
-      School,
-      Certificate,
-      Subject,
-      Rate,
-      YouTube,
-      ProblemCard,
-      PhotoPopup,
-      NamePopup,
-      LinksPopup,
-      EducationPopup,
-      BioPopup,
-      SubjectsPopup,
-      RatesPopup,
-      TermsPopup,
-      ProblemCardsPopup,
-    },
-    props: ['cmsToggleProp', 'tokenProp'],
-    created () {
+      name: 'Profile',
+      components: {
+          School,
+          Certificate,
+          Subject,
+          Rate,
+          YouTube,
+          ProblemCard,
+          PhotoPopup,
+          NamePopup,
+          LinksPopup,
+          EducationPopup,
+          BioPopup,
+          SubjectsPopup,
+          RatesPopup,
+          TermsPopup,
+          YouTubePopup,
+          ProblemCardsPopup
+      },
+      props: ['cmsToggleProp', 'tokenProp'],
+      created () {
           this.fetchData()
-    },
-    metaInfo() {
+      },
+      metaInfo() {
           return {
               title: `${this.response.profile.firstName} ${this.response.profile.lastName} - ${this.response.profile.headline}`,
               meta: [
@@ -517,20 +522,20 @@
                   { vmid: 'ogimage1', property: 'og:image', content: `https://www.tutomy.com/api/tutors/${this.response.profile.token}/thumbnail.png`},
               ]
           }
-    },
-    data () {
-        return {
-            response: {
-                profile: {rateInfo: {}, links: {}, bio: '', studentsProfile: ''},
-                categories: [],
-                problemCards: []
-            },
-            offset: 0,
-            scrollWidth: 0,
-            offsetWidth: 0,
-            cmsToggle: this.cmsToggleProp
-        }
-    },
+      },
+      data () {
+          return {
+              response: {
+                  profile: {rateInfo: {}, links: {}, bio: '', studentsProfile: ''},
+                  categories: [],
+                  problemCards: []
+              },
+              offset: 0,
+              scrollWidth: 0,
+              offsetWidth: 0,
+              cmsToggle: this.cmsToggleProp
+          }
+      },
       methods: {
           fetchData () {
               axios
@@ -543,56 +548,54 @@
               this.offset = document.getElementById('problems').scrollLeft;
           },
           formatArray(arr) {
-            var outStr = "";
-            if (arr.length === 1) {
-                outStr = arr[0];
-            } else if (arr.length === 2) {
-                outStr = arr.join(' & ');
-            } else if (arr.length > 2) {
-                outStr = arr.slice(0, -1).join(', ') + ' & ' + arr.slice(-1);
-            }
-            return outStr;
+              var outStr = "";
+              if (arr.length === 1) {
+                  outStr = arr[0];
+              } else if (arr.length === 2) {
+                  outStr = arr.join(' & ');
+              } else if (arr.length > 2) {
+                  outStr = arr.slice(0, -1).join(', ') + ' & ' + arr.slice(-1);
+              }
+              return outStr;
           },
           getImgUrl: function (index) {
               const number = index % 6;
               return require('../../assets/img/icon_expertise' + number + '.svg')
           },
           scroll: function (direction) {
-            const p = document.getElementById('problems');
-            const offsetWidth = document.getElementById('problem-card1').offsetWidth + 20;
-            if(direction === 'left') {
-                if(p.scrollLeft - offsetWidth < 0) {
-                    this.offset = 0;
-                } else {
-                    this.offset = p.scrollLeft - offsetWidth;
-                }
-                p.scrollTo({left: this.offset, behavior: 'smooth'})
-            } else {
-                if(p.scrollLeft + this.offsetWidth >= p.scrollWidth) {
-                    this.offset = p.scrollWidth - this.offsetWidth;
-
-                } else {
-                    this.offset = p.scrollLeft + offsetWidth;
-                }
-                p.scrollTo({left: this.offset, behavior: 'smooth'})
-            }
-          },
-
-          actionHamburgerMenu: function () {
-                  var x = document.getElementById("myLinks");
-                  if (x.style.display === "block") {
-                    x.style.display = "none";
+              const p = document.getElementById('problems');
+              const offsetWidth = document.getElementById('problem-card1').offsetWidth + 20;
+              if(direction === 'left') {
+                  if(p.scrollLeft - offsetWidth < 0) {
+                      this.offset = 0;
                   } else {
-                    x.style.display = "block";
+                      this.offset = p.scrollLeft - offsetWidth;
                   }
-                  var y = document.getElementById("tu-container");
-                  if (y.style.display === "none") {
-                    y.style.display = "block";
+                  p.scrollTo({left: this.offset, behavior: 'smooth'})
+              } else {
+                  if(p.scrollLeft + this.offsetWidth >= p.scrollWidth) {
+                      this.offset = p.scrollWidth - this.offsetWidth;
                   } else {
-                    y.style.display = "none";
+                      this.offset = p.scrollLeft + offsetWidth;
                   }
+                  p.scrollTo({left: this.offset, behavior: 'smooth'})
               }
-        }
+          },
+          actionHamburgerMenu: function () {
+              var x = document.getElementById("myLinks");
+              if (x.style.display === "block") {
+                x.style.display = "none";
+              } else {
+                x.style.display = "block";
+              }
+              var y = document.getElementById("tu-container");
+              if (y.style.display === "none") {
+                y.style.display = "block";
+              } else {
+                y.style.display = "none";
+              }
+          }
+      }
   }
 
 </script>
