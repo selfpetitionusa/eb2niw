@@ -4144,19 +4144,18 @@ input#question {
     }
 }
 
-.cms-terms-container {
-    margin-top: 40px;
 
-    .term-container {
-        height: 70px;
-        margin: 5px;
+.term-container {
+    height: 70px;
+    width: 100%;
+    margin: 5px;
 
-        &:last-child, &:first-child {
-          display: flex;
-          align-items: center;
-        }
+    &:last-child, &:first-child {
+      display: flex;
+      align-items: center;
     }
 }
+
 
 .terms-switch {
     display: flex;

@@ -3,7 +3,7 @@
     <b-modal static id="terms-modal" title="Teaching terms" hide-footer>
         <form id="terms-popup" class="cms">
 
-            <div class="cms-terms-container">
+            <div>
                 <div class="term-container">
                     <div class="custom-control custom-switch form-group terms-switch">
                         <span>Online lessons:</span>
