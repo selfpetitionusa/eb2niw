@@ -3747,6 +3747,11 @@ Pop-ups & CMS
         line-height: 20px;
         display: block;
         margin: 10px 0px 20px;
+
+        li {
+            display:list-item;
+            list-style-position: inside;
+        }
     }
 }
 
