@@ -1,7 +1,7 @@
 <template>
 
     <b-modal static id="bio-modal" title="Bio" hide-footer>
-        <form id="bio-popup" class="cms">
+        <form id="bio-popup" class="cms bio">
             <div class="form-group">
                 <label for="bio">Your bio - max 160 words *</label>
                 <textarea class="form-control" id="bio" rows="10" v-on:input="countWord" placeholder="Tell parents and students about your tutoring background" required></textarea>

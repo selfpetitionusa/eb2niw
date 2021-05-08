@@ -3704,6 +3704,10 @@ Pop-ups & CMS
             margin-bottom: 5px;
         }
     }
+
+    &.bio {
+        min-height: 25rem;
+    }
 }
 
 .login, .register {
