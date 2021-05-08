@@ -3211,7 +3211,7 @@ Subjects section - Subjects
     ul {
         display: inline-block;
         text-align: left;
-        list-style: none;
+        list-style-type: none;
         padding-left: 0px;
     }
 
@@ -3734,17 +3734,19 @@ Pop-ups & CMS
 .form-title {
     font-weight: 500;
     font-size: 14px;
+    color: #0E314C;
 
     p {
-        color: #0E314C;
         margin: 2rem 0 1rem;
         line-height: 20px;
     }
 
-    li {
+    ul {
         font-size: 12px;
         font-weight: 400;
         line-height: 20px;
+        display: block;
+        margin: 10px 0px 20px;
     }
 }
 
