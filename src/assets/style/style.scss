@@ -3883,19 +3883,19 @@ input[type="range"]::-ms-fill-upper {
     }
 
     &.focus, &:focus {
-      border: none;
+        border: none;
     }
 
     &:not(:disabled):not(.disabled).active:focus, &:not(:disabled):not(.disabled):active:focus, .show>.btn-primary.dropdown-toggle:focus {
-      border: none;
+        border: none;
     }
 
     &:not(:disabled):not(.disabled).active, &:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
-      border: none;
+        border: none;
     }
 
     &.disabled, &:disabled {
-      border: none;
+        border: none;
     }
 }
 
