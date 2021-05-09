@@ -3,8 +3,8 @@ import { router } from '../router';
 
 const user = JSON.parse(localStorage.getItem('user'));
 const state = user
-    ? { status: { loggedIn: true }, user }
-    : { status: {}, user: null };
+    ? { status: { loggedIn: true }, user, profile: null }
+    : { status: {}, user: null, profile: null};
 
 const actions = {
     login({ dispatch, commit }, { email, password }) {
@@ -26,8 +26,32 @@ const actions = {
         userService.logout();
         commit('logout');
     },
-    uploadImage(test, id, image) {
-        userService.uploadImage(id, image);
+
+    getProfile({ dispatch, commit }, {userId, token}) {
+        userService.getProfile(userId, token)
+            .then(
+                profile => commit('getProfileSuccess', profile),
+                () => dispatch('alert/error', 'Failed to fetch tutor profile', { root: true })
+            );
+    },
+    uploadImage({ dispatch, commit }, {image, sex}) {
+        commit('uploadImageRequest');
+        console.log(sex);
+        console.log(image);
+        return userService.uploadImage(image, sex).then(
+            (profile) => {
+                commit('getProfileSuccess', profile);
+                commit('uploadImageSuccess');
+                setTimeout(() => {
+                    // display success message after route change completes
+                    dispatch('alert/success', 'Image Saved', { root: true });
+                })
+            },
+            error => {
+                commit('uploadImageFailure');
+                dispatch('alert/error', error, { root: true });
+            }
+        );
     },
     register({ dispatch, commit }, user) {
         commit('registerRequest', user);
@@ -74,6 +98,19 @@ const mutations = {
         state.status = {};
     },
     registerFailure(state) {
+        state.status = {};
+    },
+    getProfileSuccess(state, profile) {
+        console.log('elo')
+        state.profile = profile;
+    },
+    uploadImageRequest(state) {
+        state.status = { uploadingImage: true };
+    },
+    uploadImageSuccess(state) {
+        state.status = { uploadedImage: true };
+    },
+    uploadImageFailure(state) {
         state.status = {};
     }
 };

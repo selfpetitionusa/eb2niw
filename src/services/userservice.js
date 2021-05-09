@@ -4,13 +4,14 @@ export const userService = {
     login,
     logout,
     register,
-    uploadImage
+    uploadImage,
+    getProfile
 };
 
 function login(email, password) {
     const requestOptions = {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'application/json'},
         body: JSON.stringify({ email, password })
     };
 
@@ -21,6 +22,7 @@ function login(email, password) {
             if (user.token) {
                 // store user details and jwt token in local storage to keep user logged in between page refreshes
                 localStorage.setItem('user', JSON.stringify(user));
+                localStorage.setItem('token', user.token);
             }
 
             return user;
@@ -42,16 +44,30 @@ function register(user) {
     return fetch(`${config.apiUrl}/users`, requestOptions).then(handleResponse);
 }
 
-function uploadImage(context, {id, picture}) {
+function getProfile(userId, token) {
     const requestOptions = {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        method: 'GET',
+        headers: { 'Content-Type': 'application/json',  }
+    };
+    let params;
+    if(userId) params= `userId=${userId}`;
+    else params = `token=${token}`;
+    return fetch(`${config.apiUrl}/tutors?${params}`, requestOptions).then(handleResponse);
+}
+
+function uploadImage(photo, sex) {
+    const requestOptions = {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${localStorage.getItem('token')}` },
         body: JSON.stringify({
-            picture: picture
+            photo: photo,
+            sex: sex
         })
     };
 
-    return fetch(`${config.apiUrl}/tutors/${id}/avatar`, requestOptions).then(handleResponse);
+    return fetch(`${config.apiUrl}/tutors/photo`, requestOptions).then(handleResponse)
+
+
 }
 
 
@@ -68,12 +84,14 @@ function handleResponse(response) {
 
             const error = (data && data.message) || response.statusText;
             return Promise.reject(error);
-        }
-        const token = response.headers.get('Authorization')
-        if(token) {
-            data.token = token.replace('Bearer ','');
+        } else {
+            const token = response.headers.get('Authorization')
+            if(token) {
+                data.token = token.replace('Bearer ','');
+            }
+
+            return data;
         }
 
-        return data;
     });
 }

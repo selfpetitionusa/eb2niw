@@ -1,7 +1,9 @@
 <template>
 
     <b-modal static @show="initModal" id="photo-modal" title="Profile image upload" hide-footer >
+        <div v-if="alert.failed" :class="`alert ${alert.type}`">{{alert.message}}</div>
         <form id="photo-popup" @submit.prevent="crop">
+
                 <vue-croppie ref="croppieRef" :enableOrientation="false" :showZoomer="false"  :enableResize="false" :mouseWheelZoom="false"  :boundary="{ width: 230, height: 230}" :viewport="{ width:200, height:200, 'type':'circle' }">
                 </vue-croppie>
 
@@ -24,13 +26,12 @@
                     <p>Upload</p>
                 </div>
                 <div class="icon-container">
-                    <a class="icon trash" v-on:click="clear">
+                    <a class="icon trash" v-on:click="clearImage">
                         <font-awesome-icon icon="trash" />
                     </a>
                     <p>Delete</p>
                 </div>
             </div>
-
             <div class="btn-container">
                 <a class="btn btn-primary btn-border btn-cancel" @click="$bvModal.hide('photo-modal')" style="margin-right: 20px">Cancel</a>
                 <button type="submit" class="btn btn-primary btn-border btn-save" >Save</button>
@@ -40,19 +41,43 @@
 </template>
 
 <script>
-    import {mapActions} from "vuex";
+    import {mapState, mapActions} from "vuex";
 
     export default {
         data() {
             return {
                 defaultAvatar: true,
-                sex: 'Female'
+                sex: null
             };
+        },
+        props: ['profileProp'],
+        computed: {
+            ...mapState({
+                alert: state => state.alert,
+                account: state => state.account
+            }),
+
+        },
+        watch: {
+            'account.status': function (val) {
+                if(val.uploadedImage)
+                    this.$bvModal.hide('photo-modal');
+            }
         },
         methods: {
             ...mapActions('account', ['uploadImage']),
+            ...mapActions('alert', ['clear']),
             initModal() {
-                this.handleSexChange()
+                this.clear();
+                this.sex = this.profileProp.profile.sex;
+                if(this.profileProp.profile.photo) {
+                    this.defaultAvatar = false;
+                    this.$refs.croppieRef.bind({
+                        url: this.profileProp.profile.photo
+                    }).then(document.getElementsByClassName('cr-slider')[0].style.display = '');
+                } else {
+                    this.handleSexChange();
+                }
             },
             croppie (e) {
                 var files = e.target.files || e.dataTransfer.files;
@@ -80,20 +105,26 @@
                     })
                 }
             },
-            clear () {
+            clearImage () {
                 this.handleSexChange().then(document.getElementsByClassName('cr-slider')[0].style.display = 'none')
                 this.defaultAvatar = true;
             },
             crop() {
-                let options = {
-                    type: 'base64',
-                    size: { width: 400, height: 400 },
-                    format: 'png'
-                };
-                this.$refs.croppieRef.result(options, output => {
-                    const id = 'id';
-                    this.uploadImage({id, output});
-                });
+                if(this.defaultAvatar) {
+                    let sex = this.sex;
+                    this.uploadImage({sex});
+                } else {
+                    let options = {
+                        type: 'base64',
+                        size: { width: 400, height: 400 },
+                        format: 'png'
+                    };
+                    this.$refs.croppieRef.result(options, image => {
+                        this.uploadImage({image});
+                    });
+                }
+
+
             }
         }
     };

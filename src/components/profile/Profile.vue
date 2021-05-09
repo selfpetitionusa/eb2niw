@@ -38,9 +38,10 @@
 
                 <div>
                     <img class="photo" :src="response.profile.photo" />
-                    <img v-if="!response.profile.photo" class="photo" src="/avatar_female_cropped.png" />
+                    <img v-if="!response.profile.photo && response.profile.sex === 'Female'" class="photo" src="/avatar_female_cropped.png" />
+                    <img v-if="!response.profile.photo && response.profile.sex === 'Male'" class="photo" src="/avatar_male_cropped.png" />
                     <div v-if="cmsToggle" class="pic-edit">
-                        <PhotoPopup></PhotoPopup>
+                        <PhotoPopup v-bind:profileProp="response" ></PhotoPopup>
                         <a href="#" v-b-modal.photo-modal>
                             <font-awesome-icon icon="edit" />
                         </a>
@@ -71,7 +72,9 @@
                     </div>
 
                       <div v-else class="short-bio">
+                          <div v-if="response.profile.shortBio">
                           <p class="line-1" v-for="bio in response.profile.shortBio.split(/\r?\n/)" :key="bio">{{bio}}</p>
+                          </div>
                       </div>
 
 
@@ -187,8 +190,9 @@
                     <a v-if="cmsToggle" class="edit" href="src/views#">
                         <font-awesome-icon icon="edit" />
                     </a>
-
-                    <p v-for="bio in response.profile.bio.split(/\r?\n/)" :key="bio">{{bio}}</p>
+                    <div v-if="response.profile.bio">
+                        <p v-for="bio in response.profile.bio.split(/\r?\n/)" :key="bio">{{bio}}</p>
+                    </div>
                     <p v-if="!response.profile.bio && cmsToggle" class="cms">Your bio</p>
                 </div>
 
@@ -239,7 +243,7 @@
                     <div class="my-students">
                         <font-awesome-icon class="icon" icon="users" />
                         <div class="label">My students are</div>
-                        <div class="value">{{response.profile.studentsProfile.toLowerCase()}}</div>
+                        <div v-if="response.profile.studentsProfile"  class="value">{{response.profile.studentsProfile.toLowerCase()}}</div>
                           <div v-if="!response.profile.studentsProfile && cmsToggle" class="value">&lt; your selection &gt;</div>
                     </div>
 
@@ -364,7 +368,7 @@
 
 <!-- EXPERTISE SECTION -->
 
-            <div id="section-expertise" class="tu-card" v-if="!(response.profile.youtubeIntroLink === null && response.problemCards.length === 0)">
+            <div id="section-expertise" class="tu-card" v-if="!(response.profile.youtubeIntroLink === null && response.problemCards.length === 0) || cmsToggle">
 
                 <div class="section-container">
                     <div class="icon"></div>
@@ -445,7 +449,6 @@
 
 
 <script>
-    import axios from 'axios';
 
     import School from './section/School';
     import Certificate from './section/Certificate';
@@ -466,9 +469,19 @@
       ProblemCard,
       PhotoPopup
     },
-    props: ['cmsToggleProp', 'tokenProp'],
-    created () {
-          this.fetchData()
+    props: ['cmsToggleProp',  'profileProp'],
+    watch: {
+      response: function (val) {
+          if(val.problemCards.length > 0) {
+              this.scrollWidth = document.getElementById('problems').scrollWidth;
+              this.offsetWidth = document.getElementById('problems').offsetWidth;
+          }
+      }
+    },
+    computed: {
+        response: function () {
+            return this.profileProp;
+        }
     },
     metaInfo() {
           return {
@@ -484,11 +497,6 @@
     },
     data () {
         return {
-            response: {
-                profile: {rateInfo: {}, links: {}, bio: '', studentsProfile: ''},
-                categories: [],
-                problemCards: []
-            },
             offset: 0,
             scrollWidth: 0,
             offsetWidth: 0,
@@ -496,13 +504,6 @@
         }
     },
       methods: {
-          fetchData () {
-              axios
-                  .get('https://www.tutomy.com/api/tutors/' + this.tokenProp)
-                  .then(res => this.response = res.data)
-                  .then(() => this.scrollWidth = document.getElementById('problems').scrollWidth)
-                  .then(() => this.offsetWidth = document.getElementById('problems').offsetWidth)
-          },
           handleScroll () {
               this.offset = document.getElementById('problems').scrollLeft;
           },

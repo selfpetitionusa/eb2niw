@@ -1,37 +1,29 @@
 <template>
   <div>
-    <div v-if="alert.message" :class="`alert ${alert.type}`">{{alert.message}}</div>
     <router-view></router-view>
   </div>
 
 </template>
 <script>
 
-  import {mapActions, mapState} from "vuex";
-
+  import { mapActions } from 'vuex'
 
   export default {
   name: 'app',
   components: {
 
   },
-  computed: {
-    ...mapState({
-      alert: state => state.alert
-    })
-  },
-  methods: {
-    ...mapActions({
-      clearAlert: 'alert/clear'
-    })
-  },
-  watch: {
-    $route (){
-      // clear alert on location change
-      this.clearAlert();
-    }
-  },
-  metaInfo() {
+    methods: {
+      ...mapActions({
+        clearAlert: 'alert/clear'
+      })
+    },
+    watch: {
+      $route (){
+        this.clearAlert();
+      }
+    },
+    metaInfo() {
     return {
       title: "Tutomy - Software tools for tutors",
       meta: [
