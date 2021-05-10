@@ -49,9 +49,12 @@
                 </div>
 
                 <div :class="[cmsToggle && 'cms-frame']">
-                    <a v-if="cmsToggle" class="edit outer" href="src/views#">
-                        <font-awesome-icon icon="edit" />
-                    </a>
+                    <div v-if="cmsToggle">
+                        <NamePopup></NamePopup>
+                        <a href="#" v-b-modal.name-modal class="edit outer">
+                            <font-awesome-icon icon="edit" />
+                        </a>
+                    </div>
 
                     <div class="name-input">
                         <h2>{{response.profile.firstName}}</h2>
@@ -81,10 +84,12 @@
 <!-- SOCIAL MEDIA -->
 
                     <div class="social-links" :class="[cmsToggle && 'cms-frame inner-frame']">
-                        <a v-if="cmsToggle" class="edit" href="src/views#">
-                            <font-awesome-icon icon="edit" />
-                        </a>
-
+                        <div v-if="cmsToggle">
+                            <LinksPopup></LinksPopup>
+                            <a href="#" class="edit" v-b-modal.links-modal>
+                                <font-awesome-icon icon="edit" />
+                            </a>
+                        </div>
                         <ul>
                             <li v-if="response.profile.links.facebookLink"><a :href="response.profile.links.facebookLink" class="facebook"><feather type="facebook"></feather></a></li>
                             <li v-if="response.profile.links.youtubeLink"><a :href="response.profile.links.youtubeLink" class="youtube"><feather type="youtube"></feather></a></li>
@@ -127,9 +132,12 @@
         <div class="tu-card-container">
             <div id="section-about-me" class="tu-card">
                 <div :class="[cmsToggle && 'cms-frame tu-card-frame']">
-                    <a v-if="cmsToggle" class="edit" href="src/views#">
-                        <font-awesome-icon icon="edit" />
-                    </a>
+                    <div v-if="cmsToggle">
+                        <EducationPopup></EducationPopup>
+                        <a href="#" class="edit" v-b-modal.education-modal>
+                            <font-awesome-icon icon="edit" />
+                        </a>
+                    </div>
 
 <!-- HEADLINE -->
 
@@ -187,9 +195,12 @@
 <!-- BIO -->
 
                 <div class="bio" :class="[cmsToggle && 'cms-frame tu-card-frame']">
-                    <a v-if="cmsToggle" class="edit" href="src/views#">
-                        <font-awesome-icon icon="edit" />
-                    </a>
+                    <div v-if="cmsToggle">
+                        <BioPopup></BioPopup>
+                        <a href="#" class="edit" v-b-modal.bio-modal>
+                            <font-awesome-icon icon="edit" />
+                        </a>
+                    </div>
                     <div v-if="response.profile.bio">
                         <p v-for="bio in response.profile.bio.split(/\r?\n/)" :key="bio">{{bio}}</p>
                     </div>
@@ -211,9 +222,12 @@
                 </div>
 
                 <div :class="[cmsToggle && 'cms-frame tu-card-frame margin-frame']">
-                    <a v-if="cmsToggle" class="edit" href="src/views#">
-                        <font-awesome-icon icon="edit" />
-                    </a>
+                    <div v-if="cmsToggle">
+                        <SubjectsPopup></SubjectsPopup>
+                        <a href="#" class="edit" v-b-modal.subjects-modal>
+                            <font-awesome-icon icon="edit" />
+                        </a>
+                    </div>
 
                     <div v-if="response.categories.length" class="row subjects-container">
                         <div class="col-md-6 subject-cards" v-for="(category, index) in response.categories" :key="category.id">
@@ -263,9 +277,12 @@
 
                 <div class="row rates-container">
                     <div class="col-xl-6 col-lg-7 col-md-7 col-sm-7 col-12 items-all" :class="[cmsToggle && 'cms-frame frame-rates']">
-                        <a v-if="cmsToggle" class="edit" href="src/views#">
-                            <font-awesome-icon icon="edit" />
-                        </a>
+                        <div v-if="cmsToggle">
+                            <RatesPopup></RatesPopup>
+                            <a href="#" class="edit" v-b-modal.rates-modal>
+                                <font-awesome-icon icon="edit" />
+                            </a>
+                        </div>
 
                         <div class="row item" v-for="rate in response.rates" :key="rate.id">
                             <div class="col-xl-4 col-lg-4 col-md-3 col-sm-3 col-3 rate-box">
@@ -300,10 +317,12 @@
 
                 <div class="terms-container">
                     <div class="terms">
-                        <a v-if="cmsToggle" class="edit edit-terms" href="src/views#">
-                            <font-awesome-icon icon="edit" />
-                        </a>
-
+                        <div v-if="cmsToggle">
+                            <TermsPopup></TermsPopup>
+                            <a href="#" class="edit edit-terms" v-b-modal.terms-modal>
+                                <font-awesome-icon icon="edit" />
+                            </a>
+                        </div>
                         <div class="row terms-item">
                             <div class="col-1 icon-container"><font-awesome-icon class="icon" icon="globe" /></div>
                             <div class="col-11 text">
@@ -379,9 +398,12 @@
 <!-- YOUTUBE -->
 
                 <div :class="[cmsToggle && 'cms-frame tu-card-frame margin-frame']">
-                    <a v-if="response.profile.youtubeIntroLink && cmsToggle" class="edit" href="src/views#">
-                        <font-awesome-icon icon="edit" />
-                    </a>
+                    <div v-if="response.profile.youtubeIntroLink && cmsToggle">
+                        <YouTubePopup></YouTubePopup>
+                        <a href="#" class="edit" v-b-modal.youtube-modal>
+                            <font-awesome-icon icon="edit" />
+                        </a>
+                    </div>
 
                     <div v-if="response.profile.youtubeIntroLink" class="youtube-display">
                         <iframe width="560" height="315" :src="response.profile.youtubeLink" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -393,9 +415,12 @@
 <!-- CAROUSEL -->
 
                 <div :class="[cmsToggle && 'cms-frame tu-card-frame margin-frame']">
-                    <a v-if="cmsToggle" class="edit" href="src/views#">
-                        <font-awesome-icon icon="edit" />
-                    </a>
+                    <div v-if="cmsToggle">
+                        <ProblemCardsPopup></ProblemCardsPopup>
+                        <a href="#" class="edit" v-b-modal.problem-cards-modal>
+                            <font-awesome-icon icon="edit" />
+                        </a>
+                    </div>
 
                     <div class="expertise-arrows">
                         <div v-on:click="scroll('left')" class="left-arrow">
@@ -456,7 +481,18 @@
     import Rate from './section/Rate';
     import YouTube from './section/YouTube';
     import ProblemCard from './section/ProblemCard';
+
     import PhotoPopup from '../profile/popups/PhotoPopup';
+    import NamePopup from '../profile/popups/NamePopup';
+    import LinksPopup from '../profile/popups/LinksPopup';
+    import EducationPopup from '../profile/popups/EducationPopup';
+    import BioPopup from '../profile/popups/BioPopup';
+    import SubjectsPopup from '../profile/popups/SubjectsPopup';
+    import RatesPopup from '../profile/popups/RatesPopup';
+    import TermsPopup from '../profile/popups/TermsPopup';
+    import YouTubePopup from '../profile/popups/YouTubePopup';
+    import ProblemCardsPopup from '../profile/popups/ProblemCardsPopup';
+
 
   export default {
     name: 'Profile',
@@ -467,7 +503,16 @@
       Rate,
       YouTube,
       ProblemCard,
-      PhotoPopup
+      PhotoPopup,
+      NamePopup,
+      LinksPopup,
+      EducationPopup,
+      BioPopup,
+      SubjectsPopup,
+      RatesPopup,
+      TermsPopup,
+      YouTubePopup,
+      ProblemCardsPopup
     },
     props: ['cmsToggleProp',  'profileProp'],
     watch: {
@@ -508,56 +553,54 @@
               this.offset = document.getElementById('problems').scrollLeft;
           },
           formatArray(arr) {
-            var outStr = "";
-            if (arr.length === 1) {
-                outStr = arr[0];
-            } else if (arr.length === 2) {
-                outStr = arr.join(' & ');
-            } else if (arr.length > 2) {
-                outStr = arr.slice(0, -1).join(', ') + ' & ' + arr.slice(-1);
-            }
-            return outStr;
+              var outStr = "";
+              if (arr.length === 1) {
+                  outStr = arr[0];
+              } else if (arr.length === 2) {
+                  outStr = arr.join(' & ');
+              } else if (arr.length > 2) {
+                  outStr = arr.slice(0, -1).join(', ') + ' & ' + arr.slice(-1);
+              }
+              return outStr;
           },
           getImgUrl: function (index) {
               const number = index % 6;
               return require('../../assets/img/icon_expertise' + number + '.svg')
           },
           scroll: function (direction) {
-            const p = document.getElementById('problems');
-            const offsetWidth = document.getElementById('problem-card1').offsetWidth + 20;
-            if(direction === 'left') {
-                if(p.scrollLeft - offsetWidth < 0) {
-                    this.offset = 0;
-                } else {
-                    this.offset = p.scrollLeft - offsetWidth;
-                }
-                p.scrollTo({left: this.offset, behavior: 'smooth'})
-            } else {
-                if(p.scrollLeft + this.offsetWidth >= p.scrollWidth) {
-                    this.offset = p.scrollWidth - this.offsetWidth;
-
-                } else {
-                    this.offset = p.scrollLeft + offsetWidth;
-                }
-                p.scrollTo({left: this.offset, behavior: 'smooth'})
-            }
-          },
-
-          actionHamburgerMenu: function () {
-                  var x = document.getElementById("myLinks");
-                  if (x.style.display === "block") {
-                    x.style.display = "none";
+              const p = document.getElementById('problems');
+              const offsetWidth = document.getElementById('problem-card1').offsetWidth + 20;
+              if(direction === 'left') {
+                  if(p.scrollLeft - offsetWidth < 0) {
+                      this.offset = 0;
                   } else {
-                    x.style.display = "block";
+                      this.offset = p.scrollLeft - offsetWidth;
                   }
-                  var y = document.getElementById("tu-container");
-                  if (y.style.display === "none") {
-                    y.style.display = "block";
+                  p.scrollTo({left: this.offset, behavior: 'smooth'})
+              } else {
+                  if(p.scrollLeft + this.offsetWidth >= p.scrollWidth) {
+                      this.offset = p.scrollWidth - this.offsetWidth;
                   } else {
-                    y.style.display = "none";
+                      this.offset = p.scrollLeft + offsetWidth;
                   }
+                  p.scrollTo({left: this.offset, behavior: 'smooth'})
               }
-        }
+          },
+          actionHamburgerMenu: function () {
+              var x = document.getElementById("myLinks");
+              if (x.style.display === "block") {
+                x.style.display = "none";
+              } else {
+                x.style.display = "block";
+              }
+              var y = document.getElementById("tu-container");
+              if (y.style.display === "none") {
+                y.style.display = "block";
+              } else {
+                y.style.display = "none";
+              }
+          }
+      }
   }
 
 </script>

@@ -1,8 +1,8 @@
 <template>
 
-    <b-modal static @show="initModal" id="photo-modal" title="Profile image upload" hide-footer >
+    <b-modal static @show="initModal" id="photo-modal" title="Profile image" hide-footer >
         <div v-if="alert.failed" :class="`alert ${alert.type}`">{{alert.message}}</div>
-        <form id="photo-popup" @submit.prevent="crop">
+        <form id="photo-popup" @submit.prevent="crop" class="cms">
 
                 <vue-croppie ref="croppieRef" :enableOrientation="false" :showZoomer="false"  :enableResize="false" :mouseWheelZoom="false"  :boundary="{ width: 230, height: 230}" :viewport="{ width:200, height:200, 'type':'circle' }">
                 </vue-croppie>
@@ -15,9 +15,6 @@
                     <label class="form-check-label"><input type="radio" class="form-check-input" @change="handleSexChange"  v-model="sex" value="Male" name="gender">Male</label>
                 </div>
             </div>
-
-
-
 
             <div class="photo-icons">
                 <div class="form-group icon-container">
@@ -33,11 +30,12 @@
                 </div>
             </div>
             <div class="btn-container">
-                <a class="btn btn-primary btn-border btn-cancel" @click="$bvModal.hide('photo-modal')" style="margin-right: 20px">Cancel</a>
-                <button type="submit" class="btn btn-primary btn-border btn-save" >Save</button>
+                <a class="btn btn-primary btn-border btn-cancel" @click="$bvModal.hide('photo-modal')">Cancel</a>
+                <button type="submit"  class="btn btn-primary btn-border btn-save">Save</button>
             </div>
         </form>
     </b-modal>
+
 </template>
 
 <script>
@@ -128,5 +126,4 @@
             }
         }
     };
-
 </script>

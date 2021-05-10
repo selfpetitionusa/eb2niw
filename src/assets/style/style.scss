@@ -2418,7 +2418,7 @@ Go Top CSS
 }
 
 .modal-dialog {
-    margin: 60px auto 0px auto;
+    margin: 30px auto 20px auto;
 }
 
 .modal-content {
@@ -3211,7 +3211,7 @@ Subjects section - Subjects
     ul {
         display: inline-block;
         text-align: left;
-        list-style: none;
+        list-style-type: none;
         padding-left: 0px;
     }
 
@@ -3662,11 +3662,9 @@ Tutomy logo
 Pop-ups & CMS
 =================================================*/
 
-.container.cms {
-    margin-top: 2rem;
-}
-
 .cms {
+    margin: 0rem 1rem;
+
     .form-group {
         margin-bottom: 12px;
 
@@ -3680,6 +3678,37 @@ Pop-ups & CMS
         .label {
             font-size: 12px;
         }
+    }
+
+    .form-control {
+        border-radius: 5px;
+        border-color: #949494;
+        min-height: 35px;
+
+        &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: #D8D8D8;
+            opacity: 1; /* Firefox */
+        }
+
+        &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+            color: #D8D8D8;
+        }
+
+        &::-ms-input-placeholder { /* Microsoft Edge */
+            color: #D8D8D8;
+        }
+    }
+
+    .subject-cat {
+        padding-left: 25px;
+
+        .form-control {
+            margin-bottom: 5px;
+        }
+    }
+
+    &.bio {
+        min-height: 25rem;
     }
 }
 
@@ -3704,41 +3733,28 @@ Pop-ups & CMS
     }
 }
 
-.cms {
-    .form-control {
-        border-radius: 5px;
-        border-color: #949494;
-        min-height: 35px;
-
-        &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-            color: #D8D8D8;
-            opacity: 1; /* Firefox */
-        }
-
-        &:-ms-input-placeholder { /* Internet Explorer 10-11 */
-            color: #D8D8D8;
-        }
-
-        &::-ms-input-placeholder { /* Microsoft Edge */
-            color: #D8D8D8;
-        }
-    }
-}
-
 .form-title {
     font-weight: 500;
     font-size: 14px;
+    color: #0E314C;
 
     p {
-        color: #0E314C;
         margin: 2rem 0 1rem;
         line-height: 20px;
+        color: #0E314C;
     }
 
-    li {
+    ul {
         font-size: 12px;
         font-weight: 400;
         line-height: 20px;
+        display: block;
+        margin: 10px 0px 20px;
+
+        li {
+            display:list-item;
+            list-style-position: inside;
+        }
     }
 }
 
@@ -3856,7 +3872,7 @@ input[type="range"]::-ms-fill-upper {
 .btn-container {
     display: flex;
     justify-content: flex-end;
-    margin: 2.5rem 0;
+    margin: 2.5rem 0 1rem;
 }
 
 .btn-border {
@@ -3867,19 +3883,19 @@ input[type="range"]::-ms-fill-upper {
     }
 
     &.focus, &:focus {
-      border: none;
+        border: none;
     }
 
     &:not(:disabled):not(.disabled).active:focus, &:not(:disabled):not(.disabled):active:focus, .show>.btn-primary.dropdown-toggle:focus {
-      border: none;
+        border: none;
     }
 
     &:not(:disabled):not(.disabled).active, &:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
-      border: none;
+        border: none;
     }
 
     &.disabled, &:disabled {
-      border: none;
+        border: none;
     }
 }
 
@@ -3887,6 +3903,7 @@ input[type="range"]::-ms-fill-upper {
     color: #5457C1;
     background-color: $white-color;
     width: 9rem;
+    margin-right: 20px;
     box-shadow: 0 13px 27px 0 rgba(84, 87, 193, .15);
 
     &:hover {
@@ -4032,16 +4049,6 @@ input#question {
     margin-top: 3px;
 }
 
-.cms {
-    .subject-cat {
-        padding-left: 25px;
-
-        .form-control {
-            margin-bottom: 5px;
-        }
-    }
-}
-
 .radio-container {
     margin-bottom: 50px;
 
@@ -4078,6 +4085,8 @@ input#question {
 }
 
 .table {
+    color: $black-color;
+
     .col1, .col2 {
         width: 55px;
         border: none;
@@ -4135,19 +4144,18 @@ input#question {
     }
 }
 
-.cms-terms-container {
-    margin-top: 40px;
 
-    .term-container {
-        height: 70px;
-        margin: 5px;
+.term-container {
+    height: 70px;
+    width: 100%;
+    margin: 5px;
 
-        &:last-child, &:first-child {
-          display: flex;
-          align-items: center;
-        }
+    &:last-child, &:first-child {
+      display: flex;
+      align-items: center;
     }
 }
+
 
 .terms-switch {
     display: flex;
@@ -4156,6 +4164,7 @@ input#question {
 
     span {
         width: 140px;
+        color: $black-color;
     }
 
     label.custom-control-label {
