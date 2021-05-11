@@ -5,7 +5,7 @@
             <vue-croppie ref="croppieRef" :enableOrientation="false" :showZoomer="false"  :enableResize="false" :mouseWheelZoom="false"  :boundary="{ width: 230, height: 230}" :viewport="{ width:200, height:200, 'type':'circle' }">
             </vue-croppie>
 
-            <div v-if="defaultAvatar" style="display: flex;justify-content: center;margin-top: 20px;">
+            <div v-if="defaultAvatar" class="avatar">
                 <div class="form-check-inline">
                     <label class="form-check-label"><input type="radio" class="form-check-input" @change="handleSexChange"  v-model="sex" value="Female" name="gender">Female</label>
                 </div>
