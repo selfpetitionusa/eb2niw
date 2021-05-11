@@ -3879,6 +3879,15 @@ input[type="range"]::-ms-fill-upper {
     display: flex;
     justify-content: flex-end;
     margin: 2.5rem 0 1rem;
+
+    img {
+        position: absolute;
+        right: 0px;
+        top: 18px;
+        margin: 0px 10px;
+        height: 15px;
+        width: 15px;
+    }
 }
 
 .btn-border {
