@@ -3670,11 +3670,23 @@ CMS navbars
             &.is-sticky {
                 background-color: #2F2E40 !important;
             }
-            .navbar-nav .nav-item a {
-                color: #D0CDDF;
 
-                &:hover, &:focus, &.active {
-                    color: $light-green-color;
+            .nav-item {
+                position: relative;
+                padding: 15px 0;
+
+                a {
+                    color: #D0CDDF;
+                    font: {
+                        weight: 500;
+                        size: 15px;
+                    }
+                    margin: 0 14px;
+                    padding: 0px;
+
+                    &:hover, &:focus, &.active {
+                        color: $light-green-color;
+                    }
                 }
             }
         }
