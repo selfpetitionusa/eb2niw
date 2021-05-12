@@ -3662,7 +3662,7 @@ Tutomy logo
 CMS navbars
 =================================================*/
 
-.edit-profile {
+.nav-cms {
     #header {
         &.headroom {
             background-color: #2F2E40;
@@ -3672,18 +3672,12 @@ CMS navbars
             }
 
             .nav-item {
-                position: relative;
-                padding: 15px 0;
-
                 a {
                     color: #D0CDDF;
                     font: {
                         weight: 500;
                         size: 15px;
                     }
-                    margin: 0 14px;
-                    padding: 0px;
-
                     &:hover, &:focus, &.active {
                         color: $light-green-color;
                     }
@@ -3691,8 +3685,25 @@ CMS navbars
             }
         }
     }
+    .nav-margin {
+        margin-top: 50px;
+    }
 }
 
+@media only screen and (max-width: 767px) {
+    .nav-cms {
+        nav .navbar-nav {
+            background-color: #3d3c4e;
+            height: 150px;
+            border-radius: 5px;
+        }
+        .navbar-toggler {
+            .navbar-toggler-icon {
+                background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(208, 205, 223)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+            }
+        }
+    }
+}
 
 /*================================================
 Pop-ups & CMS
@@ -3974,7 +3985,7 @@ input[type="range"]::-ms-fill-upper {
 .btn-preview {
     background-color: $light-green-color;
     padding: 10px 30px;
-    margin: 5px 5px;
+    margin: 5px 15px;
     box-shadow: 0 13px 27px 0 rgba(68, 206, 111, 0.25);
 
     &:hover, &:focus, &:active {
