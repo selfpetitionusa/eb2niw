@@ -2899,6 +2899,7 @@ h2.lastname {
 
         &:hover, &:focus, &:active {
             background-color: #5457C1;
+            box-shadow: 0 13px 27px 0 rgba(68, 206, 111, .25);
         }
     }
 }
@@ -3921,7 +3922,7 @@ input[type="range"]::-ms-fill-upper {
     margin-right: 20px;
     box-shadow: 0 13px 27px 0 rgba(84, 87, 193, .15);
 
-    &:hover {
+    &:hover, &:focus, &:active {
         color: $white-color;
         box-shadow: 0 13px 27px 0 rgba(84, 87, 193, .25);
     }
@@ -3935,26 +3936,18 @@ input[type="range"]::-ms-fill-upper {
     width: 9rem;
 }
 
-.preview {
-    display: flex;
-    justify-content: center;
+.btn-preview {
+    background-color: $light-green-color;
+    padding: 10px 30px;
+    margin: 5px 5px;
+    box-shadow: 0 13px 27px 0 rgba(68, 206, 111, 0.25);
 
-    .btn-preview {
-        position: absolute;
-        top: 4%;
-        background-color: $light-green-color;
+    &:hover, &:focus, &:active {
+        box-shadow: 0 13px 27px 0 rgba(84, 87, 193, 0.25);
+    }
 
-        &::after, &::before {
-            background-color: #DF7870;
-        }
-
-        &:hover, &:focus, &:active {
-            background-color: #5457C1;
-        }
-
-        &.focus, &:focus {
-            background-color: #5457C1;
-        }
+    &::after, &::before {
+        background-color: #5457C1;
     }
 }
 
