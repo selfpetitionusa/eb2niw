@@ -3658,6 +3658,29 @@ Tutomy logo
     }
 }
 
+/*================================================
+CMS navbars
+=================================================*/
+
+.edit-profile {
+    #header {
+        &.headroom {
+            background-color: #2F2E40;
+
+            &.is-sticky {
+                background-color: #2F2E40 !important;
+            }
+            .navbar-nav .nav-item a {
+                color: #D0CDDF;
+
+                &:hover, &:focus, &.active {
+                    color: $light-green-color;
+                }
+            }
+        }
+    }
+}
+
 
 /*================================================
 Pop-ups & CMS
