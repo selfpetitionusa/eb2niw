@@ -3780,6 +3780,49 @@ Pop-ups & CMS
     }
 }
 
+.account {
+    margin: 7rem auto 1rem;
+
+    .form-control {
+        border-radius: 5px;
+
+        &::placeholder {
+            color: #0E314C;
+            font-weight: 500;
+        }
+
+        &:hover {
+            border-width: 2px;
+        }
+    }
+
+    input {
+        color: #0E314C;
+        font-weight: 500;
+
+        &:focus {
+            color: #0E314C;
+            font-weight: 500;
+        }
+    }
+
+    .form-group label {
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    .pswreset {
+        margin-top: 3rem;
+
+        .form-group {
+            label {
+                margin-bottom: 2px;
+                margin-top: 0.5rem;
+            }
+        }
+    }
+}
+
 .form-title {
     font-weight: 500;
     font-size: 14px;
