@@ -34,7 +34,7 @@
                         <div class="icon">
                             <font-awesome-icon class="font-icon" icon="users" />
                         </div>
-                        <h3>Community of tutor entrepreneurs like you</h3>
+                        <h3>Community of tutors like you</h3>
                     </div>
                 </div>
             </div>
