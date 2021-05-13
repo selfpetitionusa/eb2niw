@@ -4063,7 +4063,9 @@ input[type="range"]::-ms-fill-upper {
         border-radius: 50%;
 
         i {
-            width: 20px;
+            padding: 5px;
+            display: flex;
+            justify-content: center;
         }
     }
 
