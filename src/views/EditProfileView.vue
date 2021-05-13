@@ -6,19 +6,23 @@
                 <div class="container">
                     <nav class="navbar navbar-expand-md">
 
-                        <div class="ml-auto">
+                        <ul>
+                            <li class="nav-item"><a href="/dashboard" class="nav-link">Home</a></li>
+                        </ul>
+
+                        <div class="mr-auto">
                             <a class="btn btn-primary btn-preview">Preview</a>
                         </div>
 
-                            <b-navbar-toggle target="navbarSupportedContent"></b-navbar-toggle>
+                        <b-navbar-toggle target="navbarSupportedContent"></b-navbar-toggle>
 
-                            <b-collapse class="collapse navbar-collapse mean-menu" id="navbarSupportedContent" is-nav>
-                                <ul class="navbar-nav nav ml-auto">
-                                    <li class="nav-item"><a href="/" class="nav-link">Account</a></li>
-                                    <li class="nav-item"><a href="/" class="nav-link">Help</a></li>
-                                    <li class="nav-item"><a href="/" class="nav-link">Logout</a></li>
-                                </ul>
-                            </b-collapse>
+                        <b-collapse class="collapse" id="navbarSupportedContent" is-nav>
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item"><a href="/" class="nav-link">Account</a></li>
+                                <li class="nav-item"><a href="/" class="nav-link">Help</a></li>
+                                <li class="nav-item"><a href="/" class="nav-link">Logout</a></li>
+                            </ul>
+                        </b-collapse>
 
                     </nav>
                 </div>
