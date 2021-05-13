@@ -3,6 +3,7 @@ import VueRouter from 'vue-router';
 import Home from './views/Home';
 import ProfileView from './views/ProfileView';
 import EditProfileView from './views/EditProfileView';
+import EditProfilePreview from './views/EditProfilePreview'
 import Login from './views/Login'
 import Register from './views/Register'
 
@@ -19,6 +20,7 @@ export const router = new VueRouter({
       { path: '/login', component: Login },
       { path: '/register', component: Register },
       { path: '/dashboard', component: EditProfileView },
+      { path: '/preview', component: EditProfilePreview },
       // otherwise redirect to home
       { path: '*', redirect: '/' }
     ]

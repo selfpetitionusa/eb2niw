@@ -11,7 +11,7 @@
                         </ul>
 
                         <div class="mr-auto">
-                            <a class="btn btn-primary btn-preview">Preview</a>
+                            <a href="/preview" class="btn btn-primary btn-preview">Preview</a>
                         </div>
 
                         <b-navbar-toggle target="navbarSupportedContent"></b-navbar-toggle>
