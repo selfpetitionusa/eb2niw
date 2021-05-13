@@ -1,33 +1,11 @@
 <template>
 
-    <div class="nav-cms">
-        <header id="header" :class="['headroom', {'is-sticky': isSticky}]">
-            <div class="startp-nav">
-                <div class="container">
-                    <nav class="navbar navbar-expand-md">
-
-                        <ul>
-                            <li class="nav-item"><a href="/dashboard" class="nav-link">Home</a></li>
-                        </ul>
-
-                        <b-navbar-toggle target="navbarSupportedContent"></b-navbar-toggle>
-
-                        <b-collapse class="collapse" id="navbarSupportedContent" is-nav>
-                            <ul class="navbar-nav ml-auto">
-                                <li class="nav-item"><a href="/account" class="nav-link">My account</a></li>
-                                <li class="nav-item"><a href="/help" class="nav-link">Help</a></li>
-                                <li class="nav-item"><a class="nav-link"><router-link to="/login">Logout</router-link></a></li>
-                            </ul>
-                        </b-collapse>
-
-                    </nav>
-                </div>
-            </div>
-        </header>
+    <div>
+        <CmsNav v-bind:previewToggleProp="false"></CmsNav>
 
         <section class="contact-area ptb-80">
             <SectionFive id="contact"/>
-            <div class="container support nav-margin">
+            <div class="container support">
                 <div class="section-title">
                     <h2>Get In Touch</h2>
                     <div class="bar"></div>
@@ -76,7 +54,6 @@
                 </div>
             </div>
         </section>
-
     </div>
 
 </template>
@@ -86,10 +63,11 @@
 
 <script>
 
+  import CmsNav from "../components/profile/section/CmsNav";
+
     export default {
         data(){
             return {
-                isSticky: false,
                 contact_name: '',
                 contact_email: '',
                 contact_message: '',
@@ -97,17 +75,8 @@
                 contact_notice: ''
             }
         },
-        mounted() {
-            const that = this;
-            window.addEventListener('scroll', () => {
-                let scrollPos = window.scrollY;
-                // eslint-disable-next-line no-console
-                if(scrollPos >= 100){
-                    that.isSticky = true;
-                } else {
-                    that.isSticky = false;
-                }
-            })
+        components: {
+            CmsNav
         },
         methods: {
             async sendContactMessage() {
@@ -129,4 +98,5 @@
             }
         }
     };
+
 </script>

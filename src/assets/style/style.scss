@@ -3663,6 +3663,8 @@ CMS navbars
 =================================================*/
 
 .nav-cms {
+    margin-bottom: 50px;
+
     #header {
         &.headroom {
             background-color: #2F2E40;
@@ -3684,10 +3686,6 @@ CMS navbars
                 }
             }
         }
-    }
-
-    .nav-margin {
-        margin-top: 50px;
     }
 }
 
