@@ -21,6 +21,23 @@
     import Profile from "../components/profile/Profile";
 
     export default {
-        components: {Profile}
+        data(){
+            return {
+                isSticky: false
+            }
+        },
+        components: {Profile},
+        mounted() {
+            const that = this;
+            window.addEventListener('scroll', () => {
+                let scrollPos = window.scrollY;
+                // eslint-disable-next-line no-console
+                if(scrollPos >= 100){
+                    that.isSticky = true;
+                } else {
+                    that.isSticky = false;
+                }
+            })
+        }
     };
 </script>
