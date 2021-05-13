@@ -306,7 +306,7 @@
 <!-- TERMS -->
 
                 <div class="terms-container">
-                    <div class="terms">
+                    <div class="terms frame-terms">
                         <div v-if="cmsToggle">
                             <TermsPopup></TermsPopup>
                             <a href="#" class="edit edit-terms" v-b-modal.terms-modal>
