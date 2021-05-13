@@ -8,6 +8,17 @@
                         <ul>
                             <li class="nav-item"><a href="/dashboard" class="nav-link">Home</a></li>
                         </ul>
+
+                        <b-navbar-toggle target="navbarSupportedContent"></b-navbar-toggle>
+
+                        <b-collapse class="collapse" id="navbarSupportedContent" is-nav>
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item"><a href="/account" class="nav-link">My account</a></li>
+                                <li class="nav-item"><a href="/help" class="nav-link">Help</a></li>
+                                <li class="nav-item"><a class="nav-link"><router-link to="/login">Logout</router-link></a></li>
+                            </ul>
+                        </b-collapse>
+                        
                     </nav>
                 </div>
             </div>
@@ -15,7 +26,7 @@
 
         <Profile v-bind:cmsToggleProp="false" v-bind:tokenProp="this.$route.params.token" class="nav-margin"></Profile>
     </div>
-    
+
 </template>
 
 
