@@ -4174,7 +4174,7 @@ input#question {
         }
 
         .item {
-            margin: 0 5px;
+            margin: 0 2px;
             font-size: 14px;
         }
     }
@@ -4207,7 +4207,13 @@ input#question {
 
     @media (max-width: 450px) {
         #myStudents-age.item, #myStudents-grade.item {
-            width: 35%;
+            width: 25%;
+        }
+    }
+
+    @media (max-width: 300px) {
+        #myStudents-age.item, #myStudents-grade.item {
+            width: 30%;
         }
     }
 
