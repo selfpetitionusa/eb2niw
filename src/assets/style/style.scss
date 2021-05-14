@@ -4417,7 +4417,11 @@ a.edit {
                     right: 10%;
                 }
             }
+
+            &.frame-rates {
+                padding-left: 15px;
         }
+    }
 
         .pic-edit {
             right: 31%;
@@ -4453,8 +4457,6 @@ a.edit {
     @media (max-width: 575px) {
         .cms-frame {
             &.frame-rates {
-                padding-left: 15px;
-
                 .edit {
                     right: 2%;
                 }
