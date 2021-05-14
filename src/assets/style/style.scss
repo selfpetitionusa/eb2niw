@@ -2422,6 +2422,10 @@ Go Top CSS
     padding: 0 0.5rem;
 }
 
+.modal-title {
+    font-size: 18px;
+}
+
 .modal-content {
     -webkit-border-radius: 15px !important;
     -moz-border-radius: 15px !important;
@@ -4295,7 +4299,7 @@ input#question {
 
     span {
         color: $black-color;
-        width: 35%;
+        width: 33%;
         margin-right: 2.5rem;
     }
 
@@ -4317,11 +4321,7 @@ input#question {
     @media (max-width: 420px) {
         .terms-switch {
             input {
-                width: 12rem;
-            }
-
-            span {
-                font-size: 11px;
+                width: 11rem;
             }
         }
 
@@ -4332,12 +4332,20 @@ input#question {
 
     @media (max-width: 360px) {
         .terms-switch {
-            span {
-                font-size: 10px;
+            input {
+                width: 8.3rem;
+            }
+        }
+    }
+
+    @media (max-width: 319px) {
+        .terms-switch {
+            input {
+                width: 7rem;
             }
 
-            input {
-                width: 8rem;
+            span {
+                font-size: 10px;
             }
         }
     }

@@ -3,7 +3,7 @@
     <b-modal static id="subjects-modal" title="What do you teach" hide-footer>
         <form id="subjects-popup" class="cms">
             <div class="form-title">
-                <p>Add minimum 1 subject and 1 category for each subject</p>
+                <p>Add minimum 1 subject and 1{{'\xa0'}}category for each subject</p>
             </div>
 
             <div id="subjects" v-for="subject in subjects" :key="subject.id">
