@@ -4278,32 +4278,23 @@ input#question {
 }
 
 .term-container {
-    height: 70px;
-    width: 100%;
-    margin: 5px;
-
-    &:last-child, &:first-child {
-      display: flex;
-      align-items: center;
-    }
+    margin: 5px 0px;
 }
 
 .terms-switch {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: 0px;
 
     span {
-        width: 140px;
         color: $black-color;
-    }
-
-    label.custom-control-label {
-        margin-left: 55px;
+        width: 35%;
+        margin-right: 2.5rem;
     }
 
     input {
-     width: 240px;
+        width: 15rem;
     }
 
     .custom-control-input:checked~.custom-control-label::before {
@@ -4317,9 +4308,33 @@ input#question {
     font-size: 10px;
 }
 
-.terms-margin {
-    margin-top: 26px;
-}
+    @media (max-width: 420px) {
+        .terms-switch {
+            input {
+                width: 12rem;
+            }
+
+            span {
+                font-size: 11px;
+            }
+        }
+
+        #in-person-help, #consultation-help {
+            font-size: 8px;
+        }
+    }
+
+    @media (max-width: 360px) {
+        .terms-switch {
+            span {
+                font-size: 10px;
+            }
+
+            input {
+                width: 8rem;
+            }
+        }
+    }
 
 .pic-edit {
     position: absolute;
