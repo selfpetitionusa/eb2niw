@@ -3748,7 +3748,7 @@ Pop-ups & CMS
     }
 
     .subject-cat {
-        padding-left: 25px;
+        padding-left: 15px;
 
         .form-control {
             margin-bottom: 5px;
@@ -4163,6 +4163,10 @@ input#question {
         align-items: center;
         margin: 5px 0px;
 
+        .form-inline {
+            width: 100%;
+        }
+
         .item {
             margin: 0 5px;
             font-size: 14px;
@@ -4175,14 +4179,31 @@ input#question {
 }
 
 #myStudents-age.item, #myStudents-grade.item {
-    width: 120px;
     height: 35px;
+    width: 20%;
 }
 
 #myStudents-other.item {
-    width: 280px;
     height: 35px;
+    width: 65%;
 }
+
+    @media (max-width: 480px) {
+        #myStudents-other.item {
+            width: 95%;
+        }
+
+        .form-check.radio {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    }
+
+    @media (max-width: 450px) {
+        #myStudents-age.item, #myStudents-grade.item {
+            width: 35%;
+        }
+    }
 
 .table-container {
     display: flex;
@@ -4250,7 +4271,6 @@ input#question {
     }
 }
 
-
 .term-container {
     height: 70px;
     width: 100%;
@@ -4261,7 +4281,6 @@ input#question {
       align-items: center;
     }
 }
-
 
 .terms-switch {
     display: flex;
@@ -4295,7 +4314,6 @@ input#question {
 .terms-margin {
     margin-top: 26px;
 }
-
 
 .pic-edit {
     position: absolute;
