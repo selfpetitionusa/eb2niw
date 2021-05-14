@@ -7,7 +7,7 @@
             </div>
 
             <div class="form-group">
-                <label for="youtube">Video - for example link to your YouTube video</label>
+                <label for="youtube">Example: link to your YouTube video</label>
                 <input type="text" class="form-control" id="youtube" placeholder="https://www.youtube.com/YOUR-VIDEO">
             </div>
 
