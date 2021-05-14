@@ -3711,7 +3711,7 @@ Pop-ups & CMS
 =================================================*/
 
 .cms {
-    margin: 0rem 0.5rem;
+    margin: 0rem 1rem;
 
     .form-group {
         margin-bottom: 12px;
@@ -3759,6 +3759,12 @@ Pop-ups & CMS
         min-height: 25rem;
     }
 }
+
+    @media (max-width: 450px) {
+        .cms {
+            margin: 0px;
+        }
+    }
 
 .login, .register, .support {
     h2 {
