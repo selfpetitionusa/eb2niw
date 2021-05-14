@@ -4047,6 +4047,12 @@ input[type="range"]::-ms-fill-upper {
     }
 }
 
+    @media (max-width: 320px) {
+        .btn-preview {
+            margin: 5px 0px;
+        }
+    }
+
 
 #links-popup {
     label {
