@@ -13,7 +13,7 @@
                             <th class="col1">Currency*</th>
                             <th class="col2">Rate*</th>
                             <th class="col3">Session type*</th>
-                            <th class="col4">Rate comment</th>
+                            <th class="col4">Comment</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -30,7 +30,7 @@
                                     <option>Type your own</option>
                                 </datalist>
                             </td>
-                            <td><input type="text" class="form-control" id="rateComment-1" v-on:input="enableInputRate2" placeholder="Example: Rates starting from"></td>
+                            <td><input type="text" class="form-control" id="rateComment-1" v-on:input="enableInputRate2" placeholder="Ex: Rates starting from"></td>
                         </tr>
 
                         <tr>
@@ -46,7 +46,7 @@
                                     <option>Type your own</option>
                                 </datalist>
                             </td>
-                            <td><input type="text" class="form-control" id="rateComment-2" placeholder="Example: University level students" v-on:input="enableInputRate3" disabled></td>
+                            <td><input type="text" class="form-control" id="rateComment-2" placeholder="Ex: University level students" v-on:input="enableInputRate3" disabled></td>
                         </tr>
 
                         <tr>
@@ -62,7 +62,7 @@
                                     <option>Type your own</option>
                                 </datalist>
                             </td>
-                            <td><input type="text" class="form-control" id="rateComment-3" placeholder="Example: Students 5-7 years old" v-on:input="enableInputRate4" disabled></td>
+                            <td><input type="text" class="form-control" id="rateComment-3" placeholder="Ex: Students 5-7 years old" v-on:input="enableInputRate4" disabled></td>
                         </tr>
 
                         <tr>
@@ -78,7 +78,7 @@
                                     <option>Type your own</option>
                                 </datalist>
                             </td>
-                            <td><input type="text" class="form-control" id="rateComment-4" placeholder="Example: English (rates by subject)" disabled></td>
+                            <td><input type="text" class="form-control" id="rateComment-4" placeholder="Ex: English (rates by subject)" disabled></td>
                         </tr>
                     </tbody>
                 </table>
@@ -94,7 +94,7 @@
 
             <div class="form-group">
                 <label for="additional-comment">Additional comment for rates</label>
-                <input type="text" class="form-control" id="additional-comment" placeholder="Example: Discounts available upon request">
+                <input type="text" class="form-control" id="additional-comment" placeholder="Ex: Discounts available upon request">
             </div>
 
             <div class="btn-container">
