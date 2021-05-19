@@ -4,10 +4,10 @@
         <SectionTwo id="about"/>
         <div class="container">
             <div class="section-title">
-                <h2>How Do We Help You Find Students?</h2>
+                <h2>How Do You Get More Students?</h2>
                 <div class="bar"></div>
-                <p>Tutomy is a one-stop-shop for tutors.</p>
-                <p>We give you tools to set up own website (no coding skills required!), system which directs students to learn more about you (discovery process), and converts them to your clients</p>
+                <p>By having a website to showcase your education and expertise</p>
+                <p>Build instant credibility with prospective students!</p>
             </div>
 
             <div class="row justify-content-center">

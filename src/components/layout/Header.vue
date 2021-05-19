@@ -23,7 +23,7 @@
                             </li>
 
                             <li class="nav-item">
-                                <a href="/" class="nav-link" v-scroll-to="'#solutions'">Solutions</a>
+                                <a href="/" class="nav-link" v-scroll-to="'#solutions'">Solution</a>
                             </li>
                             <li class="nav-item">
                                 <a href="/" class="nav-link" v-scroll-to="'#pricing'">Pricing</a>
