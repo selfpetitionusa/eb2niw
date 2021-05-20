@@ -12,12 +12,12 @@
                                     <div class="col-lg-9">
                                         <h1>Website for your tutoring business</h1>
                                         <h4>Set it up in 12min</h4>
-                                        <p>Thinking of setting up a tutoring website, but tools you know are hard to use or pricey?</p>
+                                        <p>Thinking of building a tutoring website, but tools you know are hard to use or pricey?</p>
 
                                         <div class="d-block d-sm-none">
-                                            <p>...we make it as easy as setting up Fb or LinkedIn profile</p>
+                                            <p>...we make it as easy as creating a Facebook or LinkedIn profile</p>
                                         </div>
-                                        <div class="d-none d-sm-block"> <p>...we make it as easy as setting up Facebook or LinkedIn profile</p></div>
+                                        <div class="d-none d-sm-block"> <p>...we make it as easy as creating a Facebook or LinkedIn profile</p></div>
 
 
                                         <p>Sign up for FREE</p>

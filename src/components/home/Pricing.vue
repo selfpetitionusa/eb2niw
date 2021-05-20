@@ -22,7 +22,7 @@
 
                         <div class="pricing-features">
                             <ul>
-                                <li class="active" style="font-weight: 600">www.tutomy.com/tutor/yourName</li>
+                                <li class="active" style="font-weight: 600">[www.yourname.tutomy.com]</li>
                                 <li class="active" style="font-weight: 600">FREE subdomain on our server</li>
                                 <li class="active">Zero-code & zero-design website template</li>
                                 <li class="active">Your website optimized to get new students</li>
@@ -48,7 +48,7 @@
 
                         <div class="pricing-features">
                             <ul>
-                                <li class="active" style="font-weight: 600">www.domainName.com</li>
+                                <li class="active" style="font-weight: 600">[www.yourname.com]</li>
                                 <li class="active" style="font-weight: 600">Your own domain</li>
                                 <li class="active">Zero-code & zero-design website template</li>
                                 <li class="active">Your website optimized to get new students</li>

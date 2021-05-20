@@ -8,8 +8,8 @@
                 <div class="bar"></div>
                 <p>Your new tutoring website.</p>
                 <p>Use the domain of your choice or our own.</p>
-                <p>We have already done design and coding work.</p>
-                <p>You can just focus on tutoring and finding students!</p>
+                <p>Coding and design work is already done,</p>
+                <p>so that you can focus on tutoring!</p>
             </div>
             <div class="row h-100 justify-content-center align-items-center">
                 <div class="col-lg-6 col-md-12">
@@ -81,7 +81,7 @@
                     </div>
 
                     <div class="section-title row" style="padding: 6rem 0 0; margin: 0px">
-                        <p>Example of website template: <a href="https://www.tutomy.com/tutor/nataliesmith" style="font-weight: 500">www.tutomy.com/tutor/nataliesmith</a></p>
+                        <p>Website example: <a href="https://www.tutomy.com/tutor/nataliesmith" style="text-decoration: underline">www.tutomy.com/tutor/nataliesmith</a></p>
                         <video controls loop class="col-lg-8 col-12" style="margin: 1.5rem auto 0rem">
                             <source src="../../assets/img/CmsRecording.mp4" type="video/mp4">
                             Your browser does not support the video tag.
