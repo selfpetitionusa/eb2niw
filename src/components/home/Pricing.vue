@@ -21,11 +21,10 @@
                         </div>
 
                         <div class="pricing-features">
-                            <ul>
-                                <li class="active" style="font-weight: 600">[www.yourname.tutomy.com]</li>
-                                <li class="active" style="font-weight: 600">FREE subdomain on our server</li>
-                                <li class="active">Zero-code & zero-design website template</li>
-                                <li class="active">Your website optimized to get new students</li>
+                            <ul style="padding: 5px">
+                                <li class="active">Website optimized to get you more students</li>
+                                <li class="active">Zero-code, zero-design website template</li>
+                                <li class="active">Subdomain on our server: <span style="color: #a7a7a7">yourname.tutomy.com</span></li>
                                 <li class="active">24h support</li>
                             </ul>
                         </div>
@@ -47,11 +46,10 @@
                         </div>
 
                         <div class="pricing-features">
-                            <ul>
-                                <li class="active" style="font-weight: 600">[www.yourname.com]</li>
-                                <li class="active" style="font-weight: 600">Your own domain</li>
-                                <li class="active">Zero-code & zero-design website template</li>
-                                <li class="active">Your website optimized to get new students</li>
+                            <ul style="padding: 5px">
+                                <li class="active">Website optimized to get you more students</li>
+                                <li class="active">Zero-code, zero-design website template</li>
+                                <li class="active">Your own domain: <span style="color: #a7a7a7">yourname.com</span></li>
                                 <li class="active">24h support</li>
                             </ul>
                         </div>
