@@ -6,6 +6,7 @@
             <div class="section-title">
                 <h2>Pricing Plans</h2>
                 <div class="bar"></div>
+                <p>Cancel monthly subscription anytime, no questions ask.</p>
             </div>
 
             <div class="row">
@@ -14,45 +15,47 @@
                         <div class="pricing-header">
                             <h3>Basic Plan</h3>
                         </div>
-                        
+
                         <div class="price">
                             <span><sup>$</sup>9<span>/Mon</span></span>
                         </div>
-                        
+
                         <div class="pricing-features">
                             <ul>
-                                <li class="active" style="font-weight: 600">FREE subdomain on our server (tutomy.com/tutor/yourname)</li>
+                                <li class="active" style="font-weight: 600">www.tutomy.com/tutor/yourName</li>
+                                <li class="active" style="font-weight: 600">FREE subdomain on our server</li>
                                 <li class="active">Zero-code & zero-design website template</li>
-                                <li class="active">Your website optimized to get more students</li>
+                                <li class="active">Your website optimized to get new students</li>
                                 <li class="active">24h support</li>
                             </ul>
                         </div>
-                        
+
                         <div class="pricing-footer">
                             <button type="submit" v-b-modal.modal-2  @click="logEvent('free')" class="btn btn-primary">Select Plan</button>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="col-lg-6 col-md-6 col-sm-6">
                     <div class="pricing-table active-plan">
                         <div class="pricing-header">
                             <h3>Tailored Plan</h3>
                         </div>
-                        
+
                         <div class="price">
                             <span><sup>$</sup>18 + domain cost <span>/Mon</span></span>
                         </div>
-                        
+
                         <div class="pricing-features">
                             <ul>
-                                <li class="active" style="font-weight: 600">Your own domain (eg. yourname.com)</li>
+                                <li class="active" style="font-weight: 600">www.domainName.com</li>
+                                <li class="active" style="font-weight: 600">Your own domain</li>
                                 <li class="active">Zero-code & zero-design website template</li>
-                                <li class="active">Your website optimized to get more students</li>
+                                <li class="active">Your website optimized to get new students</li>
                                 <li class="active">24h support</li>
                             </ul>
                         </div>
-                        
+
                         <div class="pricing-footer">
                             <button type="submit" v-b-modal.modal-2  @click="logEvent('premium')" class="btn btn-primary">Select Plan</button>
                         </div>
@@ -78,7 +81,7 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-6"><a href="mailto:ceo@tutomy.com?subject=Testing website dashboard" class="btn btn-primary mt-5 d-block mx-auto" style="text-transform:none;">3 months Free</a></div>
+                    <div class="col-6"><a href="mailto:ceo@tutomy.com?subject=Testing website dashboard" class="btn btn-primary mt-5 d-block mx-auto" style="text-transform:none;">Free Test</a></div>
                     <div class="col-6"><a href="mailto:ceo@tutomy.com?subject=Paid Plan" class="btn btn-primary mt-5 d-block mx-auto" style="text-transform:none;">Paid Plan</a></div>
                 </div>
             </div>

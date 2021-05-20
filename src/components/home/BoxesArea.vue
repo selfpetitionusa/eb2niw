@@ -6,7 +6,7 @@
             <div class="section-title">
                 <h2>How Do You Get More Students?</h2>
                 <div class="bar"></div>
-                <p>By having a website to showcase your education and expertise</p>
+                <p>By having a website to showcase your education and expertise.</p>
                 <p>Build instant credibility with prospective students!</p>
             </div>
 
@@ -25,7 +25,7 @@
                         <div class="icon">
                             <font-awesome-icon class="font-icon" icon="lightbulb" />
                         </div>
-                        <h3>Tips to succeed in online tutoring</h3>
+                        <h3>Tips on how to find students</h3>
                     </div>
                 </div>
 
@@ -34,7 +34,7 @@
                         <div class="icon">
                             <font-awesome-icon class="font-icon" icon="users" />
                         </div>
-                        <h3>Community of tutor entrepreneurs like you</h3>
+                        <h3>Community of tutors like you</h3>
                     </div>
                 </div>
             </div>

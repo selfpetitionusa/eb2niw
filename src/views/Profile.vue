@@ -1,6 +1,6 @@
 <template>
 
-    <div class="d-flex">
+    <div class="dflex">
         <div :id="response.profile.token" v-if="response.profile.token" v-show="false"></div>
 
 
@@ -323,7 +323,7 @@
     </div>       <!-- right-section -->
     </div>       <!-- right-left-section-split -->
     </div>       <!-- tu-container -->
-    </div>       <!-- d-flex -->
+    </div>       <!-- dflex -->
 
 </template>
 

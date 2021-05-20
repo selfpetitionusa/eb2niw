@@ -48,7 +48,7 @@
                                                                   <p style="color: #6084a4; font-size: 13px">We are <span style="font-weight: bold; text-decoration: underline;">looking for 20 tutors</span> to test our new website dashboard.</p>
                                                                   <p style="color: #6084a4; font-size: 13px; margin-bottom: 0px;">Get FREE website for 3 months.</p>
                                                                   <p style="color: #6084a4; font-size: 13px; margin-bottom: 0px;">Contact us for details.</p>
-                                                                  <a href="mailto:ceo@tutomy.com?subject=Testing website dashboard" class="btn btn-primary mt-5 d-block mx-auto" style="text-transform:none;">Claim VIP access</a>
+                                                                  <a href="mailto:ceo@tutomy.com?subject=Testing website dashboard" class="btn btn-primary mt-5 d-block mx-auto" style="text-transform:none;">Claim VIP Access</a>
                                                                 </div>
                                                                 <div class="col-4">
                                                                     <img src="../../assets/img/survey.svg" alt="video-pic">
@@ -61,7 +61,7 @@
                                                           <p style="color: #6084a4; font-size: 13px; margin-bottom: 0px;">Contact us for details.</p>
                                                             <div class="row">
                                                                 <div class="col-8 align-self-end">
-                                                                      <a href="mailto:ceo@tutomy.com?subject=Testing website dashboard" class="btn btn-primary mt-5 d-block mx-auto" style="text-transform:none;">Claim VIP access</a>
+                                                                      <a href="mailto:ceo@tutomy.com?subject=Testing website dashboard" class="btn btn-primary mt-5 d-block mx-auto" style="text-transform:none;">Claim VIP Access</a>
                                                                 </div>
                                                                 <div class="col-4">
                                                                     <img src="../../assets/img/survey.svg" alt="video-pic">

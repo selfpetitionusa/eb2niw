@@ -4,10 +4,10 @@
         <SectionThree id="solutions"/>
         <div class="container">
             <div class="section-title">
-                <h2>Our solution</h2>
+                <h2>Our solutions</h2>
                 <div class="bar"></div>
                 <p>Your new tutoring website.</p>
-                <p>Use the domain of your choice, or our own.</p>
+                <p>Use the domain of your choice or our own.</p>
                 <p>We have already done design and coding work.</p>
                 <p>You can just focus on tutoring and finding students!</p>
             </div>
@@ -30,20 +30,20 @@
 
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="box">
-                                    <feather type="code"></feather> Template to set up website in 12 minutes
+                                    <feather type="code"></feather> Template to set up the website in 12 minutes
                                 </div>
                             </div>
 
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="box">
-                                    <feather type="credit-card"></feather> We can set up domain of your choice
+                                    <feather type="credit-card"></feather> We can set up a domain of your choice
                                 </div>
                             </div>
 
 
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="box">
-                                    <feather type="calendar"></feather> Collect your payments from students <br>  **coming soon
+                                    <feather type="calendar"></feather> Collect your payments from students **coming soon
                                 </div>
                             </div>
                             </div>
@@ -71,15 +71,23 @@
 
                                 <div class="col-lg-6 col-md-6 col-sm-6">
                                     <div class="box">
-                                        <feather type="credit-card"></feather> Collect payments <br>  **coming soon
+                                        <feather type="credit-card"></feather> Collect payments **coming soon
                                     </div>
                                 </div>
 
 
                             </div>
                         </div>
-
                     </div>
+
+                    <div class="section-title row" style="padding: 6rem 0 0; margin: 0px">
+                        <p>Example of website template: <a href="https://www.tutomy.com/tutor/nataliesmith" style="font-weight: 500">www.tutomy.com/tutor/nataliesmith</a></p>
+                        <video controls loop class="col-lg-8 col-12" style="margin: 1.5rem auto 0rem">
+                            <source src="../../assets/img/CmsRecording.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+
                 </div>
             </div>
     </section>
