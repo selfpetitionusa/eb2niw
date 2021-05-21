@@ -12,10 +12,10 @@ export default {
   },
   metaInfo() {
     return {
-      title: "Tutomy - Software tools for tutors",
+      title: "Tutomy - Website for your tutoring business",
       meta: [
-        { vmid: 'description', name: 'description', content:  'Tutomy is a one-stop-shop for tutors. We give you tools to set up own website (no coding skills required!), system which directs students to learn more about you (discovery process), and converts them to your clients'},
-        { vmid: 'ogtitle', property: 'og:title', content: "Tutomy - Software tools for tutors"},
+        { vmid: 'description', name: 'description', content:  'Your new tutoring website - no coding or design skills required! Use the domain of your choice or our own. As easy as creating a Facebook or LinkedIn profile, so that you can focus on teaching.'},
+        { vmid: 'ogtitle', property: 'og:title', content: "Tutomy - Website for your tutoring business"},
         { vmid: 'ogsite', property: 'og:site_name', content: 'Tutomy'},
         { vmid: 'ogtype', property: 'og:type', content: 'website'},
         { vmid: 'ogimage1', property: 'og:image', content: `https://www.tutomy.com/thumbnail.png`}
