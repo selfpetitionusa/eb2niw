@@ -1,61 +1,80 @@
 <template>
 
-    <b-modal static id="education-modal" title="Schools and certificates" hide-footer>
-        <form id="education-popup" class="cms">
-            <div class="form-title">
-                <p class="first">What? Who? Where do you tutor?</p>
-            </div>
-
-            <div class="form-group">
-                <label for="headline">Headline *</label>
-                <input type="text" class="form-control" id="headline" placeholder="Example: Math tutor for 1-12th grade in San Francisco" required>
-            </div>
-
-            <div class="form-title">
-                <p>Your education and qualifications</p>
-            </div>
-
-            <div id="schools" v-for="school in schools" :key="school.id">
-                <div class="form-group">
-                    <label for="school">University or school *</label>
-                    <input type="text" class="form-control" id="school" placeholder="Example: Ohio University" v-model="school.school" required>
+    <b-modal @show="initModal"  id="education-modal" title="Schools and certificates" hide-footer>
+        <div v-if="alert.failed" :class="`alert ${alert.type}`">{{alert.message}}</div>
+        <ValidationObserver ref="form">
+            <form id="education-popup" class="cms" @submit.prevent="saveForm" novalidate>
+                <div class="form-title">
+                    <p class="first">What? Who? Where do you tutor?</p>
                 </div>
 
                 <div class="form-group">
-                    <label for="degree">Degree and field of study *</label>
-                    <input type="text" class="form-control" id="degree" placeholder="Example: BS Applied Mathematics" v-model="school.degree" required>
-                </div>
-            </div>
-
-            <div class="plus-minus">
-                <font-awesome-icon class="icon" icon="plus-circle" v-bind:class="[isActiveSchoolPlus ? 'active' : 'disabled']" v-on:click="addSchool" />
-                <font-awesome-icon class="icon" icon="minus-circle" v-bind:class="[isActiveSchoolMinus ? 'active' : 'disabled']" v-on:click="deleteSchool"/>
-            </div>
-            <p class="plus-minus-comment">University / School</p>
-
-            <div id="certificates" v-for="certificate in certificates" :key="certificate.id">
-                <div class="form-group">
-                    <label for="certificate">Certificate</label>
-                    <input type="text" class="form-control" id="certificate" v-model="certificate.certificate" v-on:change="descIsRequired" placeholder="Example: ATA Tutor">
+                    <label for="headline">Headline *</label>
+                    <ValidationProvider rules="required" v-slot="{ errors }" >
+                        <input type="text" class="form-control" id="headline" v-model="data.headline"  placeholder="Example: Math tutor for 1-12th grade in San Francisco"  :class="{ 'is-invalid': submitted && errors.length }" >
+                        <div v-if="submitted && errors.length" class="invalid-feedback">Headline is required</div>
+                    </ValidationProvider>
                 </div>
 
-                <div class="form-group">
-                    <label for="certDesc">Certificate description</label>
-                    <input type="text" class="form-control" id="certDesc" v-model="certificate.certDesc" placeholder="Example: American Tutoring Association">
+                <div class="form-title">
+                    <p>Your education and qualifications</p>
                 </div>
-            </div>
 
-            <div class="plus-minus">
-                <font-awesome-icon class="icon" icon="plus-circle" v-bind:class="[isActiveCertificatePlus ? 'active' : 'disabled']" v-on:click="addCertificate" />
-                <font-awesome-icon class="icon" icon="minus-circle" v-bind:class="[isActiveCertificateMinus ? 'active' : 'disabled']" v-on:click="deleteCertificate" />
-            </div>
-            <p class="plus-minus-comment">Certificate</p>
+                <div id="schools" v-for="school in data.schools" :key="school.id">
+                    <div class="form-group">
+                        <label for="school">University or school *</label>
+                        <ValidationProvider rules="required" v-slot="{ errors }" >
+                            <input type="text" class="form-control" id="school" placeholder="Example: Ohio University" v-model="school.label" :class="{ 'is-invalid':  submitted && errors.length }">
+                            <div v-if="submitted && errors.length" class="invalid-feedback">University or school is required</div>
+                        </ValidationProvider>
+                    </div>
 
-            <div class="btn-container">
-                <a class="btn btn-primary btn-border btn-cancel" @click="$bvModal.hide('education-modal')">Cancel</a>
-                <button type="submit" class="btn btn-primary btn-border btn-save">Save</button>
-            </div>
-        </form>
+                    <div class="form-group">
+                        <label for="school-label"> >Degree and field of study *</label>
+                        <ValidationProvider rules="required" v-slot="{ errors }" >
+                            <input type="text" class="form-control" id="school-label" placeholder="Example: BS Applied Mathematics" v-model="school.value" :class="{ 'is-invalid':  submitted && errors.length }">
+                            <div v-if="submitted && errors.length" class="invalid-feedback">Degree and field of study is required</div>
+                        </ValidationProvider>
+                    </div>
+                </div>
+
+                <div class="plus-minus">
+                    <font-awesome-icon class="icon" icon="plus-circle" v-bind:class="[isActiveSchoolPlus ? 'active' : 'disabled']" v-on:click="addSchool" />
+                    <font-awesome-icon class="icon" icon="minus-circle" v-bind:class="[isActiveSchoolMinus ? 'active' : 'disabled']" v-on:click="deleteSchool"/>
+                </div>
+                <p class="plus-minus-comment">University / School</p>
+
+                <div id="certificates" v-for="certificate in data.certificates" :key="certificate.id">
+                    <div class="form-group">
+                        <label for="certificate">Certificate</label>
+                        <ValidationProvider rules="required" v-slot="{ errors }" >
+                            <input type="text" class="form-control" id="certificate" v-model="certificate.label" placeholder="Example: ATA Tutor" :class="{ 'is-invalid':  submitted && errors.length }">
+                            <div v-if="submitted && errors.length" class="invalid-feedback">Degree and field of study is required</div>
+                        </ValidationProvider>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="certDesc">Certificate description</label>
+                        <ValidationProvider rules="required" v-slot="{ errors }" >
+                            <input type="text" class="form-control" id="certDesc" v-model="certificate.value" placeholder="Example: American Tutoring Association" :class="{ 'is-invalid':  submitted && errors.length }">
+                            <div v-if="submitted && errors.length" class="invalid-feedback">Degree and field of study is required</div>
+                        </ValidationProvider>
+                    </div>
+                </div>
+
+                <div class="plus-minus">
+                    <font-awesome-icon class="icon" icon="plus-circle" v-bind:class="[isActiveCertificatePlus ? 'active' : 'disabled']" v-on:click="addCertificate" />
+                    <font-awesome-icon class="icon" icon="minus-circle" v-bind:class="[isActiveCertificateMinus ? 'active' : 'disabled']" v-on:click="deleteCertificate" />
+                </div>
+                <p class="plus-minus-comment">Certificate</p>
+
+                <div class="btn-container">
+                    <a class="btn btn-primary btn-border btn-cancel" @click="$bvModal.hide('education-modal')">Cancel</a>
+                    <button type="submit" class="btn btn-primary btn-border btn-save">Save</button>
+                </div>
+            </form>
+        </ValidationObserver>
+
     </b-modal>
 
 </template>
@@ -65,81 +84,96 @@
 
 <script>
 
+    import {mapActions, mapState} from "vuex";
+
   export default {
       data() {
           return {
-              schools: [{
-                  school: "",
-                  degree: ""
-              }],
-              certificates: [{
-                  certificate: "",
-                  certDesc: ""
-              }],
-              schoolsNumber: 1,
-              certificatesNumber: 1,
-              isActiveSchoolPlus: true,
-              isActiveSchoolMinus: true,
-              isActiveCertificatePlus: true,
-              isActiveCertificateMinus: true
+              sumitted: false,
+              data: {
+                  schools: [],
+                  certificates: []
+              }
+          }
+      },
+      watch: {
+          'account.status': function (val) {
+              if(val.updatedEducationFormInfo)
+                  this.$bvModal.hide('education-modal');
+          }
+      },
+      props: ['profileProp'],
+      computed: {
+          ...mapState({
+              alert: state => state.alert,
+              account: state => state.account
+          }),
+          isActiveSchoolMinus: function () {
+              return this.data.schools.length > 1;
+          },
+          isActiveSchoolPlus: function () {
+              return this.data.schools.length < 3;
+          },
+          isActiveCertificateMinus: function () {
+              return this.data.certificates.length > 0;
+          },
+          isActiveCertificatePlus: function () {
+              return this.data.certificates.length < 3;
           }
       },
       methods: {
+          ...mapActions('account', ['updateEducationInfo']),
+          ...mapActions('alert', ['clear']),
+          initModal() {
+              this.submitted = false;
+              this.data = {
+                  headline: this.profileProp.profile.headline,
+                  schools: JSON.parse(JSON.stringify(this.profileProp.schools)),
+                  certificates: JSON.parse(JSON.stringify(this.profileProp.certificates))
+              };
+              if(this.data.schools.length === 0)
+                  this.addSchool();
+              this.clear();
+
+          },
           addSchool: function() {
-              if(this.schoolsNumber < 3) {
-                  this.schools.push({
-                      school: "",
-                      degree: ""
+              if(this.data.schools.length < 3) {
+                  this.data.schools.push({
+                      id: Date.now(),
+                      label: "",
+                      value: ""
                   });
-                  this.isActiveSchoolMinus = true;
-                  this.schoolsNumber++;
-              }
-              if(this.schoolsNumber === 3) {
-                  this.isActiveSchoolPlus = false;
               }
           },
           deleteSchool: function() {
-              if(this.schoolsNumber > 1) {
-                  this.schools.pop();
-                  this.isActiveSchoolPlus = true;
-                  this.schoolsNumber--;
-              }
-              if(this.schoolsNumber === 1) {
-                  this.isActiveSchoolMinus = false;
+              if(this.data.schools.length > 1) {
+                  this.data.schools.pop();
               }
           },
           addCertificate: function() {
-              if(this.certificatesNumber < 3) {
-                  this.certificates.push({
-                      certificate: "",
-                      certDesc: ""
+              if(this.data.certificates.length < 3) {
+                  console.log(Date.now());
+                  this.data.certificates.push({
+                      id: Date.now(),
+                      label: "",
+                      value: ""
                   });
-                  this.isActiveCertificateMinus = true;
-                  this.certificatesNumber++;
-              }
-              if(this.certificatesNumber === 3) {
-                  this.isActiveCertificatePlus = false;
               }
           },
           deleteCertificate: function() {
-              if(this.certificatesNumber > 1) {
-                  this.certificates.pop();
-                  this.isActiveCertificatePlus = true;
-                  this.certificatesNumber--;
-              }
-              if(this.certificatesNumber === 1) {
-                  this.isActiveCertificateMinus = false;
+              if(this.data.certificates.length  > 0) {
+                  this.data.certificates.pop();
               }
           },
-          descIsRequired: function() {
-              let x= document.getElementById('certDesc');
-              let y= document.getElementById('certificate');
+          saveForm(){
+              this.submitted = true;
+              this.$refs.form.validate().then(success => {
+                  if (!success) {
+                      return;
+                  }
+                  this.updateEducationInfo(this.data);
+              });
 
-              if(y.value.length !== 0){
-                  x.setAttribute('required', "");
-              } else {
-                  x.removeAttribute('required');
-              }
           }
       }
   }

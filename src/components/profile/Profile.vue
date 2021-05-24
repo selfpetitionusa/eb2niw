@@ -50,7 +50,7 @@
 
                 <div :class="[cmsToggle && 'cms-frame']">
                     <div v-if="cmsToggle">
-                        <NamePopup></NamePopup>
+                        <NamePopup v-bind:profileProp="response"></NamePopup>
                         <a href="#" v-b-modal.name-modal class="edit outer">
                             <font-awesome-icon icon="edit" />
                         </a>
@@ -85,7 +85,7 @@
 
                     <div class="social-links" :class="[cmsToggle && 'cms-frame inner-frame']">
                         <div v-if="cmsToggle">
-                            <LinksPopup></LinksPopup>
+                            <LinksPopup v-bind:profileProp="response" ></LinksPopup>
                             <a href="#" class="edit" v-b-modal.links-modal>
                                 <font-awesome-icon icon="edit" />
                             </a>
@@ -133,7 +133,7 @@
             <div id="section-about-me" class="tu-card">
                 <div :class="[cmsToggle && 'cms-frame tu-card-frame']">
                     <div v-if="cmsToggle">
-                        <EducationPopup></EducationPopup>
+                        <EducationPopup v-bind:profileProp="response"></EducationPopup>
                         <a href="#" class="edit" v-b-modal.education-modal>
                             <font-awesome-icon icon="edit" />
                         </a>
@@ -196,7 +196,7 @@
 
                 <div class="bio" :class="[cmsToggle && 'cms-frame tu-card-frame']">
                     <div v-if="cmsToggle">
-                        <BioPopup></BioPopup>
+                        <BioPopup v-bind:profileProp="response" ></BioPopup>
                         <a href="#" class="edit" v-b-modal.bio-modal>
                             <font-awesome-icon icon="edit" />
                         </a>

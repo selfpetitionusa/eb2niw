@@ -36,14 +36,11 @@ const actions = {
     },
     uploadImage({ dispatch, commit }, {image, sex}) {
         commit('uploadImageRequest');
-        console.log(sex);
-        console.log(image);
         return userService.uploadImage(image, sex).then(
             (profile) => {
                 commit('getProfileSuccess', profile);
                 commit('uploadImageSuccess');
                 setTimeout(() => {
-                    // display success message after route change completes
                     dispatch('alert/success', 'Image Saved', { root: true });
                 })
             },
@@ -53,9 +50,72 @@ const actions = {
             }
         );
     },
+    updateNameInfo({ dispatch, commit }, {firstName, lastName, email, shortBio}) {
+        commit('updateNameInfoRequest');
+        return userService.updateNameInfo(firstName, lastName, email, shortBio).then(
+            (profile) => {
+                commit('getProfileSuccess', profile);
+                commit('updateNameInfoSuccess');
+                setTimeout(() => {
+                    dispatch('alert/success', 'Name information Saved', { root: true });
+                })
+            },
+            () => {
+                commit('updateNameInfoFailure');
+                dispatch('alert/error',  'Failed to update data', { root: true });
+            }
+        );
+    },
+    updateLinksInfo({ dispatch, commit }, {instagram, youtube, linkedin, facebook}) {
+        commit('updateLinksInfoRequest');
+        return userService.updateLinksInfo(instagram, youtube, linkedin, facebook).then(
+            (profile) => {
+                commit('getProfileSuccess', profile);
+                commit('updateLinksInfoSuccess');
+                setTimeout(() => {
+                    dispatch('alert/success', 'Links information Saved', { root: true });
+                })
+            },
+            () => {
+                commit('updateLinksInfoFailure');
+                dispatch('alert/error',  'Failed to update data', { root: true });
+            }
+        );
+    },
+    updateEducationInfo({ dispatch, commit }, educationInfo) {
+        commit('updateEducationInfoRequest');
+        return userService.updateEducationInfo(educationInfo).then(
+            (profile) => {
+                commit('getProfileSuccess', profile);
+                commit('updateEducationInfoSuccess');
+                setTimeout(() => {
+                    dispatch('alert/success', 'Education information Saved', { root: true });
+                })
+            },
+            () => {
+                commit('updateEducationInfoFailure');
+                dispatch('alert/error',  'Failed to update data', { root: true });
+            }
+        );
+    },
+    updateBio({ dispatch, commit }, bio) {
+        commit('updateBioRequest');
+        return userService.updateBio(bio).then(
+            (profile) => {
+                commit('getProfileSuccess', profile);
+                commit('updateBioSuccess');
+                setTimeout(() => {
+                    dispatch('alert/success', 'Bio Saved', { root: true });
+                })
+            },
+            () => {
+                commit('updateBioFailure');
+                dispatch('alert/error',  'Failed to update data', { root: true });
+            }
+        );
+    },
     register({ dispatch, commit }, user) {
         commit('registerRequest', user);
-
         userService.register(user)
             .then(
                 user => {
@@ -101,7 +161,6 @@ const mutations = {
         state.status = {};
     },
     getProfileSuccess(state, profile) {
-        console.log('elo')
         state.profile = profile;
     },
     uploadImageRequest(state) {
@@ -110,7 +169,43 @@ const mutations = {
     uploadImageSuccess(state) {
         state.status = { uploadedImage: true };
     },
+    updateNameInfoRequest(state) {
+        state.status = { updatingNameInfo: true };
+    },
     uploadImageFailure(state) {
+        state.status = {};
+    },
+    updateNameInfoSuccess(state) {
+        state.status = { updatedNameFormInfo: true };
+    },
+    updateNameInfoFailure(state) {
+        state.status = {};
+    },
+    updateLinksInfoRequest(state) {
+        state.status = { updatingLinksInfo: true };
+    },
+    updateLinksInfoSuccess(state) {
+        state.status = { updatedLinksFormInfo: true };
+    },
+    updateLinksInfoFailure(state) {
+        state.status = {};
+    },
+    updateEducationInfoRequest(state) {
+        state.status = { updatingEducationInfo: true };
+    },
+    updateEducationInfoSuccess(state) {
+        state.status = { updatedEducationFormInfo: true };
+    },
+    updateEducationInfoFailure(state) {
+        state.status = {};
+    },
+    updateBioRequest(state) {
+        state.status = { updatingBio: true };
+    },
+    updateBioSuccess(state) {
+        state.status = { updatedBio: true };
+    },
+    updateBioFailure(state) {
         state.status = {};
     }
 };

@@ -14,8 +14,11 @@ import VueMeta from 'vue-meta'
 import VueCroppie from 'vue-croppie';
 import 'croppie/croppie.css' // import the croppie css manually
 
-Vue.config.productionTip = false;
 
+import './validation/validation.js'
+
+
+Vue.config.productionTip = false;
 
 
 library.add(fas)
@@ -24,6 +27,7 @@ Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.use(VueScrollTo,  {
   offset: -92,
 });
+
 
 Vue.use(BootstrapVue);
 Vue.use(VueFeather);
