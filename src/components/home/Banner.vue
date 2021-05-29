@@ -10,14 +10,14 @@
                             <div class="hero-content">
                                 <div class="row">
                                     <div class="col-lg-9">
-                                        <h1>Helping you find students</h1>
-                                        <h4>Software tools for tutors</h4>
-                                        <p>Thinking of setting up a tutoring business, but finding your first customers is a big challenge?</p>
+                                        <h1>Website for your tutoring business</h1>
+                                        <h4>Set it up in 12min</h4>
+                                        <p>Thinking of building a tutoring website, but tools you know are hard to use or pricey?</p>
 
                                         <div class="d-block d-sm-none">
-                                            <p>...or maybe you are a tutor already, and looking for new students takes way too much effort?</p>
+                                            <p>...we make it as easy as creating a Facebook or LinkedIn profile</p>
                                         </div>
-                                        <div class="d-none d-sm-block"> <p> ...or maybe you are a tutor already, and looking for new students takes way too much effort?</p></div>
+                                        <div class="d-none d-sm-block"> <p>...we make it as easy as creating a Facebook or LinkedIn profile</p></div>
 
 
                                         <p>Sign up for FREE</p>
@@ -41,7 +41,6 @@
                                                 <b-modal ref="modal-1"  style="border-radius: 30px" :return-focus="this.$parent" hide-footer hide-header >
                                                     <div class="mt-2">
 
-                                                        <p style="color: #6084a4; font-size: medium">You are now on the waitlist</p>
                                                         <p style="color: #0e314c; font-size: medium;font-weight: bold">How about VIP access for free?</p>
                                                         <div class="d-none d-sm-block">
                                                             <div class="row">
@@ -49,7 +48,7 @@
                                                                   <p style="color: #6084a4; font-size: 13px">We are <span style="font-weight: bold; text-decoration: underline;">looking for 20 tutors</span> to test our new website dashboard.</p>
                                                                   <p style="color: #6084a4; font-size: 13px; margin-bottom: 0px;">Get FREE website for 3 months.</p>
                                                                   <p style="color: #6084a4; font-size: 13px; margin-bottom: 0px;">Contact us for details.</p>
-                                                                  <a href="mailto:ceo@tutomy.com?subject=Testing website dashboard" class="btn btn-primary mt-5 d-block mx-auto" style="text-transform:none;">Claim VIP access</a>
+                                                                  <a href="mailto:ceo@tutomy.com?subject=Testing website dashboard" class="btn btn-primary mt-5 d-block mx-auto" style="text-transform:none;">Claim VIP Access</a>
                                                                 </div>
                                                                 <div class="col-4">
                                                                     <img src="../../assets/img/survey.svg" alt="video-pic">
@@ -62,7 +61,7 @@
                                                           <p style="color: #6084a4; font-size: 13px; margin-bottom: 0px;">Contact us for details.</p>
                                                             <div class="row">
                                                                 <div class="col-8 align-self-end">
-                                                                      <a href="mailto:ceo@tutomy.com?subject=Testing website dashboard" class="btn btn-primary mt-5 d-block mx-auto" style="text-transform:none;">Claim VIP access</a>
+                                                                      <a href="mailto:ceo@tutomy.com?subject=Testing website dashboard" class="btn btn-primary mt-5 d-block mx-auto" style="text-transform:none;">Claim VIP Access</a>
                                                                 </div>
                                                                 <div class="col-4">
                                                                     <img src="../../assets/img/survey.svg" alt="video-pic">

@@ -470,7 +470,7 @@
     </div>       <!-- right-section -->
     </div>       <!-- right-left-section-split -->
     </div>       <!-- tu-container -->
-    </div>       <!-- d-flex -->
+    </div>       <!-- dflex -->
 
 </template>
 
