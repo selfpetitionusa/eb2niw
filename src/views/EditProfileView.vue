@@ -1,18 +1,25 @@
 <template>
     <div>
+        <CmsNav v-bind:previewToggleProp="true"></CmsNav>
         <div v-if="alert.failed === false" :class="`alert ${alert.type}`">{{alert.message}}</div>
         <Profile  v-if="account.profile"  v-bind:cmsToggleProp="true" v-bind:profileProp="account.profile" ></Profile>
     </div>
+
 </template>
 
 
 <script>
-    import Profile from "../components/profile/Profile";
 
-    import { mapState, mapActions } from 'vuex'
+
+  import Profile from "../components/profile/Profile";
+  import CmsNav from "../components/profile/section/CmsNav";
+  import { mapState, mapActions } from 'vuex'
 
     export default {
-        components: {Profile},
+        components: {
+            Profile,
+            CmsNav
+        },
         computed: {
             ...mapState({
                 account: state => state.account,
@@ -26,6 +33,6 @@
             const token = null;
             const userId = this.account.user.id;
             this.getProfile({userId, token})
-        },
+        }
     };
 </script>

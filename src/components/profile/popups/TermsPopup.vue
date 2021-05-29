@@ -17,7 +17,7 @@
                 </div>
 
                 <div class="term-container">
-                    <small id="in-person-help" class="form-text text-muted">Example: San Francisco area, within 10 miles</small>
+                    <small id="in-person-help" class="form-text text-muted">Ex: San Francisco area, within 10 miles</small>
                     <div class="custom-control custom-switch form-group terms-switch">
                         <span>In-person lessons:</span>
                         <div>
@@ -29,7 +29,7 @@
                 </div>
 
                 <div class="term-container">
-                    <small id="consultation-help" class="form-text text-muted">Example: 20min level assessment and lesson trial</small>
+                    <small id="consultation-help" class="form-text text-muted">Ex: 20min level assessment and lesson trial</small>
                     <div class="custom-control custom-switch form-group terms-switch">
                         <span>Free consultation:</span>
                         <div>

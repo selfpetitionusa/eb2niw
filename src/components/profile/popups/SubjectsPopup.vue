@@ -1,11 +1,10 @@
 <template>
-
     <b-modal @show="initModal"  id="subjects-modal" title="What do you teach" hide-footer>
         <div v-if="alert.failed" :class="`alert ${alert.type}`">{{alert.message}}</div>
         <ValidationObserver ref="form">
             <form id="subjects-popup" class="cms" @submit.prevent="saveForm" novalidate>
                 <div class="form-title">
-                    <p>Add minimum 1 subject and 1 category for each subject</p>
+                    <p>Add minimum 1 subject and 1{{'\xa0'}}category for each subject</p>
                 </div>
 
                 <div id="subjects" v-for="subject in data.subjects" :key="subject.id" >

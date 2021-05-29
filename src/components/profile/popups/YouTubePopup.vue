@@ -9,7 +9,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="youtube">Video - for example link to your YouTube video</label>
+                    <label for="youtube">Example: link to your YouTube video</label>
                     <ValidationProvider rules="url" v-slot="{ errors }" >
                         <input type="text" class="form-control" id="youtube" v-model="data.youtubeIntroLink" placeholder="https://www.youtube.com/YOUR-VIDEO" :class="{ 'is-invalid': submitted && errors.length }">
                         <div v-if="submitted && errors.length" class="invalid-feedback">Url has wrong format</div>
@@ -22,7 +22,6 @@
                     <button type="submit" class="btn btn-primary btn-border btn-save">Save</button>
                 </div>
             </form>
-
         </ValidationObserver>
     </b-modal>
 

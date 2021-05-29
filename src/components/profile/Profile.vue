@@ -1,6 +1,6 @@
 <template>
 
-    <div class="d-flex">
+    <div class="dflex">
         <div :id="response.profile.token" v-if="response.profile.token" v-show="false"></div>
 
 <!-- HAMBURGER MENU -->
@@ -23,11 +23,6 @@
 
     <div class="background-rectangular"></div>
     <div id="tu-container" class="tu-container">
-
-    <div v-if="cmsToggle" class="preview">
-      <button type="submit" class="btn btn-primary btn-preview">Preview</button>
-    </div>
-
     <div class="row website-split">
 
 
@@ -316,7 +311,7 @@
 <!-- TERMS -->
 
                 <div class="terms-container">
-                    <div class="terms">
+                    <div class="terms frame-terms">
                         <div v-if="cmsToggle">
                             <TermsPopup v-bind:profileProp="response"></TermsPopup>
                             <a href="#" class="edit edit-terms" v-b-modal.terms-modal>

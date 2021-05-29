@@ -15,7 +15,7 @@
                                 <th class="col1">Currency*</th>
                                 <th class="col2">Rate*</th>
                                 <th class="col3">Session type*</th>
-                                <th class="col4">Rate comment</th>
+                                <th class="col4">Comment</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -43,7 +43,7 @@
                                         <option>Type your own</option>
                                     </datalist>
                                 </td>
-                                <td><input type="text" class="form-control"  v-model="rate.commentBottom" id="rateComment-1" placeholder="Example: Rates starting from"></td>
+                                <td><input type="text" class="form-control"  v-model="rate.commentBottom" id="rateComment-1" placeholder="Ex: Rates starting from"></td>
                             </tr>
                         </tbody>
                     </table>

@@ -2418,7 +2418,12 @@ Go Top CSS
 }
 
 .modal-dialog {
-    margin: 30px auto 20px auto;
+    margin: 5rem auto 0.5rem auto;
+    padding: 0 0.5rem;
+}
+
+.modal-title {
+    font-size: 18px;
 }
 
 .modal-content {
@@ -2468,7 +2473,7 @@ body {
     margin-top: 1px;
 }
 
-.d-flex {
+.dflex {
     position: relative;
     overflow-x: hidden;
     width: 100%;
@@ -2477,7 +2482,7 @@ body {
 }
 
     @media (max-width: 767px) {
-        .d-flex {
+        .dflex {
             background: linear-gradient(244.35deg, #314194 37.33%, #3B4DAB 43.75%, #5457C1 50.17%, #6B6FEA 76.06%);
         }
     }
@@ -2899,6 +2904,7 @@ h2.lastname {
 
         &:hover, &:focus, &:active {
             background-color: #5457C1;
+            box-shadow: 0 13px 27px 0 rgba(68, 206, 111, .25);
         }
     }
 }
@@ -3657,6 +3663,52 @@ Tutomy logo
     }
 }
 
+/*================================================
+CMS navbars
+=================================================*/
+
+.nav-cms {
+    margin-bottom: 50px;
+
+    #header {
+        &.headroom {
+            background-color: #2F2E40;
+
+            &.is-sticky {
+                background-color: #2F2E40 !important;
+            }
+
+            .nav-item {
+                a {
+                    color: #D0CDDF;
+                    font: {
+                        weight: 500;
+                        size: 15px;
+                    }
+                    &:hover, &:focus, &.active {
+                        color: $light-green-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .nav-cms {
+        nav .navbar-nav {
+            background-color: #3d3c4e;
+            height: 150px;
+            border-radius: 5px;
+        }
+
+        .navbar-toggler {
+            .navbar-toggler-icon {
+                background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(208, 205, 223)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+            }
+        }
+    }
+}
 
 /*================================================
 Pop-ups & CMS
@@ -3700,7 +3752,7 @@ Pop-ups & CMS
     }
 
     .subject-cat {
-        padding-left: 25px;
+        padding-left: 15px;
 
         .form-control {
             margin-bottom: 5px;
@@ -3712,7 +3764,13 @@ Pop-ups & CMS
     }
 }
 
-.login, .register {
+    @media (max-width: 450px) {
+        .cms {
+            margin: 0px;
+        }
+    }
+
+.login, .register, .support {
     h2 {
         margin-bottom: 2rem;
     }
@@ -3729,6 +3787,49 @@ Pop-ups & CMS
             margin-left: 1px;
             font-size: 14px;
             font-weight: 400;
+        }
+    }
+}
+
+.account {
+    margin: 7rem auto 1rem;
+
+    .form-control {
+        border-radius: 5px;
+
+        &::placeholder {
+            color: #0E314C;
+            font-weight: 500;
+        }
+
+        &:hover {
+            border-width: 2px;
+        }
+    }
+
+    input {
+        color: #0E314C;
+        font-weight: 500;
+
+        &:focus {
+            color: #0E314C;
+            font-weight: 500;
+        }
+    }
+
+    .form-group label {
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    .pswreset {
+        margin-top: 3rem;
+
+        .form-group {
+            label {
+                margin-bottom: 2px;
+                margin-top: 0.5rem;
+            }
         }
     }
 }
@@ -3774,6 +3875,12 @@ Pop-ups & CMS
 .cms-photo {
     height: 15rem;
     background-color: black;
+}
+
+.avatar {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
 }
 
 .zoom-container {
@@ -3873,6 +3980,15 @@ input[type="range"]::-ms-fill-upper {
     display: flex;
     justify-content: flex-end;
     margin: 2.5rem 0 1rem;
+
+    img {
+        position: absolute;
+        right: 0px;
+        top: 18px;
+        margin: 0px 12px;
+        height: 15px;
+        width: 15px;
+    }
 }
 
 .btn-border {
@@ -3906,7 +4022,7 @@ input[type="range"]::-ms-fill-upper {
     margin-right: 20px;
     box-shadow: 0 13px 27px 0 rgba(84, 87, 193, .15);
 
-    &:hover {
+    &:hover, &:focus, &:active {
         color: $white-color;
         box-shadow: 0 13px 27px 0 rgba(84, 87, 193, .25);
     }
@@ -3920,28 +4036,26 @@ input[type="range"]::-ms-fill-upper {
     width: 9rem;
 }
 
-.preview {
-    display: flex;
-    justify-content: center;
+.btn-preview {
+    background-color: $light-green-color;
+    padding: 10px 30px;
+    margin: 5px 15px;
+    box-shadow: 0 13px 27px 0 rgba(68, 206, 111, 0.25);
 
-    .btn-preview {
-        position: absolute;
-        top: 4%;
-        background-color: $light-green-color;
+    &:hover, &:focus, &:active {
+        box-shadow: 0 13px 27px 0 rgba(84, 87, 193, 0.25);
+    }
 
-        &::after, &::before {
-            background-color: #DF7870;
-        }
-
-        &:hover, &:focus, &:active {
-            background-color: #5457C1;
-        }
-
-        &.focus, &:focus {
-            background-color: #5457C1;
-        }
+    &::after, &::before {
+        background-color: #5457C1;
     }
 }
+
+    @media (max-width: 320px) {
+        .btn-preview {
+            margin: 5px 0px;
+        }
+    }
 
 
 #links-popup {
@@ -3966,7 +4080,9 @@ input[type="range"]::-ms-fill-upper {
         border-radius: 50%;
 
         i {
-            width: 20px;
+            padding: 5px;
+            display: flex;
+            justify-content: center;
         }
     }
 
@@ -4057,8 +4173,12 @@ input#question {
         align-items: center;
         margin: 5px 0px;
 
+        .form-inline {
+            width: 100%;
+        }
+
         .item {
-            margin: 0 5px;
+            margin: 0 2px;
             font-size: 14px;
         }
     }
@@ -4069,14 +4189,37 @@ input#question {
 }
 
 #myStudents-age.item, #myStudents-grade.item {
-    width: 120px;
     height: 35px;
+    width: 20%;
 }
 
 #myStudents-other.item {
-    width: 280px;
     height: 35px;
+    width: 65%;
 }
+
+    @media (max-width: 480px) {
+        #myStudents-other.item {
+            width: 95%;
+        }
+
+        .form-check.radio {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    }
+
+    @media (max-width: 450px) {
+        #myStudents-age.item, #myStudents-grade.item {
+            width: 25%;
+        }
+    }
+
+    @media (max-width: 300px) {
+        #myStudents-age.item, #myStudents-grade.item {
+            width: 30%;
+        }
+    }
 
 .table-container {
     display: flex;
@@ -4144,35 +4287,24 @@ input#question {
     }
 }
 
-
 .term-container {
-    height: 70px;
-    width: 100%;
-    margin: 5px;
-
-    &:last-child, &:first-child {
-      display: flex;
-      align-items: center;
-    }
+    margin: 5px 0px;
 }
-
 
 .terms-switch {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: 0px;
 
     span {
-        width: 140px;
         color: $black-color;
-    }
-
-    label.custom-control-label {
-        margin-left: 55px;
+        width: 33%;
+        margin-right: 2.5rem;
     }
 
     input {
-     width: 240px;
+        width: 15rem;
     }
 
     .custom-control-input:checked~.custom-control-label::before {
@@ -4186,10 +4318,37 @@ input#question {
     font-size: 10px;
 }
 
-.terms-margin {
-    margin-top: 26px;
-}
+    @media (max-width: 420px) {
+        .terms-switch {
+            input {
+                width: 11rem;
+            }
+        }
 
+        #in-person-help, #consultation-help {
+            font-size: 8px;
+        }
+    }
+
+    @media (max-width: 360px) {
+        .terms-switch {
+            input {
+                width: 8.3rem;
+            }
+        }
+    }
+
+    @media (max-width: 319px) {
+        .terms-switch {
+            input {
+                width: 7rem;
+            }
+
+            span {
+                font-size: 10px;
+            }
+        }
+    }
 
 .pic-edit {
     position: absolute;
@@ -4272,6 +4431,109 @@ a.edit {
     }
 }
 
+    @media (max-width: 1199px) {
+        .cms-frame {
+            &.tu-card-frame {
+                .edit {
+                    right: 8%;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 991px) {
+        a.edit {
+            right: 6%;
+        }
+
+        .cms-frame {
+            &.inner-frame {
+                .edit {
+                    right: 10%;
+                }
+            }
+
+            &.frame-rates {
+                padding-left: 15px;
+        }
+    }
+
+        .pic-edit {
+            right: 31%;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .pic-edit {
+            right: 38%;
+        }
+
+        a.edit {
+            right: 5%;
+        }
+
+        .cms-frame {
+            &.inner-frame {
+                .edit {
+                    right: 9%;
+                }
+            }
+        }
+
+        .cms-frame {
+            &.tu-card-frame {
+                .edit {
+                    right: 6%;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 575px) {
+        .cms-frame {
+            &.frame-rates {
+                .edit {
+                    right: 2%;
+                }
+            }
+        }
+
+        a.edit {
+            &.edit-terms {
+                right: 2%;
+            }
+        }
+
+        .frame-terms {
+            border: 1px solid #CECECE;
+            border-radius: 5px;
+            padding-left: 15px;
+        }
+    }
+
+    @media (max-width: 430px) {
+        .cms-frame {
+              &.inner-frame {
+                  .edit {
+                      right: 15%;
+                  }
+              }
+
+              &.tu-card-frame {
+                  .edit {
+                      right: 10%;
+                  }
+              }
+        }
+
+        a.edit {
+            right: 10%;
+        }
+
+        .pic-edit {
+            right: 34%;
+        }
+    }
 
 /*================================================
 Testing Environment

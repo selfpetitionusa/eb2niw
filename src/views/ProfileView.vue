@@ -1,13 +1,16 @@
 <template>
+
     <div>
         <Profile  v-if="account.profile"  v-bind:cmsToggleProp="false" v-bind:profileProp="account.profile" ></Profile>
 
     </div>
+
 </template>
 
 
 <script>
-    import Profile from "../components/profile/Profile";
+
+  import Profile from "../components/profile/Profile";
 
     import { mapState, mapActions } from 'vuex'
 
@@ -28,4 +31,5 @@
             this.getProfile({userId, token})
         },
     };
+
 </script>
