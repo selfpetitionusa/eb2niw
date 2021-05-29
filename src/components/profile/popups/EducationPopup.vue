@@ -89,7 +89,7 @@
   export default {
       data() {
           return {
-              sumitted: false,
+              submitted: false,
               data: {
                   schools: [],
                   certificates: []

@@ -1,107 +1,81 @@
 <template>
 
-    <b-modal static id="rates-modal" title="Rates" hide-footer>
-        <form id="rates-popup" class="cms">
-            <div class="form-title">
-                <p>Show up to 4 rates by editing the below example *</p>
-            </div>
-
-            <div class="table-container">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th class="col1">Currency*</th>
-                            <th class="col2">Rate*</th>
-                            <th class="col3">Session type*</th>
-                            <th class="col4">Rate comment</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><input type="text" class="form-control" id="rateCurrency-1" v-on:input="enableInputRate2" required></td>
-                            <td><input type="number" class="form-control" id="rateAmount-1" v-on:input="enableInputRate2" required></td>
-                            <td>
-                                <input class="form-control" list="select-1" id="rateType-1" v-on:input="enableInputRate2" required>
-                                <datalist id="select-1">
-                                    <option selected>per session</option>
-                                    <option>per lesson</option>
-                                    <option>per hour</option>
-                                    <option>per month</option>
-                                    <option>Type your own</option>
-                                </datalist>
-                            </td>
-                            <td><input type="text" class="form-control" id="rateComment-1" v-on:input="enableInputRate2" placeholder="Example: Rates starting from"></td>
-                        </tr>
-
-                        <tr>
-                            <td><input type="text" class="form-control" id="rateCurrency-2" v-on:input="enableInputRate3" disabled></td>
-                            <td><input type="number" class="form-control" id="rateAmount-2" v-on:input="enableInputRate3" disabled></td>
-                            <td>
-                                <input class="form-control" list="select-2" id="rateType-2" v-on:input="enableInputRate3" disabled>
-                                <datalist id="select-2">
-                                    <option selected>per session</option>
-                                    <option>per lesson</option>
-                                    <option>per hour</option>
-                                    <option>per month</option>
-                                    <option>Type your own</option>
-                                </datalist>
-                            </td>
-                            <td><input type="text" class="form-control" id="rateComment-2" placeholder="Example: University level students" v-on:input="enableInputRate3" disabled></td>
-                        </tr>
-
-                        <tr>
-                            <td><input type="text" class="form-control" id="rateCurrency-3" v-on:input="enableInputRate4" disabled></td>
-                            <td><input type="number" class="form-control" id="rateAmount-3" v-on:input="enableInputRate4" disabled></td>
-                            <td>
-                                <input class="form-control" list="select-3" id="rateType-3" v-on:input="enableInputRate4" disabled>
-                                <datalist id="select-3">
-                                    <option selected>per session</option>
-                                    <option>per lesson</option>
-                                    <option>per hour</option>
-                                    <option>per month</option>
-                                    <option>Type your own</option>
-                                </datalist>
-                            </td>
-                            <td><input type="text" class="form-control" id="rateComment-3" placeholder="Example: Students 5-7 years old" v-on:input="enableInputRate4" disabled></td>
-                        </tr>
-
-                        <tr>
-                            <td><input type="text" class="form-control" id="rateCurrency-4" disabled></td>
-                            <td><input type="number" class="form-control" id="rateAmount-4" disabled></td>
-                            <td>
-                                <input class="form-control" list="select-4" id="rateType-4" disabled>
-                                <datalist id="select-4">
-                                    <option selected>per session</option>
-                                    <option>per lesson</option>
-                                    <option>per hour</option>
-                                    <option>per month</option>
-                                    <option>Type your own</option>
-                                </datalist>
-                            </td>
-                            <td><input type="text" class="form-control" id="rateComment-4" placeholder="Example: English (rates by subject)" disabled></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="form-group">
-                <label for="lesson-length">How long is your standard lesson?</label>
-                <div class="lesson">
-                    <input type="number" class="form-control" id="lesson-length">
-                    <p>minutes</p>
+    <b-modal  @show="initModal" id="rates-modal" title="Rates" hide-footer>
+        <div v-if="alert.failed" :class="`alert ${alert.type}`">{{alert.message}}</div>
+        <ValidationObserver ref="form">
+            <form id="rates-popup" class="cms" @submit.prevent="saveForm" novalidate>
+                <div class="form-title">
+                    <p>Show up to 4 rates by editing the below example *</p>
                 </div>
-            </div>
 
-            <div class="form-group">
-                <label for="additional-comment">Additional comment for rates</label>
-                <input type="text" class="form-control" id="additional-comment" placeholder="Example: Discounts available upon request">
-            </div>
+                <div class="table-container">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th class="col1">Currency*</th>
+                                <th class="col2">Rate*</th>
+                                <th class="col3">Session type*</th>
+                                <th class="col4">Rate comment</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr v-for="rate in data.rates" :key="rate.id">
+                                <td>
+                                    <ValidationProvider  rules="required" v-slot="{ errors }" >
+                                        <input type="text" class="form-control" v-model="rate.currency"  id="rateCurrency-1" v-on:change="setErrors" :class="{ 'is-invalid': submitted && errors.length }">
+                                    </ValidationProvider>
+                                </td>
 
-            <div class="btn-container">
-                <a class="btn btn-primary btn-border btn-cancel" @click="$bvModal.hide('rates-modal')">Cancel</a>
-                <button type="submit" class="btn btn-primary btn-border btn-save">Save</button>
-            </div>
-        </form>
+                                <td>
+                                    <ValidationProvider  rules="required" v-slot="{ errors }" >
+                                        <input type="text" class="form-control" v-model="rate.amount" id="rateAmount-1"  v-on:change="setErrors"  :class="{ 'is-invalid': submitted && errors.length }" >
+                                    </ValidationProvider>
+                                </td>
+                                <td>
+                                    <ValidationProvider  rules="required" v-slot="{ errors }" >
+                                        <input class="form-control" v-model="rate.commentTop" list="select-1" id="rateType-1"  v-on:change="setErrors"  :class="{ 'is-invalid': submitted && errors.length }">
+                                    </ValidationProvider>
+                                    <datalist id="select-1">
+                                        <option selected >per session</option>
+                                        <option>per lesson</option>
+                                        <option>per hour</option>
+                                        <option>per month</option>
+                                        <option>Type your own</option>
+                                    </datalist>
+                                </td>
+                                <td><input type="text" class="form-control"  v-model="rate.commentBottom" id="rateComment-1" placeholder="Example: Rates starting from"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+                <div  v-if="submitted && errors.length"  class="invalid-feedback" style="display: block">Missing required fields</div>
+                <div class="plus-minus">
+                    <font-awesome-icon class="icon" icon="plus-circle" v-bind:class="[isActiveRatePlus ? 'active' : 'disabled']" v-on:click="addRate" />
+                    <font-awesome-icon class="icon" icon="minus-circle" v-bind:class="[isActiveRateMinus ? 'active' : 'disabled']" v-on:click="deleteRate" />
+                </div>
+
+
+
+                <div class="form-group">
+                    <label for="lesson-length">How long is your standard lesson?</label>
+                    <div class="lesson">
+                        <input type="number" class="form-control" v-model="data.lessonLength" id="lesson-length">
+                        <p>minutes</p>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="additional-comment">Additional comment for rates</label>
+                    <input type="text" class="form-control" v-model="data.rateSectionComment" id="additional-comment" placeholder="Example: Discounts available upon request">
+                </div>
+
+                <div class="btn-container">
+                    <a class="btn btn-primary btn-border btn-cancel" @click="$bvModal.hide('rates-modal')">Cancel</a>
+                    <button type="submit" class="btn btn-primary btn-border btn-save">Save</button>
+                </div>
+            </form>
+        </ValidationObserver>
     </b-modal>
 
 </template>
@@ -111,61 +85,94 @@
 
 <script>
 
+  import {mapActions, mapState} from "vuex";
+
   export default {
+      data() {
+          return {
+              submitted: false,
+              errors: [],
+              data: {
+                  rates: []
+              }
+          }
+      },
+      watch: {
+          'account.status': function (val) {
+              if(val.updatedRatesForm)
+                  this.$bvModal.hide('rates-modal');
+          }
+
+      },
+      props: ['profileProp'],
+      computed: {
+          ...mapState({
+              alert: state => state.alert,
+              account: state => state.account
+          }),
+          isActiveRateMinus: function () {
+              return this.data.rates.length > 1;
+          },
+          isActiveRatePlus: function () {
+              return this.data.rates.length < 4;
+          }
+      },
       methods: {
-          enableInputRate2: function() {
-              document.getElementById('rateCurrency-2').removeAttribute('disabled');
-              document.getElementById('rateAmount-2').removeAttribute('disabled');
-              document.getElementById('rateType-2').removeAttribute('disabled');
-              document.getElementById('rateComment-2').removeAttribute('disabled');
+          ...mapActions('account', ['updateRates']),
+          ...mapActions('alert', ['clear']),
+          initModal() {
+              this.submitted = false;
+              this.data = {
+                  rateSectionComment: this.profileProp.profile.rateInfo.rateSectionComment,
+                  lessonLength: this.profileProp.profile.rateInfo.lessonLength,
+                  rates: JSON.parse(JSON.stringify(this.profileProp.rates)),
+              };
+              if (this.data.rates.length === 0)
+                  this.addRate();
+              this.clear();
           },
-          enableInputRate3: function() {
-              document.getElementById('rateCurrency-3').removeAttribute('disabled');
-              document.getElementById('rateAmount-3').removeAttribute('disabled');
-              document.getElementById('rateType-3').removeAttribute('disabled');
-              document.getElementById('rateComment-3').removeAttribute('disabled');
+          addRate: function() {
+              if(this.data.rates.length < 4) {
+                  this.data.rates.push({
+                      id: Date.now()
+                  });
+              }
           },
-          enableInputRate4: function() {
-              document.getElementById('rateCurrency-4').removeAttribute('disabled');
-              document.getElementById('rateAmount-4').removeAttribute('disabled');
-              document.getElementById('rateType-4').removeAttribute('disabled');
-              document.getElementById('rateComment-4').removeAttribute('disabled');
+          deleteRate: function() {
+              if(this.data.rates.length  > 1) {
+                  this.data.rates.pop();
+              }
           },
-          inputIsRequired: function() {
-              const u = document.forms['rates-popup']['rateCurrency-1'].value;
-              const v = document.forms['rates-popup']['rateAmount-1'].value;
-              const w = document.forms['rates-popup']['rateType-1'].value;
+          saveForm(){
 
-              const x = document.forms['rates-popup']['rateCurrency-2'].value;
-              const y = document.forms['rates-popup']['rateAmount-2'].value;
-              const z = document.forms['rates-popup']['rateType-2'].value;
+              this.submitted = true;
+              this.$refs.form.validate().then(success => {
+                  this.setErrors();
+                  if (!success || this.errors.length) {
+                      return;
+                  }
+                  this.updateRates(this.data);
+              });
 
-              const a = document.forms['rates-popup']['rateCurrency-3'].value;
-              const b = document.forms['rates-popup']['rateAmount-3'].value;
-              const c = document.forms['rates-popup']['rateType-3'].value;
+          },
+          setErrors() {
+              try {
+                  const errors = this.$refs['form'].errors;
 
-              const p = document.forms['rates-popup']['rateCurrency-4'].value;
-              const q = document.forms['rates-popup']['rateAmount-4'].value;
-              const r = document.forms['rates-popup']['rateType-4'].value;
+                  let parsed = [];
 
-              if ( (u !== "" && v === "" && w === "") || (u === "" && v !== "" && w === "") || (u === "" && v === "" && w !== "") || (u !== "" && v !== "" && w === "") || (u !== "" && v === "" && w !== "") || (u === "" && v !== "" && w !== "") ) {
-                  alert("For each added rate provide: currency, rate and session type");
-                  return false;
-                  }
-              if ( (x !== "" && y === "" && z === "") || (x === "" && y !== "" && z === "") || (x === "" && y === "" && z !== "") || (x !== "" && y !== "" && z === "") || (x !== "" && y === "" && z !== "") || (x === "" && y !== "" && z !== "") ) {
-                  alert("For each added rate provide: currency, rate and session type");
-                  return false;
-                  }
-              if ( (a !== "" && b === "" && c === "") || (a === "" && b !== "" && c === "") || (a === "" && b === "" && c !== "") || (a !== "" && b !== "" && c === "") || (a !== "" && b === "" && c !== "") || (a === "" && b !== "" && c !== "") ) {
-                  alert("For each added rate provide: currency, rate and session type");
-                  return false;
-                  }
-              if ( (p !== "" && q === "" && r === "") || (p === "" && q !== "" && r === "") || (p === "" && q === "" && r !== "") || (p !== "" && q !== "" && r === "") || (p !== "" && q === "" && r !== "") || (p === "" && q !== "" && r !== "") ) {
-                  alert("For each added rate provide: currency, rate and session type");
-                  return false;
-                  }
+                  Object.keys(errors).map((key) => {
+                      parsed.push(errors[key][0])
+                  });
+
+                  this.errors = parsed.filter(name => name === 'required');
+              } catch {
+                  this.errors = [];
+              }
           }
       }
+
+
   }
 
 </script>

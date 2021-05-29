@@ -9,7 +9,11 @@ export const userService = {
     updateNameInfo,
     updateLinksInfo,
     updateEducationInfo,
-    updateBio
+    updateBio,
+    updateSubjectsInfo,
+    updateRates,
+    updateTerms,
+    updateYoutube
 };
 
 function login(email, password) {
@@ -111,6 +115,16 @@ function updateEducationInfo(educationInfo) {
     return fetch(`${config.apiUrl}/tutors/education-info`, requestOptions).then(handleResponse)
 }
 
+function updateSubjectsInfo(subjectsInfo) {
+    const requestOptions = {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${localStorage.getItem('token')}` },
+        body: JSON.stringify(subjectsInfo)
+    };
+
+    return fetch(`${config.apiUrl}/tutors/categories`, requestOptions).then(handleResponse)
+}
+
 function updateBio(bio) {
     const requestOptions = {
         method: 'PATCH',
@@ -121,6 +135,36 @@ function updateBio(bio) {
     };
 
     return fetch(`${config.apiUrl}/tutors/bio`, requestOptions).then(handleResponse)
+}
+
+function updateRates(rates) {
+    const requestOptions = {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${localStorage.getItem('token')}` },
+        body: JSON.stringify(rates)
+    };
+
+    return fetch(`${config.apiUrl}/tutors/rates`, requestOptions).then(handleResponse)
+}
+
+function updateTerms(terms) {
+    const requestOptions = {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${localStorage.getItem('token')}` },
+        body: JSON.stringify(terms)
+    };
+
+    return fetch(`${config.apiUrl}/tutors/terms`, requestOptions).then(handleResponse)
+}
+
+function updateYoutube(youtube) {
+    const requestOptions = {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${localStorage.getItem('token')}` },
+        body: JSON.stringify(youtube)
+    };
+
+    return fetch(`${config.apiUrl}/tutors/youtube`, requestOptions).then(handleResponse)
 }
 
 function handleResponse(response) {

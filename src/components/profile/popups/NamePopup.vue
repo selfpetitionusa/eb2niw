@@ -106,7 +106,7 @@
       },
       watch: {
           'account.status': function (val) {
-              if(val.updatedLinksFormInfo)
+              if(val.updatedNameFormInfo)
                   this.$bvModal.hide('name-modal');
           }
       },

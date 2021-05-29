@@ -223,7 +223,7 @@
 
                 <div :class="[cmsToggle && 'cms-frame tu-card-frame margin-frame']">
                     <div v-if="cmsToggle">
-                        <SubjectsPopup></SubjectsPopup>
+                        <SubjectsPopup v-bind:profileProp="response"></SubjectsPopup>
                         <a href="#" class="edit" v-b-modal.subjects-modal>
                             <font-awesome-icon icon="edit" />
                         </a>
@@ -278,7 +278,7 @@
                 <div class="row rates-container">
                     <div class="col-xl-6 col-lg-7 col-md-7 col-sm-7 col-12 items-all" :class="[cmsToggle && 'cms-frame frame-rates']">
                         <div v-if="cmsToggle">
-                            <RatesPopup></RatesPopup>
+                            <RatesPopup v-bind:profileProp="response" ></RatesPopup>
                             <a href="#" class="edit" v-b-modal.rates-modal>
                                 <font-awesome-icon icon="edit" />
                             </a>
@@ -301,7 +301,7 @@
                         <Rate v-if="!response.rates && cmsToggle"></Rate>
 
 
-                        <div class="rates-additional-comment">{{response.profile.rateInfo.rateSectionComment}}</div>
+                        <div class="rates-additional-comment">{{lessonLength}}{{response.profile.rateInfo.rateSectionComment}}</div>
                           <div v-if="!response.profile.rateInfo.rateSectionComment" class="rates-additional-comment">Details available upon request</div>
 
                     </div>
@@ -318,7 +318,7 @@
                 <div class="terms-container">
                     <div class="terms">
                         <div v-if="cmsToggle">
-                            <TermsPopup></TermsPopup>
+                            <TermsPopup v-bind:profileProp="response"></TermsPopup>
                             <a href="#" class="edit edit-terms" v-b-modal.terms-modal>
                                 <font-awesome-icon icon="edit" />
                             </a>
@@ -399,7 +399,7 @@
 
                 <div :class="[cmsToggle && 'cms-frame tu-card-frame margin-frame']">
                     <div v-if="response.profile.youtubeIntroLink && cmsToggle">
-                        <YouTubePopup></YouTubePopup>
+                        <YouTubePopup v-bind:profileProp="response"></YouTubePopup>
                         <a href="#" class="edit" v-b-modal.youtube-modal>
                             <font-awesome-icon icon="edit" />
                         </a>
@@ -408,7 +408,16 @@
                     <div v-if="response.profile.youtubeIntroLink" class="youtube-display">
                         <iframe width="560" height="315" :src="response.profile.youtubeLink" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
-                    <YouTube v-if="!response.profile.youtubeIntroLink && cmsToggle"></YouTube>
+                    <div>
+                        <div v-if="!response.profile.youtubeIntroLink && cmsToggle" class="YT-cms">
+                            <YouTubePopup v-bind:profileProp="response"></YouTubePopup>
+                            <a href="#" v-b-modal.youtube-modal>
+                                <font-awesome-icon class="fas fa-plus-circle fa-3x" icon="plus-circle" />
+                            </a>
+                            <p>Do you have a YouTube video?</p>
+                            <p>Show parents and students your value and tutoring style.</p>
+                        </div>
+                    </div>
                 </div>
 
 
@@ -479,7 +488,6 @@
     import Certificate from './section/Certificate';
     import Subject from './section/Subject';
     import Rate from './section/Rate';
-    import YouTube from './section/YouTube';
     import ProblemCard from './section/ProblemCard';
 
     import PhotoPopup from '../profile/popups/PhotoPopup';
@@ -501,7 +509,7 @@
       Certificate,
       Subject,
       Rate,
-      YouTube,
+      // YouTube,
       ProblemCard,
       PhotoPopup,
       NamePopup,
@@ -526,6 +534,12 @@
     computed: {
         response: function () {
             return this.profileProp;
+        },
+        lessonLength: function () {
+            if(this.response.profile.rateInfo.lessonLength)
+                return `Standard session is ${this.response.profile.rateInfo.lessonLength}min. `;
+            else
+                return '';
         }
     },
     metaInfo() {

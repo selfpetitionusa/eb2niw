@@ -1,72 +1,83 @@
 <template>
 
-    <b-modal static id="subjects-modal" title="What do you teach" hide-footer>
-        <form id="subjects-popup" class="cms">
-            <div class="form-title">
-                <p>Add minimum 1 subject and 1 category for each subject</p>
-            </div>
-
-            <div id="subjects" v-for="subject in subjects" :key="subject.id">
-                <div class="form-group">
-                    <label for="subject">Subject *</label>
-                    <input type="text" class="form-control" id="subject" v-model="subject.subjectCat" placeholder="Example: Math" required>
+    <b-modal @show="initModal"  id="subjects-modal" title="What do you teach" hide-footer>
+        <div v-if="alert.failed" :class="`alert ${alert.type}`">{{alert.message}}</div>
+        <ValidationObserver ref="form">
+            <form id="subjects-popup" class="cms" @submit.prevent="saveForm" novalidate>
+                <div class="form-title">
+                    <p>Add minimum 1 subject and 1 category for each subject</p>
                 </div>
 
-                <div class="form-group subject-cat">
-                    <label for="subject-categories1">Subject categories - first is mandatory *</label>
-                    <input type="text" class="form-control" id="subject-categories1" v-model="subject.subCat1" placeholder="Example: Precalculus *" v-on:input="enableInputSubcat2" required>
-                    <input type="text" class="form-control" id="subject-categories2" v-model="subject.subCat2" placeholder="Example: Calculus" v-on:input="enableInputSubcat3" disabled>
-                    <input type="text" class="form-control" id="subject-categories3" v-model="subject.subCat3" placeholder="Example: Algebra" v-on:input="enableInputSubcat4" disabled>
-                    <input type="text" class="form-control" id="subject-categories4" v-model="subject.subCat4" placeholder="Example: Geometry" v-on:input="enableInputSubcat5" disabled>
-                    <input type="text" class="form-control" id="subject-categories5" v-model="subject.subCat5" placeholder="Example: Trigonometry" v-on:input="enableInputSubcat6" disabled>
-                    <input type="text" class="form-control" id="subject-categories6" v-model="subject.subCat6" placeholder="Example: Differential Equations" v-on:input="enableInputSubcat7" disabled>
-                    <input type="text" class="form-control" id="subject-categories7" v-model="subject.subCat7" placeholder="Example: Logic" disabled>
-                </div>
-            </div>
+                <div id="subjects" v-for="subject in data.subjects" :key="subject.id" >
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <ValidationProvider rules="required" v-slot="{ errors }" >
+                            <input type="text" class="form-control" id="subject" v-model="subject.categoryName" placeholder="Example: Math" :class="{ 'is-invalid': submitted && errors.length }">
+                            <div v-if="submitted && errors.length" class="invalid-feedback">Subject is required</div>
+                        </ValidationProvider>
+                    </div>
 
-            <div class="plus-minus">
-                <font-awesome-icon class="icon active" icon="plus-circle" v-on:click="addSubject" />
-                <font-awesome-icon class="icon" icon="minus-circle" v-bind:class="[isActiveSubjectMinus ? 'active' : 'disabled']" v-on:click="deleteSubject" />
-            </div>
-            <p class="plus-minus-comment">Subject</p>
-
-            <div class="form-title">
-                <p>Choose one which best describes your students *</p>
-            </div>
-
-            <div class="radio-container">
-                <div class="form-check radio">
-                    <input class="form-check-input" type="radio" name="myStudents" id="myStudents-age-radio" value="option1" v-on:click="enableDisableRadio" required>
-                    <div class="form-inline">
-                        <label class="form-check-label item" for="myStudents-age">My students are</label>
-                        <input type="text" class="form-control item" id="myStudents-age" placeholder="7-12" disabled required>
-                        <label class="form-check-label item" for="myStudents-age">years old</label>
+                    <div class="form-group subject-cat">
+                        <label for="subject-categories1">Subject categories - first is mandatory *</label>
+                        <ValidationProvider rules="required" v-slot="{ errors }" >
+                            <input type="text" class="form-control" id="subject-categories1" v-model="subject.subcategoryName1" placeholder="Example: Precalculus *" :class="{ 'is-invalid': submitted && errors.length }" >
+                            <div v-if="submitted && errors.length" class="invalid-feedback">Subject category is required</div>
+                        </ValidationProvider>
+                        <input type="text" class="form-control" id="subject-categories2" v-model="subject.subcategoryName2" placeholder="Example: Calculus" :disabled="!subject.subcategoryName1" >
+                        <input type="text" class="form-control" id="subject-categories3" v-model="subject.subcategoryName3" placeholder="Example: Algebra" :disabled="!subject.subcategoryName2" >
+                        <input type="text" class="form-control" id="subject-categories4" v-model="subject.subcategoryName4" placeholder="Example: Geometry" :disabled="!subject.subcategoryName3" >
+                        <input type="text" class="form-control" id="subject-categories5" v-model="subject.subcategoryName5" placeholder="Example: Trigonometry" :disabled="!subject.subcategoryName4">
+                        <input type="text" class="form-control" id="subject-categories6" v-model="subject.subcategoryName6" placeholder="Example: Differential Equations" :disabled="!subject.subcategoryName5">
+                        <input type="text" class="form-control" id="subject-categories7" v-model="subject.subcategoryName7" placeholder="Example: Logic" :disabled="!subject.subcategoryName6">
                     </div>
                 </div>
 
-                <div class="form-check radio">
-                    <input class="form-check-input" type="radio" name="myStudents" id="myStudents-grade-radio" value="option2" v-on:click="enableDisableRadio" required>
-                    <div class="form-inline">
-                        <label class="form-check-label item" for="myStudents-grade">My students are</label>
-                        <input type="text" class="form-control item" id="myStudents-grade" placeholder="7-12th" disabled required>
-                        <label class="form-check-label item" for="myStudents-grade">grade</label>
-                    </div>
+                <div class="plus-minus">
+                    <font-awesome-icon class="icon active" icon="plus-circle" v-on:click="addSubject" />
+                    <font-awesome-icon class="icon" icon="minus-circle" v-bind:class="[isActiveSubjectMinus ? 'active' : 'disabled']" v-on:click="deleteSubject" />
+                </div>
+                <p class="plus-minus-comment">Subject</p>
+
+                <div class="form-title">
+                    <p>Choose one which best describes your students *</p>
                 </div>
 
-                <div class="form-check radio">
-                    <input class="form-check-input" type="radio" name="myStudents" id="myStudents-other-radio" value="option3" v-on:click="enableDisableRadio" required>
-                    <div class="form-inline">
-                        <label class="form-check-label item" for="myStudents-other">My students are</label>
-                        <input type="text" class="form-control item" id="myStudents-other" placeholder="Description" disabled required>
+                <div class="radio-container">
+                    <div class="form-check radio">
+                        <input class="form-check-input" type="radio" id="myStudents-age-radio" v-model="choice" value="1"  >
+                        <div class="form-inline">
+                            <label class="form-check-label item" for="myStudents-age">My students are</label>
+                            <input type="text" class="form-control item" id="myStudents-age" v-model="radioInput1" :disabled="choice !== '1'" placeholder="7-12">
+                            <label class="form-check-label item" for="myStudents-age">years old</label>
+                        </div>
                     </div>
-                </div>
-            </div>
 
-            <div class="btn-container">
-                <a class="btn btn-primary btn-border btn-cancel" @click="$bvModal.hide('subjects-modal')">Cancel</a>
-                <button type="submit" class="btn btn-primary btn-border btn-save">Save</button>
-            </div>
-        </form>
+
+                    <div class="form-check radio">
+                        <input class="form-check-input" type="radio"  id="myStudents-grade-radio" v-model="choice" value="2" >
+                        <div class="form-inline">
+                            <label class="form-check-label item" for="myStudents-grade">My students are</label>
+                            <input type="text" class="form-control item" id="myStudents-grade"  v-model="radioInput2"  :disabled="choice !== '2'"  placeholder="7-12th" >
+                            <label class="form-check-label item" for="myStudents-grade">grade</label>
+                        </div>
+                    </div>
+
+                    <div class="form-check radio">
+                            <input class="form-check-input" type="radio" id="myStudents-other-radio" v-model="choice" value="3" >
+                            <div class="form-inline">
+                                <label class="form-check-label item" for="myStudents-other">My students are</label>
+                                <input type="text" class="form-control item" id="myStudents-other" v-model="radioInput3"  :disabled="choice !== '3'" placeholder="Description">
+                            </div>
+                    </div>
+                    <div v-if="submitted && !radioInput1 && !radioInput2 && !radioInput3" class="invalid-feedback" style="display: block">Students description is required</div>
+                </div>
+
+                <div class="btn-container">
+                    <a class="btn btn-primary btn-border btn-cancel" @click="$bvModal.hide('subjects-modal')">Cancel</a>
+                    <button type="submit" class="btn btn-primary btn-border btn-save">Save</button>
+                </div>
+            </form>
+        </ValidationObserver>
     </b-modal>
 
 </template>
@@ -76,88 +87,122 @@
 
 <script>
 
-  export default {
-      data() {
-          return {
-              subjects: [{
-                  subjectCat: "",
-                  subCat1: "",
-                  subCat2: "",
-                  subCat3: "",
-                  subCat4: "",
-                  subCat5: "",
-                  subCat6: "",
-                  subCat7: ""
-              }],
-              subjectsNumber: 1,
-              isActiveSubjectMinus: true
-          }
-      },
+    import {mapActions, mapState} from "vuex";
+
+    export default {
+        data() {
+            return {
+                choice: null,
+                radioInput1: null,
+                radioInput2: null,
+                radioInput3: null,
+                submitted: false,
+                data: {
+                    subjects: []
+                }
+
+            }
+        },
+        watch: {
+            'account.status': function (val) {
+                if(val.updatedSubjectsForm)
+                    this.$bvModal.hide('subjects-modal');
+            },
+            choice(val) {
+                if(val === '1') {
+                    this.radioInput2 = '';
+                    this.radioInput3 = '';
+                } else if(this.choice === '2') {
+                    this.radioInput1 = '';
+                    this.radioInput3 = '';
+                } else if(this.choice === '3') {
+                    this.radioInput1 = '';
+                    this.radioInput2 = '';
+                } else {
+                    this.radioInput1 = '';
+                    this.radioInput2 = '';
+                    this.radioInput3 = '';
+                }
+            }
+        },
+        props: ['profileProp'],
+        computed: {
+            ...mapState({
+                alert: state => state.alert,
+                account: state => state.account
+            }),
+            isActiveSubjectMinus: function () {
+                return this.data.subjects.length > 1;
+            },
+            studentsProfile: function () {
+                if(this.choice === '1' && this.radioInput1) {
+                    return `${this.radioInput1} years old`;
+                } else if(this.choice === '2' && this.radioInput2) {
+                    return `${this.radioInput2} grade`;
+                } else if(this.choice === '3' && this.radioInput3) {
+                    return this.radioInput3
+                } else {
+                    return '';
+                }
+            }
+        },
       methods: {
+          ...mapActions('account', ['updateSubjectsInfo']),
+          ...mapActions('alert', ['clear']),
+          initModal() {
+              this.submitted = false;
+              this.data = {
+                  subjects: JSON.parse(JSON.stringify(this.profileProp.categories)),
+              };
+              if(this.data.subjects.length === 0)
+                  this.addSubject();
+
+            if(this.profileProp.profile.studentsProfile) {
+                if(this.profileProp.profile.studentsProfile.endsWith('years old')) {
+                    this.choice = '1';
+                    this.radioInput1 = this.profileProp.profile.studentsProfile.slice(0, -10);
+                } else if (this.profileProp.profile.studentsProfile.endsWith('grade')) {
+                    this.choice = '2';
+                    this.radioInput2 = this.profileProp.profile.studentsProfile.slice(0, -6);
+                } else {
+                    this.radioInput3 = this.profileProp.profile.studentsProfile;
+                    this.choice = '3'
+                }
+                this.clear();
+            }
+
+
+
+
+          },
           addSubject: function() {
-              this.subjects.push({
-                  subjectCat: "",
-                  subCat1: "",
-                  subCat2: "",
-                  subCat3: "",
-                  subCat4: "",
-                  subCat5: "",
-                  subCat6: "",
-                  subCat7: ""
+              this.data.subjects.push({
+                  id: Date.now(),
+                  categoryName: "",
+                  subcategoryName1: "",
+                  subcategoryName2: "",
+                  subcategoryName3: "",
+                  subcategoryName4: "",
+                  subcategoryName5: "",
+                  subcategoryName6: "",
+                  subcategoryName7: ""
               });
-              this.isActiveSubjectMinus = true;
-              this.subjectsNumber++;
           },
           deleteSubject: function() {
-              if(this.subjectsNumber > 1) {
-                  this.subjects.pop();
-                  this.subjectsNumber--;
-              }
-              if(this.subjectsNumber === 1) {
-                  this.isActiveSubjectMinus = false;
+              if(this.data.subjects.length > 1) {
+                  this.data.subjects.pop();
               }
           },
-          enableInputSubcat2: function() {
-              document.getElementById('subject-categories2').removeAttribute('disabled');
-          },
-          enableInputSubcat3: function() {
-              document.getElementById('subject-categories3').removeAttribute('disabled');
-          },
-          enableInputSubcat4: function() {
-              document.getElementById('subject-categories4').removeAttribute('disabled');
-          },
-          enableInputSubcat5: function() {
-              document.getElementById('subject-categories5').removeAttribute('disabled');
-          },
-          enableInputSubcat6: function() {
-              document.getElementById('subject-categories6').removeAttribute('disabled');
-          },
-          enableInputSubcat7: function() {
-              document.getElementById('subject-categories7').removeAttribute('disabled');
-          },
-          enableDisableRadio: function() {
-              let x = document.getElementById("myStudents-age-radio");
-              var y = document.getElementById("myStudents-age");
+          saveForm(){
+              this.submitted = true;
+              this.$refs.form.validate().then(success => {
+                  if (!success || !this.studentsProfile) {
+                      return;
+                  }
+                  this.data['studentsProfile'] = this.studentsProfile;
+                  this.updateSubjectsInfo(this.data);
+              });
 
-              let a = document.getElementById("myStudents-grade-radio");
-              var b = document.getElementById("myStudents-grade");
-
-              let v = document.getElementById("myStudents-other-radio");
-              var w = document.getElementById("myStudents-other");
-
-              y.disabled = x.checked ? false : true;
-              b.disabled = a.checked ? false : true;
-              w.disabled = v.checked ? false : true;
-
-              if (!y.disabled) {
-                y.focus();
-                }
-              if (!b.disabled) {
-                b.focus();
-                }
-              if (!w.disabled) {
-                w.focus();
-                }
           }
       }
   }

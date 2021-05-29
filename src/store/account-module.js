@@ -98,6 +98,22 @@ const actions = {
             }
         );
     },
+    updateSubjectsInfo({ dispatch, commit }, subjectsInfo) {
+        commit('updateSubjectsInfoRequest');
+        return userService.updateSubjectsInfo(subjectsInfo).then(
+            (profile) => {
+                commit('getProfileSuccess', profile);
+                commit('updateSubjectsInfoSuccess');
+                setTimeout(() => {
+                    dispatch('alert/success', 'Subjects information Saved', { root: true });
+                })
+            },
+            () => {
+                commit('updateSubjectsInfoFailure');
+                dispatch('alert/error',  'Failed to update data', { root: true });
+            }
+        );
+    },
     updateBio({ dispatch, commit }, bio) {
         commit('updateBioRequest');
         return userService.updateBio(bio).then(
@@ -110,6 +126,54 @@ const actions = {
             },
             () => {
                 commit('updateBioFailure');
+                dispatch('alert/error',  'Failed to update data', { root: true });
+            }
+        );
+    },
+    updateRates({ dispatch, commit }, data) {
+        commit('updateRatesRequest');
+        return userService.updateRates(data).then(
+            (profile) => {
+                commit('getProfileSuccess', profile);
+                commit('updateRatesSuccess');
+                setTimeout(() => {
+                    dispatch('alert/success', 'Rates Saved', { root: true });
+                })
+            },
+            () => {
+                commit('updateRatesFailure');
+                dispatch('alert/error',  'Failed to update data', { root: true });
+            }
+        );
+    },
+    updateTerms({ dispatch, commit }, data) {
+        commit('updateTermsRequest');
+        return userService.updateTerms(data).then(
+            (profile) => {
+                commit('getProfileSuccess', profile);
+                commit('updateTermsSuccess');
+                setTimeout(() => {
+                    dispatch('alert/success', 'Terms Saved', { root: true });
+                })
+            },
+            () => {
+                commit('updateTermsFailure');
+                dispatch('alert/error',  'Failed to update data', { root: true });
+            }
+        );
+    },
+    updateYoutube({ dispatch, commit }, data) {
+        commit('updateYoutubeRequest');
+        return userService.updateYoutube(data).then(
+            (profile) => {
+                commit('getProfileSuccess', profile);
+                commit('updateYoutubeSuccess');
+                setTimeout(() => {
+                    dispatch('alert/success', 'Youtube intro link Saved', { root: true });
+                })
+            },
+            () => {
+                commit('updateYoutubeFailure');
                 dispatch('alert/error',  'Failed to update data', { root: true });
             }
         );
@@ -206,6 +270,42 @@ const mutations = {
         state.status = { updatedBio: true };
     },
     updateBioFailure(state) {
+        state.status = {};
+    },
+    updateSubjectsInfoRequest(state) {
+        state.status = { updatingSubjectsForm: true };
+    },
+    updateSubjectsInfoSuccess(state) {
+        state.status = { updatedSubjectsForm: true };
+    },
+    updateSubjectsInfoFailure(state) {
+        state.status = {};
+    },
+    updateRatesRequest(state) {
+        state.status = { updatingRatesForm: true };
+    },
+    updateRatesSuccess(state) {
+        state.status = { updatedRatesForm: true };
+    },
+    updateRatesFailure(state) {
+        state.status = {};
+    },
+    updateTermsRequest(state) {
+        state.status = { updatingTermsForm: true };
+    },
+    updateTermsSuccess(state) {
+        state.status = { updatedTermsForm: true };
+    },
+    updateTermsFailure(state) {
+        state.status = {};
+    },
+    updateYoutubeRequest(state) {
+        state.status = { updatingYoutubeForm: true };
+    },
+    updateYoutubeSuccess(state) {
+        state.status = { updatedYoutubeForm: true };
+    },
+    updateYoutubeFailure(state) {
         state.status = {};
     }
 };

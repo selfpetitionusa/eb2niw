@@ -1,22 +1,18 @@
 <template>
 
-    <b-modal static id="terms-modal" title="Teaching terms" hide-footer>
-        <form id="terms-popup" class="cms">
+    <b-modal @show="initModal"  id="terms-modal" title="Teaching terms" hide-footer>
+        <div v-if="alert.failed" :class="`alert ${alert.type}`">{{alert.message}}</div>
+        <form id="terms-popup" class="cms" @submit.prevent="saveForm" novalidate>
 
             <div>
                 <div class="term-container">
                     <div class="custom-control custom-switch form-group terms-switch">
                         <span>Online lessons:</span>
                         <div>
-                            <input type="checkbox" class="custom-control-input" id="online-switch" v-on:click="enableDisableSwitch1" v-model="answerOnline">
+                            <input type="checkbox" class="custom-control-input" id="online-switch" v-model="data.online">
                             <label class="custom-control-label" for="online-switch"></label>
                         </div>
-                        <div v-if="answerOnline">
-                            <input type="text" class="form-control" id="online" placeholder="Yes">
-                        </div>
-                        <div v-else>
-                            <input type="text" class="form-control" id="online" placeholder="No">
-                        </div>
+                        <input type="text" class="form-control" id="online" v-model="data.onlineComment" :disabled="!data.online" :placeholder="onlinePlaceholder">
                     </div>
                 </div>
 
@@ -25,15 +21,10 @@
                     <div class="custom-control custom-switch form-group terms-switch">
                         <span>In-person lessons:</span>
                         <div>
-                            <input type="checkbox" class="custom-control-input" id="in-person-switch" v-on:click="enableDisableSwitch2" v-model="answerInPerson">
+                            <input type="checkbox" class="custom-control-input" id="in-person-switch"  v-model="data.inPerson">
                             <label class="custom-control-label" for="in-person-switch"></label>
                         </div>
-                        <div v-if="answerInPerson">
-                            <input type="text" class="form-control" id="in-person" placeholder="Yes">
-                        </div>
-                        <div v-else>
-                            <input type="text" class="form-control" id="in-person" placeholder="No">
-                        </div>
+                        <input type="text" class="form-control" id="in-person" v-model="data.inPersonComment" :disabled="!data.inPerson" :placeholder="inPersonPlaceholder">
                     </div>
                 </div>
 
@@ -42,15 +33,10 @@
                     <div class="custom-control custom-switch form-group terms-switch">
                         <span>Free consultation:</span>
                         <div>
-                            <input type="checkbox" class="custom-control-input" id="consultation-switch" v-on:click="enableDisableSwitch3" v-model="answerConsultation">
+                            <input type="checkbox" class="custom-control-input" id="consultation-switch"  v-model="data.freeConsultation">
                             <label class="custom-control-label" for="consultation-switch"></label>
                         </div>
-                        <div v-if="answerConsultation">
-                            <input type="text" class="form-control" id="consultation" placeholder="Yes">
-                        </div>
-                        <div v-else>
-                            <input type="text" class="form-control" id="consultation" placeholder="No">
-                        </div>
+                        <input type="text" class="form-control" id="consultation" v-model="data.freeConsultationComment" :disabled="!data.freeConsultation" :placeholder="freeConsultationPlaceholder">
                     </div>
                 </div>
 
@@ -58,15 +44,10 @@
                     <div class="custom-control custom-switch form-group terms-switch">
                         <span>Cancelation policy:</span>
                         <div>
-                            <input type="checkbox" class="custom-control-input" id="cancelation-switch" v-on:click="enableDisableSwitch4" v-model="answerCancelation">
+                            <input type="checkbox" class="custom-control-input" id="cancelation-switch"  v-model="data.cancellationPolicy">
                             <label class="custom-control-label" for="cancelation-switch"></label>
                         </div>
-                        <div v-if="answerCancelation">
-                            <input type="text" class="form-control" id="cancelation" placeholder="24h notice">
-                        </div>
-                        <div v-else>
-                            <input type="text" class="form-control" id="cancelation" placeholder="No refunds">
-                        </div>
+                        <input type="text" class="form-control" id="cancelation" v-model="data.cancellationPolicyComment"  :disabled="!data.cancellationPolicy" :placeholder="cancellationPolicyPlaceholder">
                     </div>
                 </div>
             </div>
@@ -84,55 +65,64 @@
 
 
 <script>
+    import {mapActions, mapState} from "vuex";
+
   export default {
       data () {
           return {
-              answerOnline: "",
-              answerInPerson: "",
-              answerConsultation: "",
-              answerCancelation: ""
+              submitted: false,
+              data: {}
+          }
+      },
+      props: ['profileProp'],
+      computed: {
+          ...mapState({
+              alert: state => state.alert,
+              account: state => state.account
+          }),
+          onlinePlaceholder: function () {
+              if(this.online) return 'Yes';
+              else return 'No';
+          },
+          inPersonPlaceholder: function () {
+              if(this.inPerson) return 'Yes';
+              else return 'No';
+          },
+          freeConsultationPlaceholder: function () {
+              if(this.freeConsultation) return 'Yes';
+              else return 'No';
+          },
+          cancellationPolicyPlaceholder: function () {
+              if(this.cancellationPolicy) return '24h notice';
+              else return 'No refunds';
+          }
+      },
+      watch: {
+          'account.status': function (val) {
+              if (val.updatedTermsForm)
+                  this.$bvModal.hide('terms-modal');
           }
       },
       methods: {
-          enableDisableSwitch1: function() {
-              let x = document.getElementById("online-switch");
-              var y = document.getElementById("online");
-
-              y.disabled = x.checked ? false : true;
-
-              if (!y.disabled) {
-                  y.focus();
-              }
+          ...mapActions('account', ['updateTerms']),
+          ...mapActions('alert', ['clear']),
+          initModal() {
+              this.submitted = false;
+              this.data = {
+                  online: this.profileProp.profile.rateInfo.online,
+                  inPerson: this.profileProp.profile.rateInfo.inPerson,
+                  freeConsultation: this.profileProp.profile.rateInfo.freeConsultation,
+                  cancellationPolicy: this.profileProp.profile.rateInfo.cancellationPolicy,
+                  onlineComment: this.profileProp.profile.rateInfo.onlineComment,
+                  inPersonComment: this.profileProp.profile.rateInfo.inPersonComment,
+                  freeConsultationComment: this.profileProp.profile.rateInfo.freeConsultationComment,
+                  cancellationPolicyComment: this.profileProp.profile.rateInfo.cancellationPolicyComment
+              };
+              this.clear();
           },
-          enableDisableSwitch2: function() {
-              let a = document.getElementById("in-person-switch");
-              var b = document.getElementById("in-person");
-
-              b.disabled = a.checked ? false : true;
-
-              if (!b.disabled) {
-                b.focus();
-              }
-          },
-          enableDisableSwitch3: function() {
-              let v = document.getElementById("consultation-switch");
-              var w = document.getElementById("consultation");
-
-              w.disabled = v.checked ? false : true;
-
-              if (!w.disabled) {
-                  w.focus();
-              }
-          },
-          enableDisableSwitch4: function() {
-              let p = document.getElementById("cancelation-switch");
-              var q = document.getElementById("cancelation");
-
-              q.disabled = p.checked ? false : true;
-
-              if (!q.disabled) {
-                q.focus();
-              }
+          saveForm(){
+              this.submitted = true;
+              this.updateTerms(this.data);
           }
       }
   }
