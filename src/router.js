@@ -8,6 +8,7 @@ import Help from './views/Help';
 import Account from './views/Account';
 import Login from './views/Login';
 import Register from './views/Register';
+import PasswordReset from './views/PasswordReset';
 
 
 export const router = new VueRouter({
@@ -21,6 +22,7 @@ export const router = new VueRouter({
       { path: '/tutor/:token', component: ProfileView },
       { path: '/login', component: Login },
       { path: '/register', component: Register },
+      { path: '/password-reset', component: PasswordReset },
       { path: '/dashboard', component: EditProfileView },
       { path: '/preview', component: Preview },
       { path: '/help', component: Help },
@@ -33,11 +35,10 @@ export const router = new VueRouter({
 
 router.beforeEach((to, from, next) => {
     // redirect to login page if not logged in and trying to access a restricted page
-    const publicPages = ["/", '/login', '/register'];
+    const publicPages = ["/", '/login', '/register', '/password-reset'];
     const publicPrefixes = ["/tutor" ];
     const authRequired = !publicPages.includes(to.path) && !publicPrefixes.some(prefix => to.path.startsWith(prefix));
     const loggedIn = localStorage.getItem('user');
-
     if (authRequired && !loggedIn) {
         return next('/login');
     }

@@ -13,7 +13,10 @@ export const userService = {
     updateSubjectsInfo,
     updateRates,
     updateTerms,
-    updateYoutube
+    updateYoutube,
+    updateProblemCards,
+    requestPasswordReset,
+    resetPassword
 };
 
 function login(email, password) {
@@ -165,6 +168,40 @@ function updateYoutube(youtube) {
     };
 
     return fetch(`${config.apiUrl}/tutors/youtube`, requestOptions).then(handleResponse)
+}
+
+function updateProblemCards(data) {
+    const requestOptions = {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${localStorage.getItem('token')}` },
+        body: JSON.stringify(data)
+    };
+
+    return fetch(`${config.apiUrl}/tutors/problem-cards`, requestOptions).then(handleResponse)
+}
+
+function requestPasswordReset(data) {
+    const requestOptions = {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${localStorage.getItem('token')}` },
+        body: JSON.stringify({email: data})
+    };
+
+    return fetch(`${config.apiUrl}/users/request-password-reset`, requestOptions).then(handleResponse)
+}
+
+function resetPassword(email, code, password) {
+    const requestOptions = {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${localStorage.getItem('token')}` },
+        body: JSON.stringify({
+            email: email,
+            code: code,
+            newPassword: password
+        })
+    };
+
+    return fetch(`${config.apiUrl}/users/password-reset`, requestOptions).then(handleResponse)
 }
 
 function handleResponse(response) {

@@ -1,6 +1,6 @@
 <template>
 
-    <div class="jumbotron">
+    <div class="jumbotron" style="height: 100%">
         <div class="container login">
             <div class="row">
                 <div class="col-sm-6 offset-sm-3">
@@ -16,6 +16,7 @@
                             <input type="password" v-model="password" name="password" class="form-control" :class="{ 'is-invalid': submitted && !password }" />
                             <div v-show="submitted && !password" class="invalid-feedback">Password is required</div>
                         </div>
+                        <router-link to="/password-reset" >Forgot password?</router-link>
                         <div class="btn-container">
                             <router-link to="/register" class="btn btn-primary btn-border btn-cancel">Register</router-link>
                             <button class="btn btn-primary btn-border btn-save" :disabled="status.loggingIn">Login

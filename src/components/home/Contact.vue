@@ -74,7 +74,7 @@
                 if(!this.validateEmail(this.contact_email)) {
                     this.contact_notice = "The email address is badly formatted.";
                 } else {
-                    const url = `/api/contact`;
+                    const url = `/api/contact/landing`;
                     const requestOptions = {
                         method: "POST",
                         headers: {"Content-Type" : "application/json"},

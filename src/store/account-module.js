@@ -27,6 +27,10 @@ const actions = {
         commit('logout');
     },
 
+    clear({ commit }) {
+        commit('clear');
+    },
+
     getProfile({ dispatch, commit }, {userId, token}) {
         userService.getProfile(userId, token)
             .then(
@@ -178,6 +182,44 @@ const actions = {
             }
         );
     },
+    updateProblemCards({ dispatch, commit }, data) {
+        commit('updateProblemCardsRequest');
+        return userService.updateProblemCards(data).then(
+            (profile) => {
+                commit('getProfileSuccess', profile);
+                commit('updateProblemCardsSuccess');
+                setTimeout(() => {
+                    dispatch('alert/success', 'Youtube intro link Saved', { root: true });
+                })
+            },
+            () => {
+                commit('updateProblemCardsFailure');
+                dispatch('alert/error',  'Failed to update data', { root: true });
+            }
+        );
+    },
+    requestPasswordReset({ commit }, data) {
+        commit('requestPasswordResetRequest');
+        return userService.requestPasswordReset(data).then(
+            () => {
+                commit('requestPasswordResetSuccess');
+            },
+            () => {
+                commit('requestPasswordResetFailure');
+            }
+        );
+    },
+    resetPassword({ commit }, {email, code, password}) {
+        commit('resetPasswordRequest');
+        return userService.resetPassword(email, code, password).then(
+            () => {
+                commit('resetPasswordRequestSuccess');
+            },
+            () => {
+                commit('requestPasswordResetFailure');
+            }
+        );
+    },
     register({ dispatch, commit }, user) {
         commit('registerRequest', user);
         userService.register(user)
@@ -199,6 +241,9 @@ const actions = {
 };
 
 const mutations = {
+    clear() {
+        state.status = { };
+    },
     loginRequest(state, user) {
         state.status = { loggingIn: true };
         state.user = user;
@@ -307,7 +352,32 @@ const mutations = {
     },
     updateYoutubeFailure(state) {
         state.status = {};
+    },
+    updateProblemCardsRequest(state) {
+        state.status = { updatingProblemCardsForm: true };
+    },
+    updateProblemCardsSuccess(state) {
+        state.status = { updatedProblemCardsForm: true };
+    },
+    updateProblemCardsFailure(state) {
+        state.status = {};
+    },
+    requestPasswordResetRequest(state) {
+        state.status = { resetingPassword: true };
+    },
+    requestPasswordResetSuccess(state) {
+        state.status = { resetingPasswordMailSent: true };
+    },
+    requestPasswordResetFailure(state) {
+        state.status = {resetingPasswordMailFailure: true };
+    },
+    resetPasswordRequest(state) {
+        state.status = { resetingPassword: true, resetingPasswordMailSent: true };
+    },
+    resetPasswordRequestSuccess(state) {
+        state.status = { resetPasswordSuccess: true };
     }
+
 };
 
 export const account = {

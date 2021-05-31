@@ -30,7 +30,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="school-label"> >Degree and field of study *</label>
+                        <label for="school-label">Degree and field of study *</label>
                         <ValidationProvider rules="required" v-slot="{ errors }" >
                             <input type="text" class="form-control" id="school-label" placeholder="Example: BS Applied Mathematics" v-model="school.value" :class="{ 'is-invalid':  submitted && errors.length }">
                             <div v-if="submitted && errors.length" class="invalid-feedback">Degree and field of study is required</div>
@@ -70,7 +70,9 @@
 
                 <div class="btn-container">
                     <a class="btn btn-primary btn-border btn-cancel" @click="$bvModal.hide('education-modal')">Cancel</a>
-                    <button type="submit" class="btn btn-primary btn-border btn-save">Save</button>
+                    <button type="submit" class="btn btn-primary btn-border btn-save" :disabled="account.status.updatingEducationInfo">Save
+                        <img v-show="account.status.updatingEducationInfo" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+                    </button>
                 </div>
             </form>
         </ValidationObserver>
@@ -152,7 +154,6 @@
           },
           addCertificate: function() {
               if(this.data.certificates.length < 3) {
-                  console.log(Date.now());
                   this.data.certificates.push({
                       id: Date.now(),
                       label: "",

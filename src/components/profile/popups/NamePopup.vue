@@ -37,31 +37,24 @@
 
                 <div class="form-group">
                     <label for="shortBio-1">Introduction - first row</label>
-                    <ValidationProvider name="line1"  rules="lines:@line2,@line3" v-slot="{ errors }" >
-                        <input type="text" class="form-control" id="shortBio-1" v-model="firstLine" :class="{ 'is-invalid':  submitted && errors.length }" :placeholder="row1Placeholder">
-                        <div v-if="submitted && errors.includes('lines')" class="invalid-feedback">First row is required</div>
-                    </ValidationProvider>
+                    <input type="text" class="form-control" id="shortBio-1" v-model="firstLine"  :placeholder="row1Placeholder">
                 </div>
 
                 <div class="form-group">
                     <label for="shortBio-2">Introduction - second row</label>
-                    <ValidationProvider name="line2" rules="lines:@line1,@line3" v-slot="{ errors }" >
-                        <input type="text" class="form-control" id="shortBio-2"  v-model="secondLine" :placeholder="row2Placeholder" :class="{ 'is-invalid':  submitted && errors.length }">
-                        <div v-if="submitted && errors.includes('lines')" class="invalid-feedback">Second row is required</div>
-                    </ValidationProvider>
+                    <input type="text" class="form-control" id="shortBio-2"  v-model="secondLine" :placeholder="row2Placeholder" >
                 </div>
 
                 <div class="form-group">
                     <label for="shortBio-3">Introduction - third row</label>
-                    <ValidationProvider name="line3" rules="lines:@line1,@line2" v-slot="{ errors }" >
-                        <input type="text" class="form-control" id="shortBio-3" v-model="thirdLine"  placeholder="Welcome to my website!" :class="{ 'is-invalid':  submitted && errors.length }">
-                        <div v-if="submitted && errors.includes('lines')" class="invalid-feedback">Third row is required</div>
-                    </ValidationProvider>
+                    <input type="text" class="form-control" id="shortBio-3" v-model="thirdLine"  placeholder="Welcome to my website!" >
                 </div>
 
                 <div class="btn-container">
                     <a class="btn btn-primary btn-border btn-cancel" @click="$bvModal.hide('name-modal')">Cancel</a>
-                    <button type="submit" class="btn btn-primary btn-border btn-save">Save</button>
+                    <button type="submit" class="btn btn-primary btn-border btn-save" :disabled="account.status.updatingNameInfo">Save
+                        <img v-show="account.status.updatingNameInfo" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+                    </button>
                 </div>
             </form>
         </ValidationObserver>
@@ -75,21 +68,7 @@
 <script>
 
     import {mapActions, mapState} from "vuex";
-    import { extend } from 'vee-validate';
 
-    extend('lines', {
-        params: ['line1', 'line2'],
-        validate(value, { line1, line2 }) {
-            if(!(['', null, undefined].indexOf(line1) === -1) && !(['', null, undefined].indexOf(line2) === -1)) {
-                return true;
-            }else {
-                return ['', null, undefined].indexOf(value) === -1
-            }
-        },
-        message: 'lines',
-        required: true,
-        computesRequired: true
-    });
 
   export default {
       data () {
@@ -154,13 +133,20 @@
                   if (!success) {
                       return;
                   }
-
                   const firstName = this.firstName;
                   const lastName = this.lastName;
                   const email = this.email;
-                  var shortBio;
-                  if(this.firstLine)
-                      shortBio = this.firstLine + '\n' + this.secondLine + '\n'+ this.thirdLine;
+                  var shortBio = '';
+                  if(this.firstLine) {
+                      shortBio = this.firstLine + '\n';
+                  }
+                  if(this.secondLine) {
+                      shortBio = shortBio + this.secondLine + '\n';
+                  }
+                  if(this.thirdLine) {
+                      shortBio = shortBio + this.thirdLine;
+                  }
+                  shortBio = shortBio.trim();
                   this.updateNameInfo({firstName, lastName, email, shortBio});
               });
 

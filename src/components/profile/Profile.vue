@@ -65,8 +65,8 @@
                         <p v-if="response.profile.firstName" class="line-1">Hi, my name is {{response.profile.firstName}}.</p>
                           <p v-if="!response.profile.firstName && cmsToggle" class="line-1">Hi, my name is &lt; Name &gt;.</p>
                         <p v-if="response.categories.length" class="line-2">I tutor {{formatArray(response.categories.map(cat => cat.categoryName))}}.</p>
-                          <p v-if="!response.categories.length && cmsToggle" class="line-2">I tutor &lt; Subject 1 &gt;.</p>
-                        <p>Welcome to my website!</p>
+                          <p v-if="!response.categories.length && cmsToggle" class="line-1">I tutor &lt; Subject 1 &gt;.</p>
+                        <p class="line-1" >Welcome to my website!</p>
                     </div>
 
                       <div v-else class="short-bio">
@@ -158,7 +158,7 @@
                                 </div>
                             </div>
 
-                            <School v-if="!response.schools && cmsToggle"></School>
+                            <School v-if="!response.schools.length && cmsToggle"></School>
 
 
 <!-- CERTIFICATES -->
@@ -176,7 +176,7 @@
                             </div>
 
 
-                            <Certificate v-if="!response.certificate && cmsToggle"></Certificate>
+                            <Certificate v-if="!response.certificates.length && cmsToggle"></Certificate>
                         </div>
 
                         <div class="col graphic-bio">
@@ -401,7 +401,7 @@
                     </div>
 
                     <div v-if="response.profile.youtubeIntroLink" class="youtube-display">
-                        <iframe width="560" height="315" :src="response.profile.youtubeLink" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe width="560" height="315" :src="response.profile.youtubeIntroLink" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                     <div>
                         <div v-if="!response.profile.youtubeIntroLink && cmsToggle" class="YT-cms">
@@ -420,7 +420,7 @@
 
                 <div :class="[cmsToggle && 'cms-frame tu-card-frame margin-frame']">
                     <div v-if="cmsToggle">
-                        <ProblemCardsPopup></ProblemCardsPopup>
+                        <ProblemCardsPopup v-bind:profileProp="response"></ProblemCardsPopup>
                         <a href="#" class="edit" v-b-modal.problem-cards-modal>
                             <font-awesome-icon icon="edit" />
                         </a>
@@ -442,7 +442,7 @@
                                     </div>
                                 </div>
 
-                                <ProblemCard v-if="response.problemCards && cmsToggle"></ProblemCard>
+                                <ProblemCard v-if="!response.problemCards.length && cmsToggle"></ProblemCard>
 
                             </div>
                         </div>
