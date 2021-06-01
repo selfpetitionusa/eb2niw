@@ -47,15 +47,13 @@
                             </tr>
                         </tbody>
                     </table>
-
                 </div>
                 <div  v-if="submitted && errors.length"  class="invalid-feedback" style="display: block">Missing required fields</div>
-                <div class="plus-minus">
+
+                <div class="plus-minus add-rates">
                     <font-awesome-icon class="icon" icon="plus-circle" v-bind:class="[isActiveRatePlus ? 'active' : 'disabled']" v-on:click="addRate" />
                     <font-awesome-icon class="icon" icon="minus-circle" v-bind:class="[isActiveRateMinus ? 'active' : 'disabled']" v-on:click="deleteRate" />
                 </div>
-
-
 
                 <div class="form-group">
                     <label for="lesson-length">How long is your standard lesson?</label>

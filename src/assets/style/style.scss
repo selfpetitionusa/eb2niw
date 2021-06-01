@@ -2795,13 +2795,13 @@ h2.lastname {
     font-weight: 400;
     margin-top: 15px;
 
-    .line-1, .line-2 {
+    .line-short-bio {
         line-height: 22px;
         margin-bottom: 0px;
-    }
 
-    .line-2 {
-        margin-bottom: 5px;
+        &:last-child {
+            margin-top: 5px;
+        }
     }
 }
 
@@ -2810,7 +2810,7 @@ h2.lastname {
             font-size: 14px;
             margin-top: 10px;
 
-            .line-1 {
+            .line-short-bio {
                 line-height: 20px;
             }
         }
@@ -4109,6 +4109,10 @@ input[type="range"]::-ms-fill-upper {
         margin: 5px;
     }
 
+    &.add-rates {
+        margin-bottom: 15px;
+    }
+
     .active {
         color: #6084A4;
 
@@ -4224,7 +4228,7 @@ input#question {
 .table-container {
     display: flex;
     justify-content: space-around;
-    margin: 25px 0px 10px;
+    margin: 25px 0px 0px;
 }
 
 .table {
