@@ -83,19 +83,19 @@
               account: state => state.account
           }),
           onlinePlaceholder: function () {
-              if(this.online) return 'Yes';
+              if(this.data.online) return 'Yes';
               else return 'No';
           },
           inPersonPlaceholder: function () {
-              if(this.inPerson) return 'Yes';
+              if(this.data.inPerson) return 'Yes';
               else return 'No';
           },
           freeConsultationPlaceholder: function () {
-              if(this.freeConsultation) return 'Yes';
+              if(this.data.freeConsultation) return 'Yes';
               else return 'No';
           },
           cancellationPolicyPlaceholder: function () {
-              if(this.cancellationPolicy) return '24h notice';
+              if(this.data.cancellationPolicy) return '24h notice';
               else return 'No refunds';
           }
       },
