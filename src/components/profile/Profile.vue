@@ -3,6 +3,21 @@
     <div class="dflex">
         <div :id="response.profile.token" v-if="response.profile.token" v-show="false"></div>
 
+<!-- HAMBURGER MENU -->
+
+    <div class="hamburger-nav">
+        <div id="myLinks">
+            <a href="#section-about-me" v-on:click="actionHamburgerMenu">About me</a>
+            <a href="#section-subjects" v-on:click="actionHamburgerMenu">Subjects</a>
+            <a href="#section-rates" v-on:click="actionHamburgerMenu">Rates</a>
+            <a href="#section-expertise" v-if="!(response.profile.youtubeIntroLink === null && response.problemCards.length === 0)" v-on:click="actionHamburgerMenu">Expertise</a>
+        </div>
+
+        <a v-on:click="actionHamburgerMenu" class="icon">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
 
 <!-- PROFILE TEMPLATE -->
 
