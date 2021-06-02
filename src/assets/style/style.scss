@@ -2474,7 +2474,7 @@ body {
 }
 
 .dflex {
-    position: relative;
+    position: fixed;
     overflow-x: hidden;
     width: 100%;
     height:100%;
@@ -4385,7 +4385,7 @@ a.edit {
     padding-left: 4px;
     padding-bottom: 5px;
     border-radius: 35%;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.8);
 
     &.outer {
         margin-top: 0.3rem;
