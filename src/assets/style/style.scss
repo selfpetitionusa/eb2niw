@@ -2474,14 +2474,14 @@ body {
 }
 
 .dflex {
-    position: fixed;
+    position: absolute;
     overflow-x: hidden;
     width: 100%;
     height:100%;
     background-color:#f9f6f6;
 }
 
-    @media (max-width: 767px) {
+    @media (max-width: 991px) {
         .dflex {
             background: linear-gradient(244.35deg, #314194 37.33%, #3B4DAB 43.75%, #5457C1 50.17%, #6B6FEA 76.06%);
         }
@@ -2504,7 +2504,7 @@ body {
         }
     }
 
-    @media (max-width: 767px) {
+    @media (max-width: 991px) {
         .background-rectangular {
             display: none;
         }
