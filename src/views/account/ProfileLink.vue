@@ -1,16 +1,16 @@
 <template>
 
-    <div class="container-fluid pt-3">
+    <div class="container-fluid pt-5">
         <form class="cms">
             <div class="form-group row">
-            <label for="profileLink" class="col-lg-12 col-form-label">For marketing and sharing with your clients</label>
-            <div class="col-lg-12">
+            <label for="profileLink" class="col-12 col-form-label">For marketing and sharing with your clients</label>
+            <div class="col-12">
                 <div class="row">
-                    <div class="col-lg-11">
+                    <div class="col-md-11 col-10">
                         <input type="text" class="form-control" disabled v-model="profileLink" id="profileLink" >
                     </div>
 
-                    <div class="col-lg-1">
+                    <div class="col-md-1 col-2">
                         <a  href="#" v-on:click="doCopy">
                             <font-awesome-icon   style="font-size: 35px;margin-top: 5px;" icon="copy" />
                         </a>
