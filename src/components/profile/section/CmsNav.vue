@@ -18,7 +18,7 @@
 
                         <b-collapse class="collapse" id="navbarSupportedContent" is-nav>
                             <ul class="navbar-nav ml-auto">
-                                <li class="nav-item"><a href="/account" class="nav-link">My account</a></li>
+                                <li class="nav-item"><a href="/account/basic-info" class="nav-link">My account</a></li>
                                 <li class="nav-item"><a href="/help" class="nav-link">Help</a></li>
                                 <li class="nav-item"><a class="nav-link"><router-link to="/login">Logout</router-link></a></li>
                             </ul>

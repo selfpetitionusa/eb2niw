@@ -13,13 +13,14 @@ import './assets/style/custom.scss';
 import VueMeta from 'vue-meta'
 import VueCroppie from 'vue-croppie';
 import 'croppie/croppie.css' // import the croppie css manually
+import VueClipboard from 'vue-clipboard2'
 
 
 import './validation/validation.js'
 
 
 Vue.config.productionTip = false;
-
+Vue.use(VueClipboard)
 
 library.add(fas)
 Vue.component('font-awesome-icon', FontAwesomeIcon)

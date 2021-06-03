@@ -9,6 +9,9 @@ import Account from './views/Account';
 import Login from './views/Login';
 import Register from './views/Register';
 import PasswordReset from './views/PasswordReset';
+import BasicInfo from './views/account/BasicInfo';
+import AccountPasswordReset from './views/account/AccountPasswordReset';
+import ProfileLink from './views/account/ProfileLink';
 
 
 export const router = new VueRouter({
@@ -26,7 +29,24 @@ export const router = new VueRouter({
       { path: '/dashboard', component: EditProfileView },
       { path: '/preview', component: Preview },
       { path: '/help', component: Help },
-      { path: '/account', component: Account },
+      {
+            path: '/account',
+            component: Account,
+            children: [
+                {
+                    path: 'basic-info',
+                    component: BasicInfo
+                },
+                {
+                    path: 'password-reset',
+                    component: AccountPasswordReset
+                },
+                {
+                    path: 'profile-link',
+                    component: ProfileLink
+                }
+            ]
+      },
       // otherwise redirect to home
       { path: '*', redirect: '/' }
     ]

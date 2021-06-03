@@ -16,7 +16,8 @@ export const userService = {
     updateYoutube,
     updateProblemCards,
     requestPasswordReset,
-    resetPassword
+    resetPassword,
+    updateBasicInfo
 };
 
 function login(email, password) {
@@ -53,6 +54,22 @@ function register(user) {
     };
 
     return fetch(`${config.apiUrl}/users`, requestOptions).then(handleResponse);
+}
+
+function updateBasicInfo(data) {
+    const requestOptions = {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${localStorage.getItem('token')}` },
+        body: JSON.stringify(data)
+    };
+
+    return fetch(`${config.apiUrl}/users`, requestOptions).then(handleResponse).then(user => {
+        // login successful if there's a jwt token in the response
+        if (user.id) {
+            localStorage.setItem('user', JSON.stringify(user));
+        }
+        return user;
+    });
 }
 
 function getProfile(userId, token) {

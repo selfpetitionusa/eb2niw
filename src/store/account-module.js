@@ -30,7 +30,9 @@ const actions = {
     clear({ commit }) {
         commit('clear');
     },
-
+    copyProfileLink({ dispatch }) {
+        dispatch('alert/success',  'Copied link to profile', { root: true });
+    },
     getProfile({ dispatch, commit }, {userId, token}) {
         userService.getProfile(userId, token)
             .then(
@@ -198,6 +200,22 @@ const actions = {
             }
         );
     },
+    updateBasicInfo({ dispatch, commit }, data) {
+        commit('updateBasicInfoRequest');
+        return userService.updateBasicInfo(data).then(
+            (user) => {
+                commit('updateSuccess', user);
+                commit('updateBasicInfoSuccess');
+                setTimeout(() => {
+                    dispatch('alert/success', 'Basic Info Saved', { root: true });
+                })
+            },
+            () => {
+                commit('updateBasicInfoFailure');
+                dispatch('alert/error',  'Failed to update data', { root: true });
+            }
+        );
+    },
     requestPasswordReset({ commit }, data) {
         commit('requestPasswordResetRequest');
         return userService.requestPasswordReset(data).then(
@@ -238,6 +256,7 @@ const actions = {
                 }
             );
     }
+
 };
 
 const mutations = {
@@ -250,6 +269,10 @@ const mutations = {
     },
     loginSuccess(state, user) {
         state.status = { loggedIn: true };
+        state.user = user;
+    },
+    updateSuccess(state, user) {
+        console.log(user)
         state.user = user;
     },
     loginFailure(state) {
@@ -376,6 +399,15 @@ const mutations = {
     },
     resetPasswordRequestSuccess(state) {
         state.status = { resetPasswordSuccess: true };
+    },
+    updateBasicInfoRequest(state) {
+        state.status = {updatingBasicInfo: true };
+    },
+    updateBasicInfoSuccess(state) {
+        state.status = {};
+    },
+    updateBasicInfoFailure(state) {
+        state.status = {};
     }
 
 };

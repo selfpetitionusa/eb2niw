@@ -3,57 +3,57 @@
     <div>
         <CmsNav v-bind:previewToggleProp="false"></CmsNav>
 
-        <div class="row">
-            <div class="col-11 col-sm-8 col-md-6 col-xl-5 account">
-              <form id="account">
-                  <div class="form-group row">
-                      <label for="staticEmail" class="col-lg-3 col-form-label">Registration email</label>
-                      <div class="col-lg-9">
-                          <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="em****@gmail.com">
-                      </div>
-                  </div>
-
-                  <div class="form-group row">
-                      <label for="firstName" class="col-lg-3 col-form-label">First name</label>
-                      <div class="col-lg-9">
-                          <input type="text" class="form-control" id="firstName" placeholder="Pre-populated First Name">
-                      </div>
-                  </div>
-
-                  <div class="form-group row">
-                      <label for="firstName" class="col-lg-3 col-form-label">Last name</label>
-                      <div class="col-lg-9">
-                          <input type="text" class="form-control" id="firstName" placeholder="Pre-populated Last Name">
-                      </div>
-                  </div>
-              </form>
-
-              <div class="pswreset">
-                  <h4>Reset Password</h4>
-                  <div class="form-group">
-                      <label for="passwordReset">Enter your email address</label>
-                      <input type="email" class="form-control" id="passwordReset">
-                  </div>
-                  <button type="reset" class="btn btn-primary">Reset</button>
-              </div>
-            </div>
-        </div>
-
+                <div v-if="account.profile" class="row">
+                    <div class="col-8 account">
+                        <div class="row">
+                            <div class="col-3">
+                                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                    <router-link class="nav-link" id="v-pills-home-tab" data-toggle="pill" role="tab" aria-controls="v-pills-basic"  :to="{ path: '/account/basic-info' }">Basic Info</router-link>
+                                    <router-link class="nav-link" id="v-pills-reset-tab" data-toggle="pill" role="tab" aria-controls="v-pills-password"  :to="{ path: '/account/password-reset' }">Password Reset</router-link>
+                                    <router-link class="nav-link" id="v-pills-link-tab" data-toggle="pill" role="tab" aria-controls="v-pills-link"  :to="{ path: '/account/profile-link' }">Profile Link</router-link>
+                                </div>
+                            </div>
+                            <div class="col-9" >
+                                <div v-if="alert.failed === false" :class="`alert ${alert.type}`">{{alert.message}}</div>
+                                <router-view :model="account.profile"></router-view>
+                            </div>
+                        </div>
+                    </div>
+                </div>
     </div>
 
 </template>
 
 
+import Profile from "../components/profile/Profile";
+import CmsNav from "../components/profile/section/CmsNav";
+import { mapState, mapActions } from 'vuex'
 
 
 <script>
 
   import CmsNav from "../components/profile/section/CmsNav";
+  import {mapActions, mapState} from "vuex";
 
     export default {
         components: {
             CmsNav
+        },
+        computed: {
+            ...mapState({
+                account: state => state.account,
+                alert: state => state.alert
+            })
+        },
+        methods: {
+            ...mapActions('account', ['getProfile'])
+        },
+        created() {
+            const token = null;
+            const userId = this.account.user.id;
+            this.getProfile({userId, token})
         }
     }
 
 </script>
+
