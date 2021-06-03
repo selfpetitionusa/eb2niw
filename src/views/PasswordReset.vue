@@ -5,7 +5,7 @@
             <div class="row">
                 <div class="col-sm-6 offset-sm-3">
                     <h2  v-if="!status.resetingPasswordMailSent && !status.resetingPasswordMailFailure && !status.resetPasswordSuccess">Forgot password?</h2>
-                    <h4  v-if="!status.resetingPasswordMailSent && !status.resetingPasswordMailFailure && !status.resetPasswordSuccess">No worries! Just enter your email and we'll send you a reset password code.</h4>
+                    <h6  v-if="!status.resetingPasswordMailSent && !status.resetingPasswordMailFailure && !status.resetPasswordSuccess">No worries! Just enter your email and we'll send you a reset password code.</h6>
                     <div style="margin-top: 30px;">
                         <form v-if="!status.resetingPasswordMailSent && !status.resetingPasswordMailFailure && !status.resetPasswordSuccess" @submit.prevent="handleRequestPasswordReset">
                             <div class="form-group">

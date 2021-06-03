@@ -26,6 +26,22 @@
     <div class="row website-split">
 
 
+<!-- HAMBURGER MENU -->
+
+        <div class="hamburger-nav">
+            <div id="myLinks">
+                <a href="#section-about-me" v-on:click="actionHamburgerMenu">About me</a>
+                <a href="#section-subjects" v-on:click="actionHamburgerMenu">Subjects</a>
+                <a href="#section-rates" v-on:click="actionHamburgerMenu">Rates</a>
+                <a href="#section-expertise" v-if="!(response.profile.youtubeIntroLink === null && response.problemCards.length === 0)" v-on:click="actionHamburgerMenu">Expertise</a>
+            </div>
+
+            <a v-on:click="actionHamburgerMenu" class="icon">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+
+
 <!-- LEFT SECTION -->
 
         <div class="col-xl-3 col-lg-4 col-md-12 col-sm-12 col-12">
@@ -62,16 +78,16 @@
                       <div v-if="!response.categories.length && cmsToggle" class="subject-categories">Subject 1</div>
 
                     <div v-if="!response.profile.shortBio" class="short-bio">
-                        <p v-if="response.profile.firstName" class="line-1">Hi, my name is {{response.profile.firstName}}.</p>
-                          <p v-if="!response.profile.firstName && cmsToggle" class="line-1">Hi, my name is &lt; Name &gt;.</p>
-                        <p v-if="response.categories.length" class="line-2">I tutor {{formatArray(response.categories.map(cat => cat.categoryName))}}.</p>
-                          <p v-if="!response.categories.length && cmsToggle" class="line-1">I tutor &lt; Subject 1 &gt;.</p>
-                        <p class="line-1" >Welcome to my website!</p>
+                        <p v-if="response.profile.firstName" class="line-short-bio">Hi, my name is {{response.profile.firstName}}.</p>
+                          <p v-if="!response.profile.firstName && cmsToggle" class="line-short-bio">Hi, my name is &lt; Name &gt;.</p>
+                        <p v-if="response.categories.length" class="line-short-bio">I tutor {{formatArray(response.categories.map(cat => cat.categoryName))}}.</p>
+                          <p v-if="!response.categories.length && cmsToggle" class="line-short-bio">I tutor &lt; Subject 1 &gt;.</p>
+                        <p class="line-short-bio" >Welcome to my website!</p>
                     </div>
 
                       <div v-else class="short-bio">
                           <div v-if="response.profile.shortBio">
-                          <p class="line-1" v-for="bio in response.profile.shortBio.split(/\r?\n/)" :key="bio">{{bio}}</p>
+                              <p class="line-short-bio" v-for="bio in response.profile.shortBio.split(/\r?\n/)" :key="bio">{{bio}}</p>
                           </div>
                       </div>
 
@@ -297,7 +313,7 @@
 
 
                         <div class="rates-additional-comment">{{lessonLength}}{{response.profile.rateInfo.rateSectionComment}}</div>
-                          <div v-if="!response.profile.rateInfo.rateSectionComment" class="rates-additional-comment">Details available upon request</div>
+                          <div v-if="!response.profile.rateInfo.rateSectionComment" class="rates-additional-comment">Details available upon request.</div>
 
                     </div>
 
@@ -323,7 +339,7 @@
                             <div class="col-11 text">
                                 <div class="label">Online lessons:
                                     <div class="value">
-                                        <div v-if="response.profile.rateInfo.online" class="input">{{response.profile.rateInfo.onlineComment === null ? 'Yes' : response.profile.rateInfo.onlineComment}}</div>
+                                        <div v-if="response.profile.rateInfo.online" class="input">{{response.profile.rateInfo.onlineComment.length === 0 ? 'Yes' : response.profile.rateInfo.onlineComment}}</div>
                                         <div v-else class="input">No</div>
                                     </div>
                                 </div>
@@ -335,7 +351,7 @@
                             <div class="col-11 text">
                                 <div class="label">In-person lessons:
                                     <div class="value">
-                                        <div v-if="response.profile.rateInfo.inPerson" class="input">{{response.profile.rateInfo.inPersonComment === null ? 'Yes' : response.profile.rateInfo.inPersonComment}}</div>
+                                        <div v-if="response.profile.rateInfo.inPerson" class="input">{{response.profile.rateInfo.inPersonComment.length === 0 ? 'Yes' : response.profile.rateInfo.inPersonComment}}</div>
                                         <div v-else class="input">No</div>
                                     </div>
                                 </div>
@@ -347,7 +363,7 @@
                             <div class="col-11 text">
                                 <div class="label">Free consultation:
                                     <div class="value">
-                                        <div v-if="response.profile.rateInfo.freeConsultation" class="input">{{response.profile.rateInfo.freeConsultationComment === null ? 'Yes' : response.profile.rateInfo.freeConsultationComment}}</div>
+                                        <div v-if="response.profile.rateInfo.freeConsultation" class="input">{{response.profile.rateInfo.freeConsultationComment.length === 0 ? 'Yes' : response.profile.rateInfo.freeConsultationComment}}</div>
                                         <div v-else class="input">No</div>
                                     </div>
                                 </div>
@@ -359,7 +375,7 @@
                             <div class="col-11 text">
                                 <div class="label">Cancelation policy:
                                     <div class="value">
-                                        <div v-if="response.profile.rateInfo.cancellationPolicy" class="input">{{response.profile.rateInfo.cancellationPolicyComment === null ? '24h notice' : response.profile.rateInfo.cancellationPolicyComment}}</div>
+                                        <div v-if="response.profile.rateInfo.cancellationPolicy" class="input">{{response.profile.rateInfo.cancellationPolicyComment.length === 0 ? '24h notice' : response.profile.rateInfo.cancellationPolicyComment}}</div>
                                         <div v-else class="input">No refunds</div>
                                     </div>
                                 </div>

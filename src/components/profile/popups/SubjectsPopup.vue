@@ -22,12 +22,12 @@
                             <input type="text" class="form-control" id="subject-categories1" v-model="subject.subcategoryName1" placeholder="Example: Precalculus *" :class="{ 'is-invalid': submitted && errors.length }" >
                             <div v-if="submitted && errors.length" class="invalid-feedback">Subject category is required</div>
                         </ValidationProvider>
-                        <input type="text" class="form-control" id="subject-categories2" v-model="subject.subcategoryName2" placeholder="Example: Calculus" :disabled="!subject.subcategoryName1" >
-                        <input type="text" class="form-control" id="subject-categories3" v-model="subject.subcategoryName3" placeholder="Example: Algebra" :disabled="!subject.subcategoryName2" >
-                        <input type="text" class="form-control" id="subject-categories4" v-model="subject.subcategoryName4" placeholder="Example: Geometry" :disabled="!subject.subcategoryName3" >
-                        <input type="text" class="form-control" id="subject-categories5" v-model="subject.subcategoryName5" placeholder="Example: Trigonometry" :disabled="!subject.subcategoryName4">
-                        <input type="text" class="form-control" id="subject-categories6" v-model="subject.subcategoryName6" placeholder="Example: Differential Equations" :disabled="!subject.subcategoryName5">
-                        <input type="text" class="form-control" id="subject-categories7" v-model="subject.subcategoryName7" placeholder="Example: Logic" :disabled="!subject.subcategoryName6">
+                        <input type="text" class="form-control" id="subject-categories2" v-model="subject.subcategoryName2" placeholder="Example: Calculus" :disabled="!subject.subcategoryName1 && !subject.subcategoryName2" >
+                        <input type="text" class="form-control" id="subject-categories3" v-model="subject.subcategoryName3" placeholder="Example: Algebra" :disabled="!subject.subcategoryName2 && !subject.subcategoryName3" >
+                        <input type="text" class="form-control" id="subject-categories4" v-model="subject.subcategoryName4" placeholder="Example: Geometry" :disabled="!subject.subcategoryName3 && !subject.subcategoryName4" >
+                        <input type="text" class="form-control" id="subject-categories5" v-model="subject.subcategoryName5" placeholder="Example: Trigonometry" :disabled="!subject.subcategoryName4 && !subject.subcategoryName5">
+                        <input type="text" class="form-control" id="subject-categories6" v-model="subject.subcategoryName6" placeholder="Example: Differential Equations" :disabled="!subject.subcategoryName5 && !subject.subcategoryName6">
+                        <input type="text" class="form-control" id="subject-categories7" v-model="subject.subcategoryName7" placeholder="Example: Logic" :disabled="!subject.subcategoryName6 && !subject.subcategoryName7">
                     </div>
                 </div>
 
