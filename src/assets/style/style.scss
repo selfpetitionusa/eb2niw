@@ -3834,6 +3834,14 @@ Pop-ups & CMS
     }
 }
 
+.nav-pills {
+    .nav-link {
+        &:active, &.active {
+            background-color: #6084A4;
+        }
+    }
+}
+
 .form-title {
     font-weight: 500;
     font-size: 14px;

@@ -3,8 +3,8 @@
     <div class="container-fluid pt-3">
         <form class="cms">
             <div class="form-group row">
-            <label for="profileLink" class="col-lg-3 col-form-label">Link to tutors profile</label>
-            <div class="col-lg-9">
+            <label for="profileLink" class="col-lg-12 col-form-label">For marketing and sharing with your clients</label>
+            <div class="col-lg-12">
                 <div class="row">
                     <div class="col-lg-11">
                         <input type="text" class="form-control" disabled v-model="profileLink" id="profileLink" >
