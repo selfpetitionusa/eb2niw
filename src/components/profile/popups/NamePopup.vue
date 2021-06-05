@@ -102,8 +102,8 @@
                   return 'Hi, my name is <name>.';
           },
           row2Placeholder: function () {
-              if(this.profileProp.profile.categories && this.profileProp.profile.categories.length > 0)
-                  return 'I teach ' + this.profileProp.profile.categories[0] + '.';
+              if(this.profileProp.categories && this.profileProp.categories.length > 0)
+                  return 'I tutor ' + this.profileProp.categories[0].categoryName + '.';
               else
                   return 'I teach <Subject 1>.';
           },

@@ -191,7 +191,7 @@ const actions = {
                 commit('getProfileSuccess', profile);
                 commit('updateProblemCardsSuccess');
                 setTimeout(() => {
-                    dispatch('alert/success', 'Youtube intro link Saved', { root: true });
+                    dispatch('alert/success', 'Problem cards saved', { root: true });
                 })
             },
             () => {

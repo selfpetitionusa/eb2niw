@@ -49,7 +49,7 @@
 
                 <div>
                     <img class="photo" :src="response.profile.photo" />
-                    <img v-if="!response.profile.photo && response.profile.sex === 'Female'" class="photo" src="/avatar_female_cropped.png" />
+                    <img v-if="!response.profile.photo && response.profile.sex !== 'Male'" class="photo" src="/avatar_female_cropped.png" />
                     <img v-if="!response.profile.photo && response.profile.sex === 'Male'" class="photo" src="/avatar_male_cropped.png" />
                     <div v-if="cmsToggle" class="pic-edit">
                         <PhotoPopup v-bind:profileProp="response" ></PhotoPopup>
@@ -339,7 +339,7 @@
                             <div class="col-11 text">
                                 <div class="label">Online lessons:
                                     <div class="value">
-                                        <div v-if="response.profile.rateInfo.online" class="input">{{response.profile.rateInfo.onlineComment.length === 0 ? 'Yes' : response.profile.rateInfo.onlineComment}}</div>
+                                        <div v-if="response.profile.rateInfo.online" class="input">{{!response.profile.rateInfo.onlineComment ? 'Yes' : response.profile.rateInfo.onlineComment}}</div>
                                         <div v-else class="input">No</div>
                                     </div>
                                 </div>
@@ -351,7 +351,7 @@
                             <div class="col-11 text">
                                 <div class="label">In-person lessons:
                                     <div class="value">
-                                        <div v-if="response.profile.rateInfo.inPerson" class="input">{{response.profile.rateInfo.inPersonComment.length === 0 ? 'Yes' : response.profile.rateInfo.inPersonComment}}</div>
+                                        <div v-if="response.profile.rateInfo.inPerson" class="input">{{!response.profile.rateInfo.inPersonComment ? 'Yes' : response.profile.rateInfo.inPersonComment}}</div>
                                         <div v-else class="input">No</div>
                                     </div>
                                 </div>
@@ -363,7 +363,7 @@
                             <div class="col-11 text">
                                 <div class="label">Free consultation:
                                     <div class="value">
-                                        <div v-if="response.profile.rateInfo.freeConsultation" class="input">{{response.profile.rateInfo.freeConsultationComment.length === 0 ? 'Yes' : response.profile.rateInfo.freeConsultationComment}}</div>
+                                        <div v-if="response.profile.rateInfo.freeConsultation" class="input">{{!response.profile.rateInfo.freeConsultationComment ? 'Yes' : response.profile.rateInfo.freeConsultationComment}}</div>
                                         <div v-else class="input">No</div>
                                     </div>
                                 </div>
@@ -375,7 +375,7 @@
                             <div class="col-11 text">
                                 <div class="label">Cancelation policy:
                                     <div class="value">
-                                        <div v-if="response.profile.rateInfo.cancellationPolicy" class="input">{{response.profile.rateInfo.cancellationPolicyComment.length === 0 ? '24h notice' : response.profile.rateInfo.cancellationPolicyComment}}</div>
+                                        <div v-if="response.profile.rateInfo.cancellationPolicy" class="input">{{!response.profile.rateInfo.cancellationPolicyComment ? '24h notice' : response.profile.rateInfo.cancellationPolicyComment}}</div>
                                         <div v-else class="input">No refunds</div>
                                     </div>
                                 </div>
@@ -398,7 +398,7 @@
 
 <!-- EXPERTISE SECTION -->
 
-            <div id="section-expertise" class="tu-card" v-if="!(response.profile.youtubeIntroLink === null && response.problemCards.length === 0) || cmsToggle">
+            <div id="section-expertise" class="tu-card" v-if="!(!response.profile.youtubeIntroLink && response.problemCards.length === 0) || cmsToggle">
 
                 <div class="section-container">
                     <div class="icon"></div>
@@ -455,6 +455,7 @@
                                     <div class="input">
                                         <p class="question">{{problemCard.question}}</p>
                                         <p class="answer">{{problemCard.answer}}</p>
+                                        {{offset}}  {{offsetWidth}}  {{scrollWidth}}
                                     </div>
                                 </div>
 
@@ -464,7 +465,7 @@
                         </div>
 
                         <div v-on:click="scroll('right')" class="right-arrow">
-                            <img v-if="offset + offsetWidth <scrollWidth" src="../../assets/img/arrow_right.svg">
+                            <img v-if="offset + offsetWidth < scrollWidth" src="../../assets/img/arrow_right.svg">
                         </div>
 
                     </div>
@@ -534,14 +535,6 @@
       ProblemCardsPopup
     },
     props: ['cmsToggleProp',  'profileProp'],
-    watch: {
-      response: function (val) {
-          if(val.problemCards.length > 0) {
-              this.scrollWidth = document.getElementById('problems').scrollWidth;
-              this.offsetWidth = document.getElementById('problems').offsetWidth;
-          }
-      }
-    },
     computed: {
         response: function () {
             return this.profileProp;
@@ -553,7 +546,15 @@
                 return '';
         }
     },
-    metaInfo() {
+    watch: {
+        response: function () {
+            this.calculateWidths();
+        }
+     },
+      mounted() {
+          this.calculateWidths();
+      },
+      metaInfo() {
           return {
               title: `${this.response.profile.firstName} ${this.response.profile.lastName} - ${this.response.profile.headline}`,
               meta: [
@@ -574,6 +575,15 @@
         }
     },
       methods: {
+         calculateWidths(){
+             if(this.response.problemCards.length > 0) {
+                 this.$nextTick(() => {
+                     this.scrollWidth = document.getElementById('problems').scrollWidth;
+                     this.offsetWidth = document.getElementById('problems').offsetWidth;
+                 });
+
+             }
+         },
           handleScroll () {
               this.offset = document.getElementById('problems').scrollLeft;
           },

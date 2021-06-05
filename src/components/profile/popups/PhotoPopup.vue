@@ -70,6 +70,9 @@
             initModal() {
                 this.clear();
                 this.sex = this.profileProp.profile.sex;
+                if(!this.sex){
+                    this.sex = 'Female'
+                }
                 if(this.profileProp.profile.photo) {
                     this.defaultAvatar = false;
                     this.$refs.croppieRef.bind({

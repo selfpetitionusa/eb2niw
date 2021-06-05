@@ -1,7 +1,7 @@
 <template>
     <div>
         <CmsNav v-bind:previewToggleProp="true"></CmsNav>
-        <div v-if="alert.failed === false" :class="`alert ${alert.type}`">{{alert.message}}</div>
+        <div style="top: 15px;z-index: 1" v-if="alert.failed === false" :class="`alert ${alert.type}`">{{alert.message}}</div>
         <Profile  v-if="account.profile"  v-bind:cmsToggleProp="true" v-bind:profileProp="account.profile" ></Profile>
     </div>
 
