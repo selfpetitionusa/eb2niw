@@ -1,11 +1,11 @@
 <template>
 
-    <div class="container-fluid pt-3">
+    <div class="container-fluid pt-5">
             <div class="row">
-                <div class="col-sm-8">
+                <div class="col-xl-10 col-sm-12">
                         <form class="cms" v-if="!status.resetingPasswordMailSent && !status.resetingPasswordMailFailure && !status.resetPasswordSuccess" @submit.prevent="handleRequestPasswordReset">
-                            <div class="form-group ">
-                                <label for="email">Email</label>
+                            <div class="form-group">
+                                <label for="email">E-mail</label>
                                 <input type="text" v-model="email" name="email" class="form-control" :class="{ 'is-invalid': submitted && !email }" />
                                 <div v-show="submitted && !email" class="invalid-feedback">Email is required</div>
                             </div>

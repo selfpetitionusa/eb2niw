@@ -34,7 +34,7 @@ export const router = new VueRouter({
             component: Account,
             children: [
                 {
-                    path: 'basic-info',
+                    path: 'registration-info',
                     component: BasicInfo
                 },
                 {
@@ -42,7 +42,7 @@ export const router = new VueRouter({
                     component: AccountPasswordReset
                 },
                 {
-                    path: 'profile-link',
+                    path: 'website-link',
                     component: ProfileLink
                 }
             ]

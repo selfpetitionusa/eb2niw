@@ -3834,6 +3834,22 @@ Pop-ups & CMS
     }
 }
 
+    @media (max-width: 575px) {
+        .account {
+            margin: 3rem auto 1rem;
+        }
+    }
+
+.nav-pills {
+    .nav-link {
+        font-weight: 500;
+
+        &:active, &.active {
+            background-color: #6084A4;
+        }
+    }
+}
+
 .form-title {
     font-weight: 500;
     font-size: 14px;

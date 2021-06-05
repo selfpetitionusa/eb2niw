@@ -31,7 +31,7 @@ const actions = {
         commit('clear');
     },
     copyProfileLink({ dispatch }) {
-        dispatch('alert/success',  'Copied link to profile', { root: true });
+        dispatch('alert/success',  'Copied link', { root: true });
     },
     getProfile({ dispatch, commit }, {userId, token}) {
         userService.getProfile(userId, token)

@@ -1,12 +1,12 @@
 <template>
 
-    <div class="container-fluid pt-3">
+    <div class="container-fluid pt-5">
         <div class="row">
-            <div class="col-sm-8">
+            <div class="col-xl-10 col-sm-12">
                 <ValidationObserver ref="form">
                     <form class="cms" @submit.prevent="saveForm" novalidate>
                           <div class="form-group">
-                              <label for="staticEmail">Registration email</label>
+                              <label for="staticEmail">Registration e-mail</label>
                               <input type="text" class="form-control" disabled v-model="data.email" id="staticEmail" value="em****@gmail.com">
                           </div>
 
