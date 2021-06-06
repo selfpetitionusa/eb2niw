@@ -19,7 +19,7 @@
             <div class="photo-icons">
                 <div class="form-group icon-container">
                     <label for="upload" class="icon camera"><font-awesome-icon icon="camera" /></label>
-                    <input type="file" class="form-control-file" id="upload" @change="croppie" >
+                    <input type="file" class="form-control-file" id="upload" ref="upload" @change="croppie" >
                     <p>Upload</p>
                 </div>
                 <div class="icon-container">
@@ -111,6 +111,7 @@
             clearImage () {
                 this.handleSexChange().then(document.getElementsByClassName('cr-slider')[0].style.display = 'none')
                 this.defaultAvatar = true;
+                this.$refs.upload.value=null;
             },
             crop() {
                 if(this.defaultAvatar) {

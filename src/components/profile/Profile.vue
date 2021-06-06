@@ -455,7 +455,6 @@
                                     <div class="input">
                                         <p class="question">{{problemCard.question}}</p>
                                         <p class="answer">{{problemCard.answer}}</p>
-                                        {{offset}}  {{offsetWidth}}  {{scrollWidth}}
                                     </div>
                                 </div>
 

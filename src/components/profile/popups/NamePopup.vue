@@ -103,7 +103,7 @@
           },
           row2Placeholder: function () {
               if(this.profileProp.categories && this.profileProp.categories.length > 0)
-                  return 'I tutor ' + this.profileProp.categories[0].categoryName + '.';
+                  return 'I tutor ' + this.formatArray(this.profileProp.categories.map(cat => cat.categoryName)) + '.';
               else
                   return 'I teach <Subject 1>.';
           },
@@ -126,6 +126,17 @@
           initLine(index){
               if(this.profileProp.profile.shortBio) return this.profileProp.profile.shortBio.split(/\r?\n/)[index]
               else return null
+          },
+          formatArray(arr) {
+              var outStr = "";
+              if (arr.length === 1) {
+                  outStr = arr[0];
+              } else if (arr.length === 2) {
+                  outStr = arr.join(' & ');
+              } else if (arr.length > 2) {
+                  outStr = arr.slice(0, -1).join(', ') + ' & ' + arr.slice(-1);
+              }
+              return outStr;
           },
           saveForm(){
               this.submitted = true;
