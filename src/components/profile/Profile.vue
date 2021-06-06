@@ -3,7 +3,7 @@
     <div class="dflex">
         <div :id="response.profile.token" v-if="response.profile.token" v-show="false"></div>
 
-<!-- HAMBURGER MENU -->
+<!-- HAMBURGER MENU - MAIN VIEW -->
 
     <div class="hamburger-nav">
         <div id="myLinks">
@@ -26,7 +26,7 @@
     <div class="row website-split">
 
 
-<!-- HAMBURGER MENU -->
+<!-- HAMBURGER MENU - MENU LIST -->
 
         <div class="hamburger-nav">
             <a v-on:click="actionHamburgerMenu" class="icon">
