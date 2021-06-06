@@ -3,14 +3,14 @@
     <div class="dflex">
         <div :id="response.profile.token" v-if="response.profile.token" v-show="false"></div>
 
-<!-- HAMBURGER MENU -->
+<!-- HAMBURGER MENU - MAIN VIEW -->
 
     <div class="hamburger-nav">
         <div id="myLinks">
-            <a href="#section-about-me" v-on:click="actionHamburgerMenu">About me</a>
-            <a href="#section-subjects" v-on:click="actionHamburgerMenu">Subjects</a>
+            <a v-if="(!(response.profile.headline === null && response.schools.length === 0 && response.certificates.length === 0 && response.profile.bio === null) || cmsToggle)" href="#section-about-me" v-on:click="actionHamburgerMenu">About me</a>
+            <a v-if="(!(response.categories.length === 0 && response.profile.studentsProfile === null) || cmsToggle)" href="#section-subjects" v-on:click="actionHamburgerMenu">Subjects</a>
             <a href="#section-rates" v-on:click="actionHamburgerMenu">Rates</a>
-            <a href="#section-expertise" v-if="!(response.profile.youtubeIntroLink === null && response.problemCards.length === 0)" v-on:click="actionHamburgerMenu">Expertise</a>
+            <a v-if="(!(response.profile.youtubeIntroLink === null && response.problemCards.length === 0) || cmsToggle)" href="#section-expertise" v-on:click="actionHamburgerMenu">Expertise</a>
         </div>
 
         <a v-on:click="actionHamburgerMenu" class="icon">
@@ -26,16 +26,9 @@
     <div class="row website-split">
 
 
-<!-- HAMBURGER MENU -->
+<!-- HAMBURGER MENU - MENU LIST -->
 
         <div class="hamburger-nav">
-            <div id="myLinks">
-                <a href="#section-about-me" v-on:click="actionHamburgerMenu">About me</a>
-                <a href="#section-subjects" v-on:click="actionHamburgerMenu">Subjects</a>
-                <a href="#section-rates" v-on:click="actionHamburgerMenu">Rates</a>
-                <a href="#section-expertise" v-if="!(response.profile.youtubeIntroLink === null && response.problemCards.length === 0)" v-on:click="actionHamburgerMenu">Expertise</a>
-            </div>
-
             <a v-on:click="actionHamburgerMenu" class="icon">
                 <i class="fa fa-bars"></i>
             </a>
@@ -130,10 +123,10 @@
         <div class="tu-card-and-menu-container">
             <div class="d-none d-lg-block menu">
                 <ul class="px-xl-5 px-1">
-                    <li><a href="#section-about-me">about me</a></li>
-                    <li><a href="#section-subjects">subjects</a></li>
+                    <li v-if="(!(response.profile.headline === null && response.schools.length === 0 && response.certificates.length === 0 && response.profile.bio === null) || cmsToggle)"><a href="#section-about-me">about me</a></li>
+                    <li v-if="(!(response.categories.length === 0 && response.profile.studentsProfile === null) || cmsToggle)"><a href="#section-subjects">subjects</a></li>
                     <li><a href="#section-rates">rates</a></li>
-                    <li v-if="!(response.profile.youtubeIntroLink === null && response.problemCards.length === 0)"><a href="#section-expertise">expertise</a></li>
+                    <li v-if="(!(response.profile.youtubeIntroLink === null && response.problemCards.length === 0) || cmsToggle)"><a href="#section-expertise">expertise</a></li>
                 </ul>
             </div>
 
@@ -141,7 +134,7 @@
 <!-- ABOUT ME SECTION -->
 
         <div class="tu-card-container">
-            <div id="section-about-me" class="tu-card">
+            <div v-if="(!(response.profile.headline === null && response.schools.length === 0 && response.certificates.length === 0 && response.profile.bio === null) || cmsToggle)" id="section-about-me" class="tu-card">
                 <div :class="[cmsToggle && 'cms-frame tu-card-frame']">
                     <div v-if="cmsToggle">
                         <EducationPopup v-bind:profileProp="response"></EducationPopup>
@@ -223,7 +216,7 @@
 
 <!-- SUBJECTS SECTION -->
 
-            <div id="section-subjects" class="tu-card">
+            <div v-if="(!(response.categories.length === 0 && response.profile.studentsProfile === null) || cmsToggle)" id="section-subjects" class="tu-card">
 
                 <img v-if="!cmsToggle" class="figure-subjects" src="../../assets/img/subjects_figures.png">
 
@@ -388,7 +381,7 @@
 
 <!-- LOGO IF NO EXPERTISE SECTION -->
 
-                <div v-if="(response.profile.youtubeIntroLink === null && response.problemCards.length === 0)" class="tutomy-logo">
+                <div v-if="(response.profile.youtubeIntroLink === null && response.problemCards.length === 0 && !cmsToggle)" class="tutomy-logo">
                   <p>Powered by</p>
                   <img src="../../assets/img/logo2.png">
                 </div>
