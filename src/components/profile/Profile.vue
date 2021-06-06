@@ -126,7 +126,7 @@
                     <li><a href="#section-about-me">about me</a></li>
                     <li><a href="#section-subjects">subjects</a></li>
                     <li><a href="#section-rates">rates</a></li>
-                    <li v-if="!(response.profile.youtubeIntroLink === null && response.problemCards.length === 0)"><a href="#section-expertise">expertise</a></li>
+                    <li v-if="(!(response.profile.youtubeIntroLink === null && response.problemCards.length === 0) || cmsToggle)"><a href="#section-expertise">expertise</a></li>
                 </ul>
             </div>
 
@@ -381,7 +381,7 @@
 
 <!-- LOGO IF NO EXPERTISE SECTION -->
 
-                <div v-if="(response.profile.youtubeIntroLink === null && response.problemCards.length === 0)" class="tutomy-logo">
+                <div v-if="(response.profile.youtubeIntroLink === null && response.problemCards.length === 0 && !cmsToggle)" class="tutomy-logo">
                   <p>Powered by</p>
                   <img src="../../assets/img/logo2.png">
                 </div>
