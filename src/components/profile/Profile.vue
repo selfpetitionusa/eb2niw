@@ -134,7 +134,7 @@
 <!-- ABOUT ME SECTION -->
 
         <div class="tu-card-container">
-            <div id="section-about-me" class="tu-card">
+            <div v-if="(!(response.profile.headline === null && response.schools.length === 0 && response.certificates.length === 0 && response.profile.bio === null) || cmsToggle)" id="section-about-me" class="tu-card">
                 <div :class="[cmsToggle && 'cms-frame tu-card-frame']">
                     <div v-if="cmsToggle">
                         <EducationPopup v-bind:profileProp="response"></EducationPopup>
@@ -216,7 +216,7 @@
 
 <!-- SUBJECTS SECTION -->
 
-            <div id="section-subjects" class="tu-card">
+            <div v-if="(!(response.categories.length === 0 && response.profile.studentsProfile === null) || cmsToggle)" id="section-subjects" class="tu-card">
 
                 <img v-if="!cmsToggle" class="figure-subjects" src="../../assets/img/subjects_figures.png">
 
