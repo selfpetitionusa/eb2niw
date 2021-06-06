@@ -1,5 +1,5 @@
 export default {
 
-    apiUrl: 'http://localhost:8081/api'
+    apiUrl: 'https://www.tutomy.com/api'
 
 }
