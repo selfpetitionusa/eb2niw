@@ -13,14 +13,14 @@
                           <div class="form-group">
                               <label for="firstName">First name</label>
                               <ValidationProvider rules="required" v-slot="{ errors }" >
-                                  <input type="text" class="form-control" id="firstName"  v-model="data.firstName" placeholder="Pre-populated First Name"  :class="{ 'is-invalid': submitted && errors.length }">
+                                  <input type="text" class="form-control" id="firstName"  v-model="data.firstName" :class="{ 'is-invalid': submitted && errors.length }">
                                   <div v-if="submitted && errors.length" class="invalid-feedback">First name is required</div>
                               </ValidationProvider>
                           </div>
                           <div class="form-group">
                               <label for="lastName" >Last name</label>
                               <ValidationProvider rules="required" v-slot="{ errors }" >
-                                <input type="text" class="form-control" id="lastName" v-model="data.lastName" placeholder="Pre-populated Last Name" :class="{ 'is-invalid': submitted && errors.length }">
+                                <input type="text" class="form-control" id="lastName" v-model="data.lastName" :class="{ 'is-invalid': submitted && errors.length }">
                                 <div v-if="submitted && errors.length" class="invalid-feedback">Last name is required</div>
                               </ValidationProvider>
                           </div>
