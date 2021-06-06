@@ -7,10 +7,10 @@
 
     <div class="hamburger-nav">
         <div id="myLinks">
-            <a href="#section-about-me" v-on:click="actionHamburgerMenu">About me</a>
-            <a href="#section-subjects" v-on:click="actionHamburgerMenu">Subjects</a>
+            <a v-if="(!(response.profile.headline === null && response.schools.length === 0 && response.certificates.length === 0 && response.profile.bio === null) || cmsToggle)" href="#section-about-me" v-on:click="actionHamburgerMenu">About me</a>
+            <a v-if="(!(response.categories.length === 0 && response.profile.studentsProfile === null) || cmsToggle)" href="#section-subjects" v-on:click="actionHamburgerMenu">Subjects</a>
             <a href="#section-rates" v-on:click="actionHamburgerMenu">Rates</a>
-            <a href="#section-expertise" v-if="!(response.profile.youtubeIntroLink === null && response.problemCards.length === 0)" v-on:click="actionHamburgerMenu">Expertise</a>
+            <a v-if="(!(response.profile.youtubeIntroLink === null && response.problemCards.length === 0) || cmsToggle)" href="#section-expertise" v-on:click="actionHamburgerMenu">Expertise</a>
         </div>
 
         <a v-on:click="actionHamburgerMenu" class="icon">
@@ -123,8 +123,8 @@
         <div class="tu-card-and-menu-container">
             <div class="d-none d-lg-block menu">
                 <ul class="px-xl-5 px-1">
-                    <li><a href="#section-about-me">about me</a></li>
-                    <li><a href="#section-subjects">subjects</a></li>
+                    <li v-if="(!(response.profile.headline === null && response.schools.length === 0 && response.certificates.length === 0 && response.profile.bio === null) || cmsToggle)"><a href="#section-about-me">about me</a></li>
+                    <li v-if="(!(response.categories.length === 0 && response.profile.studentsProfile === null) || cmsToggle)"><a href="#section-subjects">subjects</a></li>
                     <li><a href="#section-rates">rates</a></li>
                     <li v-if="(!(response.profile.youtubeIntroLink === null && response.problemCards.length === 0) || cmsToggle)"><a href="#section-expertise">expertise</a></li>
                 </ul>
