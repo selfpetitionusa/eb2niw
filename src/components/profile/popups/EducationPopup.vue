@@ -49,7 +49,7 @@
                         <label for="certificate">Certificate</label>
                         <ValidationProvider rules="required" v-slot="{ errors }" >
                             <input type="text" class="form-control" id="certificate" v-model="certificate.label" placeholder="Example: ATA Tutor" :class="{ 'is-invalid':  submitted && errors.length }">
-                            <div v-if="submitted && errors.length" class="invalid-feedback">Degree and field of study is required</div>
+                            <div v-if="submitted && errors.length" class="invalid-feedback">Required - to remove, click on the minus button below</div>
                         </ValidationProvider>
                     </div>
 
@@ -57,7 +57,7 @@
                         <label for="certDesc">Certificate description</label>
                         <ValidationProvider rules="required" v-slot="{ errors }" >
                             <input type="text" class="form-control" id="certDesc" v-model="certificate.value" placeholder="Example: American Tutoring Association" :class="{ 'is-invalid':  submitted && errors.length }">
-                            <div v-if="submitted && errors.length" class="invalid-feedback">Degree and field of study is required</div>
+                            <div v-if="submitted && errors.length" class="invalid-feedback">Required - to remove, click on the minus button below</div>
                         </ValidationProvider>
                     </div>
                 </div>

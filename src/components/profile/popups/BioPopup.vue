@@ -7,7 +7,7 @@
                     <label for="bio">Your bio - max 160 words *</label>
                     <ValidationProvider rules="required" v-slot="{ errors }" >
                         <textarea class="form-control" id="bio" rows="10" v-model="bio" placeholder="Tell parents and students about your tutoring background" :class="{ 'is-invalid':  submitted && (errors.length || count > 160) }"></textarea>
-                        <div v-if="submitted && errors.length" class="invalid-feedback">First name is required</div>
+                        <div v-if="submitted && errors.length" class="invalid-feedback">Bio is required</div>
                     </ValidationProvider>
                     <div :style="[count > 160 ? {'color': '#dc3545'} : {'color': '#949494'}]" class="count-words"><span id="show">{{count}}</span> /160</div>
                 </div>
