@@ -31,6 +31,9 @@
                             <li class="nav-item">
                                 <a href="/" class="nav-link" v-scroll-to="'#contact'">Contact</a>
                             </li>
+                            <li class="nav-item">
+                                <a href="/login" class="nav-link bold">Login</a>
+                            </li>
                         </ul>
                     </b-collapse>
 

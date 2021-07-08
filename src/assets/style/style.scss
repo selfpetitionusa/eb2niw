@@ -479,6 +479,9 @@ Navbar CSS
                         position: relative;
                         top: 1.5px;
                     }
+                    &.bold {
+                        font-weight: 650;
+                    }
                 }
                 .dropdown_menu {
                     box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.05);
