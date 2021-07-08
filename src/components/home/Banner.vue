@@ -47,7 +47,7 @@
                                 </div>
 
                                 <div class="banner-action-btns">
-                                    <p class="col-12" style="font-size: 10px; margin-bottom: 3rem; text-align: center">No payment or credit card is required</p>
+                                    <p class="col-12">No payment or credit card is required</p>
                                 </div>
 
                             </div>
@@ -62,7 +62,7 @@
         </div>
 
         <div class="shape1"><img src="../../assets/img/shape1.png" alt="shape"></div>
-        <div class="shape2 rotateme" style="margin-left: 9rem"><img src="../../assets/img/shape2.svg" alt="shape"></div>
+        <div class="shape2 rotateme"><img src="../../assets/img/shape2.svg" alt="shape"></div>
         <div class="shape3"><img src="../../assets/img/shape3.svg" alt="shape"></div>
         <div class="shape4"><img src="../../assets/img/shape4.svg" alt="shape"></div>
         <div class="shape5"><img src="../../assets/img/shape5.png" alt="shape"></div>

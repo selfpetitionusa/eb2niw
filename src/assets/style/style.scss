@@ -900,8 +900,8 @@ Main Banner CSS
 .shape2 {
     position: absolute;
     z-index: -1;
-    top: 60%;
-    left: 15%;
+    top: 57%;
+    left: 12%;
 }
 .shape3 {
     position: absolute;
@@ -1044,6 +1044,12 @@ Main Banner CSS
 
 .banner-action-btns {
     margin-right: 2rem;
+
+    p {
+        font-size: 10px;
+        text-align: center;
+        padding-bottom: 1rem;
+    }
 }
 
 .btn-register {
