@@ -2746,12 +2746,14 @@ Left section
         color: #0E314C;
         line-height: 30px;
         margin: 0px 2.5px;
+        text-align: center;
     }
 }
 
     @media (max-width: 991px) {
         .name-input h2 {
             line-height: 25px;
+            text-align: center;
         }
     }
 
@@ -2761,6 +2763,7 @@ Left section
 
             h2 {
                 font-size: 25px;
+                text-align: center;
             }
         }
     }
@@ -2768,6 +2771,7 @@ Left section
     @media (max-width: 575px) {
         .name-input h2 {
             font-size: 22px;
+            text-align: center;
         }
     }
 
