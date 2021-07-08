@@ -122,6 +122,12 @@ p {
     color: $paragraph-color;
     line-height: 1.9;
 
+    span {
+        &.bonus {
+            font-weight: 650;
+        }
+    }
+
     &:last-child {
         margin-bottom: 0;
     }
@@ -1014,6 +1020,25 @@ Main Banner CSS
     }
     100% {
         -webkit-transform: translate(0px,0px) rotate(0deg);
+    }
+}
+
+.tick-row {
+    display: flex;
+    margin: 1.5rem 0 0.5rem 1rem;
+
+    .tick-input {
+        color: $black-color;
+        font-size: 1.1rem;
+        line-height: 1.5;
+        margin: 0px 10px;
+    }
+
+    .tick-icon {
+        color: $light-green-color;
+    }
+    &:last-child {
+        margin-top: 0.5rem;
     }
 }
 

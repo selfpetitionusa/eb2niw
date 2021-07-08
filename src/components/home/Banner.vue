@@ -10,17 +10,30 @@
                             <div class="hero-content">
                                 <div class="row">
                                     <div class="col-lg-9">
-                                        <h1>Website for your tutoring business</h1>
-                                        <h4>Set it up in 12min</h4>
-                                        <p>Thinking of building a tutoring website, but tools you know are hard to use or pricey?</p>
+                                        <h1>Create a tutoring website in 11min</h1>
+                                        <h4>Use it to find students</h4>
+
+                                        <div class="tick-row">
+                                            <font-awesome-icon class="fas fa-plus-circle fa-2x tick-icon" icon="check-circle" />
+                                            <p class="tick-input">Intuitive tutoring website template</p>
+                                        </div>
 
                                         <div class="d-block d-sm-none">
-                                            <p>...we make it as easy as creating a Facebook or LinkedIn profile</p>
+                                            <div class="tick-row">
+                                                <font-awesome-icon class="fas fa-plus-circle fa-2x tick-icon" icon="check-circle" />
+                                                <p class="tick-input">We guide you how to use tutoring website to find students</p>
+                                            </div>
                                         </div>
-                                        <div class="d-none d-sm-block"> <p>...we make it as easy as creating a Facebook or LinkedIn profile</p></div>
+
+                                        <div class="d-none d-sm-block">
+                                            <div class="tick-row">
+                                                <font-awesome-icon class="fas fa-plus-circle fa-2x tick-icon" icon="check-circle" />
+                                                <p class="tick-input">We guide you how to use tutoring website to find students</p>
+                                            </div>
+                                        </div>
 
 
-                                        <p>Sign up for FREE</p>
+                                        <p><span class="bonus">Check bonus</span> - register for a FREE website in the next 48h</p>
                                     </div>
                                 </div>
                                 <form id="sign" @submit.prevent="addEmail(email)" class="mt-4">
