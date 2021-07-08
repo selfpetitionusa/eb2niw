@@ -1035,10 +1035,34 @@ Main Banner CSS
     }
 
     .tick-icon {
-        color: $light-green-color;
+        color: $black-color;
     }
     &:last-child {
         margin-top: 0.5rem;
+    }
+}
+
+.banner-action-btns {
+    margin-right: 2rem;
+}
+
+.btn-register {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+
+.btn-assess {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    background-color: $light-green-color;
+    box-shadow: 0 13px 27px 0 rgba(68, 206, 111, 0.25);
+
+    &:hover, &:focus, &:active {
+        box-shadow: 0 13px 27px 0 rgba(84, 87, 193, 0.25);
+    }
+
+    &::after, &::before {
+        background-color: #5457C1;
     }
 }
 

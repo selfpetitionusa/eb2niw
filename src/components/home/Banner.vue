@@ -14,87 +14,41 @@
                                         <h4>Use it to find students</h4>
 
                                         <div class="tick-row">
-                                            <font-awesome-icon class="fas fa-plus-circle fa-2x tick-icon" icon="check-circle" />
+                                            <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
                                             <p class="tick-input">Intuitive tutoring website template</p>
                                         </div>
 
                                         <div class="d-block d-sm-none">
                                             <div class="tick-row">
-                                                <font-awesome-icon class="fas fa-plus-circle fa-2x tick-icon" icon="check-circle" />
+                                                <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
                                                 <p class="tick-input">We guide you how to use tutoring website to find students</p>
                                             </div>
                                         </div>
 
                                         <div class="d-none d-sm-block">
                                             <div class="tick-row">
-                                                <font-awesome-icon class="fas fa-plus-circle fa-2x tick-icon" icon="check-circle" />
+                                                <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
                                                 <p class="tick-input">We guide you how to use tutoring website to find students</p>
                                             </div>
                                         </div>
 
 
-                                        <p><span class="bonus">Check bonus</span> - register for a FREE website in the next 48h</p>
+                                        <p><span class="bonus">Check bonus</span> - create a FREE website in the next 48h</p>
                                     </div>
                                 </div>
-                                <form id="sign" @submit.prevent="addEmail(email)" class="mt-4">
-                                    <div class="row">
 
-                                        <div class="col-lg-8">
-                                            <input type="email"  name="name" id="name" class="form-control"  v-model="email" placeholder="Enter your email address">
-                                            <p style="font-size: 10px; color:#495057">No payment or credit card is required</p>
-                                            <div class="mt-4">
-                                                <p class="m-0">{{ message }}</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4">
-                                            <div>
-                                                <button type="submit" class="btn btn-primary">Submit</button>
-
-
-                                                <b-modal ref="modal-1"  style="border-radius: 30px" :return-focus="this.$parent" hide-footer hide-header >
-                                                    <div class="mt-2">
-
-                                                        <p style="color: #0e314c; font-size: medium;font-weight: bold">How about VIP access for free?</p>
-                                                        <div class="d-none d-sm-block">
-                                                            <div class="row">
-                                                                <div class="col-8">
-                                                                  <p style="color: #6084a4; font-size: 13px">We are <span style="font-weight: bold; text-decoration: underline;">looking for 20 tutors</span> to test our new website dashboard.</p>
-                                                                  <p style="color: #6084a4; font-size: 13px; margin-bottom: 0px;">Get FREE website for 3 months.</p>
-                                                                  <p style="color: #6084a4; font-size: 13px; margin-bottom: 0px;">Contact us for details.</p>
-                                                                  <a href="mailto:ceo@tutomy.com?subject=Testing website dashboard" class="btn btn-primary mt-5 d-block mx-auto" style="text-transform:none;">Claim VIP Access</a>
-                                                                </div>
-                                                                <div class="col-4">
-                                                                    <img src="../../assets/img/survey.svg" alt="video-pic">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="d-block d-sm-none">
-                                                          <p style="color: #6084a4; font-size: 13px">We are <span style="font-weight: bold; text-decoration: underline;">looking for 20 tutors</span> to test our new website dashboard.</p>
-                                                          <p style="color: #6084a4; font-size: 13px; margin-bottom: 0px;">Get FREE website for 3 months.</p>
-                                                          <p style="color: #6084a4; font-size: 13px; margin-bottom: 0px;">Contact us for details.</p>
-                                                            <div class="row">
-                                                                <div class="col-8 align-self-end">
-                                                                      <a href="mailto:ceo@tutomy.com?subject=Testing website dashboard" class="btn btn-primary mt-5 d-block mx-auto" style="text-transform:none;">Claim VIP Access</a>
-                                                                </div>
-                                                                <div class="col-4">
-                                                                    <img src="../../assets/img/survey.svg" alt="video-pic">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-
-
-                                                    </div>
-
-                                                </b-modal>
-                                            </div>
-
-
-                                        </div>
-
+                                <div class="row banner-action-btns">
+                                    <div class="col-6">
+                                        <a href="/register" class="btn btn-primary btn-assess">ASSESS YOUR WEBSITE NEEDS</a>
                                     </div>
-                                </form>
+                                    <div class="col-6">
+                                        <a href="/register" class="btn btn-primary btn-register">CREATE A WEBSITE TODAY - FREE</a>
+                                    </div>
+                                </div>
 
+                                <div class="banner-action-btns">
+                                    <p class="col-12" style="font-size: 10px; margin-bottom: 3rem; text-align: center">No payment or credit card is required</p>
+                                </div>
 
                             </div>
                         </div>
@@ -108,7 +62,7 @@
         </div>
 
         <div class="shape1"><img src="../../assets/img/shape1.png" alt="shape"></div>
-        <div class="shape2 rotateme"><img src="../../assets/img/shape2.svg" alt="shape"></div>
+        <div class="shape2 rotateme" style="margin-left: 9rem"><img src="../../assets/img/shape2.svg" alt="shape"></div>
         <div class="shape3"><img src="../../assets/img/shape3.svg" alt="shape"></div>
         <div class="shape4"><img src="../../assets/img/shape4.svg" alt="shape"></div>
         <div class="shape5"><img src="../../assets/img/shape5.png" alt="shape"></div>
@@ -119,11 +73,16 @@
     <!-- End Main Banner -->
 </template>
 
+
+
 <script>
 
+    export default {
+        name: 'Banner'
+    }
 
-export default {
-    name: 'Banner',
+
+/* JS FOR SIGNUP
     data() {
         return {
             email: '',
@@ -150,9 +109,6 @@ export default {
                  this.message = noticeMessage;
                  this.email = '';
              });
-
-
-
         },
         randomPassword(length) {
             var result           = '';
@@ -163,7 +119,8 @@ export default {
             }
             return result;
         }
-
     }
 }
+*/
+
 </script>
