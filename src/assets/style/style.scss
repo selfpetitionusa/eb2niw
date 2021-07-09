@@ -3910,6 +3910,12 @@ Pop-ups & CMS
     .register-conditions {
         color: $paragraph-color;
         font-weight: 500;
+        margin: 1.5rem 0rem 2.5rem;
+        display: block;
+
+        li {
+            display: inline;
+        }
     }
 }
 
