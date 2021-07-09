@@ -4,10 +4,22 @@
         <SectionTwo id="about"/>
         <div class="container">
             <div class="section-title">
-                <h2>How Do You Get More Students?</h2>
+                <h2>Why do I need a tutoring website?</h2>
                 <div class="bar"></div>
-                <p>By having a website to showcase your education and expertise.</p>
-                <p>Build instant credibility with prospective students!</p>
+                <div class="boxes-paragraph">
+                    <p><strong>If you don’t exist on the Internet, you don’t exist.</strong></p>
+                </div>
+                <div class="boxes-paragraph">
+                    <p>Main reason is an increased credibility with prospective students.</p>
+                    <p>It gives people comfort that you’re a legitimate private tutor.</p>
+                </div>
+                <div class="boxes-paragraph">
+                    <p>Students find private tutors through different channels: referrals, social media, blog, physical leaflets and other.</p>
+                </div>
+                <div class="boxes-paragraph">
+                    <p>Your way to stand out is by providing quality information.</p>
+                    <p>So each time direct them to a central hub - <strong>your online tutoring website!</strong></p>
+                </div>
             </div>
 
             <div class="row justify-content-center">
@@ -16,7 +28,7 @@
                         <div class="icon">
                             <font-awesome-icon class="font-icon" icon="desktop" />
                         </div>
-                        <h3>Online toolkit to run your business</h3>
+                        <h3>Intuitive tutoring website template: zero-code & design</h3>
                     </div>
                 </div>
 
@@ -25,7 +37,7 @@
                         <div class="icon">
                             <font-awesome-icon class="font-icon" icon="lightbulb" />
                         </div>
-                        <h3>Tips on how to find students</h3>
+                        <h3>Tips on how to find students with a tutoring website</h3>
                     </div>
                 </div>
 
@@ -34,10 +46,15 @@
                         <div class="icon">
                             <font-awesome-icon class="font-icon" icon="users" />
                         </div>
-                        <h3>Community of tutors like you</h3>
+                        <h3>Developed by observing how learners hire tutors</h3>
                     </div>
                 </div>
             </div>
+
+            <div style="text-align: center; margin-top: 2rem">
+                <a href="/register" class="btn btn-primary btn-register">CREATE A WEBSITE TODAY - FREE TRIAL</a>
+            </div>
+
         </div>
     </section>
     <!-- End Boxes Area -->
