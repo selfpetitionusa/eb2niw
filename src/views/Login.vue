@@ -3,7 +3,7 @@
         <div class="container login">
             <div class="row">
                 <div class="col-sm-6 offset-sm-3">
-                    <h2>Login</h2>
+                    <h3>Login</h3>
                     <form @submit.prevent="handleSubmit">
                         <div class="form-group">
                             <label for="email">Email</label>
@@ -27,7 +27,7 @@
             </div>
         </div>
     </div>
-    
+
 
 </template>
 

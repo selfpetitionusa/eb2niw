@@ -24,7 +24,15 @@
         <div class="container register">
             <div class="row">
                 <div class="col-sm-6 offset-sm-3">
-                    <h2>Register</h2>
+                    <h3>Register for a 30-day FREE trial</h3>
+                    <div class="subject-subcategories">
+                        <ul style="color:#5457c1; font-weight: 500">
+                            <li>No credit card required</li>
+                            <li>Cancel any time</li>
+                            <li>100% Money Back Guarantee for any paid plan that you choose</li>
+                        </ul>
+                    </div>
+
                     <form @submit.prevent="handleSubmit">
                         <div class="form-group">
                             <label for="firstName">First Name</label>
