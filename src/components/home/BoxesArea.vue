@@ -51,7 +51,7 @@
                 </div>
             </div>
 
-            <div style="text-align: center; margin-top: 2rem">
+            <div class="boxes-action-btn">
                 <a href="/register" class="btn btn-primary btn-register">CREATE A WEBSITE TODAY - FREE TRIAL</a>
             </div>
 

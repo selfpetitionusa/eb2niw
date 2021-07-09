@@ -1,21 +1,23 @@
 <template>
   <div @mousemove="openRegister">
     <b-modal ref="modal-4" :return-focus="this.$parent" title="Qualify for a BONUS offer" hide-footer>
-      <p style="color: #0e314c; font-size: medium; font-weight: 600">Do you have <strong style="color: #44ce6f">11min</strong> to create your new website?</p>
-      <div style="color: #0e314c; font-weight: 450">Complete website in the next 48h.</div>
-      <div style="color: #0e314c; font-weight: 450">Get 3 complimentary sessions:</div>
+      <div class="popup-register">
+        <p class="popup-title">Do you have <span class="highlight">11min</span> to create your new website?</p>
+        <p class="popup-body">Complete website in the next 48h.</p>
+        <p class="popup-body">Get 3 complimentary sessions:</p>
 
-      <div class="row">
-        <div class="col-9">
-          <ul style="color: #0e314c; font-weight: 450; margin-top: 1rem">
-            <li>have your website reviewed by an expert</li>
-            <li>learn how to make students find you on the Internet</li>
-            <li>qualify for a progress check</li>
-          </ul>
-        </div>
+        <div class="row">
+          <div class="col-9">
+            <ul class="bonus-offer">
+              <li>have your website reviewed by an expert</li>
+              <li>learn how to make students find you on the Internet</li>
+              <li>qualify for a progress check</li>
+            </ul>
+          </div>
 
-        <div class="col-3" style="display: flex">
-          <img src="./../assets/img/gift2.svg" alt="gift-pic">
+          <div class="col-3 pic-container">
+            <img src="./../assets/img/gift2.svg" alt="gift-pic">
+          </div>
         </div>
       </div>
     </b-modal>
@@ -26,10 +28,9 @@
                 <div class="col-sm-6 offset-sm-3">
                     <h3>Register for a 30-day FREE trial</h3>
                     <div class="subject-subcategories">
-                        <ul style="color:#5457c1; font-weight: 500">
+                        <ul class="register-conditions">
                             <li>No credit card required</li>
                             <li>Cancel any time</li>
-                            <li>100% Money Back Guarantee for any paid plan that you choose</li>
                         </ul>
                     </div>
 

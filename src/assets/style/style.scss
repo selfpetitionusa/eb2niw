@@ -1077,6 +1077,10 @@ Main Banner CSS
     margin-bottom: 1.5rem;
 }
 
+.video {
+    margin-bottom: 8rem;
+}
+
 /*================================================
 Boxes CSS
 =================================================*/
@@ -1209,6 +1213,11 @@ Boxes CSS
         line-height: 1.6;
     }
 
+}
+
+.boxes-action-btn {
+    text-align: center;
+    margin-top: 2rem;
 }
 
 
@@ -2518,6 +2527,41 @@ Go Top CSS
 .carousel-caption h3{
     color: black;
     font-size: 18px;
+}
+
+/*================================================
+Landing page popups
+=================================================*/
+
+.popup-register {
+    p {
+        color: #0e314c;
+
+        &.popup-title {
+            font-size: medium;
+            font-weight: 600;
+            line-height: 2;
+
+            .highlight {
+                color: #44ce6f;
+            }
+        }
+
+        &.popup-body {
+            font-weight: 450;
+            line-height: 0.5;
+        }
+    }
+
+    ul {
+        color: #0e314c;
+        font-weight: 450;
+        margin-top: 0.8rem;
+    }
+
+    .pic-container {
+        display: flex;
+    }
 }
 
 
@@ -3861,6 +3905,11 @@ Pop-ups & CMS
             font-size: 14px;
             font-weight: 400;
         }
+    }
+
+    .register-conditions {
+        color: $paragraph-color;
+        font-weight: 500;
     }
 }
 
