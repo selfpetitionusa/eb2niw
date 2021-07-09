@@ -1,4 +1,25 @@
 <template>
+  <div @mousemove="openRegister">
+    <b-modal ref="modal-4" :return-focus="this.$parent" title="Qualify for a BONUS offer" hide-footer>
+      <p style="color: #0e314c; font-size: medium; font-weight: 600">Do you have <strong style="color: #44ce6f">11min</strong> to create your new website?</p>
+      <div style="color: #0e314c; font-weight: 450">Complete website in the next 48h.</div>
+      <div style="color: #0e314c; font-weight: 450">Get 3 complimentary sessions:</div>
+
+      <div class="row">
+        <div class="col-9">
+          <ul style="color: #0e314c; font-weight: 450; margin-top: 1rem">
+            <li>have your website reviewed by an expert</li>
+            <li>learn how to make students find you on the Internet</li>
+            <li>qualify for a progress check</li>
+          </ul>
+        </div>
+
+        <div class="col-3" style="display: flex">
+          <img src="./../assets/img/gift2.svg" alt="gift-pic">
+        </div>
+      </div>
+    </b-modal>
+
     <div class="jumbotron" style="height: 100%">
         <div class="container register">
             <div class="row">
@@ -32,6 +53,7 @@
             </div>
         </div>
     </div>
+  </div>
 </template>
 
 <script>
@@ -57,6 +79,12 @@
             handleSubmit() {
                 this.submitted = true;
                 this.register(this.user);
+            },
+            openRegister: function() {
+              if(!this.$store.state.popup.seen) {
+                this.$refs['modal-4'].show();
+              }
+              this.$store.commit('popup/setSeen');
             }
         }
     };

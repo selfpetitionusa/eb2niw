@@ -4,7 +4,7 @@
     <b-modal ref="modal-3"  style="border-radius: 30px" :return-focus="this.$parent" hide-footer hide-header >
       <div class="mt-2">
 
-        <p style="color: #0e314c; font-size: medium;font-weight: bold">How about VIP access for free?</p>
+        <p style="color: #0e314c; font-size: medium; font-weight: bold">How about VIP access for free?</p>
         <div class="row">
           <div class="col-7">
             <p style="color: #6084a4; font-size: 13px">We are <span style="font-weight: bold; text-decoration: underline;">looking for 20 tutors</span> to test our new website dashboard.</p>

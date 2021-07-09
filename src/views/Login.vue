@@ -1,5 +1,4 @@
 <template>
-
     <div class="jumbotron" style="height: 100%">
         <div class="container login">
             <div class="row">
@@ -28,6 +27,7 @@
             </div>
         </div>
     </div>
+    
 
 </template>
 
