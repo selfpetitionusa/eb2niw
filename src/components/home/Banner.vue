@@ -47,14 +47,20 @@
                                 </div>
 
                                 <div class="banner-action-btns">
-                                    <p class="col-12">No payment or credit card is required</p>
+                                    <p>No payment or credit card is required</p>
                                 </div>
 
                             </div>
                         </div>
 
                         <div class="col-lg-6">
-                            <img src="../../assets/img/video.svg" alt="video-pic">
+                            <h6 class="intro-video">Does this sound like you?</h6>
+                            <div class="row">
+                                <video controls class="video col-12" id="video" preload="metadata" poster="../../assets/img/about1.jpg" style="margin-bottom: 8rem">
+                                    <source src="../../assets/img/CmsRecording.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
                         </div>
                     </div>
                 </div>
