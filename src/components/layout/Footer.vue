@@ -10,8 +10,8 @@
                                 <img width="120px" src="../../assets/img/logo2.png" alt="logo" />
                             </a>
                         </div>
-                        <p>Empowering tutors to run online business</p>
-                        <p>Software tools, advice and support of like-minded tutors</p>
+                        <p>Empowering private tutors to find students and run online business</p>
+                        <p>Online tutoring website, advice and support of like-minded tutors</p>
                         <p>Everything you need in one place</p>
                     </div>
                 </div>
@@ -45,7 +45,7 @@
 
                 <div class="col-lg-12 col-md-12">
                     <div class="copyright-area">
-                        <p>Copyright &copy;2020 Tutomy. All Rights Reserved</p>
+                        <p>Copyright &copy;2021 Tutomy. All Rights Reserved</p>
                     </div>
                 </div>
             </div>
