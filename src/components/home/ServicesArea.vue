@@ -80,27 +80,25 @@
 
                 </div>
 
-                <div style="display: flex;">
-                    <div class="row" style="justify-content: center; margin-top: 2.5rem">
-                        <div class="col-5">
-                            <div class="box">
-                                <a href="/register" class="btn btn-primary btn-assess">ASSESS YOUR WEBSITE NEEDS: TAKE A QUIZ</a>
-                            </div>
+                <div class="row service-action-btns">
+                    <div class="col-5">
+                        <div class="box">
+                            <a href="/register" class="btn btn-primary btn-assess">ASSESS YOUR WEBSITE NEEDS: TAKE A QUIZ</a>
                         </div>
-                        <div class="col-5">
-                            <div class="box">
-                                <a href="/register" class="btn btn-primary btn-register">CREATE A WEBSITE TODAY: FREE TRIAL</a>
-                            </div>
+                    </div>
+                    <div class="col-5">
+                        <div class="box">
+                            <a href="/register" class="btn btn-primary btn-register">CREATE A WEBSITE TODAY: FREE TRIAL</a>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div>
-                <h4 style="margin: 8rem 0 2rem; text-align: center">Tutoring website template example</h4>
-                <p style="text-align: center"><a href="https://www.tutomy.com/tutor/nataliesmith" style="text-decoration: underline">www.tutomy.com/tutor/nataliesmith</a></p>
+            <div class="website-example">
+                <h4>Tutoring website template example</h4>
+                <p><a href="https://www.tutomy.com/tutor/nataliesmith">www.tutomy.com/tutor/nataliesmith</a></p>
 
-                <div class="row" style="display: flex; justify-content: center; margin-top: 3rem">
+                <div class="carousel">
                     <div class="col-8">
                         <div id="carouselLandingPage" class="carousel slide" data-ride="carousel">
                             <div class="carousel-inner">
