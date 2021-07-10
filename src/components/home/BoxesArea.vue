@@ -6,17 +6,17 @@
             <div class="section-title">
                 <h2>Why do I need a tutoring website?</h2>
                 <div class="bar"></div>
-                <div class="boxes-paragraph">
+                <div class="paragraph">
                     <p><strong>If you don’t exist on the Internet, you don’t exist.</strong></p>
                 </div>
-                <div class="boxes-paragraph">
+                <div class="paragraph">
                     <p>Main reason is an increased credibility with prospective students.</p>
                     <p>It gives people comfort that you’re a legitimate private tutor.</p>
                 </div>
-                <div class="boxes-paragraph">
+                <div class="paragraph">
                     <p>Students find private tutors through different channels: referrals, social media, blog, physical leaflets and other.</p>
                 </div>
-                <div class="boxes-paragraph">
+                <div class="paragraph">
                     <p>Your way to stand out is by providing quality information.</p>
                     <p>So each time direct them to a central hub - <strong>your online tutoring website!</strong></p>
                 </div>

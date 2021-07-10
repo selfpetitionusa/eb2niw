@@ -370,6 +370,47 @@ label {
     }
 }
 
+.paragraph {
+    margin-bottom: 1rem;
+
+    p {
+        line-height: 1.6;
+    }
+}
+
+.carousel-control-prev, .carousel-control-next{
+    height: 50px;
+    width: 50px;
+    outline: $paragraph-color;
+    background-size: 100%, 100%;
+    border-radius: 50%;
+    border: 1px solid $paragraph-color;
+    background-color: $paragraph-color;
+    top: 40%;
+    margin: 20px;
+}
+
+.carousel-control-prev-icon {
+    background-image:url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+    width: 30px;
+    height: 48px;
+}
+
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+    width: 30px;
+    height: 48px;
+}
+
+.carousel-inner {
+    border-top: 1px;
+    border-left: 1px;
+    border-right: 1px;
+    border-bottom: 1px;
+    border-color: rgba(84, 87, 193, .4);
+    border-style: solid;
+}
+
 /*================================================
 Preloader CSS
 =================================================*/
@@ -1206,15 +1247,6 @@ Boxes CSS
     }
 }
 
-.boxes-paragraph {
-    margin-bottom: 1rem;
-
-    p {
-        line-height: 1.6;
-    }
-
-}
-
 .boxes-action-btn {
     text-align: center;
     margin-top: 2rem;
@@ -1289,7 +1321,7 @@ Services CSS
         z-index: 1;
         display: block;
         padding: 15px 12px;
-        color: #6084a4;
+        color: $black-color;
         font-weight: 500;
         border-radius: 3px;
         background-color: $white-color;

@@ -4,92 +4,133 @@
         <SectionThree id="solutions"/>
         <div class="container">
             <div class="section-title">
-                <h2>Our solutions</h2>
+                <h2>How is Tutomy website different?</h2>
                 <div class="bar"></div>
-                <p>Your new tutoring website.</p>
-                <p>Use the domain of your choice or our own.</p>
-                <p>Coding and design work is already done,</p>
-                <p>so that you can focus on tutoring!</p>
+
+                <div class="paragraph">
+                    <p>We are not just a website builder for private tutors.</p>
+                    <p>Easy and intuitive tutoring website template is just a start.</p>
+                </div>
+                <div class="paragraph">
+                    <p>As a private tutor you succeed when your calendar gets fully booked.</p>
+                    <p>We guide you how to use your website to find students.</p>
+                </div>
+                <div class="paragraph">
+                    <p>Coding and design work is already done, so that you can focus on tutoring and finding students!</p>
+                </div>
             </div>
+
             <div class="row h-100 justify-content-center align-items-center">
                 <div class="col-lg-6 col-md-12">
-                    <img src="../../assets/img/teacher.svg"  alt="service-pic">
+                    <img src="../../assets/img/Teacher2.svg"  alt="service-pic">
                 </div>
 
                 <div class="col-lg-6 col-md-12 services-content">
 
-
-                        <div class="d-block d-sm-none">
-                            <div class="row">
+                    <div class="d-block d-sm-none">
+                        <div class="row">
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="box">
                                     <feather type="globe"></feather> FREE website hosting on our domain
                                 </div>
                             </div>
-
-
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="box">
-                                    <feather type="code"></feather> Template to set up the website in 12 minutes
+                                    <feather type="code"></feather> Tutoring website template to create a website in 11min
                                 </div>
                             </div>
-
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="box">
                                     <feather type="credit-card"></feather> We can set up a domain of your choice
                                 </div>
                             </div>
-
-
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="box">
-                                    <feather type="calendar"></feather> Collect your payments from students **coming soon
+                                    <feather type="calendar"></feather> Collect your payments from students <br>**coming soon
                                 </div>
-                            </div>
-                            </div>
-                        </div>
-
-
-                        <div class="d-none d-sm-block">
-                            <div class="row">
-
-                                <div class="col-lg-6 col-md-6 col-sm-6">
-                                    <div class="box">
-                                        <feather type="pen-tool"></feather> FREE website hosting on our domain
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6 col-sm-6">
-                                    <div class="box">
-                                        <feather type="layout"></feather> Template to set up website in 12 minutes
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6 col-sm-6">
-                                    <div class="box">
-                                        <feather type="code"></feather> We can set up domain of your choice
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-6 col-md-6 col-sm-6">
-                                    <div class="box">
-                                        <feather type="credit-card"></feather> Collect payments **coming soon
-                                    </div>
-                                </div>
-
-
                             </div>
                         </div>
                     </div>
 
-                    <div class="section-title row" style="padding: 6rem 0 0; margin: 0px">
-                        <p>Website example: <a href="https://www.tutomy.com/tutor/nataliesmith" style="text-decoration: underline">www.tutomy.com/tutor/nataliesmith</a></p>
-                        <video controls loop class="col-lg-8 col-12" style="margin: 1.5rem auto 0rem">
-                            <source src="../../assets/img/CmsRecording.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
+
+                    <div class="d-none d-sm-block">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="box">
+                                    <feather type="pen-tool"></feather> FREE website hosting on our domain
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="box">
+                                    <feather type="layout"></feather> Tutoring website template to create a website in 11min
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="box">
+                                    <feather type="code"></feather> We can set up domain of your choice
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="box">
+                                    <feather type="credit-card"></feather> Collect payments <br>**coming soon
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                 </div>
+
+                <div style="display: flex;">
+                    <div class="row" style="justify-content: center; margin-top: 2.5rem">
+                        <div class="col-5">
+                            <div class="box">
+                                <a href="/register" class="btn btn-primary btn-assess">ASSESS YOUR WEBSITE NEEDS: TAKE A QUIZ</a>
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <div class="box">
+                                <a href="/register" class="btn btn-primary btn-register">CREATE A WEBSITE TODAY: FREE TRIAL</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+
+            <div>
+                <h4 style="margin: 8rem 0 2rem; text-align: center">Tutoring website template example</h4>
+                <p style="text-align: center"><a href="https://www.tutomy.com/tutor/nataliesmith" style="text-decoration: underline">www.tutomy.com/tutor/nataliesmith</a></p>
+
+                <div class="row" style="display: flex; justify-content: center; margin-top: 3rem">
+                    <div class="col-8">
+                        <div id="carouselLandingPage" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img class="d-block w-100" src="../../assets/img/landing-slider-1.png" alt="Website example">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="../../assets/img/landing-slider-2.png" alt="Website empty">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="../../assets/img/landing-slider-3.png" alt="Website edit">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="../../assets/img/landing-slider-4.png" alt="Website complete">
+                                </div>
+                                <a class="carousel-control-prev" href="#carouselLandingPage" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" href="#carouselLandingPage" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </section>
     <!-- End Design & Development Services -->
 </template>
