@@ -6,7 +6,13 @@
             <div class="section-title">
                 <h2>Pricing Plans</h2>
                 <div class="bar"></div>
-                <p>Cancel monthly subscription anytime, no questions ask.</p>
+                <div class="paragraph">
+                    <p><strong>100% Money Back Guarantee.</strong></p>
+                    <p>Cancel monthly subscription anytime, no questions ask.</p>
+                </div>
+                <div class="paragraph">
+                    <p>We want happy customers who benefit from the opportunity which tutoring website brings. If you buy the package and aren’t satisfied, e-mail us within 7 days from your purchase and we will refund your money.</p>
+                </div>
             </div>
 
             <div class="row">
