@@ -33,7 +33,7 @@
                                         </div>
 
 
-                                        <p><span class="bonus">Check bonus</span> - when you create a FREE website in 48h</p>
+                                        <p><span class="bonus">Check bonus</span> - create a FREE website in the next 48h</p>
                                     </div>
                                 </div>
 

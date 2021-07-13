@@ -15,82 +15,93 @@
                 </div>
             </div>
 
+            <p><a href="https://www.tutomy.com/register" style="display: flex; justify-content: center; font-size: 1rem; font-weight: 600; text-decoration: underline; margin-bottom: 3rem">FREE TRIAL</a></p>
+
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-6">
-                    <div class="pricing-table">
+                    <div class="pricing-table active-plan">
                         <div class="pricing-header">
                             <h3>Basic Plan</h3>
                         </div>
 
                         <div class="price">
-                            <span><sup>$</sup>9<span>/Mon</span></span>
+                            <span><sup>$</sup>9<span>/Month</span></span>
                         </div>
 
                         <div class="pricing-features">
                             <ul style="padding: 5px">
-                                <li class="active">Website optimized to get you more students</li>
-                                <li class="active">Zero-code, zero-design website template</li>
-                                <li class="active">Subdomain on our server: <span style="color: #a7a7a7">yourname.tutomy.com</span></li>
-                                <li class="active">24h support</li>
+                                <li class="active">Website optimized to find students</li>
+                                <li class="active">Intuitive tutoring website template</li>
+                                <li class="active">FREE subdomain on our server: <span style="color: #a7a7a7">tutomy.com</span></li>
+                                <li class="active">Personal assistance to resolve problems</li>
+                                <li class="active" style="font-weight: 700; margin-top: 2.5rem">** BONUS: create a website in the next 48h **</li>
+                                <li class="active">Your website reviewed by an expert</li>
+                                <li class="active">1-on-1 advice how to market a website</li>
+                                <li class="active">Qualify for a progress check</li>
                             </ul>
                         </div>
 
                         <div class="pricing-footer">
-                            <button type="submit" v-b-modal.modal-2  @click="logEvent('free')" class="btn btn-primary">Select Plan</button>
+                            <button type="submit" class="btn btn-primary">Select Plan</button>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-lg-6 col-md-6 col-sm-6">
-                    <div class="pricing-table active-plan">
+                    <div class="pricing-table">
                         <div class="pricing-header">
-                            <h3>Tailored Plan</h3>
+                            <h3>Premium Plan</h3>
                         </div>
 
                         <div class="price">
-                            <span><sup>$</sup>18 + domain cost <span>/Mon</span></span>
+                            <span><sup>$</sup>9<span>/Month</span> + Domain cost</span>
                         </div>
 
                         <div class="pricing-features">
                             <ul style="padding: 5px">
-                                <li class="active">Website optimized to get you more students</li>
-                                <li class="active">Zero-code, zero-design website template</li>
+                                <li class="active">Website optimized to find students</li>
+                                <li class="active">Intuitive tutoring website template</li>
                                 <li class="active">Your own domain: <span style="color: #a7a7a7">yourname.com</span></li>
-                                <li class="active">24h support</li>
+                                <li class="active">Personal assistance to purchase a domain</li>
+                                <li class="active" style="font-weight: 700; margin-top: 2.5rem">** BONUS: create a website in the next 48h **</li>
+                                <li class="active">Your website reviewed by an expert</li>
+                                <li class="active">1-on-1 advice how to market a website</li>
+                                <li class="active">Qualify for a progress check</li>
                             </ul>
                         </div>
 
                         <div class="pricing-footer">
-                            <button type="submit" v-b-modal.modal-2  @click="logEvent('premium')" class="btn btn-primary">Select Plan</button>
+                            <button type="submit" class="btn btn-primary">Select Plan</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row" style="display: flex; justify-content: center; margin-top: 2rem">
+                <div class="col-lg-9 col-md-9 col-sm-9">
+                    <div class="pricing-table">
+                        <div class="pricing-header">
+                            <h3>School plan</h3>
+                        </div>
+
+                        <div class="price">
+                            <span><sup>$</sup>  ?  <span>/Month</span></span>
+                        </div>
+
+                        <div class="pricing-features">
+                            <ul style="padding: 5px">
+                                <li class="active">Do you hire tutors and need a website for each of them?</li>
+                                <li class="active">Are you looking to create a website for your school?</li>
+                            </ul>
+                        </div>
+
+                        <div class="pricing-footer row" style="display: flex; justify-content: center">
+                            <div class="col-5"><a href="mailto:ceo@tutomy.com?subject=School Plan" class="btn btn-primary d-block mx-auto" style="text-transform:none">CONTACT US FOR DETAILS</a></div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <b-modal id="modal-2"  style="border-radius: 30px" :return-focus="this.$parent" hide-footer hide-header >
-            <div class="mt-2">
-
-                <p style="color: #0e314c; font-size: medium;font-weight: bold">How about VIP access for free?</p>
-                <div class="row">
-                  <div class="col-8">
-                    <p style="color: #6084a4; font-size: 13px">We are <span style="font-weight: bold; text-decoration: underline;">looking for 20 tutors</span> to test our new website dashboard.</p>
-                    <p style="color: #6084a4; font-size: 13px; margin-bottom: 0px;">Get FREE website for 3 months.</p>
-                    <p style="color: #6084a4; font-size: 13px; margin-bottom: 0px;">Contact us for details.</p>
-                  </div>
-
-                  <div class="col-4">
-                    <img src="../../assets/img/survey.svg" alt="video-pic">
-                  </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-6"><a href="mailto:ceo@tutomy.com?subject=Testing website dashboard" class="btn btn-primary mt-5 d-block mx-auto" style="text-transform:none;">Free Test</a></div>
-                    <div class="col-6"><a href="mailto:ceo@tutomy.com?subject=Paid Plan" class="btn btn-primary mt-5 d-block mx-auto" style="text-transform:none;">Paid Plan</a></div>
-                </div>
-            </div>
-
-        </b-modal>
 
         <div class="shape8 rotateme"><img src="../../assets/img/shape2.svg" alt="shape"></div>
         <div class="shape2 rotateme"><img src="../../assets/img/shape2.svg" alt="shape"></div>
@@ -106,10 +117,5 @@
 
 export default {
     name: 'Pricing',
-    methods: {
-        logEvent() {
-            this.$store.commit('popup/setSeen');
-        }
-    }
 }
 </script>
