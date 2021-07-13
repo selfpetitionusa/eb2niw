@@ -123,10 +123,6 @@
                     </div>
                 </form>
 
-
-
-
-
                 <div style="color: #0e314c">In the meantime:</div>
                 <ul class="bonus-offer">
                   <li style="line-height: 2"><span style="font-weight: 700">Register for FREE</span> to enjoy website on tutomy domain</li>
@@ -154,10 +150,36 @@
 
 export default {
     name: 'Pricing',
+    data() {
+        return {
+            email: '',
+            message: ''
+        }
+    },
     methods: {
         logEvent() {
             this.$store.commit('popup/setSeen');
-        }
-    }
+        },
+        addEmail(email) {
+           if (!email) return;
+           var noticeMessage = "🎉 Your account has been saved  🎉";
+            const url = `/api/lead`;
+            const requestOptions = {
+                method: "POST",
+                headers: {"Content-Type" : "application/json"},
+                body: JSON.stringify({ email: email })
+            };
+            fetch(url, requestOptions).then(async response => {
+                if (response.ok) {
+                    this.$refs['modal-1'].show();
+                    this.$store.commit('popup/setSeen');
+                } else {
+                    noticeMessage = "This email address is already registered";
+                }
+                this.message = noticeMessage;
+                this.email = '';
+            });
+       }
+   }
 }
 </script>
