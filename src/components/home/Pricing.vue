@@ -78,7 +78,7 @@
             </div>
 
             <div class="row" style="display: flex; justify-content: center; margin-top: 2rem">
-                <div class="col-lg-9 col-md-9 col-sm-9">
+                <div class="col-lg-7 col-md-7 col-sm-7">
                     <div class="pricing-table">
                         <div class="pricing-header">
                             <h3>School plan</h3>
@@ -96,7 +96,7 @@
                         </div>
 
                         <div class="pricing-footer row" style="display: flex; justify-content: center">
-                            <div class="col-5"><a href="mailto:ceo@tutomy.com?subject=School Plan" class="btn btn-primary d-block mx-auto" style="text-transform:none">CONTACT US FOR DETAILS</a></div>
+                            <div class="col-6"><a href="mailto:ceo@tutomy.com?subject=School Plan" class="btn btn-primary d-block mx-auto" style="text-transform:none">CONTACT US FOR DETAILS</a></div>
                         </div>
                     </div>
                 </div>
@@ -104,33 +104,33 @@
         </div>
 
         <b-modal id="modal-2"  style="border-radius: 30px" :return-focus="this.$parent" hide-footer title="Join our waitlit" >
-            <div class="mt-2">
-                <p style="color: #0e314c">Leave your e-mail and get notified to set up own domain</p>
-                <form id="sign" @submit.prevent="addEmail(email)" class="mt-4">
-                    <div class="row">
+            <div class="mt-3" style="margin-bottom: 1rem">
+                <div style="color: #0e314c">Leave your e-mail and get notified to set up own domain</div>
 
-                        <div class="col-lg-8">
+                <form id="sign" @submit.prevent="addEmail(email)" class="mt-2">
+                    <div class="row">
+                        <div class="col-12">
                             <input type="email"  name="name" id="name" class="form-control"  v-model="email" placeholder="Enter your email address">
-                            <div class="mt-4">
+                            <div class="mt-2">
                                 <p class="m-0">{{ message }}</p>
                             </div>
                         </div>
-                        <div class="col-lg-4">
-                            <div>
-                                <button type="submit" class="btn btn-primary">Submit</button>
-                            </div>
+                        <div class="col-12">
+                            <button style="width: 58%; margin: 0" type="submit" class="btn btn-primary btn-assess">Join waitlist</button>
                         </div>
                     </div>
                 </form>
 
-                <div style="color: #0e314c">In the meantime:</div>
+                <div style="color: #0e314c; margin-top: 2.5rem">In the meantime:</div>
                 <ul class="bonus-offer">
-                  <li style="line-height: 2"><span style="font-weight: 700">Register for FREE</span> to enjoy website on tutomy domain</li>
-                  <li style="line-height: 2">Later we will transfer this website to your personal domain</li>
+                  <li style="line-height: 2"><span style="font-weight: 700">Create a website for FREE</span> and enjoy it on tutomy domain</li>
+                  <li style="line-height: 2">Later we will transfer this website to your own domain</li>
                 </ul>
 
                 <div class="row">
-                    <div class="col-6"><a href="mailto:ceo@tutomy.com?subject=Testing website dashboard" class="btn btn-primary mt-2 d-block mx-auto" style="text-transform:none;">Free Test</a></div>
+                    <div class="col-12">
+                        <button style="width: 58%" type="submit" class="btn btn-primary"><a href="https://www.tutomy.com/register" style="color: white">CREATE WEBSITE FOR FREE</a></button>
+                    </div>
                 </div>
             </div>
 
