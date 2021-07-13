@@ -106,6 +106,27 @@
         <b-modal id="modal-2"  style="border-radius: 30px" :return-focus="this.$parent" hide-footer title="Join our waitlit" >
             <div class="mt-2">
                 <p style="color: #0e314c">Leave your e-mail and get notified to set up own domain</p>
+                <form id="sign" @submit.prevent="addEmail(email)" class="mt-4">
+                    <div class="row">
+
+                        <div class="col-lg-8">
+                            <input type="email"  name="name" id="name" class="form-control"  v-model="email" placeholder="Enter your email address">
+                            <div class="mt-4">
+                                <p class="m-0">{{ message }}</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div>
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+
+
+
+
                 <div style="color: #0e314c">In the meantime:</div>
                 <ul class="bonus-offer">
                   <li style="line-height: 2"><span style="font-weight: 700">Register for FREE</span> to enjoy website on tutomy domain</li>
