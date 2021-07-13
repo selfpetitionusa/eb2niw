@@ -71,7 +71,7 @@
                         </div>
 
                         <div class="pricing-footer">
-                            <button type="submit" class="btn btn-primary">Select Plan</button>
+                            <button type="submit" v-b-modal.modal-2  @click="logEvent('domain')" class="btn btn-primary">Select Plan</button>
                         </div>
                     </div>
                 </div>
@@ -90,7 +90,7 @@
 
                         <div class="pricing-features">
                             <ul style="padding: 5px">
-                                <li class="active">Do you hire tutors and need a website for each of them?</li>
+                                <li class="active">Do you hire tutors and need website profiles for each of them?</li>
                                 <li class="active">Are you looking to create a website for your school?</li>
                             </ul>
                         </div>
@@ -102,6 +102,22 @@
                 </div>
             </div>
         </div>
+
+        <b-modal id="modal-2"  style="border-radius: 30px" :return-focus="this.$parent" hide-footer title="Join our waitlit" >
+            <div class="mt-2">
+                <p style="color: #0e314c">Leave your e-mail and get notified to set up own domain</p>
+                <div style="color: #0e314c">In the meantime:</div>
+                <ul class="bonus-offer">
+                  <li style="line-height: 2"><span style="font-weight: 700">Register for FREE</span> to enjoy website on tutomy domain</li>
+                  <li style="line-height: 2">Later we will transfer this website to your personal domain</li>
+                </ul>
+
+                <div class="row">
+                    <div class="col-6"><a href="mailto:ceo@tutomy.com?subject=Testing website dashboard" class="btn btn-primary mt-2 d-block mx-auto" style="text-transform:none;">Free Test</a></div>
+                </div>
+            </div>
+
+        </b-modal>
 
         <div class="shape8 rotateme"><img src="../../assets/img/shape2.svg" alt="shape"></div>
         <div class="shape2 rotateme"><img src="../../assets/img/shape2.svg" alt="shape"></div>
@@ -117,5 +133,10 @@
 
 export default {
     name: 'Pricing',
+    methods: {
+        logEvent() {
+            this.$store.commit('popup/setSeen');
+        }
+    }
 }
 </script>
