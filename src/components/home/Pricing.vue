@@ -1,6 +1,6 @@
 <template>
     <!-- Start Pricing Area -->
-    <section class="pricing-area ptb-80 bg-f9f6f6">
+    <section class="pricing-area ptb-80 bg-f9f6f6" style="background: linear-gradient(to left bottom, #fffcff, #fbfaff, #effbff);">
         <SectionFour id="pricing"/>
         <div class="container">
             <div class="section-title">
@@ -29,12 +29,14 @@
                         </div>
 
                         <div class="pricing-features">
-                            <ul style="padding: 5px">
+                            <ul>
                                 <li class="active">Intuitive tutoring website template</li>
                                 <li class="active">FREE subdomain on our server: <span style="color: #a7a7a7">tutomy.com</span></li>
                                 <li class="active">Search Engine Optimization on autopilot</li>
                                 <li class="active">Personal assistance to resolve problems</li>
-                                <li class="active" style="font-weight: 700; margin-top: 2.5rem">** BONUS: create a website in the next 48h **</li>
+                            </ul>
+                            <ul style="margin-top: 2rem; padding: 7px 0px; background: linear-gradient(to left bottom, #fffcff, #fbfaff, #effbff, #e0fdff, #d5fefd)">
+                                <li class="active" style="font-weight: 700">** BONUS: create a website in the next 48h **</li>
                                 <li class="active">Your website reviewed by an expert</li>
                                 <li class="active">1-on-1 advice how to market a website</li>
                                 <li class="active">Qualify for a progress check</li>
@@ -58,12 +60,14 @@
                         </div>
 
                         <div class="pricing-features">
-                            <ul style="padding: 5px">
+                            <ul>
                                 <li class="active">Intuitive tutoring website template</li>
                                 <li class="active">Your own domain: <span style="color: #a7a7a7">yourname.com</span></li>
                                 <li class="active">Search Engine Optimization on autopilot</li>
-                                <li class="active">Personal assistance to purchase a domain</li>
-                                <li class="active" style="font-weight: 700; margin-top: 2.5rem">** BONUS: create a website in the next 48h **</li>
+                                <li class="active">Personal assistance to resolve problems</li>
+                            </ul>
+                            <ul style="margin-top: 2rem; padding: 7px 0px; background: linear-gradient(to right bottom, #fffcff, #fbfaff, #effbff, #e0fdff, #d5fefd)">
+                                <li class="active" style="font-weight: 700">** BONUS: create a website in the next 48h **</li>
                                 <li class="active">Your website reviewed by an expert</li>
                                 <li class="active">1-on-1 advice how to market a website</li>
                                 <li class="active">Qualify for a progress check</li>
