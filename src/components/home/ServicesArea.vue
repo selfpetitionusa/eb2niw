@@ -134,17 +134,17 @@
                                 </a>
                             </div>
                         </div>
-                        <img src="../../assets/img/map.png" class="map-bg" alt="map" style="left: 40%">
-                        <div class="shape1-services"><img src="../../assets/img/shape1.png" alt="shape"></div>
-                        <div class="shape-2 rotateme"><img src="../../assets/img/shape2.svg" alt="shape"></div>
-                        <div class="shape3"><img src="../../assets/img/shape3.svg" alt="shape"></div>
-                        <div class="shape4"><img src="../../assets/img/shape4.svg" alt="shape"></div>
-                        <div class="shape5"><img src="../../assets/img/shape5.png" alt="shape"></div>
-                        <div class="shape6 rotateme"><img src="../../assets/img/shape4.svg" alt="shape"></div>
-                        <div class="shape7"><img src="../../assets/img/shape4.svg" alt="shape"></div>
-                        <div class="shape8 rotateme"><img src="../../assets/img/shape2.svg" alt="shape"></div>
                     </div>
                 </div>
+                <img src="../../assets/img/map.png" class="map-bg" alt="map" style="left: 40%">
+                <div class="shape2-services rotateme"><img src="../../assets/img/shape2.svg" alt="shape"></div>
+                <div class="shape3-services"><img src="../../assets/img/shape3.svg" alt="shape"></div>
+                <div class="shape4-services"><img src="../../assets/img/shape4.svg" alt="shape"></div>
+                <div class="shape5-services"><img src="../../assets/img/shape5.png" alt="shape"></div>
+                <div class="shape6-services rotateme"><img src="../../assets/img/shape4.svg" alt="shape"></div>
+                <div class="shape7-services"><img src="../../assets/img/shape4.svg" alt="shape"></div>
+                <div class="shape8-services rotateme"><img src="../../assets/img/shape2.svg" alt="shape"></div>
+                <div class="shape9-services"><img src="../../assets/img/shape5.png" alt="shape"></div>
             </div>
         </div>
     </section>

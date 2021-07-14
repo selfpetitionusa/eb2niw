@@ -63,7 +63,6 @@
             <div class="boxes-action-btn">
                 <a href="/register" class="btn btn-primary btn-register">CREATE A WEBSITE TODAY - FREE TRIAL</a>
             </div>
-
         </div>
     </section>
     <!-- End Boxes Area -->

@@ -907,9 +907,9 @@ Main Banner CSS
 }
 .shape1-services {
     position: absolute;
-    top: -220%;
+    top: -250%;
     z-index: -1;
-    left: -20%;
+    left: -5%;
     animation: rotate3d 4s linear infinite;
     opacity: .4;
 
@@ -917,14 +917,14 @@ Main Banner CSS
 .shape2 {
     position: absolute;
     z-index: -1;
-    top: 54%;
+    top: 56%;
     left: 13%;
 }
 .shape2-services {
     position: absolute;
     z-index: -1;
-    top: 56%;
-    left: 13%;
+    top: 12%;
+    left: 23%;
 }
 .shape3 {
     position: absolute;
@@ -933,10 +933,24 @@ Main Banner CSS
     z-index: -1;
     animation: animationFramesOne 15s infinite linear;
 }
+.shape3-services {
+    position: absolute;
+    left: 0%;
+    bottom: 150%;
+    z-index: -1;
+    animation: animationFramesOne 15s infinite linear;
+}
 .shape4 {
     position: absolute;
     right: 25%;
     bottom: 15%;
+    z-index: -1;
+    animation: animationFramesOne 20s infinite linear;
+}
+.shape4-services {
+    position: absolute;
+    right: 30%;
+    bottom: 100%;
     z-index: -1;
     animation: animationFramesOne 20s infinite linear;
 }
@@ -948,7 +962,21 @@ Main Banner CSS
     animation: movebounce 5s linear infinite;
     opacity: .2;
 }
+.shape5-services {
+    position: absolute;
+    right: 5%;
+    top: -140%;
+    z-index: -1;
+    animation: movebounce 5s linear infinite;
+    opacity: .2;
+}
 .shape6 {
+    position: absolute;
+    z-index: -1;
+    top: 40%;
+    right: 10%;
+}
+.shape6-services {
     position: absolute;
     z-index: -1;
     top: 40%;
@@ -961,11 +989,32 @@ Main Banner CSS
     z-index: -1;
     animation: animationFramesOne 20s infinite linear;
 }
+.shape7-services {
+    position: absolute;
+    left: 40%;
+    top: -100%;
+    z-index: -1;
+    animation: animationFramesOne 20s infinite linear;
+}
 .shape8 {
     position: absolute;
     z-index: -1;
     top: 15%;
     right: 10%;
+}
+.shape8-services {
+    position: absolute;
+    z-index: -1;
+    top: -60%;
+    right: 10%;
+}
+.shape9-services {
+    position: absolute;
+    right: 80%;
+    top: 20%;
+    z-index: -1;
+    animation: movebounce 5s linear infinite;
+    opacity: .2;
 }
 .shape15 {
     position: absolute;
