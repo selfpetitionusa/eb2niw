@@ -905,7 +905,22 @@ Main Banner CSS
     animation: rotate3d 4s linear infinite;
     opacity: .4;
 }
+.shape1-services {
+    position: absolute;
+    top: -220%;
+    z-index: -1;
+    left: -20%;
+    animation: rotate3d 4s linear infinite;
+    opacity: .4;
+
+}
 .shape2 {
+    position: absolute;
+    z-index: -1;
+    top: 56%;
+    left: 13%;
+}
+.shape2-services {
     position: absolute;
     z-index: -1;
     top: 56%;
@@ -1554,8 +1569,8 @@ Services CSS
 }
 
 .website-example {
-    h4 {
-        margin: 8rem 0 2rem;
+    h6 {
+        margin: 6rem 0 0.7rem;
         text-align: center;
     }
 
@@ -1965,11 +1980,9 @@ Fun Facts CSS
     .map-bg {
         position: absolute;
         z-index: -1;
-        top: 120px;
+        top: -100px;
         left: 0;
         right: 0;
-        text-align: center;
-        margin: 0 auto;
     }
 }
 .funfact {

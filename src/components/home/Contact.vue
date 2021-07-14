@@ -1,5 +1,5 @@
 <template>
-    <section class="contact-area ptb-80">
+    <section class="contact-area ptb-80" style="background: white">
         <SectionFive id="contact"/>
         <div class="container">
             <div class="section-title">

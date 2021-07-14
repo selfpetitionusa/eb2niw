@@ -1,6 +1,6 @@
 <template>
     <!-- Start Design & Development Services -->
-    <section class="services-area ptb-80">
+    <section class="services-area ptb-80" style="background: white">
         <SectionThree id="solutions"/>
         <div class="container">
             <div class="section-title">
@@ -94,8 +94,8 @@
                 </div>
             </div>
 
-            <div class="website-example">
-                <h4>Tutoring website template example</h4>
+            <div class="website-example funfacts-area">
+                <h6>Tutoring website template example</h6>
                 <p><a href="https://www.tutomy.com/tutor/nataliesmith">www.tutomy.com/tutor/nataliesmith</a></p>
 
                 <div class="carousel">
@@ -124,10 +124,18 @@
                                 </a>
                             </div>
                         </div>
+                        <img src="../../assets/img/map.png" class="map-bg" alt="map" style="left: 40%">
+                        <div class="shape1-services"><img src="../../assets/img/shape1.png" alt="shape"></div>
+                        <div class="shape-2 rotateme"><img src="../../assets/img/shape2.svg" alt="shape"></div>
+                        <div class="shape3"><img src="../../assets/img/shape3.svg" alt="shape"></div>
+                        <div class="shape4"><img src="../../assets/img/shape4.svg" alt="shape"></div>
+                        <div class="shape5"><img src="../../assets/img/shape5.png" alt="shape"></div>
+                        <div class="shape6 rotateme"><img src="../../assets/img/shape4.svg" alt="shape"></div>
+                        <div class="shape7"><img src="../../assets/img/shape4.svg" alt="shape"></div>
+                        <div class="shape8 rotateme"><img src="../../assets/img/shape2.svg" alt="shape"></div>
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
     <!-- End Design & Development Services -->

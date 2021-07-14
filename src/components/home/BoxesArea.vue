@@ -1,6 +1,6 @@
 <template>
     <!-- Start Boxes Area -->
-    <section class="boxes-area ptb-80">
+    <section class="boxes-area ptb-80 bg-f9fafb">
         <SectionTwo id="about"/>
         <div class="container">
             <div class="section-title">
