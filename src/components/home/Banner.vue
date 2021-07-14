@@ -11,12 +11,35 @@
                                 <div class="row">
                                     <div class="col-lg-9">
                                         <h1>Create a tutoring website in 11min</h1>
-                                        <h4>Use it to find students</h4>
+                                        <h4 style="margin-bottom: 1.5rem">Use it to find students</h4>
 
-                                        <div class="tick-row">
-                                            <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                            <p class="tick-input">Intuitive tutoring website template</p>
+                                        <div class="d-block d-sm-none">
+                                            <div class="tick-row">
+                                                <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
+                                                <p class="tick-input">Intuitive tutoring website template</p>
+                                            </div>
                                         </div>
+
+                                            <div class="d-none d-sm-block">
+                                                <div class="tick-row">
+                                                    <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
+                                                    <p class="tick-input">Intuitive tutoring website template</p>
+                                                </div>
+                                            </div>
+
+                                        <div class="d-block d-sm-none">
+                                            <div class="tick-row">
+                                                <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
+                                                <p class="tick-input">SEO on autopilot</p>
+                                            </div>s
+                                        </div>
+
+                                            <div class="d-none d-sm-block">
+                                                <div class="tick-row">
+                                                    <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
+                                                    <p class="tick-input">SEO on autopilot</p>
+                                                </div>
+                                            </div>
 
                                         <div class="d-block d-sm-none">
                                             <div class="tick-row">
@@ -25,13 +48,12 @@
                                             </div>
                                         </div>
 
-                                        <div class="d-none d-sm-block">
-                                            <div class="tick-row">
-                                                <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                <p class="tick-input">We guide you how to use tutoring website to find students</p>
+                                            <div class="d-none d-sm-block">
+                                                <div class="tick-row">
+                                                    <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
+                                                    <p class="tick-input">We guide you how to use tutoring website to find students</p>
+                                                </div>
                                             </div>
-                                        </div>
-
 
                                         <p><span class="bonus">Check bonus</span> - create a FREE website in the next 48h</p>
                                     </div>

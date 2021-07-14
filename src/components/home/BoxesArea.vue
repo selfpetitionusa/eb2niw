@@ -24,11 +24,20 @@
 
             <div class="row justify-content-center">
                 <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="single-box">
+                    <div class="single-box bg-eb6b3d">
                         <div class="icon">
                             <font-awesome-icon class="font-icon" icon="desktop" />
                         </div>
-                        <h3>Intuitive tutoring website template: zero-code & design</h3>
+                        <h3>Intuitive tutoring website template: <br>zero-code or design</h3>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="single-box">
+                        <div class="icon">
+                            <font-awesome-icon class="font-icon" icon="search" />
+                        </div>
+                        <h3>SEO optimized for you with no additional action required</h3>
                     </div>
                 </div>
 
@@ -37,7 +46,7 @@
                         <div class="icon">
                             <font-awesome-icon class="font-icon" icon="lightbulb" />
                         </div>
-                        <h3>Tips on how to find students with a tutoring website</h3>
+                        <h3>Tips on how to find students with a <br>tutoring website</h3>
                     </div>
                 </div>
 
@@ -46,7 +55,7 @@
                         <div class="icon">
                             <font-awesome-icon class="font-icon" icon="users" />
                         </div>
-                        <h3>Developed by observing how learners hire tutors</h3>
+                        <h3>Developed by observing how learners & parents hire tutors</h3>
                     </div>
                 </div>
             </div>

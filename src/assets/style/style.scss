@@ -917,7 +917,7 @@ Main Banner CSS
 .shape2 {
     position: absolute;
     z-index: -1;
-    top: 56%;
+    top: 54%;
     left: 13%;
 }
 .shape2-services {
@@ -1134,8 +1134,8 @@ Boxes CSS
 
     .icon {
         text-align: center;
-        width: 130px;
-        height: 130px;
+        width: 80px;
+        height: 80px;
         background: #cdf1d8;
         border-radius: 50%;
         color: $light-green-color;
@@ -1143,12 +1143,12 @@ Boxes CSS
     }
 
     .font-icon {
-        margin-top: 35px;
-        font-size: 60px;
+        margin-top: 20px;
+        font-size: 40px;
     }
 
     h3 {
-        font-size: 18px;
+        font-size: 17px;
         margin: {
             top: 25px;
             bottom: 15px;
@@ -1173,11 +1173,11 @@ Boxes CSS
         transition: $transition;
     }
     &.bg-f78acb {
-        border-color: rgba(247, 138, 203, .3);
+        border-color: rgba(247, 138, 203, .35);
 
         .icon {
             color: #f78acb;
-            background: rgba(247, 138, 203, .3);
+            background: rgba(247, 138, 203, .35);
         }
     }
     &.bg-c679e3 {
@@ -1189,11 +1189,11 @@ Boxes CSS
         }
     }
     &.bg-eb6b3d {
-        border-color: rgba(235, 107, 61, .3);
+        border-color: rgba(235, 107, 61, .25);
 
         .icon {
             color: #eb6b3d;
-            background: rgba(235, 107, 61, .3);
+            background: rgba(235, 107, 61, .25);
         }
     }
     &:hover {

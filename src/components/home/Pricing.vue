@@ -30,9 +30,9 @@
 
                         <div class="pricing-features">
                             <ul style="padding: 5px">
-                                <li class="active">Website optimized to find students</li>
                                 <li class="active">Intuitive tutoring website template</li>
                                 <li class="active">FREE subdomain on our server: <span style="color: #a7a7a7">tutomy.com</span></li>
+                                <li class="active">Search Engine Optimization on autopilot</li>
                                 <li class="active">Personal assistance to resolve problems</li>
                                 <li class="active" style="font-weight: 700; margin-top: 2.5rem">** BONUS: create a website in the next 48h **</li>
                                 <li class="active">Your website reviewed by an expert</li>
@@ -59,9 +59,9 @@
 
                         <div class="pricing-features">
                             <ul style="padding: 5px">
-                                <li class="active">Website optimized to find students</li>
                                 <li class="active">Intuitive tutoring website template</li>
                                 <li class="active">Your own domain: <span style="color: #a7a7a7">yourname.com</span></li>
+                                <li class="active">Search Engine Optimization on autopilot</li>
                                 <li class="active">Personal assistance to purchase a domain</li>
                                 <li class="active" style="font-weight: 700; margin-top: 2.5rem">** BONUS: create a website in the next 48h **</li>
                                 <li class="active">Your website reviewed by an expert</li>
