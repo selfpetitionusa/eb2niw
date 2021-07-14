@@ -905,15 +905,6 @@ Main Banner CSS
     animation: rotate3d 4s linear infinite;
     opacity: .4;
 }
-.shape1-services {
-    position: absolute;
-    top: -250%;
-    z-index: -1;
-    left: -5%;
-    animation: rotate3d 4s linear infinite;
-    opacity: .4;
-
-}
 .shape2 {
     position: absolute;
     z-index: -1;
@@ -923,8 +914,8 @@ Main Banner CSS
 .shape2-services {
     position: absolute;
     z-index: -1;
-    top: 12%;
-    left: 23%;
+    top: 3%;
+    left: 32%;
 }
 .shape3 {
     position: absolute;
@@ -976,12 +967,6 @@ Main Banner CSS
     top: 40%;
     right: 10%;
 }
-.shape6-services {
-    position: absolute;
-    z-index: -1;
-    top: 40%;
-    right: 10%;
-}
 .shape7 {
     position: absolute;
     left: 25%;
@@ -1001,20 +986,6 @@ Main Banner CSS
     z-index: -1;
     top: 15%;
     right: 10%;
-}
-.shape8-services {
-    position: absolute;
-    z-index: -1;
-    top: -60%;
-    right: 10%;
-}
-.shape9-services {
-    position: absolute;
-    right: 80%;
-    top: 20%;
-    z-index: -1;
-    animation: movebounce 5s linear infinite;
-    opacity: .2;
 }
 .shape15 {
     position: absolute;
