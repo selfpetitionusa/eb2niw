@@ -41,7 +41,7 @@
                             </div>
 
                             <div class="col-lg-12 col-md-12  d-flex justify-content-center justify-content-lg-start">
-                                <button type="submit" class="btn btn-primary">Send Message</button>
+                                <button type="submit" class="btn btn-primary btn-assess" style="margin: 0px">Send Message</button>
                                 <div id="msgSubmit" class="h3 text-center hidden"></div>
                                 <div class="clearfix"></div>
                             </div>

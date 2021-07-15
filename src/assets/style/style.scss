@@ -2138,6 +2138,15 @@ Pricing CSS
             }
         }
     }
+    .btn-primary {
+        background: $purple-color;
+        box-shadow: 0 13px 27px 0 rgba(198, 121, 227, 0.25);
+
+        &::after, &::before {
+            background: $light-green-color;
+            box-shadow: 0 13px 27px 0 rgba(68, 206, 111, 0.25);
+        }
+    }
     &.active-plan {
         .pricing-header {
             &::before {
