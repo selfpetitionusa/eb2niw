@@ -1,24 +1,28 @@
 <template>
 
   <div @mouseleave="mouseLeave">
-    <b-modal ref="modal-3"  style="border-radius: 30px" :return-focus="this.$parent" hide-footer hide-header >
-      <div class="mt-2">
+    <b-modal ref="modal-3"  style="border-radius: 30px" :return-focus="this.$parent" title="Qualify for a BONUS offer" hide-footer>
+    <div class="popup-register">
+      <p class="popup-title">Do you have <span class="highlight">11min</span> to create your new website?</p>
+      <p class="popup-body">Complete website in the next 48h.</p>
+      <p class="popup-body">Get 3 complimentary sessions:</p>
 
-        <p style="color: #0e314c; font-size: medium; font-weight: bold">How about VIP access for free?</p>
-        <div class="row">
-          <div class="col-7">
-            <p style="color: #6084a4; font-size: 13px">We are <span style="font-weight: bold; text-decoration: underline;">looking for 20 tutors</span> to test our new website dashboard.</p>
-            <p style="color: #6084a4; font-size: 13px; margin-bottom: 0px;">Get FREE website presence for 3 months.</p>
-            <p style="color: #6084a4; font-size: 13px; margin-bottom: 0px;">Contact us for details.</p>
-            <a href="mailto:ceo@tutomy.com?subject=Testing website dashboard" class="btn btn-primary mt-5 d-block mx-auto" style="text-transform:none;">Claim VIP Access</a>
-          </div>
-          <div class="col-5">
-            <img src="./../assets/img/survey.svg" alt="video-pic">
-          </div>
+      <div class="row">
+        <div class="col-9">
+          <ul class="bonus-offer">
+            <li>Your website reviewed by an expert</li>
+            <li>1-on-1 advice how to market a website</li>
+            <li>Qualify for a progress check</li>
+          </ul>
+        </div>
+
+        <div class="col-3 pic-container">
+          <img src="./../assets/img/gift2.svg" alt="gift-pic">
         </div>
       </div>
-
+    </div>
     </b-modal>
+    
     <div v-if="currentUrl == '/not-found' || currentUrl == '/coming-soon'"></div>
     <Header v-else></Header>
     <PreLoader v-if="isLoading" />
