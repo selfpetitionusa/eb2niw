@@ -16,14 +16,14 @@
                                         <div class="d-block d-sm-none">
                                             <div class="tick-row">
                                                 <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                <p class="tick-input">Looking to display information about tutoring business professionally?</p>
+                                                <p class="tick-input">Looking to display information about your tutoring business professionally?</p>
                                             </div>
                                         </div>
 
                                             <div class="d-none d-sm-block">
                                                 <div class="tick-row">
                                                     <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                    <p class="tick-input">Looking to display information about tutoring business professionally?</p>
+                                                    <p class="tick-input">Looking to display information about your tutoring business professionally?</p>
                                                 </div>
                                             </div>
 
