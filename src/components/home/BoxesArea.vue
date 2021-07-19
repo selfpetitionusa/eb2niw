@@ -7,7 +7,7 @@
                 <h2>Why do I need a tutoring website?</h2>
                 <div class="bar"></div>
                 <div class="paragraph">
-                    <p><strong>If you don’t exist on the Internet, you don’t exist.</strong></p>
+                    <p>If you don’t exist on the Internet, you don’t exist.</p>
                 </div>
                 <div class="paragraph">
                     <p>Main reason is an increased credibility with prospective students.</p>
@@ -18,7 +18,7 @@
                 </div>
                 <div class="paragraph">
                     <p>Your way to stand out is by providing quality information.</p>
-                    <p>So each time direct them to a central hub - <strong>your online tutoring website!</strong></p>
+                    <p>So each time share an online business card - your tutoring website!</p>
                 </div>
             </div>
 
@@ -28,7 +28,7 @@
                         <div class="icon">
                             <font-awesome-icon class="font-icon" icon="desktop" />
                         </div>
-                        <h3>Intuitive tutoring website template: <br>zero-code or design</h3>
+                        <h3>Transform your tutoring into a professional business</h3>
                     </div>
                 </div>
 
@@ -37,7 +37,7 @@
                         <div class="icon">
                             <font-awesome-icon class="font-icon" icon="search" />
                         </div>
-                        <h3>SEO optimized for you with no additional action required</h3>
+                        <h3>Increase credibility and look legitimate for prospective students</h3>
                     </div>
                 </div>
 
@@ -46,7 +46,7 @@
                         <div class="icon">
                             <font-awesome-icon class="font-icon" icon="lightbulb" />
                         </div>
-                        <h3>Tips on how to find students with a <br>tutoring website</h3>
+                        <h3>Attract website visitors and convert them to qualified leads</h3>
                     </div>
                 </div>
 
@@ -55,7 +55,7 @@
                         <div class="icon">
                             <font-awesome-icon class="font-icon" icon="users" />
                         </div>
-                        <h3>Developed by observing how learners & parents hire tutors</h3>
+                        <h3>Optimized by observing how learners & parents hire tutors</h3>
                     </div>
                 </div>
             </div>

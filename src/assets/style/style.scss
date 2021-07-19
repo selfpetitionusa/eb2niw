@@ -1068,20 +1068,17 @@ Main Banner CSS
 
 .tick-row {
     display: flex;
-    margin: 1.5rem 0 0.5rem 1rem;
+    margin: 0 0 1rem 1rem;
 
-    .tick-input {
+    p.tick-input {
         color: $black-color;
         font-size: 1.1rem;
         line-height: 1.5;
-        margin: 0px 10px;
+        margin: 0 0 0 10px;
     }
 
     .tick-icon {
         color: $black-color;
-    }
-    &:last-child {
-        margin-top: 0.5rem;
     }
 }
 

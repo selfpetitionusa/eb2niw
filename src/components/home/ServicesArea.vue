@@ -36,22 +36,27 @@
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="box">
+                                    <feather type="layout"></feather> We can set up a domain of your choice
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="box">
+                                    <feather type="pen-tool"></feather> Intuitive template to create a tutoring website in 11min
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="box">
+                                    <feather type="message-circle"></feather> We guide you how to use tutoring website to find students
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="box">
                                     <feather type="search"></feather> SEO on autopilot - optimized for you, no action required
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="box">
-                                    <feather type="pen-tool"></feather> Tutoring website template to create a website in 11min
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6">
-                                <div class="box">
                                     <feather type="credit-card"></feather> Collect your payments from students **coming soon
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6">
-                                <div class="box">
-                                    <feather type="layout"></feather> We can set up a domain of your choice
                                 </div>
                             </div>
                         </div>
@@ -67,22 +72,27 @@
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="box">
+                                    <feather type="layout"></feather> We can set up a domain of your choice
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="box">
+                                    <feather type="pen-tool"></feather> Intuitive template to create a tutoring website in 11min
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="box">
+                                    <feather type="message-circle"></feather> We guide you how to use tutoring website to find students
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="box">
                                     <feather type="search"></feather> SEO on autopilot - optimized for you, no action required
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="box">
-                                    <feather type="pen-tool"></feather> Tutoring website template to create a website in 11min
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6">
-                                <div class="box">
                                     <feather type="credit-card"></feather> Collect your payments from students **coming soon
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6">
-                                <div class="box">
-                                    <feather type="layout"></feather> We can set up a domain of your choice
                                 </div>
                             </div>
                         </div>
