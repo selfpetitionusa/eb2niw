@@ -9,8 +9,8 @@
         <div class="row">
           <div class="col-9">
             <ul class="bonus-offer">
-              <li>Your website reviewed by an expert</li>
-              <li>1-on-1 advice how to market a website</li>
+              <li>Your website review by an expert</li>
+              <li>1-on-1 advice on how to promote it</li>
               <li>Qualify for a progress check</li>
             </ul>
           </div>

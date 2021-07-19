@@ -9,14 +9,14 @@
 
                 <div class="paragraph">
                     <p>We are not just a website builder for private tutors.</p>
-                    <p>Easy and intuitive tutoring website template is just a start.</p>
+                    <p>An easy and intuitive tutoring website template is just a start.</p>
                 </div>
                 <div class="paragraph">
-                    <p>As a private tutor you succeed when your calendar gets fully booked.</p>
-                    <p>We guide you how to use your website to find students.</p>
+                    <p>As a private tutor, you succeed when your calendar gets fully booked.</p>
+                    <p>We guide you on how to use your website to find students.</p>
                 </div>
                 <div class="paragraph">
-                    <p>Coding and design work is already done, so that you can focus on tutoring and finding students!</p>
+                    <p>Coding and design work is already done so that you can focus on tutoring and finding students!</p>
                 </div>
             </div>
 
@@ -46,7 +46,7 @@
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="box">
-                                    <feather type="message-circle"></feather> We guide you how to use tutoring website to find students
+                                    <feather type="message-circle"></feather> We guide you on how to use tutoring website to find students
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6">
@@ -82,7 +82,7 @@
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="box">
-                                    <feather type="message-circle"></feather> We guide you how to use tutoring website to find students
+                                    <feather type="message-circle"></feather> We guide you on how to use tutoring website to find students
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6">
@@ -146,6 +146,8 @@
                         </div>
                     </div>
                 </div>
+
+
                 <img src="../../assets/img/map.png" class="map-bg" alt="map" style="left: 40%">
                 <div class="shape2-services rotateme"><img src="../../assets/img/shape2.svg" alt="shape"></div>
                 <div class="shape3-services"><img src="../../assets/img/shape3.svg" alt="shape"></div>

@@ -7,8 +7,8 @@
                 <h2>Pricing Plans</h2>
                 <div class="bar"></div>
                 <div class="paragraph">
-                    <p><strong>100% Money Back Guarantee.</strong></p>
-                    <p>Cancel monthly subscription anytime, no questions ask.</p>
+                    <p><strong>100% Money-Back Guarantee.</strong></p>
+                    <p>Cancel monthly subscription anytime, no questions asked.</p>
                 </div>
                 <div class="paragraph">
                     <p>We want happy customers who benefit from the opportunity which tutoring website brings. If you buy the package and aren’t satisfied, e-mail us within 7 days from your purchase and we will refund your money.</p>
@@ -37,8 +37,8 @@
                             </ul>
                             <ul style="margin-top: 2rem; padding: 7px 0px; background: linear-gradient(to left bottom, #fffcff, #fbfaff, #effbff, #e0fdff, #d5fefd)">
                                 <li class="active" style="font-weight: 700">** BONUS: create a website in the next 48h **</li>
-                                <li class="active">Your website reviewed by an expert</li>
-                                <li class="active">1-on-1 advice how to market a website</li>
+                                <li class="active">Your website review by an expert</li>
+                                <li class="active">1-on-1 advice on how to promote it</li>
                                 <li class="active">Qualify for a progress check</li>
                             </ul>
                         </div>
@@ -68,8 +68,8 @@
                             </ul>
                             <ul style="margin-top: 2rem; padding: 7px 0px; background: linear-gradient(to right bottom, #fffcff, #fbfaff, #effbff, #e0fdff, #d5fefd)">
                                 <li class="active" style="font-weight: 700">** BONUS: create a website in the next 48h **</li>
-                                <li class="active">Your website reviewed by an expert</li>
-                                <li class="active">1-on-1 advice how to market a website</li>
+                                <li class="active">Your website review by an expert</li>
+                                <li class="active">1-on-1 advice on how to promote it</li>
                                 <li class="active">Qualify for a progress check</li>
                             </ul>
                         </div>

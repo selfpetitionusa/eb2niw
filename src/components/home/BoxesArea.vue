@@ -10,7 +10,7 @@
                     <p>If you don’t exist on the Internet, you don’t exist.</p>
                 </div>
                 <div class="paragraph">
-                    <p>Main reason is an increased credibility with prospective students.</p>
+                    <p>The main reason is increased credibility with prospective students.</p>
                     <p>It gives people comfort that you’re a legitimate private tutor.</p>
                 </div>
                 <div class="paragraph">
@@ -18,7 +18,7 @@
                 </div>
                 <div class="paragraph">
                     <p>Your way to stand out is by providing quality information.</p>
-                    <p>So each time share an online business card - your tutoring website!</p>
+                    <p>Each time, share an online business card - your tutoring website!</p>
                 </div>
             </div>
 
