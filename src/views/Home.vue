@@ -2,27 +2,31 @@
 
   <div @mouseleave="mouseLeave">
     <b-modal ref="modal-3"  style="border-radius: 30px" :return-focus="this.$parent" title="Qualify for a BONUS offer" hide-footer>
-    <div class="popup-register">
-      <p class="popup-title">Do you have <span class="highlight">11min</span> to create your new website?</p>
-      <p class="popup-body">Complete website in the next 48h.</p>
-      <p class="popup-body">Get 3 complimentary sessions:</p>
+      <div class="popup-register">
+        <p class="popup-title">Do you have <span class="highlight">11min</span> to create your new website?</p>
+        <p class="popup-body">Complete website in the next 48h.</p>
+        <p class="popup-body">Get 3 complimentary sessions:</p>
 
-      <div class="row">
-        <div class="col-9">
-          <ul class="bonus-offer">
-            <li>Your website reviewed by an expert</li>
-            <li>1-on-1 advice how to market a website</li>
-            <li>Qualify for a progress check</li>
-          </ul>
-        </div>
+        <div class="row">
+          <div class="col-9">
+            <ul class="bonus-offer">
+              <li>Your website reviewed by an expert</li>
+              <li>1-on-1 advice how to market a website</li>
+              <li>Qualify for a progress check</li>
+            </ul>
+          </div>
 
-        <div class="col-3 pic-container">
-          <img src="./../assets/img/gift2.svg" alt="gift-pic">
+          <div class="col-3 pic-container">
+            <img src="./../assets/img/gift2.svg" alt="gift-pic">
+          </div>
         </div>
       </div>
-    </div>
+
+      <div class="col-12">
+          <a href="/register" class="btn btn-primary btn-register" style="margin-top: 1.5rem">CREATE A WEBSITE TODAY - FREE</a>
+      </div>
     </b-modal>
-    
+
     <div v-if="currentUrl == '/not-found' || currentUrl == '/coming-soon'"></div>
     <Header v-else></Header>
     <PreLoader v-if="isLoading" />
