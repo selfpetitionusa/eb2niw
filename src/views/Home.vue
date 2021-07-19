@@ -35,6 +35,7 @@
       <BoxesArea></BoxesArea>
       <ServicesArea></ServicesArea>
       <Pricing></Pricing>
+      <Testimonials></Testimonials>
       <Contact></Contact>
     </div>
     <div v-if="currentUrl == '/not-found' || currentUrl == '/coming-soon'"></div>
@@ -49,6 +50,7 @@
   import ServicesArea from './../components/home/ServicesArea';
   import Pricing from './../components/home/Pricing';
   import Contact from './../components/home/Contact';
+  import Testimonials from "../components/home/Testimonials";
   import Header from "../components/layout/Header";
   import Footer from "../components/layout/Footer";
   import PreLoader from "../components/layout/PreLoader";
@@ -62,6 +64,7 @@
       BoxesArea,
       ServicesArea,
       Pricing,
+      Testimonials,
       Contact,
       Header,
       Footer,

@@ -7,7 +7,7 @@
                 <h2>Pricing Plans</h2>
                 <div class="bar"></div>
                 <div class="paragraph">
-                    <p><strong>100% Money-Back Guarantee.</strong></p>
+                    <p><strong>100% Money-Back Guarantee</strong></p>
                     <p>Cancel monthly subscription anytime, no questions asked.</p>
                 </div>
                 <div class="paragraph">

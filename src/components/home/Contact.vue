@@ -1,6 +1,6 @@
 <template>
-    <section class="contact-area ptb-80" style="background: white">
-        <SectionFive id="contact"/>
+    <section class="contact-area ptb-80 bg-f9fafb">
+        <SectionSix id="contact"/>
         <div class="container">
             <div class="section-title">
                 <h2>Get In Touch</h2>
