@@ -22,7 +22,7 @@
 
             <div class="row h-100 justify-content-center align-items-center">
                 <div class="col-lg-6 col-md-12">
-                    <img src="../../assets/img/Teacher2.svg"  alt="service-pic">
+                    <img src="../../assets/img/Teacher2.svg"  alt="Tutomy service - online tutoring website template">
                 </div>
 
                 <div class="col-lg-6 col-md-12 services-content">
@@ -56,7 +56,7 @@
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="box">
-                                    <feather type="credit-card"></feather> Collect your payments from students **coming soon
+                                    <feather type="credit-card"></feather> Collect payments from students **coming soon
                                 </div>
                             </div>
                         </div>
@@ -92,7 +92,7 @@
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="box">
-                                    <feather type="credit-card"></feather> Collect your payments from students **coming soon
+                                    <feather type="credit-card"></feather> Collect payments from students **coming soon
                                 </div>
                             </div>
                         </div>
@@ -123,16 +123,16 @@
                         <div id="carouselLandingPage" class="carousel slide" data-ride="carousel">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img class="d-block w-100" src="../../assets/img/landing-slider-1.png" alt="Website example">
+                                    <img class="d-block w-100" src="../../assets/img/landing-slider-1.png" alt="Finding students with Tutomy website - example view">
                                 </div>
                                 <div class="carousel-item">
-                                    <img class="d-block w-100" src="../../assets/img/landing-slider-2.png" alt="Website empty">
+                                    <img class="d-block w-100" src="../../assets/img/landing-slider-2.png" alt="Finding students with Tutomy website - empty view">
                                 </div>
                                 <div class="carousel-item">
-                                    <img class="d-block w-100" src="../../assets/img/landing-slider-3.png" alt="Website edit">
+                                    <img class="d-block w-100" src="../../assets/img/landing-slider-3.png" alt="Finding students with Tutomy website - edit view">
                                 </div>
                                 <div class="carousel-item">
-                                    <img class="d-block w-100" src="../../assets/img/landing-slider-4.png" alt="Website complete">
+                                    <img class="d-block w-100" src="../../assets/img/landing-slider-4.png" alt="Finding students with Tutomy website - complete view">
                                 </div>
                                 <a class="carousel-control-prev" href="#carouselLandingPage" role="button" data-slide="prev">
                                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -148,12 +148,12 @@
                 </div>
 
 
-                <img src="../../assets/img/map.png" class="map-bg" alt="map" style="left: 40%">
-                <div class="shape2-services rotateme"><img src="../../assets/img/shape2.svg" alt="shape"></div>
-                <div class="shape3-services"><img src="../../assets/img/shape3.svg" alt="shape"></div>
-                <div class="shape4-services"><img src="../../assets/img/shape4.svg" alt="shape"></div>
-                <div class="shape5-services"><img src="../../assets/img/shape5.png" alt="shape"></div>
-                <div class="shape7-services"><img src="../../assets/img/shape4.svg" alt="shape"></div>
+                <img src="../../assets/img/map.png" class="map-bg" alt="Tutoring website design with Tutomy - map" style="left: 40%">
+                <div class="shape2-services rotateme"><img src="../../assets/img/shape2.svg" alt="Tutoring website design with Tutomy"></div>
+                <div class="shape3-services"><img src="../../assets/img/shape3.svg" alt="Tutoring website design with Tutomy"></div>
+                <div class="shape4-services"><img src="../../assets/img/shape4.svg" alt="Tutoring website design with Tutomy"></div>
+                <div class="shape5-services"><img src="../../assets/img/shape5.png" alt="Tutoring website design with Tutomy"></div>
+                <div class="shape7-services"><img src="../../assets/img/shape4.svg" alt="Tutoring website design with Tutomy"></div>
             </div>
         </div>
     </section>

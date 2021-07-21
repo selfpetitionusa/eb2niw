@@ -80,7 +80,7 @@
                             <div class="row">
                                 <video controls class="video col-12" id="video" preload="metadata" poster="../../assets/img/about1.jpg">
                                     <source src="../../assets/img/CmsRecording.mp4" type="video/mp4">
-                                    Your browser does not support the video tag.
+                                    Video how to create a tutoring website. Your browser does not support the video tag.
                                 </video>
                             </div>
                         </div>
@@ -89,14 +89,14 @@
             </div>
         </div>
 
-        <div class="shape1"><img src="../../assets/img/shape1.png" alt="shape"></div>
-        <div class="shape2 rotateme"><img src="../../assets/img/shape2.svg" alt="shape"></div>
-        <div class="shape3"><img src="../../assets/img/shape3.svg" alt="shape"></div>
-        <div class="shape4"><img src="../../assets/img/shape4.svg" alt="shape"></div>
-        <div class="shape5"><img src="../../assets/img/shape5.png" alt="shape"></div>
-        <div class="shape6 rotateme"><img src="../../assets/img/shape4.svg" alt="shape"></div>
-        <div class="shape7"><img src="../../assets/img/shape4.svg" alt="shape"></div>
-        <div class="shape8 rotateme"><img src="../../assets/img/shape2.svg" alt="shape"></div>
+        <div class="shape1"><img src="../../assets/img/shape1.png" alt="Tutomy best tutoring website"></div>
+        <div class="shape2 rotateme"><img src="../../assets/img/shape2.svg" alt="Tutomy best tutoring website"></div>
+        <div class="shape3"><img src="../../assets/img/shape3.svg" alt="Tutomy best tutoring website"></div>
+        <div class="shape4"><img src="../../assets/img/shape4.svg" alt="Tutomy best tutoring website"></div>
+        <div class="shape5"><img src="../../assets/img/shape5.png" alt="Tutomy best tutoring website"></div>
+        <div class="shape6 rotateme"><img src="../../assets/img/shape4.svg" alt="Tutomy best tutoring website"></div>
+        <div class="shape7"><img src="../../assets/img/shape4.svg" alt="Tutomy best tutoring website"></div>
+        <div class="shape8 rotateme"><img src="../../assets/img/shape2.svg" alt="Tutomy best tutoring website"></div>
     </div>
     <!-- End Main Banner -->
 </template>

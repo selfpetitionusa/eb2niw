@@ -7,7 +7,7 @@
                     <div class="single-footer-widget">
                         <div class="logo">
                             <a href="/">
-                                <img width="120px" src="../../assets/img/logo2.png" alt="logo" />
+                                <img width="120px" src="../../assets/img/logo2.png" alt="Tutomy tutoring website logo" />
                             </a>
                         </div>
                         <p>Empowering private tutors to find students and run an online business</p>
@@ -51,9 +51,9 @@
             </div>
         </div>
 
-        <img src="../../assets/img/map.png" class="map" alt="map">
-        <div class="shape1"><img src="../../assets/img/shape1.png" alt="shape"></div>
-        <div class="shape8 rotateme"><img src="../../assets/img/shape2.svg" alt="shape"></div>
+        <img src="../../assets/img/map.png" class="map" alt="Online tutoring website template - map">
+        <div class="shape1"><img src="../../assets/img/shape1.png" alt="Online tutoring website template"></div>
+        <div class="shape8 rotateme"><img src="../../assets/img/shape2.svg" alt="Online tutoring website template"></div>
         <!-- <div class="go-top"><feather type="arrow-up"></feather></div> -->
 
         <back-to-top bottom="50px" right="50px">
