@@ -12,8 +12,8 @@
                     <p>An easy and intuitive tutoring website template is just a start.</p>
                 </div>
                 <div class="paragraph">
-                    <p>As a private tutor, you succeed when your calendar gets fully booked.</p>
-                    <p>We guide you on how to use your website to find students.</p>
+                    <p>You succeed when your calendar gets fully booked.</p>
+                    <p>We guide you on how to use your website to achieve this goal.</p>
                 </div>
                 <div class="paragraph">
                     <p>Coding and design work is already done so that you can focus on tutoring and finding students!</p>
