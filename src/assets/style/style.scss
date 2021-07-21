@@ -360,6 +360,9 @@ label {
         padding: 5px 20px 4px;
         font-size: 13px;
     }
+    &.contact-title {
+        margin-bottom: 0px;
+    }
 }
 @keyframes MOVE-BG {
     from {
@@ -2033,7 +2036,7 @@ Fun Facts CSS
 
 .calendly {
     display: flex;
-    margin: 0 0 2.5rem 0rem;
+    margin: 4rem 0 2.5rem 0rem;
 
     .celendly-icon {
         color: $black-color;
@@ -2041,7 +2044,7 @@ Fun Facts CSS
 
     p.calendly-input {
         color: $black-color;
-        font-size: 1.1rem;
+        font-size: 16px;
         line-height: 1.5;
         margin: 0 0 0 10px;
     }

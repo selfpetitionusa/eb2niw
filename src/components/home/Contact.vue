@@ -2,7 +2,7 @@
     <section class="contact-area ptb-80 bg-f9fafb">
         <SectionSix id="contact"/>
         <div class="container">
-            <div class="section-title">
+            <div class="section-title contact-title">
                 <h2>Get In Touch</h2>
                 <div class="bar"></div>
                 <p>Tutoring your way to profit - how can we help?</p>
