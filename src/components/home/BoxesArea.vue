@@ -37,7 +37,7 @@
                         <div class="icon">
                             <font-awesome-icon class="font-icon" icon="search" />
                         </div>
-                        <h3>Increase credibility and look legitimate for prospective students</h3>
+                        <h3>Increase credibility and look legitimate to prospective students</h3>
                     </div>
                 </div>
 

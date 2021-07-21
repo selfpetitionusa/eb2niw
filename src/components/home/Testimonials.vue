@@ -6,7 +6,7 @@
                 <h2>What users say?</h2>
                 <div class="bar"></div>
                 <div class="paragraph">
-                    <p>Don't take our word for it - check what it is all about</p>
+                    <p>Don't take our word for it - check what Tutomy is all about</p>
                 </div>
             </div>
         </div>
