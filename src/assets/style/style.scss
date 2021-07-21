@@ -2031,6 +2031,27 @@ Fun Facts CSS
     }
 }
 
+.calendly {
+    display: flex;
+    margin: 0 0 2.5rem 0rem;
+
+    .celendly-icon {
+        color: $black-color;
+    }
+
+    p.calendly-input {
+        color: $black-color;
+        font-size: 1.1rem;
+        line-height: 1.5;
+        margin: 0 0 0 10px;
+    }
+
+    a {
+        font-weight:600;
+        text-decoration: underline;
+    }
+}
+
 /*==========================================
 Pricing CSS
 ===========================================*/
