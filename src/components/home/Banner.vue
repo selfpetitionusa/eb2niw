@@ -61,7 +61,7 @@
 
                                 <div class="row banner-action-btns">
                                     <div class="col-6">
-                                        <a href="/register" class="btn btn-primary btn-assess">ASSESS YOUR WEBSITE NEEDS</a>
+                                        <a href="/website-needs-assessment" class="btn btn-primary btn-assess">TEST YOUR WEBSITE NEEDS - QUIZ</a>
                                     </div>
                                     <div class="col-6">
                                         <a href="/register" class="btn btn-primary btn-register">CREATE A WEBSITE TODAY - FREE</a>

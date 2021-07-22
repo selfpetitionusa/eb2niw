@@ -2654,7 +2654,7 @@ Go Top CSS
 }
 
 /*================================================
-Landing page popups
+Landing page popups & needs assessment
 =================================================*/
 
 .popup-register {
@@ -2687,6 +2687,36 @@ Landing page popups
         display: flex;
     }
 }
+
+.assessment {
+    h2 {
+      margin-bottom: 1rem;
+    }
+
+    p {
+        line-height: 1.2rem;
+        margin-bottom: 0.3rem;
+
+        span {
+            font-weight: 600;
+        }
+    }
+
+    .assessment-choice {
+        margin: 2rem 0 0.5rem;
+
+        .title {
+            font-size: 15px;
+            font-weight: 600;
+            color: $black-color;
+        }
+
+        .form-check {
+            margin: 0.3rem 0rem;
+        }
+    }
+}
+
 
 
                   /*================================================
