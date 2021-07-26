@@ -1599,6 +1599,11 @@ Services CSS
 
         a {
             text-decoration: underline;
+            color: $light-green-color;
+
+            &:hover, &:focus {
+                color: $black-color;
+            }
         }
     }
 
@@ -2036,6 +2041,7 @@ Fun Facts CSS
 
 .calendly {
     display: flex;
+    align-items: center;
     margin: 4rem 0 2.5rem 0rem;
 
     .celendly-icon {
@@ -2051,7 +2057,11 @@ Fun Facts CSS
 
     a {
         font-weight:600;
-        text-decoration: underline;
+        color: $light-green-color;
+
+        &:hover, &:focus {
+            color: $black-color;
+        }
     }
 }
 
@@ -2441,6 +2451,20 @@ Pricing CSS
             }
         }
     }
+}
+
+.pricing-free {
+      display: flex;
+      justify-content: center;
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 3rem;
+      text-decoration: underline;
+      color: $light-green-color;
+
+      &:hover, &:focus {
+          color: $black-color;
+      }
 }
 
 

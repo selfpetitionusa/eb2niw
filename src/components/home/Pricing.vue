@@ -15,7 +15,7 @@
                 </div>
             </div>
 
-            <p><a href="https://www.tutomy.com/register" style="display: flex; justify-content: center; font-size: 1rem; font-weight: 600; text-decoration: underline; margin-bottom: 3rem">FREE TRIAL</a></p>
+            <p><a class="pricing-free" href="https://www.tutomy.com/register">FREE TRIAL</a></p>
 
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-6">
