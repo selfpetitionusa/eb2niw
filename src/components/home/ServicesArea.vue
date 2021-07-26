@@ -103,7 +103,7 @@
                 <div class="row service-action-btns">
                     <div class="col-5">
                         <div class="box">
-                            <a href="/website-needs-assessment" class="btn btn-primary btn-assess">TEST YOUR WEBSITE NEEDS: TAKE A QUIZ</a>
+                            <a href="/website-needs-assessment" class="btn btn-primary btn-assess">CHECK YOUR WEBSITE NEEDS: TAKE A QUIZ</a>
                         </div>
                     </div>
                     <div class="col-5">

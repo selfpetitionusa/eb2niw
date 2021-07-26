@@ -11,19 +11,19 @@
                                 <div class="row">
                                     <div class="col-lg-11">
                                         <h1>Create a professional tutoring website in 11min</h1>
-                                        <h4 style="margin-bottom: 1.5rem">Let students find you on the Internet</h4>
+                                        <h4 style="margin-bottom: 1.5rem">Help students find you on the Internet</h4>
 
                                         <div class="d-block d-sm-none">
                                             <div class="tick-row">
                                                 <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                <p class="tick-input">Looking to display information about your tutoring business professionally?</p>
+                                                <p class="tick-input">Looking to share information about your tutoring services, in a professional way?</p>
                                             </div>
                                         </div>
 
                                             <div class="d-none d-sm-block">
                                                 <div class="tick-row">
                                                     <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                    <p class="tick-input">Looking to display information about your tutoring business professionally?</p>
+                                                    <p class="tick-input">Looking to share information about your tutoring services, in a professional way?</p>
                                                 </div>
                                             </div>
 
@@ -44,24 +44,24 @@
                                             <div class="d-block d-sm-none">
                                                 <div class="tick-row">
                                                     <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                    <p class="tick-input">...or maybe the existing website disappoints you?</p>
+                                                    <p class="tick-input">...or your existing website is a disappointment?</p>
                                                 </div>
                                             </div>
 
                                                 <div class="d-none d-sm-block">
                                                     <div class="tick-row">
                                                         <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                        <p class="tick-input">...or maybe the existing website disappoints you?</p>
+                                                        <p class="tick-input">...or your existing website is a disappointment?</p>
                                                     </div>
                                                 </div>
 
-                                        <p><span class="bonus">Check bonus</span> - create a FREE tutoring website in the next 48h</p>
+                                        <p><span class="bonus">Bonus offer</span> when you create a FREE website in the next 48h</p>
                                     </div>
                                 </div>
 
                                 <div class="row banner-action-btns">
                                     <div class="col-6">
-                                        <a href="/website-needs-assessment" class="btn btn-primary btn-assess">TEST YOUR WEBSITE NEEDS - QUIZ</a>
+                                        <a href="/website-needs-assessment" class="btn btn-primary btn-assess">CHECK YOUR WEBSITE NEEDS</a>
                                     </div>
                                     <div class="col-6">
                                         <a href="/register" class="btn btn-primary btn-register">CREATE A WEBSITE TODAY - FREE</a>
