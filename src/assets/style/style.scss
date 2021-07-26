@@ -2667,7 +2667,10 @@ Landing page popups & needs assessment
             line-height: 2;
 
             .highlight {
-                color: #44ce6f;
+                background-color: #44ce6f;
+                color: #ffffff;
+                padding: 1px 5px;
+                border-radius: 5%;
             }
         }
 

@@ -127,7 +127,7 @@
 
                 <div style="color: #0e314c; margin-top: 2.5rem">In the meantime:</div>
                 <ul class="bonus-offer">
-                  <li style="line-height: 2"><span style="font-weight: 700">Create a website for FREE</span> and enjoy it on tutomy domain</li>
+                  <li style="line-height: 2"><span style="font-weight: 700">Create a website for FREE</span> and enjoy it on Tutomy domain</li>
                   <li style="line-height: 2">Later we will transfer this website to your own domain</li>
                 </ul>
 
