@@ -10,7 +10,7 @@
                                 <img width="120px" src="../../assets/img/logo2.png" alt="Tutomy tutoring website logo" />
                             </a>
                         </div>
-                        <p>Empowering private tutors to find students and run an online business</p>
+                        <p>Empowering private tutors to find students and run a professional business</p>
                         <p>Online tutoring website, advice, and support of like-minded tutors</p>
                         <p>Everything you need in one place</p>
                     </div>
@@ -24,6 +24,7 @@
                             <li><a href="/"  v-scroll-to="'#about'">About</a></li>
                             <li><a href="/"  v-scroll-to="'#solutions'">Solutions</a></li>
                             <li><a href="/"  v-scroll-to="'#pricing'">Pricing</a></li>
+                            <li><a href="/"  v-scroll-to="'#testimonials'">Testimonials</a></li>
                         </ul>
                     </div>
                 </div>
