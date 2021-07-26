@@ -64,7 +64,7 @@
                                         <a href="/website-needs-assessment" class="btn btn-primary btn-assess">CHECK YOUR WEBSITE NEEDS</a>
                                     </div>
                                     <div class="col-6">
-                                        <a href="/register" class="btn btn-primary btn-register">CREATE A WEBSITE TODAY - FREE</a>
+                                        <a href="/register" class="btn btn-primary btn-register">CREATE YOUR FREE WEBSITE TODAY</a>
                                     </div>
                                 </div>
 

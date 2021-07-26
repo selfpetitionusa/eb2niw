@@ -108,7 +108,7 @@
                     </div>
                     <div class="col-5">
                         <div class="box">
-                            <a href="/register" class="btn btn-primary btn-register">CREATE A WEBSITE TODAY: FREE TRIAL</a>
+                            <a href="/register" class="btn btn-primary btn-register">CREATE YOUR WEBSITE TODAY: FREE TRIAL</a>
                         </div>
                     </div>
                 </div>

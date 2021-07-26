@@ -61,7 +61,7 @@
             </div>
 
             <div class="boxes-action-btn">
-                <a href="/register" class="btn btn-primary btn-register">CREATE A WEBSITE TODAY - FREE TRIAL</a>
+                <a href="/register" class="btn btn-primary btn-register">CREATE YOUR FREE WEBSITE TODAY</a>
             </div>
         </div>
     </section>

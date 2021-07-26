@@ -36,10 +36,10 @@
                                 <li class="active">Personal assistance to resolve problems</li>
                             </ul>
                             <ul style="margin-top: 2rem; padding: 7px 0px; background: linear-gradient(to left bottom, #fffcff, #fbfaff, #effbff, #e0fdff, #d5fefd)">
-                                <li class="active" style="font-weight: 700">** BONUS: create a website in the next 48h **</li>
+                                <li class="active" style="font-weight: 700">** BONUS OFFER: create a website in the next 48h **</li>
                                 <li class="active">Your website review by an expert</li>
-                                <li class="active">1-on-1 advice on how to promote it</li>
-                                <li class="active">Qualify for a progress check</li>
+                                <li class="active">1-on-1 advice on how to promote website</li>
+                                <li class="active">Progress check-up</li>
                             </ul>
                         </div>
 
@@ -67,10 +67,10 @@
                                 <li class="active">Personal assistance to resolve problems</li>
                             </ul>
                             <ul style="margin-top: 2rem; padding: 7px 0px; background: linear-gradient(to right bottom, #fffcff, #fbfaff, #effbff, #e0fdff, #d5fefd)">
-                                <li class="active" style="font-weight: 700">** BONUS: create a website in the next 48h **</li>
+                                <li class="active" style="font-weight: 700">** BONUS OFFER: create a website in the next 48h **</li>
                                 <li class="active">Your website review by an expert</li>
-                                <li class="active">1-on-1 advice on how to promote it</li>
-                                <li class="active">Qualify for a progress check</li>
+                                <li class="active">1-on-1 advice on how to promote website</li>
+                                <li class="active">Progress check-up</li>
                             </ul>
                         </div>
 
@@ -120,7 +120,7 @@
                             </div>
                         </div>
                         <div class="col-12">
-                            <button style="width: 58%; margin: 0" type="submit" class="btn btn-primary btn-assess">Join waitlist</button>
+                            <button style="width: 66%; margin: 0" type="submit" class="btn btn-primary btn-assess">Join waitlist</button>
                         </div>
                     </div>
                 </form>
@@ -133,7 +133,7 @@
 
                 <div class="row">
                     <div class="col-12">
-                        <button style="width: 58%" type="submit" class="btn btn-primary"><a href="https://www.tutomy.com/register" style="color: white">CREATE WEBSITE FOR FREE</a></button>
+                        <button style="width: 66%" type="submit" class="btn btn-primary"><a href="https://www.tutomy.com/register" style="color: white">CREATE A FREE WEBSITE TODAY</a></button>
                     </div>
                 </div>
             </div>
