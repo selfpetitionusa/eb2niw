@@ -8,12 +8,12 @@
                 <div class="bar"></div>
 
                 <div class="paragraph">
-                    <p>We are not just a website builder for private tutors.</p>
                     <p>An easy and intuitive tutoring website template is just a start.</p>
+                    <p>You succeed when your calendar gets fully booked.</p>
                 </div>
                 <div class="paragraph">
-                    <p>You succeed when your calendar gets fully booked.</p>
-                    <p>We guide you on how to use your website to achieve this goal.</p>
+                    <p>We guide you to achieve this goal using your website.</p>
+                    <p>Our website design is optimized by observing how people make decisions about hiring private tutors.</p>
                 </div>
                 <div class="paragraph">
                     <p>Coding and design work is already done so that you can focus on tutoring and finding students!</p>

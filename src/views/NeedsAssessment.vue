@@ -9,7 +9,7 @@
                 <div class="col-sm-6 offset-sm-1">
                     <div class="row">
                         <div class="col-10">
-                            <h2>Test your website needs</h2>
+                            <h2>Check your website needs</h2>
                             <p>Based on your responses, find out about the best tools to create a website, ways to build an online presence, and find students</p>
 
                             <form id="website-assessment" @submit.prevent="addEmail(email)">
@@ -20,9 +20,9 @@
                                         <label class="form-check-label" for="noWebsite">I do NOT have a tutoring website</label>
                                     </div>
                                     <div class="form-check form-inline" style="display: flex; align-items: center; padding: 0px">
-                                        <input class="form-check-input" type="radio" name="yesWebsite-radio" id="yesWebsite" value="yesWebsite" style="display: flex; align-items: center">
+                                        <input class="form-check-input" type="radio" name="yesWebsite-radio" id="yesWebsite" value="yesWebsite" style="display: flex; align-items: center; margin: 0px 7px 0px 0px">
                                         <label class="form-check-label" for="yesWebsite">I have a tutoring website:</label>
-                                        <input type="text" class="form-control" id="yesWebsite" disabled placeholder="Link to your website" style="height: 30px; width: 51%; margin-left: 10px; border-color: #0e314c;">
+                                        <input type="text" class="form-control" id="yesWebsite" disabled placeholder="Link to your website" style="height: 30px; width: 40%; margin-left: 10px; border-color: #0e314c;">
                                     </div>
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="buildingWebsite" id="buildingWebsite" value="buildingWebsite">
