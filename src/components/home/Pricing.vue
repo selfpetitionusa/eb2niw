@@ -11,7 +11,7 @@
                     <p>Cancel monthly subscription anytime, no questions asked.</p>
                 </div>
                 <div class="paragraph">
-                    <p>We want happy customers who benefit from the opportunity which tutoring website brings. If you buy the package and aren’t satisfied, e-mail us within 7 days from your purchase and we will refund your money.</p>
+                    <p>We want happy customers who benefit from the opportunities created by having a professional tutoring website. If you are dissatisfied after buying our package, e-mail us within 7 days from your purchase and we will refund your money.</p>
                 </div>
             </div>
 
@@ -33,7 +33,7 @@
                                 <li class="active">Intuitive tutoring website template</li>
                                 <li class="active">FREE subdomain on our server: <span style="color: #a7a7a7">tutomy.com</span></li>
                                 <li class="active">Search Engine Optimization on autopilot</li>
-                                <li class="active">Personal assistance to resolve problems</li>
+                                <li class="active">24/7 support from our experts</li>
                             </ul>
                             <ul style="margin-top: 2rem; padding: 7px 0px; background: linear-gradient(to left bottom, #fffcff, #fbfaff, #effbff, #e0fdff, #d5fefd)">
                                 <li class="active" style="font-weight: 700">** BONUS OFFER: create a website in the next 48h **</li>
@@ -64,7 +64,7 @@
                                 <li class="active">Intuitive tutoring website template</li>
                                 <li class="active">Your own domain: <span style="color: #a7a7a7">yourname.com</span></li>
                                 <li class="active">Search Engine Optimization on autopilot</li>
-                                <li class="active">Personal assistance to resolve problems</li>
+                                <li class="active">24/7 support from our experts</li>
                             </ul>
                             <ul style="margin-top: 2rem; padding: 7px 0px; background: linear-gradient(to right bottom, #fffcff, #fbfaff, #effbff, #e0fdff, #d5fefd)">
                                 <li class="active" style="font-weight: 700">** BONUS OFFER: create a website in the next 48h **</li>
