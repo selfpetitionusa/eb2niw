@@ -5,7 +5,7 @@
             <div class="container">
                 <nav class="navbar navbar-expand-md navbar-light">
                     <router-link class="navbar-brand" to="/">
-                        <img width="120px" src="../../assets/img/logo2.png" alt="Tutomy tutoring website logo" />
+                        <img width="110px" src="../../assets/img/logo2.png" alt="Tutomy tutoring website logo" />
                     </router-link>
 
                     <b-navbar-toggle target="navbarSupportedContent"></b-navbar-toggle>
