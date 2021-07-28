@@ -36,9 +36,9 @@
                                 <li class="active">24/7 support from our experts</li>
                             </ul>
                             <ul style="margin-top: 2rem; padding: 7px 0px; background: linear-gradient(to left bottom, #fffcff, #fbfaff, #effbff, #e0fdff, #d5fefd)">
-                                <li class="active" style="font-weight: 700">BONUS OFFER <br>create a website in the next 48h</li>
+                                <li class="active" style="font-weight: 700">BONUS OFFER <br>Create a website in the next 48h</li>
                                 <li class="active">Your website review by an expert</li>
-                                <li class="active">1-on-1 advice on how to promote website</li>
+                                <li class="active">Advice on how to promote a website</li>
                                 <li class="active">Progress check-up</li>
                             </ul>
                         </div>
@@ -67,9 +67,9 @@
                                 <li class="active">24/7 support from our experts</li>
                             </ul>
                             <ul style="margin-top: 2rem; padding: 7px 0px; background: linear-gradient(to right bottom, #fffcff, #fbfaff, #effbff, #e0fdff, #d5fefd)">
-                                <li class="active" style="font-weight: 700">BONUS OFFER <br>create a website in the next 48h</li>
+                                <li class="active" style="font-weight: 700">BONUS OFFER <br>Create a website in the next 48h</li>
                                 <li class="active">Your website review by an expert</li>
-                                <li class="active">1-on-1 advice on how to promote website</li>
+                                <li class="active">Advice on how to promote a website</li>
                                 <li class="active">Progress check-up</li>
                             </ul>
                         </div>

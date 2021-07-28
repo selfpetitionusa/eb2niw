@@ -7,7 +7,7 @@
                 <h2>Why do I need a tutoring website?</h2>
                 <div class="bar"></div>
                 <div class="paragraph">
-                    <p>Your website is your new business card. It is what makes prospective students decide to reach out to you, or to ignore you.</p>
+                    <p>Your website is your new business card. It is what makes prospective students decide to reach out to you or to ignore you.</p>
                 </div>
                 <div class="paragraph">
                     <p>Your website builds your credibility. It gives people comfort that they are dealing with a professional tutor. To succeed, you need a well-designed website, containing all the necessary information.</p>

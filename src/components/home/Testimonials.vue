@@ -7,7 +7,7 @@
                 <div class="bar"></div>
                 <div class="paragraph">
                     <p>From our users -- private tutors, like you.</p>
-                    <p>They all built their business with Tutomy:</p>
+                    <p>They all built their professional tutoring business with Tutomy:</p>
                 </div>
             </div>
         </div>
