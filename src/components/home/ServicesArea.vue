@@ -8,12 +8,10 @@
                 <div class="bar"></div>
 
                 <div class="paragraph">
-                    <p>An easy and intuitive tutoring website template is just a start.</p>
-                    <p>You succeed when your calendar gets fully booked.</p>
+                    <p>An easy and intuitive tutoring website template is just a start. You succeed when your calendar gets fully booked.</p>
                 </div>
                 <div class="paragraph">
-                    <p>We guide you to achieve this goal using your website.</p>
-                    <p>Our website design is optimized by observing how people make decisions about hiring private tutors.</p>
+                    <p>We guide you to achieve this goal using your website. Our website design is optimized by observing how people make decisions about hiring private tutors.</p>
                 </div>
                 <div class="paragraph">
                     <p>Coding and design work is already done so that you can focus on tutoring and finding students!</p>
@@ -51,7 +49,7 @@
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="box">
-                                    <feather type="search"></feather> SEO on autopilot - optimized for you, no action required
+                                    <feather type="search"></feather> SEO on autopilot, already optimized for you
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6">
@@ -87,7 +85,7 @@
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="box">
-                                    <feather type="search"></feather> SEO on autopilot - optimized for you, no action required
+                                    <feather type="search"></feather> SEO on autopilot, already optimized for you
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6">
@@ -99,16 +97,16 @@
                     </div>
 
                 </div>
+            </div>
 
-                <div class="row service-action-btns">
-                    <div class="col-5">
-                        <div class="box">
-                            <a href="/website-needs-assessment" class="btn btn-primary btn-assess">CHECK YOUR WEBSITE NEEDS: TAKE A QUIZ</a>
+            <div class="row service-action-btns">
+                <div class="col-xl-7 col-lg-9">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <a href="/website-needs-assessment" class="btn btn-primary btn-assess">CHECK YOUR WEBSITE NEEDS: <br>TAKE A QUIZ</a>
                         </div>
-                    </div>
-                    <div class="col-5">
-                        <div class="box">
-                            <a href="/register" class="btn btn-primary btn-register">CREATE YOUR WEBSITE TODAY: FREE TRIAL</a>
+                        <div class="col-sm-6">
+                            <a href="/register" class="btn btn-primary btn-register">CREATE YOUR WEBSITE TODAY: <br>FREE TRIAL</a>
                         </div>
                     </div>
                 </div>

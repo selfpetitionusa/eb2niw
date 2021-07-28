@@ -1,35 +1,34 @@
 <template>
   <div @mousemove="openRegister">
     <b-modal ref="modal-4" :return-focus="this.$parent" title="Qualify for a BONUS offer" hide-footer>
-      <div class="popup-register">
-        <p class="popup-title">Do you have <span class="highlight">11min</span> to create your new website?</p>
-        <p class="popup-body">Complete website in the next 48h and</p>
-        <p class="popup-body">benefit from 3 complimentary sessions:</p>
+        <div class="popup-register">
+          <p class="popup-title">Do you have <span class="highlight">11min</span> to create your new website?</p>
+          <p class="popup-body">Complete website in the next 48h and benefit from 3 complimentary sessions:</p>
 
-        <div class="row">
-          <div class="col-9">
-            <ul class="bonus-offer">
+          <div class="row">
+            <div class="col-sm-9">
+              <ul class="bonus-offer">
                 <li>Your website review by an expert</li>
                 <li>1-on-1 advice on how to promote website</li>
                 <li>Progress check-up</li>
-            </ul>
-          </div>
+              </ul>
+            </div>
 
-          <div class="col-3 pic-container">
-            <img src="./../assets/img/gift2.svg" alt="gift-pic">
+            <div class="col-sm-3 pic-container">
+              <img src="./../assets/img/gift2.svg" alt="gift-pic">
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="col-12">
-          <a href="/register" class="btn btn-primary btn-register" style="margin-top: 1.5rem">CREATE A WEBSITE TODAY - FREE</a>
-      </div>
+        <div class="col-12">
+            <a href="/register" class="btn btn-primary btn-register" style="margin-top: 1.5rem">CREATE A WEBSITE TODAY - FREE</a>
+        </div>
     </b-modal>
 
     <div class="jumbotron" style="height: 100%">
         <div class="container register">
             <div class="row">
-                <div class="col-sm-6 offset-sm-3">
+                <div class="col-lg-6 col-md-8 col-sm-12 offset-lg-3 offset-md-2">
                     <h3>Register for a 30-day FREE trial</h3>
                     <div class="subject-subcategories">
                         <ul class="register-conditions">
@@ -37,6 +36,12 @@
                             <li>Cancel any time</li>
                         </ul>
                     </div>
+                    <h6>Bonus offer: create a website within 48h</h6>
+                    <ul class="bonus-offer" style="margin-bottom: 1.5rem">
+                        <li>Website review by an expert</li>
+                        <li>1-on-1 advice on how to promote it</li>
+                        <li>Progress check-up</li>
+                    </ul>
 
                     <form @submit.prevent="handleSubmit">
                         <div class="form-group">

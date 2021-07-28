@@ -59,7 +59,32 @@ $value_seven: 1550px;
                 line-height: 30px;
                 margin-bottom: 15px;
             }
+            h4 {
+                display: none;
+            }
+            .tick-input {
+                text-align: left;
+                font-size: 15px;
+            }
+            .banner-action-btns {
+                margin-right: 0rem;
+
+                .btn-register {
+                    margin-top: 1rem;
+                }
+
+                .btn-assess {
+                    margin-top: 1rem;
+                }
+            }
         }
+        .video {
+            margin-bottom: 1rem;
+        }
+        .intro-video {
+            margin-top: 1.5rem;
+        }
+
         .banner-image {
             text-align: center;
 
@@ -117,7 +142,7 @@ $value_seven: 1550px;
             }
         }
     }
-    .shape1, .shape2, .shape3, .shape4, .shape5, .shape6, .shape7, .shape8, .shape9, .shape10 {
+    .shape1, .shape2, .shape3, .shape4, .shape5, .shape6, .shape7, .shape8, .shape9, .shape10, .shape2-services, .shape3-services, .shape4-services, .shape5-services, .shape7-services {
         display: none;
     }
 
@@ -1957,6 +1982,9 @@ $value_seven: 1550px;
             top: 185px;
             bottom: 165px;
         }
+        .video {
+            margin-bottom: 1rem;
+        }
         .banner-image {
             text-align: center;
             margin-top: 45px;
@@ -1974,6 +2002,9 @@ $value_seven: 1550px;
             h1 {
                 font-size: 30px;
                 margin-bottom: 15px;
+            }
+            h4 {
+                display: none;
             }
         }
         .banner-form {

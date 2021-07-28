@@ -4,11 +4,10 @@
     <b-modal ref="modal-3"  style="border-radius: 30px" :return-focus="this.$parent" title="Qualify for a BONUS offer" hide-footer>
       <div class="popup-register">
         <p class="popup-title">Do you have <span class="highlight">11min</span> to create your new website?</p>
-        <p class="popup-body">Complete website in the next 48h and</p>
-        <p class="popup-body">benefit from 3 complimentary sessions:</p>
+        <p class="popup-body">Complete website in the next 48h and benefit from 3 complimentary sessions:</p>
 
         <div class="row">
-          <div class="col-9">
+          <div class="col-sm-9">
             <ul class="bonus-offer">
               <li>Your website review by an expert</li>
               <li>1-on-1 advice on how to promote website</li>
@@ -16,7 +15,7 @@
             </ul>
           </div>
 
-          <div class="col-3 pic-container">
+          <div class="col-sm-3 pic-container">
             <img src="./../assets/img/gift2.svg" alt="gift-pic">
           </div>
         </div>

@@ -15,7 +15,7 @@
                 </div>
             </div>
 
-            <p><a class="pricing-free" href="https://www.tutomy.com/register">FREE TRIAL</a></p>
+            <p><a class="pricing-free" href="/register">FREE TRIAL</a></p>
 
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-6">
@@ -36,7 +36,7 @@
                                 <li class="active">24/7 support from our experts</li>
                             </ul>
                             <ul style="margin-top: 2rem; padding: 7px 0px; background: linear-gradient(to left bottom, #fffcff, #fbfaff, #effbff, #e0fdff, #d5fefd)">
-                                <li class="active" style="font-weight: 700">** BONUS OFFER: create a website in the next 48h **</li>
+                                <li class="active" style="font-weight: 700">BONUS OFFER <br>create a website in the next 48h</li>
                                 <li class="active">Your website review by an expert</li>
                                 <li class="active">1-on-1 advice on how to promote website</li>
                                 <li class="active">Progress check-up</li>
@@ -44,7 +44,7 @@
                         </div>
 
                         <div class="pricing-footer">
-                            <button type="submit" class="btn btn-primary">Select Plan</button>
+                            <a href="/register" class="btn btn-primary">Select Plan</a>
                         </div>
                     </div>
                 </div>
@@ -67,7 +67,7 @@
                                 <li class="active">24/7 support from our experts</li>
                             </ul>
                             <ul style="margin-top: 2rem; padding: 7px 0px; background: linear-gradient(to right bottom, #fffcff, #fbfaff, #effbff, #e0fdff, #d5fefd)">
-                                <li class="active" style="font-weight: 700">** BONUS OFFER: create a website in the next 48h **</li>
+                                <li class="active" style="font-weight: 700">BONUS OFFER <br>create a website in the next 48h</li>
                                 <li class="active">Your website review by an expert</li>
                                 <li class="active">1-on-1 advice on how to promote website</li>
                                 <li class="active">Progress check-up</li>
@@ -81,8 +81,8 @@
                 </div>
             </div>
 
-            <div class="row" style="display: flex; justify-content: center; margin-top: 2rem">
-                <div class="col-lg-7 col-md-7 col-sm-7">
+            <div class="row school-plan">
+                <div class="col-lg-7 col-md-10 col-sm-12">
                     <div class="pricing-table">
                         <div class="pricing-header">
                             <h3>School plan</h3>
@@ -94,13 +94,13 @@
 
                         <div class="pricing-features">
                             <ul style="padding: 5px">
-                                <li class="active">Do you hire tutors and need website profiles for each of them?</li>
-                                <li class="active">Are you looking to create a website for your school?</li>
+                                <li class="active" style="padding-left: 5px; padding-right: 5px">Do you hire tutors and need website profiles for each of them?</li>
+                                <li class="active" style="padding-left: 5px; padding-right: 5px">Are you looking to create a website for your school?</li>
                             </ul>
                         </div>
 
                         <div class="pricing-footer row" style="display: flex; justify-content: center">
-                            <div class="col-6"><a href="mailto:ceo@tutomy.com?subject=School Plan" class="btn btn-primary d-block mx-auto" style="text-transform:none">CONTACT US FOR DETAILS</a></div>
+                            <div><a href="mailto:ceo@tutomy.com?subject=School Plan" class="btn btn-primary d-block mx-auto" style="text-transform:none">CONTACT US</a></div>
                         </div>
                     </div>
                 </div>
@@ -133,7 +133,7 @@
 
                 <div class="row">
                     <div class="col-12">
-                        <button style="width: 66%" type="submit" class="btn btn-primary"><a href="https://www.tutomy.com/register" style="color: white">CREATE A FREE WEBSITE TODAY</a></button>
+                        <button style="width: 66%" type="submit" class="btn btn-primary"><a href="/register" style="color: white">CREATE A FREE WEBSITE TODAY</a></button>
                     </div>
                 </div>
             </div>

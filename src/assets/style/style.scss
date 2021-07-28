@@ -122,8 +122,10 @@ p {
     color: $paragraph-color;
     line-height: 1.9;
 
-    span {
-        &.bonus {
+    &.bonus {
+        text-align: center;
+
+        span {
             font-weight: 650;
         }
     }
@@ -756,6 +758,10 @@ Main Banner CSS
         p {
             margin-bottom: 15px;
         }
+
+        h4 {
+          margin-bottom: 1.5rem;
+        }
     }
     .banner-form {
         background: $white-color;
@@ -959,11 +965,17 @@ Main Banner CSS
 .shape5-services {
     position: absolute;
     right: 5%;
-    top: -140%;
+    top: -170%;
     z-index: -1;
     animation: movebounce 5s linear infinite;
     opacity: .2;
 }
+    @media (max-width: 991px) {
+        .shape5-services {
+            top: -370%;
+            right: 0%;
+        }
+    }
 .shape6 {
     position: absolute;
     z-index: -1;
@@ -1117,7 +1129,7 @@ Main Banner CSS
 
 .intro-video {
     text-align: center;
-    margin-bottom: 1.5rem;
+    margin: 3rem 0px 1.5rem;
 }
 
 .video {
@@ -1252,6 +1264,13 @@ Boxes CSS
 .boxes-action-btn {
     text-align: center;
     margin-top: 2rem;
+}
+
+@media (max-width: 767px) {
+    .boxes-action-btn {
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
 }
 
 
@@ -1585,8 +1604,19 @@ Services CSS
 .service-action-btns {
     display: flex;
     justify-content: center;
+    text-align: center;
     margin-top: 3rem;
 }
+    @media (max-width: 767px) {
+        .service-action-btns {
+            .btn-assess {
+                margin-top: 1.5rem;
+            }
+            .btn-register {
+                margin-top: 1.5rem;
+            }
+        }
+    }
 
 .website-example {
     h6 {
@@ -1600,6 +1630,7 @@ Services CSS
         a {
             text-decoration: underline;
             color: $light-green-color;
+            font-size: 16px;
 
             &:hover, &:focus {
                 color: $black-color;
@@ -2467,7 +2498,29 @@ Pricing CSS
       }
 }
 
+.school-plan {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+    @media (max-width: 575px) {
+        .school-plan {
+            margin-top: 0rem;
+        }
+    }
 
+
+/*==========================================
+Contact CSS
+===========================================*/
+
+    @media (max-width: 991px) {
+        .contact-area {
+            img {
+                display: none;
+            }
+        }
+    }
 /*================================================
 Footer CSS
 =================================================*/
@@ -2688,7 +2741,7 @@ Landing page popups & needs assessment
         &.popup-title {
             font-size: medium;
             font-weight: 600;
-            line-height: 2;
+            line-height: 1.6;
 
             .highlight {
                 background-color: #44ce6f;
@@ -2700,7 +2753,7 @@ Landing page popups & needs assessment
 
         &.popup-body {
             font-weight: 450;
-            line-height: 0.5;
+            line-height: 1.4;
         }
     }
 
@@ -2715,13 +2768,44 @@ Landing page popups & needs assessment
     }
 }
 
+    @media (max-width: 575px) {
+        .popup-register {
+            .pic-container {
+                display: none;
+            }
+        }
+    }
+
 .assessment {
-    h2 {
+    h1 {
       margin-bottom: 1rem;
+      font-size: 30px;
     }
 
     p {
         line-height: 1.4rem;
+    }
+
+    .assessment-map {
+        position: absolute;
+        top: 75%;
+        text-align: center;
+        z-index: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        bottom: 0;
+    }
+
+    .yesWebsite-input {
+        height: 30px;
+        width: 43%;
+        margin-left: 20px;
+        border-color: #0e314c;
+    }
+
+    .submit-website {
+        display: flex;
     }
 
     .assessment-choice {
@@ -2739,6 +2823,43 @@ Landing page popups & needs assessment
     }
 }
 
+    @media (max-width: 767px) {
+          .assessment {
+              .graphic {
+                  display: none;
+              }
+              h1 {
+                  font-size: 22px;
+              }
+          }
+    }
+
+    @media (max-width: 575px) {
+        .assessment {
+            .form-inline {
+                .form-check-label {
+                    margin: 0px 0px 0px 20px;
+                }
+            }
+            .yesWebsite-input {
+                width: 95%;
+            }
+            .submit-website {
+                display: block;
+            }
+        }
+    }
+
+    @media (max-width: 320px) {
+          .assessment {
+              h1 {
+                  font-size: 16px;
+              }
+              .assessment-map {
+                  display: none;
+              }
+          }
+    }
 
 
                   /*================================================
@@ -4086,7 +4207,7 @@ Pop-ups & CMS
     .register-conditions {
         color: $paragraph-color;
         font-weight: 500;
-        margin: 1.5rem 0rem 2.5rem;
+        margin: 1.5rem 0rem 2rem;
         display: block;
 
         li {
@@ -4094,6 +4215,35 @@ Pop-ups & CMS
         }
     }
 }
+
+    @media (max-width: 575px) {
+        .register {
+            h3 {
+                font-size: 19px;
+            }
+            h6 {
+                font-size: 14px;
+                font-weight: 500;
+            }
+        }
+    }
+
+    @media (max-width: 450px) {
+        .register {
+            h3 {
+                font-size: 16px;
+            }
+
+            .register-conditions {
+                margin-bottom: 1rem;
+                margin-top: 1rem;
+
+                li {
+                    display: block;
+                }
+            }
+        }
+    }
 
 .account {
     margin: 7rem auto 1rem;

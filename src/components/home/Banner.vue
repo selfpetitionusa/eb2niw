@@ -6,12 +6,12 @@
             <div class="d-table-cell">
                 <div class="container">
                     <div class="row h-100 justify-content-center align-items-center">
-                        <div class="col-lg-6">
+                        <div class="col-lg-7">
                             <div class="hero-content">
                                 <div class="row">
                                     <div class="col-lg-11">
                                         <h1>Create a professional tutoring website in 11min</h1>
-                                        <h4 style="margin-bottom: 1.5rem">Help students find you on the Internet</h4>
+                                        <h4>Help students find you</h4>
 
                                         <div class="d-block d-sm-none">
                                             <div class="tick-row">
@@ -44,27 +44,25 @@
                                             <div class="d-block d-sm-none">
                                                 <div class="tick-row">
                                                     <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                    <p class="tick-input">...or your existing website is a disappointment?</p>
+                                                    <p class="tick-input">...or maybe your existing website is a disappointment?</p>
                                                 </div>
                                             </div>
 
                                                 <div class="d-none d-sm-block">
                                                     <div class="tick-row">
                                                         <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                        <p class="tick-input">...or your existing website is a disappointment?</p>
+                                                        <p class="tick-input">...or maybe your existing website is a disappointment?</p>
                                                     </div>
                                                 </div>
-
-                                        <p><span class="bonus">Bonus offer</span> when you create a FREE website in the next 48h</p>
                                     </div>
                                 </div>
 
                                 <div class="row banner-action-btns">
-                                    <div class="col-6">
+                                    <div class="col-sm-6">
                                         <a href="/website-needs-assessment" class="btn btn-primary btn-assess">CHECK YOUR WEBSITE NEEDS</a>
                                     </div>
-                                    <div class="col-6">
-                                        <a href="/register" class="btn btn-primary btn-register">CREATE YOUR FREE WEBSITE TODAY</a>
+                                    <div class="col-sm-6">
+                                        <a href="/register" class="btn btn-primary btn-register">CREATE FREE WEBSITE TODAY</a>
                                     </div>
                                 </div>
 
@@ -72,10 +70,12 @@
                                     <p>No payment or credit card is required</p>
                                 </div>
 
+                                <p class="bonus"><span>Bonus offer</span> when you create a FREE website in the next 48h</p>
+
                             </div>
                         </div>
 
-                        <div class="col-lg-6">
+                        <div class="col-lg-5">
                             <h6 class="intro-video">Does this sound like you?</h6>
                             <div class="row">
                                 <video controls class="video col-12" id="video" preload="metadata" poster="../../assets/img/about1.jpg">
