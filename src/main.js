@@ -18,6 +18,11 @@ import VueClipboard from 'vue-clipboard2'
 
 import './validation/validation.js'
 
+import VuePlyr from 'vue-plyr'
+import 'vue-plyr/dist/vue-plyr.css'
+
+
+
 
 Vue.config.productionTip = false;
 Vue.use(VueClipboard)
@@ -29,7 +34,7 @@ Vue.use(VueScrollTo,  {
   offset: -92,
 });
 
-
+Vue.use(VuePlyr);
 Vue.use(BootstrapVue);
 Vue.use(VueFeather);
 Vue.use(VueRouter);

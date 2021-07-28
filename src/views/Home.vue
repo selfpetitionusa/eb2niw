@@ -35,6 +35,19 @@
       <ServicesArea></ServicesArea>
       <Pricing></Pricing>
       <Testimonials></Testimonials>
+      <Feedback></Feedback>
+      <!-- Start Ready To Talk Area -->
+      <section class="ready-to-talk">
+        <div class="container">
+          <h3>Ready to talk?</h3>
+          <p>Our team is here to answer your question about StartP</p>
+          <a href="#" class="btn btn-primary">Contact Us</a>
+          <span><a href="#">Or, get started now with a free trial</a></span>
+        </div>
+      </section>
+      <!-- End Ready To Talk Area -->
+
+      <Partner></Partner>
       <Contact></Contact>
     </div>
     <div v-if="currentUrl == '/not-found' || currentUrl == '/coming-soon'"></div>
@@ -50,6 +63,8 @@
   import Pricing from './../components/home/Pricing';
   import Contact from './../components/home/Contact';
   import Testimonials from "../components/home/Testimonials";
+  import Feedback from "../components/home/Feedback";
+  import Partner from "../components/home/Partner";
   import Header from "../components/layout/Header";
   import Footer from "../components/layout/Footer";
   import PreLoader from "../components/layout/PreLoader";
@@ -67,7 +82,9 @@
       Contact,
       Header,
       Footer,
-      PreLoader
+      PreLoader,
+      Feedback,
+      Partner
     },
     methods: {
       mouseLeave: function() {

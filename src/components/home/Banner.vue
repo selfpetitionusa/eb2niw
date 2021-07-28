@@ -78,10 +78,18 @@
                         <div class="col-lg-5">
                             <h6 class="intro-video">Does this sound like you?</h6>
                             <div class="row">
-                                <video controls class="video col-12" id="video" preload="metadata" poster="../../assets/img/about1.jpg">
-                                    <source src="../../assets/img/CmsRecording.mp4" type="video/mp4">
-                                    Video how to create a tutoring website. Your browser does not support the video tag.
-                                </video>
+                                <vue-plyr :options="options">
+                                    <video
+                                            controls
+                                            crossorigin
+                                            playsinline
+                                            data-poster="../../assets/img/about1.jpg">
+                                        <source src="../../assets/img/CmsRecording.mp4" type="video/mp4">
+                                        Video how to create a tutoring website. Your browser does not support the video tag
+                                    </video>
+                                </vue-plyr>
+
+
                             </div>
                         </div>
                     </div>
