@@ -16,7 +16,7 @@
                 <div class="col-lg-6 offset-lg-1 col-col-md-12">
                     <div class="calendly">
                         <font-awesome-icon class="fa-2x calendly-icon" icon="calendar-alt" />
-                        <p class="calendly-input">Book a free consultation <a href="https://calendly.com/tutomy/tutomywebsite">here</a>, or send us a message:</p>
+                        <p class="calendly-input">Book a demo <a href="https://calendly.com/tutomy/tutomywebsite">here</a>, or send us a message:</p>
                     </div>
                     <div v-if="show_contact && contact_notice != ''" class="alert alert-warning">
                         There was a problem submitting your message. {{ contact_notice }}
