@@ -1,13 +1,7 @@
 <template>
     <!-- Start Works Area -->
     <section class="works-area ptb-80 bg-f7fafd">
-        <div class="container">
-            <div class="section-title">
-                <h2>Our Recent Works</h2>
-                <div class="bar"></div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-        </div>
+
 
         <div class="works-slides">
             <carousel
