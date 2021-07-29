@@ -35,6 +35,7 @@
       <ServicesArea></ServicesArea>
       <Pricing></Pricing>
       <Testimonials></Testimonials>
+      <Works></Works>
       <Feedback></Feedback>
       <!-- Start Ready To Talk Area -->
       <section class="ready-to-talk">
@@ -63,6 +64,7 @@
   import Pricing from './../components/home/Pricing';
   import Contact from './../components/home/Contact';
   import Testimonials from "../components/home/Testimonials";
+  import Works from "../components/home/Works";
   import Feedback from "../components/home/Feedback";
   import Partner from "../components/home/Partner";
   import Header from "../components/layout/Header";
@@ -84,7 +86,8 @@
       Footer,
       PreLoader,
       Feedback,
-      Partner
+      Partner,
+      Works
     },
     methods: {
       mouseLeave: function() {
