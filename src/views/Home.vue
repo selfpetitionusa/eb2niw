@@ -33,9 +33,10 @@
       <Banner></Banner>
       <BoxesArea></BoxesArea>
       <ServicesArea></ServicesArea>
+      <Works></Works>
       <Pricing></Pricing>
       <Testimonials></Testimonials>
-      <Works></Works>
+
       <Feedback></Feedback>
       <!-- Start Ready To Talk Area -->
       <section class="ready-to-talk">
@@ -64,12 +65,12 @@
   import Pricing from './../components/home/Pricing';
   import Contact from './../components/home/Contact';
   import Testimonials from "../components/home/Testimonials";
-  import Works from "../components/home/Works";
   import Feedback from "../components/home/Feedback";
   import Partner from "../components/home/Partner";
   import Header from "../components/layout/Header";
   import Footer from "../components/layout/Footer";
   import PreLoader from "../components/layout/PreLoader";
+  import Works from "../components/home/Works";
 
 
 
