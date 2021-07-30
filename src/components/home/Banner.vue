@@ -78,16 +78,34 @@
                         <div class="col-lg-5 video">
                             <h6 class="intro-video">Does this sound like you?</h6>
                             <div class="row">
-                                <vue-plyr :options="options">
-                                    <video
-                                            controls
-                                            crossorigin
-                                            playsinline
-                                            poster="../../assets/img/thumbnailDesktop.png">
-                                        <source src="../../assets/img/bannerIntroCaptions.mp4" type="video/mp4">
-                                        Video how to create a tutoring website. Your browser does not support the video tag
-                                    </video>
-                                </vue-plyr>
+
+
+                                <div class="d-block d-lg-none">
+                                    <vue-plyr :options="options">
+                                        <video
+                                                controls
+                                                crossorigin
+                                                playsinline
+                                                poster="../../assets/img/thumbnailMobile.png">
+                                            <source src="../../assets/img/bannerIntroCaptions.mp4" type="video/mp4">
+                                            Video how to create a tutoring website. Your browser does not support the video tag
+                                        </video>
+                                    </vue-plyr>
+                                </div>
+
+                                <div class="d-none d-lg-block">
+                                    <vue-plyr :options="options">
+                                        <video
+                                                controls
+                                                crossorigin
+                                                playsinline
+                                                poster="../../assets/img/thumbnailDesktop.png">
+                                            <source src="../../assets/img/bannerIntroCaptions.mp4" type="video/mp4">
+                                            Video how to create a tutoring website. Your browser does not support the video tag
+                                        </video>
+                                    </vue-plyr>
+
+                                </div>
 
 
                             </div>
