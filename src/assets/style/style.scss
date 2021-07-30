@@ -965,7 +965,7 @@ Main Banner CSS
 .shape5-services {
     position: absolute;
     right: 5%;
-    top: -170%;
+    top: -470%;
     z-index: -1;
     animation: movebounce 5s linear infinite;
     opacity: .2;
@@ -986,13 +986,6 @@ Main Banner CSS
     position: absolute;
     left: 25%;
     top: 15%;
-    z-index: -1;
-    animation: animationFramesOne 20s infinite linear;
-}
-.shape7-services {
-    position: absolute;
-    left: 40%;
-    top: -100%;
     z-index: -1;
     animation: animationFramesOne 20s infinite linear;
 }
@@ -1580,39 +1573,6 @@ Services CSS
     padding-bottom: 50px;
 }
 
-.carousel-control-prev, .carousel-control-next{
-    height: 50px;
-    width: 50px;
-    outline: $paragraph-color;
-    background-size: 100%, 100%;
-    border-radius: 50%;
-    border: 1px solid $paragraph-color;
-    background-color: $paragraph-color;
-    top: 40%;
-    margin: 20px;
-}
-
-.carousel-control-prev-icon {
-    background-image:url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
-    width: 30px;
-    height: 48px;
-}
-
-.carousel-control-next-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
-    width: 30px;
-    height: 48px;
-}
-
-.carousel-inner {
-    border-top: 1px;
-    border-left: 1px;
-    border-right: 1px;
-    border-bottom: 1px;
-    border-color: rgba(84, 87, 193, .4);
-    border-style: solid;
-}
-
 .service-action-btns {
     display: flex;
     justify-content: center;
@@ -1632,7 +1592,7 @@ Services CSS
 
 .website-example {
     h6 {
-        margin: 6rem 0 0.7rem;
+        margin: 8rem 0 0.7rem;
         text-align: center;
     }
 
@@ -1648,12 +1608,6 @@ Services CSS
                 color: $black-color;
             }
         }
-    }
-
-    .carousel {
-        display: flex;
-        justify-content: center;
-        margin-top: 2rem;
     }
 }
 
@@ -2048,7 +2002,7 @@ Fun Facts CSS
     .map-bg {
         position: absolute;
         z-index: -1;
-        top: -100px;
+        top: -150px;
         left: 0;
         right: 0;
     }
@@ -5519,6 +5473,15 @@ Works CSS
     opacity: 1;
     visibility: visible;
     bottom: 0;
+}
+
+.single-works img {
+    border-top: 1px;
+    border-left: 1px;
+    border-right: 1px;
+    border-bottom: 1px;
+    border-color: #EDF0FF;
+    border-style: solid;
 }
 
 

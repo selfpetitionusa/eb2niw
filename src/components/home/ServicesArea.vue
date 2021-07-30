@@ -1,6 +1,6 @@
 <template>
     <!-- Start Design & Development Services -->
-    <section class="services-area ptb-80" style="background: white">
+    <section class="services-area ptb-80" style="background: white; padding-bottom: 40px;">
         <SectionThree id="solutions"/>
         <div class="container">
             <div class="section-title">
@@ -116,42 +116,12 @@
                 <h6>Tutoring website template example</h6>
                 <p><a href="https://www.tutomy.com/tutor/nataliesmith">www.tutomy.com/tutor/nataliesmith</a></p>
 
-                <div class="">
-                    <div class="col-8">
-                        <div id="carouselLandingPage" class="carousel slide" data-ride="carousel">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img class="d-block w-100" src="../../assets/img/landing-slider-1.png" alt="Finding students with Tutomy website - example view">
-                                </div>
-                                <div class="carousel-item">
-                                    <img class="d-block w-100" src="../../assets/img/landing-slider-2.png" alt="Finding students with Tutomy website - empty view">
-                                </div>
-                                <div class="carousel-item">
-                                    <img class="d-block w-100" src="../../assets/img/landing-slider-3.png" alt="Finding students with Tutomy website - edit view">
-                                </div>
-                                <div class="carousel-item">
-                                    <img class="d-block w-100" src="../../assets/img/landing-slider-4.png" alt="Finding students with Tutomy website - complete view">
-                                </div>
-                                <a class="carousel-control-prev" href="#carouselLandingPage" role="button" data-slide="prev">
-                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    <span class="sr-only">Previous</span>
-                                </a>
-                                <a class="carousel-control-next" href="#carouselLandingPage" role="button" data-slide="next">
-                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                    <span class="sr-only">Next</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-
-                <img src="../../assets/img/map.png" class="map-bg" alt="Tutoring website design with Tutomy - map" style="left: 40%">
+                <img src="../../assets/img/map.png" class="map-bg" alt="Tutoring website design with Tutomy - map" style="left: -50%">
                 <div class="shape2-services rotateme"><img src="../../assets/img/shape2.svg" alt="Tutoring website design with Tutomy"></div>
                 <div class="shape3-services"><img src="../../assets/img/shape3.svg" alt="Tutoring website design with Tutomy"></div>
                 <div class="shape4-services"><img src="../../assets/img/shape4.svg" alt="Tutoring website design with Tutomy"></div>
                 <div class="shape5-services"><img src="../../assets/img/shape5.png" alt="Tutoring website design with Tutomy"></div>
-                <div class="shape7-services"><img src="../../assets/img/shape4.svg" alt="Tutoring website design with Tutomy"></div>
             </div>
         </div>
     </section>
