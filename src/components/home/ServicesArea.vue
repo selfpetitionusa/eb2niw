@@ -116,7 +116,7 @@
                 <h6>Tutoring website template example</h6>
                 <p><a href="https://www.tutomy.com/tutor/nataliesmith">www.tutomy.com/tutor/nataliesmith</a></p>
 
-                <div class="carousel">
+                <div class="">
                     <div class="col-8">
                         <div id="carouselLandingPage" class="carousel slide" data-ride="carousel">
                             <div class="carousel-inner">

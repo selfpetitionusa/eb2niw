@@ -1129,12 +1129,15 @@ Main Banner CSS
 
 .intro-video {
     text-align: center;
-    margin: 3rem 0px 1.5rem;
+    margin: 3.5rem 0 1.5rem;
 }
 
 .video {
-    margin-bottom: 8rem;
+    margin-bottom: 12rem;
+    padding-right: 1.7rem;
+    padding-left: 1.7rem;
 }
+
 
 /*================================================
 Boxes CSS
@@ -5016,7 +5019,7 @@ a.edit {
 // Possible options to configure video  https://github.com/sampotts/plyr
 
 html{
-  --plyr-color-main: #f18f35;
+  --plyr-color-main: rgba(	84, 87, 193, 0.5);
 }
 
 

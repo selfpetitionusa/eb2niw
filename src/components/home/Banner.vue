@@ -75,7 +75,7 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-5">
+                        <div class="col-lg-5 video">
                             <h6 class="intro-video">Does this sound like you?</h6>
                             <div class="row">
                                 <vue-plyr :options="options">
@@ -83,8 +83,8 @@
                                             controls
                                             crossorigin
                                             playsinline
-                                            data-poster="../../assets/img/about1.jpg">
-                                        <source src="../../assets/img/CmsRecording.mp4" type="video/mp4">
+                                            poster="../../assets/img/thumbnailDesktop.png">
+                                        <source src="../../assets/img/bannerIntroCaptions.mp4" type="video/mp4">
                                         Video how to create a tutoring website. Your browser does not support the video tag
                                     </video>
                                 </vue-plyr>
