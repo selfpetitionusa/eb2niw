@@ -41,7 +41,6 @@
       <section class="ready-to-talk">
         <div class="container">
           <h3>Join Tutomy community of 1,300+ private tutors</h3>
-          <p>-- Remember why you started --</p>
         </div>
       </section>
       <!-- End Ready To Talk Area -->

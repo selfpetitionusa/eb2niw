@@ -5292,7 +5292,7 @@ Ready To Talk CSS
     text-align: center;
     position: relative;
     padding-top: 80px;
-    padding-bottom: 160px;
+    padding-bottom: 150px;
     background: linear-gradient(135deg, #23bdb8 0%, #43e794 100%);
 }
 
@@ -5351,15 +5351,82 @@ Partner CSS
 
 .partner-section .partner-inner {
     background: #ffffff;
-    padding-top: 5px;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-bottom: 30px;
+    padding-top: 2rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-bottom: 3rem;
     -webkit-box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
     box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
     border-radius: 3px;
     margin-top: 25px;
+    margin-left: 3rem;
+    margin-right: 3rem;
+
+    .social-links {
+        padding: 0px;
+
+        li {
+            display: inline-block;
+            margin-right: 5px;
+            padding: 0px;
+            margin: 0px;
+            display: flex;
+            justify-content: center;
+
+            a {
+                width: 4rem;
+                text-align: center;
+                line-height: 35px;
+                height: 4rem;
+                border-radius: 50%;
+                color: $light-green-color;
+                border-color: $light-green-color;
+
+                i {
+                    width: 2.5rem;
+                    margin-top: 0.7rem;
+                }
+                &.facebook {
+                    &:hover {
+                        color: $white-color;
+                        background-color: #006AFF;
+                        border-color: #006AFF;
+                    }
+                }
+                &.linkedin {
+                    &:hover {
+                        color: $white-color;
+                        background-color: #0077B5;
+                        border-color: #0077B5;
+                    }
+                }
+                &.youtube {
+                    &:hover {
+                        color: $white-color;
+                        background-color: #ff0000;
+                        border-color: #ff0000;
+                    }
+                }
+            }
+        }
+    }
 }
+
+    @media (max-width: 575px) {
+        .partner-section .partner-inner {
+            .social-links {
+                li {
+                    a {
+                        height: 3rem;
+                        width: 3rem;
+                        i {
+                            width: 1.5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
 
 .partner-section .partner-inner a {
     display: block;
