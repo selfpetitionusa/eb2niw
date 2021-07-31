@@ -917,8 +917,8 @@ Main Banner CSS
 .shape2 {
     position: absolute;
     z-index: -1;
-    top: 59%;
-    left: 13%;
+    top: 58%;
+    left: 30%;
 }
 .shape2-services {
     position: absolute;
@@ -994,6 +994,12 @@ Main Banner CSS
     z-index: -1;
     top: 20%;
     right: 17%;
+}
+.shape8-pricing {
+    position: absolute;
+    z-index: -1;
+    top: 23%;
+    right: 43%;
 }
 .shape15 {
     position: absolute;
@@ -2838,7 +2844,7 @@ General and layout containers
 =================================================*/
 
 html {
-    background-color: #f9f6f6;
+    background-color: $white-color;
 
     /* removes scrollbar for window and divs */
     ::-webkit-scrollbar {
