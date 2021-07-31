@@ -3,9 +3,10 @@
     <section class="feedback-area ptb-80 bg-f7fafd">
         <div class="container">
             <div class="section-title">
-                <h2>What users Saying</h2>
+                <h2>What users say?</h2>
                 <div class="bar"></div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p>From our users -- private tutors, like you.</p>
+                <p>They all built their professional tutoring business with Tutomy:</p>
             </div>
 
             <div class="feedback-slides">
@@ -167,13 +168,10 @@
             </div>
         </div>
 
-        <div class="shape1"><img src="../../assets/img/shape1.png" alt="shape"></div>
         <div class="shape2 rotateme"><img src="../../assets/img/shape2.svg" alt="shape"></div>
         <div class="shape4"><img src="../../assets/img/shape4.svg" alt="shape"></div>
-        <div class="shape5"><img src="../../assets/img/shape5.png" alt="shape"></div>
         <div class="shape6 rotateme"><img src="../../assets/img/shape4.svg" alt="shape"></div>
         <div class="shape7"><img src="../../assets/img/shape4.svg" alt="shape"></div>
-        <div class="shape8 rotateme"><img src="../../assets/img/shape2.svg" alt="shape"></div>
     </section>
     <!-- End Feedback Area -->
 </template>

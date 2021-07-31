@@ -35,16 +35,13 @@
       <ServicesArea></ServicesArea>
       <Works></Works>
       <Pricing></Pricing>
-      <Testimonials></Testimonials>
 
       <Feedback></Feedback>
       <!-- Start Ready To Talk Area -->
       <section class="ready-to-talk">
         <div class="container">
-          <h3>Ready to talk?</h3>
-          <p>Our team is here to answer your question about StartP</p>
-          <a href="#" class="btn btn-primary">Contact Us</a>
-          <span><a href="#">Or, get started now with a free trial</a></span>
+          <h3>Join Tutomy community of 1,300+ private tutors</h3>
+          <p>-- Remember why you started --</p>
         </div>
       </section>
       <!-- End Ready To Talk Area -->
@@ -64,7 +61,6 @@
   import ServicesArea from './../components/home/ServicesArea';
   import Pricing from './../components/home/Pricing';
   import Contact from './../components/home/Contact';
-  import Testimonials from "../components/home/Testimonials";
   import Feedback from "../components/home/Feedback";
   import Partner from "../components/home/Partner";
   import Header from "../components/layout/Header";
@@ -81,7 +77,6 @@
       BoxesArea,
       ServicesArea,
       Pricing,
-      Testimonials,
       Contact,
       Header,
       Footer,

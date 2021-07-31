@@ -1,5 +1,5 @@
 <template>
-    <section class="contact-area ptb-80 bg-f9fafb">
+    <section class="contact-area ptb-80" style="background-color: white">
         <SectionSix id="contact"/>
         <div class="container">
             <div class="section-title contact-title">

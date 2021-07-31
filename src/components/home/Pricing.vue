@@ -1,6 +1,6 @@
 <template>
     <!-- Start Pricing Area -->
-    <section class="pricing-area ptb-80 bg-f9f6f6" style="background: linear-gradient(to left bottom, #fffcff, #fbfaff, #effbff);">
+    <section class="pricing-area ptb-80 bg-f9f6f6">
         <SectionFour id="pricing"/>
         <div class="container">
             <div class="section-title">

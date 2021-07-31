@@ -2,7 +2,7 @@
     <!-- Start Partner Area -->
     <div class="partner-area partner-section">
         <div class="container">
-            <h5>More that 1.5 million businesses and organizations use StartP</h5>
+            <h5>Learn how others use a tutoring website to find students!</h5>
 
             <div class="partner-inner">
                 <div class="row">
