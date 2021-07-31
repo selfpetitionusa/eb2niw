@@ -5352,8 +5352,8 @@ Partner CSS
 .partner-section .partner-inner {
     background: #ffffff;
     padding-top: 2rem;
-    padding-left: 3rem;
-    padding-right: 3rem;
+    padding-left: 7rem;
+    padding-right: 7rem;
     padding-bottom: 3rem;
     -webkit-box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
     box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
@@ -5379,8 +5379,8 @@ Partner CSS
                 line-height: 35px;
                 height: 4rem;
                 border-radius: 50%;
-                color: $light-green-color;
-                border-color: $light-green-color;
+                color: $paragraph-color;
+                border-color: $paragraph-color;
 
                 i {
                     width: 2.5rem;
@@ -5412,15 +5412,20 @@ Partner CSS
     }
 }
 
-    @media (max-width: 575px) {
+    @media (max-width: 767px) {
         .partner-section .partner-inner {
+            padding-top: 1rem;
+            padding-bottom: 2rem;
+            margin-left: 1rem;
+            margin-right: 1rem;
+
             .social-links {
                 li {
                     a {
-                        height: 3rem;
-                        width: 3rem;
+                        height: 3.5rem;
+                        width: 3.5rem;
                         i {
-                            width: 1.5rem;
+                            width: 2rem;
                         }
                     }
                 }
