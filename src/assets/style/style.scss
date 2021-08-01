@@ -5043,9 +5043,18 @@ Feedback CSS
 
 .feedback-slides .client-feedback .single-feedback span {
     display: block;
+    color: $black-color;
+    margin-top: 2px;
+}
+
+.feedback-slides .client-feedback .single-feedback a {
+    text-decoration: underline;
     color: #c679e3;
-    margin-top: 8px;
-    margin-bottom: 18px;
+    margin-bottom: 1rem;
+
+    &:hover {
+        color: $light-green-color;
+    }
 }
 
 .feedback-slides .client-feedback .single-feedback p {
