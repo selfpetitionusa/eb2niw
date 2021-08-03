@@ -14,21 +14,10 @@
                     <div>
                         <slick
                             ref="slick"
+                            class="slider-for"
                             :options="slickOptions"
-                            :asNavFor = "$refs.slick2"
                         >
-                            <div class="item">
-                                <div class="single-feedback">
-                                    <div class="client-img">
-                                        <img src="../../assets/img/client-image/Muhammad_img.png" alt="image">
-                                    </div>
 
-                                    <h3>Muhammad Mairaj</h3>
-                                    <span>Math, Physics & English private tutor</span>
-                                    <span><a href="https://www.tutomy.com/tutor/muhammadmairaj">Visit my website</a></span>
-                                    <p>Tutomy website provides students with complete information about my services, prices, links to social media and allows them to contact me. And the most important: I look very professional.</p>
-                                </div>
-                            </div>
 
                             <div class="item">
                                 <div class="single-feedback">
@@ -103,12 +92,10 @@
                     <div>
                         <slick
                             ref = "slick2"
-                            :asNavFor = "$refs.slick"
+                            class="slider-nav"
                             :options="slickOptions2"
                         >
-                            <div class="item">
-                                <div class="img-fill"><img src="../../assets/img/client-image/Muhammad_img.png" alt="client"></div>
-                            </div>
+
 
                             <div class="item">
                                 <div class="img-fill"><img src="../../assets/img/client-image/Kgomotso_img.png" alt="client"></div>
@@ -170,20 +157,22 @@ export default {
                 fade: true,
                 autoplay: true,
                 draggable: true,
+                asNavFor: '.slider-nav',
                 prevArrow: '.client-feedback .prev-arrow',
                 nextArrow: '.client-feedback .next-arrow'
             },
             slickOptions2: {
                 speed: 300,
-                slidesToShow: 5,
+                slidesToShow: 4,
                 slidesToScroll: 1,
                 cssEase: 'linear',
                 autoplay: true,
                 centerMode: true,
                 draggable: false,
                 focusOnSelect: true,
+                asNavFor: '.slider-for',
                 prevArrow: '.client-thumbnails .prev-arrow',
-                nextArrow: '.client-thumbnails .next-arrow',
+                nextArrow: '.client-thumbnails .next-arrow'
             },
         };
     },

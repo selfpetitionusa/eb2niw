@@ -75,7 +75,7 @@
                         </div>
 
                         <div class="pricing-footer">
-                            <button type="submit" v-b-modal.modal-2  @click="logEvent('domain')" class="btn btn-primary">Select Plan</button>
+                            <button type="submit" @click="$refs['modal-2'].show()" class="btn btn-primary">Select Plan</button>
                         </div>
                     </div>
                 </div>
@@ -107,21 +107,26 @@
             </div>
         </div>
 
-        <b-modal id="modal-2"  style="border-radius: 30px" :return-focus="this.$parent" hide-footer title="Join our waitlit" >
+        <b-modal static  ref="modal-2"  style="border-radius: 30px" :return-focus="this.$parent" hide-footer title="Join our waitlist" >
             <div class="mt-3" style="margin-bottom: 1rem">
                 <div style="color: #0e314c">Leave your e-mail and get notified to set up own domain</div>
 
-                <form id="sign" @submit.prevent="addEmail(email)" class="mt-2">
+                <form id="sign" @submit.prevent="addEmail()" class="mt-2">
                     <div class="row">
                         <div class="col-12">
-                            <input type="email"  name="name" id="name" class="form-control"  v-model="email" placeholder="Enter your email address">
+                            <input type="email"  name="name" id="name" class="form-control"  v-model="data.email" placeholder="Enter your email address">
                             <div class="mt-2">
-                                <p class="m-0">{{ message }}</p>
+                                <p v-show="submitted && !data.email" style="display: block" class="m-0 invalid-feedback">Email is required</p>
                             </div>
                         </div>
-                        <div class="col-12">
+                        <div class="col-12 mt-2">
                             <button style="width: 66%; margin: 0" type="submit" class="btn btn-primary btn-assess">Join waitlist</button>
                         </div>
+
+                        <div class="mt-4" style="width: 100%">
+                            <p  v-if="success" style="text-align: center">🎉 Check your e-mail  🎉</p>
+                        </div>
+
                     </div>
                 </form>
 
@@ -152,38 +157,35 @@
 
 
 
+import config from "../../config/config";
+
 export default {
     name: 'Pricing',
     data() {
         return {
-            email: '',
-            message: ''
+            data: {},
+            submitted: false,
+            success: false
         }
     },
     methods: {
-        logEvent() {
-            this.$store.commit('popup/setSeen');
-        },
-        addEmail(email) {
-           if (!email) return;
-           var noticeMessage = "🎉 Your account has been saved  🎉";
-            const url = `/api/lead`;
+        addEmail() {
+            this.submitted = true;
+            if (!this.data.email) return;
+            const url = `${config.apiUrl}/lead`;
             const requestOptions = {
                 method: "POST",
-                headers: {"Content-Type" : "application/json"},
-                body: JSON.stringify({ email: email })
+                headers: {"Content-Type": "application/json"},
+                body: JSON.stringify(this.data)
             };
             fetch(url, requestOptions).then(async response => {
                 if (response.ok) {
-                    this.$refs['modal-1'].show();
-                    this.$store.commit('popup/setSeen');
-                } else {
-                    noticeMessage = "This email address is already registered";
+                    this.success = true;
                 }
-                this.message = noticeMessage;
-                this.email = '';
+                this.submitted = false;
+                this.data.email = '';
             });
-       }
-   }
+        }
+    }
 }
 </script>

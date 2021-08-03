@@ -19,10 +19,6 @@
             </div>
           </div>
         </div>
-
-        <div class="col-12">
-            <a href="/register" class="btn btn-primary btn-register" style="margin-top: 1.5rem">CREATE A WEBSITE TODAY - FREE</a>
-        </div>
     </b-modal>
 
     <div class="jumbotron" style="height: 100%">
