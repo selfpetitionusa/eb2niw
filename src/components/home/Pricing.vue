@@ -124,7 +124,7 @@
                         </div>
 
                         <div class="mt-4" style="width: 100%">
-                            <p  v-if="success" style="text-align: center">🎉 Check your e-mail  🎉</p>
+                            <p  v-if="success" style="text-align: center">🎉 Your account has been saved  🎉</p>
                         </div>
 
                     </div>
