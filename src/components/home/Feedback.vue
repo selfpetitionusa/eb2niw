@@ -1,6 +1,6 @@
 <template>
     <!-- Start Feedback Area -->
-    <section class="feedback-area ptb-80 bg-f7fafd">
+    <section id="testimonials" class="feedback-area ptb-80 bg-f7fafd">
         <div class="container">
             <div class="section-title">
                 <h2>What users say?</h2>
