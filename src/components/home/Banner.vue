@@ -81,7 +81,7 @@
 
 
                                 <div class="d-block d-lg-none">
-                                    <vue-plyr :options="options">
+                                    <vue-plyr>
                                         <video
                                                 controls
                                                 crossorigin
@@ -94,7 +94,7 @@
                                 </div>
 
                                 <div class="d-none d-lg-block">
-                                    <vue-plyr :options="options">
+                                    <vue-plyr>
                                         <video
                                                 controls
                                                 crossorigin

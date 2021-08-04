@@ -33,7 +33,6 @@
                                     <label class="form-check-label" for="buildingWebsite">I am in the process of building a tutoring website</label>
                                 </div>
                                 <div v-if="submitted && !data.websiteBuildState" class="invalid-feedback" style="display: block">Website building state is required</div>
-                                <div v-if="submitted && data.websiteBuildState === 'YesWebsite' && !data.domain" class="invalid-feedback" style="display: block">Domain is required</div>
                             </div>
 
                             <div>
@@ -83,7 +82,7 @@ export default {
     methods: {
         addEmail() {
             this.submitted = true;
-           if (!this.data.email || !this.data.name || !this.data.websiteBuildState || (this.data.websiteBuildState === 'YesWebsite' && !this.data.domain)) return;
+           if (!this.data.email || !this.data.name || !this.data.websiteBuildState) return;
             const url = `${config.apiUrl}/lead`;
             const requestOptions = {
                 method: "POST",
