@@ -103,10 +103,10 @@
                 <div class="col-xl-7 col-lg-9">
                     <div class="row">
                         <div class="col-sm-6">
-                            <a href="/website-needs-assessment" class="btn btn-primary btn-assess">CHECK YOUR WEBSITE NEEDS: <br>TAKE A QUIZ</a>
+                            <a href="/website-needs-assessment" @click="$gtag.event('website-assessment')" class="btn btn-primary btn-assess">CHECK YOUR WEBSITE NEEDS: <br>TAKE A QUIZ</a>
                         </div>
                         <div class="col-sm-6">
-                            <a href="/register" class="btn btn-primary btn-register">CREATE YOUR WEBSITE TODAY: <br>FREE TRIAL</a>
+                            <a href="/register" @click="$gtag.event('register')" class="btn btn-primary btn-register">CREATE YOUR WEBSITE TODAY: <br>FREE TRIAL</a>
                         </div>
                     </div>
                 </div>

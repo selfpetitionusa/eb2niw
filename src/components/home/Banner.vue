@@ -59,10 +59,10 @@
 
                                 <div class="row banner-action-btns">
                                     <div class="col-sm-6">
-                                        <a href="/website-needs-assessment" class="btn btn-primary btn-assess">CHECK YOUR WEBSITE NEEDS</a>
+                                        <a href="/website-needs-assessment" @click="$gtag.event('website-assessment')" class="btn btn-primary btn-assess">CHECK YOUR WEBSITE NEEDS</a>
                                     </div>
                                     <div class="col-sm-6">
-                                        <a href="/register" class="btn btn-primary btn-register">CREATE FREE WEBSITE TODAY</a>
+                                        <a href="/register" @click="$gtag.event('register')" class="btn btn-primary btn-register">CREATE FREE WEBSITE TODAY</a>
                                     </div>
                                 </div>
 
@@ -81,7 +81,7 @@
 
 
                                 <div class="d-block d-lg-none">
-                                    <vue-plyr>
+                                    <vue-plyr ref="plyr">
                                         <video
                                                 controls
                                                 crossorigin
@@ -94,7 +94,7 @@
                                 </div>
 
                                 <div class="d-none d-lg-block">
-                                    <vue-plyr>
+                                    <vue-plyr ref="plyr">
                                         <video
                                                 controls
                                                 crossorigin
@@ -132,7 +132,21 @@
 <script>
 
     export default {
-        name: 'Banner'
+        name: 'Banner',
+        data() {
+            return {
+                fired: false
+            }
+        },
+        mounted () {
+            this.$refs.plyr.player.on('playing', () => {
+                if(!this.fired) {
+                    this.$gtag.event('video')
+                }
+                this.fired = true;
+
+            })
+        }
     }
 
 

@@ -53,7 +53,19 @@ function register(user) {
         body: JSON.stringify(user)
     };
 
-    return fetch(`${config.apiUrl}/users`, requestOptions).then(handleResponse);
+    return fetch(`${config.apiUrl}/users`, requestOptions)
+        .then(handleResponse)
+        .then(user => {
+            // login successful if there's a jwt token in the response
+            if (user.token) {
+                // store user details and jwt token in local storage to keep user logged in between page refreshes
+                localStorage.setItem('user', JSON.stringify(user));
+                localStorage.setItem('token', user.token);
+            }
+
+            return user;
+        });
+
 }
 
 function updateBasicInfo(data) {

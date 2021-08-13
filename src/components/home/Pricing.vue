@@ -15,7 +15,7 @@
                 </div>
             </div>
 
-            <p><a class="pricing-free" href="/register">FREE TRIAL</a></p>
+            <p><a class="pricing-free" @click="$gtag.event('register')" href="/register">FREE TRIAL</a></p>
 
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-6">
@@ -44,7 +44,7 @@
                         </div>
 
                         <div class="pricing-footer">
-                            <a href="/register" class="btn btn-primary">Select Plan</a>
+                            <a href="/register"  @click="$gtag.event('plan-basic')" class="btn btn-primary">Select Plan</a>
                         </div>
                     </div>
                 </div>
@@ -75,7 +75,7 @@
                         </div>
 
                         <div class="pricing-footer">
-                            <button type="submit" @click="$refs['modal-2'].show()" class="btn btn-primary">Select Plan</button>
+                            <button type="submit" @click="$refs['modal-2'].show(); $gtag.event('plan-premium')" class="btn btn-primary">Select Plan</button>
                         </div>
                     </div>
                 </div>
@@ -138,7 +138,7 @@
 
                 <div class="row">
                     <div class="col-12">
-                        <button style="width: 66%" type="submit" class="btn btn-primary"><a href="/register" style="color: white">CREATE A FREE WEBSITE TODAY</a></button>
+                        <button style="width: 66%" type="submit" class="btn btn-primary"><a href="/register" @click="$gtag.event('register')" style="color: white">CREATE A FREE WEBSITE TODAY</a></button>
                     </div>
                 </div>
             </div>

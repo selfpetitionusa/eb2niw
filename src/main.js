@@ -23,7 +23,7 @@ import 'vue-plyr/dist/vue-plyr.css'
 import VueGtag from "vue-gtag";
 
 Vue.use(VueGtag, {
-  config: { id: "GTM-K9ZVT99" }
+  config: { id: "G-88BC5QQQH6" }
 });
 
 

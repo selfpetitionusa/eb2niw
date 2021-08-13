@@ -1,8 +1,12 @@
 <template>
     <div class="jumbotron" style="height: 100%">
+
         <div class="container login">
             <div class="row">
                 <div class="col-sm-6 offset-sm-3">
+                    <div v-if="status.loginFailure" class="alert alert-danger" role="alert">
+                       Incorrect email or password
+                    </div>
                     <h3>Login</h3>
                     <form @submit.prevent="handleSubmit">
                         <div class="form-group">

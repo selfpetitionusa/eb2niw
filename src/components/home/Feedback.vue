@@ -9,6 +9,7 @@
                 <p>They all built their professional tutoring business with Tutomy:</p>
             </div>
 
+
             <div class="feedback-slides">
                 <div class="client-feedback">
                     <div>
@@ -84,6 +85,19 @@
                                 </div>
                             </div>
 
+                            <div class="item">
+                                <div class="single-feedback">
+                                    <div class="client-img">
+                                        <img src="../../assets/img/client-image/Arsalan_img.png" alt="image">
+                                    </div>
+
+                                    <h3>Arsalan Tariq</h3>
+                                    <span>English, Physics & History private tutor</span>
+                                    <a href="https://www.tutomy.com/tutor/arsalantariq">Visit my website</a>
+                                    <p>Tutomy is like an online business card – it allows me to look professional. Perfect for beginners who want to create a website in just a few minutes.</p>
+                                </div>
+                            </div>
+
                         </slick>
                     </div>
                 </div>
@@ -115,6 +129,9 @@
 
                             <div class="item">
                                 <div class="img-fill"><img src="../../assets/img/client-image/Sunina_img.png" alt="client"></div>
+                            </div>
+                            <div class="item">
+                                <div class="img-fill"><img src="../../assets/img/client-image/Arsalan_img.png" alt="client"></div>
                             </div>
 
                         </slick>
@@ -176,7 +193,6 @@ export default {
             },
         };
     },
-
     methods: {
         next() {
             this.$refs.slick.next();

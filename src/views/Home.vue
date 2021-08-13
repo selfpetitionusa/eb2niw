@@ -22,7 +22,7 @@
       </div>
 
       <div class="col-12">
-          <a href="/register" class="btn btn-primary btn-register" style="margin-top: 1.5rem">CREATE A WEBSITE TODAY - FREE</a>
+          <a href="/register"  @click="$gtag.event('register')" class="btn btn-primary btn-register" style="margin-top: 1.5rem">CREATE A WEBSITE TODAY - FREE</a>
       </div>
     </b-modal>
 
@@ -89,13 +89,6 @@
         if(!this.$store.state.popup.seen) {
           this.$refs['modal-3'].show();
         }
-        this.$gtag.event('login', {
-          'method': 'Google'
-      });
-
-        this.$gtag.event('init-page', {
-          'category': 'test'
-        });
         this.$store.commit('popup/setSeen');
       }
     },
