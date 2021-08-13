@@ -89,6 +89,13 @@
         if(!this.$store.state.popup.seen) {
           this.$refs['modal-3'].show();
         }
+        this.$gtag.event('login', {
+          'method': 'Google'
+      });
+
+        this.$gtag.event('init-page', {
+          'category': 'test'
+        });
         this.$store.commit('popup/setSeen');
       }
     },
