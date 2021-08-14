@@ -100,7 +100,7 @@
                                                 crossorigin
                                                 playsinline
                                                 poster="../../assets/img/thumbnailDesktop.png">
-                                            <source src="../../assets/img/bannerIntroCaptions.mp4" type="video/mp4">
+                                            <source src="../../assets/img/Short_video_captions.mp4" type="video/mp4">
                                             Video how to create a tutoring website. Your browser does not support the video tag
                                         </video>
                                     </vue-plyr>
