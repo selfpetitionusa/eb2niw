@@ -916,7 +916,6 @@ Main Banner CSS
 }
 .shape2 {
     position: absolute;
-    z-index: -1;
     top: 58%;
     left: 30%;
 }
@@ -944,7 +943,6 @@ Main Banner CSS
     position: absolute;
     right: 25%;
     bottom: 15%;
-    z-index: -1;
     animation: animationFramesOne 20s infinite linear;
 }
 .shape4-services {
@@ -986,7 +984,6 @@ Main Banner CSS
     position: absolute;
     left: 25%;
     top: 15%;
-    z-index: -1;
     animation: animationFramesOne 20s infinite linear;
 }
 .shape8 {
@@ -997,7 +994,6 @@ Main Banner CSS
 }
 .shape8-pricing {
     position: absolute;
-    z-index: -1;
     top: 23%;
     right: 43%;
 }
@@ -2073,7 +2069,6 @@ Pricing CSS
 ===========================================*/
 .pricing-area {
     position: relative;
-    z-index: 1;
 }
 .pricing-table {
 	text-align: center;
