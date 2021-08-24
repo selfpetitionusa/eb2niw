@@ -4266,6 +4266,14 @@ Pop-ups & CMS
     }
 
 .register-confirmation {
+    .main-banner {
+        padding-top: 3rem;
+    }
+
+    h4 {
+        font-size: 22px;
+    }
+
     p {
         a {
             text-decoration: underline;
@@ -4277,8 +4285,30 @@ Pop-ups & CMS
         }
     }
 
-    h4 {
-        font-size: 22px;
+    .div1 {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+
+        h6 {
+            margin-bottom: 0px;
+        }
+    }
+
+    .div2 {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+
+        h6 {
+            margin-bottom: 0px;
+        }
+    }
+
+    .div3 {
+        margin-top: 2rem;
+    }
+
+    .btn-register {
+        margin-top: 1.5rem;
     }
 
     .reg-confirmation-map {
@@ -4291,6 +4321,35 @@ Pop-ups & CMS
         bottom: 0;
     }
 }
+
+    @media (max-width: 991px) {
+        .reg-confirmation-map {
+            display: none;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .register-confirmation {
+            h1 {
+                font-size: 26px;
+            }
+
+            h4 {
+                font-size: 18px;
+                line-height: 1.4rem;
+            }
+
+            div h6 {
+                font-size: 14px;
+                line-height: 1.2rem;
+            }
+
+            p {
+                line-height: 1.2rem;
+            }
+        }
+    }
+
 
 .nav-pills {
     .nav-link {
