@@ -8,6 +8,7 @@ import Help from './views/Help';
 import Account from './views/Account';
 import Login from './views/Login';
 import Register from './views/Register';
+import RegisterConfirmation from './views/RegisterConfirmation';
 import PasswordReset from './views/PasswordReset';
 import NeedsAssessment from './views/NeedsAssessment';
 import BasicInfo from './views/account/BasicInfo';
@@ -26,6 +27,7 @@ export const router = new VueRouter({
       { path: '/tutor/:token', component: ProfileView },
       { path: '/login', component: Login },
       { path: '/register', component: Register },
+      { path: '/register-confirmation', component: RegisterConfirmation },
       { path: '/password-reset', component: PasswordReset },
       { path: '/website-needs-assessment', component: NeedsAssessment },
       { path: '/dashboard', component: EditProfileView },

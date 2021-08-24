@@ -4265,6 +4265,33 @@ Pop-ups & CMS
         }
     }
 
+.register-confirmation {
+    p {
+        a {
+            text-decoration: underline;
+            color: $paragraph-color;
+
+            &:hover, &:focus {
+                color: $light-green-color;
+            }
+        }
+    }
+
+    h4 {
+        font-size: 22px;
+    }
+
+    .reg-confirmation-map {
+        position: absolute;
+        text-align: center;
+        z-index: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        bottom: 0;
+    }
+}
+
 .nav-pills {
     .nav-link {
         font-weight: 500;
