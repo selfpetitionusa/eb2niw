@@ -4,7 +4,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 col-12 offset-lg-2">
-                        <h1>Welcome to your new website!</h1>
+                        <h1>You are now set to complete your website</h1>
 
                         <div class="div1">
                             <h6>Check email to verify your account</h6>
@@ -17,10 +17,6 @@
                         </div>
 
                         <h6>In the future, you can always login to your account on www.tutomy.com</h6>
-
-                        <div class="div3">
-                            <h4>Click <strong>NEXT</strong> to complete your website in <strong>11min</strong></h4>
-                        </div>
 
                         <a href="/dashboard" class="btn btn-primary btn-register">NEXT</a>
                     </div>

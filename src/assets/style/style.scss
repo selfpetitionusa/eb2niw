@@ -4270,10 +4270,9 @@ Pop-ups & CMS
         padding-top: 3rem;
     }
 
-    h4 {
-        font-size: 22px;
+    h1 {
+        font-size: 32px;
     }
-
     p {
         a {
             text-decoration: underline;
@@ -4303,10 +4302,6 @@ Pop-ups & CMS
         }
     }
 
-    .div3 {
-        margin-top: 2rem;
-    }
-
     .btn-register {
         margin-top: 1.5rem;
     }
@@ -4331,12 +4326,7 @@ Pop-ups & CMS
     @media (max-width: 767px) {
         .register-confirmation {
             h1 {
-                font-size: 26px;
-            }
-
-            h4 {
-                font-size: 18px;
-                line-height: 1.4rem;
+                font-size: 22px;
             }
 
             div h6 {
