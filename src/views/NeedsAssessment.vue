@@ -1,5 +1,5 @@
 <template>
-    <div class="jumbotron" style="height: 100%">
+    <div class="jumbotron" style="background-color: white; height: 100%">
         <div class="container assessment">
             <div class="row">
                 <div class="col-lg-4 col-md-4">
