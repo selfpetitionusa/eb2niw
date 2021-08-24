@@ -85,7 +85,7 @@
                 <div class="col-lg-7 col-md-10 col-sm-12">
                     <div class="pricing-table">
                         <div class="pricing-header">
-                            <h3>School plan</h3>
+                            <h3>Personalized plan</h3>
                         </div>
 
                         <div class="price">
@@ -95,7 +95,7 @@
                         <div class="pricing-features">
                             <ul style="padding: 5px">
                                 <li class="active" style="padding-left: 5px; padding-right: 5px">Do you hire tutors and need website profiles for each of them?</li>
-                                <li class="active" style="padding-left: 5px; padding-right: 5px">Are you looking to create a website for your school?</li>
+                                <li class="active" style="padding-left: 5px; padding-right: 5px">Are you looking for a non-standard solution?</li>
                             </ul>
                         </div>
 
