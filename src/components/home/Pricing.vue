@@ -95,7 +95,7 @@
                         <div class="pricing-features">
                             <ul style="padding: 5px">
                                 <li class="active" style="padding-left: 5px; padding-right: 5px">Do you hire tutors and need website profiles for each of them?</li>
-                                <li class="active" style="padding-left: 5px; padding-right: 5px">Are you looking for a non-standard solution?</li>
+                                <li class="active" style="padding-left: 5px; padding-right: 5px">Are you looking for a custom solution?</li>
                             </ul>
                         </div>
 
