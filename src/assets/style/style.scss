@@ -4274,6 +4274,8 @@ Pop-ups & CMS
         font-size: 32px;
     }
     p {
+        line-height: 1.4;
+
         a {
             text-decoration: underline;
             color: $paragraph-color;
@@ -4284,21 +4286,12 @@ Pop-ups & CMS
         }
     }
 
-    .div1 {
-        margin-top: 2rem;
-        margin-bottom: 1rem;
+    .div {
+        margin-top: 1.5rem;
+        margin-bottom: 2rem;
 
         h6 {
-            margin-bottom: 0px;
-        }
-    }
-
-    .div2 {
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-
-        h6 {
-            margin-bottom: 0px;
+            line-height: 1.4;
         }
     }
 
@@ -4331,11 +4324,6 @@ Pop-ups & CMS
 
             div h6 {
                 font-size: 14px;
-                line-height: 1.2rem;
-            }
-
-            p {
-                line-height: 1.2rem;
             }
         }
     }

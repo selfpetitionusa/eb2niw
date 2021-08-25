@@ -4,21 +4,20 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 col-12 offset-lg-2">
-                        <h1>You are now set to complete your website</h1>
+                        <h1>You are ready to create your website</h1>
 
-                        <div class="div1">
-                            <h6>Check email to verify your account</h6>
-                            <p>Tip: See spam folder in case the e-mail was incorrectly identified</p>
-                        </div>
-
-                        <div class="div2">
-                            <h6>Your website will automatically display information upon completion:</h6>
+                        <div class="div">
+                            <h6>Here is your unique address to share with others once your website is finalized.</h6>
+                            <h6>You can always find it later in the "Account" tab.</h6>
                             <p><a href="www.tutomy.com/tutor/test1test2">www.tutomy.com/tutor/test1test2</a></p>
                         </div>
 
-                        <h6>In the future, you can always login to your account on www.tutomy.com</h6>
+                        <div class="div">
+                            <h6>An e-mail from Tutomy is on its way with additional information.</h6>
+                            <p>Tip: Check the spam folder, just in case.</p>
+                        </div>
 
-                        <a href="/dashboard" class="btn btn-primary btn-register">NEXT</a>
+                        <a href="/dashboard" class="btn btn-primary btn-register">Create your website</a>
                     </div>
 
                 </div>
