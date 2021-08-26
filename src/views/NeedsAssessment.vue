@@ -7,7 +7,7 @@
                 </div>
 
                 <div class="col-lg-6 col-md-8 offset-lg-1">
-
+                    <div v-if="!success" >
                         <h1>Check your website needs</h1>
                         <p>Based on your responses, find out about the best tools to create a website, ways to build an online presence, and find students</p>
                         <form id="website-assessment" @submit.prevent="addEmail()">
@@ -49,12 +49,18 @@
                             </div>
 
                             <div>
-                                <button style="margin: 0" type="submit" class="btn btn-primary btn-assess mt-2">Take a quiz</button>
+                                <button style="margin: 0" type="submit" class="btn btn-primary btn-assess mt-2">Take a quiz   <img v-show="sending" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" /></button>
                             </div>
                             <div class="mt-4" style="width: 100%">
                                 <p  v-if="success" style="text-align: center">🎉 Check your e-mail  🎉</p>
                             </div>
                         </form>
+                    </div>
+                    <div v-else>
+                        <h4>In {{countDown}}sec, you will be redirected to Tutomy homepage.</h4>
+                        <p class="calendly-input">Click <a href="/Quiz - What type of website do you need.pdf" target="_blank" rel="noopener noreferrer">here</a> to download the quiz.</p>
+                        <p>Also check your e-mail for additional instructions.</p>
+                    </div>
 
                 </div>
 
@@ -67,6 +73,7 @@
 <script>
 
 import config  from "../config/config";
+import { router } from '../router';
 
 export default {
     name: 'Assessment',
@@ -76,7 +83,9 @@ export default {
 
             },
             submitted: false,
-            success: false
+            sending: false,
+            success: false,
+            countDown : 20
         }
     },
     methods: {
@@ -89,14 +98,28 @@ export default {
                 headers: {"Content-Type" : "application/json"},
                 body: JSON.stringify(this.data)
             };
+            this.sending = true;
             fetch(url, requestOptions).then(async response => {
                 if (response.ok) {
+                    this.sending = false;
                     this.success = true;
+                    this.countDownTimer()
                 }
                 this.data = {};
                 this.submitted = false;
             });
-       }
+       },
+        countDownTimer() {
+            if(this.countDown > 0) {
+                setTimeout(() => {
+                    this.countDown -= 1
+                    this.countDownTimer()
+                }, 1000)
+            } else {
+                router.push('/');
+            }
+        }
+
    }
 }
 </script>
