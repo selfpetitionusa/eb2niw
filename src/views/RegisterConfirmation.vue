@@ -1,14 +1,14 @@
 <template>
     <div class="register-confirmation" style="height: 100%">
-        <div class="jumbotron main-banner">
+        <div class="jumbotron main-banner register-confirmation">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-8 col-12 offset-lg-2">
+                    <div class="col-lg-7 col-12 offset-lg-1">
                         <h1>You are ready to create your website</h1>
 
                         <div class="div">
                             <h6>Here is your unique address to share with others once your website is finalized.</h6>
-                            <h6>You can always find it later in the "Account" tab.</h6>
+                            <h6>You can always find it later in the "Account".</h6>
                             <p><a href="www.tutomy.com/tutor/test1test2">www.tutomy.com/tutor/test1test2</a></p>
                         </div>
 
@@ -20,8 +20,10 @@
                         <a href="/dashboard" class="btn btn-primary btn-register">Create your website</a>
                     </div>
 
+                    <div class="col-lg-4 col-7 graphic-celebrate">
+                        <img src="../assets/img/celebrate.svg"  alt="Tutomy service - online tutoring website template">
+                    </div>
                 </div>
-
 
                 <img src="../assets/img/map.png" class="reg-confirmation-map" alt="Tutoring website design with Tutomy - map">
             </div>

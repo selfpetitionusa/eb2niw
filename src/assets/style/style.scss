@@ -2828,6 +2828,21 @@ Landing page popups & needs assessment
           }
     }
 
+.register-confirmation {
+    .graphic-celebrate {
+        display: flex;
+        align-items: flex-end;
+        padding-top: 3rem;
+    }
+}
+
+    @media (max-width: 400px) {
+        .register-confirmation {
+            .graphic-celebrate {
+                display: none;
+            }
+        }
+    }
 
                   /*================================================
                             TUTOMY PROFILE
