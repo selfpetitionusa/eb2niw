@@ -242,9 +242,11 @@ const actions = {
         commit('registerRequest', user);
         userService.register(user)
             .then(
-                user => {
+                response => {
+                    const user = response[0];
+                    const profile = response[1];
                     commit('registerSuccess', user);
-                    router.push('/dashboard');
+                    router.push({ name: 'register-confirmation',  params: {token: profile.token }});
                     setTimeout(() => {
                         // display success message after route change completes
                         dispatch('alert/success', 'Registration successful', { root: true });

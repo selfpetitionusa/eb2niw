@@ -27,7 +27,7 @@ export const router = new VueRouter({
       { path: '/tutor/:token', component: ProfileView },
       { path: '/login', component: Login },
       { path: '/register', component: Register },
-      { path: '/register-confirmation', component: RegisterConfirmation },
+      { path: '/register-confirmation', name: 'register-confirmation', component: RegisterConfirmation, props: true },
       { path: '/password-reset', component: PasswordReset },
       { path: '/website-needs-assessment', component: NeedsAssessment },
       { path: '/dashboard', component: EditProfileView },

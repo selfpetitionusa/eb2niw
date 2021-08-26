@@ -5,13 +5,12 @@
                 <div class="row">
                     <div class="col-lg-7 col-12 offset-lg-1">
                         <h1>You are ready to create your website</h1>
-
                         <div class="div">
                             <h6>Here is your unique address to share with others once your website is finalized.</h6>
-                            <h6>You can always find it later in the "Account".</h6>
-                            <p><a href="www.tutomy.com/tutor/test1test2">www.tutomy.com/tutor/test1test2</a></p>
-                        </div>
 
+                            <h6>You can always find it later in the "Account".</h6>
+                            <p><a  :href="`/tutor/${this.token}`">www.tutomy.com/tutor/{{token}}</a></p>
+                        </div>
                         <div class="div">
                             <h6>An e-mail from Tutomy is on its way with additional information.</h6>
                             <p>Tip: Check the spam folder, just in case.</p>
@@ -29,4 +28,14 @@
             </div>
         </div>
     </div>
+
 </template>
+
+<script>
+
+    export default {
+        name: 'RegisterConfirmation',
+        props: ['token']
+    }
+
+</script>
