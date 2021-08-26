@@ -4541,6 +4541,30 @@ input[type="range"]::-ms-fill-upper {
     width: 9rem;
 }
 
+.register {
+    .btn-save {
+        width: 10.5rem;
+    }
+
+    .btn-cancel {
+        width: 10.5rem;
+    }
+}
+
+    @media (max-width: 400px) {
+        .register {
+            .btn {
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+
+            .btn-cancel {
+                margin-right: 5px;
+            }
+        }
+    }
+
+
 .btn-preview {
     background-color: $light-green-color;
     padding: 10px 30px;
