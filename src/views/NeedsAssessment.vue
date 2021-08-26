@@ -7,9 +7,10 @@
                 </div>
 
                 <div class="col-lg-6 col-md-8 offset-lg-1">
+                    <h1>Check your website needs</h1>
+                    <p>Based on your responses, find out about the best tools to create a website, ways to build an online presence, and find students</p>
+
                     <div v-if="!success" >
-                        <h1>Check your website needs</h1>
-                        <p>Based on your responses, find out about the best tools to create a website, ways to build an online presence, and find students</p>
                         <form id="website-assessment" @submit.prevent="addEmail()">
 
 
@@ -51,15 +52,13 @@
                             <div>
                                 <button style="margin: 0" type="submit" class="btn btn-primary btn-assess mt-2">Take a quiz   <img v-show="sending" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" /></button>
                             </div>
-                            <div class="mt-4" style="width: 100%">
-                                <p  v-if="success" style="text-align: center">🎉 Check your e-mail  🎉</p>
-                            </div>
                         </form>
                     </div>
                     <div v-else>
-                        <h4>In {{countDown}}sec, you will be redirected to Tutomy homepage.</h4>
-                        <p class="calendly-input">Click <a href="/Quiz - What type of website do you need.pdf" target="_blank" rel="noopener noreferrer">here</a> to download the quiz.</p>
-                        <p>Also check your e-mail for additional instructions.</p>
+                        <h3 style="margin-top: 3rem">Download the quiz</h3>
+                        <h6 style="margin-top: 1rem; line-height: 1.4">Also, check your e-mail for additional instructions</h6>
+                        <h6 style="margin-top: 15px; line-height: 1.4">In <span style="background-color: #44ce6f; color: white; border-radius: 5%; padding: 2px 6px">{{countDown}}sec</span> you will be redirected to Tutomy homepage</h6>
+                        <a href="/Quiz - What type of website do you need.pdf" download><feather class="download" type="download"></feather></a>
                     </div>
 
                 </div>
