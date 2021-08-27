@@ -7,9 +7,10 @@
                 </div>
 
                 <div class="col-lg-6 col-md-8 offset-lg-1">
+                    <h1>Check your website needs</h1>
+                    <p>Based on your responses, find out about the best tools to create a website, ways to build an online presence, and find students</p>
+
                     <div v-if="!success" >
-                        <h1>Check your website needs</h1>
-                        <p>Based on your responses, find out about the best tools to create a website, ways to build an online presence, and find students</p>
                         <form id="website-assessment" @submit.prevent="addEmail()">
 
 
@@ -54,9 +55,10 @@
                         </form>
                     </div>
                     <div v-else>
-                        <h4>In {{countDown}}sec, you will be redirected to Tutomy homepage.</h4>
-                        <p class="calendly-input">Click <a href="/Quiz - What type of website do you need.pdf" target="_blank" rel="noopener noreferrer">here</a> to download the quiz.</p>
-                        <p>Also check your e-mail for additional instructions.</p>
+                        <h3 style="margin-top: 3rem">Download the quiz</h3>
+                        <h6 style="margin-top: 1rem; line-height: 1.4">Also, check your e-mail for additional instructions</h6>
+                        <h6 style="margin-top: 15px; line-height: 1.4">In <strong style="color: #8789d3">{{countDown}}sec</strong> you will be redirected to Tutomy homepage</h6>
+                        <a href="/Quiz - What type of website do you need.pdf" download><feather class="download" type="download"></feather></a>
                     </div>
 
                 </div>

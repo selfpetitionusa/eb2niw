@@ -2788,6 +2788,28 @@ Landing page popups & needs assessment
             margin: 0.3rem 0rem;
         }
     }
+
+    a {
+        text-align: center;
+        margin-top: 3rem;
+        width: 80px;
+        height: 80px;
+        border: 1px solid;
+        border-radius: 50%;
+        color: $white-color;
+        background-color: $light-green-color;
+        border-color: $white-color;
+
+        &:hover {
+            border-color: $light-green-color;
+            background-color: $white-color;
+            color: $light-green-color;
+        }
+
+        i {
+            width: 67px;
+        }
+    }
 }
 
     @media (max-width: 767px) {
@@ -2813,6 +2835,11 @@ Landing page popups & needs assessment
             }
             .submit-website {
                 display: block;
+            }
+            a {
+                margin: 3rem auto 0;
+                display: flex;
+                justify-content: center;
             }
         }
     }
