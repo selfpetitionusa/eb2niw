@@ -109,8 +109,11 @@
 <!-- ACTION BUTTON -->
 
                     <div class="btn-profile">
-                        <a v-if="response.profile.firstName && response.profile.email" :href="'mailto:' + response.profile.email" class="btn btn-primary inner" role="button">Contact {{response.profile.firstName}}</a>
-                        <a v-if="!response.profile.firstName && !response.profile.email && cmsToggle" href="mailto:youremail@gmail.com" class="btn btn-primary inner" role="button">Contact &lt; Name &gt;</a>
+                        <ContactPopup v-bind:email="response.profile.email" v-bind:cmsToggle="cmsToggle"></ContactPopup>
+                        <a v-if="response.profile.firstName && response.profile.email" href="#" v-b-modal.contact-modal class="btn btn-primary inner" role="button">Contact {{response.profile.firstName}}</a>
+
+
+                        <a v-if="!response.profile.firstName && !response.profile.email && cmsToggle"  href="#" v-b-modal.contact-modal  class="btn btn-primary inner" role="button">Contact &lt; Name &gt;</a>
                     </div>
                 </div>
             </div>
@@ -468,7 +471,7 @@
 
                 <div class="tutomy-logo">
                   <p>Powered by</p>
-                  <img src="../../assets/img/logo2.png">
+                    <a href="/www.tutomy.com" target="_blank"><img src="../../assets/img/logo2.png"></a>
                 </div>
 
             </div>
@@ -504,11 +507,13 @@
     import TermsPopup from '../profile/popups/TermsPopup';
     import YouTubePopup from '../profile/popups/YouTubePopup';
     import ProblemCardsPopup from '../profile/popups/ProblemCardsPopup';
+    import ContactPopup from "./popups/ContactPopup";
 
 
   export default {
     name: 'Profile',
     components: {
+      ContactPopup,
       School,
       Certificate,
       Subject,
