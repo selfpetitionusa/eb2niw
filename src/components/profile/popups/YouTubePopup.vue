@@ -9,7 +9,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="youtube">How to copy link from YouTube: <br> Share >> Embed >> Copy link src="https://www.youtube..."</label>
+                    <label for="youtube"><a class="yt-tutorial" href="https://youtu.be/ETkQS5CyTFs" target="_blank">HERE</a> how to get your video to display properly</label>
                     <ValidationProvider rules="url" v-slot="{ errors }" >
                         <input type="text" class="form-control" id="youtube" v-model="data.youtubeIntroLink" placeholder="https://www.youtube.com/embed/YOUR-VIDEO" :class="{ 'is-invalid': submitted && errors.length }">
                         <div v-if="submitted && errors.length" class="invalid-feedback">Url has wrong format</div>

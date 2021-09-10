@@ -3977,6 +3977,15 @@ Expertise section
     }
 }
 
+.yt-tutorial {
+    text-decoration: underline;
+    color: $light-green-color;
+
+    &:hover, &:focus, &.active {
+        color: #5457c1;
+    }
+}
+
 .expertise-arrows {
     display: flex;
     align-items: center;
