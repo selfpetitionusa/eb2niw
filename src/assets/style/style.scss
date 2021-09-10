@@ -3980,6 +3980,7 @@ Expertise section
 .yt-tutorial {
     text-decoration: underline;
     color: $light-green-color;
+    margin-top: 8px;
 
     &:hover, &:focus, &.active {
         color: #5457c1;
