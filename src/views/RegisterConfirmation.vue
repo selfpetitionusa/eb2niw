@@ -14,7 +14,7 @@
                         <div class="div">
                             <h6>An e-mail from Tutomy is on its way with additional information</h6>
                             <p><strong>Tip 1:</strong> Check the spam folder or promotions tab, just in case</p>
-                            <p><strong>Tip 2:</strong> Follow 3 steps <a href="https://youtu.be/a2RKTd2UtS8">HERE</a> if the e-mail didn't arrive in your primary inbox</p>
+                            <p><strong>Tip 2:</strong> Follow 3 steps <a href="https://youtu.be/a2RKTd2UtS8" target="_blank">HERE</a> if the e-mail didn't arrive in your primary inbox</p>
                         </div>
 
                         <a href="/dashboard" class="btn btn-primary btn-register">Create your website</a>
