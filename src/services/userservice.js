@@ -17,7 +17,9 @@ export const userService = {
     updateProblemCards,
     requestPasswordReset,
     resetPassword,
-    updateBasicInfo
+    updateBasicInfo,
+    getUsers,
+    getLeads
 };
 
 function login(email, password) {
@@ -231,6 +233,23 @@ function resetPassword(email, code, password) {
     };
 
     return fetch(`${config.apiUrl}/users/password-reset`, requestOptions).then(handleResponse)
+}
+
+function getUsers() {
+    const requestOptions = {
+        method: 'GET',
+        headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${localStorage.getItem('token')}`}
+    };
+
+    return fetch(`${config.apiUrl}/users/admin`, requestOptions).then(handleResponse);
+}
+
+function getLeads() {
+    const requestOptions = {
+        method: 'GET',
+        headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${localStorage.getItem('token')}`}
+    };
+    return fetch(`${config.apiUrl}/lead/admin`, requestOptions).then(handleResponse);
 }
 
 function handleResponse(response) {

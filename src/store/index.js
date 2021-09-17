@@ -5,6 +5,7 @@ import { account } from './account-module';
 import { alert } from './alert-module';
 import { popup } from './popup-module';
 import { contact } from './contact-module';
+import { admin } from './admin-module';
 
 Vue.use(Vuex);
 
@@ -13,7 +14,8 @@ export const store = new Vuex.Store({
         alert,
         account,
         popup,
-        contact
+        contact,
+        admin
     }
 });
 

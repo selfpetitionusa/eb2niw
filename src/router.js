@@ -14,6 +14,7 @@ import NeedsAssessment from './views/NeedsAssessment';
 import BasicInfo from './views/account/BasicInfo';
 import AccountPasswordReset from './views/account/AccountPasswordReset';
 import ProfileLink from './views/account/ProfileLink';
+import AdminDashboardView from "./views/AdminDashboardView";
 
 
 export const router = new VueRouter({
@@ -33,6 +34,7 @@ export const router = new VueRouter({
       { path: '/dashboard', component: EditProfileView },
       { path: '/preview', component: Preview },
       { path: '/help', component: Help },
+      { path: '/admin', component: AdminDashboardView },
       {
             path: '/account',
             component: Account,
