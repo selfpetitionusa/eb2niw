@@ -1,6 +1,6 @@
 <template>
 
-    <b-modal @show="initModal"  id="contact-modal" title="Contact form" hide-footer>
+    <b-modal @show="initModal"  id="contact-modal" title="Contact me" hide-footer>
         <div v-if="show_contact && contact_notice != ''" class="alert alert-warning">
             There was a problem submitting your message. {{ contact_notice }}
         </div>
@@ -31,8 +31,8 @@
                     </div>
                 </div>
 
-                <div class="col-lg-12 col-md-12  d-flex justify-content-center justify-content-lg-end">
-                    <button type="submit" class="btn btn-primary btn-assess" :disabled="cmsToggle || !email" style="margin: 0px">Send Message</button>
+                <div class="col-lg-12 col-md-12 d-flex btn-profile justify-content-center justify-content-lg-end">
+                    <button type="submit" class="btn btn-primary inner" :disabled="cmsToggle || !email" style="margin: 0px">Send Message</button>
 
                     <div id="msgSubmit" class="h3 text-center hidden"></div>
                     <div class="clearfix"></div>

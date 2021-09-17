@@ -2859,7 +2859,7 @@ Landing page popups & needs assessment
     .graphic-celebrate {
         display: flex;
         align-items: flex-end;
-        padding-top: 3rem;
+        padding-top: 2.5rem;
     }
 }
 
@@ -3329,9 +3329,14 @@ h2.lastname {
         margin-top: 9px;
         box-shadow: 0 13px 27px 0 rgba(223, 120, 112, .25);
 
-        &:hover, &:focus, &:active {
+        &:hover, &:active {
             background-color: #5457C1;
             box-shadow: 0 13px 27px 0 rgba(68, 206, 111, .25);
+        }
+
+        &:focus {
+          background-color: #5457C1;
+          box-shadow: 0 13px 27px 0 rgba(84, 87, 193, .25);
         }
     }
 }
@@ -3972,6 +3977,16 @@ Expertise section
     }
 }
 
+.yt-tutorial {
+    text-decoration: underline;
+    color: $light-green-color;
+    margin-top: 8px;
+
+    &:hover, &:focus, &.active {
+        color: #5457c1;
+    }
+}
+
 .expertise-arrows {
     display: flex;
     align-items: center;
@@ -4317,13 +4332,14 @@ Pop-ups & CMS
     }
     p {
         line-height: 1.4;
+        margin-bottom: 8px;
 
         a {
             text-decoration: underline;
-            color: $paragraph-color;
+            color: $light-green-color;
 
             &:hover, &:focus {
-                color: $light-green-color;
+                color: #5457c1;
             }
         }
     }

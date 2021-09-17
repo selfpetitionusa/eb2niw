@@ -422,7 +422,8 @@
                                 <font-awesome-icon class="fas fa-plus-circle fa-3x" icon="plus-circle" />
                             </a>
                             <p>Do you have a YouTube video?</p>
-                            <p>Show parents and students your value and tutoring style.</p>
+                            <p>Show parents and students your value and tutoring style</p>
+                            <p><a class="yt-tutorial" href="https://youtu.be/ETkQS5CyTFs" target="_blank">HERE</a> how to get video to display properly</p>
                         </div>
                     </div>
                 </div>
