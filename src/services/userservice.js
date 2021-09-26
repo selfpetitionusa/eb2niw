@@ -19,7 +19,8 @@ export const userService = {
     resetPassword,
     updateBasicInfo,
     getUsers,
-    getLeads
+    getLeads,
+    updatePaymentBooking
 };
 
 function login(email, password) {
@@ -169,6 +170,17 @@ function updateBio(bio) {
     };
 
     return fetch(`${config.apiUrl}/tutors/bio`, requestOptions).then(handleResponse)
+}
+
+
+function updatePaymentBooking(paymentBookingData) {
+    const requestOptions = {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${localStorage.getItem('token')}` },
+        body: JSON.stringify(paymentBookingData)
+    };
+
+    return fetch(`${config.apiUrl}/tutors/booking-payment`, requestOptions).then(handleResponse)
 }
 
 function updateRates(rates) {

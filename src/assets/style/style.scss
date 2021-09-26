@@ -3322,6 +3322,7 @@ h2.lastname {
 .btn-profile {
     display: flex;
     justify-content: center;
+    flex-direction: column;
 
     .inner {
         background-color: #DF7870;
@@ -3337,6 +3338,22 @@ h2.lastname {
         &:focus {
           background-color: #5457C1;
           box-shadow: 0 13px 27px 0 rgba(84, 87, 193, .25);
+        }
+    }
+
+    .inner-booking {
+        color: #5457C1;
+        margin-top: 9px;
+        background-color: $white-color;
+        box-shadow: 0 13px 27px 0 rgba(84, 87, 193, .15);
+
+        &:hover, &:focus, &:active {
+            color: $white-color;
+            box-shadow: 0 13px 27px 0 rgba(84, 87, 193, .25);
+        }
+
+        &::after, &::before {
+            background-color: #5457C1;
         }
     }
 }

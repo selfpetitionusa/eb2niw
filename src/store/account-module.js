@@ -120,6 +120,22 @@ const actions = {
             }
         );
     },
+    updatePaymentBooking({ dispatch, commit }, paymentBookingData) {
+        commit('updatePaymentBookingRequest');
+        return userService.updatePaymentBooking(paymentBookingData).then(
+            (profile) => {
+                commit('getProfileSuccess', profile);
+                commit('updatePaymentBookingSuccess');
+                setTimeout(() => {
+                    dispatch('alert/success', 'Payment/Booking information Saved', { root: true });
+                })
+            },
+            () => {
+                commit('updatePaymentBookingFailure');
+                dispatch('alert/error',  'Failed to update data', { root: true });
+            }
+        );
+    },
     updateBio({ dispatch, commit }, bio) {
         commit('updateBioRequest');
         return userService.updateBio(bio).then(
@@ -331,6 +347,15 @@ const mutations = {
         state.status = { updatedEducationFormInfo: true };
     },
     updateEducationInfoFailure(state) {
+        state.status = {};
+    },
+    updatePaymentBookingRequest(state) {
+        state.status = { updatingPaymentBookingForm: true };
+    },
+    updatePaymentBookingSuccess(state) {
+        state.status = { updatedPaymentBookingForm: true };
+    },
+    updatePaymentBookingFailure(state) {
         state.status = {};
     },
     updateBioRequest(state) {

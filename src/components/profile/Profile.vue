@@ -108,12 +108,23 @@
 
 <!-- ACTION BUTTON -->
 
-                    <div class="btn-profile">
+                    <div class="btn-profile"  :class="[cmsToggle && 'cms-frame inner-frame']" >
+                        <div v-if="cmsToggle" style="margin-bottom: 30px;">
+                            <PaymentBookingPopup v-bind:profileProp="response" ></PaymentBookingPopup>
+                            <a href="#" class="edit" v-b-modal.payment-booking-modal>
+                                <font-awesome-icon icon="edit" />
+                            </a>
+                        </div>
                         <ContactPopup v-bind:email="response.profile.email" v-bind:cmsToggle="cmsToggle"></ContactPopup>
                         <a v-if="response.profile.firstName && response.profile.email" href="#" v-b-modal.contact-modal class="btn btn-primary inner" role="button">Contact {{response.profile.firstName}}</a>
 
 
-                        <a v-if="!response.profile.firstName && !response.profile.email && cmsToggle"  href="#" v-b-modal.contact-modal  class="btn btn-primary inner" role="button">Contact &lt; Name &gt;</a>
+                        <a v-if="!response.profile.firstName && !response.profile.email && cmsToggle"  href="#" v-b-modal.contact-modal  class="btn btn-primary inner-booking" role="button">Contact &lt; Name &gt;</a>
+
+                        <a v-if="cmsToggle" href="#" class="btn btn-primary btn-border inner-booking">Book/Pay</a>
+                        <a v-if="!cmsToggle && response.profile.actionType === 'Booking'" :href="response.profile.actionLink" class="btn btn-primary btn-border inner-booking">Book</a>
+                        <a v-if="!cmsToggle && response.profile.actionType === 'Payment'" :href="response.profile.actionLink" class="btn btn-primary btn-border inner-booking">Pay</a>
+                        <a v-if="!cmsToggle && response.profile.actionType === 'BookingAndPayment'" :href="response.profile.actionLink" class="btn btn-primary btn-border inner-booking">Book/Pay</a>
                     </div>
                 </div>
             </div>
@@ -509,6 +520,7 @@
     import YouTubePopup from '../profile/popups/YouTubePopup';
     import ProblemCardsPopup from '../profile/popups/ProblemCardsPopup';
     import ContactPopup from "./popups/ContactPopup";
+    import PaymentBookingPopup from "./popups/PaymentBookingPopup";
 
 
   export default {
@@ -530,7 +542,8 @@
       RatesPopup,
       TermsPopup,
       YouTubePopup,
-      ProblemCardsPopup
+      ProblemCardsPopup,
+      PaymentBookingPopup
     },
     props: ['cmsToggleProp',  'profileProp'],
     computed: {
