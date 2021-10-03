@@ -14,45 +14,53 @@
 
                 <div class="form-group">
                     <label for="facebook">Facebook</label>
-                    <div class="link-popup">
+                    <div class="link-popup row">
                         <div class="logo"><feather type="facebook"></feather></div>
-                        <ValidationProvider rules="url" v-slot="{ errors }" >
-                            <input type="text" class="form-control" id="facebook" v-model="facebook"  placeholder="https://www.facebook.com/YOUR-PROFILE-OR-PAGE" :class="{ 'is-invalid': submitted && errors.length }">
-                            <div v-if="submitted && errors.length" class="invalid-feedback">Url has wrong format</div>
-                        </ValidationProvider>
+                        <div class="col-10 col-sm-11" style="padding-right: 0px; padding-left: 5px;">
+                            <ValidationProvider rules="url" v-slot="{ errors }" >
+                                <input type="text" class="form-control" id="facebook" v-model="facebook"  placeholder="https://www.facebook.com/YOUR-PROFILE-OR-PAGE" :class="{ 'is-invalid': submitted && errors.length }">
+                                <div v-if="submitted && errors.length" class="invalid-feedback">Url has wrong format</div>
+                            </ValidationProvider>
+                        </div>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label for="instagram">Instagram</label>
-                    <div class="link-popup">
+                    <div class="link-popup row">
                         <div class="logo"><feather type="instagram"></feather></div>
-                        <ValidationProvider rules="url" v-slot="{ errors }" >
-                            <input type="text" class="form-control" id="instagram" v-model="instagram" placeholder="https://www.instagram.com/YOUR-PROFILE" :class="{ 'is-invalid': submitted && errors.length }">
-                            <div v-if="submitted && errors.length" class="invalid-feedback">Url has wrong format</div>
-                        </ValidationProvider>
+                        <div class="col-10 col-sm-11" style="padding-right: 0px; padding-left: 5px;">
+                            <ValidationProvider rules="url" v-slot="{ errors }" >
+                                <input type="text" class="form-control" id="instagram" v-model="instagram" placeholder="https://www.instagram.com/YOUR-PROFILE" :class="{ 'is-invalid': submitted && errors.length }">
+                                <div v-if="submitted && errors.length" class="invalid-feedback">Url has wrong format</div>
+                            </ValidationProvider>
+                        </div>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label for="youtube">YouTube channel</label>
-                    <div class="link-popup">
+                    <div class="link-popup row">
                         <div class="logo"><feather type="youtube"></feather></div>
-                        <ValidationProvider rules="url" v-slot="{ errors }" >
-                            <input type="text" class="form-control" id="youtube" v-model="youtube" placeholder="https://www.youtube.com/c/YOUR-CHANNEL/featured" :class="{ 'is-invalid': submitted && errors.length }">
-                            <div v-if="submitted && errors.length" class="invalid-feedback">Url has wrong format</div>
-                        </ValidationProvider>
+                        <div class="col-10 col-sm-11" style="padding-right: 0px; padding-left: 5px;">
+                            <ValidationProvider rules="url" v-slot="{ errors }" >
+                                <input type="text" class="form-control" id="youtube" v-model="youtube" placeholder="https://www.youtube.com/c/YOUR-CHANNEL/featured" :class="{ 'is-invalid': submitted && errors.length }">
+                                <div v-if="submitted && errors.length" class="invalid-feedback">Url has wrong format</div>
+                            </ValidationProvider>
+                        </div>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label for="linkedin">LinkedIn</label>
-                    <div class="link-popup">
+                    <div class="link-popup row">
                         <div class="logo"><feather type="linkedin"></feather></div>
-                        <ValidationProvider rules="url" v-slot="{ errors }" >
-                            <input type="text" class="form-control" id="linkedin" v-model="linkedin"  placeholder="https://www.linkedin.com/in/YOUR-PROFILE" :class="{ 'is-invalid': submitted && errors.length }">
-                            <div v-if="submitted && errors.length" class="invalid-feedback">Url has wrong format</div>
-                        </ValidationProvider>
+                        <div class="col-10 col-sm-11" style="padding-right: 0px; padding-left: 5px;">
+                            <ValidationProvider rules="url" v-slot="{ errors }" >
+                                <input type="text" class="form-control" id="linkedin" v-model="linkedin"  placeholder="https://www.linkedin.com/in/YOUR-PROFILE" :class="{ 'is-invalid': submitted && errors.length }">
+                                <div v-if="submitted && errors.length" class="invalid-feedback">Url has wrong format</div>
+                            </ValidationProvider>
+                        </div>
                     </div>
                 </div>
 

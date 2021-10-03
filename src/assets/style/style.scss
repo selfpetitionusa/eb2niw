@@ -4694,17 +4694,13 @@ input[type="range"]::-ms-fill-upper {
         border-color: rgba(84, 87, 193, .4);
         border: 1px solid;
         border-radius: 50%;
+        margin-left: 5px;
 
         i {
             padding: 5px;
             display: flex;
             justify-content: center;
         }
-    }
-
-    input {
-        margin-left: 5px;
-        width: 25.5rem;
     }
 }
 
