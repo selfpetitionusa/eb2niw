@@ -1,15 +1,15 @@
 <template>
 
-    <b-modal @show="initModal" size="lg" id="payment-booking-modal" title="Contact e-mail, calendar bookings & payments" hide-footer>
+    <b-modal @show="initModal" id="payment-booking-modal" title="E-mail, bookings & payments" hide-footer>
         <div v-if="alert.failed" :class="`alert ${alert.type}`">{{alert.message}}</div>
         <ValidationObserver ref="form">
             <form id="payment-booking-popup" class="cms" @submit.prevent="saveForm" novalidate>
                 <div class="form-title">
-                    <p>Action button - "Contact {{name}}"</p>
+                    <p class="first">"Contact {{name}}"</p>
                 </div>
 
                 <div class="form-group">
-                    <label for="email">By pressing this button, visitors will send you email at</label>
+                    <label for="email">By pressing this button, visitors will send you an email at</label>
                     <ValidationProvider rules="required|email" v-slot="{ errors }" >
                         <input type="text" class="form-control" id="email" v-model="data.email" :class="{ 'is-invalid':  submitted && errors.length }" >
                         <div v-if="submitted && errors.includes('required')" class="invalid-feedback">Email is required</div>
@@ -19,29 +19,28 @@
 
 
                 <div class="form-title">
-                    <p>Action button - "Book/Pay</p>
-                    <p>You can customize the button as follows:</p>
+                    <p class="no-bottom-margin">"Book / Pay"</p>
+                    <p class="first" style="font-weight: 400">You can customize the button as follows:</p>
                 </div>
 
                 <div class="radio-container">
                     <div class="form-check radio">
                         <input class="form-check-input" type="radio" id="booking-radio" v-model="data.actionType" value="Booking"  >
                         <div class="form-inline">
-                            <label class="form-check-label item" for="booking-input">Link your calendar bookings (Book)</label>
+                            <label class="form-check-label item" for="booking-input">Link your calendar bookings (only Book)</label>
                             <ValidationProvider rules="url" v-slot="{ errors }" >
-                                <input type="text" class="form-control item" id="booking-input" size="40" v-model="bookingLinkInput" :disabled="data.actionType !== 'Booking'" placeholder="https://bookingapp.com" :class="{ 'is-invalid': submitted && errors.length }">
+                                <input type="text" class="form-control item" id="booking-input" size="52%" v-model="bookingLinkInput" :disabled="data.actionType !== 'Booking'" placeholder="https://bookingapp.com" :class="{ 'is-invalid': submitted && errors.length }">
                                 <div v-if="submitted && errors.includes('url')" class="invalid-feedback">Link has wrong format</div>
                             </ValidationProvider>
                         </div>
                     </div>
 
-
                     <div class="form-check radio">
                         <input class="form-check-input" type="radio"  id="payment-radio" v-model="data.actionType" value="Payment" >
                         <div class="form-inline">
-                            <label class="form-check-label item" for="payment-input">Link your payments (Pay)</label>
+                            <label class="form-check-label item" for="payment-input">Link your payments (only Pay)</label>
                             <ValidationProvider rules="url" v-slot="{ errors }" >
-                                <input type="text" class="form-control item"  style="float: right" id="payment-input" size="40" v-model="paymentLinkInput"  :disabled="data.actionType !== 'Payment'" placeholder="https://paymentapp.com" :class="{ 'is-invalid': submitted && errors.length }" >
+                                <input type="text" class="form-control item" id="payment-input" size="52%" v-model="paymentLinkInput"  :disabled="data.actionType !== 'Payment'" placeholder="https://paymentapp.com" :class="{ 'is-invalid': submitted && errors.length }" >
                                 <div v-if="submitted && errors.includes('url')" class="invalid-feedback">Link has wrong format</div>
                             </ValidationProvider>
                         </div>
@@ -52,19 +51,19 @@
                         <div class="form-inline">
                             <label class="form-check-label item" for="payment-booking-input">Link your calendar and payments (Book & Pay)</label>
                             <ValidationProvider rules="url" v-slot="{ errors }" >
-                                <input type="text" class="form-control item"  id="payment-booking-input"  size="40" v-model="paymentBookingLinkInput"  :disabled="data.actionType !== 'BookingAndPayment'" placeholder="https://paymentbookingapp.com" :class="{ 'is-invalid': submitted && errors.length }" >
+                                <input type="text" class="form-control item"  id="payment-booking-input" size="52%" v-model="paymentBookingLinkInput"  :disabled="data.actionType !== 'BookingAndPayment'" placeholder="https://paymentbookingapp.com" :class="{ 'is-invalid': submitted && errors.length }" >
                                 <div v-if="submitted && errors.includes('url')" class="invalid-feedback">Link has wrong format</div>
                             </ValidationProvider>
                         </div>
                     </div>
 
-                    <div class="form-check radio">
+                    <div class="form-check radio" style="height: 56px">
                         <label class="form-check-label item" for="no-radio">No button</label>
                         <input class="form-check-input" type="radio"  id="no-radio" v-model="data.actionType" value="None" >
                     </div>
 
-                    <div class="form-check radio">
-                        <label class="form-check-label item" for="separate-radio">If you need to separate buttons for book and pay, please <a href="/help" style="font-weight: 700">contact us</a></label>
+                    <div class="form-check radio" style="height: 30px">
+                        <label class="form-check-label item" for="separate-radio">Need 2 separate buttons for book & pay? <a href="/help" target="_blank" class="contact-us">contact us</a></label>
                         <input class="form-check-input" type="radio"  id="separate-radio" v-model="data.actionType" value="SeparateButtons" >
                     </div>
                 </div>

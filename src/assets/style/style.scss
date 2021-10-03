@@ -2871,6 +2871,18 @@ Landing page popups & needs assessment
         }
     }
 
+#payment-booking-popup {
+    .contact-us {
+        text-decoration: underline;
+        color: $light-green-color;
+        font-weight: 600;
+
+        &:hover, &:focus, &.active {
+            color: #5457c1;
+        }
+    }
+}
+
                   /*================================================
                             TUTOMY PROFILE
                   =================================================*/
@@ -4455,7 +4467,7 @@ Pop-ups & CMS
 #subjects-popup .form-title p,
 #terms-popup .form-title p,
 #youtube-popup .form-title p,
-#education-popup .form-title .first {
+#education-popup .form-title .first, #payment-booking-popup .form-title .first {
     margin-top: 0px;
 }
 
@@ -4702,6 +4714,10 @@ input[type="range"]::-ms-fill-upper {
             justify-content: center;
         }
     }
+}
+
+#booking-input.item, #payment-input.item, #payment-booking-input.item {
+    height: 35px;
 }
 
 #schools, #certificates, #subjects, #problem-cards-popup select {
