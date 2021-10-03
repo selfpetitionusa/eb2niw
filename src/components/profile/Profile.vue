@@ -121,7 +121,7 @@
 
                         <a v-if="!response.profile.firstName && !response.profile.email && cmsToggle"  href="#" v-b-modal.contact-modal  class="btn btn-primary inner-booking" role="button">Contact &lt; Name &gt;</a>
 
-                        <a v-if="cmsToggle" href="#" class="btn btn-primary btn-border inner-booking">Book/Pay</a>
+                        <a v-if="cmsToggle" href="https://wikipedia.com" target="_blank" class="btn btn-primary btn-border inner-booking">Book / Pay</a>
                         <a v-if="!cmsToggle && response.profile.actionType === 'Booking'" :href="response.profile.actionLink" class="btn btn-primary btn-border inner-booking">Book</a>
                         <a v-if="!cmsToggle && response.profile.actionType === 'Payment'" :href="response.profile.actionLink" class="btn btn-primary btn-border inner-booking">Pay</a>
                         <a v-if="!cmsToggle && response.profile.actionType === 'BookingAndPayment'" :href="response.profile.actionLink" class="btn btn-primary btn-border inner-booking">Book/Pay</a>

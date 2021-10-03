@@ -3348,7 +3348,14 @@ h2.lastname {
         background-color: $white-color;
         box-shadow: none;
 
-        &:hover, &:focus, &:active {
+        &:focus {
+            color: #DF7870;
+            border: 1px solid #DF7870;
+            border-radius: 5px;
+            box-shadow: 0 13px 27px 0 rgba(223, 120, 112, 0.25);
+        }
+
+        &:hover, &:active {
             color: $white-color;
             box-shadow: 0 13px 27px 0 rgba(223, 120, 112, 0.25);
         }
