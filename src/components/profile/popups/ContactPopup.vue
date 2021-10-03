@@ -31,7 +31,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-12 col-md-12 d-flex btn-profile justify-content-center justify-content-lg-end">
+                <div class="col-lg-12 col-md-12 d-flex btn-profile btn-contact justify-content-center justify-content-lg-end">
                     <button type="submit" class="btn btn-primary inner" :disabled="cmsToggle || !email" style="margin: 0px">Send Message</button>
 
                     <div id="msgSubmit" class="h3 text-center hidden"></div>

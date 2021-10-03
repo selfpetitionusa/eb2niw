@@ -3324,6 +3324,10 @@ h2.lastname {
     justify-content: center;
     flex-direction: column;
 
+    &.btn-contact {
+        flex-direction: row;
+    }
+
     .inner {
         background-color: #DF7870;
         padding: 15px 25px;
