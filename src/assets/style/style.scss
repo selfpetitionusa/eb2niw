@@ -3327,7 +3327,7 @@ h2.lastname {
     .inner {
         background-color: #DF7870;
         padding: 15px 25px;
-        margin-top: 9px;
+        margin: 9px 9px 0px;
         box-shadow: 0 13px 27px 0 rgba(223, 120, 112, .25);
 
         &:hover, &:active {
@@ -3342,18 +3342,19 @@ h2.lastname {
     }
 
     .inner-booking {
-        color: #5457C1;
-        margin-top: 9px;
+        color: #DF7870;
+        border-color: #DF7870;
+        margin: 9px;
         background-color: $white-color;
-        box-shadow: 0 13px 27px 0 rgba(84, 87, 193, .15);
+        box-shadow: none;
 
         &:hover, &:focus, &:active {
             color: $white-color;
-            box-shadow: 0 13px 27px 0 rgba(84, 87, 193, .25);
+            box-shadow: 0 13px 27px 0 rgba(223, 120, 112, 0.25);
         }
 
         &::after, &::before {
-            background-color: #5457C1;
+            background-color: #DF7870;
         }
     }
 }
