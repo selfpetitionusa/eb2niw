@@ -124,7 +124,7 @@
                         <a v-if="cmsToggle" href="https://wikipedia.com" class="btn btn-primary btn-border inner-booking">Book / Pay</a>
                         <a v-if="!cmsToggle && response.profile.actionType === 'Booking'" :href="response.profile.actionLink" class="btn btn-primary btn-border inner-booking">Book</a>
                         <a v-if="!cmsToggle && response.profile.actionType === 'Payment'" :href="response.profile.actionLink" class="btn btn-primary btn-border inner-booking">Pay</a>
-                        <a v-if="!cmsToggle && response.profile.actionType === 'BookingAndPayment'" :href="response.profile.actionLink" class="btn btn-primary btn-border inner-booking">Book/Pay</a>
+                        <a v-if="!cmsToggle && response.profile.actionType === 'BookingAndPayment'" :href="response.profile.actionLink" class="btn btn-primary btn-border inner-booking">Book & Pay</a>
                     </div>
                 </div>
             </div>

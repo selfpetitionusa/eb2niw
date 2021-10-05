@@ -59,12 +59,11 @@
 
                     <div class="form-check radio" style="height: 56px">
                         <label class="form-check-label item" for="no-radio">No button</label>
-                        <input class="form-check-input" type="radio"  id="no-radio" v-model="data.actionType" value="None" >
+                        <input class="form-check-input" type="radio"  id="no-radio" v-model="data.actionType" value="None" style="margin-bottom: 3px;">
                     </div>
 
-                    <div class="form-check radio" style="height: 30px">
-                        <label class="form-check-label item" for="separate-radio">Need 2 separate buttons for book & pay? <a href="/help" target="_blank" class="contact-us">contact us</a></label>
-                        <input class="form-check-input" type="radio"  id="separate-radio" v-model="data.actionType" value="SeparateButtons" >
+                    <div class="form-title">
+                        <p class="first" style="height: 30px">Need 2 separate buttons for book & pay? <a href="/help" target="_blank" class="contact-us">contact us</a></p>
                     </div>
                 </div>
 
