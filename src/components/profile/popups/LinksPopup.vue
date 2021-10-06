@@ -19,7 +19,7 @@
                         <div class="col-10 col-sm-11" style="padding-right: 0px; padding-left: 5px;">
                             <ValidationProvider rules="url" v-slot="{ errors }" >
                                 <input type="text" class="form-control" id="facebook" v-model="facebook"  placeholder="https://www.facebook.com/YOUR-PROFILE-OR-PAGE" :class="{ 'is-invalid': submitted && errors.length }">
-                                <div v-if="submitted && errors.length" class="invalid-feedback">Url has wrong format</div>
+                                <div v-if="submitted && errors.length" class="invalid-feedback">Link has wrong format, "https://" is required</div>
                             </ValidationProvider>
                         </div>
                     </div>
@@ -32,7 +32,7 @@
                         <div class="col-10 col-sm-11" style="padding-right: 0px; padding-left: 5px;">
                             <ValidationProvider rules="url" v-slot="{ errors }" >
                                 <input type="text" class="form-control" id="instagram" v-model="instagram" placeholder="https://www.instagram.com/YOUR-PROFILE" :class="{ 'is-invalid': submitted && errors.length }">
-                                <div v-if="submitted && errors.length" class="invalid-feedback">Url has wrong format</div>
+                                <div v-if="submitted && errors.length" class="invalid-feedback">Link has wrong format, "https://" is required</div>
                             </ValidationProvider>
                         </div>
                     </div>
@@ -45,7 +45,7 @@
                         <div class="col-10 col-sm-11" style="padding-right: 0px; padding-left: 5px;">
                             <ValidationProvider rules="url" v-slot="{ errors }" >
                                 <input type="text" class="form-control" id="youtube" v-model="youtube" placeholder="https://www.youtube.com/c/YOUR-CHANNEL/featured" :class="{ 'is-invalid': submitted && errors.length }">
-                                <div v-if="submitted && errors.length" class="invalid-feedback">Url has wrong format</div>
+                                <div v-if="submitted && errors.length" class="invalid-feedback">Link has wrong format, "https://" is required</div>
                             </ValidationProvider>
                         </div>
                     </div>
@@ -58,7 +58,7 @@
                         <div class="col-10 col-sm-11" style="padding-right: 0px; padding-left: 5px;">
                             <ValidationProvider rules="url" v-slot="{ errors }" >
                                 <input type="text" class="form-control" id="linkedin" v-model="linkedin"  placeholder="https://www.linkedin.com/in/YOUR-PROFILE" :class="{ 'is-invalid': submitted && errors.length }">
-                                <div v-if="submitted && errors.length" class="invalid-feedback">Url has wrong format</div>
+                                <div v-if="submitted && errors.length" class="invalid-feedback">Link has wrong format, "https://" is required</div>
                             </ValidationProvider>
                         </div>
                     </div>
