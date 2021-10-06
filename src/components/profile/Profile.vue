@@ -121,7 +121,12 @@
 
                         <a v-if="!response.profile.firstName && !response.profile.email && cmsToggle"  href="#" v-b-modal.contact-modal  class="btn btn-primary inner-booking" role="button">Contact &lt; Name &gt;</a>
 
-                        <a v-if="cmsToggle" href="https://wikipedia.com" class="btn btn-primary btn-border inner-booking">Book / Pay</a>
+                        <a v-if="cmsToggle" href="#" class="btn btn-primary btn-border inner-booking" v-on:click="clickPaymentsButtonEditMode()">Book / Pay</a>
+                            <div id="paymentsEditAlert" class="alert alert-warning" style="margin: 3px;">
+                                <div style="font-weight: 600; margin-bottom: 2px;">Disabled in edit mode:</div>
+                                <div style="font-size: 12px"> -> Click edit icon to add link</div>
+                                <div style="font-size: 12px"> -> Check result in PREVIEW</div>
+                            </div>
                         <a v-if="!cmsToggle && response.profile.actionType === 'Booking'" :href="response.profile.actionLink" class="btn btn-primary btn-border inner-booking">Book</a>
                         <a v-if="!cmsToggle && response.profile.actionType === 'Payment'" :href="response.profile.actionLink" class="btn btn-primary btn-border inner-booking">Pay</a>
                         <a v-if="!cmsToggle && response.profile.actionType === 'BookingAndPayment'" :href="response.profile.actionLink" class="btn btn-primary btn-border inner-booking">Book & Pay</a>
@@ -645,7 +650,15 @@
               } else {
                 y.style.display = "none";
               }
-          }
+          },
+          clickPaymentsButtonEditMode: function () {
+              let x = document.getElementById("paymentsEditAlert");
+              if (x.style.display === "block") {
+                x.style.display = "none";
+              } else {
+                x.style.display = "block";
+              }
+            }
       }
   }
 

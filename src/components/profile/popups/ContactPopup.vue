@@ -6,7 +6,7 @@
         </div>
 
         <div v-if="cmsToggle" class="alert alert-warning">
-           Form is disabled in profile edit mode
+           Form is disabled in edit mode, access in PREVIEW
         </div>
         <form v-if="show_contact" id="contactModal" @submit.prevent="sendContactMessage()">
             <div class="row">
