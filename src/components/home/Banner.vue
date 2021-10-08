@@ -57,12 +57,12 @@
                                     </div>
                                 </div>
 
-                                <div class="row banner-action-btns">
-                                    <div class="col-sm-6">
-                                        <a href="/website-needs-assessment" @click="$gtag.event('website-assessment')" class="btn btn-primary btn-assess">CHECK YOUR WEBSITE NEEDS</a>
+                                <div class="row banner-action-btns justify-content-center">
+                                    <div class="col-sm-6 col-11">
+                                        <a href="/website-needs-assessment" @click="$gtag.event('website-assessment')" class="btn btn-primary btn-assess btn-profile">FIND YOUR WEBSITE TYPE: QUIZ</a>
                                     </div>
-                                    <div class="col-sm-6">
-                                        <a href="/register" @click="$gtag.event('register')" class="btn btn-primary btn-register">CREATE FREE WEBSITE TODAY</a>
+                                    <div class="col-sm-6 col-11">
+                                        <a href="/register" @click="$gtag.event('register')" class="btn btn-primary btn-register btn-profile">CREATE FREE WEBSITE TODAY</a>
                                     </div>
                                 </div>
 

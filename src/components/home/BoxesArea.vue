@@ -55,8 +55,8 @@
                 </div>
             </div>
 
-            <div class="boxes-action-btn">
-                <a href="/register" @click="$gtag.event('register')" class="btn btn-primary btn-register">CREATE YOUR FREE WEBSITE TODAY</a>
+            <div class="boxes-action-btn row justify-content-center">
+                <a href="/register" @click="$gtag.event('register')" class="col-sm-5 col-11 btn btn-primary btn-register btn-profile">CREATE FREE WEBSITE TODAY</a>
             </div>
         </div>
     </section>
