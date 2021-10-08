@@ -55,8 +55,8 @@
                         </form>
                     </div>
                     <div v-else>
-                        <h3 style="margin-top: 3rem">Download the quiz</h3>
-                        <h6 style="margin-top: 1rem; line-height: 1.4">Also, check your e-mail for additional instructions</h6>
+                        <h1 style="margin-top: 3rem">We sent quiz to your email</h1>
+                        <h6 style="margin-top: 1rem; line-height: 1.4">You can also download it below</h6>
                         <h6 style="margin-top: 15px; line-height: 1.4">In <strong style="color: #8789d3">{{countDown}}sec</strong> you will be redirected to Tutomy homepage</h6>
                         <a href="/Quiz - What type of website do you need.pdf" download><feather class="download" type="download"></feather></a>
                     </div>
