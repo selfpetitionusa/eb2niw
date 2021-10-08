@@ -658,7 +658,7 @@
               } else {
                 x.style.display = "block";
               }
-            }
+          }
       }
   }
 

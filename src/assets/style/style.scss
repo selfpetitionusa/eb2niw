@@ -2859,7 +2859,7 @@ Landing page popups & needs assessment
     .graphic-celebrate {
         display: flex;
         align-items: flex-end;
-        padding-top: 2.5rem;
+        padding-top: 0rem;
     }
 }
 
@@ -4395,6 +4395,19 @@ Pop-ups & CMS
 
         h6 {
             line-height: 1.4;
+        }
+
+        #tip {
+            margin-top: 1rem;
+            visibility: hidden;
+        }
+
+        #manualActivation1 {
+            display: block;
+        }
+
+        #manualActivation2 {
+            display: none;
         }
     }
 
