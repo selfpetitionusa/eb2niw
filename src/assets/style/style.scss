@@ -2115,7 +2115,7 @@ Pricing CSS
         margin-bottom: 30px;
 
         span {
-            color: $light-green-color;
+            color: #953695;
             font: {
                 size: 30px;
                 weight: 600;
@@ -2168,7 +2168,7 @@ Pricing CSS
         }
     }
     .btn-primary {
-        background: $purple-color;
+        background: #953695;
         box-shadow: 0 13px 27px 0 rgba(198, 121, 227, 0.25);
 
         &::after, &::before {
@@ -5195,7 +5195,7 @@ a.edit {
 // Possible options to configure video  https://github.com/sampotts/plyr
 
 html{
-  --plyr-color-main: rgba(	84, 87, 193, 0.5);
+  --plyr-color-main: rgba(	84, 87, 193, 1);
 }
 
 
@@ -5256,7 +5256,7 @@ Feedback CSS
 
 .feedback-slides .client-feedback .single-feedback a {
     text-decoration: underline;
-    color: #c679e3;
+    color: #953695;
     margin-bottom: 1rem;
 
     &:hover {
@@ -5480,7 +5480,7 @@ Feedback CSS
 .single-feedback-item .client-info .title span {
     display: block;
     margin-top: 8px;
-    color: #c679e3;
+    color: #953695;
 }
 
 .single-feedback-item p {

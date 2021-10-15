@@ -85,9 +85,8 @@
                                         <video
                                                 controls
                                                 crossorigin
-                                                playsinline
-                                                poster="../../assets/img/thumbnailMobile.png">
-                                            <source src="../../assets/img/Short_video_captions.mp4" type="video/mp4">
+                                                playsinline>
+                                            <source src="../../assets/img/Intro-video-Rena.mp4" type="video/mp4">
                                             Video how to create a tutoring website. Your browser does not support the video tag
                                         </video>
                                     </vue-plyr>
@@ -98,9 +97,8 @@
                                         <video
                                                 controls
                                                 crossorigin
-                                                playsinline
-                                                poster="../../assets/img/thumbnailDesktop.png">
-                                            <source src="../../assets/img/Short_video_captions.mp4" type="video/mp4">
+                                                playsinline>
+                                            <source src="../../assets/img/Intro-video-Rena.mp4" type="video/mp4">
                                             Video how to create a tutoring website. Your browser does not support the video tag
                                         </video>
                                     </vue-plyr>

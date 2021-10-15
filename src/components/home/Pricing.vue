@@ -19,7 +19,7 @@
 
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-6">
-                    <div class="pricing-table active-plan">
+                    <div class="pricing-table">
                         <div class="pricing-header">
                             <h3>Basic Plan</h3>
                         </div>
