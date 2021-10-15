@@ -20,14 +20,14 @@
 
                 <div class="form-title">
                     <p class="no-bottom-margin">"Book / Pay"</p>
-                    <p class="first" style="font-weight: 400"><a class="yt-tutorial" href="https://youtu.be/TTp7FvWNdUI" target="_blank">HERE</a> tutorial how to add payment & booking links</p>
+                    <p class="first" style="font-weight: 400"><a class="yt-tutorial" href="https://youtu.be/TTp7FvWNdUI" target="_blank">HERE</a> how to add payment & booking links</p>
                 </div>
 
                 <div class="radio-container">
                     <div class="form-check radio">
                         <input class="form-check-input" type="radio" id="booking-radio" v-model="data.actionType" value="Booking"  >
                         <div class="form-inline">
-                            <label class="form-check-label item" for="booking-input">Link your calendar bookings (only Book)</label>
+                            <label class="form-check-label item" for="booking-input">Link calendar bookings (only Book)</label>
                             <ValidationProvider rules="url" v-slot="{ errors }" >
                                 <input type="text" class="form-control item" id="booking-input" size="52%" v-model="bookingLinkInput" :disabled="data.actionType !== 'Booking'" placeholder="https://bookingapp.com" :class="{ 'is-invalid': submitted && errors.length }">
                                 <div v-if="submitted && errors.includes('url')" class="invalid-feedback">Link has wrong format, "https://" is required</div>
@@ -38,7 +38,7 @@
                     <div class="form-check radio">
                         <input class="form-check-input" type="radio"  id="payment-radio" v-model="data.actionType" value="Payment" >
                         <div class="form-inline">
-                            <label class="form-check-label item" for="payment-input">Link your payments (only Pay)</label>
+                            <label class="form-check-label item" for="payment-input">Link payments (only Pay)</label>
                             <ValidationProvider rules="url" v-slot="{ errors }" >
                                 <input type="text" class="form-control item" id="payment-input" size="52%" v-model="paymentLinkInput"  :disabled="data.actionType !== 'Payment'" placeholder="https://paymentapp.com" :class="{ 'is-invalid': submitted && errors.length }" >
                                 <div v-if="submitted && errors.includes('url')" class="invalid-feedback">Link has wrong format, "https://" is required</div>
@@ -49,7 +49,7 @@
                     <div class="form-check radio">
                         <input class="form-check-input" type="radio"  id="payment-booking-radio" v-model="data.actionType" value="BookingAndPayment" >
                         <div class="form-inline">
-                            <label class="form-check-label item" for="payment-booking-input">Link your calendar and payments (Book & Pay)</label>
+                            <label class="form-check-label item" for="payment-booking-input">Link bookings and payments (Book & Pay)</label>
                             <ValidationProvider rules="url" v-slot="{ errors }" >
                                 <input type="text" class="form-control item"  id="payment-booking-input" size="52%" v-model="paymentBookingLinkInput"  :disabled="data.actionType !== 'BookingAndPayment'" placeholder="https://paymentbookingapp.com" :class="{ 'is-invalid': submitted && errors.length }" >
                                 <div v-if="submitted && errors.includes('url')" class="invalid-feedback">Link has wrong format, "https://" is required</div>
