@@ -49,7 +49,7 @@
                             <input type="text" v-model="user.lastName"  name="lastName" class="form-control"  />
                         </div>
                         <div class="form-group">
-                            <label for="email">Email</label>
+                            <label for="email">E-mail where clients will contact you</label>
                             <input type="text" v-model="user.email"  name="email" class="form-control"  />
                         </div>
                         <div class="form-group">
