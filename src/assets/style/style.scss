@@ -2115,7 +2115,7 @@ Pricing CSS
         margin-bottom: 30px;
 
         span {
-            color: #953695;
+            color: $light-green-color;
             font: {
                 size: 30px;
                 weight: 600;
@@ -2168,7 +2168,7 @@ Pricing CSS
         }
     }
     .btn-primary {
-        background: #953695;
+        background: $purple-color;
         box-shadow: 0 13px 27px 0 rgba(198, 121, 227, 0.25);
 
         &::after, &::before {
