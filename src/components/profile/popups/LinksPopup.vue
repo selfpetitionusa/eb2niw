@@ -13,7 +13,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="facebook">Facebook</label>
+                    <label for="facebook" style="font-weight: 500; margin-left: 2rem">Facebook</label>
                     <div class="link-popup row">
                         <div class="logo"><feather type="facebook"></feather></div>
                         <div class="col-10 col-sm-11" style="padding-right: 0px; padding-left: 5px;">
@@ -26,7 +26,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="instagram">Instagram</label>
+                    <label for="instagram" style="font-weight: 500; margin-left: 2rem">Instagram</label>
                     <div class="link-popup row">
                         <div class="logo"><feather type="instagram"></feather></div>
                         <div class="col-10 col-sm-11" style="padding-right: 0px; padding-left: 5px;">
@@ -39,7 +39,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="youtube">YouTube channel</label>
+                    <label for="youtube" style="font-weight: 500; margin-left: 2rem">YouTube channel</label>
                     <div class="link-popup row">
                         <div class="logo"><feather type="youtube"></feather></div>
                         <div class="col-10 col-sm-11" style="padding-right: 0px; padding-left: 5px;">
@@ -52,7 +52,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="linkedin">LinkedIn</label>
+                    <label for="linkedin" style="font-weight: 500; margin-left: 2rem">LinkedIn</label>
                     <div class="link-popup row">
                         <div class="logo"><feather type="linkedin"></feather></div>
                         <div class="col-10 col-sm-11" style="padding-right: 0px; padding-left: 5px;">
