@@ -20,7 +20,7 @@
 
                 <div class="form-title">
                     <p class="no-bottom-margin">"Book / Pay"</p>
-                    <p class="first" style="font-weight: 400">You can customize the button as follows:</p>
+                    <p class="first" style="font-weight: 400"><a class="yt-tutorial" href="https://youtu.be/TTp7FvWNdUI" target="_blank">HERE</a> tutorial how to add payment & booking links</p>
                 </div>
 
                 <div class="radio-container">
