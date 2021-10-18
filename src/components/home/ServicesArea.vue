@@ -49,7 +49,7 @@
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="box">
-                                    <feather type="search"></feather> SEO on autopilot, already optimized for you
+                                    <feather type="search"></feather> SEO on autopilot, already optimized
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6">
@@ -85,7 +85,7 @@
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="box">
-                                    <feather type="search"></feather> SEO on autopilot, already optimized for you
+                                    <feather type="search"></feather> SEO on autopilot, already optimized
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6">
@@ -102,10 +102,10 @@
             <div class="row service-action-btns">
                 <div class="col-xl-7 col-lg-9">
                     <div class="row justify-content-center">
-                        <div class="col-sm-6 col-11">
+                        <div class="col-sm-6 col-12">
                             <a href="/website-needs-assessment" @click="$gtag.event('website-assessment')" class="btn btn-primary btn-assess btn-profile">FIND YOUR WEBSITE TYPE:<br>TAKE A QUIZ</a>
                         </div>
-                        <div class="col-sm-6 col-11">
+                        <div class="col-sm-6 col-12">
                             <a href="/register" @click="$gtag.event('register')" class="btn btn-primary btn-register btn-profile">CREATE WEBSITE TODAY: <br>FREE TRIAL</a>
                         </div>
                     </div>
