@@ -68,7 +68,8 @@
                                         <video
                                                 controls
                                                 crossorigin
-                                                playsinline>
+                                                playsinline
+                                                poster="../../assets/img/thumbnail.png">
                                             <source src="../../assets/img/Intro-video-Rena.mp4" type="video/mp4">
                                             Video how to create a tutoring website. Your browser does not support the video tag
                                         </video>
@@ -80,7 +81,8 @@
                                         <video
                                                 controls
                                                 crossorigin
-                                                playsinline>
+                                                playsinline
+                                                poster="../../assets/img/thumbnail.png">
                                             <source src="../../assets/img/Intro-video-Rena.mp4" type="video/mp4">
                                             Video how to create a tutoring website. Your browser does not support the video tag
                                         </video>
