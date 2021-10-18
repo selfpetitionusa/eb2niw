@@ -6,12 +6,11 @@
             <div class="d-table-cell">
                 <div class="container">
                     <div class="row h-100 justify-content-center align-items-center">
-                        <div class="col-lg-7">
+                        <div class="col-xl-6 col-lg-7">
                             <div class="hero-content">
                                 <div class="row">
                                     <div class="col-lg-11">
                                         <h1>Create a professional tutoring website in 11min</h1>
-                                        <h4>Help students find you</h4>
 
                                         <div class="d-block d-sm-none">
                                             <div class="tick-row">
@@ -75,7 +74,7 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-5 video">
+                        <div class="col-xl-6 col-lg-5 video">
                             <h6 class="intro-video">Does this sound like you?</h6>
                             <div class="row">
 
