@@ -40,44 +40,28 @@
                                                 </div>
                                             </div>
 
-                                            <div class="d-block d-sm-none">
+                                        <div class="d-block d-sm-none">
+                                            <div class="tick-row">
+                                                <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
+                                                <p class="tick-input">...or maybe your existing website is a disappointment?</p>
+                                            </div>
+                                        </div>
+
+                                            <div class="d-none d-sm-block">
                                                 <div class="tick-row">
                                                     <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
                                                     <p class="tick-input">...or maybe your existing website is a disappointment?</p>
                                                 </div>
                                             </div>
-
-                                                <div class="d-none d-sm-block">
-                                                    <div class="tick-row">
-                                                        <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                        <p class="tick-input">...or maybe your existing website is a disappointment?</p>
-                                                    </div>
-                                                </div>
                                     </div>
                                 </div>
-
-                                <div class="row banner-action-btns justify-content-center">
-                                    <div class="col-sm-6 col-11">
-                                        <a href="/website-needs-assessment" @click="$gtag.event('website-assessment')" class="btn btn-primary btn-assess btn-profile">FIND YOUR WEBSITE TYPE: QUIZ</a>
-                                    </div>
-                                    <div class="col-sm-6 col-11">
-                                        <a href="/register" @click="$gtag.event('register')" class="btn btn-primary btn-register btn-profile">CREATE FREE WEBSITE TODAY</a>
-                                    </div>
-                                </div>
-
-                                <div class="banner-action-btns">
-                                    <p>No payment or credit card is required</p>
-                                </div>
-
-                                <p class="bonus"><span>Bonus offer</span> when you create a FREE website in the next 48h</p>
-
                             </div>
                         </div>
+
 
                         <div class="col-xl-6 col-lg-5 video">
                             <h6 class="intro-video">Does this sound like you?</h6>
                             <div class="row">
-
 
                                 <div class="d-block d-lg-none">
                                     <vue-plyr ref="plyr">
@@ -101,12 +85,29 @@
                                             Video how to create a tutoring website. Your browser does not support the video tag
                                         </video>
                                     </vue-plyr>
-
                                 </div>
-
-
                             </div>
                         </div>
+
+
+                        <div class="row banner-action-btns">
+                            <div class="col-xl-7 col-lg-9">
+                                <div class="row justify-content-center">
+                                    <div class="col-sm-6 col-11">
+                                        <a href="/website-needs-assessment" @click="$gtag.event('website-assessment')" class="btn btn-primary btn-assess btn-profile">FIND YOUR WEBSITE TYPE:<br>TAKE A QUIZ</a>
+                                    </div>
+                                    <div class="col-sm-6 col-11">
+                                        <a href="/register" @click="$gtag.event('register')" class="btn btn-primary btn-register btn-profile">CREATE WEBSITE TODAY: <br>FREE TRIAL</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-11">
+                                <p class="bonus1">No payment or credit card is required</p>
+                                <p class="bonus2"><span>Bonus offer</span> when you create a FREE website in the next 48h</p>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>

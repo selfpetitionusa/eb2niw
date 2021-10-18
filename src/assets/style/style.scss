@@ -122,7 +122,12 @@ p {
     color: $paragraph-color;
     line-height: 1.9;
 
-    &.bonus {
+    &.bonus1 {
+        font-size: 10px;
+        text-align: center;
+    }
+
+    &.bonus2 {
         text-align: center;
 
         span {
@@ -1093,14 +1098,20 @@ Main Banner CSS
 }
 
 .banner-action-btns {
-    margin-right: 2rem;
-
-    p {
-        font-size: 10px;
-        text-align: center;
-        padding-bottom: 1rem;
-    }
+    display: flex;
+    justify-content: center;
+    margin-top: 3.5rem;
 }
+    @media (max-width: 767px) {
+        .banner-action-btns {
+            .btn-assess {
+                margin-top: 1.5rem;
+            }
+            .btn-register {
+                margin-top: 1.5rem;
+            }
+        }
+    }
 
 .btn-register {
     margin-top: 3rem;
@@ -1128,7 +1139,6 @@ Main Banner CSS
 }
 
 .video {
-    margin-bottom: 12rem;
     padding-right: 1.7rem;
     padding-left: 1.7rem;
 }
