@@ -5,7 +5,7 @@
             <div class="section-title">
                 <h2>What users say?</h2>
                 <div class="bar"></div>
-                <p>From our users -- private tutors, like you.</p>
+                <p>From our users -- private tutors and freelance teachers, like you.</p>
                 <p>They all built their professional tutoring business with Tutomy:</p>
             </div>
 

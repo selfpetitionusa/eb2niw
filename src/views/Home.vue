@@ -40,7 +40,7 @@
       <!-- Start Ready To Talk Area -->
       <section class="ready-to-talk">
         <div class="container">
-          <h3>Join Tutomy community of 1,300+ private tutors</h3>
+          <h3>Join our community of 1,500+ tutors & teachers</h3>
         </div>
       </section>
       <!-- End Ready To Talk Area -->

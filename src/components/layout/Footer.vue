@@ -10,8 +10,8 @@
                                 <img width="120px" src="../../assets/img/logo2.png" alt="Tutomy tutoring website logo" />
                             </a>
                         </div>
-                        <p>Empowering private tutors to find students and run a professional business</p>
-                        <p>Online tutoring website, advice, and support of like-minded tutors</p>
+                        <p>Empowering private tutors and freelance teachers to find students and run a professional business</p>
+                        <p>Online tutoring website, advice, and support of like-minded educators</p>
                         <p>Everything you need in one place</p>
                     </div>
                 </div>
