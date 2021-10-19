@@ -90,27 +90,27 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
 
 
-                        <div class="row banner-action-btns">
-                            <div class="col-xl-7 col-lg-9">
-                                <div class="row justify-content-center">
-                                    <div class="col-sm-6 col-11">
-                                        <a href="/website-needs-assessment" @click="$gtag.event('website-assessment')" class="btn btn-primary btn-assess btn-profile">FIND YOUR WEBSITE TYPE:<br>TAKE A QUIZ</a>
-                                    </div>
-                                    <div class="col-sm-6 col-11">
-                                        <a href="/register" @click="$gtag.event('register')" class="btn btn-primary btn-register btn-profile">CREATE WEBSITE TODAY: <br>FREE TRIAL</a>
-                                    </div>
+                    <div class="row banner-action-btns">
+                        <div class="col-xl-7 col-lg-9">
+                            <div class="row justify-content-center">
+                                <div class="col-sm-6 col-12">
+                                    <a href="/website-needs-assessment" @click="$gtag.event('website-assessment')" class="btn btn-primary btn-assess btn-profile">FIND YOUR WEBSITE TYPE:<br>TAKE A QUIZ</a>
                                 </div>
-                            </div>
-
-                            <div class="col-11">
-                                <p class="bonus1">No payment or credit card is required</p>
-                                <p class="bonus2"><span>Bonus offer</span> when you create a FREE website in the next 48h</p>
+                                <div class="col-sm-6 col-12">
+                                    <a href="/register" @click="$gtag.event('register')" class="btn btn-primary btn-register btn-profile">CREATE WEBSITE TODAY: <br>FREE TRIAL</a>
+                                </div>
                             </div>
                         </div>
 
+                        <div class="col-11">
+                            <p class="bonus1">No payment or credit card is required</p>
+                            <p class="bonus2"><span>Bonus</span> if you create a website in the next 48h</p>
+                        </div>
                     </div>
+
                 </div>
             </div>
         </div>
