@@ -14,11 +14,9 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="lastName">Last name *</label>
-                    <ValidationProvider rules="required" v-slot="{ errors }" >
-                        <input type="text" class="form-control" id="lastName" v-model="lastName" :class="{ 'is-invalid':  submitted && errors.length }" >
-                        <div v-if="submitted && errors.length" class="invalid-feedback">Last name is required</div>
-                    </ValidationProvider>
+                    <label for="lastName">Last name</label>
+                    <input type="text" class="form-control" id="lastName" v-model="lastName"  >
+
                 </div>
 
                 <div class="form-group">

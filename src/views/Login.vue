@@ -1,11 +1,13 @@
 <template>
     <div class="jumbotron" style="height: 100%">
-
         <div class="container login">
             <div class="row">
                 <div class="col-sm-6 offset-sm-3">
                     <div v-if="status.loginFailure" class="alert alert-danger" role="alert">
                        Incorrect email or password
+                    </div>
+                    <div v-if="$route.query.secret" class="alert alert-success" role="alert">
+                        Your account has been activated successfully.
                     </div>
                     <h3>Login</h3>
                     <form @submit.prevent="handleSubmit">
@@ -21,7 +23,7 @@
                         </div>
                         <router-link to="/password-reset" >Forgot password?</router-link>
                         <div class="btn-container">
-                            <router-link to="/register" class="btn btn-primary btn-border btn-cancel">Register</router-link>
+                            <router-link  v-if="!$route.query.secret" to="/register" class="btn btn-primary btn-border btn-cancel">Register</router-link>
                             <button class="btn btn-primary btn-border btn-save" :disabled="status.loggingIn">Login
                                 <img v-show="status.loggingIn" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
                             </button>

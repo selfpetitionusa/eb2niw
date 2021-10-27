@@ -64,7 +64,6 @@
                         <h2>{{response.profile.firstName}}</h2>
                           <h2 v-if="!response.profile.firstName && cmsToggle">Your</h2>
                         <h2 class="lastname">{{response.profile.lastName}}</h2>
-                          <h2 v-if="!response.profile.lastName && cmsToggle" class="lastname">name</h2>
                     </div>
 
                     <div class="subject-categories">{{response.categories.map(cat => cat.categoryName).join(' | ')}}</div>
@@ -122,7 +121,7 @@
                         <a v-if="!response.profile.firstName && !response.profile.email && cmsToggle"  href="#" v-b-modal.contact-modal  class="btn btn-primary inner-booking" role="button">Contact &lt; Name &gt;</a>
 
                         <a v-if="cmsToggle" href="#" class="btn btn-primary btn-border inner-booking" v-on:click="clickPaymentsButtonEditMode()">Book / Pay</a>
-                            <div id="paymentsEditAlert" class="alert alert-warning" style="margin: 3px;">
+                            <div v-if="paymentsButtonInfo" class="alert alert-warning" style="margin: 3px;">
                                 <div style="font-weight: 600; margin-bottom: 2px;">Disabled in edit mode:</div>
                                 <div style="font-size: 12px"> -> Click edit icon to add link</div>
                                 <div style="font-size: 12px"> -> Check result in PREVIEW</div>
@@ -402,7 +401,7 @@
 
                 <div v-if="(response.profile.youtubeIntroLink === null && response.problemCards.length === 0 && !cmsToggle)" class="tutomy-logo">
                   <p>Powered by</p>
-                  <img src="../../assets/img/logo2.png">
+                    <a href="/www.tutomy.com" target="_blank"><img src="../../assets/img/logo2.png"></a>
                 </div>
 
             </div>
@@ -587,7 +586,8 @@
             offset: 0,
             scrollWidth: 0,
             offsetWidth: 0,
-            cmsToggle: this.cmsToggleProp
+            cmsToggle: this.cmsToggleProp,
+            paymentsButtonInfo: false
         }
     },
       methods: {
@@ -652,12 +652,9 @@
               }
           },
           clickPaymentsButtonEditMode: function () {
-              let x = document.getElementById("paymentsEditAlert");
-              if (x.style.display === "block") {
-                x.style.display = "none";
-              } else {
-                x.style.display = "block";
-              }
+              this.paymentsButtonInfo = true;
+              let self = this;
+              setTimeout(function() { self.paymentsButtonInfo = false }, 5000);
           }
       }
   }
