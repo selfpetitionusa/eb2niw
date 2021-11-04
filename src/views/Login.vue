@@ -7,7 +7,7 @@
                        Incorrect email or password
                     </div>
                     <div v-if="$route.query.secret" class="alert alert-success" role="alert">
-                        Your account has been activated successfully.
+                        Your account has been activated.
                     </div>
                     <h3>Login</h3>
                     <form @submit.prevent="handleSubmit">
