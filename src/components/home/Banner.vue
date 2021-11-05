@@ -10,49 +10,51 @@
                             <div class="hero-content">
                                 <div class="row">
                                     <div class="col-lg-11">
-                                        <h1>Create a professional tutoring website in 11min</h1>
+                                        <h1>Create a professional website in 11min</h1>
 
-                                        <div class="d-block d-sm-none">
-                                            <div class="tick-row">
-                                                <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                <p class="tick-input">Looking to share information about your tutoring services, in a professional way?</p>
-                                            </div>
-                                        </div>
-
-                                            <div class="d-none d-sm-block">
+                                        <div class="tick-section">
+                                            <div class="d-block d-sm-none">
                                                 <div class="tick-row">
                                                     <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                    <p class="tick-input">Looking to share information about your tutoring services, in a professional way?</p>
+                                                    <p class="tick-input">Are you a tutor or a freelance teacher?</p>
                                                 </div>
                                             </div>
 
-                                        <div class="d-block d-sm-none">
-                                            <div class="tick-row">
-                                                <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                <p class="tick-input">Tired of working for a school or platform, and want to own your earnings?</p>
-                                            </div>
-                                        </div>
+                                                <div class="d-none d-sm-block">
+                                                    <div class="tick-row">
+                                                        <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
+                                                        <p class="tick-input">Are you a tutor or a freelance teacher?</p>
+                                                    </div>
+                                                </div>
 
-                                            <div class="d-none d-sm-block">
+                                            <div class="d-block d-sm-none">
                                                 <div class="tick-row">
                                                     <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                    <p class="tick-input">Tired of working for a school or platform, and want to own your earnings?</p>
+                                                    <p class="tick-input">Looking for a simple professional website?</p>
                                                 </div>
                                             </div>
 
-                                        <div class="d-block d-sm-none">
-                                            <div class="tick-row">
-                                                <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                <p class="tick-input">...or maybe your existing website is a disappointment?</p>
-                                            </div>
-                                        </div>
+                                                <div class="d-none d-sm-block">
+                                                    <div class="tick-row">
+                                                        <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
+                                                        <p class="tick-input">Looking for a simple professional website?</p>
+                                                    </div>
+                                                </div>
 
-                                            <div class="d-none d-sm-block">
+                                            <div class="d-block d-sm-none">
                                                 <div class="tick-row">
                                                     <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                    <p class="tick-input">...or maybe your existing website is a disappointment?</p>
+                                                    <p class="tick-input">Need calendar and payments?</p>
                                                 </div>
                                             </div>
+
+                                                <div class="d-none d-sm-block">
+                                                    <div class="tick-row">
+                                                        <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
+                                                        <p class="tick-input">Need calendar and payments?</p>
+                                                    </div>
+                                                </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
