@@ -102,11 +102,11 @@
             <div class="row service-action-btns">
                 <div class="col-xl-7 col-lg-9">
                     <div class="row justify-content-center">
-                        <div class="col-sm-6 col-12">
-                            <a href="/website-needs-assessment" @click="$gtag.event('website-assessment')" class="btn btn-primary btn-assess btn-profile">FIND YOUR WEBSITE TYPE:<br>TAKE A QUIZ</a>
+                        <div class="col-sm-6 col-10">
+                            <a href="/website-needs-assessment" @click="$gtag.event('website-assessment')" class="btn btn-primary btn-assess btn-profile">WHICH WEBSITE BUILDER?</a>
                         </div>
-                        <div class="col-sm-6 col-12">
-                            <a href="/register" @click="$gtag.event('register')" class="btn btn-primary btn-register btn-profile">CREATE WEBSITE TODAY: <br>FREE TRIAL</a>
+                        <div class="col-sm-6 col-10">
+                            <a href="/register" @click="$gtag.event('register')" class="btn btn-primary btn-register btn-profile">START FREE TRIAL</a>
                         </div>
                     </div>
                 </div>

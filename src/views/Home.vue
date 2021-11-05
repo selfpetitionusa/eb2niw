@@ -22,7 +22,7 @@
       </div>
 
       <div class="col-12">
-          <a href="/register"  @click="$gtag.event('register')" class="btn btn-primary btn-register" style="margin-top: 1.5rem">CREATE A WEBSITE TODAY - FREE</a>
+          <a href="/register"  @click="$gtag.event('register')" class="btn btn-primary btn-register" style="margin-top: 1.5rem">START FREE TRIAL</a>
       </div>
     </b-modal>
 
