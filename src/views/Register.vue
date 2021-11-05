@@ -1,26 +1,5 @@
 <template>
   <div @mousemove="openRegister">
-    <b-modal ref="modal-4" :return-focus="this.$parent" title="Qualify for a BONUS offer" hide-footer>
-        <div class="popup-register">
-          <p class="popup-title">Do you have <span class="highlight">11min</span> to create your new website?</p>
-          <p class="popup-body">Complete website in the next 48h and benefit from 3 complimentary sessions:</p>
-
-          <div class="row">
-            <div class="col-sm-9">
-              <ul class="bonus-offer">
-                <li>Your website review by an expert</li>
-                <li>1-on-1 advice on how to promote website</li>
-                <li>Progress check-up</li>
-              </ul>
-            </div>
-
-            <div class="col-sm-3 pic-container">
-              <img src="./../assets/img/gift2.svg" alt="gift-pic">
-            </div>
-          </div>
-        </div>
-    </b-modal>
-
     <div class="jumbotron" style="height: 100%">
         <div class="container register">
             <div class="row">
