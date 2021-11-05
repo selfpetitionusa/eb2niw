@@ -4,7 +4,7 @@
         <div class="container register">
             <div class="row">
                 <div class="col-lg-6 col-md-8 col-sm-12 offset-lg-3 offset-md-2">
-                    <h3>Start 30-day FREE trial</h3>
+                    <h3>Start 7-day FREE trial</h3>
                     <div class="subject-subcategories">
                         <ul class="register-conditions">
                             <li>No credit card required</li>

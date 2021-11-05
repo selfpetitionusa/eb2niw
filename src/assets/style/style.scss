@@ -1091,7 +1091,8 @@ Main Banner CSS
 
         p.tick-input {
             color: $black-color;
-            font-size: 1.1rem;
+            font-size: 1.3rem;
+            line-height: 1.3;
             margin: 0 0 0 10px;
         }
 
@@ -1100,6 +1101,20 @@ Main Banner CSS
         }
     }
 }
+
+    @media (max-width: 575px) {
+        .tick-section {
+            margin-top: 1.5rem;
+
+            .tick-row {
+                margin: 1rem 0 0rem 1rem;
+
+                p.tick-input {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
 
 .banner-action-btns {
     display: flex;

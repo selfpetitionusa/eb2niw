@@ -7,7 +7,7 @@
                 </div>
 
                 <div class="col-lg-6 col-md-8 offset-lg-1">
-                    <h1>Check your website needs</h1>
+                    <h1>Which website builder for me?</h1>
                     <p>Based on your responses, find out about the best tools to create a website, ways to build an online presence, and find students</p>
 
                     <div v-if="!success" >

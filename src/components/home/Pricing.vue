@@ -11,7 +11,7 @@
                     <p>Cancel monthly subscription anytime, no questions asked.</p>
                 </div>
                 <div class="paragraph">
-                    <p>We want happy customers who benefit from the opportunities created by having a professional tutoring website. If you are dissatisfied after buying our package, e-mail us within 7 days from your purchase and we will refund your money.</p>
+                    <p>We want happy customers who benefit from the opportunity created by having a professional tutoring website.</p>
                 </div>
             </div>
 

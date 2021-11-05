@@ -44,14 +44,14 @@
                                             <div class="d-block d-sm-none">
                                                 <div class="tick-row">
                                                     <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                    <p class="tick-input">Need calendar and payments?</p>
+                                                    <p class="tick-input">Need calendar and payments solution?</p>
                                                 </div>
                                             </div>
 
                                                 <div class="d-none d-sm-block">
                                                     <div class="tick-row">
                                                         <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                        <p class="tick-input">Need calendar and payments?</p>
+                                                        <p class="tick-input">Need calendar and payments solution?</p>
                                                     </div>
                                                 </div>
                                         </div>
