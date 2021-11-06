@@ -25,26 +25,26 @@
 
                         <div class="works-content">
                             <h3><a href="#">How do your clients see you?</a></h3>
-                            <p>Your professional tutoring website which you create within 11min</p>
+                            <p>Professional tutoring website which you can create in just 11 minutes</p>
                         </div>
                     </div>
                 </slide>
 
                 <slide>
                     <div class="single-works">
-                        <img src="../../assets/img/landing-slider-2.png" alt="Finding students with Tutomy website - empty view">
+                        <img src="../../assets/img/landing-slider-2.png" alt="Finding students with Tutomy website - edit view">
                         <a v-if="windowWidth > 767" @click="index = 1;$refs['modal-zoom'].show()" style="cursor: pointer;" class="icon"><feather type="zoom-in"></feather></a>
 
                         <div class="works-content">
-                            <h3><a href="#">Your starting point</a></h3>
-                            <p>Fill out an empty template with information about your tutoring business</p>
+                            <h3><a href="#">Looks great on mobile and desktop</a></h3>
+                            <p>Did you know that most of website visitors check you on mobile device?</p>
                         </div>
                     </div>
                 </slide>
 
                 <slide>
                     <div class="single-works">
-                        <img src="../../assets/img/landing-slider-3.png" alt="Finding students with Tutomy website - edit view">
+                        <img src="../../assets/img/landing-slider-3.png" alt="Finding students with Tutomy website - mobile view">
                         <a v-if="windowWidth > 767" @click="index = 2;$refs['modal-zoom'].show()" style="cursor: pointer;" class="icon"><feather type="zoom-in"></feather></a>
 
                         <div class="works-content">
@@ -56,24 +56,12 @@
 
                 <slide>
                     <div class="single-works">
-                        <img src="../../assets/img/landing-slider-4.png" alt="Finding students with Tutomy website - complete view">
+                        <img src="../../assets/img/landing-slider-4.png" alt="Finding students with Tutomy website - edit rates view">
                         <a v-if="windowWidth > 767" @click="index = 3;$refs['modal-zoom'].show()" style="cursor: pointer;" class="icon"><feather type="zoom-in"></feather></a>
 
                         <div class="works-content">
-                            <h3><a href="#">Use the preview to see your website</a></h3>
-                            <p>Any update you make, after saving the changes you see how your website is coming together</p>
-                        </div>
-                    </div>
-                </slide>
-
-                <slide>
-                    <div class="single-works">
-                        <img src="../../assets/img/landing-slider-5.png" alt="Finding students with Tutomy website - edit rates view">
-                        <a v-if="windowWidth > 767" @click="index = 4;$refs['modal-zoom'].show()" style="cursor: pointer;" class="icon"><feather type="zoom-in"></feather></a>
-
-                        <div class="works-content">
                             <h3><a href="#">Decide how much information to include</a></h3>
-                            <p>Website is flexible to accommodate your individual business need</p>
+                            <p>Website is flexible to accommodate your individual business needs</p>
                         </div>
                     </div>
                 </slide>
@@ -101,7 +89,7 @@ export default {
                  img: "./landing-slider-1.png"
                 },
                 {
-                  title : "Your starting point",
+                    title : "Looks great on mobile and desktop",
                     img: "./landing-slider-2.png"
                 },
                 {
@@ -109,12 +97,8 @@ export default {
                     img: "./landing-slider-3.png"
                 },
                 {
-                    title : "Use the preview to see your website",
-                    img: "./landing-slider-4.png"
-                },
-                {
                     title : "Decide how much information to include",
-                    img: "./landing-slider-5.png"
+                    img: "./landing-slider-4.png"
                 }
 
             ]

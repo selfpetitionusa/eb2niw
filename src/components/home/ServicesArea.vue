@@ -17,7 +17,7 @@
 
             <div class="row h-100 justify-content-center align-items-center">
                 <div class="col-lg-6 col-md-12">
-                    <img src="../../assets/img/Teacher2.svg"  alt="Tutomy service - online tutoring website template">
+                    <img src="../../assets/img/website-example.png"  alt="Tutomy service - online tutoring website template">
                 </div>
 
                 <div class="col-lg-6 col-md-12 services-content">
