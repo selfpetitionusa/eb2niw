@@ -477,7 +477,7 @@ Navbar CSS
         .navbar-nav {
             .nav-item {
                 position: relative;
-                padding: 15px 0;
+                padding: 0 0 15px;
 
                 a {
                     font: {
@@ -4195,15 +4195,25 @@ CMS navbars
             }
 
             .nav-item {
+                display: flex;
+                align-items: center;
+
                 a {
                     color: #D0CDDF;
                     font: {
                         weight: 500;
                         size: 15px;
                     }
+                    display: flex;
+                    align-items: center;
+
                     &:hover, &:focus, &.active {
                         color: $light-green-color;
                     }
+                }
+                span.emoji {
+                    font-size: 1.7rem;
+                    margin-right: 5px;
                 }
             }
         }
@@ -4214,8 +4224,9 @@ CMS navbars
     .nav-cms {
         nav .navbar-nav {
             background-color: #3d3c4e;
-            height: 150px;
+            height: 240px;
             border-radius: 5px;
+            margin-bottom: 8px;
         }
 
         .navbar-toggler {
