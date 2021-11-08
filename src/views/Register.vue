@@ -1,6 +1,6 @@
 <template>
   <div @mousemove="openRegister">
-    <div class="jumbotron" style="height: 100%">
+    <div class="jumbotron" style="height: 100%; background: #F9F6F6">
         <div class="container register">
             <div class="row">
                 <div class="col-lg-6 col-md-8 col-sm-12 offset-lg-3 offset-md-2">
