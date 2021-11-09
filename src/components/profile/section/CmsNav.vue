@@ -18,7 +18,7 @@
 
                         <b-collapse class="collapse" id="navbarSupportedContent" is-nav>
                             <ul class="navbar-nav ml-auto">
-                                <li class="nav-item"><a href="/account/website-link" class="nav-link"><span class="emoji">&#127912;</span>Colors</a></li>
+                                <li class="nav-item"><a href="/colors" class="nav-link"><span class="emoji">&#127912;</span>Colors</a></li>
                                 <li class="nav-item"><a href="/account/website-link" class="nav-link"><span class="emoji">&#128590;</span>My account</a></li>
                                 <li class="nav-item"><a href="/help" class="nav-link"><span class="emoji">&#128587;</span>Help</a></li>
                                 <li class="nav-item"><a class="nav-link"><router-link to="/login">Logout</router-link></a></li>

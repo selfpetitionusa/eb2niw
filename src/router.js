@@ -5,6 +5,7 @@ import ProfileView from './views/ProfileView';
 import EditProfileView from './views/EditProfileView';
 import Preview from './views/Preview';
 import Help from './views/Help';
+import Colors from './views/Colors';
 import Account from './views/Account';
 import Login from './views/Login';
 import Register from './views/Register';
@@ -34,6 +35,7 @@ export const router = new VueRouter({
       { path: '/dashboard', component: EditProfileView },
       { path: '/preview', component: Preview },
       { path: '/help', component: Help },
+      { path: '/colors', component: Colors },
       { path: '/admin', component: AdminDashboardView },
       {
             path: '/account',
