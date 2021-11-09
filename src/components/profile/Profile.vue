@@ -289,7 +289,6 @@
 
             <div id="section-rates" class="tu-card">
 
-                <img class="figure-terms" src="../../assets/img/rates_figure.png">
                 <div class="section-container">
                     <div class="icon"></div>
                     <div class="header"><h2>Rates</h2></div>

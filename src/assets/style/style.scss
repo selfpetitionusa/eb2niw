@@ -89,6 +89,12 @@ $gradient-color2: linear-gradient(to right bottom, #1fa2ff, #00c0ff, #00d9f2, #5
 $transition: .5s;
 $font-size: 14px;
 
+$theme-background: linear-gradient(244.35deg, #314194 37.33%, #3B4DAB 43.75%, #5457C1 50.17%, #6B6FEA 76.06%);
+$theme-color1: red;
+$theme-color1-opacity: orange;
+$theme-color2: green;
+$theme-color2-opacity: blue;
+
 body {
     font-family: $font-family;
     padding: 0;
@@ -2947,7 +2953,7 @@ body {
 
     @media (max-width: 991px) {
         .dflex {
-            background: linear-gradient(244.35deg, #314194 37.33%, #3B4DAB 43.75%, #5457C1 50.17%, #6B6FEA 76.06%);
+            background: $theme-background;
         }
     }
 
@@ -2958,7 +2964,7 @@ body {
     left: -25%;
     right: -25%;
 
-    background: linear-gradient(244.35deg, #314194 37.33%, #3B4DAB 43.75%, #5457C1 50.17%, #6B6FEA 76.06%);
+    background: $theme-background;
     transform: rotate(-20deg);
 }
 
@@ -3008,13 +3014,13 @@ body {
             }
 
             ::-webkit-scrollbar-thumb {
-                background : rgba(255,255,255,0.5);
+                background : rgba(255,255,255,0.3);
                 border-radius: 10px;
                 box-shadow:  0 0 6px rgba(0, 0, 0, 0.5);
             }
 
             ::-webkit-scrollbar-track {
-                background-color: #555999;
+                background-color: #afc0d1;
                 border-radius: 10px;
             }
         }
@@ -3102,7 +3108,7 @@ Sections' headers: about me, subjects, rates, expertise
     .icon {
         width: 8px;
         height: 35px;
-        background-color: #DF7870;
+        background-color: $theme-color2;
     }
 }
 
@@ -3161,7 +3167,8 @@ Left section
         width: 40%;
         margin-top: 36px;
         border-style: solid;
-        border-color: rgba(84, 87, 193, .3);
+        border-color: $paragraph-color;
+        opacity: 0.3;
     }
 }
 
@@ -3314,8 +3321,8 @@ h2.lastname {
             }
 
             &.facebook {
-                color: rgba(84, 87, 193, .4);
-                border-color: rgba(84, 87, 193, .4);
+                color: $theme-color1-opacity;
+                border-color: $theme-color1-opacity;
 
                 &:hover {
                     color: $white-color;
@@ -3325,8 +3332,8 @@ h2.lastname {
             }
 
             &.youtube {
-                color: rgba(84, 87, 193, .4);
-                border-color: rgba(84, 87, 193, .4);
+                color: $theme-color1-opacity;
+                border-color: $theme-color1-opacity;
 
                 &:hover {
                     color: $white-color;
@@ -3336,8 +3343,8 @@ h2.lastname {
             }
 
             &.linkedin {
-                color: rgba(84, 87, 193, .4);
-                border-color: rgba(84, 87, 193, .4);
+                color: $theme-color1-opacity;
+                border-color: $theme-color1-opacity;
 
                 &:hover {
                     color: $white-color;
@@ -3347,8 +3354,8 @@ h2.lastname {
             }
 
             &.instagram {
-                color: rgba(84, 87, 193, .4);
-                border-color: rgba(84, 87, 193, .4);
+                color: $theme-color1-opacity;
+                border-color: $theme-color1-opacity;
 
                 &:hover {
                     color: $white-color;
@@ -3370,10 +3377,10 @@ h2.lastname {
     }
 
     .inner {
-        background-color: #DF7870;
+        background-color: $theme-color2;
         padding: 15px 25px;
         margin: 9px 9px 0px;
-        box-shadow: 0 13px 27px 0 rgba(223, 120, 112, .25);
+        box-shadow: 0 13px 27px 0 $theme-color2-opacity;
 
         &:hover, &:active {
             background-color: #5457C1;
@@ -3387,26 +3394,26 @@ h2.lastname {
     }
 
     .inner-booking {
-        color: #DF7870;
-        border-color: #DF7870;
+        color: $theme-color2;
+        border-color: $theme-color2;
         margin: 9px;
         background-color: $white-color;
         box-shadow: none;
 
         &:focus {
-            color: #DF7870;
-            border: 1px solid #DF7870;
+            color: $theme-color2;
+            border: 1px solid $theme-color2;
             border-radius: 5px;
-            box-shadow: 0 13px 27px 0 rgba(223, 120, 112, 0.25);
+            box-shadow: 0 13px 27px 0 $theme-color2-opacity;
         }
 
         &:hover, &:active {
             color: $white-color;
-            box-shadow: 0 13px 27px 0 rgba(223, 120, 112, 0.25);
+            box-shadow: 0 13px 27px 0 $theme-color2-opacity;
         }
 
         &::after, &::before {
-            background-color: #DF7870;
+            background-color: $theme-color2;
         }
     }
 }
@@ -3444,7 +3451,7 @@ Regular menu
             color: #6084A4;
 
             &:hover {
-                color: #DF7870;
+                color: $theme-color2;
            }
         }
     }
@@ -3498,11 +3505,11 @@ Hamburger menu
         right: 0;
         bottom: 0;
 
-        background-color: #cac4eb;
+        background-color: #afc0d1;
     }
 
     a:hover {
-        color: #cac4eb;
+        color: #afc0d1;
         background-color: #e4e9ef;
     }
 }
@@ -3545,7 +3552,7 @@ About me section - Education
 
     .icon {
         font-size: 30px;
-        color: #5457C1;
+        color: $theme-color1;
     }
 }
 
@@ -3636,7 +3643,7 @@ Subjects section - Subjects
 
     hr {
         width: 60%;
-        border: 1px solid rgba(223, 120, 112, 0.3);
+        border: 1px solid $theme-color2-opacity;
         margin: 5px auto 10px;
     }
 }
@@ -3651,11 +3658,14 @@ Subjects section - Subjects
     padding: 10px 10px;
 
     .border1 {
-        border: 1px dashed rgba(84, 87, 193, 0.3);
+        border: 1px dashed;
+        border-color: $theme-color1-opacity;
     }
 
     .border2 {
-        border: 1px dashed rgba(84, 87, 193, 0.3);
+        border: 1px dashed;
+        border-color: $theme-color1-opacity;
+
     }
 }
 
@@ -3667,10 +3677,12 @@ Subjects section - Subjects
 
     @media (max-width: 767px) {
         .subject-cards .border1 {
-            border: 1px dashed rgba(84, 87, 193, 0.3);
+            border: 1px dashed;
+            border-color: $theme-color1-opacity;
         }
         .subject-cards .border2 {
-            border: 1px dashed rgba(223, 120, 112, 0.3);
+          border: 1px dashed;
+          border-color: $theme-color2-opacity;
         }
     }
 
@@ -3729,6 +3741,7 @@ Subjects section - Subjects
         background-image: url("../../assets/img/tick_icon.png");
         background-size: cover;
         background-position: center;
+        filter: invert(93%) sepia(4%) saturate(940%) hue-rotate(183deg) brightness(95%) contrast(83%);
 
         transform: translateY(-50%);
     }
@@ -3749,7 +3762,7 @@ Subjects section - My Students
 
     .icon {
         font-size: 35px;
-        color:#5457C1;
+        color:$theme-color1;
     }
 
     .label {
@@ -3759,7 +3772,7 @@ Subjects section - My Students
 
     .value {
         font-weight: 600;
-        color: #5457C1;
+        color: $theme-color1;
         margin-left: 7px;
     }
 }
@@ -3808,7 +3821,7 @@ Rates section - Rates
         font-size: calc(0.75vw + 0.75vh + 0.3vmin);
         font-weight: 400;
         color: white;
-        background-color: #5457C1;
+        background-color: $theme-color1;
         padding: 5px;
 
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -3906,7 +3919,8 @@ Rates section - Terms
 
     box-sizing: border-box;
     box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.1);
-    border: 1px dashed #F2F2F2;
+    border: 1px dashed;
+    border-color: $theme-color1-opacity;
     border-radius: 5px;
 }
 
@@ -3929,6 +3943,7 @@ Rates section - Terms
             background-color: transparent;
             margin-top: 10px;
             margin-bottom: 0px;
+            padding: 5px 0px;
 
             box-shadow: none;
             border: none;
@@ -3947,7 +3962,7 @@ Rates section - Terms
 
     .icon {
         font-size: 30px;
-        color:#5457C1;
+        color: $theme-color1;
     }
 
     .text {
@@ -3981,28 +3996,6 @@ Rates section - Terms
             .text .value {
                 display: block;
             }
-        }
-    }
-
-.figure-terms {
-    position: absolute;
-    width: 11rem;
-    bottom: 0%;
-    left: 5%;
-}
-
-    @media (max-width: 1199px) {
-        .figure-terms {
-            display: none;
-        }
-    }
-
-    @media (max-width: 767px) {
-        .figure-terms {
-            position: absolute;
-            width: 9rem;
-            bottom: 28%;
-            left: 68%;
         }
     }
 
@@ -4100,7 +4093,8 @@ Expertise section
         padding: 13px;
 
         box-sizing: border-box;
-        border: 1px solid rgba(223, 120, 112, 0.3);
+        border: 1px solid;
+        border-color: $theme-color2-opacity;
         border-radius: 50%;
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.05));
     }
