@@ -236,8 +236,6 @@
 
             <div v-if="(!(response.categories.length === 0 && response.profile.studentsProfile === null) || cmsToggle)" id="section-subjects" class="tu-card">
 
-                <img v-if="!cmsToggle" class="figure-subjects" src="../../assets/img/subjects_figures.png">
-
                 <div class="section-container">
                     <div class="icon"></div>
                     <div class="header"><h2>Subjects</h2></div>

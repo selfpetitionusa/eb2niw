@@ -3628,21 +3628,6 @@ About me section - Bio
 Subjects section - Subjects
 =================================================*/
 
-.figure-subjects {
-    position: absolute;
-    width: 250px;
-    top: 20px;
-    right: 10px;
-}
-
-    @media (max-width: 767px) {
-        .figure-subjects {
-            position: absolute;
-            top: 10px;
-            right: 0px;
-        }
-    }
-
 .subjects-container {
     display: flex;
     justify-content: center;
