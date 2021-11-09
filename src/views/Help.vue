@@ -7,7 +7,6 @@
             <div class="container support">
                 <div class="section-title">
                     <h2>Get In Touch</h2>
-                    <div class="bar"></div>
                 </div>
 
                 <div class="row h-100 justify-content-center align-items-center">
