@@ -90,10 +90,10 @@ $transition: .5s;
 $font-size: 14px;
 
 $theme-background: linear-gradient(244.35deg, #314194 37.33%, #3B4DAB 43.75%, #5457C1 50.17%, #6B6FEA 76.06%);
-$theme-color1: red;
-$theme-color1-opacity: orange;
-$theme-color2: green;
-$theme-color2-opacity: blue;
+$theme-color1: rgb(84, 87, 193);
+$theme-color1-opacity: rgba(84, 87, 193, 0.3);
+$theme-color2: rgb(223, 120, 112);
+$theme-color2-opacity: rgba(223, 120, 112, 0.3);
 
 body {
     font-family: $font-family;
