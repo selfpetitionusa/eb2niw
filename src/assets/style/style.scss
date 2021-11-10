@@ -3167,8 +3167,7 @@ Left section
         width: 40%;
         margin-top: 36px;
         border-style: solid;
-        border-color: $paragraph-color;
-        opacity: 0.3;
+        border-color: rgb(202, 212, 224);
     }
 }
 
@@ -3918,9 +3917,9 @@ Rates section - Terms
     padding: 15px 0px;
 
     box-sizing: border-box;
-    box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.1);
-    border: 1px dashed;
-    border-color: $theme-color1-opacity;
+    box-shadow: 6px 6px 8px rgba(202, 212, 224, 0.8);
+    border: 1px solid;
+    border-color: rgba(202, 212, 224, 0.3);
     border-radius: 5px;
 }
 
@@ -3943,10 +3942,7 @@ Rates section - Terms
             background-color: transparent;
             margin-top: 10px;
             margin-bottom: 0px;
-            padding: 5px 0px;
-
-            box-shadow: none;
-            border: none;
+            padding: 5px 0px 15px 15px;
         }
     }
 
@@ -5235,12 +5231,6 @@ a.edit {
             &.edit-terms {
                 right: 2%;
             }
-        }
-
-        .frame-terms {
-            border: 1px solid #CECECE;
-            border-radius: 5px;
-            padding-left: 15px;
         }
     }
 
