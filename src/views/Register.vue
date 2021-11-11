@@ -1,5 +1,5 @@
 <template>
-  <div @mousemove="openRegister">
+  <div>
     <div class="jumbotron" style="height: 100%">
         <div class="container register">
             <div class="row">
@@ -105,12 +105,6 @@
                     }
                     this.register(this.user);
                 });
-            },
-            openRegister: function() {
-              if(!this.$store.state.popup.seen) {
-                this.$refs['modal-4'].show();
-              }
-              this.$store.commit('popup/setSeen');
             }
         }
     };
