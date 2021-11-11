@@ -4,10 +4,14 @@ import Vue from "vue";
 import { ValidationObserver } from 'vee-validate';
 import { email } from 'vee-validate/dist/rules';
 import { oneOf } from 'vee-validate/dist/rules';
+import { confirmed } from 'vee-validate/dist/rules';
+import { min } from 'vee-validate/dist/rules';
 
 // No message specified.
 extend('email',{...email, message: 'email'});
 extend('oneOf',{...oneOf, message: 'oneOf'});
+extend('confirmed',{...confirmed, message: 'confirmed'});
+extend('min',{...min, message: 'min'});
 
 Vue.component('ValidationProvider', ValidationProvider);
 Vue.component('ValidationObserver', ValidationObserver);
@@ -32,3 +36,10 @@ extend('url', {
     message: 'url'
 });
 
+extend('password', {
+    validate(value) {
+        var pattern = new RegExp("^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{8,}$", 'i'); // fragment locator
+        return pattern.test(value);
+    },
+    message: 'password'
+});
