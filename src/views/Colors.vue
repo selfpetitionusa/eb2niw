@@ -18,49 +18,49 @@
 
                                 <div class="col-sm-2 col-4 color-select">
                                     <div>
-                                        <div class="color-radio"></div>
-                                        <div class="color-selected">TEST</div>
-                                        <p class="color-selected">test</p>
+                                        <div class="color-radio radio1" v-on:click="selectColor1"></div>
+                                        <div class="color-name">Royal</div>
+                                        <p id="myColorScheme1" class="color-selected">Selected</p>
                                     </div>
                                 </div>
 
                                 <div class="col-sm-2 col-4 color-select">
                                     <div>
-                                        <div class="color-radio"></div>
-                                        <div class="color-selected">TEST</div>
-                                        <p class="color-selected">test</p>
+                                        <div class="color-radio radio2" v-on:click="selectColor2"></div>
+                                        <div class="color-name">Sunrise</div>
+                                        <p id="myColorScheme2" class="color-selected">Selected</p>
                                     </div>
                                 </div>
 
                                 <div class="col-sm-2 col-4 color-select">
                                     <div>
-                                        <div class="color-radio"></div>
-                                        <div class="color-selected">TEST</div>
-                                        <p class="color-selected">test</p>
+                                        <div class="color-radio radio3" v-on:click="selectColor3"></div>
+                                        <div class="color-name">Rainforest</div>
+                                        <p id="myColorScheme3" class="color-selected">Selected</p>
                                     </div>
                                 </div>
 
                                 <div class="col-sm-2 col-4 color-select">
                                     <div>
-                                        <div class="color-radio"></div>
-                                        <div class="color-selected">TEST</div>
-                                        <p class="color-selected">test</p>
+                                        <div class="color-radio radio4" v-on:click="selectColor4"></div>
+                                        <div class="color-name">Peach</div>
+                                        <p id="myColorScheme4" class="color-selected">Selected</p>
                                     </div>
                                 </div>
 
                                 <div class="col-sm-2 col-4 color-select">
                                     <div>
-                                        <div class="color-radio"></div>
-                                        <div class="color-selected">TEST</div>
-                                        <p class="color-selected">test</p>
+                                        <div class="color-radio radio5" v-on:click="selectColor5"></div>
+                                        <div class="color-name">Slate</div>
+                                        <p id="myColorScheme5" class="color-selected">Selected</p>
                                     </div>
                                 </div>
 
                                 <div class="col-sm-2 col-4 color-select">
                                     <div>
-                                        <div class="color-radio"></div>
-                                        <div class="color-selected">TEST</div>
-                                        <p class="color-selected">test</p>
+                                        <div class="color-radio radio6" v-on:click="selectColor6"></div>
+                                        <div class="color-name">Ocean</div>
+                                        <p id="myColorScheme6" class="color-selected">Selected</p>
                                     </div>
                                 </div>
 
@@ -75,7 +75,7 @@
                     </div>
 
                     <div class="row">
-                        <img class="col-sm-6 col-12 offset-sm-3 preview-color" src="../assets/img/website-color-1.png">
+                        <img id="myColorSchemeImage" class="col-sm-6 col-12 offset-sm-3 preview-color" src="../assets/img/color-scheme-1.png" v-on:click="test">
                     </div>
 
                 </div>
@@ -95,7 +95,135 @@
     export default {
         components: {
             CmsNav
+        },
+        methods: {
+            selectColor1: function () {
+                const x1 = document.getElementById("myColorScheme1");
+                const x2 = document.getElementById("myColorScheme2");
+                const x3 = document.getElementById("myColorScheme3");
+                const x4 = document.getElementById("myColorScheme4");
+                const x5 = document.getElementById("myColorScheme5");
+                const x6 = document.getElementById("myColorScheme6");
+
+                if (x1.style.visibility === "visible") {
+                  x1.style.visibility = "hidden";
+                } else {
+                  x1.style.visibility = "visible";
+                  x2.style.visibility = "hidden";
+                  x3.style.visibility = "hidden";
+                  x4.style.visibility = "hidden";
+                  x5.style.visibility = "hidden";
+                  x6.style.visibility = "hidden";
+
+                  document.getElementById("myColorSchemeImage").src = require("../assets/img/color-scheme-1.png");
+                }
+            },
+            selectColor2: function () {
+                const x1 = document.getElementById("myColorScheme1");
+                const x2 = document.getElementById("myColorScheme2");
+                const x3 = document.getElementById("myColorScheme3");
+                const x4 = document.getElementById("myColorScheme4");
+                const x5 = document.getElementById("myColorScheme5");
+                const x6 = document.getElementById("myColorScheme6");
+
+                if (x2.style.visibility === "visible") {
+                  x2.style.visibility = "hidden";
+                } else {
+                  x1.style.visibility = "hidden";
+                  x2.style.visibility = "visible";
+                  x3.style.visibility = "hidden";
+                  x4.style.visibility = "hidden";
+                  x5.style.visibility = "hidden";
+                  x6.style.visibility = "hidden";
+
+                  document.getElementById("myColorSchemeImage").src = require("../assets/img/color-scheme-2.png");
+                }
+            },
+            selectColor3: function () {
+                const x1 = document.getElementById("myColorScheme1");
+                const x2 = document.getElementById("myColorScheme2");
+                const x3 = document.getElementById("myColorScheme3");
+                const x4 = document.getElementById("myColorScheme4");
+                const x5 = document.getElementById("myColorScheme5");
+                const x6 = document.getElementById("myColorScheme6");
+
+                if (x3.style.visibility === "visible") {
+                  x3.style.visibility = "hidden";
+                } else {
+                  x1.style.visibility = "hidden";
+                  x2.style.visibility = "hidden";
+                  x3.style.visibility = "visible";
+                  x4.style.visibility = "hidden";
+                  x5.style.visibility = "hidden";
+                  x6.style.visibility = "hidden";
+
+                  document.getElementById("myColorSchemeImage").src = require("../assets/img/color-scheme-3.png");
+                }
+            },
+            selectColor4: function () {
+                const x1 = document.getElementById("myColorScheme1");
+                const x2 = document.getElementById("myColorScheme2");
+                const x3 = document.getElementById("myColorScheme3");
+                const x4 = document.getElementById("myColorScheme4");
+                const x5 = document.getElementById("myColorScheme5");
+                const x6 = document.getElementById("myColorScheme6");
+
+                if (x4.style.visibility === "visible") {
+                  x4.style.visibility = "hidden";
+                } else {
+                  x1.style.visibility = "hidden";
+                  x2.style.visibility = "hidden";
+                  x3.style.visibility = "hidden";
+                  x4.style.visibility = "visible";
+                  x5.style.visibility = "hidden";
+                  x6.style.visibility = "hidden";
+
+                  document.getElementById("myColorSchemeImage").src = require("../assets/img/color-scheme-4.png");
+                }
+            },
+            selectColor5: function () {
+                const x1 = document.getElementById("myColorScheme1");
+                const x2 = document.getElementById("myColorScheme2");
+                const x3 = document.getElementById("myColorScheme3");
+                const x4 = document.getElementById("myColorScheme4");
+                const x5 = document.getElementById("myColorScheme5");
+                const x6 = document.getElementById("myColorScheme6");
+
+                if (x5.style.visibility === "visible") {
+                  x5.style.visibility = "hidden";
+                } else {
+                  x1.style.visibility = "hidden";
+                  x2.style.visibility = "hidden";
+                  x3.style.visibility = "hidden";
+                  x4.style.visibility = "hidden";
+                  x5.style.visibility = "visible";
+                  x6.style.visibility = "hidden";
+
+                  document.getElementById("myColorSchemeImage").src = require("../assets/img/color-scheme-5.png");
+                }
+            },
+            selectColor6: function () {
+                const x1 = document.getElementById("myColorScheme1");
+                const x2 = document.getElementById("myColorScheme2");
+                const x3 = document.getElementById("myColorScheme3");
+                const x4 = document.getElementById("myColorScheme4");
+                const x5 = document.getElementById("myColorScheme5");
+                const x6 = document.getElementById("myColorScheme6");
+
+                if (x6.style.visibility === "visible") {
+                  x6.style.visibility = "hidden";
+                } else {
+                  x1.style.visibility = "hidden";
+                  x2.style.visibility = "hidden";
+                  x3.style.visibility = "hidden";
+                  x4.style.visibility = "hidden";
+                  x5.style.visibility = "hidden";
+                  x6.style.visibility = "visible";
+
+                  document.getElementById("myColorSchemeImage").src = require("../assets/img/color-scheme-6.png");
+                }
+            }
         }
-    };
+    }
 
 </script>

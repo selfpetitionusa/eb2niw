@@ -89,11 +89,11 @@ $gradient-color2: linear-gradient(to right bottom, #1fa2ff, #00c0ff, #00d9f2, #5
 $transition: .5s;
 $font-size: 14px;
 
-$theme-background: linear-gradient(244.35deg, #314194 37.33%, #3B4DAB 43.75%, #5457C1 50.17%, #6B6FEA 76.06%);
-$theme-color1: rgb(84, 87, 193);
-$theme-color1-opacity: rgba(84, 87, 193, 0.3);
-$theme-color2: rgb(223, 120, 112);
-$theme-color2-opacity: rgba(223, 120, 112, 0.3);
+$theme-background: linear-gradient(244.35deg, #c2d7f0, #3080e1, #52CAEC, #1697AC, #6BC2D6, #052f63);
+$theme-color1: rgb(22, 151, 172);
+$theme-color1-opacity: rgba(22, 151, 172, 0.3);
+$theme-color2: rgb(199, 46, 38);
+$theme-color2-opacity: rgba(199, 46, 38, 0.3);
 
 body {
     font-family: $font-family;
@@ -3958,7 +3958,7 @@ Rates section - Terms
 
     .icon {
         font-size: 30px;
-        color: $theme-color1;
+        color: $paragraph-color;
     }
 
     .text {
@@ -4395,24 +4395,58 @@ Pop-ups & CMS
     .color-select {
         display: flex;
         justify-content: center;
-        margin-bottom: 1rem;
+        height: 6rem;
 
         .color-radio {
             font-size: 1.1rem;
-            width: 40px;
-            height: 40px;
-            background-color: white;
+            width: 50px;
+            height: 50px;
 
-            border: 7px solid white;
+            border: 1px solid white;
             border-radius: 50%;
             box-shadow: 1px 4px 6px #888888;
 
+            margin: 0 auto;
             margin-bottom: 0.5rem;
+
+            &:hover, &:focus {
+              width: 60px;
+              height: 60px;
+              border: 2px solid white;
+            }
+
+            &.radio1 {
+                background: linear-gradient(244.35deg, #314194 37.33%, #3B4DAB 43.75%, #5457C1 50.17%, #6B6FEA 76.06%);
+            }
+
+            &.radio2 {
+                background: linear-gradient(244.35deg, #3f87a6, #ebf8e1, #f69d3c);
+            }
+
+            &.radio3 {
+                background: linear-gradient(244.35deg, #DECBA4, #3E5151, #30A443, #236A4A, #368126, #84903A, #6E9842);
+            }
+
+            &.radio4 {
+                background: linear-gradient(244.35deg, #d64c7f, #ee4758, #f69d3c);
+            }
+
+            &.radio5 {
+                background: linear-gradient(244.35deg, #2c3e50, #374052, #dadfe8, #929bb3, #dadfe8);
+            }
+
+            &.radio6 {
+                background: linear-gradient(244.35deg, #c2d7f0, #3080e1, #52CAEC, #1697AC, #6BC2D6, #052f63);
+            }
         }
 
-        .color-selected {
-            display: flex;
-            justify-content: center;
+        .color-name {
+              text-align: center;
+        }
+
+        p.color-selected {
+              color: #949494;
+              visibility: hidden;
         }
     }
 
