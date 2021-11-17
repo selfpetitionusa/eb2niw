@@ -6,7 +6,7 @@
                 <h2>What users say?</h2>
                 <div class="bar"></div>
                 <p>From our users, tutors and freelance teachers, like you.</p>
-                <p>They all built their professional tutoring business with Tutomy:</p>
+                <p>They all built their professional tutoring business with Tutomy</p>
             </div>
 
 
