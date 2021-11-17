@@ -26,32 +26,32 @@
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="box">
-                                    <feather type="code"></feather> FREE website hosting on our domain
+                                    <feather type="code"></feather> Process payments with Stripe & PayPal
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="box">
-                                    <feather type="layout"></feather> We can set up a domain of your choice
+                                    <feather type="layout"></feather> Calendar to manage your bookings
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="box">
-                                    <feather type="pen-tool"></feather> Intuitive template to create a tutoring website in 11min
+                                    <feather type="pen-tool"></feather> Free website hosting on our domain
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="box">
-                                    <feather type="message-circle"></feather> We guide you on how to use tutoring website to find students
+                                    <feather type="message-circle"></feather> Set up a domain of your choice
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="box">
-                                    <feather type="search"></feather> SEO on autopilot, already optimized
+                                    <feather type="search"></feather> Launch website in just 11 minutes
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="box">
-                                    <feather type="credit-card"></feather> Integrate your booking & payment link
+                                    <feather type="credit-card"></feather> SEO on autopilot, already optimized
                                 </div>
                             </div>
                         </div>
@@ -62,32 +62,32 @@
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="box">
-                                    <feather type="code"></feather> FREE website hosting on our domain
+                                    <feather type="code"></feather> Process payments with Stripe & PayPal
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="box">
-                                    <feather type="layout"></feather> We can set up a domain of your choice
+                                    <feather type="layout"></feather> Calendar to manage your bookings
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="box">
-                                    <feather type="pen-tool"></feather> Intuitive template to create a tutoring website in 11min
+                                    <feather type="pen-tool"></feather> Free website hosting on our domain
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="box">
-                                    <feather type="message-circle"></feather> We guide you on how to use tutoring website to find students
+                                    <feather type="message-circle"></feather> Set up a domain of your choice
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="box">
-                                    <feather type="search"></feather> SEO on autopilot, already optimized
+                                    <feather type="search"></feather> Launch website in just 11 minutes
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="box">
-                                    <feather type="credit-card"></feather> Integrate your booking & payment link
+                                    <feather type="credit-card"></feather> SEO on autopilot, already optimized
                                 </div>
                             </div>
                         </div>
@@ -99,9 +99,6 @@
             <div class="row service-action-btns">
                 <div class="col-xl-7 col-lg-9">
                     <div class="row justify-content-center">
-                        <div class="col-sm-6 col-10">
-                            <a href="/website-needs-assessment" @click="$gtag.event('website-assessment')" class="btn btn-primary btn-assess btn-profile">WHICH WEBSITE BUILDER?</a>
-                        </div>
                         <div class="col-sm-6 col-10">
                             <a href="/register" @click="$gtag.event('register')" class="btn btn-primary btn-register btn-profile">START FREE TRIAL</a>
                         </div>

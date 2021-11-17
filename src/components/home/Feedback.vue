@@ -1,6 +1,6 @@
 <template>
     <!-- Start Feedback Area -->
-    <section id="testimonials" class="feedback-area ptb-80 bg-f7fafd">
+    <section id="testimonials" class="feedback-area ptb-80 bg-f9fafb">
         <div class="container">
             <div class="section-title">
                 <h2>What users say?</h2>
@@ -26,6 +26,7 @@
                                         <img src="../../assets/img/client-image/Kgomotso_img.png" alt="image">
                                     </div>
 
+                                    <h6>⭐⭐⭐⭐⭐</h6>
                                     <h3>Kgomotso Molobi</h3>
                                     <span>Math & English private tutor</span>
                                     <a href="https://www.tutomy.com/tutor/kgomotsomolobi">Visit my website</a>
@@ -39,6 +40,7 @@
                                         <img src="../../assets/img/client-image/Johnette_img.png" alt="image">
                                     </div>
 
+                                    <h6>⭐⭐⭐⭐⭐</h6>
                                     <h3>Johnette Stevenson</h3>
                                     <span>History, Geography & English private tutor</span>
                                     <a href="https://www.tutomy.com/tutor/johnette-stevenson">Visit my website</a>
@@ -52,6 +54,7 @@
                                         <img src="../../assets/img/client-image/Santana_img.png" alt="image">
                                     </div>
 
+                                    <h6>⭐⭐⭐⭐⭐</h6>
                                     <h3>Santana Stallberg</h3>
                                     <span>All subjects for Jk-University remotely</span>
                                     <a href="https://www.tutomy.com/tutor/santanastallberg">Visit my website</a>
@@ -65,6 +68,7 @@
                                         <img src="../../assets/img/client-image/Joseph_img.png" alt="image">
                                     </div>
 
+                                    <h6>⭐⭐⭐⭐⭐</h6>
                                     <h3>Joseph Seracuse</h3>
                                     <span>Math & Science private tutor</span>
                                     <a href="https://www.tutomy.com/tutor/josephseracuse">Visit my website</a>
@@ -78,6 +82,7 @@
                                         <img src="../../assets/img/client-image/Sunina_img.png" alt="image">
                                     </div>
 
+                                    <h6>⭐⭐⭐⭐⭐</h6>
                                     <h3>Sunina Kiran</h3>
                                     <span>Science & Environmental Sciences private tutor</span>
                                     <a href="https://www.tutomy.com/tutor/suninakiran">Visit my website</a>
@@ -91,6 +96,7 @@
                                         <img src="../../assets/img/client-image/Arsalan_img.png" alt="image">
                                     </div>
 
+                                    <h6>⭐⭐⭐⭐⭐</h6>
                                     <h3>Arsalan Tariq</h3>
                                     <span>English, Physics & History private tutor</span>
                                     <a href="https://www.tutomy.com/tutor/arsalantariq">Visit my website</a>
@@ -150,7 +156,6 @@
 
         <div class="shape2 rotateme"><img src="../../assets/img/shape2.svg" alt="shape"></div>
         <div class="shape4"><img src="../../assets/img/shape4.svg" alt="shape"></div>
-        <div class="shape6 rotateme"><img src="../../assets/img/shape4.svg" alt="shape"></div>
         <div class="shape7"><img src="../../assets/img/shape4.svg" alt="shape"></div>
     </section>
     <!-- End Feedback Area -->

@@ -11,12 +11,6 @@
                             <li>Cancel any time</li>
                         </ul>
                     </div>
-                    <h6>Bonus offer: create a website within 48h</h6>
-                    <ul class="bonus-offer" style="margin-bottom: 1.5rem">
-                        <li>Website review by an expert</li>
-                        <li>1-on-1 advice on how to promote it</li>
-                        <li>Progress check-up</li>
-                    </ul>
 
                     <form @submit.prevent="handleSubmit">
                         <div class="form-group">

@@ -89,11 +89,11 @@ $gradient-color2: linear-gradient(to right bottom, #1fa2ff, #00c0ff, #00d9f2, #5
 $transition: .5s;
 $font-size: 14px;
 
-$theme-background: linear-gradient(244.35deg, #c2d7f0, #3080e1, #52CAEC, #1697AC, #6BC2D6, #052f63);
-$theme-color1: rgb(22, 151, 172);
-$theme-color1-opacity: rgba(22, 151, 172, 0.3);
-$theme-color2: rgb(199, 46, 38);
-$theme-color2-opacity: rgba(199, 46, 38, 0.3);
+$theme-background: linear-gradient(244.35deg, #d64c7f, #ee4758, #f69d3c);
+$theme-color1: rgb(209, 107, 63);
+$theme-color1-opacity: rgba(209, 107, 63, 0.3);
+$theme-color2: rgb(142, 30, 148);
+$theme-color2-opacity: rgb(142, 30, 148, 0.3);
 
 body {
     font-family: $font-family;
@@ -131,14 +131,6 @@ p {
     &.bonus1 {
         font-size: 10px;
         text-align: center;
-    }
-
-    &.bonus2 {
-        text-align: center;
-
-        span {
-            font-weight: 650;
-        }
     }
 
     &:last-child {
@@ -927,8 +919,8 @@ Main Banner CSS
 }
 .shape2 {
     position: absolute;
-    top: 58%;
-    left: 30%;
+    top: 40%;
+    left: 70%;
 }
 .shape2-services {
     position: absolute;
@@ -2104,6 +2096,12 @@ Pricing CSS
 ===========================================*/
 .pricing-area {
     position: relative;
+
+    .icon-plus {
+        font-size: 30px;
+        margin-top: 10px;
+        color: $paragraph-color;
+    }
 }
 .pricing-table {
 	text-align: center;
