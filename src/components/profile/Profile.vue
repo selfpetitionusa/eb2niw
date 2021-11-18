@@ -284,6 +284,51 @@
                 </div>
             </div>
 
+<!-- TESTIMONIALS SECTION -->
+
+            <div id="section-testimonials" class="tu-card">
+
+                <div class="section-container">
+                    <div class="icon"></div>
+                    <div class="header"><h2>Testimonials</h2></div>
+                </div>
+
+                <div :class="[cmsToggle && 'cms-frame tu-card-frame margin-frame']">
+                    <div v-if="cmsToggle">
+                        <ReviewsPopup></ReviewsPopup>
+                        <a href="#" class="edit" v-b-modal.reviews-modal>
+                            <font-awesome-icon icon="edit" />
+                        </a>
+                    </div>
+
+
+                    <div class="feedback-slides">
+                        <div class="client-feedback">
+                            <div>
+                                <slick
+                                    ref="slick"
+                                    class="slider-for"
+                                    :options="slickOptions"
+                                >
+
+                                    <div class="item">
+
+                                        <div class="tutor-testimonial single-feedback" style="margin-bottom: 0px; padding-left: 0px">
+                                            <h6>⭐⭐⭐⭐⭐</h6>
+                                            <div class="reviewer">Reviewer name</div>
+                                            <div>Reviewer description</div>
+                                            <a href="#" class="source">Review source</a>
+                                            <div class="testimonial">Your testimonial will display here</div>
+                                        </div>
+                                    </div>
+
+                                </slick>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
 
 <!-- RATES SECTION -->
 
