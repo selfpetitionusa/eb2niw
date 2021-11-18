@@ -786,6 +786,17 @@ Main Banner CSS
     }
 
 }
+
+    @media (max-width: 575px) {
+        .main-banner {
+            .hero-content {
+                h5 {
+                    font-size: 17px;
+                }
+            }
+        }
+    }
+
 .hosting-main-banner {
     position: relative;
     z-index: 1;

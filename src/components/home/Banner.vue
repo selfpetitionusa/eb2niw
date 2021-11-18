@@ -10,8 +10,8 @@
                             <div class="hero-content">
                                 <div class="row">
                                     <div class="col-lg-11">
-                                        <h1>Create a professional tutoring website in 11min</h1>
-                                        <h5>Payments and calendar integrated</h5>
+                                        <h1>Create a simple tutoring website in 11min</h1>
+                                        <h5>Intuitive, even for the non-tech savvy</h5>
 
                                         <div class="tick-section">
                                             <div class="d-block d-sm-none">

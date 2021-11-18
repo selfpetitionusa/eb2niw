@@ -56,12 +56,12 @@
 
                         <div class="pricing-features">
                             <ul style="margin: 0px 0px 12px">
-                                <li class="active">Basic plan</li>
+                                <li class="active">All the benefits of the Basic Plan, and...</li>
                                 <li><font-awesome-icon class="icon-plus" icon="plus-circle"/></li>
                             </ul>
                             <ul style="margin-bottom: 26px; padding: 8px 0px; background: linear-gradient(to right bottom, #fffcff, #fbfaff, #effbff, #e0fdff, #d5fefd)">
-                                <li class="active">Get paid with Stripe and PayPal</li>
-                                <li class="active">Calendar for one-time and recurring bookings</li>
+                                <li class="active">Stripe and PayPal payments</li>
+                                <li class="active">Calendar integrated on the website</li>
                             </ul>
                         </div>
 
