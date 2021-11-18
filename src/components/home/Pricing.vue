@@ -32,9 +32,10 @@
                             <ul>
                                 <li class="active">Template to launch website in 11min</li>
                                 <li class="active">Customizable color themes</li>
-                                <li class="active">Free personal Tutomy subdomain</li>
+                                <li class="active">Free personal subdomain on tutomy.com</li>
                                 <li class="active">Search Engine Optimization on autopilot</li>
                                 <li class="active">24/7 support from our experts</li>
+                                <li class="active">Website includes Tutomy branding</li>
                             </ul>
                         </div>
 
@@ -62,6 +63,7 @@
                             <ul style="margin-bottom: 26px; padding: 8px 0px; background: linear-gradient(to right bottom, #fffcff, #fbfaff, #effbff, #e0fdff, #d5fefd)">
                                 <li class="active">Stripe and PayPal payments</li>
                                 <li class="active">Calendar integrated on the website</li>
+                                <li class="active">Removed Tutomy branding</li>
                             </ul>
                         </div>
 
