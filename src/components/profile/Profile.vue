@@ -295,7 +295,7 @@
 
                 <div :class="[cmsToggle && 'cms-frame tu-card-frame margin-frame']">
                     <div v-if="cmsToggle">
-                        <ReviewsPopup></ReviewsPopup>
+                        <ReviewsPopup v-bind:profileProp="response"></ReviewsPopup>
                         <a href="#" class="edit" v-b-modal.reviews-modal>
                             <font-awesome-icon icon="edit" />
                         </a>
@@ -548,6 +548,8 @@
 
 
 <script>
+    import Slick from 'vue-slick';
+    import 'slick-carousel/slick/slick.css';
 
     import School from './section/School';
     import Certificate from './section/Certificate';
@@ -561,6 +563,7 @@
     import EducationPopup from '../profile/popups/EducationPopup';
     import BioPopup from '../profile/popups/BioPopup';
     import SubjectsPopup from '../profile/popups/SubjectsPopup';
+    import ReviewsPopup from '../profile/popups/ReviewsPopup';
     import RatesPopup from '../profile/popups/RatesPopup';
     import TermsPopup from '../profile/popups/TermsPopup';
     import YouTubePopup from '../profile/popups/YouTubePopup';
@@ -585,11 +588,13 @@
       EducationPopup,
       BioPopup,
       SubjectsPopup,
+      ReviewsPopup,
       RatesPopup,
       TermsPopup,
       YouTubePopup,
       ProblemCardsPopup,
-      PaymentBookingPopup
+      PaymentBookingPopup,
+      Slick,
     },
     props: ['cmsToggleProp',  'profileProp'],
     computed: {
@@ -629,7 +634,19 @@
             scrollWidth: 0,
             offsetWidth: 0,
             cmsToggle: this.cmsToggleProp,
-            paymentsButtonInfo: false
+            paymentsButtonInfo: false,
+            slickOptions: {
+                speed: 100,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                cssEase: 'linear',
+                fade: true,
+                autoplay: true,
+                draggable: true,
+                asNavFor: '.slider-nav',
+                prevArrow: '.client-feedback .prev-arrow',
+                nextArrow: '.client-feedback .next-arrow'
+            },
         }
     },
       methods: {
@@ -697,6 +714,12 @@
               this.paymentsButtonInfo = true;
               let self = this;
               setTimeout(function() { self.paymentsButtonInfo = false }, 5000);
+          },
+          next() {
+              this.$refs.slick.next();
+          },
+          prev() {
+              this.$refs.slick.prev();
           }
       }
   }
