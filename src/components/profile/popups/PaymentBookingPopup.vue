@@ -49,11 +49,11 @@
                     <div class="form-check radio">
                         <input class="form-check-input" type="radio"  id="payment-booking-radio" v-model="data.actionType" value="BookingAndPayment" >
                         <div class="form-inline">
-                            <label class="form-check-label item" for="payment-booking-input">Link bookings and payments (Book & Pay)</label>
+                            <label class="form-check-label item" for="booking-payment-input">Link bookings and payments (Book & Pay)</label>
                             <ValidationProvider rules="url" v-slot="{ errors }" >
-                                <input type="text" class="form-control item"  id="payment-booking-input" size="52%" v-model="paymentBookingLinkInput"  :disabled="data.actionType !== 'BookingAndPayment'" placeholder="https://bookinglink.com" :class="{ 'is-invalid': submitted && errors.length }" style="margin-bottom: 5px;">
+                                <input type="text" class="form-control item"  id="booking-payment-input" size="52%" v-model="bookingPaymentLinkInput"  :disabled="data.actionType !== 'BookingAndPayment'" placeholder="https://bookinglink.com" :class="{ 'is-invalid': submitted && errors.length }" style="margin-bottom: 5px;">
                                 <div v-if="submitted && errors.includes('url')" class="invalid-feedback">Link has wrong format, "https://" is required</div>
-                                <input type="text" class="form-control item"  id="booking-payment-input" size="52%" v-model="bookingPaymentLinkInput"  :disabled="data.actionType !== 'BookingAndPayment'" placeholder="https://paymentlink.com" :class="{ 'is-invalid': submitted && errors.length }" >
+                                <input type="text" class="form-control item"  id="payment-booking-input" size="52%" v-model="paymentBookingLinkInput"  :disabled="data.actionType !== 'BookingAndPayment'" placeholder="https://paymentlink.com" :class="{ 'is-invalid': submitted && errors.length }" >
                                 <div v-if="submitted && errors.includes('url')" class="invalid-feedback">Link has wrong format, "https://" is required</div>
                             </ValidationProvider>
                         </div>
@@ -91,7 +91,6 @@
                 data: {},
                 bookingLinkInput: '',
                 paymentLinkInput: '',
-                paymentBookingLinkInput: '',
                 bookingPaymentLinkInput: ''
             }
         },
@@ -112,7 +111,7 @@
                 } else if(this.data.actionType === 'Booking') {
                     return this.bookingLinkInput;
                 } else if(this.data.actionType === 'BookingAndPayment') {
-                    return this.paymentBookingLinkInput;
+                    return this.bookingPaymentLinkInput;
                 } else {
                     return undefined;
                 }
@@ -126,23 +125,20 @@
             'data.actionType': function(val) {
                 if(val === 'Payment') {
                     this.bookingLinkInput = '';
-                    this.paymentBookingLinkInput = '';
+                    this.bookingPaymentLinkInput = '';
                 } else if(val === 'Booking') {
-                    this.paymentBookingLinkInput = '';
+                    this.bookingPaymentLinkInput = '';
                     this.paymentLinkInput = '';
                 } else if(val === 'BookingAndPayment') {
                     this.bookingLinkInput = '';
                     this.paymentLinkInput = '';
-                } else if(val === 'PaymentAndBooking') {
-                    this.bookingLinkInput = '';
-                    this.paymentLinkInput = '';
                 } else if(val === 'None') {
                     this.bookingLinkInput = '';
-                    this.paymentBookingLinkInput = '';
+                    this.bookingPaymentLinkInput = '';
                     this.paymentLinkInput = '';
                 } else {
                     this.bookingLinkInput = '';
-                    this.paymentBookingLinkInput = '';
+                    this.bookingPaymentLinkInput = '';
                     this.paymentLinkInput = '';
                 }
             }
@@ -160,11 +156,9 @@
                     this.paymentLinkInput = this.profileProp.profile.actionLink;
                 } else if(this.profileProp.profile.actionType === 'Booking') {
                     this.bookingLinkInput = this.profileProp.profile.actionLink;
-                } else if(this.profileProp.profile.actionType === 'PaymentAndBooking') {
-                    this.bookingPaymentLinkInput = this.profileProp.profile.actionLink;
                 } else if(this.profileProp.profile.actionType === 'BookingAndPayment') {
                     console.log(this.profileProp.profile.actionLink)
-                    this.paymentBookingLinkInput = this.profileProp.profile.actionLink;
+                    this.bookingPaymentLinkInput = this.profileProp.profile.actionLink;
                 }
                 this.clear();
             },
