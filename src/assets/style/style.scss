@@ -3502,6 +3502,17 @@ Landing page popups & needs assessment
     }
 }
 
+.payment-booking-choice {
+    background: $theme-background;
+    height: 100%;
+
+    .section {
+        background: #F9F6F6;
+        height: 100%;
+        border-radius: 10px;
+    }
+}
+
                   /*================================================
                             TUTOMY PROFILE
                   =================================================*/
@@ -4000,6 +4011,37 @@ h2.lastname {
             background-color: $theme-color2;
         }
     }
+}
+
+.btn-book-container {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.btn-pay-container {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+    @media (max-width: 575px) {
+        .btn-book-container {
+            align-self: end;
+        }
+
+        .btn-pay-container {
+            align-self: start;
+        }
+    }
+
+
+.btn-book {
+    margin: 10px 0;
+}
+
+.btn-pay {
+    margin: 10px 0;
 }
 
 #paymentsEditAlert {

@@ -29,7 +29,7 @@
                         <div class="form-inline">
                             <label class="form-check-label item" for="booking-input">Link calendar bookings (only Book)</label>
                             <ValidationProvider rules="url" v-slot="{ errors }" >
-                                <input type="text" class="form-control item" id="booking-input" size="52%" v-model="bookingLinkInput" :disabled="data.actionType !== 'Booking'" placeholder="https://bookingapp.com" :class="{ 'is-invalid': submitted && errors.length }">
+                                <input type="text" class="form-control item" id="booking-input" size="52%" v-model="bookingLinkInput" :disabled="data.actionType !== 'Booking'" placeholder="https://bookinglink.com" :class="{ 'is-invalid': submitted && errors.length }">
                                 <div v-if="submitted && errors.includes('url')" class="invalid-feedback">Link has wrong format, "https://" is required</div>
                             </ValidationProvider>
                         </div>
@@ -40,7 +40,7 @@
                         <div class="form-inline">
                             <label class="form-check-label item" for="payment-input">Link payments (only Pay)</label>
                             <ValidationProvider rules="url" v-slot="{ errors }" >
-                                <input type="text" class="form-control item" id="payment-input" size="52%" v-model="paymentLinkInput"  :disabled="data.actionType !== 'Payment'" placeholder="https://paymentapp.com" :class="{ 'is-invalid': submitted && errors.length }" >
+                                <input type="text" class="form-control item" id="payment-input" size="52%" v-model="paymentLinkInput"  :disabled="data.actionType !== 'Payment'" placeholder="https://paymentlink.com" :class="{ 'is-invalid': submitted && errors.length }" >
                                 <div v-if="submitted && errors.includes('url')" class="invalid-feedback">Link has wrong format, "https://" is required</div>
                             </ValidationProvider>
                         </div>
@@ -51,7 +51,9 @@
                         <div class="form-inline">
                             <label class="form-check-label item" for="payment-booking-input">Link bookings and payments (Book & Pay)</label>
                             <ValidationProvider rules="url" v-slot="{ errors }" >
-                                <input type="text" class="form-control item"  id="payment-booking-input" size="52%" v-model="paymentBookingLinkInput"  :disabled="data.actionType !== 'BookingAndPayment'" placeholder="https://paymentbookingapp.com" :class="{ 'is-invalid': submitted && errors.length }" >
+                                <input type="text" class="form-control item"  id="payment-booking-input" size="52%" v-model="paymentBookingLinkInput"  :disabled="data.actionType !== 'BookingAndPayment'" placeholder="https://bookinglink.com" :class="{ 'is-invalid': submitted && errors.length }" style="margin-bottom: 5px;">
+                                <div v-if="submitted && errors.includes('url')" class="invalid-feedback">Link has wrong format, "https://" is required</div>
+                                <input type="text" class="form-control item"  id="booking-payment-input" size="52%" v-model="bookingPaymentLinkInput"  :disabled="data.actionType !== 'BookingAndPayment'" placeholder="https://paymentlink.com" :class="{ 'is-invalid': submitted && errors.length }" >
                                 <div v-if="submitted && errors.includes('url')" class="invalid-feedback">Link has wrong format, "https://" is required</div>
                             </ValidationProvider>
                         </div>
@@ -62,9 +64,6 @@
                         <input class="form-check-input" type="radio"  id="no-radio" v-model="data.actionType" value="None" style="margin-bottom: 3px;">
                     </div>
 
-                    <div class="form-title">
-                        <p class="first" style="margin-top: 30px">Need 2 separate buttons for book & pay? <a href="/help" target="_blank" class="contact-us">contact us</a></p>
-                    </div>
                 </div>
 
 
@@ -92,7 +91,8 @@
                 data: {},
                 bookingLinkInput: '',
                 paymentLinkInput: '',
-                paymentBookingLinkInput: ''
+                paymentBookingLinkInput: '',
+                bookingPaymentLinkInput: ''
             }
         },
         props: ['profileProp'],
@@ -133,6 +133,9 @@
                 } else if(val === 'BookingAndPayment') {
                     this.bookingLinkInput = '';
                     this.paymentLinkInput = '';
+                } else if(val === 'PaymentAndBooking') {
+                    this.bookingLinkInput = '';
+                    this.paymentLinkInput = '';
                 } else if(val === 'None') {
                     this.bookingLinkInput = '';
                     this.paymentBookingLinkInput = '';
@@ -157,6 +160,8 @@
                     this.paymentLinkInput = this.profileProp.profile.actionLink;
                 } else if(this.profileProp.profile.actionType === 'Booking') {
                     this.bookingLinkInput = this.profileProp.profile.actionLink;
+                } else if(this.profileProp.profile.actionType === 'PaymentAndBooking') {
+                    this.bookingPaymentLinkInput = this.profileProp.profile.actionLink;
                 } else if(this.profileProp.profile.actionType === 'BookingAndPayment') {
                     console.log(this.profileProp.profile.actionLink)
                     this.paymentBookingLinkInput = this.profileProp.profile.actionLink;
