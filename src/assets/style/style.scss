@@ -5271,8 +5271,9 @@ Pop-ups & CMS
     margin-top: 0px;
 }
 
-#payment-booking-popup .form-title .no-bottom-margin {
+#payment-booking-popup .form-title .no-top-bottom-margin {
     margin-bottom: 5px;
+    margin-top: 0px;
 }
 
 #problem-cards-popup .select {

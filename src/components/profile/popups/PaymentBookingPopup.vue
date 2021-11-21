@@ -1,12 +1,12 @@
 <template>
 
-    <b-modal @show="initModal" id="payment-booking-modal" title="E-mail, bookings & payments" hide-footer>
+    <b-modal @show="initModal" id="payment-booking-modal" title="Bookings and payments" hide-footer>
         <div v-if="alert.failed" :class="`alert ${alert.type}`">{{alert.message}}</div>
         <ValidationObserver ref="form">
             <form id="payment-booking-popup" class="cms" @submit.prevent="saveForm" novalidate>
 
                 <div class="form-title">
-                    <p class="no-bottom-margin">"Book / Pay"</p>
+                    <p class="no-top-bottom-margin">"Book / Pay"</p>
                     <p class="first" style="font-weight: 400"><a class="yt-tutorial" href="https://youtu.be/TTp7FvWNdUI" target="_blank" style="font-weight: 600">HERE</a> how to add payment & booking links</p>
                 </div>
 
@@ -135,7 +135,6 @@
             initModal() {
                 this.submitted = false;
                 this.data = {
-                    email: this.profileProp.profile.email,
                     actionType: this.profileProp.profile.actionType,
                 };
                 if(this.profileProp.profile.actionType === 'Payment') {
