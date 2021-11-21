@@ -4,6 +4,19 @@
         <div v-if="alert.failed" :class="`alert ${alert.type}`">{{alert.message}}</div>
         <ValidationObserver ref="form">
             <form id="payment-booking-popup" class="cms" @submit.prevent="saveForm" novalidate>
+                <div class="form-title">
+                    <p class="first">"Contact {{name}}"</p>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">By pressing this button, visitors will send you an email at</label>
+                    <ValidationProvider rules="required|email" v-slot="{ errors }" >
+                        <input type="text" class="form-control" id="email" v-model="data.email" :class="{ 'is-invalid':  submitted && errors.length }" >
+                        <div v-if="submitted && errors.includes('required')" class="invalid-feedback">Email is required</div>
+                        <div v-if="submitted && errors.includes('email')" class="invalid-feedback">Email has wrong format</div>
+                    </ValidationProvider>
+                </div>
+
 
                 <div class="form-title">
                     <p class="no-bottom-margin">"Book / Pay"</p>
@@ -88,6 +101,11 @@
                 alert: state => state.alert,
                 account: state => state.account
             }),
+            name: function () {
+                if(this.profileProp.profile.firstName)
+                    return this.profileProp.profile.firstName;
+                else return '< Name >'
+            },
             actionLink: function () {
                 if(this.data.actionType === 'Payment') {
                    return this.paymentLinkInput;
