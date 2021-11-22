@@ -85,21 +85,10 @@
 
 
 
-        <b-modal v-if="!proPlan" @show="initModal" id="payment-booking-modal" title="Upgrade to PRO Plan - $9 per month" hide-footer>
+        <b-modal v-if="!proPlan" @show="initModal" id="payment-booking-modal" title="Upgrade to PRO Plan" hide-footer>
             <form id="payment-booking-popup" class="cms">
 
                 <div v-if="!invoice">
-                    <div class="row" style="margin: 1rem 0 3rem">
-                        <div class="col-4 align-items-center" style="display: flex; justify-content: center">
-                            <font-awesome-icon icon="calendar-alt" style="color: #5457C1; font-size: 2.2rem"/>
-                        </div>
-                        <div class="col-4 align-items-center" style="display: flex; justify-content: center">
-                            <img src="../../../assets/img/PayPal-logo.png">
-                        </div>
-                        <div class="col-4 align-items-center" style="display: flex; justify-content: center">
-                            <img src="../../../assets/img/stripe-logo.png">
-                        </div>
-                    </div>
 
                     <div class="form-title">
                         <div style="font-size: 15px; margin-bottom: 15px;">Select options you wish to add to your website</div>
@@ -107,12 +96,17 @@
 
                     <div class="form-check" style="margin-bottom: 0.7rem">
                         <input class="form-check-input" type="radio" id="selectCalendar">
-                        <label class="form-check-label" for="selectCalendar">Calendar: <span style="font-weight: 300">to let clients book lessons</span></label>
+                        <label class="form-check-label" for="selectCalendar">Calendar: <span style="font-weight: 300">manage your booking schedule</span></label>
                     </div>
 
                     <div class="form-check" style="margin-bottom: 0.7rem">
                         <input class="form-check-input" type="radio" id="selectPayments">
-                        <label class="form-check-label" for="selectPayments">Payments: <span style="font-weight: 300">process with PayPal and Stripe</span></label>
+                        <label class="form-check-label" for="selectPayments">Payments:
+                            <span style="font-weight: 300">accept
+                                <span><img style="height: 35px; margin: 0px 5px 2px" src="../../../assets/img/PayPal-logo.png"></span> and
+                                <span><img style="height: 27px" src="../../../assets/img/stripe-logo.png"></span>
+                            </span>
+                        </label>
                     </div>
 
                     <div class="form-check" style="margin-bottom: 2rem">
