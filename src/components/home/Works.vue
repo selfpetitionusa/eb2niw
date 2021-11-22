@@ -20,12 +20,12 @@
             >
                 <slide>
                     <div class="single-works">
-                        <img src="../../assets/img/landing-slider-1.png" alt="Finding students with Tutomy website - example view">
+                        <img src="../../assets/img/landing-slider-1.png" alt="Finding students with Tutomy website - payments view">
                         <a v-if="windowWidth > 767" @click="index = 0;$refs['modal-zoom'].show()" style="cursor: pointer;" class="icon"><feather type="zoom-in"></feather></a>
 
                         <div class="works-content">
-                            <h3><a href="#">How do your clients see you?</a></h3>
-                            <p>Professional tutoring website which you can create in just 11 minutes</p>
+                            <h3><a href="#">Process payments on autopilot</a></h3>
+                            <p>Get paid with PayPal and Stripe (cards, Apple Pay, Google Pay) - no more chasing unpaid invoices!</p>
                         </div>
                     </div>
                 </slide>
@@ -48,8 +48,8 @@
                         <a v-if="windowWidth > 767" @click="index = 2;$refs['modal-zoom'].show()" style="cursor: pointer;" class="icon"><feather type="zoom-in"></feather></a>
 
                         <div class="works-content">
-                            <h3><a href="#">Save time with calendar and auto-billing</a></h3>
-                            <p>Automate your one-time and recurring payments when clients book lessons on your website</p>
+                            <h3><a href="#">Automate your one-time and recurring calendar bookings</a></h3>
+                            <p>Save time by letting students book lessons directly on your website</p>
                         </div>
                     </div>
                 </slide>
@@ -85,7 +85,7 @@ export default {
             index: 0,
             modalProperties: [
                 {
-                   title : "How do your clients see you?",
+                   title : "Process payments on autopilot",
                    img: "./landing-slider-1.png"
                 },
                 {
@@ -93,7 +93,7 @@ export default {
                     img: "./landing-slider-2.png"
                 },
                 {
-                    title : "Save time with calendar and auto-billing",
+                    title : "Automate your one-time and recurring calendar bookings",
                     img: "./landing-slider-3.png"
                 },
                 {
