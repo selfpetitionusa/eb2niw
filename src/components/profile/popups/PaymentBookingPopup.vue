@@ -72,7 +72,6 @@
 
                     </div>
 
-
                     <div class="btn-container">
                         <a class="btn btn-primary btn-border btn-cancel" @click="$bvModal.hide('payment-booking-modal')">Cancel</a>
                         <button type="submit"  class="btn btn-primary btn-border btn-save" :disabled="account.status.updatingPaymentBookingForm">Save
@@ -86,50 +85,65 @@
 
 
 
-        <b-modal v-if="!proPlan" @show="initModal" id="payment-booking-modal" title="Upgrade to PRO Plan" hide-footer>
+        <b-modal v-if="!proPlan" @show="initModal" id="payment-booking-modal" title="Upgrade to PRO Plan - $9 per month" hide-footer>
             <form id="payment-booking-popup" class="cms">
 
-                <div class="row" style="margin: 1rem 0 3rem">
-                    <div class="col-4 align-items-center" style="display: flex; justify-content: center">
-                        <font-awesome-icon icon="calendar-alt" style="color: #5457C1; font-size: 2.2rem"/>
+                <div v-if="!invoice">
+                    <div class="row" style="margin: 1rem 0 3rem">
+                        <div class="col-4 align-items-center" style="display: flex; justify-content: center">
+                            <font-awesome-icon icon="calendar-alt" style="color: #5457C1; font-size: 2.2rem"/>
+                        </div>
+                        <div class="col-4 align-items-center" style="display: flex; justify-content: center">
+                            <img src="../../../assets/img/PayPal-logo.png">
+                        </div>
+                        <div class="col-4 align-items-center" style="display: flex; justify-content: center">
+                            <img src="../../../assets/img/stripe-logo.png">
+                        </div>
                     </div>
-                    <div class="col-4 align-items-center" style="display: flex; justify-content: center">
-                        <img src="../../../assets/img/PayPal-logo.png">
+
+                    <div class="form-title">
+                        <div style="font-size: 15px; margin-bottom: 15px;">Select options you wish to add to your website</div>
                     </div>
-                    <div class="col-4 align-items-center" style="display: flex; justify-content: center">
-                        <img src="../../../assets/img/stripe-logo.png">
+
+                    <div class="form-check" style="margin-bottom: 0.7rem">
+                        <input class="form-check-input" type="radio" id="selectCalendar">
+                        <label class="form-check-label" for="selectCalendar">Calendar: <span style="font-weight: 300">to let clients book lessons</span></label>
+                    </div>
+
+                    <div class="form-check" style="margin-bottom: 0.7rem">
+                        <input class="form-check-input" type="radio" id="selectPayments">
+                        <label class="form-check-label" for="selectPayments">Payments: <span style="font-weight: 300">process with PayPal and Stripe</span></label>
+                    </div>
+
+                    <div class="form-check" style="margin-bottom: 2rem">
+                        <input class="form-check-input" type="radio" id="selectCalendarAndPayments">
+                        <label class="form-check-label" for="selectCalendarAndPayments">Both calendar and payments</label>
+                    </div>
+
+                    <div class="form-title">
+                        <div style="font-size: 15px; margin-bottom: 15px; color: #5457c1; margin-bottom: 0">PRO Plan is $9 per month</div>
+                        <div style="font-size: 15px; margin-bottom: 15px; color: #5457c1; margin-bottom: 2rem; font-weight: 300">Cancel monthly subscription anytime</div>
                     </div>
                 </div>
 
-                <div class="form-title">
-                    <div style="font-size: 15px; margin-bottom: 15px;">Select options you wish to add to your website</div>
-                </div>
 
-                <div class="form-check" style="margin-bottom: 0.7rem">
-                    <input class="form-check-input" type="radio" id="selectCalendar">
-                    <label class="form-check-label" for="selectCalendar">Calendar: <span style="font-weight: 400">to let clients book lessons</span></label>
-                </div>
-
-                <div class="form-check" style="margin-bottom: 0.7rem">
-                    <input class="form-check-input" type="radio" id="selectPayments">
-                    <label class="form-check-label" for="selectPayments">Payments: <span style="font-weight: 400">process with PayPal and Stripe</span></label>
-                </div>
-
-                <div class="form-check" style="margin-bottom: 4rem">
-                    <input class="form-check-input" type="radio" id="selectCalendarAndPayments">
-                    <label class="form-check-label" for="selectCalendarAndPayments">Both calendar and payments</label>
+                <div v-if="invoice" class="form-group" style="margin-bottom: 4rem">
+                    <label for="invoiceData">Provide your full name and address for invoicing purposes</label>
+                    <textarea class="form-control" id="invoiceData" rows="6" v-model="bio" placeholder="Here type your full name and address for invoicing purposes"></textarea>
                 </div>
 
 
                 <div class="row justify-content-center">
-                    <a class="col-4 btn btn-primary btn-border btn-cancel" @click="$bvModal.hide('payment-booking-modal')">Cancel</a>
-                    <button type="submit"  class="col-7 btn btn-primary btn-border" :disabled="account.status.updatingPaymentBookingForm">GO PRO PLAN
+                    <a class="col-4 btn btn-primary btn-border btn-cancel" @click="$bvModal.hide('payment-booking-modal')" v-on:click="restartPopup()">Cancel</a>
+
+                    <a href="#" id="choosePro" class="col-7 btn btn-primary btn-border" v-on:click="chooseProPlan()">GO PRO PLAN</a>
+                    <button type="submit" id="submitInvoice" class="col-7 btn btn-primary btn-border" style="display: none" v-on:click="restartPopup()" :disabled="account.status.updatingPaymentBookingForm">SUBMIT
                         <img v-show=" account.status.updatingPaymentBookingForm" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
                     </button>
                 </div>
 
                 <div class="row" style="margin-top: 10px; text-decoration: underline">
-                    <a href="https://www.tutomy.com" target="_blank" v-scroll-to="'#pricing'" id="proPlanInfo" class="col-7 offset-5" style="display: flex; justify-content: center; padding-left: 0">Read pricing details</a>
+                    <a href="https://www.tutomy.com" target="_blank" v-scroll-to="'#pricing'" id="proPlanInfo" class="col-7 offset-5" style="display: flex; justify-content: center; padding-left: 0">Pricing details</a>
                 </div>
             </form>
         </b-modal>
@@ -149,7 +163,8 @@
                 bookingLinkInput: '',
                 paymentLinkInput: '',
                 bookingPaymentLinkInput: '',
-                proPlan: false
+                proPlan: false,
+                invoice: false
             }
         },
         props: ['profileProp'],
@@ -231,6 +246,26 @@
                     this.bookingPaymentLinkInput = this.profileProp.profile.actionLink;
                 }
                 this.clear();
+            },
+            chooseProPlan: function () {
+                let x = document.getElementById("choosePro");
+                if (x.style.display === "none") {
+                  x.style.display = "block";
+                } else {
+                  x.style.display = "none";
+                }
+
+                let y = document.getElementById("submitInvoice");
+                if (y.style.display === "none") {
+                  y.style.display = "block";
+                } else {
+                  y.style.display = "none";
+                }
+
+                this.invoice = true;
+            },
+            restartPopup: function () {
+                this.invoice = false;
             },
             saveForm() {
                 this.submitted = true;
