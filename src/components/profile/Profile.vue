@@ -120,15 +120,15 @@
 
                         <a v-if="!response.profile.firstName && !response.profile.email && cmsToggle"  href="#" v-b-modal.contact-modal  class="btn btn-primary inner-booking" role="button">Contact &lt; Name &gt;</a>
 
-                        <a v-if="cmsToggle" href="#" class="btn btn-primary btn-border inner-booking" v-on:click="clickPaymentsButtonEditMode()">Book / Pay</a>
+                        <a v-if="cmsToggle" href="#" class="btn btn-primary btn-border inner-booking" v-on:click="clickPaymentsButtonEditMode()">Book</a>
+                        <a v-if="cmsToggle" href="#" class="btn btn-primary btn-border inner-booking" v-on:click="clickPaymentsButtonEditMode()">Pay</a>
                             <div v-if="paymentsButtonInfo" class="alert alert-warning" style="margin: 3px;">
                                 <div style="font-weight: 600; margin-bottom: 2px;">Disabled in edit mode:</div>
                                 <div style="font-size: 12px"> -> Click edit icon to add link</div>
                                 <div style="font-size: 12px"> -> Check result in PREVIEW</div>
                             </div>
-                        <a v-if="!cmsToggle && response.profile.actionType === 'Booking'" :href="response.profile.actionLink" class="btn btn-primary btn-border inner-booking">Book</a>
-                        <a v-if="!cmsToggle && response.profile.actionType === 'Payment'" :href="response.profile.actionLink" class="btn btn-primary btn-border inner-booking">Pay</a>
-                        <a v-if="!cmsToggle && response.profile.actionType === 'BookingAndPayment'" href="/bookandpay" class="btn btn-primary btn-border inner-booking">Book & Pay</a>
+                        <a v-if="!cmsToggle && response.profile.bookingLink" :href="response.profile.bookingLink" class="btn btn-primary btn-border inner-booking">Book</a>
+                        <a v-if="!cmsToggle && response.profile.paymentLink === 'Payment'" :href="response.profile.paymentLink" class="btn btn-primary btn-border inner-booking">Pay</a>
                     </div>
                 </div>
             </div>
@@ -306,21 +306,20 @@
                         <div class="client-feedback">
                             <div>
                                 <slick
-                                    ref="slick"
-                                    class="slider-for"
-                                    :options="slickOptions"
-                                >
+                                    ref="slick3"
+                                    :options="slickOptions">
 
-                                    <div class="item">
 
-                                        <div class="tutor-testimonial single-feedback" style="margin-bottom: 0px; padding-left: 0px">
-                                            <h6>⭐⭐⭐⭐⭐</h6>
-                                            <div class="reviewer">Reviewer name</div>
-                                            <div>Reviewer description</div>
-                                            <a href="#" class="source">Review source</a>
-                                            <div class="testimonial">Your testimonial will display here</div>
+                                        <div class="item" v-for="testimonial in response.testimonials" :key="testimonial.id" >
+
+                                            <div class="tutor-testimonial single-feedback" style="margin-bottom: 0px; padding-left: 0px">
+                                                <h6>{{'⭐'.repeat(Math.min(testimonial.stars,5))}}</h6>
+                                                <div class="reviewer">{{testimonial.reviewerName}}</div>
+                                                <div>{{testimonial.reviewerDescription}}</div>
+                                                <a :href="testimonial.url" class="source">Review link</a>
+                                                <div class="testimonial">{{testimonial.testimonial}}</div>
+                                            </div>
                                         </div>
-                                    </div>
 
                                 </slick>
                             </div>
@@ -616,6 +615,18 @@
       mounted() {
           this.calculateWidths();
       },
+      beforeUpdate() {
+          if (this.$refs.slick3) {
+              this.$refs.slick3.destroy();
+          }
+      },
+      updated() {
+          this.$nextTick(function () {
+              if (this.$refs.slick3) {
+                  this.$refs.slick3.create(this.slickOptions);
+              }
+          });
+      },
       metaInfo() {
           return {
               title: `${this.response.profile.firstName} ${this.response.profile.lastName} - ${this.response.profile.headline}`,
@@ -636,16 +647,15 @@
             cmsToggle: this.cmsToggleProp,
             paymentsButtonInfo: false,
             slickOptions: {
-                speed: 100,
-                slidesToShow: 1,
+                speed: 300,
+                slidesToShow: 2,
                 slidesToScroll: 1,
+                autoplaySpeed: 2000,
                 cssEase: 'linear',
                 fade: true,
                 autoplay: true,
                 draggable: true,
-                asNavFor: '.slider-nav',
-                prevArrow: '.client-feedback .prev-arrow',
-                nextArrow: '.client-feedback .next-arrow'
+                arrows: false
             },
         }
     },
@@ -714,12 +724,6 @@
               this.paymentsButtonInfo = true;
               let self = this;
               setTimeout(function() { self.paymentsButtonInfo = false }, 5000);
-          },
-          next() {
-              this.$refs.slick.next();
-          },
-          prev() {
-              this.$refs.slick.prev();
           }
       }
   }

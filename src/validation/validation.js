@@ -4,10 +4,12 @@ import Vue from "vue";
 import { ValidationObserver } from 'vee-validate';
 import { email } from 'vee-validate/dist/rules';
 import { oneOf } from 'vee-validate/dist/rules';
+import { numeric } from 'vee-validate/dist/rules';
 
 // No message specified.
 extend('email',{...email, message: 'email'});
 extend('oneOf',{...oneOf, message: 'oneOf'});
+extend('numeric',{...numeric, message: 'numeric'});
 
 Vue.component('ValidationProvider', ValidationProvider);
 Vue.component('ValidationObserver', ValidationObserver);

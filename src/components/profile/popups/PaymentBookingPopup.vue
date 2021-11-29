@@ -26,39 +26,39 @@
 
                     <div class="radio-container">
                         <div class="form-check radio">
-                            <input class="form-check-input" type="radio" id="booking-radio" v-model="data.actionType" value="Booking"  >
+                            <input class="form-check-input" type="radio" id="booking-radio" v-model="actionType" value="Booking"  >
                             <div class="form-inline">
                                 <label class="form-check-label item" for="booking-input">Link calendar bookings (only Book)</label>
                                 <ValidationProvider rules="url" v-slot="{ errors }" >
-                                    <input type="text" class="form-control item" id="booking-input" size="52%" v-model="bookingLinkInput" :disabled="data.actionType !== 'Booking'" placeholder="https://bookinglink.com" :class="{ 'is-invalid': submitted && errors.length }">
+                                    <input type="text" class="form-control item" id="booking-input" size="52%" v-model="data.bookingLink" :disabled="actionType !== 'Booking'" placeholder="https://bookinglink.com" :class="{ 'is-invalid': submitted && errors.length }">
                                     <div v-if="submitted && errors.includes('url')" class="invalid-feedback">Link has wrong format, "https://" is required</div>
                                 </ValidationProvider>
                             </div>
                         </div>
 
                         <div class="form-check radio">
-                            <input class="form-check-input" type="radio"  id="payment-radio" v-model="data.actionType" value="Payment" >
+                            <input class="form-check-input" type="radio"  id="payment-radio" v-model="actionType" value="Payment" >
                             <div class="form-inline">
                                 <label class="form-check-label item" for="payment-input">Link payments (only Pay)</label>
                                 <ValidationProvider rules="url" v-slot="{ errors }" >
-                                    <input type="text" class="form-control item" id="payment-input" size="52%" v-model="paymentLinkInput"  :disabled="data.actionType !== 'Payment'" placeholder="https://paymentlink.com" :class="{ 'is-invalid': submitted && errors.length }" >
+                                    <input type="text" class="form-control item" id="payment-input" size="52%" v-model="data.paymentLink"  :disabled="actionType !== 'Payment'" placeholder="https://paymentlink.com" :class="{ 'is-invalid': submitted && errors.length }" >
                                     <div v-if="submitted && errors.includes('url')" class="invalid-feedback">Link has wrong format, "https://" is required</div>
                                 </ValidationProvider>
                             </div>
                         </div>
 
                         <div class="form-check radio">
-                            <input class="form-check-input" type="radio"  id="payment-booking-radio" v-model="data.actionType" value="BookingAndPayment" >
+                            <input class="form-check-input" type="radio"  id="payment-booking-radio" v-model="actionType" value="BookingAndPayment" >
                             <div class="form-inline">
                                 <label class="form-check-label item" for="booking-payment-input">Link bookings and payments (Book & Pay)</label>
                                 <ValidationProvider rules="url" v-slot="{ errors }" >
-                                    <input type="text" class="form-control item"  id="booking-payment-input" size="52%" v-model="bookingPaymentLinkInput"  :disabled="data.actionType !== 'BookingAndPayment'" placeholder="https://bookinglink.com" :class="{ 'is-invalid': submitted && errors.length }" style="margin-bottom: 5px;">
+                                    <input type="text" class="form-control item"  id="booking-payment-input" size="52%" v-model="data.paymentLink2"  :disabled="actionType !== 'BookingAndPayment'" placeholder="https://bookinglink.com" :class="{ 'is-invalid': submitted && errors.length }" style="margin-bottom: 5px;">
                                     <div v-if="submitted && errors.includes('url')" class="invalid-feedback">Link has wrong format, "https://" is required</div>
                                 </ValidationProvider>
 
                                 <label class="form-check-label item" for="payment-booking-input"></label>
                                 <ValidationProvider rules="url" v-slot="{ errors }" >
-                                    <input type="text" class="form-control item"  id="payment-booking-input" size="52%" v-model="paymentBookingLinkInput"  :disabled="data.actionType !== 'BookingAndPayment'" placeholder="https://paymentlink.com" :class="{ 'is-invalid': submitted && errors.length }" >
+                                    <input type="text" class="form-control item"  id="payment-booking-input" size="52%" v-model="data.bookingLink2"  :disabled="actionType !== 'BookingAndPayment'" placeholder="https://paymentlink.com" :class="{ 'is-invalid': submitted && errors.length }" >
                                     <div v-if="submitted && errors.includes('url')" class="invalid-feedback">Link has wrong format, "https://" is required</div>
                                 </ValidationProvider>
 
@@ -67,7 +67,7 @@
 
                         <div class="form-check radio" style="height: 35px">
                             <label class="form-check-label item" for="no-radio">No button</label>
-                            <input class="form-check-input" type="radio"  id="no-radio" v-model="data.actionType" value="None" style="margin-bottom: 3px;">
+                            <input class="form-check-input" type="radio"  id="no-radio" v-model="actionType" value="None" style="margin-bottom: 3px;">
                         </div>
 
                     </div>
@@ -88,19 +88,19 @@
         <b-modal v-if="!proPlan" @show="initModal" id="payment-booking-modal" title="Upgrade to PRO Plan" hide-footer>
             <form id="payment-booking-popup" class="cms">
 
-                <div v-if="!invoice">
+                <div v-if="!invoice && !contact.status.messageSent">
 
                     <div class="form-title">
                         <div style="font-size: 15px; margin-bottom: 15px;">Select options you wish to add to your website</div>
                     </div>
 
                     <div class="form-check" style="margin-bottom: 0.7rem">
-                        <input class="form-check-input" type="radio" id="selectCalendar">
+                        <input class="form-check-input" type="radio" id="selectCalendar" v-model="proPlanActionType"  value="Booking" >
                         <label class="form-check-label" for="selectCalendar">Calendar: <span style="font-weight: 300">manage your booking schedule</span></label>
                     </div>
 
                     <div class="form-check" style="margin-bottom: 0.7rem">
-                        <input class="form-check-input" type="radio" id="selectPayments">
+                        <input class="form-check-input" type="radio" id="selectPayments"  v-model="proPlanActionType" value="Payment" >
                         <label class="form-check-label" for="selectPayments">Payments:
                             <span style="font-weight: 300">accept
                                 <span><img style="height: 35px; margin: 0px 5px 2px" src="../../../assets/img/PayPal-logo.png"></span> and
@@ -110,7 +110,7 @@
                     </div>
 
                     <div class="form-check" style="margin-bottom: 2rem">
-                        <input class="form-check-input" type="radio" id="selectCalendarAndPayments">
+                        <input class="form-check-input" type="radio" id="selectCalendarAndPayments" v-model="proPlanActionType" value="BookingAndPayment" >
                         <label class="form-check-label" for="selectCalendarAndPayments">Both calendar and payments</label>
                     </div>
 
@@ -121,23 +121,28 @@
                 </div>
 
 
-                <div v-if="invoice" class="form-group" style="margin-bottom: 4rem">
+                <div v-if="invoice && !contact.status.messageSent" class="form-group" style="margin-bottom: 4rem">
                     <label for="invoiceData">Provide your full name and address for invoicing purposes</label>
-                    <textarea class="form-control" id="invoiceData" rows="6" v-model="bio" placeholder="Here type your full name and address for invoicing purposes"></textarea>
+                    <textarea class="form-control" id="invoiceData" rows="6" v-model="invoiceData" placeholder="Here type your full name and address for invoicing purposes"></textarea>
                 </div>
 
 
-                <div class="row justify-content-center">
+                <div v-if="!contact.status.messageSent" class="row justify-content-center">
                     <a class="col-4 btn btn-primary btn-border btn-cancel" @click="$bvModal.hide('payment-booking-modal')" v-on:click="restartPopup()">Cancel</a>
 
-                    <a href="#" id="choosePro" class="col-7 btn btn-primary btn-border" v-on:click="chooseProPlan()">GO PRO PLAN</a>
-                    <button type="submit" id="submitInvoice" class="col-7 btn btn-primary btn-border" style="display: none" v-on:click="restartPopup()" :disabled="account.status.updatingPaymentBookingForm">SUBMIT
-                        <img v-show=" account.status.updatingPaymentBookingForm" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+                    <a href="#" id="choosePro" class="col-7 btn btn-primary btn-border" v-if="!invoice" v-on:click="invoice=true">GO PRO PLAN</a>
+                    <button type="submit" id="submitInvoice" class="col-7 btn btn-primary btn-border" v-if="invoice" v-on:click="sendInvoice()" :disabled="contact.status.sendingMessage">SUBMIT
+                        <img v-show="contact.status.sendingMessage" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
                     </button>
                 </div>
 
-                <div class="row" style="margin-top: 10px; text-decoration: underline">
-                    <a href="https://www.tutomy.com" target="_blank" v-scroll-to="'#pricing'" id="proPlanInfo" class="col-7 offset-5" style="display: flex; justify-content: center; padding-left: 0">Pricing details</a>
+                <div v-if="!contact.status.messageSent" class="row" style="margin-top: 10px; text-decoration: underline">
+                    <a id="proPlanInfo" class="col-7 offset-5"  style="display: flex; justify-content: center; padding-left: 0"><router-link to="/#pricing">Pricing details</router-link></a>
+                </div>
+
+                <div v-if="contact.status.messageSent">
+                    <h4>Invoice Data successfully saved!</h4>
+                    <p>Thank you for choosing us, we'll activate the plan as soon as we can.</p>
                 </div>
             </form>
         </b-modal>
@@ -153,110 +158,65 @@
         data() {
             return {
                 submitted: false,
-                data: {},
-                bookingLinkInput: '',
-                paymentLinkInput: '',
-                bookingPaymentLinkInput: '',
-                proPlan: false,
-                invoice: false
+                data: {
+                    bookingLink: '',
+                    paymentLinkInput: '',
+                    email: ''
+                },
+                proPlan: true,
+                invoice: false,
+                actionType: '',
+                proPlanActionType: '',
+                invoiceData: ''
             }
         },
         props: ['profileProp'],
         computed: {
             ...mapState({
                 alert: state => state.alert,
-                account: state => state.account
+                account: state => state.account,
+                contact: state => state.contact
             }),
             name: function () {
                 if(this.profileProp.profile.firstName)
                     return this.profileProp.profile.firstName;
                 else return '< Name >'
-            },
-            actionLink: function () {
-                if(this.data.actionType === 'Payment') {
-                   return this.paymentLinkInput;
-                } else if(this.data.actionType === 'Booking') {
-                    return this.bookingLinkInput;
-                } else if(this.data.actionType === 'BookingAndPayment') {
-                    return this.bookingPaymentLinkInput;
-                } else {
-                    return undefined;
-                }
             }
-        },
-        mounted() {
-            const that = "/";
-            window.addEventListener('scroll', () => {
-                let scrollPos = window.scrollY;
-                // eslint-disable-next-line no-console
-                if(scrollPos >= 100){
-                    that.isSticky = true;
-                } else {
-                    that.isSticky = false;
-                }
-            })
         },
         watch: {
             'account.status': function (val) {
                 if (val.updatedPaymentBookingForm)
                     this.$bvModal.hide('payment-booking-modal');
-            },
-            'data.actionType': function(val) {
-                if(val === 'Payment') {
-                    this.bookingLinkInput = '';
-                    this.bookingPaymentLinkInput = '';
-                } else if(val === 'Booking') {
-                    this.bookingPaymentLinkInput = '';
-                    this.paymentLinkInput = '';
-                } else if(val === 'BookingAndPayment') {
-                    this.bookingLinkInput = '';
-                    this.paymentLinkInput = '';
-                } else if(val === 'None') {
-                    this.bookingLinkInput = '';
-                    this.bookingPaymentLinkInput = '';
-                    this.paymentLinkInput = '';
-                } else {
-                    this.bookingLinkInput = '';
-                    this.bookingPaymentLinkInput = '';
-                    this.paymentLinkInput = '';
-                }
             }
         },
         methods: {
             ...mapActions('account', ['updatePaymentBooking']),
             ...mapActions('alert', ['clear']),
+            ...mapActions('contact', ['sendContactMessage']),
             initModal() {
                 this.submitted = false;
+                this.proPlan = this.profileProp.profile.proPlan;
+                this.proPlan = false;
                 this.data = {
                     email: this.profileProp.profile.email,
-                    actionType: this.profileProp.profile.actionType,
+                    bookingLink: this.profileProp.profile.bookingLink,
+                    paymentLink: this.profileProp.profile.paymentLink
                 };
-                if(this.profileProp.profile.actionType === 'Payment') {
-                    this.paymentLinkInput = this.profileProp.profile.actionLink;
-                } else if(this.profileProp.profile.actionType === 'Booking') {
-                    this.bookingLinkInput = this.profileProp.profile.actionLink;
-                } else if(this.profileProp.profile.actionType === 'BookingAndPayment') {
-                    console.log(this.profileProp.profile.actionLink)
-                    this.bookingPaymentLinkInput = this.profileProp.profile.actionLink;
+
+                if(this.profileProp.profile.bookingLink && !this.profileProp.profile.paymentLink) {
+                    this.actionType = 'Booking';
+                } else if(this.profileProp.profile.paymentLink && !this.profileProp.profile.bookingLink) {
+                    this.actionType = 'Payment';
+                } else if(this.profileProp.profile.paymentLink && this.profileProp.profile.bookingLink) {
+                    this.actionType = 'BookingAndPayment';
+                    this.data.bookingLink = '';
+                    this.data.paymentLink = '';
+                    this.data.bookingLink2 = this.profileProp.profile.bookingLink;
+                    this.data.paymentLink2 = this.profileProp.profile.paymentLink;
+                } else {
+                    this.actionType = 'None';
                 }
                 this.clear();
-            },
-            chooseProPlan: function () {
-                let x = document.getElementById("choosePro");
-                if (x.style.display === "none") {
-                  x.style.display = "block";
-                } else {
-                  x.style.display = "none";
-                }
-
-                let y = document.getElementById("submitInvoice");
-                if (y.style.display === "none") {
-                  y.style.display = "block";
-                } else {
-                  y.style.display = "none";
-                }
-
-                this.invoice = true;
             },
             restartPopup: function () {
                 this.invoice = false;
@@ -267,11 +227,22 @@
                     if (!success) {
                         return;
                     }
-                    this.data['actionLink'] = this.actionLink;
-                    console.log(this.data)
-                    this.updatePaymentBooking(this.data);
+                    if(this.actionType === 'BookingAndPayment') {
+                        const data  = {
+                            email: this.data.email,
+                            bookingLink: this.data.bookingLink2,
+                            paymentLink: this.data.paymentLink2
+                        };
+                        this.updatePaymentBooking(data);
+                    } else {
+                        this.updatePaymentBooking(this.data);
+                    }
+
                 });
 
+            },
+            sendInvoice() {
+                this.sendContactMessage({message: this.invoiceData + '\n' + this.proPlanActionType})
             }
         }
     }
