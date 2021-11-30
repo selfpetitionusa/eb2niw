@@ -99,8 +99,8 @@
                         <label class="form-check-label" for="selectCalendar">Calendar: <span style="font-weight: 300">manage your booking schedule</span></label>
                     </div>
 
-                    <div class="form-check" style="margin-bottom: 0.7rem">
-                        <input class="form-check-input" type="radio" id="selectPayments"  v-model="proPlanActionType" value="Payment" >
+                    <div class="form-check" style="margin-bottom: 0.7rem; display: flex; align-items: center">
+                        <input class="form-check-input" type="radio" style="margin-bottom: 5px" id="selectPayments"  v-model="proPlanActionType" value="Payment" >
                         <label class="form-check-label" for="selectPayments">Payments:
                             <span style="font-weight: 300">accept
                                 <span><img style="height: 35px; margin: 0px 5px 2px" src="../../../assets/img/PayPal-logo.png"></span> and
