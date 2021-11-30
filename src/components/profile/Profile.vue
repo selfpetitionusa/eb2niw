@@ -120,7 +120,7 @@
 
                         <a v-if="!response.profile.firstName && !response.profile.email && cmsToggle"  href="#" v-b-modal.contact-modal  class="btn btn-primary inner-booking" role="button">Contact &lt; Name &gt;</a>
 
-                        <a v-if="cmsToggle" href="#" class="btn btn-primary btn-border inner-booking" v-on:click="clickPaymentsButtonEditMode()">Book</a>
+                        <a v-if="cmsToggle" href="#" class="btn btn-primary btn-border inner-booking" style="margin-bottom: 0px" v-on:click="clickPaymentsButtonEditMode()">Book</a>
                         <a v-if="cmsToggle" href="#" class="btn btn-primary btn-border inner-booking" v-on:click="clickPaymentsButtonEditMode()">Pay</a>
                             <div v-if="paymentsButtonInfo" class="alert alert-warning" style="margin: 3px;">
                                 <div style="font-weight: 600; margin-bottom: 2px;">Disabled in edit mode:</div>
