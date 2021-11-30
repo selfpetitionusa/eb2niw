@@ -142,7 +142,7 @@
 
                 <div v-if="contact.status.messageSent">
                     <h4>Invoice Data successfully saved!</h4>
-                    <p>Thank you for choosing us, we'll activate the plan as soon as we can.</p>
+                    <p>Thank you for upgrading your Tutomy plan, we'll activate the plan and contact you within 48h.</p>
                 </div>
             </form>
         </b-modal>
