@@ -137,7 +137,7 @@
                 </div>
 
                 <div v-if="!contact.status.messageSent" class="row" style="margin-top: 10px; text-decoration: underline">
-                    <a id="proPlanInfo" class="col-7 offset-5"  style="display: flex; justify-content: center; padding-left: 0"><router-link to="/#pricing">Pricing details</router-link></a>
+                    <a id="proPlanInfo" class="col-7 offset-5"  style="display: flex; justify-content: center; padding-left: 0"><router-link  :to="{ path: '/', query: { pricing: true }}" >Pricing details</router-link></a>
                 </div>
 
                 <div v-if="contact.status.messageSent">

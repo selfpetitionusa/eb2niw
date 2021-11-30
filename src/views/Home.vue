@@ -87,6 +87,7 @@
           this.$refs['modal-3'].show();
         }
         this.$store.commit('popup/setSeen');
+
       }
     },
     data() {
@@ -95,7 +96,6 @@
         currentUrl: ''
       }
     },
-
     watch: {
       '$route'(pathUrl){
         this.currentUrl = pathUrl.path;
@@ -108,6 +108,8 @@
       this.currentUrl = window.location.pathname;
       setTimeout(() => {
         this.isLoading = false
+        if(this.$route.query.pricing)
+          this.$scrollTo(document.getElementById('pricing'), 500, {offset: -92});
       }, 2000);
     }
   }
