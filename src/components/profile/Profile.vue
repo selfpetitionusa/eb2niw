@@ -21,7 +21,13 @@
 
 <!-- PROFILE TEMPLATE -->
 
-    <div class="background-rectangular"></div>
+    <div v-if="response.profile.color === 'Royal'"  style="background: linear-gradient(244.35deg, #314194 37.33%, #3B4DAB 43.75%, #5457C1 50.17%, #6B6FEA 76.06%)" class="background-rectangular"></div>
+    <div v-if="response.profile.color === 'Sunrise'" style="background: linear-gradient(244.35deg, #3f87a6, #ebf8e1, #f69d3c)" class="background-rectangular"></div>
+    <div v-if="response.profile.color === 'Rainforest'" style="background: linear-gradient(244.35deg, #DECBA4, #3E5151, #30A443, #236A4A, #368126, #84903A, #6E9842)" class="background-rectangular"></div>
+    <div v-if="response.profile.color === 'Peach'"  style="background: linear-gradient(244.35deg, #d64c7f, #ee4758, #f69d3c)"  class="background-rectangular"></div>
+    <div v-if="response.profile.color === 'Slate'" style="background: linear-gradient(244.35deg, #2c3e50, #374052, #dadfe8, #929bb3, #dadfe8)"  class="background-rectangular"></div>
+    <div v-if="response.profile.color === 'Ocean'"  style="background: linear-gradient(244.35deg, #c2d7f0, #3080e1, #52CAEC, #1697AC, #6BC2D6, #052f63)"  class="background-rectangular"></div>
+
     <div id="tu-container" class="tu-container">
     <div class="row website-split">
 
@@ -207,7 +213,12 @@
                         </div>
 
                         <div class="col graphic-bio">
-                            <img src="../../assets/img/Graphic_bio_royal.svg">
+                            <img v-if="response.profile.color === 'Royal'" src="../../assets/img/Graphic_bio_royal.svg">
+                            <img v-if="response.profile.color === 'Ocean'" src="../../assets/img/Graphic_bio_ocean.svg">
+                            <img v-if="response.profile.color === 'Peach'" src="../../assets/img/Graphic_bio_peach.svg">
+                            <img v-if="response.profile.color === 'Rainforest'" src="../../assets/img/Graphic_bio_rainforest.svg">
+                            <img v-if="response.profile.color === 'Slate'" src="../../assets/img/Graphic_bio_slate.svg">
+                            <img v-if="response.profile.color === 'Sunrise'" src="../../assets/img/Graphic_bio_sunrise.svg">
                         </div>
 
                     </div>
@@ -286,7 +297,7 @@
 
 <!-- TESTIMONIALS SECTION -->
 
-            <div id="section-testimonials" class="tu-card">
+            <div id="section-testimonials" v-if="response.testimonials.length || cmsToggle" class="tu-card">
 
                 <div class="section-container">
                     <div class="icon"></div>
@@ -320,7 +331,7 @@
                                             </div>
                                         </div>
 
-                                        <Rating v-if="!response.testimonials && cmsToggle"></Rating>
+                                        <Rating v-if="response.testimonials.length === 0 && cmsToggle"></Rating>
 
                                 </slick>
                             </div>
@@ -371,7 +382,13 @@
                     </div>
 
                     <div class="col-xl-6 col-lg-5 col-md-5 col-sm-4 col-0 graphic-rates">
-                        <img src="../../assets/img/Rates_graphic_royal.svg" />
+                        <img v-if="response.profile.color === 'Royal'" src="../../assets/img/Rates_graphic_royal.svg">
+                        <img v-if="response.profile.color === 'Ocean'" src="../../assets/img/Rates_graphic_ocean.svg">
+                        <img v-if="response.profile.color === 'Peach'" src="../../assets/img/Rates_graphic_peach.svg">
+                        <img v-if="response.profile.color === 'Rainforest'" src="../../assets/img/Rates_graphic_rainforest.svg">
+                        <img v-if="response.profile.color === 'Slate'" src="../../assets/img/Rates_graphic_slate.svg">
+                        <img v-if="response.profile.color === 'Sunrise'" src="../../assets/img/Rates_graphic_sunrise.svg">
+
                     </div>
 
                 </div>
@@ -688,7 +705,8 @@
           },
           getImgUrl: function (index) {
               const number = index % 6;
-              return require('../../assets/img/icon_expertise' + number + '.svg')
+              const color = this.response.profile.color.toLowerCase()
+              return require('../../assets/img/icon_expertise_' + color + number + '.svg')
           },
           scroll: function (direction) {
               const p = document.getElementById('problems');

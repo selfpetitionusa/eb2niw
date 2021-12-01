@@ -19,6 +19,16 @@
 
                 </div>
 
+                <div class="form-group">
+                    <label for="email">E-mail *</label>
+                    <ValidationProvider rules="required|email" v-slot="{ errors }" >
+                        <input type="email" class="form-control" v-model="email" id="email" aria-describedby="emailHelp" :class="{ 'is-invalid':  submitted && errors.length }">
+                        <div v-if="submitted && errors.includes('required')" class="invalid-feedback">Email is required</div>
+                        <div v-if="submitted && errors.includes('email')" class="invalid-feedback">Email has wrong format</div>
+                    </ValidationProvider>
+                    <small id="emailHelp" class="form-text text-muted">For website visitors to contact you</small>
+                </div>
+
                 <div class="form-title">
                     <p>Name and subject list will be automatically populated after you complete “Subjects” section.</p>
                 </div>
@@ -63,6 +73,7 @@
           return {
               firstName: this.profileProp.profile.firstName,
               lastName: this.profileProp.profile.lastName,
+              email: this.profileProp.profile.email,
               firstLine: this.initLine(0),
               secondLine: this.initLine(1),
               thirdLine: this.initLine(2),
@@ -103,6 +114,7 @@
               this.submitted = false;
               this.firstName = this.profileProp.profile.firstName;
               this.lastName = this.profileProp.profile.lastName;
+              this.email = this.profileProp.profile.email;
               this.firstLine = this.initLine(0);
               this.secondLine = this.initLine(1);
               this.thirdLine = this.initLine(2);
@@ -132,6 +144,7 @@
                   }
                   const firstName = this.firstName;
                   const lastName = this.lastName;
+                  const email = this.email;
                   var shortBio = '';
                   if(this.firstLine) {
                       shortBio = this.firstLine + '\n';
@@ -143,7 +156,7 @@
                       shortBio = shortBio + this.thirdLine;
                   }
                   shortBio = shortBio.trim();
-                  this.updateNameInfo({firstName, lastName, shortBio});
+                  this.updateNameInfo({firstName, lastName, email, shortBio});
               });
 
           }

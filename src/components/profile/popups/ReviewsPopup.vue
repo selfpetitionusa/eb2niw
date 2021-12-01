@@ -102,7 +102,7 @@
                 account: state => state.account
             }),
             isActiveReviewerMinus: function () {
-                return this.data.testimonials.length > 1;
+                return this.data.testimonials.length > 0;
             },
         },
         methods: {
@@ -129,7 +129,7 @@
 
             },
             deleteTestimonial: function() {
-                if(this.data.testimonials.length > 1) {
+                if(this.data.testimonials.length > 0) {
                     this.data.testimonials.pop();
                 }
             },
