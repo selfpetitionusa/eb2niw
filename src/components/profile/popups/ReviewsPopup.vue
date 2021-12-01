@@ -12,8 +12,10 @@
                         <label for="stars">Did you receive a star rating review?</label>
                             <div class="star-rating">
                                 <ValidationProvider rules="required" v-slot="{ errors }" >
-                                <input type="number" max="5" min="0" class="form-control" id="stars" v-model.number="testimonial.stars" :class="{ 'is-invalid': submitted && errors.length }" >
-                                <p>stars (selecting "0" hides stars)</p>
+                                <div style="display: flex; align-items: center">
+                                    <input type="number" max="5" min="0" class="form-control" id="stars" v-model.number="testimonial.stars" :class="{ 'is-invalid': submitted && errors.length }" >
+                                    <p>stars (selecting "0" hides stars)</p>
+                                </div>
                                 <div v-if="submitted && errors.length" class="invalid-feedback">Rating is required</div>
                                 </ValidationProvider>
                             </div>
