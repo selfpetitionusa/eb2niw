@@ -207,7 +207,7 @@
                         </div>
 
                         <div class="col graphic-bio">
-                            <img src="../../assets/img/Graphic_bio_pink.svg">
+                            <img src="../../assets/img/Graphic_bio_royal.svg">
                         </div>
 
                     </div>
@@ -371,7 +371,7 @@
                     </div>
 
                     <div class="col-xl-6 col-lg-5 col-md-5 col-sm-4 col-0 graphic-rates">
-                        <img src="../../assets/img/Rates_graphic_purple.svg" />
+                        <img src="../../assets/img/Rates_graphic_royal.svg" />
                     </div>
 
                 </div>
