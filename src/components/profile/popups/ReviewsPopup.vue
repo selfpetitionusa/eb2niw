@@ -56,7 +56,7 @@
                 </div>
 
                 <div class="plus-minus">
-                    <font-awesome-icon class="icon active" icon="plus-circle" v-bind:class="[isActiveReviewerPlus ? 'active' : 'disabled']" v-on:click="addTestimonial" />
+                    <font-awesome-icon class="icon active" icon="plus-circle" v-on:click="addTestimonial" />
                     <font-awesome-icon class="icon" icon="minus-circle" v-bind:class="[isActiveReviewerMinus ? 'active' : 'disabled']" v-on:click="deleteTestimonial" />
                 </div>
                 <p class="plus-minus-comment">Reviewer</p>
@@ -104,25 +104,19 @@
             isActiveReviewerMinus: function () {
                 return this.data.testimonials.length > 1;
             },
-            isActiveReviewerPlus: function () {
-                return this.data.testimonials.length < 10;
-            }
         },
         methods: {
             ...mapActions('account', ['updateTestimonials']),
             ...mapActions('alert', ['clear']),
             addTestimonial: function() {
-                if(this.data.testimonials.length < 10) {
-                    this.data.testimonials.push({
-                        id: Date.now(),
-                        stars: 0,
-                        reviewerName: "",
-                        reviewerDescription: "",
-                        url: "",
-                        testimonial: ""
-                    });
-                }
-
+                this.data.testimonials.push({
+                    id: Date.now(),
+                    stars: 0,
+                    reviewerName: "",
+                    reviewerDescription: "",
+                    url: "",
+                    testimonial: ""
+                });
             },
             initModal() {
                 this.submitted = false;
