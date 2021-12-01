@@ -20,11 +20,9 @@
                     <div class="single-footer-widget pl-5">
                         <h3>Company</h3>
                         <ul class="list">
-
-                            <li><a href="/"  v-scroll-to="'#about'">About</a></li>
                             <li><a href="/"  v-scroll-to="'#solutions'">Solutions</a></li>
-                            <li><a href="/"  v-scroll-to="'#pricing'">Pricing</a></li>
                             <li><a href="/"  v-scroll-to="'#testimonials'">Testimonials</a></li>
+                            <li><a href="/"  v-scroll-to="'#pricing'">Pricing</a></li>
                         </ul>
                     </div>
                 </div>

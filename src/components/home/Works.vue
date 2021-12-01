@@ -20,19 +20,19 @@
             >
                 <slide>
                     <div class="single-works">
-                        <img src="../../assets/img/landing-slider-1.png" alt="Finding students with Tutomy website - example view">
+                        <img src="../../assets/img/landing-slider-1.png" alt="Finding students with Tutomy website - payments view">
                         <a v-if="windowWidth > 767" @click="index = 0;$refs['modal-zoom'].show()" style="cursor: pointer;" class="icon"><feather type="zoom-in"></feather></a>
 
                         <div class="works-content">
-                            <h3><a href="#">How do your clients see you?</a></h3>
-                            <p>Professional tutoring website which you can create in just 11 minutes</p>
+                            <h3><a href="#">Process payments on autopilot</a></h3>
+                            <p>Get paid with PayPal and Stripe (cards, Apple Pay, Google Pay) - no more chasing unpaid invoices!</p>
                         </div>
                     </div>
                 </slide>
 
                 <slide>
                     <div class="single-works">
-                        <img src="../../assets/img/landing-slider-2.png" alt="Finding students with Tutomy website - edit view">
+                        <img src="../../assets/img/landing-slider-2.png" alt="Finding students with Tutomy website - mobile view">
                         <a v-if="windowWidth > 767" @click="index = 1;$refs['modal-zoom'].show()" style="cursor: pointer;" class="icon"><feather type="zoom-in"></feather></a>
 
                         <div class="works-content">
@@ -44,24 +44,24 @@
 
                 <slide>
                     <div class="single-works">
-                        <img src="../../assets/img/landing-slider-3.png" alt="Finding students with Tutomy website - mobile view">
+                        <img src="../../assets/img/landing-slider-3.png" alt="Finding students with Tutomy website - calendar, bookings and payments">
                         <a v-if="windowWidth > 767" @click="index = 2;$refs['modal-zoom'].show()" style="cursor: pointer;" class="icon"><feather type="zoom-in"></feather></a>
 
                         <div class="works-content">
-                            <h3><a href="#">Add your photo or logo</a></h3>
-                            <p>It tremendously increases the number of students who contact you</p>
+                            <h3><a href="#">Automate your one-time and recurring calendar bookings</a></h3>
+                            <p>Save time by letting students book lessons directly on your website</p>
                         </div>
                     </div>
                 </slide>
 
                 <slide>
                     <div class="single-works">
-                        <img src="../../assets/img/landing-slider-4.png" alt="Finding students with Tutomy website - edit rates view">
+                        <img src="../../assets/img/landing-slider-4.png" alt="Finding students with Tutomy website - add photo view">
                         <a v-if="windowWidth > 767" @click="index = 3;$refs['modal-zoom'].show()" style="cursor: pointer;" class="icon"><feather type="zoom-in"></feather></a>
 
                         <div class="works-content">
-                            <h3><a href="#">Decide how much information to include</a></h3>
-                            <p>Website is flexible to accommodate your individual business needs</p>
+                            <h3><a href="#">Add your photo or logo</a></h3>
+                            <p>It tremendously increases the number of students who contact you</p>
                         </div>
                     </div>
                 </slide>
@@ -85,19 +85,19 @@ export default {
             index: 0,
             modalProperties: [
                 {
-                 title : "How do your clients see you?",
-                 img: "./landing-slider-1.png"
+                   title : "Process payments on autopilot",
+                   img: "./landing-slider-1.png"
                 },
                 {
                     title : "Looks great on mobile and desktop",
                     img: "./landing-slider-2.png"
                 },
                 {
-                    title : "Add your photo or logo",
+                    title : "Automate your one-time and recurring calendar bookings",
                     img: "./landing-slider-3.png"
                 },
                 {
-                    title : "Decide how much information to include",
+                    title : "Add your photo or logo",
                     img: "./landing-slider-4.png"
                 }
 

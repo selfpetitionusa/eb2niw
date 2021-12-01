@@ -5,6 +5,7 @@ import ProfileView from './views/ProfileView';
 import EditProfileView from './views/EditProfileView';
 import Preview from './views/Preview';
 import Help from './views/Help';
+import Colors from './views/Colors';
 import Account from './views/Account';
 import Login from './views/Login';
 import Register from './views/Register';
@@ -13,6 +14,7 @@ import PasswordReset from './views/PasswordReset';
 import NeedsAssessment from './views/NeedsAssessment';
 import BasicInfo from './views/account/BasicInfo';
 import AccountPasswordReset from './views/account/AccountPasswordReset';
+import PaymentBooking from './views/PaymentBooking';
 import ProfileLink from './views/account/ProfileLink';
 import AdminDashboardView from "./views/AdminDashboardView";
 
@@ -34,6 +36,7 @@ export const router = new VueRouter({
       { path: '/dashboard', component: EditProfileView },
       { path: '/preview', component: Preview },
       { path: '/help', component: Help },
+      { path: '/colors', component: Colors },
       { path: '/admin', component: AdminDashboardView },
       {
             path: '/account',
@@ -52,6 +55,11 @@ export const router = new VueRouter({
                     component: ProfileLink
                 }
             ]
+      },
+      {
+            path: '/bookandpay',
+            component: PaymentBooking,
+
       },
       // otherwise redirect to home
       { path: '*', redirect: '/' }

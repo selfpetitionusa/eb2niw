@@ -21,7 +21,13 @@
 
 <!-- PROFILE TEMPLATE -->
 
-    <div class="background-rectangular"></div>
+    <div v-if="response.profile.color === 'Royal'"  style="background: linear-gradient(244.35deg, #314194 37.33%, #3B4DAB 43.75%, #5457C1 50.17%, #6B6FEA 76.06%)" class="background-rectangular"></div>
+    <div v-if="response.profile.color === 'Sunrise'" style="background: linear-gradient(244.35deg, #3f87a6, #ebf8e1, #f69d3c)" class="background-rectangular"></div>
+    <div v-if="response.profile.color === 'Rainforest'" style="background: linear-gradient(244.35deg, #DECBA4, #3E5151, #30A443, #236A4A, #368126, #84903A, #6E9842)" class="background-rectangular"></div>
+    <div v-if="response.profile.color === 'Peach'"  style="background: linear-gradient(244.35deg, #d64c7f, #ee4758, #f69d3c)"  class="background-rectangular"></div>
+    <div v-if="response.profile.color === 'Slate'" style="background: linear-gradient(244.35deg, #2c3e50, #374052, #dadfe8, #929bb3, #dadfe8)"  class="background-rectangular"></div>
+    <div v-if="response.profile.color === 'Ocean'"  style="background: linear-gradient(244.35deg, #c2d7f0, #3080e1, #52CAEC, #1697AC, #6BC2D6, #052f63)"  class="background-rectangular"></div>
+
     <div id="tu-container" class="tu-container">
     <div class="row website-split">
 
@@ -120,15 +126,15 @@
 
                         <a v-if="!response.profile.firstName && !response.profile.email && cmsToggle"  href="#" v-b-modal.contact-modal  class="btn btn-primary inner-booking" role="button">Contact &lt; Name &gt;</a>
 
-                        <a v-if="cmsToggle" href="#" class="btn btn-primary btn-border inner-booking" v-on:click="clickPaymentsButtonEditMode()">Book / Pay</a>
+                        <a v-if="cmsToggle" href="#" class="btn btn-primary btn-border inner-booking" style="margin-bottom: 0px" v-on:click="clickPaymentsButtonEditMode()">Book</a>
+                        <a v-if="cmsToggle" href="#" class="btn btn-primary btn-border inner-booking" v-on:click="clickPaymentsButtonEditMode()">Pay</a>
                             <div v-if="paymentsButtonInfo" class="alert alert-warning" style="margin: 3px;">
                                 <div style="font-weight: 600; margin-bottom: 2px;">Disabled in edit mode:</div>
                                 <div style="font-size: 12px"> -> Click edit icon to add link</div>
                                 <div style="font-size: 12px"> -> Check result in PREVIEW</div>
                             </div>
-                        <a v-if="!cmsToggle && response.profile.actionType === 'Booking'" :href="response.profile.actionLink" class="btn btn-primary btn-border inner-booking">Book</a>
-                        <a v-if="!cmsToggle && response.profile.actionType === 'Payment'" :href="response.profile.actionLink" class="btn btn-primary btn-border inner-booking">Pay</a>
-                        <a v-if="!cmsToggle && response.profile.actionType === 'BookingAndPayment'" :href="response.profile.actionLink" class="btn btn-primary btn-border inner-booking">Book & Pay</a>
+                        <a v-if="!cmsToggle && response.profile.bookingLink" :href="response.profile.bookingLink" class="btn btn-primary btn-border inner-booking">Book</a>
+                        <a v-if="!cmsToggle && response.profile.paymentLink === 'Payment'" :href="response.profile.paymentLink" class="btn btn-primary btn-border inner-booking">Pay</a>
                     </div>
                 </div>
             </div>
@@ -207,7 +213,12 @@
                         </div>
 
                         <div class="col graphic-bio">
-                            <img src="../../assets/img/Graphic_bio.svg">
+                            <img v-if="response.profile.color === 'Royal'" src="../../assets/img/Graphic_bio_royal.svg">
+                            <img v-if="response.profile.color === 'Ocean'" src="../../assets/img/Graphic_bio_ocean.svg">
+                            <img v-if="response.profile.color === 'Peach'" src="../../assets/img/Graphic_bio_peach.svg">
+                            <img v-if="response.profile.color === 'Rainforest'" src="../../assets/img/Graphic_bio_rainforest.svg">
+                            <img v-if="response.profile.color === 'Slate'" src="../../assets/img/Graphic_bio_slate.svg">
+                            <img v-if="response.profile.color === 'Sunrise'" src="../../assets/img/Graphic_bio_sunrise.svg">
                         </div>
 
                     </div>
@@ -235,8 +246,6 @@
 <!-- SUBJECTS SECTION -->
 
             <div v-if="(!(response.categories.length === 0 && response.profile.studentsProfile === null) || cmsToggle)" id="section-subjects" class="tu-card">
-
-                <img v-if="!cmsToggle" class="figure-subjects" src="../../assets/img/subjects_figures.png">
 
                 <div class="section-container">
                     <div class="icon"></div>
@@ -286,12 +295,56 @@
                 </div>
             </div>
 
+<!-- TESTIMONIALS SECTION -->
+
+            <div id="section-testimonials" v-if="response.testimonials.length || cmsToggle" class="tu-card">
+
+                <div class="section-container">
+                    <div class="icon"></div>
+                    <div class="header"><h2>Testimonials</h2></div>
+                </div>
+
+                <div :class="[cmsToggle && 'cms-frame tu-card-frame margin-frame']">
+                    <div v-if="cmsToggle">
+                        <ReviewsPopup v-bind:profileProp="response"></ReviewsPopup>
+                        <a href="#" class="edit" v-b-modal.reviews-modal>
+                            <font-awesome-icon icon="edit" />
+                        </a>
+                    </div>
+
+
+                    <div class="feedback-slides">
+                        <div class="client-feedback">
+                            <div>
+                                <slick
+                                    ref="slick3"
+                                    :options="slickOptions">
+
+
+                                        <div class="item" v-for="testimonial in response.testimonials" :key="testimonial.id" >
+                                            <div class="tutor-testimonial single-feedback" style="margin-bottom: 0px; padding-left: 0px">
+                                                <h6>{{'⭐'.repeat(Math.min(testimonial.stars,5))}}</h6>
+                                                <div class="reviewer">{{testimonial.reviewerName}}</div>
+                                                <div>{{testimonial.reviewerDescription}}</div>
+                                                <a :href="testimonial.url" class="source">Review link</a>
+                                                <div class="testimonial">{{testimonial.testimonial}}</div>
+                                            </div>
+                                        </div>
+
+                                        <Rating v-if="response.testimonials.length === 0 && cmsToggle"></Rating>
+
+                                </slick>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
 
 <!-- RATES SECTION -->
 
             <div id="section-rates" class="tu-card">
 
-                <img class="figure-terms" src="../../assets/img/rates_figure.png">
                 <div class="section-container">
                     <div class="icon"></div>
                     <div class="header"><h2>Rates</h2></div>
@@ -329,7 +382,13 @@
                     </div>
 
                     <div class="col-xl-6 col-lg-5 col-md-5 col-sm-4 col-0 graphic-rates">
-                        <img src="../../assets/img/Rates_graphic.svg" />
+                        <img v-if="response.profile.color === 'Royal'" src="../../assets/img/Rates_graphic_royal.svg">
+                        <img v-if="response.profile.color === 'Ocean'" src="../../assets/img/Rates_graphic_ocean.svg">
+                        <img v-if="response.profile.color === 'Peach'" src="../../assets/img/Rates_graphic_peach.svg">
+                        <img v-if="response.profile.color === 'Rainforest'" src="../../assets/img/Rates_graphic_rainforest.svg">
+                        <img v-if="response.profile.color === 'Slate'" src="../../assets/img/Rates_graphic_slate.svg">
+                        <img v-if="response.profile.color === 'Sunrise'" src="../../assets/img/Rates_graphic_sunrise.svg">
+
                     </div>
 
                 </div>
@@ -338,7 +397,7 @@
 <!-- TERMS -->
 
                 <div class="terms-container">
-                    <div class="terms frame-terms">
+                    <div class="terms">
                         <div v-if="cmsToggle">
                             <TermsPopup v-bind:profileProp="response"></TermsPopup>
                             <a href="#" class="edit edit-terms" v-b-modal.terms-modal>
@@ -506,12 +565,15 @@
 
 
 <script>
+    import Slick from 'vue-slick';
+    import 'slick-carousel/slick/slick.css';
 
     import School from './section/School';
     import Certificate from './section/Certificate';
     import Subject from './section/Subject';
     import Rate from './section/Rate';
     import ProblemCard from './section/ProblemCard';
+    import Rating from './section/Rating.vue';
 
     import PhotoPopup from '../profile/popups/PhotoPopup';
     import NamePopup from '../profile/popups/NamePopup';
@@ -519,6 +581,7 @@
     import EducationPopup from '../profile/popups/EducationPopup';
     import BioPopup from '../profile/popups/BioPopup';
     import SubjectsPopup from '../profile/popups/SubjectsPopup';
+    import ReviewsPopup from '../profile/popups/ReviewsPopup';
     import RatesPopup from '../profile/popups/RatesPopup';
     import TermsPopup from '../profile/popups/TermsPopup';
     import YouTubePopup from '../profile/popups/YouTubePopup';
@@ -536,6 +599,7 @@
       Subject,
       Rate,
       // YouTube,
+      Rating,
       ProblemCard,
       PhotoPopup,
       NamePopup,
@@ -543,11 +607,13 @@
       EducationPopup,
       BioPopup,
       SubjectsPopup,
+      ReviewsPopup,
       RatesPopup,
       TermsPopup,
       YouTubePopup,
       ProblemCardsPopup,
-      PaymentBookingPopup
+      PaymentBookingPopup,
+      Slick,
     },
     props: ['cmsToggleProp',  'profileProp'],
     computed: {
@@ -569,6 +635,18 @@
       mounted() {
           this.calculateWidths();
       },
+      beforeUpdate() {
+          if (this.$refs.slick3) {
+              this.$refs.slick3.destroy();
+          }
+      },
+      updated() {
+          this.$nextTick(function () {
+              if (this.$refs.slick3) {
+                  this.$refs.slick3.create(this.slickOptions);
+              }
+          });
+      },
       metaInfo() {
           return {
               title: `${this.response.profile.firstName} ${this.response.profile.lastName} - ${this.response.profile.headline}`,
@@ -587,7 +665,18 @@
             scrollWidth: 0,
             offsetWidth: 0,
             cmsToggle: this.cmsToggleProp,
-            paymentsButtonInfo: false
+            paymentsButtonInfo: false,
+            slickOptions: {
+                speed: 300,
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                autoplaySpeed: 2000,
+                cssEase: 'linear',
+                fade: true,
+                autoplay: true,
+                draggable: true,
+                arrows: false
+            },
         }
     },
       methods: {
@@ -616,7 +705,8 @@
           },
           getImgUrl: function (index) {
               const number = index % 6;
-              return require('../../assets/img/icon_expertise' + number + '.svg')
+              const color = this.response.profile.color.toLowerCase()
+              return require('../../assets/img/icon_expertise_' + color + number + '.svg')
           },
           scroll: function (direction) {
               const p = document.getElementById('problems');

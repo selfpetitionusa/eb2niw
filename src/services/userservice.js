@@ -20,7 +20,9 @@ export const userService = {
     updateBasicInfo,
     getUsers,
     getLeads,
-    updatePaymentBooking
+    updatePaymentBooking,
+    updateColor,
+    updateTestimonials
 };
 
 function login(email, password) {
@@ -111,14 +113,13 @@ function uploadImage(photo, sex) {
     return fetch(`${config.apiUrl}/tutors/photo`, requestOptions).then(handleResponse)
 }
 
-function updateNameInfo(firstName, lastName, email, shortBio) {
+function updateNameInfo(firstName, lastName, shortBio) {
     const requestOptions = {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${localStorage.getItem('token')}` },
         body: JSON.stringify({
             firstName: firstName,
             lastName: lastName,
-            email: email,
             shortBio: shortBio
         })
     };
@@ -140,6 +141,19 @@ function updateLinksInfo(instagram, youtube, linkedin, facebook) {
 
     return fetch(`${config.apiUrl}/tutors/links-info`, requestOptions).then(handleResponse)
 }
+
+function updateColor(color) {
+    const requestOptions = {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${localStorage.getItem('token')}` },
+        body: JSON.stringify({
+            color: color
+        })
+    };
+
+    return fetch(`${config.apiUrl}/tutors/color`, requestOptions).then(handleResponse)
+}
+
 function updateEducationInfo(educationInfo) {
     const requestOptions = {
         method: 'PATCH',
@@ -221,6 +235,16 @@ function updateProblemCards(data) {
     };
 
     return fetch(`${config.apiUrl}/tutors/problem-cards`, requestOptions).then(handleResponse)
+}
+
+function updateTestimonials(data) {
+    const requestOptions = {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${localStorage.getItem('token')}` },
+        body: JSON.stringify(data)
+    };
+
+    return fetch(`${config.apiUrl}/tutors/testimonials`, requestOptions).then(handleResponse)
 }
 
 function requestPasswordReset(data) {

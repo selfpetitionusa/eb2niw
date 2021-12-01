@@ -25,10 +25,6 @@
 </template>
 
 
-import Profile from "../components/profile/Profile";
-import CmsNav from "../components/profile/section/CmsNav";
-import { mapState, mapActions } from 'vuex'
-
 
 <script>
 

@@ -4,19 +4,13 @@
         <div class="container register">
             <div class="row">
                 <div class="col-lg-6 col-md-8 col-sm-12 offset-lg-3 offset-md-2">
-                    <h3>Start 7-day FREE trial</h3>
+                    <h3>Start 10-day FREE trial</h3>
                     <div class="subject-subcategories">
                         <ul class="register-conditions">
                             <li>No credit card required</li>
                             <li>Cancel any time</li>
                         </ul>
                     </div>
-                    <h6>Bonus offer: create a website within 48h</h6>
-                    <ul class="bonus-offer" style="margin-bottom: 1.5rem">
-                        <li>Website review by an expert</li>
-                        <li>1-on-1 advice on how to promote it</li>
-                        <li>Progress check-up</li>
-                    </ul>
 
                     <ValidationObserver ref="form">
                         <form @submit.prevent="handleSubmit" novalidate>

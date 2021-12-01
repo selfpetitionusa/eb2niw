@@ -10,7 +10,8 @@
                             <div class="hero-content">
                                 <div class="row">
                                     <div class="col-lg-11">
-                                        <h1>Create a professional website in 11min</h1>
+                                        <h1>Create a simple tutoring website in 11min</h1>
+                                        <h5>Intuitive, even for the non-tech savvy</h5>
 
                                         <div class="tick-section">
                                             <div class="d-block d-sm-none">
@@ -44,14 +45,14 @@
                                             <div class="d-block d-sm-none">
                                                 <div class="tick-row">
                                                     <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                    <p class="tick-input">Need calendar and payments solution?</p>
+                                                    <p class="tick-input">Need calendar and payments integrated?</p>
                                                 </div>
                                             </div>
 
                                                 <div class="d-none d-sm-block">
                                                     <div class="tick-row">
                                                         <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                        <p class="tick-input">Need calendar and payments solution?</p>
+                                                        <p class="tick-input">Need calendar and payments integrated?</p>
                                                     </div>
                                                 </div>
                                         </div>
@@ -109,7 +110,6 @@
 
                         <div class="col-11">
                             <p class="bonus1">No payment or credit card is required</p>
-                            <p class="bonus2"><span>Bonus</span> if you create a website in the next 48h</p>
                         </div>
                     </div>
 
@@ -118,7 +118,6 @@
         </div>
 
         <div class="shape1"><img src="../../assets/img/shape1.png" alt="Tutomy best tutoring website"></div>
-        <div class="shape2 rotateme"><img src="../../assets/img/shape2.svg" alt="Tutomy best tutoring website"></div>
         <div class="shape3"><img src="../../assets/img/shape3.svg" alt="Tutomy best tutoring website"></div>
         <div class="shape4"><img src="../../assets/img/shape4.svg" alt="Tutomy best tutoring website"></div>
         <div class="shape5"><img src="../../assets/img/shape5.png" alt="Tutomy best tutoring website"></div>

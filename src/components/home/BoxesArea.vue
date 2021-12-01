@@ -10,9 +10,6 @@
                     <p>Your website is your new business card. It is what makes prospective students decide to reach out to you or to ignore you.</p>
                 </div>
                 <div class="paragraph">
-                    <p>It builds your credibility by giving people comfort that they are dealing with a professional tutor or freelance teacher.</p>
-                </div>
-                <div class="paragraph">
                     <p>Share your tutoring website link -- with confidence!</p>
                 </div>
             </div>
@@ -32,7 +29,7 @@
                         <div class="icon">
                             <font-awesome-icon class="font-icon" icon="search" />
                         </div>
-                        <h3>Increase your credibility in the eyes of prospective students</h3>
+                        <h3>Increase credibility in the eyes of prospective students</h3>
                     </div>
                 </div>
 

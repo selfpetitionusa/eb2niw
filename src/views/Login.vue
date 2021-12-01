@@ -1,5 +1,5 @@
 <template>
-    <div class="jumbotron" style="height: 100%">
+    <div class="jumbotron" style="height: 100%; background: #F9F6F6">
         <div class="container login">
             <div class="row">
                 <div class="col-sm-6 offset-sm-3">

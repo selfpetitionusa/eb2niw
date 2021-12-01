@@ -86,7 +86,7 @@
               account: state => state.account
           }),
           isActiveCardMinus: function () {
-              return this.data.problemCards.length > 0;
+              return this.data.problemCards.length > 1;
           },
           countsById() {
               const counts = {};
@@ -123,7 +123,7 @@
               });
           },
           deleteProblemCard: function() {
-              if(this.data.problemCards.length > 0) {
+              if(this.data.problemCards.length > 1) {
                   this.data.problemCards.pop();
               }
           },

@@ -31,12 +31,11 @@
     <PreLoader v-if="isLoading" />
     <div>
       <Banner></Banner>
-      <BoxesArea></BoxesArea>
       <ServicesArea></ServicesArea>
       <Works></Works>
+      <Feedback></Feedback>
       <Pricing></Pricing>
 
-      <Feedback></Feedback>
       <!-- Start Ready To Talk Area -->
       <section class="ready-to-talk">
         <div class="container">
@@ -56,7 +55,6 @@
 
 <script>
   import Banner from './../components/home/Banner';
-  import BoxesArea from './../components/home/BoxesArea';
   import ServicesArea from './../components/home/ServicesArea';
   import Pricing from './../components/home/Pricing';
   import Contact from './../components/home/Contact';
@@ -73,7 +71,6 @@
     name: 'Home',
     components: {
       Banner,
-      BoxesArea,
       ServicesArea,
       Pricing,
       Contact,
@@ -90,6 +87,7 @@
           this.$refs['modal-3'].show();
         }
         this.$store.commit('popup/setSeen');
+
       }
     },
     data() {
@@ -98,7 +96,6 @@
         currentUrl: ''
       }
     },
-
     watch: {
       '$route'(pathUrl){
         this.currentUrl = pathUrl.path;
@@ -111,6 +108,8 @@
       this.currentUrl = window.location.pathname;
       setTimeout(() => {
         this.isLoading = false
+        if(this.$route.query.pricing)
+          this.$scrollTo(document.getElementById('pricing'), 500, {offset: -92});
       }, 2000);
     }
   }

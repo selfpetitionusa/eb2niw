@@ -6,12 +6,14 @@ import { email } from 'vee-validate/dist/rules';
 import { oneOf } from 'vee-validate/dist/rules';
 import { confirmed } from 'vee-validate/dist/rules';
 import { min } from 'vee-validate/dist/rules';
+import { numeric } from 'vee-validate/dist/rules';
 
 // No message specified.
 extend('email',{...email, message: 'email'});
 extend('oneOf',{...oneOf, message: 'oneOf'});
 extend('confirmed',{...confirmed, message: 'confirmed'});
 extend('min',{...min, message: 'min'});
+extend('numeric',{...numeric, message: 'numeric'});
 
 Vue.component('ValidationProvider', ValidationProvider);
 Vue.component('ValidationObserver', ValidationObserver);

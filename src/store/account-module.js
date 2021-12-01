@@ -56,9 +56,9 @@ const actions = {
             }
         );
     },
-    updateNameInfo({ dispatch, commit }, {firstName, lastName, email, shortBio}) {
+    updateNameInfo({ dispatch, commit }, {firstName, lastName, shortBio}) {
         commit('updateNameInfoRequest');
-        return userService.updateNameInfo(firstName, lastName, email, shortBio).then(
+        return userService.updateNameInfo(firstName, lastName, shortBio).then(
             (profile) => {
                 commit('getProfileSuccess', profile);
                 commit('updateNameInfoSuccess');
@@ -273,6 +273,39 @@ const actions = {
                     dispatch('alert/error', error, { root: true });
                 }
             );
+    },
+    updateColor({ dispatch, commit }, color) {
+        commit('updateColorRequest');
+        return userService.updateColor(color).then(
+            (profile) => {
+                commit('getProfileSuccess', profile);
+                setTimeout(() => {
+                    commit('updateColorSuccess');
+                    dispatch('alert/success', 'Color Saved', { root: true });
+                })
+            },
+            () => {
+                commit('updateColorFailure');
+                dispatch('alert/error',  'Failed to save color', { root: true });
+            }
+        );
+    },
+    updateTestimonials({ dispatch, commit }, data) {
+        commit('updateTestimonialsRequest');
+        console.log(data.testimonials[0])
+        return userService.updateTestimonials(data).then(
+            (profile) => {
+                commit('getProfileSuccess', profile);
+                commit('updateTestimonialsSuccess');
+                setTimeout(() => {
+                    dispatch('alert/success', 'Testimonials saved', { root: true });
+                })
+            },
+            () => {
+                commit('updateTestimonialsFailure');
+                dispatch('alert/error',  'Failed to update testimonials', { root: true });
+            }
+        );
     }
 
 };
@@ -312,6 +345,7 @@ const mutations = {
     },
     getProfileSuccess(state, profile) {
         state.profile = profile;
+        state.status = {profile: true};
     },
     uploadImageRequest(state) {
         state.status = { uploadingImage: true };
@@ -434,6 +468,24 @@ const mutations = {
         state.status = {};
     },
     updateBasicInfoFailure(state) {
+        state.status = {};
+    },
+    updateColorRequest(state) {
+        state.status = { updatingColor: true };
+    },
+    updateColorSuccess(state) {
+        state.status = {};
+    },
+    updateColorFailure(state) {
+        state.status = {};
+    },
+    updateTestimonialsRequest(state) {
+        state.status = { updatingTestimonials: true };
+    },
+    updateTestimonialsSuccess(state) {
+        state.status = { updatedTestimonials: true };
+    },
+    updateTestimonialsFailure(state) {
         state.status = {};
     }
 
