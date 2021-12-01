@@ -311,7 +311,6 @@
 
 
                                         <div class="item" v-for="testimonial in response.testimonials" :key="testimonial.id" >
-
                                             <div class="tutor-testimonial single-feedback" style="margin-bottom: 0px; padding-left: 0px">
                                                 <h6>{{'⭐'.repeat(Math.min(testimonial.stars,5))}}</h6>
                                                 <div class="reviewer">{{testimonial.reviewerName}}</div>
@@ -320,6 +319,8 @@
                                                 <div class="testimonial">{{testimonial.testimonial}}</div>
                                             </div>
                                         </div>
+
+                                        <Rating v-if="!response.testimonials && cmsToggle"></Rating>
 
                                 </slick>
                             </div>
@@ -555,6 +556,7 @@
     import Subject from './section/Subject';
     import Rate from './section/Rate';
     import ProblemCard from './section/ProblemCard';
+    import Rating from './section/Rating.vue';
 
     import PhotoPopup from '../profile/popups/PhotoPopup';
     import NamePopup from '../profile/popups/NamePopup';
@@ -580,6 +582,7 @@
       Subject,
       Rate,
       // YouTube,
+      Rating,
       ProblemCard,
       PhotoPopup,
       NamePopup,
