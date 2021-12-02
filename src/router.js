@@ -14,7 +14,6 @@ import PasswordReset from './views/PasswordReset';
 import NeedsAssessment from './views/NeedsAssessment';
 import BasicInfo from './views/account/BasicInfo';
 import AccountPasswordReset from './views/account/AccountPasswordReset';
-import PaymentBooking from './views/PaymentBooking';
 import ProfileLink from './views/account/ProfileLink';
 import AdminDashboardView from "./views/AdminDashboardView";
 
@@ -55,11 +54,6 @@ export const router = new VueRouter({
                     component: ProfileLink
                 }
             ]
-      },
-      {
-            path: '/bookandpay',
-            component: PaymentBooking,
-
       },
       // otherwise redirect to home
       { path: '*', redirect: '/' }
