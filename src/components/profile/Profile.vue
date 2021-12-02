@@ -326,7 +326,7 @@
                                                 <h6>{{'⭐'.repeat(Math.min(testimonial.stars,5))}}</h6>
                                                 <div class="reviewer">{{testimonial.reviewerName}}</div>
                                                 <div>{{testimonial.reviewerDescription}}</div>
-                                                <a :href="testimonial.url" class="source">Review link</a>
+                                                <a v-if="testimonial.url" :href="testimonial.url" class="source">Review link</a>
                                                 <div class="testimonial">{{testimonial.testimonial}}</div>
                                             </div>
                                         </div>
@@ -668,9 +668,9 @@
             paymentsButtonInfo: false,
             slickOptions: {
                 speed: 300,
-                slidesToShow: 2,
+                slidesToShow: 1,
                 slidesToScroll: 1,
-                autoplaySpeed: 2000,
+                autoplaySpeed: 4500,
                 cssEase: 'linear',
                 fade: true,
                 autoplay: true,

@@ -4428,6 +4428,7 @@ Rates section - Testimonials
     .testimonial {
           font-size: 16px;
           color: $paragraph-color;
+          margin-top: 16px;
       }
 
         @media (min-width: 992px) and (max-width: 1199px) {
@@ -4445,6 +4446,7 @@ Rates section - Testimonials
     &.single-feedback {
         a.source {
             color: $light-green-color;
+            margin: 0px;
 
             &:hover {
                 color: $black-color;
