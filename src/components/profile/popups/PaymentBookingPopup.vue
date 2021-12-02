@@ -39,13 +39,13 @@
                             <div class="form-inline">
                                 <label class="form-check-label item" for="booking-payment-input">Link bookings and payments (Book & Pay)</label>
                                 <ValidationProvider rules="url" v-slot="{ errors }" >
-                                    <input type="text" class="form-control item"  id="booking-payment-input" size="52%" v-model="data.paymentLink2"  :disabled="actionType !== 'BookingAndPayment'" placeholder="https://bookinglink.com" :class="{ 'is-invalid': submitted && errors.length }" style="margin-bottom: 5px;">
+                                    <input type="text" class="form-control item"  id="booking-payment-input" size="52%" v-model="data.bookingLink2"  :disabled="actionType !== 'BookingAndPayment'" placeholder="https://bookinglink.com" :class="{ 'is-invalid': submitted && errors.length }" style="margin-bottom: 5px;">
                                     <div v-if="submitted && errors.includes('url')" class="invalid-feedback">Link has wrong format, "https://" is required</div>
                                 </ValidationProvider>
 
                                 <label class="form-check-label item" for="payment-booking-input"></label>
                                 <ValidationProvider rules="url" v-slot="{ errors }" >
-                                    <input type="text" class="form-control item"  id="payment-booking-input" size="52%" v-model="data.bookingLink2"  :disabled="actionType !== 'BookingAndPayment'" placeholder="https://paymentlink.com" :class="{ 'is-invalid': submitted && errors.length }" >
+                                    <input type="text" class="form-control item"  id="payment-booking-input" size="52%" v-model="data.paymentLink2"  :disabled="actionType !== 'BookingAndPayment'" placeholder="https://paymentlink.com" :class="{ 'is-invalid': submitted && errors.length }" >
                                     <div v-if="submitted && errors.includes('url')" class="invalid-feedback">Link has wrong format, "https://" is required</div>
                                 </ValidationProvider>
 
