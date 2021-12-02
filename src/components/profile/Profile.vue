@@ -133,7 +133,7 @@
                                 <div style="font-size: 12px"> -> Click edit icon to add link</div>
                                 <div style="font-size: 12px"> -> Check result in PREVIEW</div>
                             </div>
-                        <a v-if="!cmsToggle && response.profile.bookingLink" :href="response.profile.bookingLink" class="btn btn-primary btn-border inner-booking">Book</a>
+                        <a v-if="!cmsToggle && response.profile.bookingLink" :href="response.profile.bookingLink" class="btn btn-primary btn-border inner-booking" style="margin-bottom: 0px">Book</a>
                         <a v-if="!cmsToggle && response.profile.paymentLink" :href="response.profile.paymentLink" class="btn btn-primary btn-border inner-booking">Pay</a>
                     </div>
                 </div>
