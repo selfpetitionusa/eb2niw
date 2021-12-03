@@ -21,12 +21,7 @@
 
 <!-- PROFILE TEMPLATE -->
 
-    <div v-if="response.profile.color === 'Royal'"  style="background: linear-gradient(244.35deg, #314194 37.33%, #3B4DAB 43.75%, #5457C1 50.17%, #6B6FEA 76.06%)" class="background-rectangular"></div>
-    <div v-if="response.profile.color === 'Sunrise'" style="background: linear-gradient(244.35deg, #3f87a6, #ebf8e1, #f69d3c)" class="background-rectangular"></div>
-    <div v-if="response.profile.color === 'Rainforest'" style="background: linear-gradient(244.35deg, #DECBA4, #3E5151, #30A443, #236A4A, #368126, #84903A, #6E9842)" class="background-rectangular"></div>
-    <div v-if="response.profile.color === 'Peach'"  style="background: linear-gradient(244.35deg, #d64c7f, #ee4758, #f69d3c)"  class="background-rectangular"></div>
-    <div v-if="response.profile.color === 'Slate'" style="background: linear-gradient(244.35deg, #2c3e50, #374052, #dadfe8, #929bb3, #dadfe8)"  class="background-rectangular"></div>
-    <div v-if="response.profile.color === 'Ocean'"  style="background: linear-gradient(244.35deg, #c2d7f0, #3080e1, #52CAEC, #1697AC, #6BC2D6, #052f63)"  class="background-rectangular"></div>
+    <div class="background-rectangular"></div>
 
     <div id="tu-container" class="tu-container">
     <div class="row website-split">
