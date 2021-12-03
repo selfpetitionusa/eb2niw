@@ -4456,6 +4456,14 @@ Rates section - Testimonials
     }
 }
 
+@media (max-width: 767px) {
+    .tutor-testimonial {
+        &.single-feedback {
+            margin-left: 20px;
+        }
+    }
+}
+
 
 /*================================================
 Rates section - Rates
