@@ -89,11 +89,21 @@ $gradient-color2: linear-gradient(to right bottom, #1fa2ff, #00c0ff, #00d9f2, #5
 $transition: .5s;
 $font-size: 14px;
 
-$theme-background: linear-gradient(244.35deg, #d64c7f, #ee4758, #f69d3c);
-$theme-color1: rgb(209, 107, 63);
-$theme-color1-opacity: rgba(209, 107, 63, 0.3);
-$theme-color2: rgb(142, 30, 148);
-$theme-color2-opacity: rgb(142, 30, 148, 0.3);
+html {
+  --theme-background: linear-gradient(244.35deg, #d64c7f, #ee4758, #f69d3c);
+  --theme-color1: rgb(209, 107, 63);
+  --theme-color1-opacity: rgba(209, 107, 63, 0.3);
+  --theme-color2: rgb(142, 30, 148);
+  --theme-color2-opacity: rgb(142, 30, 148, 0.3);
+}
+
+html {
+  --theme-background: linear-gradient(220deg, #2c3e50, #374052, #dadfe8, #929bb3, #dadfe8);
+  --theme-color1: rgb(111, 147, 191);
+  --theme-color1-opacity: rgba(111, 147, 191, 0.3);
+  --theme-color2: rgb(64, 67, 153);
+  --theme-color2-opacity: rgba(64, 67, 153, 0.3);
+}
 
 body {
     font-family: $font-family;
@@ -3537,7 +3547,7 @@ body {
 
     @media (max-width: 991px) {
         .dflex {
-            background: $theme-background;
+            background: var(--theme-background);
         }
     }
 
@@ -3690,7 +3700,7 @@ Sections' headers: about me, subjects, rates, expertise
     .icon {
         width: 8px;
         height: 35px;
-        background-color: $theme-color2;
+        background-color: var(--theme-color2);
     }
 }
 
@@ -3903,8 +3913,8 @@ h2.lastname {
             }
 
             &.facebook {
-                color: $theme-color1-opacity;
-                border-color: $theme-color1-opacity;
+                color: var(--theme-color1-opacity);
+                border-color: var(--theme-color1-opacity);
 
                 &:hover {
                     color: $white-color;
@@ -3914,8 +3924,8 @@ h2.lastname {
             }
 
             &.youtube {
-                color: $theme-color1-opacity;
-                border-color: $theme-color1-opacity;
+                color: var(--theme-color1-opacity);
+                border-color: var(--theme-color1-opacity);
 
                 &:hover {
                     color: $white-color;
@@ -3925,8 +3935,8 @@ h2.lastname {
             }
 
             &.linkedin {
-                color: $theme-color1-opacity;
-                border-color: $theme-color1-opacity;
+                color: var(--theme-color1-opacity);
+                border-color: var(--theme-color1-opacity);
 
                 &:hover {
                     color: $white-color;
@@ -3936,8 +3946,8 @@ h2.lastname {
             }
 
             &.instagram {
-                color: $theme-color1-opacity;
-                border-color: $theme-color1-opacity;
+                color: var(--theme-color1-opacity);
+                border-color: var(--theme-color1-opacity);
 
                 &:hover {
                     color: $white-color;
@@ -3959,10 +3969,10 @@ h2.lastname {
     }
 
     .inner {
-        background-color: $theme-color2;
+        background-color: var(--theme-color2);
         padding: 15px 25px;
         margin: 9px 9px 0px;
-        box-shadow: 0 13px 27px 0 $theme-color2-opacity;
+        box-shadow: 0 13px 27px 0 var(--theme-color2-opacity);
 
         &:hover, &:active {
             background-color: #5457C1;
@@ -3976,26 +3986,26 @@ h2.lastname {
     }
 
     .inner-booking {
-        color: $theme-color2;
-        border-color: $theme-color2;
+        color: var(--theme-color2);
+        border-color: var(--theme-color2);
         margin: 9px;
         background-color: $white-color;
         box-shadow: none;
 
         &:focus {
-            color: $theme-color2;
-            border: 1px solid $theme-color2;
+            color: var(--theme-color2);
+            border: 1px solid var(--theme-color2);
             border-radius: 5px;
-            box-shadow: 0 13px 27px 0 $theme-color2-opacity;
+            box-shadow: 0 13px 27px 0 var(--theme-color2-opacity);
         }
 
         &:hover, &:active {
             color: $white-color;
-            box-shadow: 0 13px 27px 0 $theme-color2-opacity;
+            box-shadow: 0 13px 27px 0 var(--theme-color2-opacity);
         }
 
         &::after, &::before {
-            background-color: $theme-color2;
+            background-color: var(--theme-color2);
         }
     }
 }
@@ -4041,7 +4051,7 @@ Regular menu
             color: #6084A4;
 
             &:hover {
-                color: $theme-color2;
+                color: var(--theme-color2);
            }
         }
     }
@@ -4142,7 +4152,7 @@ About me section - Education
 
     .icon {
         font-size: 30px;
-        color: $theme-color1;
+        color: var(--theme-color1);
     }
 }
 
@@ -4233,7 +4243,7 @@ Subjects section - Subjects
 
     hr {
         width: 60%;
-        border: 1px solid $theme-color2-opacity;
+        border: 1px solid var(--theme-color2-opacity);
         margin: 5px auto 10px;
     }
 }
@@ -4249,12 +4259,12 @@ Subjects section - Subjects
 
     .border1 {
         border: 1px dashed;
-        border-color: $theme-color1-opacity;
+        border-color: var(--theme-color1-opacity);
     }
 
     .border2 {
         border: 1px dashed;
-        border-color: $theme-color1-opacity;
+        border-color: var(--theme-color1-opacity);
 
     }
 }
@@ -4268,11 +4278,11 @@ Subjects section - Subjects
     @media (max-width: 767px) {
         .subject-cards .border1 {
             border: 1px dashed;
-            border-color: $theme-color1-opacity;
+            border-color: var(--theme-color1-opacity);
         }
         .subject-cards .border2 {
           border: 1px dashed;
-          border-color: $theme-color2-opacity;
+          border-color: var(--theme-color2-opacity);
         }
     }
 
@@ -4352,7 +4362,7 @@ Subjects section - My Students
 
     .icon {
         font-size: 35px;
-        color:$theme-color1;
+        color: var(--theme-color1);
     }
 
     .label {
@@ -4362,7 +4372,7 @@ Subjects section - My Students
 
     .value {
         font-weight: 600;
-        color: $theme-color1;
+        color: var(--theme-color1);
         margin-left: 7px;
     }
 }
@@ -4449,7 +4459,7 @@ Rates section - Rates
         font-size: calc(0.75vw + 0.75vh + 0.3vmin);
         font-weight: 400;
         color: white;
-        background-color: $theme-color1;
+        background-color: var(--theme-color1);
         padding: 5px;
 
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -4721,7 +4731,7 @@ Expertise section
 
         box-sizing: border-box;
         border: 1px solid;
-        border-color: $theme-color2-opacity;
+        border-color: var(--theme-color2-opacity);
         border-radius: 50%;
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.05));
     }
