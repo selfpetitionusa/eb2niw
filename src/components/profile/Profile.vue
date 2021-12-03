@@ -1,6 +1,6 @@
 <template>
 
-    <div class="dflex">
+    <div class="dflex" :class="this.response.profile.color">
         <div :id="response.profile.token" v-if="response.profile.token" v-show="false"></div>
 
 <!-- HAMBURGER MENU - MAIN VIEW -->

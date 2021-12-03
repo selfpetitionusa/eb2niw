@@ -89,20 +89,52 @@ $gradient-color2: linear-gradient(to right bottom, #1fa2ff, #00c0ff, #00d9f2, #5
 $transition: .5s;
 $font-size: 14px;
 
-html {
-  --theme-background: linear-gradient(244.35deg, #d64c7f, #ee4758, #f69d3c);
-  --theme-color1: rgb(209, 107, 63);
-  --theme-color1-opacity: rgba(209, 107, 63, 0.3);
-  --theme-color2: rgb(142, 30, 148);
-  --theme-color2-opacity: rgb(142, 30, 148, 0.3);
+.Royal {
+    --theme-background: linear-gradient(244.35deg, #314194 37.33%, #3B4DAB 43.75%, #5457C1 50.17%, #6B6FEA 76.06%);
+    --theme-color1: rgb(84, 87, 193);
+    --theme-color1-opacity: rgba(84, 87, 193, 0.3);
+    --theme-color2: rgb(223, 120, 112);
+    --theme-color2-opacity: rgba(223, 120, 112, 0.3);
 }
 
-html {
-  --theme-background: linear-gradient(220deg, #2c3e50, #374052, #dadfe8, #929bb3, #dadfe8);
-  --theme-color1: rgb(111, 147, 191);
-  --theme-color1-opacity: rgba(111, 147, 191, 0.3);
-  --theme-color2: rgb(64, 67, 153);
-  --theme-color2-opacity: rgba(64, 67, 153, 0.3);
+.Sunrise {
+    --theme-background: linear-gradient(130deg, #3f87a6, #ebf8e1, #f69d3c);
+    --theme-color1: rgb(94, 144, 166);
+    --theme-color1-opacity: rgba(94, 144, 166, 0.3);
+    --theme-color2: rgb(219, 137, 44);
+    --theme-color2-opacity: rgba(219, 137, 44, 0.3);
+}
+
+.Rainforest {
+    --theme-background: linear-gradient(244.35deg, #DECBA4, #3E5151, #30A443, #236A4A, #368126, #84903A, #6E9842);
+    --theme-color1: rgb(35, 106, 74);
+    --theme-color1-opacity: rgba(35, 106, 74, 0.3);
+    --theme-color2: rgb(186, 146, 2);
+    --theme-color2-opacity: rgba(186, 146, 2, 0.3);
+}
+
+.Peach {
+    --theme-background: linear-gradient(244.35deg, #d64c7f, #ee4758, #f69d3c);
+    --theme-color1: rgb(209, 107, 63);
+    --theme-color1-opacity: rgba(209, 107, 63, 0.3);
+    --theme-color2: rgb(142, 30, 148);
+    --theme-color2-opacity: rgb(142, 30, 148, 0.3);
+}
+
+.Slate {
+    --theme-background: linear-gradient(220deg, #2c3e50, #374052, #dadfe8, #929bb3, #dadfe8);
+    --theme-color1: rgb(111, 147, 191);
+    --theme-color1-opacity: rgba(111, 147, 191, 0.3);
+    --theme-color2: rgb(64, 67, 153);
+    --theme-color2-opacity: rgba(64, 67, 153, 0.3);
+}
+
+.Ocean {
+    --theme-background: linear-gradient(244.35deg, #c2d7f0, #3080e1, #52CAEC, #1697AC, #6BC2D6, #052f63);
+    --theme-color1: rgb(22, 151, 172);
+    --theme-color1-opacity: rgba(22, 151, 172, 0.3);
+    --theme-color2: rgb(199, 46, 38);
+    --theme-color2-opacity: rgba(199, 46, 38, 0.3);
 }
 
 body {
@@ -3557,6 +3589,8 @@ body {
     top: -10%;
     left: -25%;
     right: -25%;
+
+    background: var(--theme-background);
     transform: rotate(-20deg);
 }
 
