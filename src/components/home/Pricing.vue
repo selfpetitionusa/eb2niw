@@ -25,7 +25,7 @@
                         </div>
 
                         <div class="price">
-                            <span><sup>$</sup>7<span>/Pay once, use forever</span></span>
+                            <span><sup>$</sup>5<span>/Monthly</span></span>
                         </div>
 
                         <div class="pricing-features">
@@ -52,7 +52,7 @@
                         </div>
 
                         <div class="price">
-                            <span><sup>$</sup>9<span>/Monthly</span></span>
+                            <span><sup>$</sup>18<span>/Monthly</span></span>
                         </div>
 
                         <div class="pricing-features">
@@ -60,10 +60,9 @@
                                 <li class="active">All the benefits of the Basic Plan, and...</li>
                                 <li><font-awesome-icon class="icon-plus" icon="plus-circle"/></li>
                             </ul>
-                            <ul style="margin-bottom: 26px; padding: 8px 0px; background: linear-gradient(to right bottom, #fffcff, #fbfaff, #effbff, #e0fdff, #d5fefd)">
+                            <ul style="margin-bottom: 26px; padding: 25px 0px; background: linear-gradient(to right bottom, #fffcff, #fbfaff, #effbff, #e0fdff, #d5fefd)">
                                 <li class="active">Stripe and PayPal payments</li>
                                 <li class="active">Calendar integrated on the website</li>
-                                <li class="active">Removed Tutomy branding</li>
                             </ul>
                         </div>
 
