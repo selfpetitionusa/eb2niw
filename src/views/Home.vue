@@ -39,7 +39,7 @@
       <!-- Start Ready To Talk Area -->
       <section class="ready-to-talk">
         <div class="container">
-          <h3 style="line-height: 1.5">Join our community of <br>1,500+ tutors & teachers</h3>
+          <h3 style="line-height: 1.5">Join our community of <br>1,700+ tutors & teachers</h3>
         </div>
       </section>
       <!-- End Ready To Talk Area -->
