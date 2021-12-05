@@ -25,7 +25,7 @@
                         </div>
 
                         <div class="price">
-                            <span><sup>$</sup>5<span>/Monthly</span></span>
+                            <span><sup>$</sup>7<span>/Monthly</span></span>
                         </div>
 
                         <div class="pricing-features">
