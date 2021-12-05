@@ -29,13 +29,12 @@
                         </div>
 
                         <div class="pricing-features">
-                            <ul>
+                            <ul style="margin-bottom: 44px">
                                 <li class="active">Template to launch website in 11min</li>
                                 <li class="active">Customizable color themes</li>
                                 <li class="active">Free personal subdomain on tutomy.com</li>
                                 <li class="active">Search Engine Optimization on autopilot</li>
                                 <li class="active">24/7 support from our experts</li>
-                                <li class="active">Website includes Tutomy branding</li>
                             </ul>
                         </div>
 
@@ -60,9 +59,10 @@
                                 <li class="active">All the benefits of the Basic Plan, and...</li>
                                 <li><font-awesome-icon class="icon-plus" icon="plus-circle"/></li>
                             </ul>
-                            <ul style="margin-bottom: 26px; padding: 25px 0px; background: linear-gradient(to right bottom, #fffcff, #fbfaff, #effbff, #e0fdff, #d5fefd)">
+                            <ul style="margin-bottom: 20px; padding: 2px 0px; background: linear-gradient(to right bottom, #fffcff, #fbfaff, #effbff, #e0fdff, #d5fefd)">
                                 <li class="active">Stripe and PayPal payments</li>
                                 <li class="active">Calendar integrated on the website</li>
+                                <li class="active">Website traffic analytics</li>
                             </ul>
                         </div>
 
