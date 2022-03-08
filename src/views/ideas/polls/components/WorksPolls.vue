@@ -76,7 +76,7 @@
 import { Carousel, Slide } from 'vue-carousel';
 
 export default {
-    name: 'Works',
+    name: 'WorksPolls',
     components: { Carousel, Slide },
     data() {
         return {

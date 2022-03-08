@@ -130,7 +130,7 @@
 <script>
 
     export default {
-        name: 'Banner',
+        name: 'BannerPolls',
         data() {
             return {
                 fired: false

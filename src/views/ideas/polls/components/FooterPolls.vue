@@ -63,7 +63,7 @@
 <script>
 import BackToTop from 'vue-backtotop'
 export default {
-    name: 'Footer',
+    name: 'FooterPolls',
     components: { BackToTop }
 }
 </script>

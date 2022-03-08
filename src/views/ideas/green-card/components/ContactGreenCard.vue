@@ -63,7 +63,7 @@
 
 <script>
     export default {
-        name: 'Contact',
+        name: 'ContactGreenCard',
         data() {
             return {
                 contact_name: '',

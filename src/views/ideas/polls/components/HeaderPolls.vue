@@ -42,7 +42,7 @@
 
 <script>
 export default {
-    name: 'Header',
+    name: 'HeaderPolls',
     data(){
         return {
             isSticky: false

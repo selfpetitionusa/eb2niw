@@ -113,6 +113,6 @@
 
 <script>
 export default {
-    name: 'ServicesArea'
+    name: 'ServicesAreaPolls'
 }
 </script>

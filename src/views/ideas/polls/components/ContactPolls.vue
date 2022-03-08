@@ -63,7 +63,7 @@
 
 <script>
     export default {
-        name: 'Contact',
+        name: 'ContactPolls',
         data() {
             return {
                 contact_name: '',

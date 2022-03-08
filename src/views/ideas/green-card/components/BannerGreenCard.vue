@@ -130,7 +130,7 @@
 <script>
 
     export default {
-        name: 'Banner',
+        name: 'BannerGreenCard',
         data() {
             return {
                 fired: false

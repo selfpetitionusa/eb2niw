@@ -72,3 +72,9 @@
     </section>
     <!-- End Pricing Area -->
 </template>
+
+<script>
+export default {
+    name: 'PricingPolls'
+}
+</script>
