@@ -17,6 +17,9 @@ import AccountPasswordReset from './views/account/AccountPasswordReset';
 import ProfileLink from './views/account/ProfileLink';
 import AdminDashboardView from "./views/AdminDashboardView";
 
+import HomePolls from "./views/ideas/polls/HomePolls";
+import HomeGreenCard from "./views/ideas/green-card/HomeGreenCard";
+
 
 export const router = new VueRouter({
     mode: 'history',
