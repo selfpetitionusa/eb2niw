@@ -72,8 +72,8 @@
                                                 controls
                                                 crossorigin
                                                 playsinline
-                                                poster="../../assets/img/thumbnail.png">
-                                            <source src="../../assets/img/Intro-video-Rena.mp4" type="video/mp4">
+                                                poster="../../../../assets/img/thumbnail.png">
+                                            <source src="../../../../assets/img/Intro-video-Rena.mp4" type="video/mp4">
                                             Video how to create a tutoring website. Your browser does not support the video tag
                                         </video>
                                     </vue-plyr>
@@ -85,8 +85,8 @@
                                                 controls
                                                 crossorigin
                                                 playsinline
-                                                poster="../../assets/img/thumbnail.png">
-                                            <source src="../../assets/img/Intro-video-Rena.mp4" type="video/mp4">
+                                                poster="../../../../assets/img/thumbnail.png">
+                                            <source src="../../../../assets/img/Intro-video-Rena.mp4" type="video/mp4">
                                             Video how to create a tutoring website. Your browser does not support the video tag
                                         </video>
                                     </vue-plyr>
@@ -114,13 +114,13 @@
             </div>
         </div>
 
-        <div class="shape1"><img src="../../assets/img/shape1.png" ></div>
-        <div class="shape3"><img src="../../assets/img/shape3.svg" ></div>
-        <div class="shape4"><img src="../../assets/img/shape4.svg" ></div>
-        <div class="shape5"><img src="../../assets/img/shape5.png" ></div>
-        <div class="shape6 rotateme"><img src="../../assets/img/shape4.svg" ></div>
-        <div class="shape7"><img src="../../assets/img/shape4.svg" ></div>
-        <div class="shape8 rotateme"><img src="../../assets/img/shape2.svg" ></div>
+        <div class="shape1"><img src="../../../../assets/img/shape1.png" ></div>
+        <div class="shape3"><img src="../../../../assets/img/shape3.svg" ></div>
+        <div class="shape4"><img src="../../../../assets/img/shape4.svg" ></div>
+        <div class="shape5"><img src="../../../../assets/img/shape5.png" ></div>
+        <div class="shape6 rotateme"><img src="../../../../assets/img/shape4.svg" ></div>
+        <div class="shape7"><img src="../../../../assets/img/shape4.svg" ></div>
+        <div class="shape8 rotateme"><img src="../../../../assets/img/shape2.svg" ></div>
     </div>
     <!-- End Main Banner -->
 </template>

@@ -7,7 +7,7 @@
                     <div class="single-footer-widget">
                         <div class="logo">
                             <a href="/">
-                                <img width="55px" src="./resources/vipvote-logo.svg" style="border-radius: 50%" />
+                                <img width="55px" src="../resources/vipvote-logo.svg" style="border-radius: 50%" />
                             </a>
                         </div>
                         <p style="font-weight: 600">Dollar voting for influencers</p>
@@ -48,9 +48,9 @@
             </div>
         </div>
 
-        <img src="../../assets/img/map.png" class="map" >
-        <div class="shape1"><img src="../../assets/img/shape1.png" ></div>
-        <div class="shape8 rotateme"><img src="../../assets/img/shape2.svg" ></div>
+        <img src="../../../../assets/img/map.png" class="map" >
+        <div class="shape1"><img src="../../../../assets/img/shape1.png" ></div>
+        <div class="shape8 rotateme"><img src="../../../../assets/img/shape2.svg" ></div>
         <!-- <div class="go-top"><feather type="arrow-up"></feather></div> -->
 
         <back-to-top bottom="50px" right="50px">

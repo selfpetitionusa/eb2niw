@@ -20,7 +20,7 @@
             >
                 <slide>
                     <div class="single-works">
-                        <img src="../../assets/img/landing-slider-1.png">
+                        <img src="../../../../assets/img/landing-slider-1.png">
                         <a v-if="windowWidth > 767" @click="index = 0;$refs['modal-zoom'].show()" style="cursor: pointer;" class="icon"><feather type="zoom-in"></feather></a>
 
                         <div class="works-content">
@@ -32,7 +32,7 @@
 
                 <slide>
                     <div class="single-works">
-                        <img src="../../assets/img/landing-slider-2.png">
+                        <img src="../../../../assets/img/landing-slider-2.png">
                         <a v-if="windowWidth > 767" @click="index = 1;$refs['modal-zoom'].show()" style="cursor: pointer;" class="icon"><feather type="zoom-in"></feather></a>
 
                         <div class="works-content">
@@ -44,7 +44,7 @@
 
                 <slide>
                     <div class="single-works">
-                        <img src="../../assets/img/landing-slider-3.png" >
+                        <img src="../../../../assets/img/landing-slider-3.png" >
                         <a v-if="windowWidth > 767" @click="index = 2;$refs['modal-zoom'].show()" style="cursor: pointer;" class="icon"><feather type="zoom-in"></feather></a>
 
                         <div class="works-content">
@@ -56,7 +56,7 @@
 
                 <slide>
                     <div class="single-works">
-                        <img src="../../assets/img/landing-slider-4.png" >
+                        <img src="../../../../assets/img/landing-slider-4.png" >
                         <a v-if="windowWidth > 767" @click="index = 3;$refs['modal-zoom'].show()" style="cursor: pointer;" class="icon"><feather type="zoom-in"></feather></a>
 
                         <div class="works-content">
@@ -67,7 +67,7 @@
                 </slide>
             </carousel>
         </div>
-        <div class="shape4"><img src="../../assets/img/shape4.svg"></div>
+        <div class="shape4"><img src="../../../../assets/img/shape4.svg"></div>
     </section>
     <!-- End Works Area -->
 </template>
@@ -118,7 +118,7 @@ export default {
             this.windowWidth = window.innerWidth
         },
         getImgUrl() {
-            var images = require.context('../../assets/img/', false, /\.png$/)
+            var images = require.context('../../../../assets/img/', false, /\.png$/)
             return images(this.modalProperties[this.index].img)
         }
     }

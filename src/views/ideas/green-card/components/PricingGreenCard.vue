@@ -67,8 +67,8 @@
         </div>
 
 
-        <div class="shape7"><img src="../../assets/img/shape4.svg" ></div>
-        <div class="shape4"><img src="../../assets/img/shape4.svg" ></div>
+        <div class="shape7"><img src="../../../../assets/img/shape4.svg" ></div>
+        <div class="shape4"><img src="../../../../assets/img/shape4.svg" ></div>
     </section>
     <!-- End Pricing Area -->
 </template>
