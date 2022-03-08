@@ -40,6 +40,8 @@ export const router = new VueRouter({
       { path: '/help', component: Help },
       { path: '/colors', component: Colors },
       { path: '/admin', component: AdminDashboardView },
+      { path: '/polls', component: HomePolls },
+      { path: '/greencard', component: HomeGreenCard },
       {
             path: '/account',
             component: Account,
