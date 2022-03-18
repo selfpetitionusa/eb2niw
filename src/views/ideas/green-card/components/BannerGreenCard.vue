@@ -10,49 +10,49 @@
                             <div class="hero-content">
                                 <div class="row">
                                     <div class="col-lg-11">
-                                        <h1>Dollar voting for influencers</h1>
-                                        <h5>Connect with your audience far more closely and monetize this connection</h5>
+                                        <h1>Self-sponsor your American freedom</h1>
+                                        <h5>You don't need an employer to sponsor you green card: take matters into your own hands!</h5>
 
                                         <div class="tick-section">
                                             <div class="d-block d-sm-none">
                                                 <div class="tick-row">
                                                     <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                    <p class="tick-input">Engage subscribers with polls</p>
+                                                    <p class="tick-input">Self-petition</p>
                                                 </div>
                                             </div>
 
                                                 <div class="d-none d-sm-block">
                                                     <div class="tick-row">
                                                         <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                        <p class="tick-input">Engage subscribers with polls</p>
+                                                        <p class="tick-input">Self-petition</p>
                                                     </div>
                                                 </div>
 
                                             <div class="d-block d-sm-none">
                                                 <div class="tick-row">
                                                     <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                    <p class="tick-input">Let them vote with money</p>
+                                                    <p class="tick-input">EB-1A National Interest Waiver</p>
                                                 </div>
                                             </div>
 
                                                 <div class="d-none d-sm-block">
                                                     <div class="tick-row">
                                                         <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                        <p class="tick-input">Let them vote with money</p>
+                                                        <p class="tick-input">EB-1A National Interest Waiver</p>
                                                     </div>
                                                 </div>
 
                                             <div class="d-block d-sm-none">
                                                 <div class="tick-row">
                                                     <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                    <p class="tick-input">Deliver outcome that your audience truly desires</p>
+                                                    <p class="tick-input">EB-2 National Interest Waiver</p>
                                                 </div>
                                             </div>
 
                                                 <div class="d-none d-sm-block">
                                                     <div class="tick-row">
                                                         <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                        <p class="tick-input">Deliver outcome that your audience truly desires</p>
+                                                        <p class="tick-input">EB-2 National Interest Waiver</p>
                                                     </div>
                                                 </div>
                                         </div>
@@ -62,52 +62,57 @@
                         </div>
 
 
-                        <div class="col-xl-6 col-lg-5 video">
-                            <h6 class="intro-video">The chance for your fans to vote with money</h6>
+                        <div class="col-xl-6 col-lg-5">
+                            <h6 class="intro-video">Who is eligible to self-petition?</h6>
+
                             <div class="row">
-
-                                <div class="d-block d-lg-none">
-                                    <vue-plyr ref="plyr">
-                                        <video
-                                                controls
-                                                crossorigin
-                                                playsinline
-                                                poster="../../../../assets/img/thumbnail.png">
-                                            <source src="../../../../assets/img/Intro-video-Rena.mp4" type="video/mp4">
-                                            Video how to create a tutoring website. Your browser does not support the video tag
-                                        </video>
-                                    </vue-plyr>
+                                <div class="col-4">
+                                    <a href="/green-card-evaluation" @click="$gtag.event('register')">
+                                        <img src="../resources/Stem.svg">
+                                    </a>
                                 </div>
+                                <div class="col-4">
+                                    <a href="/green-card-evaluation" @click="$gtag.event('register')">
+                                        <img src="../resources/Entrepreneurs.svg">
+                                    </a>
+                                </div>
+                                <div class="col-4">
+                                    <a href="/green-card-evaluation" @click="$gtag.event('register')">
+                                        <img src="../resources/Finance.svg">
+                                    </a>
+                                </div>
+                            </div>
 
-                                <div class="d-none d-lg-block">
-                                    <vue-plyr ref="plyr">
-                                        <video
-                                                controls
-                                                crossorigin
-                                                playsinline
-                                                poster="../../../../assets/img/thumbnail.png">
-                                            <source src="../../../../assets/img/Intro-video-Rena.mp4" type="video/mp4">
-                                            Video how to create a tutoring website. Your browser does not support the video tag
-                                        </video>
-                                    </vue-plyr>
+                            <div class="row" style="margin-top: 1.5rem">
+                                <div class="col-4">
+                                    <a href="/green-card-evaluation" @click="$gtag.event('register')">
+                                        <img src="../resources/Sciences.svg">
+                                    </a>
+                                </div>
+                                <div class="col-4">
+                                    <a href="/green-card-evaluation" @click="$gtag.event('register')">
+                                        <img src="../resources/Business.svg">
+                                    </a>
+                                </div>
+                                <div class="col-4">
+                                    <a href="/green-card-evaluation" @click="$gtag.event('register')">
+                                        <img src="../resources/Other.svg">
+                                    </a>
                                 </div>
                             </div>
                         </div>
                     </div>
 
 
-                    <div class="row banner-action-btns">
+                    <div class="row banner-action-btns" style="margin-top: 1rem">
                         <div class="col-xl-7 col-lg-9">
                             <div class="row justify-content-center">
                                 <div class="col-sm-8 col-10">
-                                    <a href="/register" @click="$gtag.event('register')" class="btn btn-primary btn-register btn-profile">Let your fans vote with money</a>
+                                    <a href="/green-card-evaluation" @click="$gtag.event('register')" class="btn btn-primary btn-register btn-profile">Check if you are eligible</a>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col-11">
-                            <p class="bonus1">No payment or credit card is required</p>
-                        </div>
                     </div>
 
                 </div>

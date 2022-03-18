@@ -7,7 +7,6 @@
     <div>
       <BannerGreenCard></BannerGreenCard>
       <ServicesAreaGreenCard></ServicesAreaGreenCard>
-      <WorksGreenCard></WorksGreenCard>
       <PricingGreenCard></PricingGreenCard>
       <ContactGreenCard></ContactGreenCard>
     </div>
@@ -25,8 +24,6 @@
   import HeaderGreenCard from "./components/HeaderGreenCard";
   import FooterGreenCard from "./components/FooterGreenCard";
   import PreLoaderGreenCard from "./components/PreLoaderGreenCard";
-  import WorksGreenCard from "./components/WorksGreenCard";
-
 
 
   export default {
@@ -38,8 +35,7 @@
       ContactGreenCard,
       HeaderGreenCard,
       FooterGreenCard,
-      PreLoaderGreenCard,
-      WorksGreenCard
+      PreLoaderGreenCard
     },
     data() {
       return {

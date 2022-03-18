@@ -10,8 +10,8 @@
                                 <img width="55px" src="../resources/selfpetitionusa-logo.png" style="border-radius: 50%" />
                             </a>
                         </div>
-                        <p style="font-weight: 600">Dollar voting for influencers</p>
-                        <p>Connect with your audience far more closely and monetize this connection</p>
+                        <p style="font-weight: 600">Self-sponsor your green card</p>
+                        <p>Control your destiny, stop relying on employers' promises</p>
                     </div>
                 </div>
 
@@ -29,9 +29,9 @@
                     <div class="single-footer-widget">
                         <h3>Support</h3>
                         <ul class="list">
-                            <li><a href="/Terms_of_Service.pdf">Terms of Service</a></li>
-                            <li><a href="/Privacy_Policy.pdf">Privacy Policy</a></li>
-                            <li><a href="/Website_Terms_and_Conditions.pdf">Terms and Conditions</a></li>
+                            <li><a href="/Greencard_Terms_of_Service.pdf">Terms of Service</a></li>
+                            <li><a href="/Greencard_Privacy_Policy.pdf">Privacy Policy</a></li>
+                            <li><a href="/Greencard_Website_Terms_and_Conditions.pdf">Terms and Conditions</a></li>
 
                             <li><a href="/" v-scroll-to="'#contact'" >Contact Us</a></li>
                         </ul>
@@ -42,7 +42,7 @@
 
                 <div class="col-lg-12 col-md-12">
                     <div class="copyright-area">
-                        <p>Copyright &copy;2021 VIP VOTe. All Rights Reserved</p>
+                        <p>Copyright &copy;2022 Self Petition USA. All Rights Reserved</p>
                     </div>
                 </div>
             </div>

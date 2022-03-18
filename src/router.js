@@ -20,6 +20,10 @@ import AdminDashboardView from "./views/AdminDashboardView";
 import HomePolls from "./views/ideas/polls/HomePolls";
 import HomeGreenCard from "./views/ideas/green-card/HomeGreenCard";
 import HomeAnnotate from "./views/ideas/annotate/HomeAnnotate";
+import HomeSensitivity from "./views/ideas/sensitivity/HomeSensitivity";
+
+import GreenCardEvaluation from "./views/ideas/green-card/GreenCardEvaluation";
+import GreenCardApplication from "./views/ideas/green-card/GreenCardApplication";
 
 
 export const router = new VueRouter({
@@ -44,6 +48,9 @@ export const router = new VueRouter({
       { path: '/polls', component: HomePolls },
       { path: '/greencard', component: HomeGreenCard },
       { path: '/annotate', component: HomeAnnotate },
+      { path: '/sensitivity', component: HomeSensitivity },
+      { path: '/green-card-evaluation', component: GreenCardEvaluation },
+      { path: '/green-card-application', component: GreenCardApplication },
       {
             path: '/account',
             component: Account,
@@ -70,7 +77,7 @@ export const router = new VueRouter({
 
 router.beforeEach((to, from, next) => {
     // redirect to login page if not logged in and trying to access a restricted page
-    const publicPages = ["/", '/login', '/register', '/password-reset', '/website-needs-assessment', '/polls', '/greencard', '/annotate' ];
+    const publicPages = ["/", '/login', '/register', '/password-reset', '/website-needs-assessment', '/polls', '/greencard', '/annotate', '/sensitivity', 'green-card-evaluation', 'green-card-application' ];
     const publicPrefixes = ["/tutor" ];
     const authRequired = !publicPages.includes(to.path) && !publicPrefixes.some(prefix => to.path.startsWith(prefix));
     const loggedIn = localStorage.getItem('user');

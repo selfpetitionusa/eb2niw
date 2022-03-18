@@ -7,7 +7,7 @@
                 <h2>Pricing Plans</h2>
                 <div class="bar"></div>
                 <div class="paragraph">
-                    <p>You only get charged when your fans pay to you</p>
+                    <p>We review profiles of candidates to select only those with high chances of success and dedicate you to a lawyer who specializes in your area</p>
                 </div>
             </div>
 
@@ -15,24 +15,24 @@
                 <div class="col-lg-6 col-md-6 col-sm-6">
                     <div class="pricing-table">
                         <div class="pricing-header">
-                            <h3>Basic Plan</h3>
+                            <h3>Profile Evaluation</h3>
                         </div>
 
                         <div class="price">
-                            <span><sup></sup>6%<span> processed payments</span></span>
+                            <span>Free</span>
                         </div>
 
                         <div class="pricing-features">
                             <ul>
-                                <li class="active">Create a poll</li>
-                                <li class="active">Share it with your audience</li>
-                                <li class="active">Let fans vote with their money</li>
-                                <li class="active">Receive payments from voters <br>who selected the winning option</li>
+                                <li class="active">Your profile evaluation</li>
+                                <li class="active">No commitment to file</li>
+                                <li class="active">Unlimited inquiries</li>
+                                <li class="active">Process overview</li>
                             </ul>
                         </div>
 
                         <div class="pricing-footer">
-                            <a href="/register"  @click="$gtag.event('plan-basic')" class="btn btn-primary">Select Plan</a>
+                            <a href="/green-card-evaluation"  @click="$gtag.event('plan-basic')" class="btn btn-primary">Select Plan</a>
                         </div>
                     </div>
                 </div>
@@ -40,26 +40,24 @@
                 <div class="col-lg-6 col-md-6 col-sm-6">
                     <div class="pricing-table active-plan">
                         <div class="pricing-header">
-                            <h3>Pro Plan</h3>
+                            <h3>Petition filing</h3>
                         </div>
 
                         <div class="price">
-                            <span><sup></sup>7.5%<span> processed payments</span></span>
+                            <span><sup>$</sup>7-15k<span>/depends on</span></span>
                         </div>
 
                         <div class="pricing-features">
-                            <ul style="margin: 0px 0px 12px">
-                                <li class="active">All the benefits of the Basic Plan, and...</li>
-                                <li><font-awesome-icon class="icon-plus" icon="plus-circle"/></li>
-                            </ul>
-                            <ul style="margin-bottom: 16px; padding: 8px 0px; background: linear-gradient(to right bottom, #fffcff, #fbfaff, #effbff, #e0fdff, #d5fefd)">
-                                <li class="active">Customize colors</li>
-                                <li class="active">Add personal branding</li>
+                            <ul>
+                                <li class="active">Number of family members</li>
+                                <li class="active">Your profile details</li>
+                                <li class="active">Type of NIW process</li>
+                                <li class="active">20% refund policy if not successful</li>
                             </ul>
                         </div>
 
                         <div class="pricing-footer">
-                            <a href="/register"  @click="$gtag.event('plan-premium')" class="btn btn-primary">Select Plan</a>
+                            <a href="/green-card-application"  @click="$gtag.event('plan-premium')" class="btn btn-primary">Select Plan</a>
                         </div>
                     </div>
                 </div>
