@@ -7,7 +7,6 @@
     <div>
       <BannerPolls></BannerPolls>
       <ServicesAreaPolls></ServicesAreaPolls>
-      <WorksPolls></WorksPolls>
       <PricingPolls></PricingPolls>
       <ContactPolls></ContactPolls>
     </div>
@@ -25,8 +24,6 @@
   import HeaderPolls from "./components/HeaderPolls";
   import FooterPolls from "./components/FooterPolls";
   import PreLoaderPolls from "./components/PreLoaderPolls";
-  import WorksPolls from "./components/WorksPolls";
-
 
 
   export default {
@@ -38,8 +35,7 @@
       ContactPolls,
       HeaderPolls,
       FooterPolls,
-      PreLoaderPolls,
-      WorksPolls
+      PreLoaderPolls
     },
     data() {
       return {

@@ -6,7 +6,7 @@
             <div class="d-table-cell">
                 <div class="container">
                     <div class="row h-100 justify-content-center align-items-center">
-                        <div class="col-xl-6 col-lg-7">
+                        <div class="col-xl-7 col-lg-7">
                             <div class="hero-content">
                                 <div class="row">
                                     <div class="col-lg-11">
@@ -17,14 +17,14 @@
                                             <div class="d-block d-sm-none">
                                                 <div class="tick-row">
                                                     <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                    <p class="tick-input">Engage subscribers with polls</p>
+                                                    <p class="tick-input">Engage followers & subscribers with polls</p>
                                                 </div>
                                             </div>
 
                                                 <div class="d-none d-sm-block">
                                                     <div class="tick-row">
                                                         <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                        <p class="tick-input">Engage subscribers with polls</p>
+                                                        <p class="tick-input">Engage followers & subscribers with polls</p>
                                                     </div>
                                                 </div>
 
@@ -45,14 +45,14 @@
                                             <div class="d-block d-sm-none">
                                                 <div class="tick-row">
                                                     <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                    <p class="tick-input">Deliver outcome that your audience truly desires</p>
+                                                    <p class="tick-input">Stream on <feather type="twitch" style="margin: 0 5px; color: #6441a5"></feather> or <feather type="youtube" style="margin: 0 8px; color: #ff0000"></feather></p>
                                                 </div>
                                             </div>
 
                                                 <div class="d-none d-sm-block">
                                                     <div class="tick-row">
                                                         <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                        <p class="tick-input">Deliver outcome that your audience truly desires</p>
+                                                        <p class="tick-input">Stream on <feather type="twitch" style="margin: 0 5px; color: #6441a5"></feather> or <feather type="youtube" style="margin: 0 8px; color: #ff0000"></feather></p>
                                                     </div>
                                                 </div>
                                         </div>
@@ -62,34 +62,10 @@
                         </div>
 
 
-                        <div class="col-xl-6 col-lg-5 video">
-                            <h6 class="intro-video">The chance for your fans to vote with money</h6>
+                        <div class="col-xl-5 col-lg-5 video">
                             <div class="row">
-
-                                <div class="d-block d-lg-none">
-                                    <vue-plyr ref="plyr">
-                                        <video
-                                                controls
-                                                crossorigin
-                                                playsinline
-                                                poster="../../../../assets/img/thumbnail.png">
-                                            <source src="../../../../assets/img/Intro-video-Rena.mp4" type="video/mp4">
-                                            Video how to create a tutoring website. Your browser does not support the video tag
-                                        </video>
-                                    </vue-plyr>
-                                </div>
-
-                                <div class="d-none d-lg-block">
-                                    <vue-plyr ref="plyr">
-                                        <video
-                                                controls
-                                                crossorigin
-                                                playsinline
-                                                poster="../../../../assets/img/thumbnail.png">
-                                            <source src="../../../../assets/img/Intro-video-Rena.mp4" type="video/mp4">
-                                            Video how to create a tutoring website. Your browser does not support the video tag
-                                        </video>
-                                    </vue-plyr>
+                                <div class="col-11 offset-1">
+                                    <img src="../resources/poll-ad.svg"/>
                                 </div>
                             </div>
                         </div>
@@ -100,7 +76,7 @@
                         <div class="col-xl-7 col-lg-9">
                             <div class="row justify-content-center">
                                 <div class="col-sm-8 col-10">
-                                    <a href="/register" @click="$gtag.event('register')" class="btn btn-primary btn-register btn-profile">Let your fans vote with money</a>
+                                    <a href="/polls-application" @click="$gtag.event('register')" class="btn btn-primary btn-register btn-profile">Let followers vote with money</a>
                                 </div>
                             </div>
                         </div>

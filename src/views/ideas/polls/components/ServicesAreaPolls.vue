@@ -11,13 +11,13 @@
                     <p>Polls allow you to increase engagement rate and build long-term relationship with the most loyal fans</p>
                 </div>
                 <div class="paragraph">
-                    <p>Monetize this connection and let your fans co-navigate your success!</p>
+                    <p>Monetize this connection and let your fans co-invest to your success!</p>
                 </div>
             </div>
 
             <div class="row h-100 justify-content-center align-items-center">
-                <div class="col-lg-6 col-md-12">
-                    <img src="../../../../assets/img/website-example.png">
+                <div class="col-lg-5 col-md-8">
+                    <img src="../resources/poll-iphone.svg"/>
                 </div>
 
                 <div class="col-lg-6 col-md-12 services-content">
@@ -90,16 +90,13 @@
                 <div class="col-xl-7 col-lg-9">
                     <div class="row justify-content-center">
                         <div class="col-sm-8 col-10">
-                            <a href="/register" @click="$gtag.event('register')" class="btn btn-primary btn-register btn-profile">CREATE A POLL TO SHARE WITH FANS</a>
+                            <a href="/polls-application" @click="$gtag.event('register')" class="btn btn-primary btn-register btn-profile">CREATE A POLL TO SHARE WITH FOLLOWERS</a>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="website-example funfacts-area">
-                <h6>How does it work?</h6>
-
-
                 <img src="../../../../assets/img/map.png" class="map-bg" style="left: -50%">
                 <div class="shape2-services rotateme"><img src="../../../../assets/img/shape2.svg"></div>
                 <div class="shape3-services"><img src="../../../../assets/img/shape3.svg" ></div>

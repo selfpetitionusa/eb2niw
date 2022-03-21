@@ -24,6 +24,7 @@ import HomeSensitivity from "./views/ideas/sensitivity/HomeSensitivity";
 
 import GreenCardEvaluation from "./views/ideas/green-card/GreenCardEvaluation";
 import GreenCardApplication from "./views/ideas/green-card/GreenCardApplication";
+import PollsApplication from "./views/ideas/polls/PollsApplication";
 
 
 export const router = new VueRouter({
@@ -51,6 +52,7 @@ export const router = new VueRouter({
       { path: '/sensitivity', component: HomeSensitivity },
       { path: '/green-card-evaluation', component: GreenCardEvaluation },
       { path: '/green-card-application', component: GreenCardApplication },
+      { path: '/polls-application', component: PollsApplication },
       {
             path: '/account',
             component: Account,
@@ -77,7 +79,7 @@ export const router = new VueRouter({
 
 router.beforeEach((to, from, next) => {
     // redirect to login page if not logged in and trying to access a restricted page
-    const publicPages = ["/", '/login', '/register', '/password-reset', '/website-needs-assessment', '/polls', '/greencard', '/annotate', '/sensitivity', 'green-card-evaluation', 'green-card-application' ];
+    const publicPages = ["/", '/login', '/register', '/password-reset', '/website-needs-assessment', '/polls', '/greencard', '/annotate', '/sensitivity', 'green-card-evaluation', 'green-card-application', 'polls-application' ];
     const publicPrefixes = ["/tutor" ];
     const authRequired = !publicPages.includes(to.path) && !publicPrefixes.some(prefix => to.path.startsWith(prefix));
     const loggedIn = localStorage.getItem('user');

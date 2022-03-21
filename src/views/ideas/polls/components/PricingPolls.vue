@@ -7,7 +7,7 @@
                 <h2>Pricing Plans</h2>
                 <div class="bar"></div>
                 <div class="paragraph">
-                    <p>You only get charged when your fans pay to you</p>
+                    <p>You only get charged when your fans pay you</p>
                 </div>
             </div>
 
@@ -19,20 +19,20 @@
                         </div>
 
                         <div class="price">
-                            <span><sup></sup>6%<span> processed payments</span></span>
+                            <span><sup></sup>6%<span> of processed payments</span></span>
                         </div>
 
                         <div class="pricing-features">
                             <ul>
                                 <li class="active">Create a poll</li>
                                 <li class="active">Share it with your audience</li>
-                                <li class="active">Let fans vote with their money</li>
+                                <li class="active">Let fans vote with money</li>
                                 <li class="active">Receive payments from voters <br>who selected the winning option</li>
                             </ul>
                         </div>
 
                         <div class="pricing-footer">
-                            <a href="/register"  @click="$gtag.event('plan-basic')" class="btn btn-primary">Select Plan</a>
+                            <a href="/polls-application"  @click="$gtag.event('plan-basic')" class="btn btn-primary">Select Plan</a>
                         </div>
                     </div>
                 </div>
@@ -44,7 +44,7 @@
                         </div>
 
                         <div class="price">
-                            <span><sup></sup>7.5%<span> processed payments</span></span>
+                            <span><sup></sup>7.5%<span> of processed payments</span></span>
                         </div>
 
                         <div class="pricing-features">
@@ -59,7 +59,7 @@
                         </div>
 
                         <div class="pricing-footer">
-                            <a href="/register"  @click="$gtag.event('plan-premium')" class="btn btn-primary">Select Plan</a>
+                            <a href="/polls-application"  @click="$gtag.event('plan-premium')" class="btn btn-primary">Select Plan</a>
                         </div>
                     </div>
                 </div>
