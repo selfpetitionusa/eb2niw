@@ -10,8 +10,8 @@
                                 <img width="55px" src="../resources/blendfeedback-logo.png" style="border-radius: 50%" />
                             </a>
                         </div>
-                        <p style="font-weight: 600">Dollar voting for influencers</p>
-                        <p>Connect with your audience far more closely and monetize this connection</p>
+                        <p style="font-weight: 600">Aggregate visual feedback and emotions</p>
+                        <p>Resolve unclear or conflicting feedback and prioritize tasks to implement</p>
                     </div>
                 </div>
 
@@ -42,7 +42,7 @@
 
                 <div class="col-lg-12 col-md-12">
                     <div class="copyright-area">
-                        <p>Copyright &copy;2021 VIP VOTe. All Rights Reserved</p>
+                        <p>Copyright &copy;2022 BLEND Feedback. All Rights Reserved</p>
                     </div>
                 </div>
             </div>

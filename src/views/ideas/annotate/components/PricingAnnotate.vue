@@ -7,7 +7,7 @@
                 <h2>Pricing Plans</h2>
                 <div class="bar"></div>
                 <div class="paragraph">
-                    <p>You only get charged when your fans pay to you</p>
+                    <p>Try BLEND Feedback for <a href="/annotate-application" style="font-weight: 600">FREE</a> for 14 days</p>
                 </div>
             </div>
 
@@ -19,20 +19,22 @@
                         </div>
 
                         <div class="price">
-                            <span><sup></sup>6%<span> processed payments</span></span>
+                            <span><sup></sup>$19<span> monthly</span></span>
                         </div>
 
                         <div class="pricing-features">
                             <ul>
-                                <li class="active">Create a poll</li>
-                                <li class="active">Share it with your audience</li>
-                                <li class="active">Let fans vote with their money</li>
-                                <li class="active">Receive payments from voters <br>who selected the winning option</li>
+                                <li class="active">1 user</li>
+                                <li class="active">$15/user/mo for more users</li>
+                                <li class="active">100 guest reviewers</li>
+                                <li class="active">1000 commenting limits</li>
+                                <li class="active">File attachment in comments</li>
+                                <li class="active">Pause commenting</li>
                             </ul>
                         </div>
 
                         <div class="pricing-footer">
-                            <a href="/register"  @click="$gtag.event('plan-basic')" class="btn btn-primary">Select Plan</a>
+                            <a href="/annotate-application"  @click="$gtag.event('plan-basic')" class="btn btn-primary">Select Plan</a>
                         </div>
                     </div>
                 </div>
@@ -44,22 +46,22 @@
                         </div>
 
                         <div class="price">
-                            <span><sup></sup>7.5%<span> processed payments</span></span>
+                            <span><sup></sup>$89<span> monthly</span></span>
                         </div>
 
                         <div class="pricing-features">
-                            <ul style="margin: 0px 0px 12px">
-                                <li class="active">All the benefits of the Basic Plan, and...</li>
-                                <li><font-awesome-icon class="icon-plus" icon="plus-circle"/></li>
-                            </ul>
-                            <ul style="margin-bottom: 16px; padding: 8px 0px; background: linear-gradient(to right bottom, #fffcff, #fbfaff, #effbff, #e0fdff, #d5fefd)">
-                                <li class="active">Customize colors</li>
-                                <li class="active">Add personal branding</li>
+                            <ul>
+                                <li class="active">5 users</li>
+                                <li class="active">$15/user/mo for more users</li>
+                                <li class="active">Unlimited guest reviewers</li>
+                                <li class="active">No commenting limits</li>
+                                <li class="active">File attachment in comments</li>
+                                <li class="active">Pause commenting</li>
                             </ul>
                         </div>
 
                         <div class="pricing-footer">
-                            <a href="/register"  @click="$gtag.event('plan-premium')" class="btn btn-primary">Select Plan</a>
+                            <a href="/annotate-application"  @click="$gtag.event('plan-premium')" class="btn btn-primary">Select Plan</a>
                         </div>
                     </div>
                 </div>

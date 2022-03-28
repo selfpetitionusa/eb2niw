@@ -4,49 +4,44 @@
         <SectionThree id="solutions"/>
         <div class="container">
             <div class="section-title">
-                <h2>Why influencers use dollar voting</h2>
+                <h2>What is Blend Feedback?</h2>
                 <div class="bar"></div>
 
                 <div class="paragraph">
-                    <p>Polls allow you to increase engagement rate and build long-term relationship with the most loyal fans</p>
-                </div>
-                <div class="paragraph">
-                    <p>Monetize this connection and let your fans co-navigate your success!</p>
+                    <p>Let anyone express what they think and feel about the website.</p>
+                    <p>Aggregate feedback to resolve unclear or conflicting opinions.</p>
                 </div>
             </div>
 
             <div class="row h-100 justify-content-center align-items-center">
-                <div class="col-lg-6 col-md-12">
-                    <img src="../../../../assets/img/website-example.png">
+                <div class="col-lg-3 col-md-12" style="margin: 0 7rem">
+                    <img src="../resources/annotate-undraw.svg">
                 </div>
 
                 <div class="col-lg-6 col-md-12 services-content">
+
+                    <div style="font-weight: 500; margin-bottom: 1rem">Who uses BLEND Feedback:</div>
 
                     <div class="d-block d-sm-none">
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="box">
-                                    <feather type="code"></feather> Create a poll to increase engagement rate
+                                    <feather type="code"></feather> Marketing agencies
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="box">
-                                    <feather type="layout"></feather> Expand e-mail list by providing poll results on autopilot
+                                    <feather type="layout"></feather> Web development agencies
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="box">
-                                    <feather type="pen-tool"></feather> Your fans pay to vote which make them care
+                                    <feather type="pen-tool"></feather> In-house teams
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="box">
-                                    <feather type="message-circle"></feather> Deliver results which your audience desires
-                                </div>
-                            </div>
-                            <div class="col-lg-8 col-md-8 col-sm-8 offset-sm-2">
-                                <div class="box">
-                                    <feather type="search"></feather> Process payments from the winners to grow voting community
+                                    <feather type="message-circle"></feather> Customer feedback
                                 </div>
                             </div>
                         </div>
@@ -57,27 +52,22 @@
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="box">
-                                    <feather type="code"></feather> Create a poll to increase engagement rate
+                                    <feather type="code"></feather>  Marketing agencies
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="box">
-                                    <feather type="layout"></feather> Expand e-mail list by providing poll results on autopilot
+                                    <feather type="layout"></feather> Web development
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="box">
-                                    <feather type="pen-tool"></feather> Your fans pay to vote which make them care
+                                    <feather type="pen-tool"></feather> In-house teams
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="box">
-                                    <feather type="message-circle"></feather> Deliver results which your audience desires
-                                </div>
-                            </div>
-                            <div class="col-lg-8 col-md-8 col-sm-8 offset-sm-2">
-                                <div class="box">
-                                    <feather type="search"></feather> Process payments from the winners to grow voting community
+                                    <feather type="message-circle"></feather> Customer feedback
                                 </div>
                             </div>
                         </div>
@@ -90,7 +80,7 @@
                 <div class="col-xl-7 col-lg-9">
                     <div class="row justify-content-center">
                         <div class="col-sm-8 col-10">
-                            <a href="/register" @click="$gtag.event('register')" class="btn btn-primary btn-register btn-profile">CREATE A POLL TO SHARE WITH FANS</a>
+                            <a href="/annotate-application" @click="$gtag.event('register')" class="btn btn-primary btn-register btn-profile">GET STARTED FOR FREE</a>
                         </div>
                     </div>
                 </div>

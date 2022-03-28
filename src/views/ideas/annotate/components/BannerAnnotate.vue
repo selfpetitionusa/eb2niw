@@ -10,49 +10,49 @@
                             <div class="hero-content">
                                 <div class="row">
                                     <div class="col-lg-11">
-                                        <h1>Dollar voting for influencers</h1>
-                                        <h5>Connect with your audience far more closely and monetize this connection</h5>
+                                        <h1>Aggregate visual feedback and emotions</h1>
+                                        <h5>Resolve unclear or conflicting feedback</h5>
 
                                         <div class="tick-section">
                                             <div class="d-block d-sm-none">
                                                 <div class="tick-row">
                                                     <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                    <p class="tick-input">Engage subscribers with polls</p>
+                                                    <p class="tick-input">Visual feedback</p>
                                                 </div>
                                             </div>
 
                                                 <div class="d-none d-sm-block">
                                                     <div class="tick-row">
                                                         <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                        <p class="tick-input">Engage subscribers with polls</p>
+                                                        <p class="tick-input">Visual feedback</p>
                                                     </div>
                                                 </div>
 
                                             <div class="d-block d-sm-none">
                                                 <div class="tick-row">
                                                     <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                    <p class="tick-input">Let them vote with money</p>
+                                                    <p class="tick-input">Emojis to express feelings</p>
                                                 </div>
                                             </div>
 
                                                 <div class="d-none d-sm-block">
                                                     <div class="tick-row">
                                                         <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                        <p class="tick-input">Let them vote with money</p>
+                                                        <p class="tick-input">Emojis to express feelings</p>
                                                     </div>
                                                 </div>
 
                                             <div class="d-block d-sm-none">
                                                 <div class="tick-row">
                                                     <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                    <p class="tick-input">Deliver outcome that your audience truly desires</p>
+                                                    <p class="tick-input">Resolve and prioritize conflicting opinions</p>
                                                 </div>
                                             </div>
 
                                                 <div class="d-none d-sm-block">
                                                     <div class="tick-row">
                                                         <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                        <p class="tick-input">Deliver outcome that your audience truly desires</p>
+                                                        <p class="tick-input">Resolve and prioritize conflicting opinions</p>
                                                     </div>
                                                 </div>
                                         </div>
@@ -63,7 +63,6 @@
 
 
                         <div class="col-xl-6 col-lg-5 video">
-                            <h6 class="intro-video">The chance for your fans to vote with money</h6>
                             <div class="row">
 
                                 <div class="d-block d-lg-none">
@@ -72,9 +71,9 @@
                                                 controls
                                                 crossorigin
                                                 playsinline
-                                                poster="../../../../assets/img/thumbnail.png">
-                                            <source src="../../../../assets/img/Intro-video-Rena.mp4" type="video/mp4">
-                                            Video how to create a tutoring website. Your browser does not support the video tag
+                                                poster="../resources/annotate-poster.png">
+                                            <source src="../resources/annotate-video.mp4" type="video/mp4">
+                                            Video how to annotate a website. Your browser does not support the video tag
                                         </video>
                                     </vue-plyr>
                                 </div>
@@ -85,9 +84,9 @@
                                                 controls
                                                 crossorigin
                                                 playsinline
-                                                poster="../../../../assets/img/thumbnail.png">
-                                            <source src="../../../../assets/img/Intro-video-Rena.mp4" type="video/mp4">
-                                            Video how to create a tutoring website. Your browser does not support the video tag
+                                                poster="../resources/annotate-poster.png" style="background: white">
+                                            <source src="../resources/annotate-video.mp4" type="video/mp4">
+                                            Video how to annotate a website. Your browser does not support the video tag
                                         </video>
                                     </vue-plyr>
                                 </div>
@@ -100,7 +99,7 @@
                         <div class="col-xl-7 col-lg-9">
                             <div class="row justify-content-center">
                                 <div class="col-sm-8 col-10">
-                                    <a href="/register" @click="$gtag.event('register')" class="btn btn-primary btn-register btn-profile">Let your fans vote with money</a>
+                                    <a href="/annotate-application" @click="$gtag.event('register')" class="btn btn-primary btn-register btn-profile">GET STARTED NOW - FREE</a>
                                 </div>
                             </div>
                         </div>

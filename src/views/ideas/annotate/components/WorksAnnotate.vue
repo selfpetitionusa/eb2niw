@@ -20,48 +20,48 @@
             >
                 <slide>
                     <div class="single-works">
-                        <img src="../../../../assets/img/landing-slider-1.png">
+                        <img src="../resources/aggregate.png">
                         <a v-if="windowWidth > 767" @click="index = 0;$refs['modal-zoom'].show()" style="cursor: pointer;" class="icon"><feather type="zoom-in"></feather></a>
 
                         <div class="works-content">
-                            <h3><a href="#">Process payments on autopilot</a></h3>
-                            <p>Get paid with PayPal and Stripe (cards, Apple Pay, Google Pay) - no more chasing unpaid invoices!</p>
+                            <h3><a href="#">Aggregate feedback and emotions</a></h3>
+                            <p>At first glance you know which areas to prioritize</p>
                         </div>
                     </div>
                 </slide>
 
                 <slide>
                     <div class="single-works">
-                        <img src="../../../../assets/img/landing-slider-2.png">
+                        <img src="../resources/upvotes.png">
                         <a v-if="windowWidth > 767" @click="index = 1;$refs['modal-zoom'].show()" style="cursor: pointer;" class="icon"><feather type="zoom-in"></feather></a>
 
                         <div class="works-content">
-                            <h3><a href="#">Looks great on mobile and desktop</a></h3>
-                            <p>Did you know that most of website visitors check you on mobile device?</p>
+                            <h3><a href="#">Resolve unclear or conflicting feedback</a></h3>
+                            <p>It has never been more obvious which feedback to implement</p>
                         </div>
                     </div>
                 </slide>
 
                 <slide>
                     <div class="single-works">
-                        <img src="../../../../assets/img/landing-slider-3.png" >
+                        <img src="../resources/emoji.png" >
                         <a v-if="windowWidth > 767" @click="index = 2;$refs['modal-zoom'].show()" style="cursor: pointer;" class="icon"><feather type="zoom-in"></feather></a>
 
                         <div class="works-content">
-                            <h3><a href="#">Automate your one-time and recurring calendar bookings</a></h3>
-                            <p>Save time by letting students book lessons directly on your website</p>
+                            <h3><a href="#">Capture your visitors emotions</a></h3>
+                            <p>Choose the emojis that better capture feedback in your project</p>
                         </div>
                     </div>
                 </slide>
 
                 <slide>
                     <div class="single-works">
-                        <img src="../../../../assets/img/landing-slider-4.png" >
+                        <img src="../resources/annotate.png" >
                         <a v-if="windowWidth > 767" @click="index = 3;$refs['modal-zoom'].show()" style="cursor: pointer;" class="icon"><feather type="zoom-in"></feather></a>
 
                         <div class="works-content">
-                            <h3><a href="#">Add your photo or logo</a></h3>
-                            <p>It tremendously increases the number of students who contact you</p>
+                            <h3><a href="#">Collect visual feedback</a></h3>
+                            <p>Spend less time collecting and organizing feedback</p>
                         </div>
                     </div>
                 </slide>
@@ -85,20 +85,20 @@ export default {
             index: 0,
             modalProperties: [
                 {
-                   title : "Process payments on autopilot",
-                   img: "./landing-slider-1.png"
+                   title : "Aggregate feedback and emotions",
+                   img: "./aggregate.png"
                 },
                 {
-                    title : "Looks great on mobile and desktop",
-                    img: "./landing-slider-2.png"
+                    title : "Resolve unclear or conflicting feedback",
+                    img: "./upvotes.png"
                 },
                 {
-                    title : "Automate your one-time and recurring calendar bookings",
-                    img: "./landing-slider-3.png"
+                    title : "Capture your visitors emotions",
+                    img: "./emoji.png"
                 },
                 {
-                    title : "Add your photo or logo",
-                    img: "./landing-slider-4.png"
+                    title : "Collect visual feedback",
+                    img: "./annotate.png"
                 }
 
             ]
@@ -118,7 +118,7 @@ export default {
             this.windowWidth = window.innerWidth
         },
         getImgUrl() {
-            var images = require.context('../../../../assets/img/', false, /\.png$/)
+            var images = require.context('../resources/', false, /\.png$/)
             return images(this.modalProperties[this.index].img)
         }
     }

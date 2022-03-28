@@ -5,7 +5,7 @@
             <div class="section-title contact-title">
                 <h2>Get In Touch</h2>
                 <div class="bar"></div>
-                <p>Monetize your fans, subscribers or audience - how can we help?</p>
+                <p>Aggregate and prioritize visual feedback - how can we help?</p>
             </div>
 
             <div class="row h-100 justify-content-center align-items-center">
@@ -13,7 +13,7 @@
                     <img src="../../../../assets/img/contact.svg" >
                 </div>
 
-                <div class="col-lg-6 offset-lg-1 col-col-md-12">
+                <div class="col-lg-6 offset-lg-1 col-md-12">
                     <div class="calendly">
                         <font-awesome-icon class="fa-2x calendly-icon" icon="calendar-alt" />
                         <p class="calendly-input">Send us a message:</p>
