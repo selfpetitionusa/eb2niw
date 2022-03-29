@@ -10,8 +10,8 @@
                                 <img width="55px" src="../resources/senstable-logo.png" style="border-radius: 50%" />
                             </a>
                         </div>
-                        <p style="font-weight: 600">Dollar voting for influencers</p>
-                        <p>Connect with your audience far more closely and monetize this connection</p>
+                        <p style="font-weight: 600">Visualize Scenarios</p>
+                        <p>Simple API call to embed data tables on the website, in the email, pdf or bot</p>
                     </div>
                 </div>
 
@@ -42,7 +42,7 @@
 
                 <div class="col-lg-12 col-md-12">
                     <div class="copyright-area">
-                        <p>Copyright &copy;2021 VIP VOTe. All Rights Reserved</p>
+                        <p>Copyright &copy;2022 Senstable. All Rights Reserved</p>
                     </div>
                 </div>
             </div>

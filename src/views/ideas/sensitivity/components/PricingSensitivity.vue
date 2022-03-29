@@ -7,7 +7,7 @@
                 <h2>Pricing Plans</h2>
                 <div class="bar"></div>
                 <div class="paragraph">
-                    <p>You only get charged when your fans pay to you</p>
+                    <p>If you're not happy with your subscription within 14 days, contact us for a full refund - no questions asked</p>
                 </div>
             </div>
 
@@ -19,15 +19,16 @@
                         </div>
 
                         <div class="price">
-                            <span><sup></sup>6%<span> processed payments</span></span>
+                            <span><sup>$</sup>10<span> monthly</span></span>
                         </div>
 
                         <div class="pricing-features">
                             <ul>
-                                <li class="active">Create a poll</li>
-                                <li class="active">Share it with your audience</li>
-                                <li class="active">Let fans vote with their money</li>
-                                <li class="active">Receive payments from voters <br>who selected the winning option</li>
+                                <li class="active">10,000 tables/month</li>
+                                <li class="active">Full commercial usage license</li>
+                                <li class="active">No watermark</li>
+                                <li class="active">Worldwide CDN</li>
+                                <li class="active">Regular support</li>
                             </ul>
                         </div>
 
@@ -40,21 +41,20 @@
                 <div class="col-lg-6 col-md-6 col-sm-6">
                     <div class="pricing-table active-plan">
                         <div class="pricing-header">
-                            <h3>Pro Plan</h3>
+                            <h3>Professional Plan</h3>
                         </div>
 
                         <div class="price">
-                            <span><sup></sup>7.5%<span> processed payments</span></span>
+                            <span><sup>$</sup>59<span> monthly</span></span>
                         </div>
 
                         <div class="pricing-features">
-                            <ul style="margin: 0px 0px 12px">
-                                <li class="active">All the benefits of the Basic Plan, and...</li>
-                                <li><font-awesome-icon class="icon-plus" icon="plus-circle"/></li>
-                            </ul>
-                            <ul style="margin-bottom: 16px; padding: 8px 0px; background: linear-gradient(to right bottom, #fffcff, #fbfaff, #effbff, #e0fdff, #d5fefd)">
-                                <li class="active">Customize colors</li>
-                                <li class="active">Add personal branding</li>
+                            <ul>
+                                <li class="active">Unlimited tables/month</li>
+                                <li class="active">Full commercial usage license</li>
+                                <li class="active">No watermark</li>
+                                <li class="active">Worldwide CDN</li>
+                                <li class="active">Priority Support</li>
                             </ul>
                         </div>
 

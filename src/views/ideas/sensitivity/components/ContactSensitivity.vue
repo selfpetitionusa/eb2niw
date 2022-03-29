@@ -5,7 +5,8 @@
             <div class="section-title contact-title">
                 <h2>Get In Touch</h2>
                 <div class="bar"></div>
-                <p>Monetize your fans, subscribers or audience - how can we help?</p>
+                <p>Dynamic image data tables for website, email, reports, and anywhere else</p>
+                <p>How can we help?</p>
             </div>
 
             <div class="row h-100 justify-content-center align-items-center">

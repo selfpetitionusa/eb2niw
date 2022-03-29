@@ -10,49 +10,49 @@
                             <div class="hero-content">
                                 <div class="row">
                                     <div class="col-lg-11">
-                                        <h1>Dollar voting for influencers</h1>
-                                        <h5>Connect with your audience far more closely and monetize this connection</h5>
+                                        <h1>Visualize Scenarios</h1>
+                                        <h5>Analyze your options with sensitivity tables</h5>
 
                                         <div class="tick-section">
                                             <div class="d-block d-sm-none">
                                                 <div class="tick-row">
                                                     <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                    <p class="tick-input">Engage subscribers with polls</p>
+                                                    <p class="tick-input">Simple API call</p>
                                                 </div>
                                             </div>
 
                                                 <div class="d-none d-sm-block">
                                                     <div class="tick-row">
                                                         <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                        <p class="tick-input">Engage subscribers with polls</p>
+                                                        <p class="tick-input">Simple API call</p>
                                                     </div>
                                                 </div>
 
                                             <div class="d-block d-sm-none">
                                                 <div class="tick-row">
                                                     <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                    <p class="tick-input">Let them vote with money</p>
+                                                    <p class="tick-input">Embed on the website, in the email, pdf or bot</p>
                                                 </div>
                                             </div>
 
                                                 <div class="d-none d-sm-block">
                                                     <div class="tick-row">
                                                         <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                        <p class="tick-input">Let them vote with money</p>
+                                                        <p class="tick-input">Embed on the website, in the email, pdf or bot</p>
                                                     </div>
                                                 </div>
 
                                             <div class="d-block d-sm-none">
                                                 <div class="tick-row">
                                                     <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                    <p class="tick-input">Deliver outcome that your audience truly desires</p>
+                                                    <p class="tick-input">Unbeaten reliability and speed</p>
                                                 </div>
                                             </div>
 
                                                 <div class="d-none d-sm-block">
                                                     <div class="tick-row">
                                                         <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                        <p class="tick-input">Deliver outcome that your audience truly desires</p>
+                                                        <p class="tick-input">Unbeaten reliability and speed</p>
                                                     </div>
                                                 </div>
                                         </div>
@@ -63,7 +63,7 @@
 
 
                         <div class="col-xl-6 col-lg-5 video">
-                            <h6 class="intro-video">The chance for your fans to vote with money</h6>
+                            <h6 class="intro-video">Over 1bn scenarios rendered around the world</h6>
                             <div class="row">
 
                                 <div class="d-block d-lg-none">
@@ -100,7 +100,7 @@
                         <div class="col-xl-7 col-lg-9">
                             <div class="row justify-content-center">
                                 <div class="col-sm-8 col-10">
-                                    <a href="/register" @click="$gtag.event('register')" class="btn btn-primary btn-register btn-profile">Let your fans vote with money</a>
+                                    <a href="/register" @click="$gtag.event('register')" class="btn btn-primary btn-register btn-profile">START FREE trial</a>
                                 </div>
                             </div>
                         </div>
