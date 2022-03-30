@@ -44,10 +44,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="description">Describe your case</label>
-                                <ValidationProvider rules="required" v-slot="{ errors }" >
-                                    <textarea v-model="user.description" name="description" rows="5" class="form-control" :class="{ 'is-invalid':  submitted && errors.length }" />
-                                    <div v-if="submitted && errors.length" class="invalid-feedback">Description is required</div>
-                                </ValidationProvider>
+                                <textarea v-model="user.description" name="description" rows="5" class="form-control" />
                             </div>
 
                             <div class="form-group icon-container" style="margin-top: 1rem">

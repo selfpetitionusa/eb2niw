@@ -10,49 +10,49 @@
                             <div class="hero-content">
                                 <div class="row">
                                     <div class="col-lg-11">
-                                        <h1>Self-sponsor your American freedom</h1>
-                                        <h5>You don't need an employer to sponsor you green card: take matters into your own hands!</h5>
+                                        <h1>Self-petition for a green card</h1>
+                                        <h5>With National Interest Waiver, take matters into your own hands!</h5>
 
                                         <div class="tick-section">
                                             <div class="d-block d-sm-none">
                                                 <div class="tick-row">
                                                     <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                    <p class="tick-input">Self-petition</p>
+                                                    <p class="tick-input">No employer sponsorship</p>
                                                 </div>
                                             </div>
 
                                                 <div class="d-none d-sm-block">
                                                     <div class="tick-row">
                                                         <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                        <p class="tick-input">Self-petition</p>
+                                                        <p class="tick-input">No employer sponsorship</p>
                                                     </div>
                                                 </div>
 
                                             <div class="d-block d-sm-none">
                                                 <div class="tick-row">
                                                     <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                    <p class="tick-input">EB-1A National Interest Waiver</p>
+                                                    <p class="tick-input">Lawyer who specializes in your profession</p>
                                                 </div>
                                             </div>
 
                                                 <div class="d-none d-sm-block">
                                                     <div class="tick-row">
                                                         <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                        <p class="tick-input">EB-1A National Interest Waiver</p>
+                                                        <p class="tick-input">Lawyer who specializes in your profession</p>
                                                     </div>
                                                 </div>
 
                                             <div class="d-block d-sm-none">
                                                 <div class="tick-row">
                                                     <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                    <p class="tick-input">EB-2 National Interest Waiver</p>
+                                                    <p class="tick-input">EAD (work permit) within 3M of your application</p>
                                                 </div>
                                             </div>
 
                                                 <div class="d-none d-sm-block">
                                                     <div class="tick-row">
                                                         <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                        <p class="tick-input">EB-2 National Interest Waiver</p>
+                                                        <p class="tick-input">EAD (work permit) within 3M of your application</p>
                                                     </div>
                                                 </div>
                                         </div>
@@ -123,7 +123,6 @@
         <div class="shape3"><img src="../../../../assets/img/shape3.svg" ></div>
         <div class="shape4"><img src="../../../../assets/img/shape4.svg" ></div>
         <div class="shape5"><img src="../../../../assets/img/shape5.png" ></div>
-        <div class="shape6 rotateme"><img src="../../../../assets/img/shape4.svg" ></div>
         <div class="shape7"><img src="../../../../assets/img/shape4.svg" ></div>
         <div class="shape8 rotateme"><img src="../../../../assets/img/shape2.svg" ></div>
     </div>
