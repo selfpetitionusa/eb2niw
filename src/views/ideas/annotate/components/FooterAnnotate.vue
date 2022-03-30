@@ -7,7 +7,7 @@
                     <div class="single-footer-widget">
                         <div class="logo">
                             <a href="/">
-                                <img width="55px" src="../resources/blendfeedback-logo.png" style="border-radius: 50%" />
+                                <img width="120px" src="../resources/blendfeedback-logo.svg"/>
                             </a>
                         </div>
                         <p style="font-weight: 600">Aggregate visual feedback and emotions</p>

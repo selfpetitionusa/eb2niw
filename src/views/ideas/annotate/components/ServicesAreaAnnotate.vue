@@ -14,29 +14,29 @@
             </div>
 
             <div class="row h-100 justify-content-center align-items-center">
-                <div class="col-lg-3 col-md-12" style="margin: 0 7rem">
-                    <img src="../resources/annotate-undraw.svg">
+                <div class="col-lg-5 col-md-12">
+                    <img src="../resources/aggregate.png">
                 </div>
 
-                <div class="col-lg-6 col-md-12 services-content">
+                <div class="col-lg-6 col-md-12 services-content" style="padding-right: 0">
 
-                    <div style="font-weight: 500; margin-bottom: 1rem">Who uses BLEND Feedback:</div>
+                    <h6 style="margin-top: 1rem">Who uses BLEND Feedback:</h6>
 
                     <div class="d-block d-sm-none">
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="box">
-                                    <feather type="code"></feather> Marketing agencies
+                                    <feather type="code"></feather> Marketing agency
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="box">
-                                    <feather type="layout"></feather> Web development agencies
+                                    <feather type="layout"></feather> Web development agency
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="box">
-                                    <feather type="pen-tool"></feather> In-house teams
+                                    <feather type="pen-tool"></feather> In-house team
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6">
@@ -51,22 +51,22 @@
                     <div class="d-none d-sm-block">
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-sm-6">
-                                <div class="box">
-                                    <feather type="code"></feather>  Marketing agencies
+                                <div class="box" style="padding-right: 5px; padding-left: 5px">
+                                    <feather type="code"></feather>  Marketing agency
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6">
-                                <div class="box">
-                                    <feather type="layout"></feather> Web development
+                                <div class="box" style="padding-right: 5px; padding-left: 5px">
+                                    <feather type="layout"></feather> Web development agency
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6">
-                                <div class="box">
-                                    <feather type="pen-tool"></feather> In-house teams
+                                <div class="box" style="padding-right: 5px; padding-left: 5px">
+                                    <feather type="pen-tool"></feather> In-house team
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6">
-                                <div class="box">
+                                <div class="box" style="padding-right: 5px; padding-left: 5px">
                                     <feather type="message-circle"></feather> Customer feedback
                                 </div>
                             </div>
@@ -80,14 +80,16 @@
                 <div class="col-xl-7 col-lg-9">
                     <div class="row justify-content-center">
                         <div class="col-sm-8 col-10">
-                            <a href="/annotate-application" @click="$gtag.event('register')" class="btn btn-primary btn-register btn-profile">GET STARTED FOR FREE</a>
+                            <a href="/annotate-application" @click="$gtag.event('register')" class="btn btn-primary btn-register btn-profile">GET STARTED NOW</a>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="website-example funfacts-area">
-                <h6>How does it work?</h6>
+                <div class="section-title">
+                    <h2 style="margin-top: 7rem">How does it work?</h2>
+                </div>
 
 
                 <img src="../../../../assets/img/map.png" class="map-bg" style="left: -50%">

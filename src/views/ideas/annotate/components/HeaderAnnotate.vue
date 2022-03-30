@@ -5,7 +5,7 @@
             <div class="container">
                 <nav class="navbar navbar-expand-md navbar-light">
                     <router-link class="navbar-brand" to="/">
-                        <img width="75px" src="./../resources/blendfeedback-logo.png" style="border-radius: 50%"/>
+                        <img width="110px" src="./../resources/blendfeedback-logo.svg"/>
                     </router-link>
 
                     <b-navbar-toggle target="navbarSupportedContent"></b-navbar-toggle>

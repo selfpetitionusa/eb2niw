@@ -9,7 +9,25 @@
             <img :src="getImgUrl()" />
         </b-modal>
 
-        <div class="works-slides">
+        <div style="margin: 0 25px">
+            <div class="row">
+                <div class="col-lg-6 col-sm-8 col-10 offset-lg-3 offset-sm-2 offset-1">
+                    <img src="../resources/1-2-3.svg" style="margin-bottom: 1rem"/>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-8 col-sm-10 col-12 offset-lg-2 offset-sm-1">
+                    <div class="row">
+                        <div class="col-4" style="text-align: center; padding: 0">Select elements <br> for users to comment on</div>
+                        <div class="col-4" style="text-align: center; padding: 0 10px">Get comments, <br> upvotes & reactions</div>
+                        <div class="col-4" style="text-align: center; padding: 0">Aggregate feedback <br>into actionable reports</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="works-slides" style="margin-top: 7rem">
             <carousel
                 :autoplay = "true"
                 :paginationEnabled = "false"
@@ -24,7 +42,7 @@
                         <a v-if="windowWidth > 767" @click="index = 0;$refs['modal-zoom'].show()" style="cursor: pointer;" class="icon"><feather type="zoom-in"></feather></a>
 
                         <div class="works-content">
-                            <h3><a href="#">Aggregate feedback and emotions</a></h3>
+                            <h3><a href="#">Aggregate feedback into actionable reports</a></h3>
                             <p>At first glance you know which areas to prioritize</p>
                         </div>
                     </div>
@@ -85,7 +103,7 @@ export default {
             index: 0,
             modalProperties: [
                 {
-                   title : "Aggregate feedback and emotions",
+                   title : "Aggregate feedback into actionable reports",
                    img: "./aggregate.png"
                 },
                 {

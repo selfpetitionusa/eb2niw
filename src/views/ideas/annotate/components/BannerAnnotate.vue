@@ -10,49 +10,49 @@
                             <div class="hero-content">
                                 <div class="row">
                                     <div class="col-lg-11">
-                                        <h1>Aggregate visual feedback and emotions</h1>
-                                        <h5>Resolve unclear or conflicting feedback</h5>
+                                        <h1>Let users comment directly on your website</h1>
+                                        <h5>Visual and actionable feedback</h5>
 
                                         <div class="tick-section">
                                             <div class="d-block d-sm-none">
                                                 <div class="tick-row">
                                                     <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                    <p class="tick-input">Visual feedback</p>
+                                                    <p class="tick-input">Comments & upvotes</p>
                                                 </div>
                                             </div>
 
                                                 <div class="d-none d-sm-block">
                                                     <div class="tick-row">
                                                         <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                        <p class="tick-input">Visual feedback</p>
+                                                        <p class="tick-input">Comments & upvotes</p>
                                                     </div>
                                                 </div>
 
                                             <div class="d-block d-sm-none">
                                                 <div class="tick-row">
                                                     <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                    <p class="tick-input">Emojis to express feelings</p>
+                                                    <p class="tick-input">Reactions</p>
                                                 </div>
                                             </div>
 
                                                 <div class="d-none d-sm-block">
                                                     <div class="tick-row">
                                                         <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                        <p class="tick-input">Emojis to express feelings</p>
+                                                        <p class="tick-input">Reactions</p>
                                                     </div>
                                                 </div>
 
                                             <div class="d-block d-sm-none">
                                                 <div class="tick-row">
                                                     <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                    <p class="tick-input">Resolve and prioritize conflicting opinions</p>
+                                                    <p class="tick-input">Easy aggregation</p>
                                                 </div>
                                             </div>
 
                                                 <div class="d-none d-sm-block">
                                                     <div class="tick-row">
                                                         <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                        <p class="tick-input">Resolve and prioritize conflicting opinions</p>
+                                                        <p class="tick-input">Easy aggregation</p>
                                                     </div>
                                                 </div>
                                         </div>
@@ -62,7 +62,7 @@
                         </div>
 
 
-                        <div class="col-xl-6 col-lg-5 video">
+                        <div class="col-xl-6 col-lg-5 video" style="margin-top: 4rem">
                             <div class="row">
 
                                 <div class="d-block d-lg-none">
@@ -71,7 +71,7 @@
                                                 controls
                                                 crossorigin
                                                 playsinline
-                                                poster="../resources/annotate-poster.png">
+                                                poster="../resources/annotate-poster.png" style="background: white;">
                                             <source src="../resources/annotate-video.mp4" type="video/mp4">
                                             Video how to annotate a website. Your browser does not support the video tag
                                         </video>
@@ -84,7 +84,7 @@
                                                 controls
                                                 crossorigin
                                                 playsinline
-                                                poster="../resources/annotate-poster.png" style="background: white">
+                                                poster="../resources/annotate-poster.png" style="background: white;">
                                             <source src="../resources/annotate-video.mp4" type="video/mp4">
                                             Video how to annotate a website. Your browser does not support the video tag
                                         </video>
@@ -99,7 +99,7 @@
                         <div class="col-xl-7 col-lg-9">
                             <div class="row justify-content-center">
                                 <div class="col-sm-8 col-10">
-                                    <a href="/annotate-application" @click="$gtag.event('register')" class="btn btn-primary btn-register btn-profile">GET STARTED NOW - FREE</a>
+                                    <a href="/annotate-application" @click="$gtag.event('register')" class="btn btn-primary btn-register btn-profile">GET STARTED NOW</a>
                                 </div>
                             </div>
                         </div>
