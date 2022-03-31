@@ -52,7 +52,7 @@
                                     <span class="icon" style="font-size: 14px; margin-left: 10px;">Upload Resume</span>
                                 </label>
                                 <ValidationProvider rules="required|image" v-slot="{ validate, errors }">
-                                    <input type="file" class="form-control-file" id="upload" ref="upload" @change="validate" style="display: none;" :class="{ 'is-invalid':  submitted && errors.length }">
+                                    <input type="file" class="form-control-file" id="upload" ref="upload" @change="validate" multiple style="display: none;" :class="{ 'is-invalid':  submitted && errors.length }">
                                     <div v-if="submitted && errors.length" class="invalid-feedback">Resume or CV is required</div>
                                 </ValidationProvider>
                             </div>
