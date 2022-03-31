@@ -48,7 +48,7 @@
                             </div>
 
                             <div class="form-group icon-container" style="margin-top: 1rem">
-                                <label for="upload" class="icon" style="font-size: 2.5rem"><font-awesome-icon icon="file-upload" />
+                                <label for="upload" class="icon" style="font-size: 2.5rem; cursor: pointer;"><font-awesome-icon icon="file-upload" />
                                     <span class="icon" style="font-size: 14px; margin-left: 10px;">Upload Resume</span>
                                 </label>
                                 <ValidationProvider rules="required|image" v-slot="{ validate, errors }">
