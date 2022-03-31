@@ -1,6 +1,6 @@
 <template>
     <!-- Start Main Banner -->
-    <div class="main-banner">
+    <div class="main-banner" style="padding-bottom: 3rem">
         <SectionOne id="home"/>
         <div class="d-table">
             <div class="d-table-cell">
@@ -66,17 +66,17 @@
                             <h6 class="intro-video">Who is eligible to self-petition?</h6>
 
                             <div class="row">
-                                <div class="col-4">
+                                <div class="col-4" style="padding: 0px 5px">
                                     <a href="/green-card-evaluation" @click="$gtag.event('register')">
                                         <img src="../resources/Stem.svg">
                                     </a>
                                 </div>
-                                <div class="col-4">
+                                <div class="col-4" style="padding: 0px 5px">
                                     <a href="/green-card-evaluation" @click="$gtag.event('register')">
                                         <img src="../resources/Entrepreneurs.svg">
                                     </a>
                                 </div>
-                                <div class="col-4">
+                                <div class="col-4" style="padding: 0px 5px">
                                     <a href="/green-card-evaluation" @click="$gtag.event('register')">
                                         <img src="../resources/Finance.svg">
                                     </a>
@@ -84,17 +84,17 @@
                             </div>
 
                             <div class="row" style="margin-top: 1.5rem">
-                                <div class="col-4">
+                                <div class="col-4" style="padding: 0px 5px">
                                     <a href="/green-card-evaluation" @click="$gtag.event('register')">
                                         <img src="../resources/Sciences.svg">
                                     </a>
                                 </div>
-                                <div class="col-4">
+                                <div class="col-4" style="padding: 0px 5px">
                                     <a href="/green-card-evaluation" @click="$gtag.event('register')">
                                         <img src="../resources/Business.svg">
                                     </a>
                                 </div>
-                                <div class="col-4">
+                                <div class="col-4" style="padding: 0px 5px">
                                     <a href="/green-card-evaluation" @click="$gtag.event('register')">
                                         <img src="../resources/Other.svg">
                                     </a>
@@ -104,11 +104,11 @@
                     </div>
 
 
-                    <div class="row banner-action-btns" style="margin-top: 1rem">
+                    <div class="row banner-action-btns" style="margin-top: 3rem">
                         <div class="col-xl-7 col-lg-9">
                             <div class="row justify-content-center">
                                 <div class="col-sm-8 col-10">
-                                    <a href="/green-card-evaluation" @click="$gtag.event('register')" class="btn btn-primary btn-register btn-profile">Check if you are eligible</a>
+                                    <a href="/green-card-evaluation" @click="$gtag.event('register')" class="btn btn-primary btn-register btn-profile">Check your eligibility</a>
                                 </div>
                             </div>
                         </div>

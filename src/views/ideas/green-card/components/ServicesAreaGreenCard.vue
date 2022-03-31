@@ -25,7 +25,7 @@
             </div>
 
             <div class="row h-100 justify-content-center align-items-center">
-                <div class="col-lg-4 col-md-12">
+                <div class="col-lg-4 col-md-4 col-6">
                     <img src="../resources/Green-stamp-pure.svg">
                 </div>
 
@@ -45,7 +45,7 @@
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="box">
-                                    <feather type="pen-tool"></feather> Faster process by filing I-140 and I-485 petitions concurrently
+                                    <feather type="pen-tool"></feather> Faster process by filing I-140 and I-485 concurrently
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6">
@@ -53,7 +53,7 @@
                                     <feather type="message-circle"></feather> Early work authorization before green card is approved
                                 </div>
                             </div>
-                            <div class="col-lg-10 col-md-10 col-sm-10 offset-sm-1">
+                                <div class="col-xl-10 col-lg-12 col-md-8 col-sm-12 offset-xl-1 offset-lg-0 offset-md-2" style="padding: 0 8px">
                                 <div class="box">
                                     <feather type="search"></feather> PERM Labor Certification process to show a shortage of U.S. workers in the labor market is NOT required
                                 </div>
@@ -76,7 +76,7 @@
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="box">
-                                    <feather type="pen-tool"></feather> Faster process by filing I-140 and I-485 petitions concurrently
+                                    <feather type="pen-tool"></feather> Faster process by filing I-140 and I-485 concurrently
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6">
@@ -84,7 +84,7 @@
                                     <feather type="message-circle"></feather> Early work authorization before green card is approved
                                 </div>
                             </div>
-                            <div class="col-lg-10 col-md-10 col-sm-10 offset-sm-1">
+                            <div class="col-xl-10 col-lg-12 col-md-8 col-sm-12 offset-xl-1 offset-lg-0 offset-md-2" style="padding: 0 8px">
                                 <div class="box">
                                     <feather type="search"></feather> PERM Labor Certification process to show a shortage of U.S. workers in the labor market is NOT required
                                 </div>
@@ -117,11 +117,11 @@
                 </div>
             </div>
 
-            <div class="row service-action-btns" style="margin-top: 6rem; margin-bottom: 6rem">
+            <div class="row service-action-btns" style="margin-top: 4rem; margin-bottom: 4rem">
                 <div class="col-xl-7 col-lg-9">
                     <div class="row justify-content-center">
                         <div class="col-sm-8 col-10">
-                            <a href="/green-card-evaluation" @click="$gtag.event('register')" class="btn btn-primary btn-register btn-profile">Check if you are eligible</a>
+                            <a href="/green-card-evaluation" @click="$gtag.event('register')" class="btn btn-primary btn-register btn-profile">Check your eligibility</a>
                         </div>
                     </div>
                 </div>

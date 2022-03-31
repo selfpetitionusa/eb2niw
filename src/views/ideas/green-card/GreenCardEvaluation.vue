@@ -7,7 +7,7 @@
                     <h3>Are You Eligible for a NIW Green Card?</h3>
                     <div class="subject-subcategories" style="text-align: left">
                         <div class="register-conditions" style="font-weight: 400">
-                            We review your profile to assess your chances of green card approval
+                            We review your profile to assess chances of green card approval
                         </div>
                     </div>
 
