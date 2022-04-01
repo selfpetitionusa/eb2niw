@@ -16,8 +16,8 @@
             </div>
 
             <div class="row h-100 justify-content-center align-items-center">
-                <div class="col-lg-6 col-md-12">
-                    <img src="../../../../assets/img/website-example.png">
+                <div class="col-lg-4 col-md-10 offset-lg-2 offset-1">
+                    <img src="../resources/undraw-sensitivity-table.svg">
                 </div>
 
                 <div class="col-lg-6 col-md-12 services-content">

@@ -65,31 +65,8 @@
                         <div class="col-xl-6 col-lg-5 video">
                             <h6 class="intro-video">Over 1bn scenarios rendered around the world</h6>
                             <div class="row">
-
-                                <div class="d-block d-lg-none">
-                                    <vue-plyr ref="plyr">
-                                        <video
-                                                controls
-                                                crossorigin
-                                                playsinline
-                                                poster="../../../../assets/img/thumbnail.png">
-                                            <source src="../../../../assets/img/Intro-video-Rena.mp4" type="video/mp4">
-                                            Video how to create a tutoring website. Your browser does not support the video tag
-                                        </video>
-                                    </vue-plyr>
-                                </div>
-
-                                <div class="d-none d-lg-block">
-                                    <vue-plyr ref="plyr">
-                                        <video
-                                                controls
-                                                crossorigin
-                                                playsinline
-                                                poster="../../../../assets/img/thumbnail.png">
-                                            <source src="../../../../assets/img/Intro-video-Rena.mp4" type="video/mp4">
-                                            Video how to create a tutoring website. Your browser does not support the video tag
-                                        </video>
-                                    </vue-plyr>
+                                <div class="col-10 offset-1">
+                                    <img src="../resources/sensitivity-table.svg" style="margin-top: 2rem">
                                 </div>
                             </div>
                         </div>
@@ -118,7 +95,6 @@
         <div class="shape3"><img src="../../../../assets/img/shape3.svg" ></div>
         <div class="shape4"><img src="../../../../assets/img/shape4.svg" ></div>
         <div class="shape5"><img src="../../../../assets/img/shape5.png" ></div>
-        <div class="shape6 rotateme"><img src="../../../../assets/img/shape4.svg" ></div>
         <div class="shape7"><img src="../../../../assets/img/shape4.svg" ></div>
         <div class="shape8 rotateme"><img src="../../../../assets/img/shape2.svg" ></div>
     </div>

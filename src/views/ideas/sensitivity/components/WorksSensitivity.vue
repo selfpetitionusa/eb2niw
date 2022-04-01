@@ -20,51 +20,40 @@
             >
                 <slide>
                     <div class="single-works">
-                        <img src="../../../../assets/img/landing-slider-1.png">
+                        <img src="../resources/temperature-sensitivity.svg">
                         <a v-if="windowWidth > 767" @click="index = 0;$refs['modal-zoom'].show()" style="cursor: pointer;" class="icon"><feather type="zoom-in"></feather></a>
 
                         <div class="works-content">
-                            <h3><a href="#">Process payments on autopilot</a></h3>
-                            <p>Get paid with PayPal and Stripe (cards, Apple Pay, Google Pay) - no more chasing unpaid invoices!</p>
+                            <h3><a href="#">Visualize scenarios with a simple API call </a></h3>
+                            <p>Tailor the table for various industry standards: you decide what analysis & scenarios to analyze</p>
                         </div>
                     </div>
                 </slide>
 
                 <slide>
                     <div class="single-works">
-                        <img src="../../../../assets/img/landing-slider-2.png">
+                        <img src="../resources/mortgage-sensitivity.svg">
                         <a v-if="windowWidth > 767" @click="index = 1;$refs['modal-zoom'].show()" style="cursor: pointer;" class="icon"><feather type="zoom-in"></feather></a>
 
                         <div class="works-content">
-                            <h3><a href="#">Looks great on mobile and desktop</a></h3>
-                            <p>Did you know that most of website visitors check you on mobile device?</p>
+                            <h3><a href="#">Embed on the website, in the email or pdf</a></h3>
+                            <p>Need interactive sensitivity table for website visitors or a convenient email output?</p>
                         </div>
                     </div>
                 </slide>
 
                 <slide>
                     <div class="single-works">
-                        <img src="../../../../assets/img/landing-slider-3.png" >
+                        <img src="../resources/parameters-sensitivity.svg">
                         <a v-if="windowWidth > 767" @click="index = 2;$refs['modal-zoom'].show()" style="cursor: pointer;" class="icon"><feather type="zoom-in"></feather></a>
 
                         <div class="works-content">
-                            <h3><a href="#">Automate your one-time and recurring calendar bookings</a></h3>
-                            <p>Save time by letting students book lessons directly on your website</p>
+                            <h3><a href="#">Easy way to personalize parameters</a></h3>
+                            <p>Decide what scenarios to analyze and how to display visual results</p>
                         </div>
                     </div>
                 </slide>
 
-                <slide>
-                    <div class="single-works">
-                        <img src="../../../../assets/img/landing-slider-4.png" >
-                        <a v-if="windowWidth > 767" @click="index = 3;$refs['modal-zoom'].show()" style="cursor: pointer;" class="icon"><feather type="zoom-in"></feather></a>
-
-                        <div class="works-content">
-                            <h3><a href="#">Add your photo or logo</a></h3>
-                            <p>It tremendously increases the number of students who contact you</p>
-                        </div>
-                    </div>
-                </slide>
             </carousel>
         </div>
         <div class="shape4"><img src="../../../../assets/img/shape4.svg"></div>
@@ -85,20 +74,16 @@ export default {
             index: 0,
             modalProperties: [
                 {
-                   title : "Process payments on autopilot",
-                   img: "./landing-slider-1.png"
+                   title : "Visualize scenarios with a simple API call",
+                   img: "./temperature-sensitivity.svg"
                 },
                 {
-                    title : "Looks great on mobile and desktop",
-                    img: "./landing-slider-2.png"
+                    title : "Embed on the website, in the email or pdf",
+                    img: "./mortgage-sensitivity.svg"
                 },
                 {
-                    title : "Automate your one-time and recurring calendar bookings",
-                    img: "./landing-slider-3.png"
-                },
-                {
-                    title : "Add your photo or logo",
-                    img: "./landing-slider-4.png"
+                    title : "Easy way to personalize parameters",
+                    img: "./parameters-sensitivity.svg"
                 }
 
             ]
@@ -118,7 +103,7 @@ export default {
             this.windowWidth = window.innerWidth
         },
         getImgUrl() {
-            var images = require.context('../../../../assets/img/', false, /\.png$/)
+            var images = require.context('../resources/', false, /\.svg$/)
             return images(this.modalProperties[this.index].img)
         }
     }
