@@ -11,7 +11,7 @@
                                 <div class="row">
                                     <div class="col-lg-11">
                                         <h1>Self-petition green card for professionals</h1>
-                                        <h5>With National Interest Waiver, take matters into your own hands!</h5>
+                                        <h5>Take matters into your own hands!</h5>
 
                                         <div class="tick-section">
                                             <div class="d-block d-sm-none">
@@ -45,14 +45,14 @@
                                             <div class="d-block d-sm-none">
                                                 <div class="tick-row">
                                                     <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                    <p class="tick-input">EAD (work permit) within 3M of your application</p>
+                                                    <p class="tick-input">EAD (work permit) within 3 months of application</p>
                                                 </div>
                                             </div>
 
                                                 <div class="d-none d-sm-block">
                                                     <div class="tick-row">
                                                         <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                        <p class="tick-input">EAD (work permit) within 3M of your application</p>
+                                                        <p class="tick-input">EAD (work permit) within 3 months of application</p>
                                                     </div>
                                                 </div>
                                         </div>

@@ -51,7 +51,7 @@
                             <ul>
                                 <li class="active">Number of family members</li>
                                 <li class="active">Your profile details</li>
-                                <li class="active">Type of NIW process</li>
+                                <li class="active">Type of the visa: EB-1A vs EB-2 NIW</li>
                                 <li class="active">20% refund policy if not successful</li>
                             </ul>
                         </div>

@@ -4,7 +4,7 @@
         <div class="container register">
             <div class="row">
                 <div class="col-lg-6 col-md-8 col-sm-12 offset-lg-3 offset-md-2">
-                    <h3>Are You Eligible for a NIW Green Card?</h3>
+                    <h3>Are You Eligible to Self-Petition?</h3>
                     <div class="subject-subcategories" style="text-align: left">
                         <div class="register-conditions" style="font-weight: 400">
                             We review your profile to assess chances of green card approval

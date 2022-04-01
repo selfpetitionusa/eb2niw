@@ -4,22 +4,20 @@
         <SectionThree id="solutions"/>
         <div class="container">
             <div class="section-title">
-                <h2>What is the NIW Application?</h2>
+                <h2>How does self-petition work?</h2>
                 <div class="bar"></div>
 
                 <div class="paragraph">
-                    <p style="font-weight: 600">National Interest Waiver (NIW)</p>
-                    <p>A green card application where you self-petition, ie apply by yourself, without employer sponsorship. Your application needs to demonstrate that your skills are important for the national interest of the United States</p>
+                    <p style="font-weight: 600">Self-petition green card</p>
+                    <p>An application where you self-petition, ie. apply by yourself, without employer sponsorship. There are two options available: the EB-1A and EB-2 National Interest Waiver (NIW) visas</p>
                 </div>
-                <div class="paragraph">
-                    <p>One of the more popular options is through the EB-1A and EB-2 National Interest Waiver (NIW) visas</p>
-                </div>
+
                 <div class="paragraph">
                     <p style="font-weight: 600">EB-1A</p>
                     <p>Requires to demonstrate that you have extraordinary ability in the sciences, arts, education, business, or athletics</p>
                 </div>
                 <div class="paragraph">
-                    <p style="font-weight: 600">EB-2</p>
+                    <p style="font-weight: 600">EB-2 NIW</p>
                     <p>Designated for people with advanced degrees (e.g. Masters, PhD, etc.) or those with exceptional ability in their fields</p>
                 </div>
             </div>
@@ -111,7 +109,7 @@
                         <div class="row">
                             <div class="col-4" style="text-align: center; padding: 0">Upload your resume <br>for free assessment</div>
                             <div class="col-4" style="text-align: center; padding: 0 10px">Schedule a live <br>consultation with a lawyer</div>
-                            <div class="col-4" style="text-align: center; padding: 0">Submit NIW application <br>with a lawyer</div>
+                            <div class="col-4" style="text-align: center; padding: 0">Submit application <br>with a lawyer</div>
                         </div>
                     </div>
                 </div>
