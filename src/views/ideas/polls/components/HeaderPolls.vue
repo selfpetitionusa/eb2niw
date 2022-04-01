@@ -5,7 +5,7 @@
             <div class="container">
                 <nav class="navbar navbar-expand-md navbar-light">
                     <router-link class="navbar-brand" to="/">
-                        <img width="75px" src="../resources/vipvote-logo.svg" style="border-radius: 50%"/>
+                        <img width="50px" src="../resources/vipvote-logo.svg" style="border-radius: 50%"/>
                     </router-link>
 
                     <b-navbar-toggle target="navbarSupportedContent"></b-navbar-toggle>

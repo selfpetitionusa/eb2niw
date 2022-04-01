@@ -7,7 +7,7 @@
                     <div class="single-footer-widget">
                         <div class="logo">
                             <a href="/">
-                                <img width="130px" src="../resources/selfpetitionusa-logo.png" />
+                                <img width="130px" src="../resources/selfpetitionusa-logo.svg" />
                             </a>
                         </div>
                         <p style="font-weight: 600">Self-sponsor your green card</p>
