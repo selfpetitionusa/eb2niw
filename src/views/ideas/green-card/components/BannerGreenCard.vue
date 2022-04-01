@@ -10,7 +10,7 @@
                             <div class="hero-content">
                                 <div class="row">
                                     <div class="col-lg-11">
-                                        <h1>Self-petition for a green card</h1>
+                                        <h1>Self-petition green card for professionals</h1>
                                         <h5>With National Interest Waiver, take matters into your own hands!</h5>
 
                                         <div class="tick-section">

@@ -7,6 +7,7 @@
     <div>
       <BannerGreenCard></BannerGreenCard>
       <ServicesAreaGreenCard></ServicesAreaGreenCard>
+      <FeedbackGreenCard></FeedbackGreenCard>
       <PricingGreenCard></PricingGreenCard>
       <ContactGreenCard></ContactGreenCard>
     </div>
@@ -19,6 +20,7 @@
 <script>
   import BannerGreenCard from './components/BannerGreenCard';
   import ServicesAreaGreenCard from './components/ServicesAreaGreenCard';
+  import FeedbackGreenCard from './components/FeedbackGreenCard';
   import PricingGreenCard from './components/PricingGreenCard';
   import ContactGreenCard from './components/ContactGreenCard';
   import HeaderGreenCard from "./components/HeaderGreenCard";
@@ -31,6 +33,7 @@
     components: {
       BannerGreenCard,
       ServicesAreaGreenCard,
+      FeedbackGreenCard,
       PricingGreenCard,
       ContactGreenCard,
       HeaderGreenCard,
