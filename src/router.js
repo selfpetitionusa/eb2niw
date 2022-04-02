@@ -21,11 +21,13 @@ import HomePolls from "./views/ideas/polls/HomePolls";
 import HomeGreenCard from "./views/ideas/green-card/HomeGreenCard";
 import HomeAnnotate from "./views/ideas/annotate/HomeAnnotate";
 import HomeSensitivity from "./views/ideas/sensitivity/HomeSensitivity";
+import HomeSanctions from "./views/ideas/sanctions/HomeSanctions";
 
 import GreenCardEvaluation from "./views/ideas/green-card/GreenCardEvaluation";
 import GreenCardApplication from "./views/ideas/green-card/GreenCardApplication";
 import PollsApplication from "./views/ideas/polls/PollsApplication";
 import AnnotateApplication from "./views/ideas/annotate/AnnotateApplication";
+import SanctionsApplication from "./views/ideas/sanctions/SanctionsApplication";
 
 
 export const router = new VueRouter({
@@ -51,10 +53,12 @@ export const router = new VueRouter({
       { path: '/greencard', component: HomeGreenCard },
       { path: '/annotate', component: HomeAnnotate },
       { path: '/sensitivity', component: HomeSensitivity },
+      { path: '/sanctions', component: HomeSanctions },
       { path: '/green-card-evaluation', component: GreenCardEvaluation },
       { path: '/green-card-application', component: GreenCardApplication },
       { path: '/polls-application', component: PollsApplication },
       { path: '/annotate-application', component: AnnotateApplication },
+      { path: '/sanctions-application', component: SanctionsApplication },
       {
             path: '/account',
             component: Account,
@@ -81,7 +85,7 @@ export const router = new VueRouter({
 
 router.beforeEach((to, from, next) => {
     // redirect to login page if not logged in and trying to access a restricted page
-    const publicPages = ["/", '/login', '/register', '/password-reset', '/website-needs-assessment', '/polls', '/greencard', '/annotate', '/sensitivity', 'green-card-evaluation', 'green-card-application', 'polls-application', 'annotate-application' ];
+    const publicPages = ["/", '/login', '/register', '/password-reset', '/website-needs-assessment', '/polls', '/greencard', '/annotate', '/sensitivity', 'green-card-evaluation', 'green-card-application', 'polls-application', 'annotate-application', 'sanctions-application' ];
     const publicPrefixes = ["/tutor" ];
     const authRequired = !publicPages.includes(to.path) && !publicPrefixes.some(prefix => to.path.startsWith(prefix));
     const loggedIn = localStorage.getItem('user');
