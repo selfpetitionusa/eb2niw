@@ -31,7 +31,7 @@
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="box">
-                                    <feather type="layout"></feather> Expand e-mail list by providing poll results on autopilot
+                                    <feather type="layout"></feather> Expand e-mail list by poll results on autopilot
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6">
@@ -62,7 +62,7 @@
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="box">
-                                    <feather type="layout"></feather> Expand e-mail list by providing poll results on autopilot
+                                    <feather type="layout"></feather> Expand e-mail list by poll results on autopilot
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6">
@@ -86,11 +86,33 @@
                 </div>
             </div>
 
+            <div class="section-title">
+                <h2 style="margin-top: 7rem">How does it work?</h2>
+            </div>
+
+            <div style="margin: 0 25px">
+                <div class="row">
+                    <div class="col-lg-6 col-sm-8 col-10 offset-lg-3 offset-sm-2 offset-1">
+                        <img src="../resources/1-2-3.svg" style="margin-bottom: 1rem"/>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-8 col-sm-10 col-12 offset-lg-2 offset-sm-1">
+                        <div class="row">
+                            <div class="col-4" style="text-align: center; padding: 0">Ask a questions <br>to your fans</div>
+                            <div class="col-4" style="text-align: center; padding: 0 10px">Your fans <br>vote with money</div>
+                            <div class="col-4" style="text-align: center; padding: 0">Fans are happy <br>and you made money!</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="row service-action-btns">
                 <div class="col-xl-7 col-lg-9">
                     <div class="row justify-content-center">
                         <div class="col-sm-8 col-10">
-                            <a href="/polls-application" @click="$gtag.event('register')" class="btn btn-primary btn-register btn-profile">CREATE A POLL TO SHARE WITH FOLLOWERS</a>
+                            <a href="/polls-application" @click="$gtag.event('register')" class="btn btn-primary btn-register btn-profile">CREATE A POLL FOR FOLLOWERS</a>
                         </div>
                     </div>
                 </div>

@@ -29,9 +29,9 @@
                     <div class="single-footer-widget">
                         <h3>Support</h3>
                         <ul class="list">
-                            <li><a href="/Polls_Terms_of_Service.pdf">Terms of Service</a></li>
-                            <li><a href="/Polls_Privacy_Policy.pdf">Privacy Policy</a></li>
-                            <li><a href="/Polls_Website_Terms_and_Conditions.pdf">Terms and Conditions</a></li>
+                            <li><a href="/Sanctions_Terms_of_Service.pdf">Terms of Service</a></li>
+                            <li><a href="/Sanctions_Privacy_Policy.pdf">Privacy Policy</a></li>
+                            <li><a href="/Sanctions_Website_Terms_and_Conditions.pdf">Terms and Conditions</a></li>
 
                             <li><a href="/" v-scroll-to="'#contact'" >Contact Us</a></li>
                         </ul>

@@ -6,7 +6,7 @@
             <div class="d-table-cell">
                 <div class="container">
                     <div class="row h-100 justify-content-center align-items-center">
-                        <div class="col-xl-7 col-lg-7">
+                        <div class="col-xl-6 col-lg-7">
                             <div class="hero-content">
                                 <div class="row">
                                     <div class="col-lg-11">
@@ -62,10 +62,10 @@
                         </div>
 
 
-                        <div class="col-xl-5 col-lg-5 video">
+                        <div class="col-xl-6 col-lg-5 video" style="margin-top: 2rem">
                             <div class="row">
-                                <div class="col-11 offset-1">
-                                    <img src="../resources/poll-ad.svg"/>
+                                <div class="col-10 offset-1">
+                                    <img src="../resources/poll-ad.svg" style="border-radius: 5%"/>
                                 </div>
                             </div>
                         </div>
