@@ -4,7 +4,7 @@
         <div class="container register">
             <div class="row">
                 <div class="col-lg-6 col-md-8 col-sm-12 offset-lg-3 offset-md-2">
-                    <h3 style="margin-bottom: 2rem">Start your 14 days trial today</h3>
+                    <h3 style="margin-bottom: 2rem">Start your 14-days trial today</h3>
 
                     <ValidationObserver ref="form">
                         <form @submit.prevent="handleSubmit" novalidate>
@@ -31,23 +31,13 @@
                                 </ValidationProvider>
                             </div>
                             <div class="form-group">
-                                <label for="choice">Which sanctions data do you require?</label>
+                                <label for="choice">How large is your organization?</label>
                                 <ValidationProvider rules="required" v-slot="{ errors }" >
                                     <select v-model="user.choice" id="choice" name="choice" class="form-control" :class="{ 'is-invalid':  submitted && errors.length }">
-                                        <option>Global - all available</option>
-                                        <option>USA</option>
-                                        <option>European Union</option>
-                                        <option>United Kingdom</option>
-                                        <option>Canada</option>
-                                        <option>Australia</option>
-                                        <option>United Arab Emirates</option>
-                                        <option>Switzerland</option>
-                                        <option>United Nations</option>
-                                        <option>The World Bank</option>
-                                        <option>African Development Bank</option>
-                                        <option>Inter-American Development Bank</option>
-                                        <option>Asian Development Bank</option>
-                                        <option>Other</option>
+                                        <option>1-10</option>
+                                        <option>11-50</option>
+                                        <option>51-200</option>
+                                        <option>200+</option>
                                     </select>
                                     <div v-if="submitted && errors.length" class="invalid-feedback">Preferred sanctions data is required</div>
                                 </ValidationProvider>

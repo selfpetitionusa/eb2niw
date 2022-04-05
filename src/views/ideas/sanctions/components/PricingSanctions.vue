@@ -15,7 +15,7 @@
                 <div class="col-lg-4 col-md-4 col-sm-4">
                     <div class="pricing-table">
                         <div class="pricing-header">
-                            <h3>Basic Plan</h3>
+                            <h3>Starter</h3>
                         </div>
 
                         <div class="price">
@@ -25,15 +25,14 @@
                         <div class="pricing-features">
                             <ul>
                                 <li class="active">100 customers per day</li>
-                                <li class="active">Set up with a few lines of code</li>
-                                <li class="active">Global & local Sanctions Lists</li>
-                                <li class="active">Over 2bn unique records</li>
-                                <li class="active">24/7 email support</li>
+                                <li class="active">Only a few lines of code</li>
+                                <li class="active">Global & local lists</li>
+                                <li class="active">24/7 email customer support</li>
                             </ul>
                         </div>
 
                         <div class="pricing-footer">
-                            <a href="/sanctions-application"  @click="$gtag.event('plan-basic')" class="btn btn-primary">Select Plan</a>
+                            <a href="/sanctions-application"  @click="$gtag.event('plan-basic')" class="btn btn-primary">Get API key</a>
                         </div>
                     </div>
                 </div>
@@ -41,7 +40,7 @@
                 <div class="col-lg-4 col-md-4 col-sm-4">
                     <div class="pricing-table active-plan">
                         <div class="pricing-header">
-                            <h3>Enterprise Plan</h3>
+                            <h3>Enterprise</h3>
                         </div>
 
                         <div class="price">
@@ -51,15 +50,14 @@
                         <div class="pricing-features">
                             <ul>
                                 <li class="active">1000 customers per day</li>
-                                <li class="active">Set up with a few lines of code</li>
-                                <li class="active">Global & local Sanctions Lists</li>
-                                <li class="active">Over 2bn unique records</li>
+                                <li class="active">Only a few lines of code</li>
+                                <li class="active">Global & local lists</li>
                                 <li class="active">24/7 email and call support</li>
                             </ul>
                         </div>
 
                         <div class="pricing-footer">
-                            <a href="/sanctions-application"  @click="$gtag.event('plan-premium')" class="btn btn-primary">Select Plan</a>
+                            <a href="/sanctions-application"  @click="$gtag.event('plan-premium')" class="btn btn-primary">Get API key</a>
                         </div>
                     </div>
                 </div>
@@ -67,7 +65,7 @@
                 <div class="col-lg-4 col-md-4 col-sm-4">
                     <div class="pricing-table">
                         <div class="pricing-header">
-                            <h3>Unlimited Plan</h3>
+                            <h3>Unlimited</h3>
                         </div>
 
                         <div class="price">
@@ -76,16 +74,15 @@
 
                         <div class="pricing-features">
                             <ul>
-                                <li class="active">Unlimited customers per day</li>
-                                <li class="active">Set up with a few lines of code</li>
-                                <li class="active">Global & local Sanctions Lists</li>
-                                <li class="active">Over 2bn unique records</li>
+                                <li class="active">Unlimited customers</li>
+                                <li class="active">Only a few lines of code</li>
+                                <li class="active">Global & local lists</li>
                                 <li class="active">Dedicated account manager</li>
                             </ul>
                         </div>
 
                         <div class="pricing-footer">
-                            <a href="/sanctions-application"  @click="$gtag.event('plan-basic')" class="btn btn-primary">Select Plan</a>
+                            <a href="/sanctions-application"  @click="$gtag.event('plan-basic')" class="btn btn-primary">Get API key</a>
                         </div>
                     </div>
                 </div>

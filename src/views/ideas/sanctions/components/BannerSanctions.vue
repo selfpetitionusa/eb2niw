@@ -1,6 +1,6 @@
 <template>
     <!-- Start Main Banner -->
-    <div class="main-banner">
+    <div class="main-banner" style="padding-bottom: 3rem">
         <SectionOne id="home"/>
         <div class="d-table">
             <div class="d-table-cell">
@@ -11,48 +11,48 @@
                                 <div class="row">
                                     <div class="col-lg-11">
                                         <h1>Sanctions screening for your business compliance</h1>
-                                        <h5>Simple sanctions screening API which combines data from around the globe</h5>
+                                        <h5>API-first solution, fast and easy to integrate</h5>
 
                                         <div class="tick-section">
                                             <div class="d-block d-sm-none">
                                                 <div class="tick-row">
                                                     <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                    <p class="tick-input">Global sanctions lists</p>
+                                                    <p class="tick-input">15+ sanctions lists</p>
                                                 </div>
                                             </div>
 
                                                 <div class="d-none d-sm-block">
                                                     <div class="tick-row">
                                                         <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                        <p class="tick-input">Global sanctions lists</p>
+                                                        <p class="tick-input">15+ sanctions lists</p>
                                                     </div>
                                                 </div>
 
                                             <div class="d-block d-sm-none">
                                                 <div class="tick-row">
                                                     <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                    <p class="tick-input">Developer friendly API-first solution</p>
+                                                    <p class="tick-input">RESTful API</p>
                                                 </div>
                                             </div>
 
                                                 <div class="d-none d-sm-block">
                                                     <div class="tick-row">
                                                         <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                        <p class="tick-input">Developer friendly API-first solution</p>
+                                                        <p class="tick-input">RESTful API</p>
                                                     </div>
                                                 </div>
 
                                             <div class="d-block d-sm-none">
                                                 <div class="tick-row">
                                                     <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                    <p class="tick-input">Start with only a few lines of code</p>
+                                                    <p class="tick-input">Integrate with your CRM</p>
                                                 </div>
                                             </div>
 
                                                 <div class="d-none d-sm-block">
                                                     <div class="tick-row">
                                                         <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                        <p class="tick-input">Start with only a few lines of code</p>
+                                                        <p class="tick-input">Integrate with your CRM</p>
                                                     </div>
                                                 </div>
                                         </div>
@@ -62,11 +62,27 @@
                         </div>
 
 
-                        <div class="col-xl-5 col-lg-5 video">
-                            <div class="row">
-                                <div class="col-11 offset-1">
-                                    <img src="../resources/sanctions.png"/>
-                                    <h5 style="padding: 20px 0; text-align: center">100% compliance with sanctions</h5>
+                        <div class="col-xl-4 col-lg-4 col-md-7 video" style="margin-top: 2rem">
+                            <div class="row" style="border: solid 1px #E5E5E5; border-radius: 5%; background-color: white; box-shadow: 2px 2px 4px #E5E5E5;">
+                                <div class="col-sm-2 col-3" style="margin-left: 0">
+                                    <ul style="list-style-type: none; padding-top: 1.5rem">
+                                        <li style="font-size: 3rem">🇺🇸</li>
+                                        <li style="font-size: 3rem">🇪🇺</li>
+                                        <li style="font-size: 3rem">🇨🇦</li>
+                                        <li style="font-size: 3rem">🇬🇧</li>
+                                        <li style="font-size: 3rem">🇺🇳</li>
+                                    </ul>
+                                </div>
+
+                                <div class="col-sm-10 col-9">
+                                    <ul style="list-style-type: none; padding-top: 1.5rem">
+                                        <li style="font-size: 1.6rem; color: #0e314c; padding-top: 1rem; padding-bottom: 1.1rem">OFAC</li>
+                                        <li style="font-size: 1.6rem; color: #0e314c; padding-top: 1rem; padding-bottom: 1.1rem">CFSP</li>
+                                        <li style="font-size: 1.6rem; color: #0e314c; padding-top: 1rem; padding-bottom: 1.1rem">CASL</li>
+                                        <li style="font-size: 1.6rem; color: #0e314c; padding-top: 1rem; padding-bottom: 1.1rem">OFSI</li>
+                                        <li style="font-size: 1.6rem; color: #0e314c; padding-top: 1rem; padding-bottom: 1.1rem">SC</li>
+                                        <li style="font-size: 1.1rem; color: #0e314c; padding-top: 1rem; padding-bottom: 1.1rem">…and many more</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
