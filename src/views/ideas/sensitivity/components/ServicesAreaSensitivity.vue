@@ -8,15 +8,16 @@
                 <div class="bar"></div>
 
                 <div class="paragraph">
-                    <p>Excel sensitivity tables are awesome to perform sensitivity analysis</p>
+                    <p>Excel-based sensitivity tables are great...</p>
+                    <p>...until you try to deploy them anywhere outside of the spreadsheet</p>
                 </div>
                 <div class="paragraph">
-                    <p> What if they were simpler to make, and you could embed them on the website, in the email or in any other place?</p>
+                    <p>Senstable is your solution!</p>
                 </div>
             </div>
 
             <div class="row h-100 justify-content-center align-items-center">
-                <div class="col-lg-4 col-md-10 offset-lg-2 offset-1">
+                <div class="col-lg-4 col-md-6 col-8 offset-lg-2 offset-1" style="margin-left: 0">
                     <img src="../resources/undraw-sensitivity-table.svg">
                 </div>
 
@@ -141,14 +142,16 @@
                 <div class="col-xl-7 col-lg-9">
                     <div class="row justify-content-center">
                         <div class="col-sm-8 col-10">
-                            <a href="/register" @click="$gtag.event('register')" class="btn btn-primary btn-register btn-profile">TRY SENSITIVITY TABLES</a>
+                            <a href="/sensitivity-application" @click="$gtag.event('register')" class="btn btn-primary btn-register btn-profile">TRY SENSITIVITY TABLES</a>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="website-example funfacts-area">
-                <h6>How does it work?</h6>
+                <div class="section-title">
+                    <h2 style="margin-top: 7rem">How does it work?</h2>
+                </div>
 
 
                 <img src="../../../../assets/img/map.png" class="map-bg" style="left: -50%">

@@ -5,13 +5,12 @@
             <div class="section-title contact-title">
                 <h2>Get In Touch</h2>
                 <div class="bar"></div>
-                <p>Dynamic image data tables for website, email, reports, and anywhere else</p>
-                <p>How can we help?</p>
+                <p>Dynamic image data tables for website, email, reports, and anywhere else. How can we help?</p>
             </div>
 
             <div class="row h-100 justify-content-center align-items-center">
                 <div class="col-lg-5 col-md-12">
-                    <img src="../../../../assets/img/contact.svg" >
+                    <img src="../resources/contact.svg" >
                 </div>
 
                 <div class="col-lg-6 offset-lg-1 col-col-md-12">

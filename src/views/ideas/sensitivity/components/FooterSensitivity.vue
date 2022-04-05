@@ -10,8 +10,8 @@
                                 <img width="120px" src="../resources/senstable-logo.svg" />
                             </a>
                         </div>
-                        <p style="font-weight: 600">Visualize Scenarios</p>
-                        <p>Simple API call to embed data tables on the website, in the email, pdf or bot</p>
+                        <p style="font-weight: 600">Scenarios visualized</p>
+                        <p>Analyze your options with sensitivity tables</p>
                     </div>
                 </div>
 

@@ -9,14 +9,32 @@
             <img :src="getImgUrl()" />
         </b-modal>
 
-        <div class="works-slides">
+        <div style="margin: 0 25px">
+            <div class="row">
+                <div class="col-lg-6 col-sm-8 col-10 offset-lg-3 offset-sm-2 offset-1">
+                    <img src="../resources/1-2-3.svg" style="margin-bottom: 1rem"/>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-8 col-sm-10 col-12 offset-lg-2 offset-sm-1">
+                    <div class="row">
+                        <div class="col-4" style="text-align: center; padding: 0">Send API call</div>
+                        <div class="col-4" style="text-align: center; padding: 0 10px">Specify the template, <br>colors and format</div>
+                        <div class="col-4" style="text-align: center; padding: 0">Deploy <br>sensitivity table</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="works-slides" style="margin-top: 3rem">
             <carousel
                 :autoplay = "true"
                 :paginationEnabled = "false"
                 :loop = "true"
                 :autoplaySpeed = "true"
                 :autoplayTimeout = "5000"
-                :perPageCustom = "[[0, 1],[768, 2],[1200, 3], [1500, 4]]"
+                :perPageCustom = "[[0, 1],[768, 2],[1200, 3]]"
             >
                 <slide>
                     <div class="single-works">
