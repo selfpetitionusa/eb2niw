@@ -4,7 +4,7 @@
         <div class="container register">
             <div class="row">
                 <div class="col-lg-6 col-md-8 col-sm-12 offset-lg-3 offset-md-2">
-                    <h3 style="margin-bottom: 2rem">Start your FREE 14 days trial</h3>
+                    <h3 style="margin-bottom: 2rem">Start your 14-days trial today</h3>
 
                     <ValidationObserver ref="form">
                         <form @submit.prevent="handleSubmit" novalidate>

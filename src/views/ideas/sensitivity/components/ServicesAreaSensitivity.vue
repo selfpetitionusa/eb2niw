@@ -154,11 +154,11 @@
                 </div>
 
 
-                <img src="../../../../assets/img/map.png" class="map-bg" style="left: -50%">
-                <div class="shape2-services rotateme"><img src="../../../../assets/img/shape2.svg"></div>
-                <div class="shape3-services"><img src="../../../../assets/img/shape3.svg" ></div>
-                <div class="shape4-services"><img src="../../../../assets/img/shape4.svg" ></div>
-                <div class="shape5-services"><img src="../../../../assets/img/shape5.png" ></div>
+                <img src="../resources/map.png" class="map-bg" style="left: -50%">
+                <div class="shape2-services rotateme"><img src="../resources/shape2.svg"></div>
+                <div class="shape3-services"><img src="../resources/shape3.svg" ></div>
+                <div class="shape4-services"><img src="../resources/shape4.svg" ></div>
+                <div class="shape5-services"><img src="../resources/shape5.png" ></div>
             </div>
         </div>
     </section>

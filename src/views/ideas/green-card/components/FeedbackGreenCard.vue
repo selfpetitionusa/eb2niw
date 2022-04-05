@@ -114,9 +114,9 @@
             </div>
         </div>
 
-        <div class="shape2 rotateme"><img src="../../../../assets/img/shape2.svg" alt="shape"></div>
-        <div class="shape4"><img src="../../../../assets/img/shape4.svg" alt="shape"></div>
-        <div class="shape7"><img src="../../../../assets/img/shape4.svg" alt="shape"></div>
+        <div class="shape2 rotateme"><img src="../resources/shape2.svg" alt="shape"></div>
+        <div class="shape4"><img src="../resources/shape4.svg" alt="shape"></div>
+        <div class="shape7"><img src="../resources/shape4.svg" alt="shape"></div>
     </section>
     <!-- End Feedback Area -->
 </template>

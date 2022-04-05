@@ -10,8 +10,8 @@
                                 <img width="130px" src="../resources/selfpetitionusa-logo.svg" />
                             </a>
                         </div>
-                        <p style="font-weight: 600">Self-sponsor your green card</p>
-                        <p>Control your destiny, stop relying on employers' promises</p>
+                        <p style="font-weight: 600">Self-petition green card for professionals</p>
+                        <p>Take matters into your own hands!</p>
                     </div>
                 </div>
 
@@ -48,9 +48,9 @@
             </div>
         </div>
 
-        <img src="../../../../assets/img/map.png" class="map" >
-        <div class="shape1"><img src="../../../../assets/img/shape1.png" ></div>
-        <div class="shape8 rotateme"><img src="../../../../assets/img/shape2.svg" ></div>
+        <img src="../resources/map.png" class="map" >
+        <div class="shape1"><img src="../resources/shape1.png" ></div>
+        <div class="shape8 rotateme"><img src="../resources/shape2.svg" ></div>
         <!-- <div class="go-top"><feather type="arrow-up"></feather></div> -->
 
         <back-to-top bottom="50px" right="50px">

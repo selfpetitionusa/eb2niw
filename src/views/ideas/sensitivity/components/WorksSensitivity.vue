@@ -74,7 +74,7 @@
 
             </carousel>
         </div>
-        <div class="shape4"><img src="../../../../assets/img/shape4.svg"></div>
+        <div class="shape4"><img src="../resources/shape4.svg"></div>
     </section>
     <!-- End Works Area -->
 </template>

@@ -113,13 +113,13 @@
             </div>
         </div>
 
-        <div class="shape1"><img src="../../../../assets/img/shape1.png" ></div>
-        <div class="shape3"><img src="../../../../assets/img/shape3.svg" ></div>
-        <div class="shape4"><img src="../../../../assets/img/shape4.svg" ></div>
-        <div class="shape5"><img src="../../../../assets/img/shape5.png" ></div>
-        <div class="shape6 rotateme"><img src="../../../../assets/img/shape4.svg" ></div>
-        <div class="shape7"><img src="../../../../assets/img/shape4.svg" ></div>
-        <div class="shape8 rotateme"><img src="../../../../assets/img/shape2.svg" ></div>
+        <div class="shape1"><img src="../resources/shape1.png" ></div>
+        <div class="shape3"><img src="../resources/shape3.svg" ></div>
+        <div class="shape4"><img src="../resources/shape4.svg" ></div>
+        <div class="shape5"><img src="../resources/shape5.png" ></div>
+        <div class="shape6 rotateme"><img src="../resources/shape4.svg" ></div>
+        <div class="shape7"><img src="../resources/shape4.svg" ></div>
+        <div class="shape8 rotateme"><img src="../resources/shape2.svg" ></div>
     </div>
     <!-- End Main Banner -->
 </template>

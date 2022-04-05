@@ -11,7 +11,7 @@
                             </a>
                         </div>
                         <p style="font-weight: 600">Aggregate visual feedback and emotions</p>
-                        <p>Resolve unclear or conflicting feedback and prioritize tasks to implement</p>
+                        <p>Let users comment directly on your website</p>
                     </div>
                 </div>
 
@@ -48,9 +48,9 @@
             </div>
         </div>
 
-        <img src="../../../../assets/img/map.png" class="map" >
-        <div class="shape1"><img src="../../../../assets/img/shape1.png" ></div>
-        <div class="shape8 rotateme"><img src="../../../../assets/img/shape2.svg" ></div>
+        <img src="../resources/map.png" class="map" >
+        <div class="shape1"><img src="../resources/shape1.png" ></div>
+        <div class="shape8 rotateme"><img src="../resources/shape2.svg" ></div>
         <!-- <div class="go-top"><feather type="arrow-up"></feather></div> -->
 
         <back-to-top bottom="50px" right="50px">
