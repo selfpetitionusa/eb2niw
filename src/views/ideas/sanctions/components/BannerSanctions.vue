@@ -88,6 +88,7 @@
                         </div>
                     </div>
 
+                                <img src="../resources/123.svg" style="margin-bottom: 1rem"/>
 
                     <div class="row banner-action-btns">
                         <div class="col-xl-7 col-lg-9">

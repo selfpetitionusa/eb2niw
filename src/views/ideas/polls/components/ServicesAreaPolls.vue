@@ -93,7 +93,7 @@
             <div style="margin: 0 25px">
                 <div class="row">
                     <div class="col-lg-6 col-sm-8 col-10 offset-lg-3 offset-sm-2 offset-1">
-                        <img src="../resources/1-2-3.svg" style="margin-bottom: 1rem"/>
+                        <img src="../resources/123.svg" style="margin-bottom: 1rem"/>
                     </div>
                 </div>
 
