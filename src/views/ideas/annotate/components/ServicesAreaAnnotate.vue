@@ -76,7 +76,7 @@
                 </div>
             </div>
 
-            <div class="row service-action-btns">
+            <div class="row service-action-btns" style="margin-top: 5rem">
                 <div class="col-xl-7 col-lg-9">
                     <div class="row justify-content-center">
                         <div class="col-sm-8 col-10">
@@ -87,10 +87,6 @@
             </div>
 
             <div class="website-example funfacts-area">
-                <div class="section-title">
-                    <h2 style="margin-top: 7rem">How does it work?</h2>
-                </div>
-
 
                 <img src="../resources/map.png" class="map-bg" style="left: -50%">
                 <div class="shape2-services rotateme"><img src="../resources/shape2.svg"></div>

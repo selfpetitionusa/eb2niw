@@ -1,6 +1,6 @@
 <template>
     <!-- Start Main Banner -->
-    <div class="main-banner" style="padding-bottom: 3rem">
+    <div class="main-banner" style="padding-top: 8rem; padding-bottom: 3rem">
         <SectionOne id="home"/>
         <div class="d-table">
             <div class="d-table-cell">
@@ -65,43 +65,56 @@
                         <div class="col-xl-4 col-lg-4 col-md-7 video" style="margin-top: 2rem">
                             <div class="row" style="border: solid 1px #E5E5E5; border-radius: 5%; background-color: white; box-shadow: 2px 2px 4px #E5E5E5;">
                                 <div class="col-sm-2 col-3" style="margin-left: 0">
-                                    <ul style="list-style-type: none; padding-top: 1.5rem">
-                                        <li style="font-size: 3rem">🇺🇸</li>
-                                        <li style="font-size: 3rem">🇪🇺</li>
-                                        <li style="font-size: 3rem">🇨🇦</li>
-                                        <li style="font-size: 3rem">🇬🇧</li>
-                                        <li style="font-size: 3rem">🇺🇳</li>
+                                    <ul style="list-style-type: none; padding-top: 0.5rem">
+                                        <li style="font-size: 2.5rem">🇺🇸</li>
+                                        <li style="font-size: 2.5rem">🇪🇺</li>
+                                        <li style="font-size: 2.5rem">🇨🇦</li>
+                                        <li style="font-size: 2.5rem">🇬🇧</li>
+                                        <li style="font-size: 2.5rem">🇺🇳</li>
                                     </ul>
                                 </div>
 
                                 <div class="col-sm-10 col-9">
-                                    <ul style="list-style-type: none; padding-top: 1.5rem">
-                                        <li style="font-size: 1.6rem; color: #0e314c; padding-top: 1rem; padding-bottom: 1.1rem">OFAC</li>
-                                        <li style="font-size: 1.6rem; color: #0e314c; padding-top: 1rem; padding-bottom: 1.1rem">CFSP</li>
-                                        <li style="font-size: 1.6rem; color: #0e314c; padding-top: 1rem; padding-bottom: 1.1rem">CASL</li>
-                                        <li style="font-size: 1.6rem; color: #0e314c; padding-top: 1rem; padding-bottom: 1.1rem">OFSI</li>
-                                        <li style="font-size: 1.6rem; color: #0e314c; padding-top: 1rem; padding-bottom: 1.1rem">SC</li>
-                                        <li style="font-size: 1.1rem; color: #0e314c; padding-top: 1rem; padding-bottom: 1.1rem">…and many more</li>
+                                    <ul style="list-style-type: none; padding-top: 0.5rem">
+                                        <li style="font-size: 1.5rem; color: #0e314c; padding-top: 0.75rem; padding-bottom: 0.75rem">OFAC</li>
+                                        <li style="font-size: 1.5rem; color: #0e314c; padding-top: 0.75rem; padding-bottom: 0.75rem">CFSP</li>
+                                        <li style="font-size: 1.5rem; color: #0e314c; padding-top: 0.75rem; padding-bottom: 0.75rem">CASL</li>
+                                        <li style="font-size: 1.5rem; color: #0e314c; padding-top: 0.75rem; padding-bottom: 0.75rem">OFSI</li>
+                                        <li style="font-size: 1.5rem; color: #0e314c; padding-top: 0.75rem; padding-bottom: 0.75rem">SC</li>
+                                        <li style="font-size: 1rem; color: #0e314c; padding-top: 0.75rem; padding-bottom: 0.5rem">…and many more</li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
 
+                    <div style="margin: 5rem 25px 4rem">
+                        <div class="row">
+                            <div class="col-lg-6 col-sm-8 col-10 offset-lg-3 offset-sm-2 offset-1">
                                 <img src="../resources/123.svg" style="margin-bottom: 1rem"/>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-8 col-sm-10 col-12 offset-lg-2 offset-sm-1">
+                                <div class="row">
+                                    <div class="col-4" style="text-align: center; padding: 0">Send API call with entity name (business or individual)</div>
+                                    <div class="col-4" style="text-align: center; padding: 0 10px">Get response <br>about sanctions</div>
+                                    <div class="col-4" style="text-align: center; padding: 0">Adjust your business <br>activity accordingly</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                     <div class="row banner-action-btns">
                         <div class="col-xl-7 col-lg-9">
                             <div class="row justify-content-center">
                                 <div class="col-sm-8 col-10">
-                                    <a href="/sanctions-application" @click="$gtag.event('register')" class="btn btn-primary btn-register btn-profile">Try our API for free</a>
+                                    <a href="/sanctions-application" @click="$gtag.event('register')" class="btn btn-primary btn-register btn-profile">Try API for free</a>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col-11">
-                            <p class="bonus1">No payment or credit card is required</p>
-                        </div>
                     </div>
 
                 </div>

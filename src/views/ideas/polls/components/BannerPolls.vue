@@ -1,6 +1,6 @@
 <template>
     <!-- Start Main Banner -->
-    <div class="main-banner">
+    <div class="main-banner" style="padding-bottom: 2rem; margin-top: 2rem">
         <SectionOne id="home"/>
         <div class="d-table">
             <div class="d-table-cell">
@@ -10,7 +10,7 @@
                             <div class="hero-content">
                                 <div class="row">
                                     <div class="col-lg-11">
-                                        <h1>Dollar voting for influencers</h1>
+                                        <h1>$$ voting for influencers</h1>
                                         <h5>Connect with your audience far more closely and monetize this connection</h5>
 
                                         <div class="tick-section">
@@ -62,7 +62,7 @@
                         </div>
 
 
-                        <div class="col-xl-6 col-lg-5 video" style="margin-top: 2rem">
+                        <div class="col-xl-6 col-lg-5 video" style="margin-top: 3rem">
                             <div class="row">
                                 <div class="col-sm-10 col-12 offset-sm-1">
                                     <img src="../resources/poll-ad.svg" style="border-radius: 5%"/>
@@ -71,6 +71,23 @@
                         </div>
                     </div>
 
+                    <div style="margin: 5rem 25px 4rem">
+                        <div class="row">
+                            <div class="col-lg-6 col-sm-8 col-10 offset-lg-3 offset-sm-2 offset-1">
+                                <img src="../resources/123.svg" style="margin-bottom: 1rem"/>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-8 col-sm-10 col-12 offset-lg-2 offset-sm-1">
+                                <div class="row">
+                                    <div class="col-4" style="text-align: center; padding: 0">Ask a questions <br>to your fans</div>
+                                    <div class="col-4" style="text-align: center; padding: 0 10px">Your fans <br>vote with money</div>
+                                    <div class="col-4" style="text-align: center; padding: 0">Fans are happy <br>and you made money!</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                     <div class="row banner-action-btns">
                         <div class="col-xl-7 col-lg-9">
@@ -81,9 +98,6 @@
                             </div>
                         </div>
 
-                        <div class="col-11">
-                            <p class="bonus1">No payment or credit card is required</p>
-                        </div>
                     </div>
 
                 </div>

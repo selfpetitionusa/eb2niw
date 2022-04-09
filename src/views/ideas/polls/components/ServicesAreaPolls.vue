@@ -86,28 +86,6 @@
                 </div>
             </div>
 
-            <div class="section-title">
-                <h2 style="margin-top: 7rem">How does it work?</h2>
-            </div>
-
-            <div style="margin: 0 25px">
-                <div class="row">
-                    <div class="col-lg-6 col-sm-8 col-10 offset-lg-3 offset-sm-2 offset-1">
-                        <img src="../resources/123.svg" style="margin-bottom: 1rem"/>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-lg-8 col-sm-10 col-12 offset-lg-2 offset-sm-1">
-                        <div class="row">
-                            <div class="col-4" style="text-align: center; padding: 0">Ask a questions <br>to your fans</div>
-                            <div class="col-4" style="text-align: center; padding: 0 10px">Your fans <br>vote with money</div>
-                            <div class="col-4" style="text-align: center; padding: 0">Fans are happy <br>and you made money!</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
             <div class="row service-action-btns">
                 <div class="col-xl-7 col-lg-9">
                     <div class="row justify-content-center">

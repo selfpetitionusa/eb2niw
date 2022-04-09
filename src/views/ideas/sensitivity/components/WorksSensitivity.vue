@@ -9,23 +9,6 @@
             <img :src="getImgUrl()" />
         </b-modal>
 
-        <div style="margin: 0 25px">
-            <div class="row">
-                <div class="col-lg-6 col-sm-8 col-10 offset-lg-3 offset-sm-2 offset-1">
-                    <img src="../resources/123.svg" style="margin-bottom: 1rem"/>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-8 col-sm-10 col-12 offset-lg-2 offset-sm-1">
-                    <div class="row">
-                        <div class="col-4" style="text-align: center; padding: 0">Send API call</div>
-                        <div class="col-4" style="text-align: center; padding: 0 10px">Specify the template, <br>colors and format</div>
-                        <div class="col-4" style="text-align: center; padding: 0">Deploy <br>sensitivity table</div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <div class="works-slides" style="margin-top: 3rem">
             <carousel
@@ -38,24 +21,24 @@
             >
                 <slide>
                     <div class="single-works">
-                        <img src="../resources/temperature-sensitivity.svg">
+                        <img src="../resources/mortgage-sensitivity.svg">
                         <a v-if="windowWidth > 767" @click="index = 0;$refs['modal-zoom'].show()" style="cursor: pointer;" class="icon"><feather type="zoom-in"></feather></a>
 
                         <div class="works-content">
-                            <h3><a href="#">Visualize scenarios with a simple API call </a></h3>
-                            <p>Tailor the table for various industry standards: you decide what analysis & scenarios to analyze</p>
+                            <h3><a href="#">Embed on the website, in the email or get svg</a></h3>
+                            <p>Need interactive sensitivity table for website visitors or a convenient output?</p>
                         </div>
                     </div>
                 </slide>
 
                 <slide>
                     <div class="single-works">
-                        <img src="../resources/mortgage-sensitivity.svg">
+                        <img src="../resources/temperature-sensitivity.svg">
                         <a v-if="windowWidth > 767" @click="index = 1;$refs['modal-zoom'].show()" style="cursor: pointer;" class="icon"><feather type="zoom-in"></feather></a>
 
                         <div class="works-content">
-                            <h3><a href="#">Embed on the website, in the email or pdf</a></h3>
-                            <p>Need interactive sensitivity table for website visitors or a convenient email output?</p>
+                            <h3><a href="#">Visualize scenarios with a simple API call</a></h3>
+                            <p>Tailor the table for various industry standards: you decide what analysis & scenarios to analyze</p>
                         </div>
                     </div>
                 </slide>
@@ -92,12 +75,12 @@ export default {
             index: 0,
             modalProperties: [
                 {
-                   title : "Visualize scenarios with a simple API call",
-                   img: "./temperature-sensitivity.svg"
+                   title : "Embed on the website, in the email or get svg",
+                   img: "./mortgage-sensitivity.svg"
                 },
                 {
-                    title : "Embed on the website, in the email or pdf",
-                    img: "./mortgage-sensitivity.svg"
+                    title : "Visualize scenarios with a simple API call",
+                    img: "./temperature-sensitivity.svg"
                 },
                 {
                     title : "Easy way to personalize parameters",

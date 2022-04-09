@@ -1,6 +1,6 @@
 <template>
     <!-- Start Main Banner -->
-    <div class="main-banner">
+    <div class="main-banner" style="margin-top: 1rem; padding-bottom: 2rem">
         <SectionOne id="home"/>
         <div class="d-table">
             <div class="d-table-cell">
@@ -72,6 +72,23 @@
                         </div>
                     </div>
 
+                    <div style="margin: 5rem 25px 3rem">
+                        <div class="row">
+                            <div class="col-lg-6 col-sm-8 col-10 offset-lg-3 offset-sm-2 offset-1">
+                                <img src="../resources/123.svg" style="margin-bottom: 1rem"/>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-8 col-sm-10 col-12 offset-lg-2 offset-sm-1">
+                                <div class="row">
+                                    <div class="col-4" style="text-align: center; padding: 0">Send API call</div>
+                                    <div class="col-4" style="text-align: center; padding: 0 10px">Specify the template, <br>colors and format</div>
+                                    <div class="col-4" style="text-align: center; padding: 0">Deploy <br>sensitivity table</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                     <div class="row banner-action-btns">
                         <div class="col-xl-7 col-lg-9">
@@ -82,9 +99,6 @@
                             </div>
                         </div>
 
-                        <div class="col-11">
-                            <p class="bonus1">No payment or credit card is required</p>
-                        </div>
                     </div>
 
                 </div>

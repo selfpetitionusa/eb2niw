@@ -9,25 +9,7 @@
             <img :src="getImgUrl()" />
         </b-modal>
 
-        <div style="margin: 0 25px">
-            <div class="row">
-                <div class="col-lg-6 col-sm-8 col-10 offset-lg-3 offset-sm-2 offset-1">
-                    <img src="../resources/123.svg" style="margin-bottom: 1rem"/>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-8 col-sm-10 col-12 offset-lg-2 offset-sm-1">
-                    <div class="row">
-                        <div class="col-4" style="text-align: center; padding: 0">Select elements <br> for users to comment on</div>
-                        <div class="col-4" style="text-align: center; padding: 0 10px">Get comments, <br> upvotes & reactions</div>
-                        <div class="col-4" style="text-align: center; padding: 0">Aggregate feedback <br>into actionable reports</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="works-slides" style="margin-top: 7rem">
+        <div class="works-slides" style="margin-top: 3rem">
             <carousel
                 :autoplay = "true"
                 :paginationEnabled = "false"
