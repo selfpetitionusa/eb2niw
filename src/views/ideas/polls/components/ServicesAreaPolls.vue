@@ -17,7 +17,7 @@
 
             <div class="row h-100 justify-content-center align-items-center">
                 <div class="col-lg-5 col-md-8">
-                    <img src="../resources/poll-iphone.svg"/>
+                    <img src="../resources/poll-ad.svg" style="border-radius: 5%"/>
                 </div>
 
                 <div class="col-lg-6 col-md-12 services-content">

@@ -45,14 +45,24 @@
                                             <div class="d-block d-sm-none">
                                                 <div class="tick-row">
                                                     <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                    <p class="tick-input">Stream on <feather type="twitch" style="margin: 0 5px; color: #6441a5"></feather> or <feather type="youtube" style="margin: 0 8px; color: #ff0000"></feather></p>
+                                                    <p class="tick-input">Stream on:</p>
+                                                </div>
+                                                <div class="row" style="padding: 2rem 3rem 0rem">
+                                                    <feather class="col-sm-2 col-3" type="twitch" style="margin: 0 5px; color: #6441a5; height: 100%"></feather>
+                                                    <feather class="col-sm-2 col-3" type="youtube" style="margin: 0 8px; color: #ff0000; height: 100%"></feather>
+                                                    <img class="col-sm-2 col-3" src="../resources/obs.svg" />
                                                 </div>
                                             </div>
 
                                                 <div class="d-none d-sm-block">
                                                     <div class="tick-row">
                                                         <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                        <p class="tick-input">Stream on <feather type="twitch" style="margin: 0 5px; color: #6441a5"></feather> or <feather type="youtube" style="margin: 0 8px; color: #ff0000"></feather></p>
+                                                        <p class="tick-input">Stream on:</p>
+                                                    </div>
+                                                    <div class="row" style="padding: 2rem 3rem 0rem">
+                                                        <feather class="col-sm-2 col-3" type="twitch" style="margin: 0 5px; color: #6441a5; height: 100%"></feather>
+                                                        <feather class="col-sm-2 col-3" type="youtube" style="margin: 0 8px; color: #ff0000; height: 100%"></feather>
+                                                        <img class="col-sm-2 col-3" src="../resources/obs.svg" />
                                                     </div>
                                                 </div>
                                         </div>
@@ -65,7 +75,7 @@
                         <div class="col-xl-6 col-lg-5 video" style="margin-top: 3rem">
                             <div class="row">
                                 <div class="col-sm-10 col-12 offset-sm-1">
-                                    <img src="../resources/poll-ad.svg" style="border-radius: 5%"/>
+                                    <img src="../resources/poll-iphone.svg" />
                                 </div>
                             </div>
                         </div>
