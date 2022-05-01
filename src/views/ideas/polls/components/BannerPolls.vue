@@ -11,58 +11,62 @@
                                 <div class="row">
                                     <div class="col-lg-11">
                                         <h1>$$ voting for influencers</h1>
-                                        <h5>Connect with your audience far more closely and monetize this connection</h5>
+                                        <h5>Engage your audience using monetizable polls, where fans vote with their money</h5>
 
                                         <div class="tick-section">
                                             <div class="d-block d-sm-none">
                                                 <div class="tick-row">
                                                     <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                    <p class="tick-input">Engage followers & subscribers with polls</p>
+                                                    <p class="tick-input">Set rules: every vote vs. only winning vote pays</p>
                                                 </div>
                                             </div>
 
                                                 <div class="d-none d-sm-block">
                                                     <div class="tick-row">
                                                         <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                        <p class="tick-input">Engage followers & subscribers with polls</p>
+                                                        <p class="tick-input">Set rules: every vote vs. only winning vote pays</p>
                                                     </div>
                                                 </div>
 
                                             <div class="d-block d-sm-none">
                                                 <div class="tick-row">
                                                     <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                    <p class="tick-input">Let them vote with money</p>
+                                                    <p class="tick-input">Get fast payouts</p>
                                                 </div>
                                             </div>
 
                                                 <div class="d-none d-sm-block">
                                                     <div class="tick-row">
                                                         <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                        <p class="tick-input">Let them vote with money</p>
+                                                        <p class="tick-input">Get fast payouts</p>
                                                     </div>
                                                 </div>
 
                                             <div class="d-block d-sm-none">
                                                 <div class="tick-row">
                                                     <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                    <p class="tick-input">Stream on:</p>
+                                                    <p class="tick-input">Use on:</p>
                                                 </div>
-                                                <div class="row" style="padding: 2rem 3rem 0rem">
-                                                    <feather class="col-sm-2 col-3" type="twitch" style="margin: 0 5px; color: #6441a5; height: 100%"></feather>
-                                                    <feather class="col-sm-2 col-3" type="youtube" style="margin: 0 8px; color: #ff0000; height: 100%"></feather>
-                                                    <img class="col-sm-2 col-3" src="../resources/obs.svg" />
+                                                <div class="row" style="padding: 2rem 0rem 0rem">
+                                                    <img class="col-sm-3 col-2" src="../resources/tiktok.svg" />
+                                                    <feather class="col-sm-2 col-2" type="twitch" style="margin: 0 5px; color: #6441a5; height: 100%; padding-top: 3px"></feather>
+                                                    <feather class="col-sm-2 col-2" type="youtube" style="margin: 0 8px; color: #ff0000; height: 100%; padding-top: 3px"></feather>
+                                                    <feather class="col-sm-2 col-2" type="instagram" style="margin: 0 8px; color: #C13584; height: 100%; padding-top: 3px"></feather>
+                                                    <img class="col-sm-2 col-2" style="margin-top: 3px" src="../resources/obs.svg" />
                                                 </div>
                                             </div>
 
                                                 <div class="d-none d-sm-block">
                                                     <div class="tick-row">
                                                         <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                        <p class="tick-input">Stream on:</p>
+                                                        <p class="tick-input">Use on:</p>
                                                     </div>
-                                                    <div class="row" style="padding: 2rem 3rem 0rem">
-                                                        <feather class="col-sm-2 col-3" type="twitch" style="margin: 0 5px; color: #6441a5; height: 100%"></feather>
-                                                        <feather class="col-sm-2 col-3" type="youtube" style="margin: 0 8px; color: #ff0000; height: 100%"></feather>
-                                                        <img class="col-sm-2 col-3" src="../resources/obs.svg" />
+                                                    <div class="row" style="padding: 2rem 0rem 0rem">
+                                                        <img class="col-sm-3 col-2" src="../resources/tiktok.svg" />
+                                                        <feather class="col-sm-2 col-2" type="twitch" style="margin: 0 5px; color: #6441a5; height: 100%; padding-top: 3px"></feather>
+                                                        <feather class="col-sm-2 col-2" type="youtube" style="margin: 0 8px; color: #ff0000; height: 100%; padding-top: 3px"></feather>
+                                                        <feather class="col-sm-2 col-2" type="instagram" style="margin: 0 8px; color: #C13584; height: 100%; padding-top: 3px"></feather>
+                                                        <img class="col-sm-2 col-2" style="margin-top: 3px" src="../resources/obs.svg" />
                                                     </div>
                                                 </div>
                                         </div>

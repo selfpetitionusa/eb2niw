@@ -31,19 +31,20 @@
                                 </ValidationProvider>
                             </div>
                             <div class="form-group">
-                                <label for="channelchoice">Where do you mainly stream?</label>
+                                <label for="channelchoice">Which is your main platform?</label>
                                 <ValidationProvider rules="required" v-slot="{ errors }" >
                                     <select v-model="user.channelchoice" id="channelchoice" name="channelchoice" class="form-control" :class="{ 'is-invalid':  submitted && errors.length }">
                                         <option>Twitch</option>
                                         <option>YouTube</option>
-                                        <option>Twitch & YouTube</option>
+                                        <option>TikTok</option>
+                                        <option>Instagram</option>
                                         <option>Other</option>
                                     </select>
                                     <div v-if="submitted && errors.length" class="invalid-feedback">Preferred streaming channel is required</div>
                                 </ValidationProvider>
                             </div>
                             <div class="form-group">
-                                <label for="channel">Link to your channel</label>
+                                <label for="channel">Link to your channel, profile or page</label>
                                 <ValidationProvider rules="required" v-slot="{ errors }" >
                                     <input type="text" v-model="user.channel" name="channel" class="form-control" :class="{ 'is-invalid':  submitted && errors.length }" />
                                     <div v-if="submitted && errors.length" class="invalid-feedback">Link to your Twitch or YouTube channel is required</div>
