@@ -22,7 +22,8 @@ export const userService = {
     getLeads,
     updatePaymentBooking,
     updateColor,
-    updateTestimonials
+    updateTestimonials,
+    apply
 };
 
 function login(email, password) {
@@ -45,6 +46,17 @@ function login(email, password) {
             return user;
         });
 }
+
+function apply(data) {
+    const requestOptions = {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+    };
+
+    return fetch(`${config.apiUrl}/contact/apply`, requestOptions)
+}
+
 
 function logout() {
     // remove user from local storage to log user out

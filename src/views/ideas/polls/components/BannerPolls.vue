@@ -139,16 +139,6 @@
             return {
                 fired: false
             }
-        },
-        mounted () {
-            this.$refs.plyr.player.volume = 0.5;
-            this.$refs.plyr.player.on('playing', () => {
-                if(!this.fired) {
-                    this.$gtag.event('video')
-                }
-                this.fired = true;
-
-            })
         }
     }
 

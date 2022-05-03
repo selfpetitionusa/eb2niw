@@ -12,7 +12,7 @@
                     </div>
 
                     <ValidationObserver ref="form">
-                        <form @submit.prevent="handleSubmit" novalidate>
+                        <form @submit.prevent="handleSubmit" novalidate  v-if="!status.applied">
                             <div class="form-group">
                                 <label for="firstName">First Name</label>
                                 <ValidationProvider rules="required" v-slot="{ errors }" >
@@ -51,20 +51,34 @@
                                 <label for="upload" class="icon" style="font-size: 2.5rem; cursor: pointer;"><font-awesome-icon icon="file-upload" />
                                     <span class="icon" style="font-size: 14px; margin-left: 10px;">Upload Resume</span>
                                 </label>
-                                <ValidationProvider rules="required|image" v-slot="{ validate, errors }">
-                                    <input type="file" class="form-control-file" id="upload" ref="upload" @change="validate" multiple style="display: none;" :class="{ 'is-invalid':  submitted && errors.length }">
-                                    <div v-if="submitted && errors.length" class="invalid-feedback">Resume or CV is required</div>
-                                </ValidationProvider>
+
+                              <input type="file" class="form-control-file" id="upload" ref="file" @change="setImage"  style="display: none;" :class="{ 'is-invalid':  submitted && !user.document }">
+                              <div v-if="submitted && !user.document" class="invalid-feedback">Resume or CV is required</div>
+                              <p class="register-conditions" style="font-weight: 400" v-if="user.document">Uploaded: {{this.$refs.file.files[0].name}}</p>
+
                             </div>
 
                             <div class="btn-container">
                                 <router-link to="/" class="btn btn-border btn-cancel">Cancel</router-link>
-                                <button class="btn btn-primary btn-border btn-save" :disabled="status.registering">SUBMIT
-                                    <img v-show="status.registering" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+                                <button class="btn btn-primary btn-border btn-save" :disabled="status.applying">SUBMIT
+                                    <img v-show="status.applying" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
                                 </button>
                             </div>
                         </form>
                     </ValidationObserver>
+
+                  <div class="row h-100 justify-content-center align-items-center" v-if="status.applied">
+                    <div class="col-lg-5 col-md-12">
+                      <img src="../../../assets/img/contact.svg" alt="Contact Tutomy - private tutor website template">
+                    </div>
+                    <div class="col-lg-6 offset-lg-1 col-col-md-12">
+                      <h4>Thank you for contacting us</h4>
+                      <p>We'll get back to you as soon as we can</p>
+                    </div>
+                    <router-link to="/" class="btn btn-border btn-cancel">Home</router-link>
+
+                  </div>
+
                 </div>
             </div>
         </div>
@@ -73,35 +87,52 @@
 </template>
 
 <script>
-    import { mapState, mapActions } from 'vuex'
+import { mapState, mapActions } from 'vuex'
 
-    export default {
-        data () {
-            return {
-                user: {
-                    firstName: '',
-                    lastName: '',
-                    email: '',
-                    birth: '',
-                    description: ''
-                },
-                submitted: false
-            }
-        },
-        computed: {
-            ...mapState('account', ['status'])
-        },
-        methods: {
-            ...mapActions('account', ['register']),
-            handleSubmit() {
-                this.submitted = true;
-                this.$refs.form.validate().then(success => {
-                    if (!success) {
-                        return;
-                    }
-                    this.register(this.user);
-                });
-            }
+export default {
+  data () {
+    return {
+      user: {
+        firstName: '',
+        lastName: '',
+        email: '',
+        birth: '',
+        document: '',
+        fileName: ''
+      },
+      submitted: false
+    }
+  },
+  computed: {
+    ...mapState('account', ['status'])
+  },
+  methods: {
+    ...mapActions('account', ['apply']),
+    handleSubmit() {
+      this.submitted = true;
+      this.$refs.form.validate().then(success => {
+        if (!success || !this.user.document) {
+          return;
         }
-    };
+        this.apply(this.user);
+      });
+    },
+    setImage() {
+      this.getBase64(this.$refs.file.files[0]);
+    },
+    getBase64(file) {
+      var reader = new FileReader();
+      reader.readAsDataURL(file);
+      const self = this;
+      reader.onload = function () {
+        const res = reader.result;
+        self.user.document = res;
+        self.user.fileName = self.$refs.file.files[0].name;
+      };
+      reader.onerror = function (error) {
+        console.log('Error: ', error);
+      };
+    }
+  }
+};
 </script>

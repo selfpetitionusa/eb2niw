@@ -7,8 +7,8 @@ const state = user
     : { status: {}, user: null, profile: null};
 
 const actions = {
-    login({ dispatch, commit }, { email, password }) {
-        commit('loginRequest', { email });
+    login({dispatch, commit}, {email, password}) {
+        commit('loginRequest', {email});
 
         userService.login(email, password)
             .then(
@@ -18,221 +18,221 @@ const actions = {
                 },
                 error => {
                     commit('loginFailure', error);
-                    dispatch('alert/error', error, { root: true });
+                    dispatch('alert/error', error, {root: true});
                 }
             );
     },
-    logout({ commit }) {
+    logout({commit}) {
         userService.logout();
         commit('logout');
     },
 
-    clear({ commit }) {
+    clear({commit}) {
         commit('clear');
     },
-    copyProfileLink({ dispatch }) {
-        dispatch('alert/success',  'Copied link', { root: true });
+    copyProfileLink({dispatch}) {
+        dispatch('alert/success', 'Copied link', {root: true});
     },
-    getProfile({ dispatch, commit }, {userId, token}) {
+    getProfile({dispatch, commit}, {userId, token}) {
         userService.getProfile(userId, token)
             .then(
                 profile => commit('getProfileSuccess', profile),
-                () => dispatch('alert/error', 'Failed to fetch tutor profile', { root: true })
+                () => dispatch('alert/error', 'Failed to fetch tutor profile', {root: true})
             );
     },
-    uploadImage({ dispatch, commit }, {image, sex}) {
+    uploadImage({dispatch, commit}, {image, sex}) {
         commit('uploadImageRequest');
         return userService.uploadImage(image, sex).then(
             (profile) => {
                 commit('getProfileSuccess', profile);
                 commit('uploadImageSuccess');
                 setTimeout(() => {
-                    dispatch('alert/success', 'Image Saved', { root: true });
+                    dispatch('alert/success', 'Image Saved', {root: true});
                 })
             },
             error => {
                 commit('uploadImageFailure');
-                dispatch('alert/error', error, { root: true });
+                dispatch('alert/error', error, {root: true});
             }
         );
     },
-    updateNameInfo({ dispatch, commit }, {firstName, lastName, shortBio}) {
+    updateNameInfo({dispatch, commit}, {firstName, lastName, shortBio}) {
         commit('updateNameInfoRequest');
         return userService.updateNameInfo(firstName, lastName, shortBio).then(
             (profile) => {
                 commit('getProfileSuccess', profile);
                 commit('updateNameInfoSuccess');
                 setTimeout(() => {
-                    dispatch('alert/success', 'Name information Saved', { root: true });
+                    dispatch('alert/success', 'Name information Saved', {root: true});
                 })
             },
             () => {
                 commit('updateNameInfoFailure');
-                dispatch('alert/error',  'Failed to update data', { root: true });
+                dispatch('alert/error', 'Failed to update data', {root: true});
             }
         );
     },
-    updateLinksInfo({ dispatch, commit }, {instagram, youtube, linkedin, facebook}) {
+    updateLinksInfo({dispatch, commit}, {instagram, youtube, linkedin, facebook}) {
         commit('updateLinksInfoRequest');
         return userService.updateLinksInfo(instagram, youtube, linkedin, facebook).then(
             (profile) => {
                 commit('getProfileSuccess', profile);
                 commit('updateLinksInfoSuccess');
                 setTimeout(() => {
-                    dispatch('alert/success', 'Links information Saved', { root: true });
+                    dispatch('alert/success', 'Links information Saved', {root: true});
                 })
             },
             () => {
                 commit('updateLinksInfoFailure');
-                dispatch('alert/error',  'Failed to update data', { root: true });
+                dispatch('alert/error', 'Failed to update data', {root: true});
             }
         );
     },
-    updateEducationInfo({ dispatch, commit }, educationInfo) {
+    updateEducationInfo({dispatch, commit}, educationInfo) {
         commit('updateEducationInfoRequest');
         return userService.updateEducationInfo(educationInfo).then(
             (profile) => {
                 commit('getProfileSuccess', profile);
                 commit('updateEducationInfoSuccess');
                 setTimeout(() => {
-                    dispatch('alert/success', 'Education information Saved', { root: true });
+                    dispatch('alert/success', 'Education information Saved', {root: true});
                 })
             },
             () => {
                 commit('updateEducationInfoFailure');
-                dispatch('alert/error',  'Failed to update data', { root: true });
+                dispatch('alert/error', 'Failed to update data', {root: true});
             }
         );
     },
-    updateSubjectsInfo({ dispatch, commit }, subjectsInfo) {
+    updateSubjectsInfo({dispatch, commit}, subjectsInfo) {
         commit('updateSubjectsInfoRequest');
         return userService.updateSubjectsInfo(subjectsInfo).then(
             (profile) => {
                 commit('getProfileSuccess', profile);
                 commit('updateSubjectsInfoSuccess');
                 setTimeout(() => {
-                    dispatch('alert/success', 'Subjects information Saved', { root: true });
+                    dispatch('alert/success', 'Subjects information Saved', {root: true});
                 })
             },
             () => {
                 commit('updateSubjectsInfoFailure');
-                dispatch('alert/error',  'Failed to update data', { root: true });
+                dispatch('alert/error', 'Failed to update data', {root: true});
             }
         );
     },
-    updatePaymentBooking({ dispatch, commit }, paymentBookingData) {
+    updatePaymentBooking({dispatch, commit}, paymentBookingData) {
         commit('updatePaymentBookingRequest');
         return userService.updatePaymentBooking(paymentBookingData).then(
             (profile) => {
                 commit('getProfileSuccess', profile);
                 commit('updatePaymentBookingSuccess');
                 setTimeout(() => {
-                    dispatch('alert/success', 'Payment/Booking information Saved', { root: true });
+                    dispatch('alert/success', 'Payment/Booking information Saved', {root: true});
                 })
             },
             () => {
                 commit('updatePaymentBookingFailure');
-                dispatch('alert/error',  'Failed to update data', { root: true });
+                dispatch('alert/error', 'Failed to update data', {root: true});
             }
         );
     },
-    updateBio({ dispatch, commit }, bio) {
+    updateBio({dispatch, commit}, bio) {
         commit('updateBioRequest');
         return userService.updateBio(bio).then(
             (profile) => {
                 commit('getProfileSuccess', profile);
                 commit('updateBioSuccess');
                 setTimeout(() => {
-                    dispatch('alert/success', 'Bio Saved', { root: true });
+                    dispatch('alert/success', 'Bio Saved', {root: true});
                 })
             },
             () => {
                 commit('updateBioFailure');
-                dispatch('alert/error',  'Failed to update data', { root: true });
+                dispatch('alert/error', 'Failed to update data', {root: true});
             }
         );
     },
-    updateRates({ dispatch, commit }, data) {
+    updateRates({dispatch, commit}, data) {
         commit('updateRatesRequest');
         return userService.updateRates(data).then(
             (profile) => {
                 commit('getProfileSuccess', profile);
                 commit('updateRatesSuccess');
                 setTimeout(() => {
-                    dispatch('alert/success', 'Rates Saved', { root: true });
+                    dispatch('alert/success', 'Rates Saved', {root: true});
                 })
             },
             () => {
                 commit('updateRatesFailure');
-                dispatch('alert/error',  'Failed to update data', { root: true });
+                dispatch('alert/error', 'Failed to update data', {root: true});
             }
         );
     },
-    updateTerms({ dispatch, commit }, data) {
+    updateTerms({dispatch, commit}, data) {
         commit('updateTermsRequest');
         return userService.updateTerms(data).then(
             (profile) => {
                 commit('getProfileSuccess', profile);
                 commit('updateTermsSuccess');
                 setTimeout(() => {
-                    dispatch('alert/success', 'Terms Saved', { root: true });
+                    dispatch('alert/success', 'Terms Saved', {root: true});
                 })
             },
             () => {
                 commit('updateTermsFailure');
-                dispatch('alert/error',  'Failed to update data', { root: true });
+                dispatch('alert/error', 'Failed to update data', {root: true});
             }
         );
     },
-    updateYoutube({ dispatch, commit }, data) {
+    updateYoutube({dispatch, commit}, data) {
         commit('updateYoutubeRequest');
         return userService.updateYoutube(data).then(
             (profile) => {
                 commit('getProfileSuccess', profile);
                 commit('updateYoutubeSuccess');
                 setTimeout(() => {
-                    dispatch('alert/success', 'Youtube intro link Saved', { root: true });
+                    dispatch('alert/success', 'Youtube intro link Saved', {root: true});
                 })
             },
             () => {
                 commit('updateYoutubeFailure');
-                dispatch('alert/error',  'Failed to update data', { root: true });
+                dispatch('alert/error', 'Failed to update data', {root: true});
             }
         );
     },
-    updateProblemCards({ dispatch, commit }, data) {
+    updateProblemCards({dispatch, commit}, data) {
         commit('updateProblemCardsRequest');
         return userService.updateProblemCards(data).then(
             (profile) => {
                 commit('getProfileSuccess', profile);
                 commit('updateProblemCardsSuccess');
                 setTimeout(() => {
-                    dispatch('alert/success', 'Problem cards saved', { root: true });
+                    dispatch('alert/success', 'Problem cards saved', {root: true});
                 })
             },
             () => {
                 commit('updateProblemCardsFailure');
-                dispatch('alert/error',  'Failed to update data', { root: true });
+                dispatch('alert/error', 'Failed to update data', {root: true});
             }
         );
     },
-    updateBasicInfo({ dispatch, commit }, data) {
+    updateBasicInfo({dispatch, commit}, data) {
         commit('updateBasicInfoRequest');
         return userService.updateBasicInfo(data).then(
             (user) => {
                 commit('updateSuccess', user);
                 commit('updateBasicInfoSuccess');
                 setTimeout(() => {
-                    dispatch('alert/success', 'Basic Info Saved', { root: true });
+                    dispatch('alert/success', 'Basic Info Saved', {root: true});
                 })
             },
             () => {
                 commit('updateBasicInfoFailure');
-                dispatch('alert/error',  'Failed to update data', { root: true });
+                dispatch('alert/error', 'Failed to update data', {root: true});
             }
         );
     },
-    requestPasswordReset({ commit }, data) {
+    requestPasswordReset({commit}, data) {
         commit('requestPasswordResetRequest');
         return userService.requestPasswordReset(data).then(
             () => {
@@ -243,7 +243,7 @@ const actions = {
             }
         );
     },
-    resetPassword({ commit }, {email, code, password}) {
+    resetPassword({commit}, {email, code, password}) {
         commit('resetPasswordRequest');
         return userService.resetPassword(email, code, password).then(
             () => {
@@ -254,7 +254,7 @@ const actions = {
             }
         );
     },
-    register({ dispatch, commit }, user) {
+    register({dispatch, commit}, user) {
         commit('registerRequest', user);
         userService.register(user)
             .then(
@@ -262,35 +262,35 @@ const actions = {
                     const user = response[0];
                     const profile = response[1];
                     commit('registerSuccess', user);
-                    router.push({ name: 'register-confirmation',  params: {token: profile.token }});
+                    router.push({name: 'register-confirmation', params: {token: profile.token}});
                     setTimeout(() => {
                         // display success message after route change completes
-                        dispatch('alert/success', 'Registration successful', { root: true });
+                        dispatch('alert/success', 'Registration successful', {root: true});
                     })
                 },
                 error => {
                     commit('registerFailure', error);
-                    dispatch('alert/error', error, { root: true });
+                    dispatch('alert/error', error, {root: true});
                 }
             );
     },
-    updateColor({ dispatch, commit }, color) {
+    updateColor({dispatch, commit}, color) {
         commit('updateColorRequest');
         return userService.updateColor(color).then(
             (profile) => {
                 commit('getProfileSuccess', profile);
                 setTimeout(() => {
                     commit('updateColorSuccess');
-                    dispatch('alert/success', 'Color Saved', { root: true });
+                    dispatch('alert/success', 'Color Saved', {root: true});
                 })
             },
             () => {
                 commit('updateColorFailure');
-                dispatch('alert/error',  'Failed to save color', { root: true });
+                dispatch('alert/error', 'Failed to save color', {root: true});
             }
         );
     },
-    updateTestimonials({ dispatch, commit }, data) {
+    updateTestimonials({dispatch, commit}, data) {
         commit('updateTestimonialsRequest');
         console.log(data.testimonials[0])
         return userService.updateTestimonials(data).then(
@@ -298,17 +298,30 @@ const actions = {
                 commit('getProfileSuccess', profile);
                 commit('updateTestimonialsSuccess');
                 setTimeout(() => {
-                    dispatch('alert/success', 'Testimonials saved', { root: true });
+                    dispatch('alert/success', 'Testimonials saved', {root: true});
                 })
             },
             () => {
                 commit('updateTestimonialsFailure');
-                dispatch('alert/error',  'Failed to update testimonials', { root: true });
+                dispatch('alert/error', 'Failed to update testimonials', {root: true});
             }
         );
-    }
+    },
 
+    apply({commit}, user) {
+        commit('applyRequest', user);
+        userService.apply(user)
+            .then(
+                () => {
+                    commit('applySuccess', user);
+                },
+                error => {
+                    commit('applyFailure', error);
+                }
+            );
+    }
 };
+
 
 const mutations = {
     clear() {
@@ -487,7 +500,17 @@ const mutations = {
     },
     updateTestimonialsFailure(state) {
         state.status = {};
+    },
+    applyRequest(state) {
+        state.status = { applying: true };
+    },
+    applySuccess(state) {
+        state.status = { applied: true };
+    },
+    applyFailure(state) {
+        state.status = {};
     }
+
 
 };
 

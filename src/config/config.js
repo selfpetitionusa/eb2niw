@@ -1,5 +1,5 @@
 export default {
 
-    apiUrl: 'https://www.tutomy.com/api'
+    apiUrl: 'https://www.selfpetitionusa.com/api'
 
 }
