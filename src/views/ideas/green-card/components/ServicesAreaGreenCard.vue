@@ -97,7 +97,7 @@
                 <div class="col-xl-7 col-lg-9">
                     <div class="row justify-content-center">
                         <div class="col-sm-8 col-10">
-                            <a href="/green-card-evaluation" @click="$gtag.event('register')" class="btn btn-primary btn-register btn-profile">Check your eligibility</a>
+                            <a href="/green-card-evaluation" @click="$gtag.event('register')" class="btn btn-primary">Check eligibility</a>
                         </div>
                     </div>
                 </div>
