@@ -90,7 +90,7 @@
                 <div class="col-xl-7 col-lg-9">
                     <div class="row justify-content-center">
                         <div class="col-sm-8 col-10">
-                            <a href="/polls-application" @click="$gtag.event('register')" class="btn btn-primary btn-register btn-profile">CREATE A POLL FOR FOLLOWERS</a>
+                            <a href="/polls-application" @click="$gtag.event('register')" class="btn btn-primary">Try polls for FREE</a>
                         </div>
                     </div>
                 </div>
