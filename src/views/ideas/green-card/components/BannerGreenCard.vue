@@ -58,29 +58,32 @@
                                         </div>
 
                                         <div style="margin-top: 3rem">
-                                            <form id="sign" @submit.prevent="addEmail(email)" class="mt-4">
-                                                <div class="row">
+                                            <div v-if="show_contact && contact_notice != ''" class="alert alert-warning">
+                                                There was a problem submitting your message. {{ contact_notice }}
+                                            </div>
 
-                                                <div class="col-lg-8">
-                                                    <input type="email"  name="name" id="name" class="form-control"  v-model="email" placeholder="Enter your email address">
-                                                    <p class="tick-input" style="font-size: 10px; color:#495057">Discuss your case with us</p>
-                                                    <div class="mt-4">
-                                                        <p class="m-0">{{ message }}</p>
+                                            <form v-if="show_contact" id="sign" @submit.prevent="addEmail(email)" class="mt-4">
+                                                <div class="row">
+                                                    <div class="col-lg-8">
+                                                        <input type="email"  name="greencard-lead" id="greencard-lead" class="form-control"  v-model="email" required data-error="Please enter your email" placeholder="Enter your email address">
+                                                        <p class="tick-input" style="font-size: 10px; color:#495057">Discuss your case with us</p>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        <div>
+                                                            <button type="submit" class="btn btn-primary">Submit</button>
+                                                            <div id="msgSubmit" class="h3 text-center hidden"></div>
+                                                            <div class="clearfix"></div>
+                                                          </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-lg-4">
-                                                    <div>
-                                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                            </form>
 
-
-                                                      </div>
-
-
-                                                </div>
-
+                                            <div v-else>
+                                                <h4>Email submitted successfully!</h4>
+                                                <p>We will contact you within 48h</p>
                                             </div>
-                                        </form>
-                                    </div>
+
+                                        </div>
 
                                     </div>
                                 </div>
@@ -179,7 +182,10 @@
         name: 'BannerGreenCard',
         data() {
             return {
-                fired: false
+                fired: false,
+                email: '',
+                show_contact: true,
+                contact_notice: ''
             }
         },
         mounted () {
@@ -191,49 +197,26 @@
                 this.fired = true;
 
             })
-        }
-    }
-
-
-/* JS FOR SIGNUP
-    data() {
-        return {
-            email: '',
-            message: ''
-        }
-    },
-    methods: {
-         addEmail(email) {
-            if (!email) return;
-            var noticeMessage = "🎉 We received your email and will contact you within 48h 🎉";
-             const url = `/api/lead`;
-             const requestOptions = {
-                 method: "POST",
-                 headers: {"Content-Type" : "application/json"},
-                 body: JSON.stringify({ email: email })
-             };
-             fetch(url, requestOptions).then(async response => {
-                 if (response.ok) {
-                     this.$refs['modal-1'].show();
-                     this.$store.commit('popup/setSeen');
-                 } else {
-                     noticeMessage = "This email address is already registered";
-                 }
-                 this.message = noticeMessage;
-                 this.email = '';
-             });
         },
-        randomPassword(length) {
-            var result           = '';
-            var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-            var charactersLength = characters.length;
-            for ( var i = 0; i < length; i++ ) {
-                result += characters.charAt(Math.floor(Math.random() * charactersLength));
+        methods: {
+            async addEmail() {
+                if(!this.validateEmail(this.email)) {
+                    this.contact_notice = "The email address is badly formatted.";
+                } else {
+                    const url = `/api/contact/landing`;
+                    const requestOptions = {
+                        method: "POST",
+                        headers: {"Content-Type" : "application/json"},
+                        body: JSON.stringify({ email: this.email })
+                    };
+                    fetch(url, requestOptions).then(this.show_contact = false)
+                }
+            },
+            validateEmail(email) {
+                var re = /\S+@\S+\.\S+/;
+                return re.test(String(email).toLowerCase());
             }
-            return result;
         }
     }
-}
-*/
 
 </script>
