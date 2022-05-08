@@ -98,7 +98,8 @@ export default {
         email: '',
         birth: '',
         document: '',
-        fileName: ''
+        fileName: '',
+        description: ''
       },
       submitted: false
     }

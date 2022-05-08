@@ -95,7 +95,8 @@
                     email: '',
                     birth: '',
                     document: '',
-                    fileName: ''
+                    fileName: '',
+                    description: ''
                 },
                 submitted: false
             }
