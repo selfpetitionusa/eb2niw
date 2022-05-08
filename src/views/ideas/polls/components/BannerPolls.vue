@@ -1,6 +1,6 @@
 <template>
     <!-- Start Main Banner -->
-    <div class="main-banner" style="padding-bottom: 2rem; margin-top: 2rem">
+    <div class="main-banner" style="padding-bottom: 0rem; padding-top: 0rem; margin-top: 7rem">
         <SectionOne id="home"/>
         <div class="d-table">
             <div class="d-table-cell">
@@ -11,9 +11,21 @@
                                 <div class="row">
                                     <div class="col-lg-11">
                                         <h1>$$ voting for influencers</h1>
-                                        <h5>Engage your audience using monetizable polls, where fans vote with their money</h5>
 
                                         <div class="tick-section">
+                                            <div class="d-block d-sm-none">
+                                                <div class="tick-row">
+                                                    <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
+                                                    <p class="tick-input">Engage audience with polls, where fans vote using their money</p>
+                                                </div>
+                                            </div>
+
+                                                <div class="d-none d-sm-block">
+                                                    <div class="tick-row">
+                                                        <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
+                                                        <p class="tick-input">Engage audience using polls, where fans vote with their money</p>
+                                                    </div>
+                                                </div>
                                             <div class="d-block d-sm-none">
                                                 <div class="tick-row">
                                                     <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
@@ -43,10 +55,6 @@
                                                 </div>
 
                                             <div class="d-block d-sm-none">
-                                                <div class="tick-row">
-                                                    <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                    <p class="tick-input">Use on:</p>
-                                                </div>
                                                 <div class="row" style="padding: 2rem 0rem 0rem">
                                                     <img class="col-sm-3 col-2" src="../resources/tiktok.svg" />
                                                     <feather class="col-sm-2 col-2" type="twitch" style="margin: 0 5px; color: #6441a5; height: 100%; padding-top: 3px"></feather>
@@ -57,10 +65,6 @@
                                             </div>
 
                                                 <div class="d-none d-sm-block">
-                                                    <div class="tick-row">
-                                                        <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                        <p class="tick-input">Use on:</p>
-                                                    </div>
                                                     <div class="row" style="padding: 2rem 0rem 0rem">
                                                         <img class="col-sm-3 col-2" src="../resources/tiktok.svg" />
                                                         <feather class="col-sm-2 col-2" type="twitch" style="margin: 0 5px; color: #6441a5; height: 100%; padding-top: 3px"></feather>
@@ -70,6 +74,35 @@
                                                     </div>
                                                 </div>
                                         </div>
+
+                                        <div style="margin-top: 3rem">
+                                            <div v-if="show_contact && contact_notice != ''" class="alert alert-warning">
+                                                There was a problem submitting your message. {{ contact_notice }}
+                                            </div>
+
+                                            <form v-if="show_contact" id="sign" @submit.prevent="addEmail(email)" class="mt-4">
+                                                <div class="row">
+                                                    <div class="col-sm-8">
+                                                        <input type="email"  name="greencard-lead" id="greencard-lead" class="form-control"  v-model="email" required data-error="Please enter your email" placeholder="Enter your email address">
+                                                        <p class="tick-input" style="font-size: 10px; color:#495057">Try polls for FREE</p>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <div>
+                                                            <button type="submit" class="btn btn-primary">Submit</button>
+                                                            <div id="msgSubmit" class="h3 text-center hidden"></div>
+                                                            <div class="clearfix"></div>
+                                                          </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+
+                                            <div v-else>
+                                                <h4>Email submitted successfully!</h4>
+                                                <p>We will contact you within 48h</p>
+                                            </div>
+
+                                        </div>
+
                                     </div>
                                 </div>
                             </div>
@@ -103,11 +136,11 @@
                         </div>
                     </div>
 
-                    <div class="row banner-action-btns">
+                    <div class="row banner-action-btns" style="text-align: center">
                         <div class="col-xl-7 col-lg-9">
                             <div class="row justify-content-center">
                                 <div class="col-sm-8 col-10">
-                                    <a href="/polls-application" @click="$gtag.event('register')" class="btn btn-primary btn-register btn-profile">Let followers vote with money</a>
+                                    <a href="/polls-application" @click="$gtag.event('register')" class="btn btn-primary">Try polls for FREE</a>
                                 </div>
                             </div>
                         </div>
@@ -137,51 +170,41 @@
         name: 'BannerPolls',
         data() {
             return {
-                fired: false
+                fired: false,
+                email: '',
+                show_contact: true,
+                contact_notice: ''
             }
-        }
-    }
-
-
-/* JS FOR SIGNUP
-    data() {
-        return {
-            email: '',
-            message: ''
-        }
-    },
-    methods: {
-         addEmail(email) {
-            if (!email) return;
-            var noticeMessage = "🎉 Your account has been saved  🎉";
-             const url = `/api/lead`;
-             const requestOptions = {
-                 method: "POST",
-                 headers: {"Content-Type" : "application/json"},
-                 body: JSON.stringify({ email: email })
-             };
-             fetch(url, requestOptions).then(async response => {
-                 if (response.ok) {
-                     this.$refs['modal-1'].show();
-                     this.$store.commit('popup/setSeen');
-                 } else {
-                     noticeMessage = "This email address is already registered";
-                 }
-                 this.message = noticeMessage;
-                 this.email = '';
-             });
         },
-        randomPassword(length) {
-            var result           = '';
-            var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-            var charactersLength = characters.length;
-            for ( var i = 0; i < length; i++ ) {
-                result += characters.charAt(Math.floor(Math.random() * charactersLength));
+        mounted () {
+            this.$refs.plyr.player.volume = 0.5;
+            this.$refs.plyr.player.on('playing', () => {
+                if(!this.fired) {
+                    this.$gtag.event('video')
+                }
+                this.fired = true;
+
+            })
+        },
+        methods: {
+            async addEmail() {
+                if(!this.validateEmail(this.email)) {
+                    this.contact_notice = "The email address is badly formatted.";
+                } else {
+                    const url = `/api/contact/apply`;
+                    const requestOptions = {
+                        method: "POST",
+                        headers: {"Content-Type" : "application/json"},
+                        body: JSON.stringify({ email: this.email, idea: 'polls' })
+                    };
+                    fetch(url, requestOptions).then(this.show_contact = false)
+                }
+            },
+            validateEmail(email) {
+                var re = /\S+@\S+\.\S+/;
+                return re.test(String(email).toLowerCase());
             }
-            return result;
         }
     }
-}
-*/
 
 </script>

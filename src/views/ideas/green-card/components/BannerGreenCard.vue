@@ -10,8 +10,8 @@
                             <div class="hero-content">
                                 <div class="row">
                                     <div class="col-lg-11">
-                                        <h1>Self-petition green card for professionals</h1>
-                                        <h5>Take matters into your own hands!</h5>
+                                        <h1>Self-petition green card</h1>
+                                        <h5>for professionals</h5>
 
                                         <div class="tick-section">
                                             <div class="d-block d-sm-none">
@@ -56,29 +56,56 @@
                                                     </div>
                                                 </div>
                                         </div>
+
+                                        <div style="margin-top: 3rem">
+                                            <div v-if="show_contact && contact_notice != ''" class="alert alert-warning">
+                                                There was a problem submitting your message. {{ contact_notice }}
+                                            </div>
+
+                                            <form v-if="show_contact" id="sign" @submit.prevent="addEmail(email)" class="mt-4">
+                                                <div class="row">
+                                                    <div class="col-sm-8">
+                                                        <input type="email"  name="greencard-lead" id="greencard-lead" class="form-control"  v-model="email" required data-error="Please enter your email" placeholder="Enter your email address">
+                                                        <p class="tick-input" style="font-size: 10px; color:#495057">Discuss your case with us</p>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <div>
+                                                            <button type="submit" class="btn btn-primary">Submit</button>
+                                                            <div id="msgSubmit" class="h3 text-center hidden"></div>
+                                                            <div class="clearfix"></div>
+                                                          </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+
+                                            <div v-else>
+                                                <h4>Email submitted successfully!</h4>
+                                                <p>We will contact you within 48h</p>
+                                            </div>
+
+                                        </div>
+
                                     </div>
                                 </div>
                             </div>
                         </div>
 
 
-                        <div class="col-xl-6 col-lg-5">
-                            <h6 class="intro-video">Who is eligible to self-petition?</h6>
-
+                        <div class="col-xl-6 col-lg-5" style="margin-top: 2rem">
                             <div class="row">
                                 <div class="col-4" style="padding: 0px 5px">
                                     <a href="/green-card-evaluation" @click="$gtag.event('register')">
-                                        <img src="../resources/Stem.svg">
+                                        <img src="../resources/Stem.png">
                                     </a>
                                 </div>
                                 <div class="col-4" style="padding: 0px 5px">
                                     <a href="/green-card-evaluation" @click="$gtag.event('register')">
-                                        <img src="../resources/Entrepreneurs.svg">
+                                        <img src="../resources/Entrepreneurs.png">
                                     </a>
                                 </div>
                                 <div class="col-4" style="padding: 0px 5px">
                                     <a href="/green-card-evaluation" @click="$gtag.event('register')">
-                                        <img src="../resources/Finance.svg">
+                                        <img src="../resources/Finance.png">
                                     </a>
                                 </div>
                             </div>
@@ -86,17 +113,17 @@
                             <div class="row" style="margin-top: 1.5rem">
                                 <div class="col-4" style="padding: 0px 5px">
                                     <a href="/green-card-evaluation" @click="$gtag.event('register')">
-                                        <img src="../resources/Sciences.svg">
+                                        <img src="../resources/Sciences.png">
                                     </a>
                                 </div>
                                 <div class="col-4" style="padding: 0px 5px">
                                     <a href="/green-card-evaluation" @click="$gtag.event('register')">
-                                        <img src="../resources/Business.svg">
+                                        <img src="../resources/Business.png">
                                     </a>
                                 </div>
                                 <div class="col-4" style="padding: 0px 5px">
                                     <a href="/green-card-evaluation" @click="$gtag.event('register')">
-                                        <img src="../resources/Other.svg">
+                                        <img src="../resources/Other.png">
                                     </a>
                                 </div>
                             </div>
@@ -104,8 +131,8 @@
                     </div>
 
                     <div style="margin: 6rem 25px 3rem">
-                        <div class="row">
-                            <div class="col-lg-6 col-sm-8 col-10 offset-lg-3 offset-sm-2 offset-1">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-6 col-sm-8 col-10">
                                 <img src="../resources/123.svg" style="margin-bottom: 1rem"/>
                             </div>
                         </div>
@@ -118,18 +145,18 @@
                                     <div class="col-4" style="text-align: center; padding: 0">Submit application <br>with a lawyer</div>
                                 </div>
                             </div>
+
                         </div>
                     </div>
 
-                    <div class="row banner-action-btns" style="margin-top: 3rem">
+                    <div class="row banner-action-btns" style="margin-top: 3rem; text-align: center;">
                         <div class="col-xl-7 col-lg-9">
                             <div class="row justify-content-center">
                                 <div class="col-sm-8 col-10">
-                                    <a href="/green-card-evaluation" @click="$gtag.event('register')" class="btn btn-primary btn-register btn-profile">Check your eligibility</a>
+                                    <a href="/green-card-evaluation" @click="$gtag.event('register')" class="btn btn-primary">Check eligibility</a>
                                 </div>
                             </div>
                         </div>
-
                     </div>
 
                 </div>
@@ -155,51 +182,41 @@
         name: 'BannerGreenCard',
         data() {
             return {
-                fired: false
+                fired: false,
+                email: '',
+                show_contact: true,
+                contact_notice: ''
             }
-        }
-    }
-
-
-/* JS FOR SIGNUP
-    data() {
-        return {
-            email: '',
-            message: ''
-        }
-    },
-    methods: {
-         addEmail(email) {
-            if (!email) return;
-            var noticeMessage = "🎉 Your account has been saved  🎉";
-             const url = `/api/lead`;
-             const requestOptions = {
-                 method: "POST",
-                 headers: {"Content-Type" : "application/json"},
-                 body: JSON.stringify({ email: email })
-             };
-             fetch(url, requestOptions).then(async response => {
-                 if (response.ok) {
-                     this.$refs['modal-1'].show();
-                     this.$store.commit('popup/setSeen');
-                 } else {
-                     noticeMessage = "This email address is already registered";
-                 }
-                 this.message = noticeMessage;
-                 this.email = '';
-             });
         },
-        randomPassword(length) {
-            var result           = '';
-            var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-            var charactersLength = characters.length;
-            for ( var i = 0; i < length; i++ ) {
-                result += characters.charAt(Math.floor(Math.random() * charactersLength));
+        mounted () {
+            this.$refs.plyr.player.volume = 0.5;
+            this.$refs.plyr.player.on('playing', () => {
+                if(!this.fired) {
+                    this.$gtag.event('video')
+                }
+                this.fired = true;
+
+            })
+        },
+        methods: {
+            async addEmail() {
+                if(!this.validateEmail(this.email)) {
+                    this.contact_notice = "The email address is badly formatted.";
+                } else {
+                    const url = `/api/contact/apply`;
+                    const requestOptions = {
+                        method: "POST",
+                        headers: {"Content-Type" : "application/json"},
+                        body: JSON.stringify({ email: this.email, idea: 'greencard' })
+                    };
+                    fetch(url, requestOptions).then(this.show_contact = false)
+                }
+            },
+            validateEmail(email) {
+                var re = /\S+@\S+\.\S+/;
+                return re.test(String(email).toLowerCase());
             }
-            return result;
         }
     }
-}
-*/
 
 </script>
