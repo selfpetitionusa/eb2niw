@@ -14,17 +14,10 @@
                     <ValidationObserver ref="form">
                         <form @submit.prevent="handleSubmit" novalidate  v-if="!status.applied">
                             <div class="form-group">
-                                <label for="firstName">First Name</label>
+                                <label for="firstLastName">Name</label>
                                 <ValidationProvider rules="required" v-slot="{ errors }" >
-                                    <input type="text" v-model="user.firstName"  name="firstName" class="form-control" :class="{ 'is-invalid':  submitted && errors.length }" />
-                                    <div v-if="submitted && errors.length" class="invalid-feedback">First name is required</div>
-                                </ValidationProvider>
-                            </div>
-                            <div class="form-group">
-                                <label for="lastName">Last Name</label>
-                                <ValidationProvider rules="required" v-slot="{ errors }" >
-                                    <input type="text" v-model="user.lastName"  name="lastName" class="form-control" :class="{ 'is-invalid':  submitted && errors.length }" />
-                                    <div v-if="submitted && errors.length" class="invalid-feedback">Last name is required</div>
+                                    <input type="text" v-model="user.firstLastName"  name="firstLastName" class="form-control" :class="{ 'is-invalid':  submitted && errors.length }" />
+                                    <div v-if="submitted && errors.length" class="invalid-feedback">Name is required</div>
                                 </ValidationProvider>
                             </div>
                             <div class="form-group">
@@ -36,9 +29,30 @@
                                 </ValidationProvider>
                             </div>
                             <div class="form-group">
+                                <label for="residence">Where are you currently residing?</label>
+                                <ValidationProvider rules="required" v-slot="{ errors }" >
+                                    <select v-model="user.residence" id="residence" name="residence" class="form-control" :class="{ 'is-invalid':  submitted && errors.length }">
+                                        <option>USA</option>
+                                        <option>Overseas</option>
+                                    </select>
+                                    <div v-if="submitted && errors.length" class="invalid-feedback">Current residence is required</div>
+                                </ValidationProvider>
+                            </div>
+                            <div class="form-group">
+                                <label for="visa">What US visa do you hold?</label>
+                                <ValidationProvider rules="required" v-slot="{ errors }" >
+                                    <input type="text" v-model="user.visa"  name="visa" class="form-control" :class="{ 'is-invalid':  submitted && errors.length }">
+                                    <div v-if="submitted && errors.includes('required')" class="invalid-feedback">Visa is required</div>
+                                </ValidationProvider>
+                            </div>
+                            <div class="form-group">
                                 <label for="birth">Country of birth</label>
                                 <ValidationProvider rules="required" v-slot="{ errors }" >
-                                    <input type="text" v-model="user.birth" name="birth" class="form-control" :class="{ 'is-invalid':  submitted && errors.length }" />
+                                    <select v-model="user.birth" id="birth" name="birth" class="form-control" :class="{ 'is-invalid':  submitted && errors.length }">
+                                        <option>China</option>
+                                        <option>India</option>
+                                        <option>Other country</option>
+                                    </select>
                                     <div v-if="submitted && errors.length" class="invalid-feedback">Country of birth is required</div>
                                 </ValidationProvider>
                             </div>
@@ -90,13 +104,14 @@
         data () {
             return {
                 user: {
-                    firstName: '',
-                    lastName: '',
+                    firstLastName: '',
                     email: '',
+                    residence: '',
+                    visa: '',
                     birth: '',
+                    description: '',
                     document: '',
-                    fileName: '',
-                    description: ''
+                    fileName: ''
                 },
                 submitted: false
             }
