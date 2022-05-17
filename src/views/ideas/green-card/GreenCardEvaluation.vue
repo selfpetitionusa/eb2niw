@@ -12,7 +12,7 @@
                     </div>
 
                     <ValidationObserver ref="form">
-                        <form @submit.prevent="handleSubmit" novalidate  v-if="!status.applied">
+                        <form @submit.prevent="handleSubmit" novalidate>
                             <div class="form-group">
                                 <label for="firstLastName">Name</label>
                                 <ValidationProvider rules="required" v-slot="{ errors }" >
@@ -49,9 +49,11 @@
                                 <label for="birth">Country of birth</label>
                                 <ValidationProvider rules="required" v-slot="{ errors }" >
                                     <select v-model="user.birth" id="birth" name="birth" class="form-control" :class="{ 'is-invalid':  submitted && errors.length }">
+                                        <option>Country in Europe</option>
+                                        <option>Country in South America</option>
                                         <option>China</option>
                                         <option>India</option>
-                                        <option>Other country</option>
+                                        <option>Other</option>
                                     </select>
                                     <div v-if="submitted && errors.length" class="invalid-feedback">Country of birth is required</div>
                                 </ValidationProvider>
@@ -73,23 +75,13 @@
 
                             <div class="btn-container">
                                 <router-link to="/" class="btn btn-border btn-cancel">Cancel</router-link>
-                                <button class="btn btn-primary btn-border btn-save" :disabled="status.applying">SUBMIT
+                                <button @click="goToFinalPage()" class="btn btn-primary btn-border btn-save" :disabled="status.applying">SUBMIT
                                     <img v-show="status.applying" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
                                 </button>
                             </div>
                         </form>
                     </ValidationObserver>
-                  <div class="row h-100 justify-content-center align-items-center" v-if="status.applied">
-                    <div class="col-lg-5 col-md-12">
-                      <img src="../../../assets/img/contact.svg" alt="Contact Tutomy - private tutor website template">
-                    </div>
-                    <div class="col-lg-6 offset-lg-1 col-col-md-12">
-                      <h4>Thank you for contacting us</h4>
-                      <p>We'll get back to you as soon as we can</p>
-                    </div>
-                    <router-link to="/" class="btn btn-border btn-cancel">Home</router-link>
 
-                  </div>
                 </div>
             </div>
         </div>
@@ -145,6 +137,13 @@
               reader.onerror = function (error) {
                 console.log('Error: ', error);
               };
+          },
+          goToFinalPage(){
+            if(this.user.birth === 'China' || this.user.birth === 'India') {
+                this.$router.push('/confirmed');
+            } else if (this.user.birth === 'Country in Europe' || this.user.birth === 'Country in South America' || this.user.birth === 'Other') {
+                this.$router.push('/confirmation');
+            }
           }
         }
     };
