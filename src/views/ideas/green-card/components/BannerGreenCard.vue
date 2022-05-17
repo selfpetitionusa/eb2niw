@@ -70,18 +70,11 @@
                                                     </div>
                                                     <div class="col-sm-4">
                                                         <div>
-                                                            <button type="submit" class="btn btn-primary">Submit</button>
-                                                            <div id="msgSubmit" class="h3 text-center hidden"></div>
-                                                            <div class="clearfix"></div>
+                                                            <button type="submit" @click="goToEligibility()" class="btn btn-primary">Submit</button>
                                                           </div>
                                                     </div>
                                                 </div>
                                             </form>
-
-                                            <div v-else>
-                                                <h4>Email submitted successfully!</h4>
-                                                <p>We will contact you within 48h</p>
-                                            </div>
 
                                         </div>
 
@@ -215,6 +208,11 @@
             validateEmail(email) {
                 var re = /\S+@\S+\.\S+/;
                 return re.test(String(email).toLowerCase());
+            },
+            goToEligibility() {
+                if(this.validateEmail(this.email)) {
+                    this.$router.push('/eligibility');
+                }
             }
         }
     }
