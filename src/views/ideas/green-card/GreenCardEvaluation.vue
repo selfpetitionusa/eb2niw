@@ -139,9 +139,9 @@
               };
           },
           goToFinalPage(){
-            if(this.user.birth === 'China' || this.user.birth === 'India') {
+            if((this.user.birth === 'China' || this.user.birth === 'India') && this.user.firstLastName && this.user.email && this.user.residence && this.user.visa && this.user.document) {
                 this.$router.push('/confirmed');
-            } else if (this.user.birth === 'Country in Europe' || this.user.birth === 'Country in South America' || this.user.birth === 'Other') {
+            } else if ((this.user.birth === 'Country in Europe' || this.user.birth === 'Country in South America' || this.user.birth === 'Other') && this.user.firstLastName && this.user.email && this.user.residence && this.user.visa && this.user.document) {
                 this.$router.push('/confirmation');
             }
           }
