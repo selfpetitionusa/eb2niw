@@ -211,7 +211,7 @@
             },
             goToEligibility() {
                 if(this.validateEmail(this.email)) {
-                    this.$router.push('/eligibility');
+                    this.$router.push({ name: 'eligibility', params: { email: this.email } });
                 }
             }
         }

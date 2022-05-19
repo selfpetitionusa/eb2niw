@@ -21,7 +21,7 @@ export const router = new VueRouter({
       { path: '/', component: HomeGreenCard },
       { path: '/green-card-evaluation', component: GreenCardEvaluation },
       { path: '/green-card-application', component: GreenCardApplication },
-      { path: '/eligibility', component: GreenCardEvaluationContinued },
+      { path: '/eligibility', name: 'eligibility', component: GreenCardEvaluationContinued, props: true },
       { path: '/confirmation', component: GreenCardConfirmation },
       { path: '/confirmed', component: GreenCardConfirmed },
       // otherwise redirect to home
