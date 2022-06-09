@@ -64,13 +64,13 @@
 
                                             <form v-if="show_contact" id="sign" @submit.prevent="addEmail(email)" class="mt-4">
                                                 <div class="row">
-                                                    <div class="col-sm-8">
+                                                    <div class="col-sm-7">
                                                         <input type="email"  name="greencard-lead" id="greencard-lead" class="form-control"  v-model="email" required data-error="Please enter your email" placeholder="Enter your email address">
                                                         <p class="tick-input" style="font-size: 10px; color:#495057">Discuss your case with us</p>
                                                     </div>
-                                                    <div class="col-sm-4">
+                                                    <div class="col-sm-5">
                                                         <div>
-                                                            <button type="submit" @click="goToEligibility()" class="btn btn-primary">Submit</button>
+                                                            <button type="submit" @click="goToEligibility()" class="btn btn-primary">FIND A LAWYER</button>
                                                           </div>
                                                     </div>
                                                 </div>
