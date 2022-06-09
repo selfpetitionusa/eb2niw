@@ -12,7 +12,7 @@
             </div>
 
             <div class="row">
-                <div class="col-4">
+                <div class="col-sm-4">
                     <div class="pricing-table active-plan">
                         <div class="pricing-header">
                             <h3>STEP 1</h3>
@@ -37,7 +37,7 @@
                     </div>
                 </div>
 
-                <div class="col-4">
+                <div class="col-sm-4">
                     <div class="pricing-table">
                         <div class="pricing-header">
                             <h3>STEP 2</h3>
@@ -57,12 +57,12 @@
                         </div>
 
                         <div class="pricing-footer">
-                            <div class="btn-gc" style="color: #d3d3d3">Start with evaluation</div>
+                            <div class="btn-gc" style="color: #d3d3d3">GO TO STEP 1</div>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-4">
+                <div class="col-sm-4">
                     <div class="pricing-table">
                         <div class="pricing-header">
                             <h3>STEP 3</h3>
@@ -82,7 +82,7 @@
                         </div>
 
                         <div class="pricing-footer">
-                            <div class="btn-gc" style="color: #d3d3d3; ">Start with evaluation</div>
+                            <div class="btn-gc" style="color: #d3d3d3; ">GO TO STEP 1</div>
                         </div>
                     </div>
                 </div>
