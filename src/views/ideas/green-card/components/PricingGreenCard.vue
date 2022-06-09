@@ -13,9 +13,10 @@
 
             <div class="row">
                 <div class="col-4">
-                    <div class="pricing-table">
+                    <div class="pricing-table active-plan">
                         <div class="pricing-header">
-                            <h3>Evaluation</h3>
+                            <h3>STEP 1</h3>
+                            <h3 style="margin-top: 0.5rem">Evaluation</h3>
                         </div>
 
                         <div class="price">
@@ -31,15 +32,16 @@
                         </div>
 
                         <div class="pricing-footer">
-                            <a href="/green-card-evaluation"  @click="$gtag.event('plan-basic')" class="btn btn-primary">Select Plan</a>
+                            <a href="/green-card-evaluation"  @click="$gtag.event('plan-basic')" class="btn btn-primary">Start</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-4">
-                    <div class="pricing-table active-plan">
+                    <div class="pricing-table">
                         <div class="pricing-header">
-                            <h3>Consultation</h3>
+                            <h3>STEP 2</h3>
+                            <h3 style="margin-top: 0.5rem">Consultation</h3>
                         </div>
 
                         <div class="price">
@@ -48,14 +50,14 @@
 
                         <div class="pricing-features">
                             <ul>
-                                <li class="active">Filing process overview</li>
                                 <li class="active">Lawyer matching</li>
+                                <li class="active">Personalized filing plan</li>
                                 <li class="active">Tailored pricing quote</li>
                             </ul>
                         </div>
 
                         <div class="pricing-footer">
-                            <a href="https://calendly.com/self-petition/consultation"  @click="$gtag.event('plan-basic')" class="btn btn-primary">Select Plan</a>
+                            <div class="btn-gc" style="color: #d3d3d3">Start with evaluation</div>
                         </div>
                     </div>
                 </div>
@@ -63,7 +65,8 @@
                 <div class="col-4">
                     <div class="pricing-table">
                         <div class="pricing-header">
-                            <h3>Filing</h3>
+                            <h3>STEP 3</h3>
+                            <h3 style="margin-top: 0.5rem">Filing</h3>
                         </div>
 
                         <div class="price">
@@ -79,7 +82,7 @@
                         </div>
 
                         <div class="pricing-footer">
-                            <a href="https://calendly.com/self-petition/green-card-pricing-quote"  @click="$gtag.event('plan-premium')" class="btn btn-primary">Select Plan</a>
+                            <div class="btn-gc" style="color: #d3d3d3; ">Start with evaluation</div>
                         </div>
                     </div>
                 </div>

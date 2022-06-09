@@ -293,6 +293,45 @@ p {
         }
     }
 }
+
+.btn-gc {
+    font: {
+        weight: 600;
+        size: 14px;
+    }
+    border: none;
+    padding: 15px 40px;
+    position: relative;
+    border-radius: 4px;
+    z-index: 1;
+    text-transform: uppercase;
+    transition: $transition;
+
+    &::after, &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 0;
+        transition: $transition;
+        background: white;
+        z-index: -1;
+    }
+    &::after {
+        left: 0;
+        border-radius: 4px 0 0 4px;
+    }
+    &::before {
+        right: 0;
+        border-radius: 0 4px 4px 0;
+    }
+    &:hover {
+        &::after, &::before {
+            width: 51%;
+        }
+    }
+}
+
 /*btn-secondary*/
 .btn {
     &.btn-secondary {
