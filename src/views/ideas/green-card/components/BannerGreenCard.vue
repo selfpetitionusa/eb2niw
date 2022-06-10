@@ -17,42 +17,42 @@
                                             <div class="d-block d-sm-none">
                                                 <div class="tick-row">
                                                     <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                    <p class="tick-input">No employer sponsorship</p>
+                                                    <p class="tick-input">Searching for the right lawyer?...</p>
                                                 </div>
                                             </div>
 
                                                 <div class="d-none d-sm-block">
                                                     <div class="tick-row">
                                                         <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                        <p class="tick-input">No employer sponsorship</p>
+                                                        <p class="tick-input">Searching for the right lawyer?...</p>
                                                     </div>
                                                 </div>
 
                                             <div class="d-block d-sm-none">
                                                 <div class="tick-row">
                                                     <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                    <p class="tick-input">Lawyer who specializes in your profession</p>
+                                                    <p class="tick-input" style="color: #5457C1; font-weight: 500">...get quotes instantly from 3 law firms</p>
                                                 </div>
                                             </div>
 
                                                 <div class="d-none d-sm-block">
                                                     <div class="tick-row">
                                                         <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                        <p class="tick-input">Lawyer who specializes in your profession</p>
+                                                        <p class="tick-input" style="color: #5457C1; font-weight: 500">...get quotes instantly from 3 law firms</p>
                                                     </div>
                                                 </div>
 
                                             <div class="d-block d-sm-none">
                                                 <div class="tick-row">
                                                     <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                    <p class="tick-input">EAD (work permit) within 3 months of application</p>
+                                                    <p class="tick-input">No employer sponsorship is required</p>
                                                 </div>
                                             </div>
 
                                                 <div class="d-none d-sm-block">
                                                     <div class="tick-row">
                                                         <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                        <p class="tick-input">EAD (work permit) within 3 months of application</p>
+                                                        <p class="tick-input">No employer sponsorship is required</p>
                                                     </div>
                                                 </div>
                                         </div>
