@@ -31,14 +31,14 @@
                                             <div class="d-block d-sm-none">
                                                 <div class="tick-row">
                                                     <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                    <p class="tick-input" style="color: #5457C1; font-weight: 500">...get quotes instantly from 3 law firms</p>
+                                                    <p class="tick-input" style="color: #5457c1; font-weight: 600">...get quotes instantly from 3 law firms</p>
                                                 </div>
                                             </div>
 
                                                 <div class="d-none d-sm-block">
                                                     <div class="tick-row">
                                                         <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                        <p class="tick-input" style="color: #5457C1; font-weight: 500">...get quotes instantly from 3 law firms</p>
+                                                        <p class="tick-input" style="color: #5457c1; font-weight: 600">...get quotes instantly from 3 law firms</p>
                                                     </div>
                                                 </div>
 
