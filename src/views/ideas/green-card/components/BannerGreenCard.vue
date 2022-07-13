@@ -1,6 +1,14 @@
 <template>
     <!-- Start Main Banner -->
     <div class="main-banner" style="padding-top: 5rem; margin-top: 2rem; padding-bottom: 3rem">
+
+    <b-modal ref="modal-zoom" :modal-class="modalZoom" size="lg" hide-footer>
+        <div class="row">
+          <img class="col-6" src="../resources/Sample.png" />
+          <img class="col-6" src="../resources/SampleEditable.png" />
+        </div>
+    </b-modal>
+
         <SectionOne id="home"/>
         <div class="d-table">
             <div class="d-table-cell">
@@ -71,27 +79,6 @@
                                                 </div>
                                         </div>
 
-<!-- Comment                            <div style="margin-top: 3rem">
-                                            <div v-if="show_contact && contact_notice != ''" class="alert alert-warning">
-                                                There was a problem submitting your message. {{ contact_notice }}
-                                            </div>
-
-                                            <form v-if="show_contact" id="sign" @submit.prevent="addEmail(email)" class="mt-4">
-                                                <div class="row">
-                                                    <div class="col-sm-7">
-                                                        <input type="email"  name="greencard-lead" id="greencard-lead" class="form-control"  v-model="email" required data-error="Please enter your email" placeholder="Enter your email address">
-                                                        <p class="tick-input" style="font-size: 10px; color:#495057">Discuss your case with us</p>
-                                                    </div>
-                                                    <div class="col-sm-5">
-                                                        <div>
-                                                            <button type="submit" @click="goToEligibility()" class="btn btn-primary">FIND A LAWYER</button>
-                                                          </div>
-                                                    </div>
-                                                </div>
-                                            </form>
-
-                                        </div>        -->
-
                                     </div>
                                 </div>
                             </div>
@@ -99,7 +86,7 @@
 
 
                         <div class="col-xl-6 col-lg-5" style="margin-top: 2rem">
-                            <div class="row">
+                            <div class="row"  @click="$refs['modal-zoom'].show()" style="cursor: pointer">
                                 <div class="col-6 sample" style="padding: 0px 5px; height: 20rem">
                                 </div>
                                 <div class="col-6 sample-edit" style="padding: 0px 5px; height: 20rem">
@@ -170,7 +157,6 @@
 </template>
 
 
-<!-- Comment
 
 <script>
 
@@ -178,46 +164,9 @@
         name: 'BannerGreenCard',
         data() {
             return {
-                fired: false,
-                email: '',
-                show_contact: true,
-                contact_notice: ''
-            }
-        },
-        mounted () {
-            this.$refs.plyr.player.volume = 0.5;
-            this.$refs.plyr.player.on('playing', () => {
-                if(!this.fired) {
-                    this.$gtag.event('video')
-                }
-                this.fired = true;
-
-            })
-        },
-        methods: {
-            async addEmail() {
-                if(!this.validateEmail(this.email)) {
-                    this.contact_notice = "The email address is badly formatted.";
-                } else {
-                    const url = `/api/contact/apply`;
-                    const requestOptions = {
-                        method: "POST",
-                        headers: {"Content-Type" : "application/json"},
-                        body: JSON.stringify({ email: this.email, idea: 'greencard' })
-                    };
-                    fetch(url, requestOptions).then(this.show_contact = false)
-                }
-            },
-            validateEmail(email) {
-                var re = /\S+@\S+\.\S+/;
-                return re.test(String(email).toLowerCase());
-            },
-            goToEligibility() {
-                if(this.validateEmail(this.email)) {
-                    this.$router.push({ name: 'eligibility', params: { email: this.email } });
-                }
+                modalZoom: ['modal-zoom'],
             }
         }
     }
 
-</script>  -->
+</script>
