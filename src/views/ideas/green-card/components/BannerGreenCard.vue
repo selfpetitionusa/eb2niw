@@ -100,11 +100,10 @@
 
                         <div class="col-xl-6 col-lg-5" style="margin-top: 2rem">
                             <div class="row">
-                                <div class="col-6" style="padding: 0px 5px">
-                                    <img style="opacity: 0.4" src="../resources/Sample.png">
+                                <div class="col-6 sample" style="padding: 0px 5px; height: 20rem">
                                 </div>
-                                <div class="col-6" style="padding: 0px 5px">
-                                    <img style="opacity: 0.4" src="../resources/SampleEditable.png">
+                                <div class="col-6 sample-edit" style="padding: 0px 5px; height: 20rem">
+                                    <feather style="color: #5457c1; width: 16rem; margin-left: -10rem; margin-top: 2rem" type="zoom-in"></feather>
                                 </div>
                             </div>
                         </div>

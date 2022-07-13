@@ -4935,6 +4935,22 @@ CMS navbars
     }
 }
 
+.sample {
+  background-image: url(../../views/ideas/green-card/resources/Sample.png);
+  opacity: 0.4;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.sample-edit {
+  background-image: url(../../views/ideas/green-card/resources/SampleEditable.png);
+  opacity: 0.4;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 /*================================================
 Pop-ups & CMS
 =================================================*/
