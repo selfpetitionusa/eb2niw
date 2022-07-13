@@ -11,53 +11,67 @@
                                 <div class="row">
                                     <div class="col-lg-11">
                                         <h1>Self-petition green card</h1>
+                                        <h3>EB-2 National Interest Waiver</h3>
                                         <h5>for professionals</h5>
 
                                         <div class="tick-section">
                                             <div class="d-block d-sm-none">
                                                 <div class="tick-row">
                                                     <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                    <p class="tick-input">Searching for the right lawyer?...</p>
+                                                    <p class="tick-input">Actionable editable templates</p>
                                                 </div>
                                             </div>
 
                                                 <div class="d-none d-sm-block">
                                                     <div class="tick-row">
                                                         <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                        <p class="tick-input">Searching for the right lawyer?...</p>
+                                                        <p class="tick-input">Actionable editable templates</p>
                                                     </div>
                                                 </div>
 
                                             <div class="d-block d-sm-none">
                                                 <div class="tick-row">
                                                     <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                    <p class="tick-input" style="color: #5457c1; font-weight: 600">...get quotes instantly from 3 law firms</p>
+                                                    <p class="tick-input" style="color: #5457c1; font-weight: 600">Successful 8-page long cover letter</p>
                                                 </div>
                                             </div>
 
                                                 <div class="d-none d-sm-block">
                                                     <div class="tick-row">
                                                         <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                        <p class="tick-input" style="color: #5457c1; font-weight: 600">...get quotes instantly from 3 law firms</p>
+                                                        <p class="tick-input" style="color: #5457c1; font-weight: 600">Successful 8-page long cover letter</p>
                                                     </div>
                                                 </div>
 
                                             <div class="d-block d-sm-none">
                                                 <div class="tick-row">
                                                     <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                    <p class="tick-input">No employer sponsorship is required</p>
+                                                    <p class="tick-input" style="color: #5457c1; font-weight: 600">Examples of 3 reference letters</p>
                                                 </div>
                                             </div>
 
                                                 <div class="d-none d-sm-block">
                                                     <div class="tick-row">
                                                         <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                        <p class="tick-input">No employer sponsorship is required</p>
+                                                        <p class="tick-input" style="color: #5457c1; font-weight: 600">Examples of 3 reference letters</p>
+                                                    </div>
+                                                </div>
+                                            <div class="d-block d-sm-none">
+                                                <div class="tick-row">
+                                                    <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
+                                                    <p class="tick-input">Tips to request and prepare reference letters</p>
+                                                </div>
+                                            </div>
+
+                                                <div class="d-none d-sm-block">
+                                                    <div class="tick-row">
+                                                        <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
+                                                        <p class="tick-input">Tips to request and prepare reference letters</p>
                                                     </div>
                                                 </div>
                                         </div>
 
-                                        <div style="margin-top: 3rem">
+<!-- Comment                            <div style="margin-top: 3rem">
                                             <div v-if="show_contact && contact_notice != ''" class="alert alert-warning">
                                                 There was a problem submitting your message. {{ contact_notice }}
                                             </div>
@@ -76,7 +90,7 @@
                                                 </div>
                                             </form>
 
-                                        </div>
+                                        </div>        -->
 
                                     </div>
                                 </div>
@@ -86,59 +100,13 @@
 
                         <div class="col-xl-6 col-lg-5" style="margin-top: 2rem">
                             <div class="row">
-                                <div class="col-4" style="padding: 0px 5px">
-                                    <a href="/green-card-evaluation" @click="$gtag.event('register')">
-                                        <img src="../resources/Stem.png">
-                                    </a>
+                                <div class="col-6" style="padding: 0px 5px">
+                                    <img style="opacity: 0.4" src="../resources/Sample.png">
                                 </div>
-                                <div class="col-4" style="padding: 0px 5px">
-                                    <a href="/green-card-evaluation" @click="$gtag.event('register')">
-                                        <img src="../resources/Entrepreneurs.png">
-                                    </a>
-                                </div>
-                                <div class="col-4" style="padding: 0px 5px">
-                                    <a href="/green-card-evaluation" @click="$gtag.event('register')">
-                                        <img src="../resources/Finance.png">
-                                    </a>
+                                <div class="col-6" style="padding: 0px 5px">
+                                    <img style="opacity: 0.4" src="../resources/SampleEditable.png">
                                 </div>
                             </div>
-
-                            <div class="row" style="margin-top: 1.5rem">
-                                <div class="col-4" style="padding: 0px 5px">
-                                    <a href="/green-card-evaluation" @click="$gtag.event('register')">
-                                        <img src="../resources/Sciences.png">
-                                    </a>
-                                </div>
-                                <div class="col-4" style="padding: 0px 5px">
-                                    <a href="/green-card-evaluation" @click="$gtag.event('register')">
-                                        <img src="../resources/Business.png">
-                                    </a>
-                                </div>
-                                <div class="col-4" style="padding: 0px 5px">
-                                    <a href="/green-card-evaluation" @click="$gtag.event('register')">
-                                        <img src="../resources/Other.png">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div style="margin: 6rem 25px 3rem">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-6 col-sm-8 col-10">
-                                <img src="../resources/123.svg" style="margin-bottom: 1rem"/>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-lg-8 col-sm-10 col-12 offset-lg-2 offset-sm-1">
-                                <div class="row">
-                                    <div class="col-4" style="text-align: center; padding: 0">Upload your resume <br>for free assessment</div>
-                                    <div class="col-4" style="text-align: center; padding: 0 10px">Schedule a live <br>consultation with a lawyer</div>
-                                    <div class="col-4" style="text-align: center; padding: 0">Submit application <br>with a lawyer</div>
-                                </div>
-                            </div>
-
                         </div>
                     </div>
 
@@ -148,6 +116,41 @@
                                 <div class="col-sm-8 col-10">
                                     <a href="/green-card-evaluation" @click="$gtag.event('register')" class="btn btn-primary">Find a lawyer</a>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12" style="margin-top: 7rem">
+                        <div class="row">
+                            <div class="col-sm-2 col-4" style="padding: 0px 5px">
+                                <a href="/green-card-evaluation" @click="$gtag.event('register')">
+                                    <img src="../resources/Stem.png">
+                                </a>
+                            </div>
+                            <div class="col-sm-2 col-4" style="padding: 0px 5px">
+                                <a href="/green-card-evaluation" @click="$gtag.event('register')">
+                                    <img src="../resources/Entrepreneurs.png">
+                                </a>
+                            </div>
+                            <div class="col-sm-2 col-4" style="padding: 0px 5px">
+                                <a href="/green-card-evaluation" @click="$gtag.event('register')">
+                                    <img src="../resources/Finance.png">
+                                </a>
+                            </div>
+                            <div class="col-sm-2 col-4" style="padding: 0px 5px">
+                                <a href="/green-card-evaluation" @click="$gtag.event('register')">
+                                    <img src="../resources/Sciences.png">
+                                </a>
+                            </div>
+                            <div class="col-sm-2 col-4" style="padding: 0px 5px">
+                                <a href="/green-card-evaluation" @click="$gtag.event('register')">
+                                    <img src="../resources/Business.png">
+                                </a>
+                            </div>
+                            <div class="col-sm-2 col-4" style="padding: 0px 5px">
+                                <a href="/green-card-evaluation" @click="$gtag.event('register')">
+                                    <img src="../resources/Other.png">
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -168,6 +171,7 @@
 </template>
 
 
+<!-- Comment
 
 <script>
 
@@ -217,4 +221,4 @@
         }
     }
 
-</script>
+</script>  -->
