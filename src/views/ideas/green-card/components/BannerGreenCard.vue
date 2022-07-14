@@ -2,10 +2,10 @@
     <!-- Start Main Banner -->
     <div class="main-banner" style="padding-top: 5rem; margin-top: 2rem; padding-bottom: 3rem">
 
-    <b-modal ref="modal-zoom" :modal-class="modalZoom" size="lg" hide-footer>
-        <div class="row">
-          <img class="col-6" src="../resources/Sample.png" />
-          <img class="col-6" src="../resources/SampleEditable.png" />
+    <b-modal ref="modal-zoom" size="xl" hide-footer>
+        <div class="row justify-content-center">
+          <img class="col-sm-5 col-11" style="margin: 0.5rem 1rem; border: 1px solid #CECECE;" src="../resources/Sample.png" />
+          <img class="col-sm-5 col-11" style="margin: 0.5rem 1rem; border: 1px solid #CECECE;" src="../resources/SampleEditable.png" />
         </div>
     </b-modal>
 
@@ -86,21 +86,29 @@
 
 
                         <div class="col-xl-6 col-lg-5" style="margin-top: 2rem">
-                            <div class="row"  @click="$refs['modal-zoom'].show()" style="cursor: pointer">
-                                <div class="col-6 sample" style="padding: 0px 5px; height: 20rem">
+                            <div class="row single-works"  @click="$refs['modal-zoom'].show()" style="cursor: pointer">
+                                <feather class="feather-zoom" style="position: absolute; z-index: 2; width: 12rem; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;" type="zoom-in"></feather>
+                                <div class="col-6" style="padding: 0px; opacity: 0.4">
+                                  <img src="../resources/Sample.png">
                                 </div>
-                                <div class="col-6 sample-edit" style="padding: 0px 5px; height: 20rem">
-                                    <feather style="color: #5457c1; width: 16rem; margin-left: -10rem; margin-top: 2rem" type="zoom-in"></feather>
+                                <div class="col-6" style="padding: 0px; opacity: 0.4">
+                                  <img src="../resources/SampleEditable.png">
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="row banner-action-btns" style="margin-top: 3rem; text-align: center;">
-                        <div class="col-xl-7 col-lg-9">
-                            <div class="row justify-content-center">
-                                <div class="col-sm-8 col-10">
-                                    <a href="/green-card-evaluation" @click="$gtag.event('register')" class="btn btn-primary">Find a lawyer</a>
+                    <div class="pricing-table col-6">
+                        <div class="price" style="margin-top: 6rem;">
+                            <span><sup>$</sup>240<span>/45min</span></span>
+                        </div>
+
+                        <div class="row banner-action-btns" style="text-align: center;">
+                            <div class="col-xl-7 col-lg-9">
+                                <div class="row justify-content-center">
+                                    <div class="col-sm-8 col-10">
+                                        <a href="/green-card-evaluation" @click="$gtag.event('register')" class="btn btn-primary">BUY EB-2 NIW STARTER KIT</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -151,7 +159,6 @@
         <div class="shape5"><img src="../resources/shape5.png" ></div>
         <div class="shape6 rotateme"><img src="../resources/shape4.svg" ></div>
         <div class="shape7"><img src="../resources/shape4.svg" ></div>
-        <div class="shape8 rotateme"><img src="../resources/shape2.svg" ></div>
     </div>
     <!-- End Main Banner -->
 </template>
@@ -161,12 +168,7 @@
 <script>
 
     export default {
-        name: 'BannerGreenCard',
-        data() {
-            return {
-                modalZoom: ['modal-zoom'],
-            }
-        }
+        name: 'BannerGreenCard'
     }
 
 </script>

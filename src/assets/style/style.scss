@@ -3104,6 +3104,36 @@ Works CSS
     visibility: hidden;
 }
 
+.single-works {
+    color: #4ecac6;
+
+    .feather-zoom {
+        margin-top: 3rem;
+    }
+
+    &:hover {
+        transition: 0.2s;
+
+        .feather-zoom {
+            background: white;
+            border-radius: 20%;
+        }
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .single-works .feather-zoom {
+        margin-top: 5rem;
+    }
+}
+
+
+@media only screen and (max-width: 575px) {
+    .single-works .feather-zoom {
+        margin-top: 0.5rem;
+    }
+}
+
 .single-works .icon {
     position: absolute;
     border-radius: 50%;
@@ -3169,11 +3199,6 @@ Works CSS
     visibility: visible;
     bottom: 0;
 }
-
-.modal-zoom {
-    top: 50px;
-}
-
 
 /*==========================================
 Contact CSS
@@ -4935,21 +4960,6 @@ CMS navbars
     }
 }
 
-.sample {
-  background-image: url(../../views/ideas/green-card/resources/Sample.png);
-  opacity: 0.4;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.sample-edit {
-  background-image: url(../../views/ideas/green-card/resources/SampleEditable.png);
-  opacity: 0.4;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 
 /*================================================
 Pop-ups & CMS
