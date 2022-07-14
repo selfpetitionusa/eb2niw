@@ -1,90 +1,65 @@
 <template>
     <!-- Start Pricing Area -->
     <section class="pricing-area ptb-80" style="background: #F9F6F6">
-        <SectionFour id="pricing"/>
+        <SectionFour id="process"/>
         <div class="container">
             <div class="section-title">
-                <h2>Process</h2>
+                <h2>About the Process</h2>
                 <div class="bar"></div>
                 <div class="paragraph">
-                    <p>We review profiles of candidates to select only those with high chances of success and dedicate you to a lawyer who specializes in your area</p>
+                    <p style="font-weight: 600">Self-petition EB-2 NIW</p>
+                    <p>You can self-petition without employer sponsorship. It is fast since NIW waives lengthy Labor Certification process.</p>
+                </div>
+
+                <div class="paragraph">
+                    <p style="font-weight: 600">NOT only for scientists and PhDs</p>
+                    <p>Build your own successful case with our templates: actual, successful application with 3 reference letters which led to EB-2 NIW green card by a business professional.</p>
+                    <p style="margin-top: 10px;">See clearly how to satisfy National Interest Waiver requirements to get your green card approved</p>
                 </div>
             </div>
+        </div>
 
+        <div class="row service-action-btns" style="margin-top: 4rem; margin-bottom: 4rem">
+            <div class="col-xl-7 col-lg-9">
+                <div class="row justify-content-center">
+                    <div class="col-sm-8 col-10">
+                        <a href="/green-card-evaluation" @click="$gtag.event('register')" class="btn btn-primary btn-assess">Check EB-2 NIW eligibility</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12" style="margin-top: 7rem">
             <div class="row">
-                <div class="col-sm-4">
-                    <div class="pricing-table active-plan">
-                        <div class="pricing-header">
-                            <h3>STEP 1</h3>
-                            <h3 style="margin-top: 0.5rem">Evaluation</h3>
-                        </div>
-
-                        <div class="price">
-                            <span>Free</span>
-                        </div>
-
-                        <div class="pricing-features">
-                            <ul>
-                                <li class="active">Your profile evaluation</li>
-                                <li class="active">Process overview</li>
-                                <li class="active">No commitment to file</li>
-                            </ul>
-                        </div>
-
-                        <div class="pricing-footer">
-                            <a href="/green-card-evaluation"  @click="$gtag.event('plan-basic')" class="btn btn-primary">Start</a>
-                        </div>
-                    </div>
+                <div class="col-sm-2 col-4" style="padding: 0px 5px">
+                    <a href="/green-card-evaluation" @click="$gtag.event('register')">
+                        <img src="../resources/Stem.png">
+                    </a>
                 </div>
-
-                <div class="col-sm-4">
-                    <div class="pricing-table">
-                        <div class="pricing-header">
-                            <h3>STEP 2</h3>
-                            <h3 style="margin-top: 0.5rem">Consultation</h3>
-                        </div>
-
-                        <div class="price">
-                            <span><sup>$</sup>240<span>/45min</span></span>
-                        </div>
-
-                        <div class="pricing-features">
-                            <ul>
-                                <li class="active">Lawyer matching</li>
-                                <li class="active">Personalized filing plan</li>
-                                <li class="active">Tailored pricing quote</li>
-                            </ul>
-                        </div>
-
-                        <div class="pricing-footer">
-                            <div class="btn-gc" style="color: #d3d3d3">GO TO STEP 1</div>
-                        </div>
-                    </div>
+                <div class="col-sm-2 col-4" style="padding: 0px 5px">
+                    <a href="/green-card-evaluation" @click="$gtag.event('register')">
+                        <img src="../resources/Entrepreneurs.png">
+                    </a>
                 </div>
-
-                <div class="col-sm-4">
-                    <div class="pricing-table">
-                        <div class="pricing-header">
-                            <h3>STEP 3</h3>
-                            <h3 style="margin-top: 0.5rem">Filing</h3>
-                        </div>
-
-                        <div class="price">
-                            <span><sup>$</sup>7-15k<span>/depends on</span></span>
-                        </div>
-
-                        <div class="pricing-features">
-                            <ul>
-                                <li class="active">Number of family members</li>
-                                <li class="active">Your profile details</li>
-                                <li class="active">Visa type: EB-1A vs EB-2 NIW</li>
-                            </ul>
-                        </div>
-
-                        <div class="pricing-footer">
-                            <div class="btn-gc" style="color: #d3d3d3; ">GO TO STEP 1</div>
-                        </div>
-                    </div>
+                <div class="col-sm-2 col-4" style="padding: 0px 5px">
+                    <a href="/green-card-evaluation" @click="$gtag.event('register')">
+                        <img src="../resources/Finance.png">
+                    </a>
+                </div>
+                <div class="col-sm-2 col-4" style="padding: 0px 5px">
+                    <a href="/green-card-evaluation" @click="$gtag.event('register')">
+                        <img src="../resources/Sciences.png">
+                    </a>
+                </div>
+                <div class="col-sm-2 col-4" style="padding: 0px 5px">
+                    <a href="/green-card-evaluation" @click="$gtag.event('register')">
+                        <img src="../resources/Business.png">
+                    </a>
+                </div>
+                <div class="col-sm-2 col-4" style="padding: 0px 5px">
+                    <a href="/green-card-evaluation" @click="$gtag.event('register')">
+                        <img src="../resources/Other.png">
+                    </a>
                 </div>
             </div>
         </div>

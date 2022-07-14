@@ -20,7 +20,7 @@
                         <h3>Company</h3>
                         <ul class="list">
                             <li><a href="/"  v-scroll-to="'#solutions'">Solutions</a></li>
-                            <li><a href="/"  v-scroll-to="'#pricing'">Pricing</a></li>
+                            <li><a href="/"  v-scroll-to="'#process'">Process</a></li>
                         </ul>
                     </div>
                 </div>

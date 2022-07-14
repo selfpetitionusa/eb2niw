@@ -22,7 +22,7 @@
                                 <a href="/" class="nav-link" v-scroll-to="'#solutions'">Solutions</a>
                             </li>
                             <li class="nav-item">
-                                <a href="/" class="nav-link" v-scroll-to="'#pricing'">Pricing</a>
+                                <a href="/" class="nav-link" v-scroll-to="'#process'">Process</a>
                             </li>
                             <li class="nav-item">
                                 <a href="/" class="nav-link" v-scroll-to="'#contact'">Contact</a>

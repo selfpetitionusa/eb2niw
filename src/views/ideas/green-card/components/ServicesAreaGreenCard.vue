@@ -4,21 +4,15 @@
         <SectionThree id="solutions"/>
         <div class="container">
             <div class="section-title">
-                <h2>How does self-petition work?</h2>
+                <h2>What is included in Starter Kit?</h2>
                 <div class="bar"></div>
-
                 <div class="paragraph">
-                    <p style="font-weight: 600">Self-petition green card</p>
-                    <p>An application where you self-petition, ie. apply by yourself, without employer sponsorship. There are two options available: the EB-1A and EB-2 National Interest Waiver (NIW) visas</p>
-                </div>
-
-                <div class="paragraph">
-                    <p style="font-weight: 600">EB-1A</p>
-                    <p>Requires to demonstrate that you have extraordinary ability in the sciences, arts, education, business, or athletics</p>
+                    <p style="font-weight: 600">Filing without a lawyer?</p>
+                    <p>This is your #1 resource</p>
                 </div>
                 <div class="paragraph">
-                    <p style="font-weight: 600">EB-2 NIW</p>
-                    <p>Designated for people with advanced degrees (e.g. Masters, PhD, etc.) or those with exceptional ability in their fields</p>
+                    <p style="font-weight: 600">Filing with a lawyer?</p>
+                    <p>You still need to prepare reference letters and possibly cover letter. Save money on legal fees by using the templates</p>
                 </div>
             </div>
 
@@ -31,29 +25,24 @@
 
                     <div class="d-block d-sm-none">
                         <div class="row">
-                            <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="col-12">
                                 <div class="box">
-                                    <feather type="code"></feather> Employer sponsorship is NOT required
+                                    <feather type="code"></feather> Focused on business and STEM cases, i.e. non-research
                                 </div>
                             </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="col-12">
                                 <div class="box">
-                                    <feather type="layout"></feather> Offer of employment is NOT required
+                                    <feather type="layout"></feather> Successful application which led to EB-2 NIW green card by a business professional (one cover letter of 8 pages)
                                 </div>
                             </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="col-12">
                                 <div class="box">
-                                    <feather type="pen-tool"></feather> Faster process by filing I-140 and I-485 concurrently
+                                    <feather type="pen-tool"></feather> Actual reference letters (three letters, two pages each)
                                 </div>
                             </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="col-12">
                                 <div class="box">
-                                    <feather type="message-circle"></feather> Early work authorization before green card is approved
-                                </div>
-                            </div>
-                                <div class="col-xl-10 col-lg-12 col-md-8 col-sm-12 offset-xl-1 offset-lg-0 offset-md-2" style="padding: 0 8px">
-                                <div class="box">
-                                    <feather type="search"></feather> PERM Labor Certification process to show a shortage of U.S. workers in the labor market is NOT required
+                                    <feather type="message-circle"></feather> Instructions to arrange for high-quality reference letters and write a successful applications
                                 </div>
                             </div>
                         </div>
@@ -62,45 +51,51 @@
 
                     <div class="d-none d-sm-block">
                         <div class="row">
-                            <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="col-12">
                                 <div class="box">
-                                    <feather type="code"></feather> Employer sponsorship is NOT required
+                                    <feather type="code"></feather> Focused on business and STEM cases, i.e. non-research
                                 </div>
                             </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="col-12">
                                 <div class="box">
-                                    <feather type="layout"></feather> Offer of employment is NOT required
+                                    <feather type="layout"></feather> Successful application which led to EB-2 NIW green card by a business professional (one cover letter of 8 pages)
                                 </div>
                             </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="col-12">
                                 <div class="box">
-                                    <feather type="pen-tool"></feather> Faster process by filing I-140 and I-485 concurrently
+                                    <feather type="pen-tool"></feather> Actual reference letters (three letters, two pages each)
                                 </div>
                             </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="col-12">
                                 <div class="box">
-                                    <feather type="message-circle"></feather> Early work authorization before green card is approved
-                                </div>
-                            </div>
-                            <div class="col-xl-10 col-lg-12 col-md-8 col-sm-12 offset-xl-1 offset-lg-0 offset-md-2" style="padding: 0 8px">
-                                <div class="box">
-                                    <feather type="search"></feather> PERM Labor Certification process to show a shortage of U.S. workers in the labor market is NOT required
+                                    <feather type="message-circle"></feather> Instructions to arrange for high-quality reference letters and write a successful applications
                                 </div>
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
 
-            <div class="row service-action-btns" style="margin-top: 4rem; margin-bottom: 4rem">
-                <div class="col-xl-7 col-lg-9">
-                    <div class="row justify-content-center">
-                        <div class="col-sm-8 col-10">
-                            <a href="/green-card-evaluation" @click="$gtag.event('register')" class="btn btn-primary">Check eligibility</a>
-                        </div>
+            <div class="pricing-table col-md-6 col-11 offset-md-3" style="margin-top: 6rem; padding-top: 1.5rem">
+                <div class="price" style="margin-bottom: 0;">
+                    <span style="color: #0b5345;"><sup>$</sup>89.99</span>
+                </div>
+                <div class="price" style="margin-bottom: 0.5rem;">
+                    <sup style="color: #b30000; font-size: 15px;">$</sup><span style="color: #b30000; font-size: 20px; text-decoration: line-through">149.99</span>
+                </div>
+
+                <div class="row banner-action-btns" style="text-align: center; margin-top: 1rem">
+                    <div class="col-xl-7 col-lg-9">
+                        <a href="https://checkout.stripe.com/pay/cs_live_a1qNyGjaPCfAQFuj7MBooXupRt0n3gtqfiNtsv7K0zAGkoNEee0B1svkIn#fidkdWxOYHwnPyd1blppbHNgWjA0T290ckNBSGlgSWtqdWJTazBTbnJRPU1kdmBgRlBXVEsyYXQxdURCZlJ3XGlAZnFDdm00cmJgSzJXN21SZjxnT3ZUfGZqaHxmPHVCVXRNVFF1cDc1TmdLNTVgQ0I2QjVATCcpJ3VpbGtuQH11anZgYUxhJz8nMnZMMGtQNXV1NnJ1ZnNgY1xfJ3gl" @click="$gtag.event('register')" class="btn btn-primary">BUY EB-2 NIW STARTER KIT</a>
                     </div>
                 </div>
+                <div style="margin-top: 1rem; font-size: 12px">Valid for:</div>
+                <div style="font-size: 18px">
+                    <span style="font-weight: 600">5</span> days
+                    <span style="font-weight: 600">5</span> hours
+                    <span style="font-weight: 600">5</span> days
+                </div>
+                <p style="margin-top: 1rem; line-height: 18px; font-size: 12px">You will receive an email with documents. Please check your spam folder. <br>Templates are provided in electronic form only (pdf and doc files).</p>
             </div>
 
             <div class="website-example funfacts-area">

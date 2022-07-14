@@ -5,7 +5,7 @@
             <div class="section-title contact-title">
                 <h2>Get In Touch</h2>
                 <div class="bar"></div>
-                <p>Want to learn more about green card options that are available to you?</p>
+                <p>Want to learn more about templates that we provide?</p>
             </div>
 
             <div class="row h-100 justify-content-center align-items-center">

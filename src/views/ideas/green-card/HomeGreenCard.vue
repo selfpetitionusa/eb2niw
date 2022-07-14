@@ -7,8 +7,8 @@
     <div>
       <BannerGreenCard></BannerGreenCard>
       <ServicesAreaGreenCard></ServicesAreaGreenCard>
-      <FeedbackGreenCard></FeedbackGreenCard>
       <PricingGreenCard></PricingGreenCard>
+      <FeedbackGreenCard></FeedbackGreenCard>
       <ContactGreenCard></ContactGreenCard>
     </div>
     <div v-if="currentUrl == '/not-found' || currentUrl == '/coming-soon'"></div>
