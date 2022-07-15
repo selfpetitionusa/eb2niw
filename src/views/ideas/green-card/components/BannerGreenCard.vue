@@ -97,29 +97,7 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="pricing-table col-md-6 col-11 offset-md-3" style="margin-top: 6rem; padding-top: 1.5rem">
-                        <div class="price" style="margin-bottom: 0;">
-                            <span style="color: #0b5345;"><sup>$</sup>89.99</span>
-                        </div>
-                        <div class="price" style="margin-bottom: 0.5rem;">
-                            <sup style="color: #b30000; font-size: 15px;">$</sup><span style="color: #b30000; font-size: 20px; text-decoration: line-through">149.99</span>
-                        </div>
-
-                        <div class="row banner-action-btns" style="text-align: center; margin-top: 1rem">
-                            <div class="col-xl-7 col-lg-9">
-                                <a href="https://checkout.stripe.com/pay/cs_live_a1qNyGjaPCfAQFuj7MBooXupRt0n3gtqfiNtsv7K0zAGkoNEee0B1svkIn#fidkdWxOYHwnPyd1blppbHNgWjA0T290ckNBSGlgSWtqdWJTazBTbnJRPU1kdmBgRlBXVEsyYXQxdURCZlJ3XGlAZnFDdm00cmJgSzJXN21SZjxnT3ZUfGZqaHxmPHVCVXRNVFF1cDc1TmdLNTVgQ0I2QjVATCcpJ3VpbGtuQH11anZgYUxhJz8nMnZMMGtQNXV1NnJ1ZnNgY1xfJ3gl" @click="$gtag.event('register')" class="btn btn-primary">BUY EB-2 NIW STARTER KIT</a>
-                            </div>
-                        </div>
-                        <div style="margin-top: 1rem; font-size: 12px">Valid for:</div>
-                        <div style="font-size: 18px">
-                            <span style="font-weight: 600" v-if="days > 0">{{ days | twoDigits }} day</span><span v-if="days > 1">s</span>
-                            <span style="font-weight: 600"> {{ hours | twoDigits }}</span>h :
-                            <span style="font-weight: 600">{{ minutes | twoDigits }}</span>m :
-                            <span style="font-weight: 600">{{ seconds | twoDigits }}</span>s
-                        </div>
-                        <p style="margin-top: 1rem; line-height: 18px; font-size: 12px">You will receive an email with documents. Please check your spam folder. <br>Templates are provided in electronic form only (pdf and doc files).</p>
-                    </div>
+                    <PriceOffer></PriceOffer>
 
                 </div>
             </div>
@@ -139,57 +117,14 @@
 
 <script>
 
+import PriceOffer from "./PriceOffer.vue";
+
+
     export default {
         name: 'BannerGreenCard',
-        data () {
-            return {
-              now: Math.trunc((new Date()).getTime() / 1000),
-              event: new Date('2022-07-14T22:37:00'),
-              finish: false
-            }
-          },
-          mounted () {
-            const _self = this
-            window.setInterval(() => {
-              this.now = Math.trunc((new Date()).getTime() / 1000)
-              if (!this.finish && this.calculatedDate - this.now <= 0) {
-                _self.finish = true
-                _self.$emit('onFinish')
-              }
-            }, 1000)
-          },
-          computed: {
-            secondCount () {
-              return this.calculatedDate - this.now
-            },
-            calculatedDate () {
-              return Math.trunc(Date.parse(this.event) / 1000)
-            },
-            seconds () {
-              if (this.secondCount < 0) return 0
-              return this.secondCount % 60
-            },
-            minutes () {
-              if (this.secondCount < 0) return 0
-              return Math.trunc(this.secondCount / 60) % 60
-            },
-            hours () {
-              if (this.secondCount < 0) return 0
-              return Math.trunc(this.secondCount / 60 / 60) % 24
-            },
-            days () {
-              if (this.secondCount < 0) return 0
-              return Math.trunc(this.secondCount / 60 / 60 / 24)
-            }
-          },
-          filters: {
-            twoDigits (value) {
-              if (value.toString().length <= 1) {
-                return '0' + value.toString()
-              }
-              return value.toString()
-            }
-          }
+        components: {
+          PriceOffer
+        }
     }
 
 </script>
