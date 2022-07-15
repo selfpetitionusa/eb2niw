@@ -113,10 +113,10 @@
                         </div>
                         <div style="margin-top: 1rem; font-size: 12px">Valid for:</div>
                         <div style="font-size: 18px">
-                            <span style="font-weight: 600">{{days}}</span> day<span v-if="days > 1">s</span>
-                            <span style="font-weight: 600"> {{hours}}</span>h :
-                            <span style="font-weight: 600">{{minutes}}</span>m :
-                            <span style="font-weight: 600">{{seconds}}</span>s
+                            <span style="font-weight: 600" v-if="days > 0">{{ days | twoDigits }} day</span><span v-if="days > 1">s</span>
+                            <span style="font-weight: 600"> {{ hours | twoDigits }}</span>h :
+                            <span style="font-weight: 600">{{ minutes | twoDigits }}</span>m :
+                            <span style="font-weight: 600">{{ seconds | twoDigits }}</span>s
                         </div>
                         <p style="margin-top: 1rem; line-height: 18px; font-size: 12px">You will receive an email with documents. Please check your spam folder. <br>Templates are provided in electronic form only (pdf and doc files).</p>
                     </div>
@@ -141,46 +141,55 @@
 
     export default {
         name: 'BannerGreenCard',
-        data() {
+        data () {
             return {
-                days: this.days,
-                hours: this.hours,
-                minutes: this.minutes,
-                seconds: this.seconds
+              now: Math.trunc((new Date()).getTime() / 1000),
+              event: new Date('2022-07-14T22:37:00'),
+              finish: false
             }
-        },
-        methods: {
-            test() {
-                // Set the date we're counting down to
-                var countDownDate = new Date("Jan 5, 2024 15:37:25").getTime();
-
-                // Update the count down every 1 second
-                var x = setInterval(function() {
-
-                // Get today's date and time
-                var now = new Date().getTime();
-
-                // Find the distance between now and the count down date
-                var distance = countDownDate - now;
-
-                // Time calculations for days, hours, minutes and seconds
-                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                // Display the result in the element with id="demo"
-                document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-                + minutes + "m " + seconds + "s ";
-
-                // If the count down is finished, write some text
-                if (distance < 0) {
-                clearInterval(x);
-                document.getElementById("demo").innerHTML = "EXPIRED";
-                }
-                }, 1000);
+          },
+          mounted () {
+            const _self = this
+            window.setInterval(() => {
+              this.now = Math.trunc((new Date()).getTime() / 1000)
+              if (!this.finish && this.calculatedDate - this.now <= 0) {
+                _self.finish = true
+                _self.$emit('onFinish')
+              }
+            }, 1000)
+          },
+          computed: {
+            secondCount () {
+              return this.calculatedDate - this.now
+            },
+            calculatedDate () {
+              return Math.trunc(Date.parse(this.event) / 1000)
+            },
+            seconds () {
+              if (this.secondCount < 0) return 0
+              return this.secondCount % 60
+            },
+            minutes () {
+              if (this.secondCount < 0) return 0
+              return Math.trunc(this.secondCount / 60) % 60
+            },
+            hours () {
+              if (this.secondCount < 0) return 0
+              return Math.trunc(this.secondCount / 60 / 60) % 24
+            },
+            days () {
+              if (this.secondCount < 0) return 0
+              return Math.trunc(this.secondCount / 60 / 60 / 24)
             }
-        }
+          },
+          filters: {
+            twoDigits (value) {
+              if (value.toString().length <= 1) {
+                return '0' + value.toString()
+              }
+              return value.toString()
+            }
+          }
     }
 
 </script>
