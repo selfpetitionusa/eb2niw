@@ -87,7 +87,7 @@
 
                         <div class="col-xl-6 col-lg-5" style="margin-top: 2rem">
                             <div class="row single-works"  @click="$refs['modal-zoom'].show()" style="cursor: pointer">
-                                <feather class="feather-zoom" style="position: absolute; z-index: 2; width: 12rem; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;" type="zoom-in"></feather>
+                                <feather class="glass-zoom" style="position: absolute; z-index: 2; width: 12rem; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;" type="zoom-in"></feather>
                                 <div class="col-6" style="padding: 0px; opacity: 0.4">
                                   <img src="../resources/Sample.png">
                                 </div>
