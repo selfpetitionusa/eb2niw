@@ -423,7 +423,7 @@ label {
         border-radius: 30px;
 
         &::before {
-            content: '';
+            //content: '';
             position: absolute;
             left: 0;
             top: -2.7px;
@@ -431,10 +431,10 @@ label {
             width: 10px;
             border-radius: 50%;
             background: $light-green-color;
-            animation-duration: 3s;
-            animation-timing-function: linear;
-            animation-iteration-count: infinite;
-            animation-name: MOVE-BG;
+            //animation-duration: 3s;
+            //animation-timing-function: linear;
+            //animation-iteration-count: infinite;
+            //animation-name: MOVE-BG;
         }
     }
     .sub-title {
