@@ -1,6 +1,7 @@
 <template>
     <!-- Start Feedback Area -->
-    <section id="testimonials" class="feedback-area ptb-80 bg-f9fafb">
+    <section class="feedback-area ptb-80 bg-f9fafb">
+      <div id="testimonials">
         <div class="container">
             <div class="section-title">
                 <h2>Success Stories</h2>
@@ -120,6 +121,7 @@
         <div class="shape2 rotateme"><img src="../resources/shape2.svg" alt="shape"></div>
         <div class="shape4"><img src="../resources/shape4.svg" alt="shape"></div>
         <div class="shape7"><img src="../resources/shape4.svg" alt="shape"></div>
+      </div>
     </section>
     <!-- End Feedback Area -->
 </template>
