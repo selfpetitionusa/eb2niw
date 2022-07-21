@@ -21,6 +21,8 @@
                         <ul class="list">
                             <li><a href="/"  v-scroll-to="'#solutions'">Solutions</a></li>
                             <li><a href="/"  v-scroll-to="'#process'">Process</a></li>
+                            <li><a href="/"  v-scroll-to="'#bio'">About us</a></li>
+                            <li><a href="/"  v-scroll-to="'#testimonials'">Testimonials</a></li>
                         </ul>
                     </div>
                 </div>
