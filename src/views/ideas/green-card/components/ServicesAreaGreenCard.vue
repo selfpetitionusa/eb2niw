@@ -4,8 +4,12 @@
         <SectionThree id="solutions"/>
         <div class="container">
             <div class="section-title">
-                <h2>What is included in Starter Kit?</h2>
+                <h2>What is included?</h2>
                 <div class="bar"></div>
+
+                <div class="paragraph">
+                    <p>Below you will find list of all documents included in our Starter Kit.</p>
+                </div>
                 <div class="paragraph">
                     <p style="font-weight: 600">Filing without a lawyer?</p>
                     <p>This is your #1 resource</p>

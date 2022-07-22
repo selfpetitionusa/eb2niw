@@ -14,7 +14,7 @@
                       <p>We are a family from Europe, who moved to US for the opportunity offered by our employer. Ever since have been living the American dream.
                       <p><span style="font-weight: 600">From day one we knew that green card means freedom:</span>
                           <ul>
-                              <li>to stay on our own terms,</li>
+                              <li>to stay in USA on our own terms,</li>
                               <li>have access to various job opportunities...</li>
                               <li>...and piece of mind while there is no need to re-apply for a visa every couple of years.</li>
                           </ul>

@@ -4,7 +4,7 @@
         <SectionFour id="process"/>
         <div class="container">
             <div class="section-title" style="margin-bottom: 0rem">
-                <h2>About the Process</h2>
+                <h2>About EB-2 NIW Process</h2>
                 <div class="bar"></div>
                 <div class="paragraph">
                     <p style="font-weight: 600">Self-petition EB-2 NIW</p>
@@ -14,7 +14,6 @@
                 <div class="paragraph">
                     <p style="font-weight: 600">NOT only for scientists and PhDs</p>
                     <p>Build your own successful case with our templates: actual, successful application with 3 reference letters which led to EB-2 NIW green card by a business professional.</p>
-                    <p style="margin-top: 10px;">See clearly how to satisfy National Interest Waiver requirements to get your green card approved</p>
                 </div>
 
                 <div class="paragraph" style="margin-top: 4rem">
