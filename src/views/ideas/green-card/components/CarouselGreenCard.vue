@@ -1,6 +1,6 @@
 <template>
     <!-- Start Works Area -->
-    <section class="works-area" style="background: white">
+    <section class="works-area" style="background: white; margin-top: 10rem">
 
         <b-modal ref="modal-zoom" :modal-class="modalZoom" static :return-focus="this.$parent" size="lg" hide-footer>
             <template #modal-title>
@@ -19,49 +19,49 @@
                 :perPageCustom = "[[0, 1],[768, 2],[1200, 3], [1500, 4]]"
             >
                 <slide>
-                    <div class="single-works">
+                    <div class="single-works carousel-green-hover">
                         <img src="../resources/Sample.png">
                         <a v-if="windowWidth > 767" @click="index = 0;$refs['modal-zoom'].show()" style="cursor: pointer;" class="icon"><feather type="zoom-in"></feather></a>
 
                         <div class="works-content">
-                            <h3><a href="#">Aggregate feedback into actionable reports</a></h3>
-                            <p>At first glance you know which areas to prioritize</p>
+                            <h3><a href="#">Successful real cover letter</a></h3>
+                            <p>Candidate with banking and finance background</p>
                         </div>
                     </div>
                 </slide>
 
                 <slide>
-                    <div class="single-works">
-                        <img src="../resources/Sample.png">
+                    <div class="single-works carousel-green-hover">
+                        <img src="../resources/SampleEditable.png">
                         <a v-if="windowWidth > 767" @click="index = 1;$refs['modal-zoom'].show()" style="cursor: pointer;" class="icon"><feather type="zoom-in"></feather></a>
 
                         <div class="works-content">
-                            <h3><a href="#">Resolve unclear or conflicting feedback</a></h3>
-                            <p>It has never been more obvious which feedback to implement</p>
+                            <h3><a href="#">Editable cover letter</a></h3>
+                            <p>Fill out yellow blanks to create your own letter</p>
                         </div>
                     </div>
                 </slide>
 
                 <slide>
-                    <div class="single-works">
-                        <img src="../resources/Sample.png" >
+                    <div class="single-works carousel-green-hover">
+                        <img src="../resources/ReferralSample.png" >
                         <a v-if="windowWidth > 767" @click="index = 2;$refs['modal-zoom'].show()" style="cursor: pointer;" class="icon"><feather type="zoom-in"></feather></a>
 
                         <div class="works-content">
-                            <h3><a href="#">Capture your visitors emotions</a></h3>
-                            <p>Choose the emojis that better capture feedback in your project</p>
+                            <h3><a href="#">Three examples of referral letters</a></h3>
+                            <p>Use to prepare your own</p>
                         </div>
                     </div>
                 </slide>
 
                 <slide>
-                    <div class="single-works">
-                        <img src="../resources/Sample.png" >
+                    <div class="single-works carousel-green-hover">
+                        <img src="../resources/Instructions.png" >
                         <a v-if="windowWidth > 767" @click="index = 3;$refs['modal-zoom'].show()" style="cursor: pointer;" class="icon"><feather type="zoom-in"></feather></a>
 
                         <div class="works-content">
-                            <h3><a href="#">Collect visual feedback</a></h3>
-                            <p>Spend less time collecting and organizing feedback</p>
+                            <h3><a href="#">Instructions and samples to request referral letters</a></h3>
+                            <p>Referral letters supporting cover letter</p>
                         </div>
                     </div>
                 </slide>
@@ -85,20 +85,20 @@ export default {
             index: 0,
             modalProperties: [
                 {
-                   title : "Aggregate feedback into actionable reports",
+                   title : "Successful real cover letter",
                    img: "./Sample.png"
                 },
                 {
-                    title : "Resolve unclear or conflicting feedback",
-                    img: "./Sample.png"
+                    title : "Editable cover letter",
+                    img: "./SampleEditable.png"
                 },
                 {
-                    title : "Capture your visitors emotions",
-                    img: "./Sample.png"
+                    title : "Three examples of referral letters",
+                    img: "./ReferralSample.png"
                 },
                 {
-                    title : "Collect visual feedback",
-                    img: "./Sample.png"
+                    title : "Instructions and samples to request referral letters",
+                    img: "./Instructions.png"
                 }
 
             ]

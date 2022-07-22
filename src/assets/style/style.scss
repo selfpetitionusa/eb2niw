@@ -3101,15 +3101,18 @@ Works CSS
     top: 0;
     width: 100%;
     height: 100%;
-  //background: linear-gradient(135deg, #23bdb8 0%, #43e794 100%);
-  //-webkit-transition: 0.5s;
-  //transition: 0.5s;
     opacity: 0;
     visibility: hidden;
 
     .feather-zoom {
         background: white;
     }
+}
+
+.carousel-green-hover::before {
+    background: linear-gradient(135deg, #43e794 0%, #23bdb8 70%);
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
 }
 
 .single-works {
@@ -3122,7 +3125,7 @@ Works CSS
     &:hover {
         .glass-zoom {
             border-radius: 15%;
-            background: linear-gradient(135deg, #23bdb8 0%, #43e794 100%);
+            background: linear-gradient(135deg, #43e794 0%, #23bdb8 70%);
             color: white;
             transition: color 0.15s ease-out;
         }
@@ -3192,7 +3195,7 @@ Works CSS
 }
 
 .single-works:hover::before {
-    opacity: .8;
+    opacity: .85;
     visibility: visible;
 }
 
