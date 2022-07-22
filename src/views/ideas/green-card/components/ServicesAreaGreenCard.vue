@@ -81,6 +81,7 @@
             </div>
 
             <PriceOffer></PriceOffer>
+            <CarouselGreenCard></CarouselGreenCard>
 
             <div class="website-example funfacts-area">
 
@@ -99,11 +100,13 @@
 <script>
 
 import PriceOffer from "./PriceOffer.vue";
+import CarouselGreenCard from "./CarouselGreenCard.vue";
 
     export default {
         name: 'ServicesAreaGreenCard',
         components: {
-          PriceOffer
+          PriceOffer,
+          CarouselGreenCard,
         }
     }
 </script>
