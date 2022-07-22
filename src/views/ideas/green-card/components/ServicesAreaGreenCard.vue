@@ -81,15 +81,15 @@
             </div>
 
             <PriceOffer></PriceOffer>
-            <CarouselGreenCard></CarouselGreenCard>
 
             <div class="website-example funfacts-area">
 
-                <img src="../resources/map.png" class="map-bg" style="left: -50%">
+                <img src="../resources/map.png" class="map-bg" style="left: -20%">
                 <div class="shape2-services rotateme"><img src="../resources/shape2.svg"></div>
                 <div class="shape3-services"><img src="../resources/shape3.svg" ></div>
                 <div class="shape4-services"><img src="../resources/shape4.svg" ></div>
-                <div class="shape5-services"><img src="../resources/shape5.png" ></div>
+
+                <CarouselGreenCard></CarouselGreenCard>
             </div>
 
         </div>

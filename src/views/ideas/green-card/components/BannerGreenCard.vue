@@ -106,7 +106,7 @@
         <div class="shape1"><img src="../resources/shape1.png" ></div>
         <div class="shape3"><img src="../resources/shape3.svg" ></div>
         <div class="shape4"><img src="../resources/shape4.svg" ></div>
-        <div class="shape5"><img src="../resources/shape5.png" ></div>
+        <div class="shape5" style="top: 55%"><img src="../resources/shape5.png" ></div>
         <div class="shape6 rotateme"><img src="../resources/shape4.svg" ></div>
         <div class="shape7"><img src="../resources/shape4.svg" ></div>
     </div>
