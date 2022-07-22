@@ -30,16 +30,16 @@
                     <div class="bar" style="margin-left: 0"></div>
                     <div style="margin: 1rem; margin-top: 2rem; max-width: 1000px">You may be eligible for EB-2 visa if you satisfy one of the two requirements:
                       <ul>
-                        <li style="margin-top: 0.5rem"><span style="font-weight: 500">Advanced degree: </span>Need to possess advanced degree, ie a degree above baccalaureate (Master's, PhD etc) or its foreign equivalent. Alternatively a baccalaureate or foreign equivalent plus 5 years of post-baccalaureate, progressive work experience in the field.</li>
+                        <li style="margin-top: 0.5rem"><span style="font-weight: 500">Advanced degree: </span>Need to possess advanced degree (Master's, PhD etc) or its foreign equivalent. Alternatively a baccalaureate or foreign equivalent plus 5 years of post-baccalaureate, progressive work experience in the field.</li>
                         <li style="margin-top: 0.5rem"><span style="font-weight: 500">Exceptional Ability: </span>must be able to show exceptional ability in the sciences, arts, or business. Exceptional ability “means a degree of expertise significantly above that ordinarily encountered in the sciences, arts, or business.”. You must meet at least three of the criteria below:</li>
                       </ul>
                       <ul>
-                        <li style="margin-left: 2rem">Official academic record showing that you have a degree, diploma, certificate, or similar award from a college, university, school, or other institution of learning relating to your area of exceptional ability</li>
-                        <li style="margin-left: 2rem">Letters from current or former employers documenting at least 10 years of full-time experience in your occupation</li>
-                        <li style="margin-left: 2rem">A license to practice your profession or certification for your profession or occupation</li>
-                        <li style="margin-left: 2rem">Evidence that you have commanded a salary or other remuneration for services that demonstrates your exceptional ability</li>
-                        <li style="margin-left: 2rem">Membership in a professional association(s)</li>
-                        <li style="margin-left: 2rem">Recognition for your achievements and significant contributions to your industry or field by your peers, government entities, professional or business organizations</li>
+                        <li style="margin-left: 2rem">Official academic record showing that you have a degree, diploma, certificate, or similar award from a college, university, school, or other institution of learning relating to your area of exceptional ability.</li>
+                        <li style="margin-left: 2rem">Letters from current or former employers documenting at least 10 years of full-time experience in your occupation.</li>
+                        <li style="margin-left: 2rem">A license to practice your profession or certification for your profession or occupation.</li>
+                        <li style="margin-left: 2rem">Evidence that you have commanded a salary or other remuneration for services that demonstrates your exceptional ability.</li>
+                        <li style="margin-left: 2rem">Membership in a professional association(s).</li>
+                        <li style="margin-left: 2rem">Recognition for your achievements and significant contributions to your industry or field by your peers, government entities, professional or business organizations.</li>
                         <li style="margin-left: 2rem">Other comparable evidence of eligibility is also acceptable.</li>
                       </ul>
                     </div>
@@ -51,12 +51,12 @@
                 <div class="section-title" style="background-color: white; padding: 1rem; text-align: left">
                     <h2>National Interest Waiver</h2>
                     <div class="bar" style="margin-left: 0"></div>
-                    <div style="margin: 1rem; margin-top: 2rem; max-width: 1000px">Those seeking a national interest waiver are requesting that the job offer, and thus the labor certification, be waived because it is in the interest of the United States. Those seeking a national interest waiver may self-petition (they do not need an employer to sponsor them).</div>
-                    <div style="margin: 1rem; max-width: 1000px">In other words you can apply for EB-2 National Interest Waiver (NIW) without permanent job offer from U.S. employer. It is very fast process because NIW waives lengthy Labor Certification. EB2 NIW green card is not linked to the employer so you could change your job as long as your NIW case remains valid.</div>
+                    <div style="margin: 1rem; margin-top: 2rem; max-width: 1000px">Those seeking a national interest waiver are requesting that the job offer, and thus the labor certification, be waived because it is in the interest of the United States. This is called self-petition, so you do not need an employer to sponsor your green card.</div>
+                    <div style="margin: 1rem; max-width: 1000px">In other words you can apply for EB-2 National Interest Waiver (NIW) without permanent job offer from U.S. employer. It is very fast process because NIW waives lengthy Labor Certification. EB-2 NIW green card is not linked to the employer so you could change your job as long as your case story remains valid.</div>
                     <div style="margin: 1rem; max-width: 1000px">For NIW you must satisfy all 3 elements (Matter of Dhanasar):
                       <ul>
-                        <li>The proposed endeavor has both substantial merit and national importance</li>
-                        <li>You are well positioned to advance the proposed endeavor</li>
+                        <li>The proposed endeavor has both substantial merit and national importance.</li>
+                        <li>You are well positioned to advance the proposed endeavor.</li>
                         <li>On balance, it would be beneficial to the United States to waive the requirements of a job offer, and thus the labor certification.</li>
                       </ul>
                     </div>
@@ -66,9 +66,10 @@
                 <div class="section-title" style="background-color: white; padding: 1rem; text-align: left">
                     <h2>What nationalities can currently file?</h2>
                     <div class="bar" style="margin-left: 0"></div>
-                    <div style="margin: 1rem; margin-top: 2rem; max-width: 1000px">Individuals seeking to file applications for adjustment of status need to make sure that priority date for their nationality is currents (country of birth if you have multiple nationalities). Currently there is backlog of cases for example for citizens from China or India.</div>
-                    <div style="margin: 1rem; max-width: 1000px">Priority dates change every month and USCIS works hard to resolve existing backlogs. Review current and upcoming bulletin in the link below:</div>
-                    <a style="margin-left: 1rem; max-width: 1000px; text-decoration: underline" target="_blank" href="https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin.html">Review priority date for your nationality</a>
+                    <div style="margin: 1rem; margin-top: 2rem; max-width: 1000px">Individuals seeking to file applications for adjustment of status need to make sure that priority date for their nationality is current (country of birth if you have multiple nationalities). Currently there is backlog of cases for example for Chinese or Indian citizens.</div>
+                    <div style="margin: 1rem; max-width: 1000px">Priority dates change every month and USCIS works hard to resolve existing backlog. Review current and upcoming bulletin in the link below:</div>
+                    <a style="margin-left: 1rem; max-width: 1000px; text-decoration: underline" target="_blank" href="https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin.html">Check priority date in Visa Bulletin</a>
+                    <p style="margin: 1rem; margin-top: 0; max-width: 1000px">>>> In the bulletin look for 2nd under category Employment-based</p>
                 </div>
 
                 <div class="row service-action-btns" style="margin-top: 0rem; margin-bottom: 4rem">
@@ -85,7 +86,7 @@
                     <h2>How much does it cost?</h2>
                     <div class="bar" style="margin-left: 0"></div>
                     <div style="margin: 1rem; margin-top: 2rem; max-width: 1000px">You can self-petition with or without a lawyer.</div>
-                    <div style="margin: 1rem; max-width: 1000px">Filing fees are around $2k per applicant. If you decide to file with a lawyer, typical legal fees are around $8k all in for the main applicant (dependents, like children & spouses, usually at ~50% discount). The exact figure might depend on the complexity of your case and the lawyer that you decided to work with.</div>
+                    <div style="margin: 1rem; max-width: 1000px">Filing fees are around $2k per applicant. If you decide to file with a lawyer, typical legal fees are around $8k for the main applicant (dependents, like children & spouses, usually at ~50% discount). The exact figure might depend on the complexity of your case and the lawyer that you decided to work with.</div>
                     <div style="margin: 1rem; max-width: 1000px">Check our self-apply starter kit.<br> Even if you apply with a lawyer, you will still need to prepare reference letters and possibly also a cover letter.</div>
                     <a style="margin-left: 1rem; max-width: 1000px; text-decoration: underline" target="_blank" href="https://checkout.stripe.com/pay/cs_live_a1qNyGjaPCfAQFuj7MBooXupRt0n3gtqfiNtsv7K0zAGkoNEee0B1svkIn#fidkdWxOYHwnPyd1blppbHNgWjA0T290ckNBSGlgSWtqdWJTazBTbnJRPU1kdmBgRlBXVEsyYXQxdURCZlJ3XGlAZnFDdm00cmJgSzJXN21SZjxnT3ZUfGZqaHxmPHVCVXRNVFF1cDc1TmdLNTVgQ0I2QjVATCcpJ3VpbGtuQH11anZgYUxhJz8nMnZMMGtQNXV1NnJ1ZnNgY1xfJ3gl">Purchase our EB-2 NIW templates</a>
                 </div>
@@ -93,7 +94,7 @@
                 <div class="section-title" style="background-color: white; padding: 1rem; text-align: left">
                     <h2>Shall I choose concurrent or separate filing?</h2>
                     <div class="bar" style="margin-left: 0"></div>
-                    <div style="margin: 1rem; margin-top: 2rem; max-width: 1000px">To obtain an NIW Green Card, you must file I-140 Immigrant Petition and an I-485 Adjustment of Status Application. These could be filed concurrently or separately
+                    <div style="margin: 1rem; margin-top: 2rem; max-width: 1000px">To obtain an NIW Green Card, you must file I-140 Immigrant Petition and an I-485 Adjustment of Status Application. These could be filed concurrently or separately.
                         <ul>
                           <li style="margin-top: 0.5rem"><span style="font-weight: 500">Concurrent Filing: </span> Has benefits of faster process with chances of receiving work permit (EAD) and travel authorization (Advance Parole) sooner. Could be considered if you have a strong NIW profile. Priority date must be current to file I-485 Adjustment of Status Application together with NIW I-140.</li>
                           <li style="margin-top: 0.5rem"><span style="font-weight: 500">Separate Filing: </span>In case I-140 is denied you could save money on second stage, ie. I-485.</li>
