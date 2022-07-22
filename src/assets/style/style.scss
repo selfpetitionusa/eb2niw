@@ -515,7 +515,7 @@ Navbar CSS
         left: 0;
         background-color: transparent;
         transition: .3s;
-        padding-top: 15px;
+        padding-top: 5px;
 
         &.is-sticky {
             box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.06);
@@ -6053,6 +6053,21 @@ a.edit {
             right: 34%;
         }
     }
+
+/*================================================
+Green card
+=================================================*/
+.process-hyperlink {
+    color: #5457c1;
+    font-weight: 500;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: underline;
+    }
+}
+
+
 
 // Possible options to configure video  https://github.com/sampotts/plyr
 

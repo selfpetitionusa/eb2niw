@@ -7,7 +7,7 @@
     <div>
       <BannerGreenCard></BannerGreenCard>
       <ServicesAreaGreenCard></ServicesAreaGreenCard>
-      <PricingGreenCard></PricingGreenCard>
+      <ProcessGreenCard></ProcessGreenCard>
       <BioGreenCard></BioGreenCard>
       <FeedbackGreenCard></FeedbackGreenCard>
       <ContactGreenCard></ContactGreenCard>
@@ -22,7 +22,7 @@
   import BannerGreenCard from './components/BannerGreenCard';
   import ServicesAreaGreenCard from './components/ServicesAreaGreenCard';
   import FeedbackGreenCard from './components/FeedbackGreenCard';
-  import PricingGreenCard from './components/PricingGreenCard';
+  import ProcessGreenCard from './components/ProcessGreenCard';
   import BioGreenCard from './components/BioGreenCard';
   import ContactGreenCard from './components/ContactGreenCard';
   import HeaderGreenCard from "./components/HeaderGreenCard";
@@ -36,7 +36,7 @@
       BannerGreenCard,
       ServicesAreaGreenCard,
       FeedbackGreenCard,
-      PricingGreenCard,
+      ProcessGreenCard,
       BioGreenCard,
       ContactGreenCard,
       HeaderGreenCard,

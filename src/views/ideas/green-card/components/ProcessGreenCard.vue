@@ -3,7 +3,7 @@
     <section class="pricing-area ptb-80" style="background: #F9F6F6">
         <SectionFour id="process"/>
         <div class="container">
-            <div class="section-title">
+            <div class="section-title" style="margin-bottom: 0rem">
                 <h2>About the Process</h2>
                 <div class="bar"></div>
                 <div class="paragraph">
@@ -16,10 +16,14 @@
                     <p>Build your own successful case with our templates: actual, successful application with 3 reference letters which led to EB-2 NIW green card by a business professional.</p>
                     <p style="margin-top: 10px;">See clearly how to satisfy National Interest Waiver requirements to get your green card approved</p>
                 </div>
+
+                <div class="paragraph" style="margin-top: 4rem">
+                    <a href="/process" class="process-hyperlink">Learn more</a>
+                </div>
             </div>
         </div>
 
-        <div class="row service-action-btns" style="margin-top: 4rem; margin-bottom: 4rem">
+        <div class="row service-action-btns" style="margin-top: 0rem; margin-bottom: 4rem">
             <div class="col-xl-7 col-lg-9">
                 <div class="row justify-content-center">
                     <div class="col-sm-8 col-10">

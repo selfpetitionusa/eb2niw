@@ -9,7 +9,7 @@ import GreenCardApplication from "./views/ideas/green-card/GreenCardApplication"
 import GreenCardEvaluationContinued from "./views/ideas/green-card/GreenCardEvaluationContinued";
 import GreenCardConfirmation from "./views/ideas/green-card/GreenCardConfirmation";
 import GreenCardConfirmed from "./views/ideas/green-card/GreenCardConfirmed";
-
+import UscisGreenCard from "./views/ideas/green-card/UscisGreenCard";
 
 export const router = new VueRouter({
     mode: 'history',
@@ -24,6 +24,7 @@ export const router = new VueRouter({
       { path: '/eligibility', name: 'eligibility', component: GreenCardEvaluationContinued, props: true },
       { path: '/confirmation', component: GreenCardConfirmation },
       { path: '/confirmed', component: GreenCardConfirmed },
+      { path: '/process', component: UscisGreenCard },
       // otherwise redirect to home
       { path: '*', redirect: '/' }
     ]
