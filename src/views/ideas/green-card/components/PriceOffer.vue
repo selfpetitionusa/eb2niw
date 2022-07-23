@@ -1,6 +1,6 @@
 <template>
 
-    <div class="pricing-table col-xl-6 col-md-8 col-11 offset-xl-3 offset-md-2" style="margin-top: 6rem; padding-top: 1.5rem">
+    <div class="pricing-table col-xl-6 col-md-8 col-12 offset-xl-3 offset-md-2 offset-0" style="margin-top: 6rem; padding-top: 1.5rem; padding-left: 0px; padding-right: 0px">
         <div class="price" style="margin-bottom: 0;">
             <span v-if="secondCount > 0" style="color: #0b5345;"><sup>$</sup>89</span>
             <span v-if="secondCount <= 0" style="color: #0b5345;"><sup>$</sup>149</span>
@@ -10,7 +10,7 @@
         </div>
 
         <div class="row banner-action-btns" style="text-align: center; margin-top: 1rem">
-            <div class="col-xl-7 col-lg-9">
+            <div class="col-xl-7 col-lg-9 col-12">
                 <a href="https://checkout.stripe.com/pay/cs_live_a1qNyGjaPCfAQFuj7MBooXupRt0n3gtqfiNtsv7K0zAGkoNEee0B1svkIn#fidkdWxOYHwnPyd1blppbHNgWjA0T290ckNBSGlgSWtqdWJTazBTbnJRPU1kdmBgRlBXVEsyYXQxdURCZlJ3XGlAZnFDdm00cmJgSzJXN21SZjxnT3ZUfGZqaHxmPHVCVXRNVFF1cDc1TmdLNTVgQ0I2QjVATCcpJ3VpbGtuQH11anZgYUxhJz8nMnZMMGtQNXV1NnJ1ZnNgY1xfJ3gl" @click="$gtag.event('register')" class="btn btn-primary">PURCHASE TEMPLATES</a>
             </div>
         </div>
@@ -23,7 +23,7 @@
                 <span style="font-weight: 600">{{ seconds }}</span>s
             </div>
         </div>
-        <p style="margin-top: 1rem; line-height: 18px; font-size: 12px">You will receive an email with documents. Please check your spam folder. <br>Templates are provided in electronic form only (pdf and doc files).</p>
+        <p style="margin-top: 1rem; line-height: 18px; font-size: 12px">You will receive an email with documents. <br>Please check your spam folder. <br>Templates are provided in electronic form only.</p>
     </div>
 
 </template>

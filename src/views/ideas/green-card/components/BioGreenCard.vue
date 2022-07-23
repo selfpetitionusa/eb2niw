@@ -9,7 +9,7 @@
           </div>
 
           <div class="row h-100 justify-content-center align-items-center">
-              <div class="col-lg-6 col-md-12">
+              <div class="col-xl-6 col-lg-7 col-md-10">
                   <div class="paragraph">
                       <p>We are a family from Europe, who moved to US for the opportunity offered by our employer. Ever since have been living the American dream.
                       <p><span style="font-weight: 600">From day one we knew that green card means freedom:</span>
@@ -27,8 +27,8 @@
                       <p>As happy Permanent Residents of USA we share our knowledge, experience and tips to self-apply: whether you decide to file yourself or with a lawyer.</p>
                   </div>
               </div>
-              <div class="col-lg-4 col-md-12 offset-lg-1">
-                  <img src="../resources/family.jpg" style="border-radius: 50%; border: 2px solid; border-color: #44ce6f; box-shadow: 10px 20px 20px 0px rgba(86, 97, 118, .25)" alt="successful eb-2 niw applicant"/>
+              <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-8 offset-lg-1">
+                  <img src="../resources/family.jpg" style="margin-top: 2rem; border-radius: 50%; border: 2px solid; border-color: #44ce6f; box-shadow: 10px 20px 20px 0px rgba(86, 97, 118, .25)" alt="successful eb-2 niw applicant"/>
               </div>
           </div>
       </div>

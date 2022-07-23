@@ -1,6 +1,6 @@
 <template>
     <!-- Start Pricing Area -->
-    <section class="pricing-area ptb-80" style="background: #F9F6F6">
+    <section class="pricing-area ptb-80" style="background: #F9F6F6; padding-top: 7rem">
         <SectionFour id="process"/>
         <div class="container">
             <div class="section-title" style="margin-bottom: 0rem">

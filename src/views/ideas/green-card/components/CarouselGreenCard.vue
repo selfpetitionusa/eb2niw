@@ -1,6 +1,6 @@
 <template>
     <!-- Start Works Area -->
-    <section class="works-area" style="background: white; margin-top: 10rem">
+    <section class="works-area" style="background: white; margin-top: 6rem">
 
         <b-modal ref="modal-zoom" :modal-class="modalZoom" static :return-focus="this.$parent" size="lg" hide-footer>
             <template #modal-title>

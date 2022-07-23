@@ -727,8 +727,19 @@ Navbar CSS
         };
     }
 }
+
+.uscis-menu {
+  color: #4a6f8a;
+  font-weight: 500;
+  font-size: 15px;
+
+  &:hover, &:focus, &.active {
+      color: $light-green-color;
+  }
+}
+
 // Mobile Navbar
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 991px) {
 
     .startp-nav {
         .navbar-toggler {
@@ -749,7 +760,7 @@ Navbar CSS
                 background-color: $white-color;
                 border: 1px solid #eeeeee;
                 margin-top: 15px;
-                height: 350px;
+                height: 280px;
                 display: block;
                 overflow-y: scroll;
                 padding: {
