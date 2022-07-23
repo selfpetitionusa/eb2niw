@@ -28,7 +28,6 @@
         { vmid: 'ogtitle', property: 'og:title', content: "Self Petition USA - Templates for EB-2 NIW for professionals"},
         { vmid: 'ogsite', property: 'og:site_name', content: 'Self Petition USA'},
         { vmid: 'ogtype', property: 'og:type', content: 'website'},
-        { vmid: 'ogimage1', property: 'og:image', content: `https://www.selfpetitionusa.com/thumbnail.png`}
       ]
     }
   }
