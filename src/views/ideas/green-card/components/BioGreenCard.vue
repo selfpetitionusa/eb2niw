@@ -28,7 +28,7 @@
                   </div>
               </div>
               <div class="col-lg-4 col-md-12 offset-lg-1">
-                  <img src="../resources/family.jpg" style="border-radius: 50%; border: 2px solid; border-color: #44ce6f; box-shadow: 10px 20px 20px 0px rgba(86, 97, 118, .25);">
+                  <img src="../resources/family.jpg" style="border-radius: 50%; border: 2px solid; border-color: #44ce6f; box-shadow: 10px 20px 20px 0px rgba(86, 97, 118, .25)" alt="successful eb-2 niw applicant"/>
               </div>
           </div>
       </div>

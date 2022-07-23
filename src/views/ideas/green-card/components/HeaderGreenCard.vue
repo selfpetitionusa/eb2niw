@@ -5,7 +5,7 @@
             <div class="container">
                 <nav class="navbar navbar-expand-md navbar-light">
                     <router-link class="navbar-brand" to="/">
-                        <img width="150px" src="./../resources/selfpetitionusa-logo.svg"/>
+                        <img width="150px" src="./../resources/selfpetitionusa-logo.svg" alt="Self-Petition USA"/>
                     </router-link>
 
                     <b-navbar-toggle target="navbarSupportedContent"></b-navbar-toggle>

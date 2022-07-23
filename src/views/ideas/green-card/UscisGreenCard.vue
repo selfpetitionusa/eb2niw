@@ -6,7 +6,7 @@
                 <div class="container">
                     <nav class="navbar navbar-expand-md navbar-light">
                         <router-link class="navbar-brand" to="/">
-                            <img width="150px" src="./resources/selfpetitionusa-logo.svg" />
+                            <img width="150px" src="./resources/selfpetitionusa-logo.svg" alt="Self Petition USA"/>
                         </router-link>
 
                         <ul class="navbar-nav nav ml-auto">
@@ -124,7 +124,7 @@
                         <div class="single-footer-widget">
                             <div class="logo">
                                 <a href="/">
-                                    <img width="130px" src="./resources/selfpetitionusa-logo.svg" />
+                                    <img width="130px" src="./resources/selfpetitionusa-logo.svg" alt="contact Self Petition USA"/>
                                 </a>
                             </div>
                             <p style="font-weight: 600">Self-petition green card for professionals</p>
@@ -155,9 +155,9 @@
                 </div>
             </div>
 
-            <img src="./resources/map.png" class="map" >
-            <div class="shape1"><img src="./resources/shape1.png" ></div>
-            <div class="shape8 rotateme"><img src="./resources/shape2.svg" ></div>
+            <img src="./resources/map.png" class="map" alt="eb2 niw green card">
+            <div class="shape1"><img src="./resources/shape1.png" alt="national interest waiver"></div>
+            <div class="shape8 rotateme"><img src="./resources/shape2.svg" alt="self apply for a green card"></div>
             <!-- <div class="go-top"><feather type="arrow-up"></feather></div> -->
 
             <back-to-top bottom="50px" right="50px">

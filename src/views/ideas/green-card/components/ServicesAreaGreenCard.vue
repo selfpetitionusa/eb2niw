@@ -22,7 +22,7 @@
 
             <div class="row h-100 justify-content-center align-items-center">
                 <div class="col-lg-4 col-md-4 col-6">
-                    <img src="../resources/Green-stamp-pure.svg">
+                    <img src="../resources/Green-stamp-pure.svg" alt="permanent resident self petition">
                 </div>
 
                 <div class="col-lg-6 col-md-12 services-content">
@@ -84,10 +84,10 @@
 
             <div class="website-example funfacts-area">
 
-                <img src="../resources/map.png" class="map-bg" style="left: -20%">
-                <div class="shape2-services rotateme"><img src="../resources/shape2.svg"></div>
-                <div class="shape3-services"><img src="../resources/shape3.svg" ></div>
-                <div class="shape4-services"><img src="../resources/shape4.svg" ></div>
+                <img src="../resources/map.png" class="map-bg" style="left: -20%" alt="i 140">
+                <div class="shape2-services rotateme"><img src="../resources/shape2.svg" alt="i 485"></div>
+                <div class="shape3-services"><img src="../resources/shape3.svg" alt="i-140"></div>
+                <div class="shape4-services"><img src="../resources/shape4.svg" alt="i-485"></div>
 
                 <CarouselGreenCard></CarouselGreenCard>
             </div>

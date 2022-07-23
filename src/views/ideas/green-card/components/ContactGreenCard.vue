@@ -10,7 +10,7 @@
 
             <div class="row h-100 justify-content-center align-items-center">
                 <div class="col-lg-5 col-md-12">
-                    <img src="../resources/contact.svg" >
+                    <img src="../resources/contact.svg" alt="contact us aabout permanent residency USA">
                 </div>
 
                 <div class="col-lg-6 offset-lg-1 col-col-md-12">

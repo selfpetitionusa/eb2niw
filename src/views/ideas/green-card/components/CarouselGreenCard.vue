@@ -6,7 +6,7 @@
             <template #modal-title>
                {{modalProperties[index].title}}
             </template>
-            <img :src="getImgUrl()" />
+            <img :src="getImgUrl()" alt="eb-2 niw template" />
         </b-modal>
 
         <div class="works-slides" style="margin-top: 3rem">
@@ -20,7 +20,7 @@
             >
                 <slide>
                     <div class="single-works carousel-green-hover">
-                        <img src="../resources/Sample.png">
+                        <img src="../resources/Sample.png" alt="national interest waiver template">
                         <a v-if="windowWidth > 767" @click="index = 0;$refs['modal-zoom'].show()" style="cursor: pointer;" class="icon"><feather type="zoom-in"></feather></a>
 
                         <div class="works-content">
@@ -32,7 +32,7 @@
 
                 <slide>
                     <div class="single-works carousel-green-hover">
-                        <img src="../resources/SampleEditable.png">
+                        <img src="../resources/SampleEditable.png" alt="niw template">
                         <a v-if="windowWidth > 767" @click="index = 1;$refs['modal-zoom'].show()" style="cursor: pointer;" class="icon"><feather type="zoom-in"></feather></a>
 
                         <div class="works-content">
@@ -44,7 +44,7 @@
 
                 <slide>
                     <div class="single-works carousel-green-hover">
-                        <img src="../resources/ReferralSample.png" >
+                        <img src="../resources/ReferralSample.png" alt="national interest waiver referral letter">
                         <a v-if="windowWidth > 767" @click="index = 2;$refs['modal-zoom'].show()" style="cursor: pointer;" class="icon"><feather type="zoom-in"></feather></a>
 
                         <div class="works-content">
@@ -56,7 +56,7 @@
 
                 <slide>
                     <div class="single-works carousel-green-hover">
-                        <img src="../resources/Instructions.png" >
+                        <img src="../resources/Instructions.png" alt="how to self-petition for a green card">
                         <a v-if="windowWidth > 767" @click="index = 3;$refs['modal-zoom'].show()" style="cursor: pointer;" class="icon"><feather type="zoom-in"></feather></a>
 
                         <div class="works-content">
@@ -67,7 +67,7 @@
                 </slide>
             </carousel>
         </div>
-        <div class="shape4"><img src="../resources/shape4.svg"></div>
+        <div class="shape4"><img src="../resources/shape4.svg" alt="self petition green card"></div>
     </section>
     <!-- End Works Area -->
 </template>

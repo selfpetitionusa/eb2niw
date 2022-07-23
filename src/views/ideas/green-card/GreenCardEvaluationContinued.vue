@@ -73,7 +73,7 @@
         </div>
     </div>
 
-    <footer class="footer-area bg-f7fafd" style="padding-top: 0px">
+    <footer class="footer-area" style="padding-top: 0px; background: rgb(249, 246, 246)">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-md-12">

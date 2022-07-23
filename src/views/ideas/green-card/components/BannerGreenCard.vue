@@ -4,8 +4,8 @@
 
     <b-modal ref="modal-zoom" size="xl" hide-footer>
         <div class="row justify-content-center">
-          <img class="col-sm-5 col-11" style="margin: 0.5rem 1rem; border: 1px solid #CECECE;" src="../resources/Sample.png" />
-          <img class="col-sm-5 col-11" style="margin: 0.5rem 1rem; border: 1px solid #CECECE;" src="../resources/SampleEditable.png" />
+          <img class="col-sm-5 col-11" style="margin: 0.5rem 1rem; border: 1px solid #CECECE;" src="../resources/Sample.png" alt="eb2 niw"/>
+          <img class="col-sm-5 col-11" style="margin: 0.5rem 1rem; border: 1px solid #CECECE;" src="../resources/SampleEditable.png" alt="eb2"/>
         </div>
     </b-modal>
 
@@ -89,10 +89,10 @@
                             <div class="row single-works"  @click="$refs['modal-zoom'].show()" style="cursor: pointer">
                                 <feather class="glass-zoom" style="position: absolute; z-index: 2; width: 12rem; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;" type="zoom-in"></feather>
                                 <div class="col-6" style="padding: 0px; opacity: 0.4">
-                                  <img src="../resources/Sample.png">
+                                  <img src="../resources/Sample.png" alt="eb2 niw">
                                 </div>
                                 <div class="col-6" style="padding: 0px; opacity: 0.4">
-                                  <img src="../resources/SampleEditable.png">
+                                  <img src="../resources/SampleEditable.png" alt="eb2">
                                 </div>
                             </div>
                         </div>
@@ -103,12 +103,12 @@
             </div>
         </div>
 
-        <div class="shape1"><img src="../resources/shape1.png" ></div>
-        <div class="shape3"><img src="../resources/shape3.svg" ></div>
-        <div class="shape4"><img src="../resources/shape4.svg" ></div>
-        <div class="shape5" style="top: 55%"><img src="../resources/shape5.png" ></div>
-        <div class="shape6 rotateme"><img src="../resources/shape4.svg" ></div>
-        <div class="shape7"><img src="../resources/shape4.svg" ></div>
+        <div class="shape1"><img src="../resources/shape1.png" alt="eb2 niw green card"></div>
+        <div class="shape3"><img src="../resources/shape3.svg" alt="eb2 visa"></div>
+        <div class="shape4"><img src="../resources/shape4.svg" alt="eb-2 niw"></div>
+        <div class="shape5" style="top: 55%"><img src="../resources/shape5.png" alt="eb-2 visa"></div>
+        <div class="shape6 rotateme"><img src="../resources/shape4.svg" alt="eb-2 niw green card"></div>
+        <div class="shape7"><img src="../resources/shape4.svg" alt="eb-2"></div>
     </div>
     <!-- End Main Banner -->
 </template>

@@ -10,7 +10,7 @@
                                 We will review your profile in 48h
                             </div>
                             <div class="col-lg-4 col-md-12 offset-lg-4" style="margin-top: 5rem">
-                                <img src="./resources/contact.svg" >
+                                <img src="./resources/contact.svg" alt="contact Self Petition USA">
                             </div>
                             <router-link to="/" class="btn btn-border btn-cancel" style="margin-top: 3rem">Home</router-link>
                         </div>
