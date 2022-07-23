@@ -1,6 +1,6 @@
 <template>
 
-    <div class="pricing-table col-md-6 col-11 offset-md-3" style="margin-top: 6rem; padding-top: 1.5rem">
+    <div class="pricing-table col-xl-6 col-md-8 col-11 offset-xl-3 offset-md-2" style="margin-top: 6rem; padding-top: 1.5rem">
         <div class="price" style="margin-bottom: 0;">
             <span v-if="secondCount > 0" style="color: #0b5345;"><sup>$</sup>89</span>
             <span v-if="secondCount <= 0" style="color: #0b5345;"><sup>$</sup>149</span>

@@ -118,7 +118,7 @@
 
         </div>
 
-        <div class="shape2 rotateme"><img src="../resources/shape2.svg" alt="EB-2 niw for finance and banking"></div>
+        <div class="shape2 rotateme" style="left: 90%"><img src="../resources/shape2.svg" alt="EB-2 niw for finance and banking"></div>
         <div class="shape4"><img src="../resources/shape4.svg" alt="EB-2 niw for engineer"></div>
         <div class="shape7"><img src="../resources/shape4.svg" alt="EB-2 niw for pilot"></div>
       </div>
