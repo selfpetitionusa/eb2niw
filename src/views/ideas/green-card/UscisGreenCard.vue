@@ -25,7 +25,7 @@
         <section class="feedback-area ptb-80 bg-f9fafb" style="margin-top: 3rem">
           <div id="testimonials">
             <div class="container">
-                <div class="section-title" style="background-color: white; padding: 1rem; text-align: left">
+                <div class="section-title" style="background-color: white; padding: 1rem; text-align: left; text-align: justify; text-justify: inter-word;">
                     <h2>EB-2 Eligibility Criteria</h2>
                     <div class="bar" style="margin-left: 0"></div>
                     <div style="margin: 1rem; margin-top: 2rem; max-width: 1000px">You may be eligible for EB-2 visa if you satisfy one of the two requirements:
@@ -47,7 +47,7 @@
 
                 <PriceOffer style="margin-bottom: 3rem; margin-top: 0rem"></PriceOffer>
 
-                <div class="section-title" style="background-color: white; padding: 1rem; text-align: left">
+                <div class="section-title" style="background-color: white; padding: 1rem; text-align: left; text-align: justify; text-justify: inter-word;">
                     <h2>National Interest Waiver</h2>
                     <div class="bar" style="margin-left: 0"></div>
                     <div style="margin: 1rem; margin-top: 2rem; max-width: 1000px">Those seeking a national interest waiver are requesting that the job offer, and thus the labor certification, be waived because it is in the interest of the United States. This is called self-petition, so you do not need an employer to sponsor your green card.</div>
@@ -62,7 +62,7 @@
                     <a style="margin-left: 1rem; max-width: 1000px; text-decoration: underline" target="_blank" href="https://www.uscis.gov/working-in-the-united-states/permanent-workers/employment-based-immigration-second-preference-eb-2">Read more on USCIS website</a>
                 </div>
 
-                <div class="section-title" style="background-color: white; padding: 1rem; text-align: left">
+                <div class="section-title" style="background-color: white; padding: 1rem; text-align: left; text-align: justify; text-justify: inter-word;">
                     <h2>What nationalities can currently file?</h2>
                     <div class="bar" style="margin-left: 0"></div>
                     <div style="margin: 1rem; margin-top: 2rem; max-width: 1000px">Individuals seeking to file applications for adjustment of status need to make sure that priority date for their nationality is current (country of birth if you have multiple nationalities). Currently there is backlog of cases for example for Chinese or Indian citizens.</div>
@@ -81,7 +81,7 @@
                     </div>
                 </div>
 
-                <div class="section-title" style="background-color: white; padding: 1rem; text-align: left">
+                <div class="section-title" style="background-color: white; padding: 1rem; text-align: left; text-align: justify; text-justify: inter-word;">
                     <h2>How much does it cost?</h2>
                     <div class="bar" style="margin-left: 0"></div>
                     <div style="margin: 1rem; margin-top: 2rem; max-width: 1000px">You can self-petition with or without a lawyer.</div>
@@ -90,7 +90,7 @@
                     <a style="margin-left: 1rem; max-width: 1000px; text-decoration: underline" target="_blank" href="https://checkout.stripe.com/pay/cs_live_a1qNyGjaPCfAQFuj7MBooXupRt0n3gtqfiNtsv7K0zAGkoNEee0B1svkIn#fidkdWxOYHwnPyd1blppbHNgWjA0T290ckNBSGlgSWtqdWJTazBTbnJRPU1kdmBgRlBXVEsyYXQxdURCZlJ3XGlAZnFDdm00cmJgSzJXN21SZjxnT3ZUfGZqaHxmPHVCVXRNVFF1cDc1TmdLNTVgQ0I2QjVATCcpJ3VpbGtuQH11anZgYUxhJz8nMnZMMGtQNXV1NnJ1ZnNgY1xfJ3gl">Purchase our EB-2 NIW templates</a>
                 </div>
 
-                <div class="section-title" style="background-color: white; padding: 1rem; text-align: left">
+                <div class="section-title" style="background-color: white; padding: 1rem; text-align: left; text-align: justify; text-justify: inter-word;">
                     <h2>Shall I choose concurrent or separate filing?</h2>
                     <div class="bar" style="margin-left: 0"></div>
                     <div style="margin: 1rem; margin-top: 2rem; max-width: 1000px">To obtain an NIW Green Card, you must file I-140 Immigrant Petition and an I-485 Adjustment of Status Application. These could be filed concurrently or separately.
@@ -147,8 +147,10 @@
                     <div class="col-lg-12 col-md-12">
                         <div class="copyright-area">
                             <p>Copyright &copy;2022 Self Petition USA. All Rights Reserved</p>
-                            <p style="font-size: 10px">All statements are subject to certain conditions, subject to change, may be outdated when applying, may not apply to your personal situation and may be limited in timespan, and are not legally or fiscally binding. Pricing may vary based on your personal situation. Only a lawyer can advise you, for example the lawyer we connect you with, on how you can proceed in your unique personal situation. Due to the nature of the work, fees you pay are non-refundable.</p>
-                            <p style="font-size: 10px">Self Petition USA does not warrant the accuracy or validity of the information, and hereby disclaims any liability to any person for any loss or damage caused by errors or omissions in this directory. Self Petition USA also is not responsible for any material or information contained in the sites provided by partnering lawyers or by partners directly. The information presented at this site should not be construed to be formal legal advice or the formation of a lawyer/client relationship.</p>
+                            <div style="text-align: justify; text-justify: inter-word;">
+                                <p style="font-size: 10px">All statements are subject to certain conditions, subject to change, may be outdated when applying, may not apply to your personal situation and may be limited in timespan, and are not legally or fiscally binding. Pricing may vary based on your personal situation. Only a lawyer can advise you, for example the lawyer we connect you with, on how you can proceed in your unique personal situation. Due to the nature of the work, fees you pay are non-refundable.</p>
+                                <p style="font-size: 10px">Self Petition USA does not warrant the accuracy or validity of the information, and hereby disclaims any liability to any person for any loss or damage caused by errors or omissions in this directory. Self Petition USA also is not responsible for any material or information contained in the sites provided by partnering lawyers or by partners directly. The information presented at this site should not be construed to be formal legal advice or the formation of a lawyer/client relationship.</p>
+                            </div>
                         </div>
                     </div>
                 </div>

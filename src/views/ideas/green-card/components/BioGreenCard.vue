@@ -4,27 +4,27 @@
   <div id="bio">
       <div class="container">
           <div class="section-title">
-              <h2>Who we are?</h2>
+              <h2>Who are we?</h2>
               <div class="bar"></div>
           </div>
 
           <div class="row h-100 justify-content-center align-items-center">
-              <div class="col-xl-6 col-lg-7 col-md-10">
+              <div class="col-xl-6 col-lg-7 col-md-10" style="text-align: justify; text-justify: inter-word;">
                   <div class="paragraph">
-                      <p>We are a family from Europe, who moved to US for the opportunity offered by our employer. Ever since have been living the American dream.
-                      <p><span style="font-weight: 600">From day one we knew that green card means freedom:</span>
+                      <p>A family from Europe, who moved to the US with an existing employer. Obtaining a green card was our #1 goal: unlocking the American dream.
+                      <p><span style="font-weight: 600">From day-one, in our minds, "green card" -- meant "freedom":</span>
                           <ul>
-                              <li>to stay in USA on our own terms,</li>
-                              <li>have access to various job opportunities...</li>
-                              <li>...and piece of mind while there is no need to re-apply for a visa every couple of years.</li>
+                              <li>to stay in US on our own terms,</li>
+                              <li>to access job opportunities...</li>
+                              <li>...and peace of mind: zero need to re-apply for a visa every couple of years (seeking employer sponsorship).</li>
                           </ul>
                       </p>
                   </div>
                   <div class="paragraph">
-                      <p>We have done it all: analyzed options available for self-sponsored vs. employer sponsored green card, and spoke with number of lawyers.</p>
-                      <p style="font-weight: 600">Finally, applied through EB-2 National Interest Waiver (NIW).</p>
-                      <p style="font-weight: 600">Received EAD (work permit) in 3 months, and our green card in 10 months from filing.</p>
-                      <p>As happy Permanent Residents of USA we share our knowledge, experience and tips to self-apply: whether you decide to file yourself or with a lawyer.</p>
+                      <p>What followed, was a marathon of analyzing options (self-sponsored vs employer-sponsored) and finding a lawyer who would take our case. 30+ lawyers REJECTED us: "Your case does not meet our typical profile... etc.". In the end, we prepared all the documents and found the RIGHT lawyer to file"</p>
+                      <p style="font-weight: 600">Our EAD arrived within 3 months. We changed employers based on EAD while green card application was pending.</p>
+                      <p style="font-weight: 600">Finally, the green card decision arrived 9 months after filing.</p>
+                      <p>Whether you decide to file yourself or with a lawyer -- you are welcome to use our experience, coming from happy Permanent Residents of USA, with business & tech background (NON-research).</p>
                   </div>
               </div>
               <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-8 offset-lg-1">

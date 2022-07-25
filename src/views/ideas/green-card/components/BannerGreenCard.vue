@@ -18,8 +18,8 @@
                             <div class="hero-content">
                                 <div class="row">
                                     <div class="col-lg-11">
-                                        <h1>Self-petition green card</h1>
-                                        <h3>EB-2 National Interest Waiver</h3>
+                                        <h1>Starter Kit for EB-2 NIW</h1>
+                                        <h3>Self-petition green card template</h3>
                                         <h5>for professionals</h5>
 
                                         <div class="tick-section">
@@ -87,7 +87,9 @@
 
                         <div class="col-xl-6 col-lg-5" style="margin-top: 2rem">
                             <div class="row single-works"  @click="$refs['modal-zoom'].show()" style="cursor: pointer">
-                                <feather class="glass-zoom" style="position: absolute; z-index: 2; width: 12rem; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;" type="zoom-in"></feather>
+                                <div class="glass-sample">SAMPLE</div>
+                                <feather class="glass-zoom" type="zoom-in"></feather>
+
                                 <div class="col-6" style="padding: 0px; opacity: 0.4">
                                   <img src="../resources/Sample.png" alt="eb2 niw">
                                 </div>

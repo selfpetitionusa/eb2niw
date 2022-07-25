@@ -8,12 +8,12 @@
                 <div class="bar"></div>
                 <div class="paragraph">
                     <p style="font-weight: 600">Self-petition EB-2 NIW</p>
-                    <p>You can self-petition without employer sponsorship. It is fast since NIW waives lengthy Labor Certification process.</p>
+                    <p style="text-align: justify; text-justify: inter-word;">You can self-petition without employer sponsorship. It is fast since NIW waives lengthy Labor Certification process.</p>
                 </div>
 
                 <div class="paragraph">
-                    <p style="font-weight: 600">NOT only for scientists and PhDs</p>
-                    <p>Build your own successful case with our templates: actual, successful application with 3 reference letters which led to EB-2 NIW green card by a business professional.</p>
+                    <p style="font-weight: 600">Business & tech professionals qualify</p>
+                    <p style="text-align: justify; text-justify: inter-word;">Traditional knowledge will tell you that only researchers can obtain an EB2-NIW green card. WRONG! Business and tech professionals can do it too. This was exactly our case, see our story below.</p>
                 </div>
 
                 <div class="paragraph" style="margin-top: 4rem">

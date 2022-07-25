@@ -4,20 +4,8 @@
         <SectionThree id="solutions"/>
         <div class="container">
             <div class="section-title">
-                <h2>What is included?</h2>
+                <h2>What the EB2-NIW Starter Kit includes</h2>
                 <div class="bar"></div>
-
-                <div class="paragraph">
-                    <p>Below you will find list of all documents included in our Starter Kit.</p>
-                </div>
-                <div class="paragraph">
-                    <p style="font-weight: 600">Filing without a lawyer?</p>
-                    <p>This is your #1 resource</p>
-                </div>
-                <div class="paragraph">
-                    <p style="font-weight: 600">Filing with a lawyer?</p>
-                    <p>You still need to prepare reference letters and possibly cover letter. Save money on legal fees by using the templates</p>
-                </div>
             </div>
 
             <div class="row h-100 justify-content-center align-items-center">
@@ -31,12 +19,7 @@
                         <div class="row">
                             <div class="col-12">
                                 <div class="box">
-                                    <feather type="code"></feather> Focused on business and STEM cases, i.e. non-research
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="box">
-                                    <feather type="layout"></feather> Successful application which led to EB-2 NIW green card by a business professional (one cover letter of 8 pages)
+                                    <feather type="layout"></feather> A successful application which led to EB-2 NIW green card by a business professional (one cover letter of 8 pages)
                                 </div>
                             </div>
                             <div class="col-12">
@@ -46,7 +29,12 @@
                             </div>
                             <div class="col-12">
                                 <div class="box">
-                                    <feather type="message-circle"></feather> Instructions to arrange for high-quality reference letters and write a successful applications
+                                    <feather type="message-circle"></feather> Instructions to arrange for high-quality reference letters and write successful applications
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="box">
+                                    <feather type="code"></feather> Focused on business and STEM cases, i.e. non-research
                                 </div>
                             </div>
                         </div>
@@ -57,12 +45,7 @@
                         <div class="row">
                             <div class="col-12">
                                 <div class="box">
-                                    <feather type="code"></feather> Focused on business and STEM cases, i.e. non-research
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="box">
-                                    <feather type="layout"></feather> Successful application which led to EB-2 NIW green card by a business professional (one cover letter of 8 pages)
+                                    <feather type="layout"></feather> A successful application which led to EB-2 NIW green card by a business professional (one cover letter of 8 pages)
                                 </div>
                             </div>
                             <div class="col-12">
@@ -72,11 +55,28 @@
                             </div>
                             <div class="col-12">
                                 <div class="box">
-                                    <feather type="message-circle"></feather> Instructions to arrange for high-quality reference letters and write a successful applications
+                                    <feather type="message-circle"></feather> Instructions to arrange for high-quality reference letters and write successful applications
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="box">
+                                    <feather type="code"></feather> Focused on business and STEM cases, i.e. non-research
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+
+            <div class="section-title" style="margin-top: 8rem">
+                <div class="bar"></div>
+                <div class="paragraph">
+                    <p style="font-weight: 600">Filing without a lawyer?</p>
+                    <p>This is your #1 resource</p>
+                </div>
+                <div class="paragraph">
+                    <p style="font-weight: 600">Filing with a lawyer?</p>
+                    <p>You still need to prepare reference letters and possibly cover letter. Save money on legal fees by using the templates</p>
                 </div>
             </div>
 

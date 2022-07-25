@@ -11,7 +11,7 @@
 
         <div class="row banner-action-btns" style="text-align: center; margin-top: 1rem">
             <div class="col-xl-7 col-lg-9 col-12">
-                <a href="https://checkout.stripe.com/pay/cs_live_a1qNyGjaPCfAQFuj7MBooXupRt0n3gtqfiNtsv7K0zAGkoNEee0B1svkIn#fidkdWxOYHwnPyd1blppbHNgWjA0T290ckNBSGlgSWtqdWJTazBTbnJRPU1kdmBgRlBXVEsyYXQxdURCZlJ3XGlAZnFDdm00cmJgSzJXN21SZjxnT3ZUfGZqaHxmPHVCVXRNVFF1cDc1TmdLNTVgQ0I2QjVATCcpJ3VpbGtuQH11anZgYUxhJz8nMnZMMGtQNXV1NnJ1ZnNgY1xfJ3gl" @click="$gtag.event('register')" class="btn btn-primary">PURCHASE TEMPLATES</a>
+                <a href="https://checkout.stripe.com/pay/cs_live_a1qNyGjaPCfAQFuj7MBooXupRt0n3gtqfiNtsv7K0zAGkoNEee0B1svkIn#fidkdWxOYHwnPyd1blppbHNgWjA0T290ckNBSGlgSWtqdWJTazBTbnJRPU1kdmBgRlBXVEsyYXQxdURCZlJ3XGlAZnFDdm00cmJgSzJXN21SZjxnT3ZUfGZqaHxmPHVCVXRNVFF1cDc1TmdLNTVgQ0I2QjVATCcpJ3VpbGtuQH11anZgYUxhJz8nMnZMMGtQNXV1NnJ1ZnNgY1xfJ3gl" @click="$gtag.event('register')" class="btn btn-primary">Buy EB2-NIW Starter Kit</a>
             </div>
         </div>
         <div v-show="secondCount > 0">
@@ -23,7 +23,7 @@
                 <span style="font-weight: 600">{{ seconds }}</span>s
             </div>
         </div>
-        <p style="margin-top: 1rem; line-height: 18px; font-size: 12px">You will receive an email with documents. <br>Please check your spam folder. <br>Templates are provided in electronic form only.</p>
+        <p style="margin-top: 1rem; line-height: 18px; font-size: 12px">You will receive template documents over email</p>
     </div>
 
 </template>

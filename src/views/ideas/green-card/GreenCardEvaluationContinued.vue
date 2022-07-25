@@ -6,8 +6,8 @@
                 <div class="col-lg-6 col-md-8 col-sm-12 offset-lg-3 offset-md-2">
                     <h3>Are You Eligible to Self-Petition?</h3>
                     <div class="subject-subcategories" style="text-align: left">
-                        <div class="register-conditions" style="font-weight: 400">
-                            This is initial screening to review "must have" criteria for applying for EB-2 NIW through Adjustment of Status.
+                        <div class="register-conditions" style="font-weight: 400; text-align: justify; text-justify: inter-word;">
+                            This is the initial screening to review the "must have" criteria for applying for EB-2 NIW through Adjustment of Status.
                             <div style="margin-top: 1rem">However, it doesn’t guarantee successful approval or chances of your application.</div>
                         </div>
                     </div>
@@ -79,8 +79,10 @@
                 <div class="col-lg-12 col-md-12">
                     <div class="copyright-area">
                         <p>Copyright &copy;2022 Self Petition USA. All Rights Reserved</p>
-                        <p style="font-size: 10px">All statements are subject to certain conditions, subject to change, may be outdated when applying, may not apply to your personal situation and may be limited in timespan, and are not legally or fiscally binding. Pricing may vary based on your personal situation. Only a lawyer can advise you, for example the lawyer we connect you with, on how you can proceed in your unique personal situation. Due to the nature of the work, fees you pay are non-refundable.</p>
-                        <p style="font-size: 10px">Self Petition USA does not warrant the accuracy or validity of the information, and hereby disclaims any liability to any person for any loss or damage caused by errors or omissions in this directory. Self Petition USA also is not responsible for any material or information contained in the sites provided by partnering lawyers or by partners directly. The information presented at this site should not be construed to be formal legal advice or the formation of a lawyer/client relationship.</p>
+                        <div style="text-align: justify; text-justify: inter-word;">
+                            <p style="font-size: 10px">All statements are subject to certain conditions, subject to change, may be outdated when applying, may not apply to your personal situation and may be limited in timespan, and are not legally or fiscally binding. Pricing may vary based on your personal situation. Only a lawyer can advise you, for example the lawyer we connect you with, on how you can proceed in your unique personal situation. Due to the nature of the work, fees you pay are non-refundable.</p>
+                            <p style="font-size: 10px">Self Petition USA does not warrant the accuracy or validity of the information, and hereby disclaims any liability to any person for any loss or damage caused by errors or omissions in this directory. Self Petition USA also is not responsible for any material or information contained in the sites provided by partnering lawyers or by partners directly. The information presented at this site should not be construed to be formal legal advice or the formation of a lawyer/client relationship.</p>
+                        </div>
                     </div>
                 </div>
             </div>

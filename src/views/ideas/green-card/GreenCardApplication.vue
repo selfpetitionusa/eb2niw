@@ -6,7 +6,7 @@
                 <div class="col-lg-6 col-md-8 col-sm-12 offset-lg-3 offset-md-2">
                     <h3>How much it will cost me?</h3>
                     <div class="subject-subcategories" style="text-align: left">
-                        <div class="register-conditions" style="font-weight: 400">
+                        <div class="register-conditions" style="font-weight: 400; text-align: justify; text-justify: inter-word;">
                             Provide details about your case to get personalized price assessment
                         </div>
                     </div>

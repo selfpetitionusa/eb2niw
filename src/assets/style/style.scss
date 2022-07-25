@@ -3129,8 +3129,34 @@ Works CSS
 .single-works {
     color: #4ecac6;
 
+    .glass-sample {
+        color: white;
+        background: linear-gradient(135deg, #43e794 0%, #23bdb8 70%);
+        width: 8rem;
+        border-radius: 30%;
+        font-size: 1.5rem;
+        font-weight: 500;
+        position: absolute;
+        z-index: 2;
+        margin-top: 1.5rem;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        text-align: center;
+    }
+
     .glass-zoom {
-        margin-top: 3rem;
+        margin-top: 4.5rem;
+        position: absolute;
+        z-index: 2;
+        width: 8rem;
+        margin-top: 4.3rem;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        text-align: center;
     }
 
     &:hover {
@@ -3138,21 +3164,7 @@ Works CSS
             border-radius: 15%;
             background: linear-gradient(135deg, #43e794 0%, #23bdb8 70%);
             color: white;
-            transition: color 0.15s ease-out;
         }
-    }
-}
-
-@media only screen and (max-width: 991px) {
-    .single-works .feather-zoom {
-        margin-top: 5rem;
-    }
-}
-
-
-@media only screen and (max-width: 575px) {
-    .single-works .feather-zoom {
-        margin-top: 0.5rem;
     }
 }
 
