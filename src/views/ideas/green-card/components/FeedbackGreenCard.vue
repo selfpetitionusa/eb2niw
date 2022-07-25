@@ -20,8 +20,8 @@
                         >
 
 
-                            <div class="item" style="text-align: justify; text-justify: inter-word;">
-                                <div class="single-feedback" style="padding-left: 40px; margin-bottom: 0px">
+                            <div class="item">
+                                <div class="single-feedback" style="padding-left: 40px; margin-bottom: 0px; text-align: justify; text-justify: inter-word;">
                                     <h6>⭐⭐⭐⭐⭐</h6>
                                     <h3>STEM</h3>
                                     <span style="padding-bottom: 15px">Product Manager in Big Tech</span>
@@ -30,8 +30,8 @@
                                 </div>
                             </div>
 
-                            <div class="item" style="text-align: justify; text-justify: inter-word;">
-                                <div class="single-feedback" style="padding-left: 40px; margin-bottom: 0px">
+                            <div class="item">
+                                <div class="single-feedback" style="padding-left: 40px; margin-bottom: 0px; text-align: justify; text-justify: inter-word;">
                                     <h6>⭐⭐⭐⭐⭐</h6>
                                     <h3>STEM</h3>
                                     <span style="padding-bottom: 15px">Software engineer</span>
@@ -39,8 +39,8 @@
                                 </div>
                             </div>
 
-                            <div class="item" style="text-align: justify; text-justify: inter-word;">
-                                <div class="single-feedback" style="padding-left: 40px; margin-bottom: 0px">
+                            <div class="item">
+                                <div class="single-feedback" style="padding-left: 40px; margin-bottom: 0px; text-align: justify; text-justify: inter-word;">
                                     <h6>⭐⭐⭐⭐⭐</h6>
                                     <h3>Entrepreneur</h3>
                                     <span style="padding-bottom: 15px">Founder of infrastructure and ecosystem business</span>
@@ -49,8 +49,8 @@
                                 </div>
                             </div>
 
-                            <div class="item" style="text-align: justify; text-justify: inter-word;">
-                                <div class="single-feedback" style="padding-left: 40px; margin-bottom: 0px">
+                            <div class="item">
+                                <div class="single-feedback" style="padding-left: 40px; margin-bottom: 0px; text-align: justify; text-justify: inter-word;">
                                     <h6>⭐⭐⭐⭐⭐</h6>
                                     <h3>Finance</h3>
                                     <span style="padding-bottom: 15px">Hedge Fund Manager</span>
@@ -59,8 +59,8 @@
                                 </div>
                             </div>
 
-                            <div class="item" style="text-align: justify; text-justify: inter-word;">
-                                <div class="single-feedback" style="padding-left: 40px; margin-bottom: 0px">
+                            <div class="item">
+                                <div class="single-feedback" style="padding-left: 40px; margin-bottom: 0px; text-align: justify; text-justify: inter-word;">
                                     <h6>⭐⭐⭐⭐⭐</h6>
                                     <h3>Sciences</h3>
                                     <span style="padding-bottom: 15px">Cancer Biomarker Discovery Scientist</span>
@@ -69,8 +69,8 @@
                                 </div>
                             </div>
 
-                            <div class="item" style="text-align: justify; text-justify: inter-word;">
-                                <div class="single-feedback" style="padding-left: 40px; margin-bottom: 0px">
+                            <div class="item">
+                                <div class="single-feedback" style="padding-left: 40px; margin-bottom: 0px; text-align: justify; text-justify: inter-word;">
                                     <h6>⭐⭐⭐⭐⭐</h6>
                                     <h3>Business</h3>
                                     <span style="padding-bottom: 15px">International Customer and Product Support Manager</span>
@@ -79,8 +79,8 @@
                                 </div>
                             </div>
 
-                            <div class="item" style="text-align: justify; text-justify: inter-word;">
-                                <div class="single-feedback" style="padding-left: 40px; margin-bottom: 0px">
+                            <div class="item">
+                                <div class="single-feedback" style="padding-left: 40px; margin-bottom: 0px; text-align: justify; text-justify: inter-word;">
                                     <h6>⭐⭐⭐⭐⭐</h6>
                                     <h3>Ambassador for the non-profit athletic foundation</h3>
                                     <span style="padding-bottom: 15px">Exceptional Abilities</span>
@@ -114,7 +114,7 @@
                 </div>
             </div>
 
-            <PriceOffer style="margin-top: 4rem"></PriceOffer>
+            <PriceOffer style="margin-top: 1rem"></PriceOffer>
 
         </div>
 

@@ -36,7 +36,7 @@
         data () {
             return {
               now: Math.trunc((new Date()).getTime() / 1000),
-              event: new Date('2022-07-31T00:00:00'),
+              event: new Date('2022-08-05T00:00:00'),
               finish: false
             }
           },

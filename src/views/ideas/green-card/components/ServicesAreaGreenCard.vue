@@ -4,7 +4,7 @@
         <SectionThree id="solutions"/>
         <div class="container">
             <div class="section-title">
-                <h2>What the EB2-NIW Starter Kit includes</h2>
+                <h2>What EB2-NIW Starter Kit includes</h2>
                 <div class="bar"></div>
             </div>
 
