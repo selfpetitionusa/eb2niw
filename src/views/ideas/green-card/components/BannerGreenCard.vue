@@ -4,8 +4,8 @@
 
     <b-modal ref="modal-zoom" size="xl" hide-footer>
         <div class="row justify-content-center">
-          <img class="col-sm-5 col-11" style="margin: 0.5rem 1rem; border: 1px solid #CECECE;" src="../resources/Sample.png" alt="eb2 niw"/>
-          <img class="col-sm-5 col-11" style="margin: 0.5rem 1rem; border: 1px solid #CECECE;" src="../resources/SampleEditable.png" alt="eb2"/>
+          <img class="col-lg-11 col-xl-5" style="margin: 0.5rem 1rem; border: 1px solid #CECECE;" src="../resources/Sample.png" alt="eb2 niw"/>
+          <img class="col-lg-11 col-xl-5" style="margin: 0.5rem 1rem; border: 1px solid #CECECE;" src="../resources/SampleEditable.png" alt="eb2"/>
         </div>
     </b-modal>
 
