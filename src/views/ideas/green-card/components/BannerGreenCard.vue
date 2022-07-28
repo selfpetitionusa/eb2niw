@@ -3,7 +3,7 @@
     <div class="main-banner" style="padding-top: 5rem; margin-top: 2rem; padding-bottom: 3rem">
 
     <b-modal ref="modal-zoom" size="xl" hide-footer>
-        <div class="row justify-content-center">
+        <div class="row justify-content-center" style="z-index: 2;">
           <img class="col-lg-11 col-xl-5" style="margin: 0.5rem 1rem; border: 1px solid #CECECE;" src="../resources/Sample.png" alt="eb2 niw"/>
           <img class="col-lg-11 col-xl-5" style="margin: 0.5rem 1rem; border: 1px solid #CECECE;" src="../resources/SampleEditable.png" alt="eb2"/>
         </div>
