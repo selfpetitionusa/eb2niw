@@ -25,13 +25,16 @@
                                 <a href="/" class="nav-link" v-scroll-to="'#process'">Process</a>
                             </li>
                             <li class="nav-item">
-                                <a href="/" class="nav-link" v-scroll-to="'#bio'">About us</a>
+                                <a href="/" class="nav-link" v-scroll-to="'#bio'">About</a>
                             </li>
                             <li class="nav-item">
                                 <a href="/" class="nav-link" v-scroll-to="'#testimonials'">Testimonials</a>
                             </li>
                             <li class="nav-item">
                                 <a href="/" class="nav-link" v-scroll-to="'#contact'">Contact</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/faq" class="nav-link">FAQ</a>
                             </li>
                         </ul>
                     </b-collapse>
