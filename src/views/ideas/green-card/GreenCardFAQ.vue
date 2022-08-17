@@ -1,33 +1,24 @@
 <template>
 
     <div>
-      <header id="header" :class="['headroom', {'is-sticky': true}]">
-        <div class="startp-nav">
-          <div class="container">
-            <nav class="navbar navbar-expand-md navbar-light">
-              <router-link class="navbar-brand" to="/">
-                <img width="150px" src="./resources/selfpetitionusa-logo.svg" alt="Self Petition USA"/>
-              </router-link>
+      <header id="header" :class="['headroom', {'is-sticky': isSticky}]">
+          <div class="startp-nav">
+              <div class="container">
+                  <nav class="navbar navbar-expand-md navbar-light">
+                      <router-link class="navbar-brand" to="/">
+                          <img width="150px" src="./resources/selfpetitionusa-logo.svg" alt="Self Petition USA"/>
+                      </router-link>
 
+                      <ul class="nav ml-auto">
 
-              <b-navbar-toggle target="navbarSupportedContent"></b-navbar-toggle>
+                          <li class="nav-item">
+                              <a href="/" class="nav-link uscis-menu">Home</a>
+                          </li>
+                      </ul>
 
-
-              <b-collapse class="collapse navbar-collapse mean-menu" id="navbarSupportedContent" is-nav>
-                <ul class="navbar-nav nav ml-auto">
-                  <li class="nav-item">
-                    <a href="/" class="nav-link" >Home</a>
-                  </li>
-                </ul>
-              </b-collapse>
-
-              <div class="others-option">
-
+                  </nav>
               </div>
-
-            </nav>
           </div>
-        </div>
       </header>
 
 
