@@ -185,7 +185,7 @@ import PriceOffer from "./components/PriceOffer.vue";
 
 
     export default {
-        name: 'Uscis',
+        name: 'FAQ',
         data(){
             return {
                 isSticky: false

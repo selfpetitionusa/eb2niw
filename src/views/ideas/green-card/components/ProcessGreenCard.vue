@@ -17,7 +17,7 @@
                 </div>
 
                 <div class="paragraph" style="margin-top: 4rem">
-                    <a href="/process" class="process-hyperlink">Learn more</a>
+                    <a href="/faq" class="process-hyperlink">Learn more</a>
                 </div>
             </div>
         </div>
