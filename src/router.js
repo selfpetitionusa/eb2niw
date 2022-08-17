@@ -3,7 +3,10 @@ import VueRouter from 'vue-router';
 
 import HomeGreenCard from "./views/ideas/green-card/HomeGreenCard";
 
-
+import HomeGreenCardServices from "./views/ideas/green-card/HomeGreenCardServices";
+import HomeGreenCardProcess from "./views/ideas/green-card/HomeGreenCardProcess";
+import HomeGreenCardTestimonials from "./views/ideas/green-card/HomeGreenCardTestimonials";
+import HomeGreenCardAboutUs from "./views/ideas/green-card/HomeGreenCardAboutUs";
 import GreenCardEvaluation from "./views/ideas/green-card/GreenCardEvaluation";
 import GreenCardApplication from "./views/ideas/green-card/GreenCardApplication";
 import GreenCardEvaluationContinued from "./views/ideas/green-card/GreenCardEvaluationContinued";
@@ -20,6 +23,10 @@ export const router = new VueRouter({
     },
     routes: [
       { path: '/', component: HomeGreenCard },
+      { path: '/starterkit', component: HomeGreenCardServices },
+      { path: '/process-explained', component: HomeGreenCardProcess },
+      { path: '/testimonials', component: HomeGreenCardTestimonials },
+      { path: '/aboutus', component: HomeGreenCardAboutUs },
       { path: '/green-card-evaluation', component: GreenCardEvaluation },
       { path: '/green-card-application', component: GreenCardApplication },
       { path: '/eligibility', name: 'eligibility', component: GreenCardEvaluationContinued, props: true },
@@ -31,7 +38,6 @@ export const router = new VueRouter({
       { path: '*', redirect: '/' }
     ]
 });
-
 
 router.beforeEach((to, from, next) => {
     // redirect to login page if not logged in and trying to access a restricted page

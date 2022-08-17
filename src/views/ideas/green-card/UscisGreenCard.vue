@@ -1,25 +1,50 @@
 <template>
 
     <div>
-        <header id="header" :class="['headroom', {'is-sticky': isSticky}]">
-            <div class="startp-nav">
-                <div class="container">
-                    <nav class="navbar navbar-expand-md navbar-light">
-                        <router-link class="navbar-brand" to="/">
-                            <img width="150px" src="./resources/selfpetitionusa-logo.svg" alt="Self Petition USA"/>
-                        </router-link>
+      <header id="header" :class="['headroom', {'is-sticky': true}]">
+        <div class="startp-nav">
+          <div class="container">
+            <nav class="navbar navbar-expand-md navbar-light">
+              <router-link class="navbar-brand" to="/">
+                <img width="150px" src="./resources/selfpetitionusa-logo.svg" alt="Self Petition USA"/>
+              </router-link>
 
-                        <ul class="nav ml-auto">
 
-                            <li class="nav-item">
-                                <a href="/" class="nav-link uscis-menu">Home</a>
-                            </li>
-                        </ul>
+              <b-navbar-toggle target="navbarSupportedContent"></b-navbar-toggle>
 
-                    </nav>
-                </div>
-            </div>
-        </header>
+
+              <b-collapse class="collapse navbar-collapse mean-menu" id="navbarSupportedContent" is-nav>
+                <ul class="navbar-nav nav ml-auto">
+
+                  <li class="nav-item">
+                    <a href="/" class="nav-link" >Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="/starterkit" class="nav-link">EB2 NIW Starter Kit</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="/process-explained" class="nav-link" >Process</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="/testimonials" class="nav-link" >Success Stories</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="/aboutus" class="nav-link" >About us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="/process" class="nav-link" >FAQ</a>
+                  </li>
+                </ul>
+              </b-collapse>
+
+              <div class="others-option">
+
+              </div>
+
+            </nav>
+          </div>
+        </div>
+      </header>
 
 
         <section class="feedback-area ptb-80 bg-f9fafb" style="margin-top: 3rem">
