@@ -47,7 +47,6 @@
       </div>
     </header>
     <div>
-      <BannerGreenCard></BannerGreenCard>
       <FeedbackGreenCard></FeedbackGreenCard>
       <ContactGreenCard></ContactGreenCard>
     </div>
@@ -58,7 +57,6 @@
 </template>
 
 <script>
-import BannerGreenCard from './components/BannerGreenCard';
 import FeedbackGreenCard from './components/FeedbackGreenCard';
 import ContactGreenCard from './components/ContactGreenCard';
 import FooterGreenCard from "./components/FooterGreenCard";
@@ -67,7 +65,6 @@ import FooterGreenCard from "./components/FooterGreenCard";
 export default {
   name: 'HomeGreenCard',
   components: {
-    BannerGreenCard,
     FeedbackGreenCard,
     ContactGreenCard,
     FooterGreenCard
