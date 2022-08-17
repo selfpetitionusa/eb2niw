@@ -16,24 +16,8 @@
 
             <b-collapse class="collapse navbar-collapse mean-menu" id="navbarSupportedContent" is-nav>
               <ul class="navbar-nav nav ml-auto">
-
                 <li class="nav-item">
                   <a href="/" class="nav-link" >Home</a>
-                </li>
-                <li class="nav-item">
-                  <a href="/starterkit" class="nav-link">EB2 NIW Starter Kit</a>
-                </li>
-                <li class="nav-item">
-                  <a href="/process-explained" class="nav-link" >Process</a>
-                </li>
-                <li class="nav-item">
-                  <a href="/testimonials" class="nav-link" >Success Stories</a>
-                </li>
-                <li class="nav-item">
-                  <a href="/aboutus" class="nav-link" >About us</a>
-                </li>
-                <li class="nav-item">
-                  <a href="/process" class="nav-link" >FAQ</a>
                 </li>
               </ul>
             </b-collapse>
