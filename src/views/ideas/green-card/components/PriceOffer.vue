@@ -9,11 +9,17 @@
             <sup style="color: #b30000; font-size: 15px;">$</sup><span style="color: #b30000; font-size: 20px; text-decoration: line-through">149</span>
         </div>
 
-        <div class="row banner-action-btns" style="text-align: center; margin-top: 1rem">
+        <div v-if="secondCount <= 0" class="row banner-action-btns" style="text-align: center; margin-top: 1rem">
             <div class="col-xl-7 col-lg-9 col-12">
                 <a href="https://buy.stripe.com/7sI5nU0pp3wpcvefYZ" @click="$gtag.event('register')" class="btn btn-primary">Buy EB2-NIW Starter Kit</a>
             </div>
         </div>
+        <div v-if="secondCount > 0" class="row banner-action-btns" style="text-align: center; margin-top: 1rem">
+            <div class="col-xl-7 col-lg-9 col-12">
+                <a href="https://buy.stripe.com/bIY17Eb433wp9j2bIK" @click="$gtag.event('register')" class="btn btn-primary">Buy EB2-NIW Starter Kit</a>
+            </div>
+        </div>
+
         <div v-show="secondCount > 0">
             <div style="margin-top: 1rem; font-size: 12px">Valid for:</div>
             <div style="font-size: 18px">
@@ -36,7 +42,7 @@
         data () {
             return {
               now: Math.trunc((new Date()).getTime() / 1000),
-              event: new Date('2022-08-10T00:00:00'),
+              event: new Date('2022-09-03T21:02:00'),
               finish: false
             }
           },
