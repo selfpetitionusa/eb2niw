@@ -11,12 +11,12 @@
 
         <div v-if="secondCount <= 0" class="row banner-action-btns" style="text-align: center; margin-top: 1rem">
             <div class="col-xl-7 col-lg-9 col-12">
-                <a @click="gtag_report_conversion()" class="btn btn-primary">Buy EB2-NIW Starter Kit</a>
+                <a href="https://buy.stripe.com/7sI5nU0pp3wpcvefYZ" @click="gtag_report_conversion()" class="btn btn-primary">Buy EB2-NIW Starter Kit</a>
             </div>
         </div>
         <div v-if="secondCount > 0" class="row banner-action-btns" style="text-align: center; margin-top: 1rem">
             <div class="col-xl-7 col-lg-9 col-12">
-                <a  @click="gtag_report_conversion()" class="btn btn-primary">Buy EB2-NIW Starter Kit</a>
+                <a href="https://buy.stripe.com/7sI5nU0pp3wpcvefYZ"  @click="gtag_report_conversion()" class="btn btn-primary">Buy EB2-NIW Starter Kit</a>
             </div>
         </div>
 
