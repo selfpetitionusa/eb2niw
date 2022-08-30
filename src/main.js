@@ -20,11 +20,6 @@ import './validation/validation.js'
 
 import VuePlyr from 'vue-plyr'
 import 'vue-plyr/dist/vue-plyr.css'
-import VueGtag from "vue-gtag";
-
-Vue.use(VueGtag, {
-  config: { id: "G-88BC5QQQH6", params: { send_page_view: true  } }
-});
 
 
 
