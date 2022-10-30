@@ -62,7 +62,7 @@
       this.currentUrl = window.location.pathname;
       setTimeout(() => {
         this.isLoading = false
-      }, 2000);
+      }, 1500);
     }
   }
 </script>

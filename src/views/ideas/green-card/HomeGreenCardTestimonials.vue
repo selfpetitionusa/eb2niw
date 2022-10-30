@@ -52,18 +52,14 @@ export default {
   },
 
   watch: {
-    '$route'(pathUrl){
-      this.currentUrl = pathUrl.path;
-      this.isLoading = true;
-      setTimeout(() => { this.isLoading = false }, 1500);
-    }
-  },
+      '$route'(pathUrl){
+        this.currentUrl = pathUrl.path;
+        this.isLoading = true;
+      }
+    },
 
-  mounted() {
-    this.currentUrl = window.location.pathname;
-    setTimeout(() => {
-      this.isLoading = false
-    }, 2000);
-  }
+    mounted() {
+      this.currentUrl = window.location.pathname;
+    }
 }
 </script>
