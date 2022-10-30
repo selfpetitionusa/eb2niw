@@ -44,24 +44,24 @@
 
                 <slide>
                     <div class="single-works carousel-green-hover">
-                        <img src="../resources/ReferralSample.png" alt="national interest waiver referral letter">
+                        <img src="../resources/Instructions.png" alt="how to self-petition for a green card">
                         <a v-if="windowWidth > 767" @click="index = 2;$refs['modal-zoom'].show()" style="cursor: pointer;" class="icon"><feather type="zoom-in"></feather></a>
 
                         <div class="works-content">
-                            <h3><a href="#">Three examples of referral letters</a></h3>
-                            <p>Use to prepare your own</p>
+                            <h3><a href="#">Instructions and samples to request referral letters</a></h3>
+                            <p>Referral letters supporting cover letter</p>
                         </div>
                     </div>
                 </slide>
 
                 <slide>
                     <div class="single-works carousel-green-hover">
-                        <img src="../resources/Instructions.png" alt="how to self-petition for a green card">
+                        <img src="../resources/ReferralSample.png" alt="national interest waiver referral letter">
                         <a v-if="windowWidth > 767" @click="index = 3;$refs['modal-zoom'].show()" style="cursor: pointer;" class="icon"><feather type="zoom-in"></feather></a>
 
                         <div class="works-content">
-                            <h3><a href="#">Instructions and samples to request referral letters</a></h3>
-                            <p>Referral letters supporting cover letter</p>
+                            <h3><a href="#">Three examples of referral letters</a></h3>
+                            <p>Use to prepare your own</p>
                         </div>
                     </div>
                 </slide>
@@ -93,12 +93,12 @@ export default {
                     img: "./SampleEditable.png"
                 },
                 {
-                    title : "Three examples of referral letters",
-                    img: "./ReferralSample.png"
-                },
-                {
                     title : "Instructions and samples to request referral letters",
                     img: "./Instructions.png"
+                },
+                {
+                    title : "Three examples of referral letters",
+                    img: "./ReferralSample.png"
                 }
 
             ]

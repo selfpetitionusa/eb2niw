@@ -2,21 +2,21 @@
 
     <div class="pricing-table col-xl-6 col-md-8 col-12 offset-xl-3 offset-md-2 offset-0" style="margin-top: 6rem; padding-top: 1.5rem; padding-left: 0px; padding-right: 0px">
         <div class="price" style="margin-bottom: 0;">
-            <span v-if="secondCount > 0" style="color: #0b5345;"><sup>$</sup>89</span>
-            <span v-if="secondCount <= 0" style="color: #0b5345;"><sup>$</sup>149</span>
+            <span v-if="secondCount > 0" style="color: #0b5345;"><sup>$</sup>169</span>
+            <span v-if="secondCount <= 0" style="color: #0b5345;"><sup>$</sup>225</span>
         </div>
         <div v-show="secondCount > 0" class="price" style="margin-bottom: 0.5rem;">
-            <sup style="color: #b30000; font-size: 15px;">$</sup><span style="color: #b30000; font-size: 20px; text-decoration: line-through">149</span>
+            <sup style="color: #b30000; font-size: 15px;">$</sup><span style="color: #b30000; font-size: 20px; text-decoration: line-through">225</span>
         </div>
 
         <div v-if="secondCount <= 0" class="row banner-action-btns" style="text-align: center; margin-top: 1rem">
             <div class="col-xl-7 col-lg-9 col-12">
-                <a href="https://buy.stripe.com/7sI5nU0pp3wpcvefYZ" @click="gtag_report_conversion()" class="btn btn-primary">Buy EB2-NIW Starter Kit</a>
+                <a href="https://buy.stripe.com/7sI5nU0pp3wpcvefYZ" @click="gtag_report_conversion()" class="btn btn-primary">Buy Templates <br>+ Lifetime Discord access</a>
             </div>
         </div>
         <div v-if="secondCount > 0" class="row banner-action-btns" style="text-align: center; margin-top: 1rem">
             <div class="col-xl-7 col-lg-9 col-12">
-                <a href="https://buy.stripe.com/bIY17Eb433wp9j2bIK"  @click="gtag_report_conversion()" class="btn btn-primary">Buy EB2-NIW Starter Kit</a>
+                <a href="https://buy.stripe.com/bIY17Eb433wp9j2bIK"  @click="gtag_report_conversion()" class="btn btn-primary">Buy Templates <br>+ Lifetime Discord access</a>
             </div>
         </div>
 
@@ -29,7 +29,7 @@
                 <span style="font-weight: 600">{{ seconds }}</span>s
             </div>
         </div>
-        <p style="margin-top: 1rem; line-height: 18px; font-size: 12px">You will receive template documents over email</p>
+        <p style="margin-top: 1rem; line-height: 18px; font-size: 12px">You will receive template documents and Discord invite over email</p>
     </div>
 
 </template>
@@ -42,7 +42,7 @@
         data () {
             return {
               now: Math.trunc((new Date()).getTime() / 1000),
-              event: new Date('2022-09-03T21:02:00'),
+              event: new Date('2022-11-11T21:02:00'),
               finish: false
             }
           },

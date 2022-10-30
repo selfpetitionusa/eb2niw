@@ -34,7 +34,7 @@
                             </div>
                             <div class="col-12">
                                 <div class="box">
-                                    <feather type="code"></feather> Focused on business and STEM cases, i.e. non-research
+                                    <feather type="code"></feather> Exclusive <img src="../resources/discord-logo.svg" style="width: 90px; margin-left: 5px; margin-right: 5px"/> for users working on their EB-2 NIW
                                 </div>
                             </div>
                         </div>
@@ -60,7 +60,7 @@
                             </div>
                             <div class="col-12">
                                 <div class="box">
-                                    <feather type="code"></feather> Focused on business and STEM cases, i.e. non-research
+                                    <feather type="code"></feather> Exclusive <img src="../resources/discord-logo.svg" style="width: 90px; margin-left: 5px; margin-right: 5px"/> for users working on their EB-2 NIW
                                 </div>
                             </div>
                         </div>

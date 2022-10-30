@@ -18,52 +18,39 @@
                             <div class="hero-content">
                                 <div class="row">
                                     <div class="col-lg-11">
-                                        <h1>Starter Kit for EB-2 NIW</h1>
-                                        <h3>Self-petition green card template</h3>
-                                        <h5>for professionals</h5>
+                                        <h1>Starter Kit for <span style="color: #5457c1">EB-2 NIW</span></h1>
+                                        <h5 style="margin-top: 2rem">Self-petition green card templates</h5>
+                                        <h3>for professionals</h3>
 
                                         <div class="tick-section">
                                             <div class="d-block d-sm-none">
                                                 <div class="tick-row">
                                                     <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                    <p class="tick-input">Actionable editable templates</p>
+                                                    <p class="tick-input">Successful 8-page long cover letter</p>
                                                 </div>
                                             </div>
 
                                                 <div class="d-none d-sm-block">
                                                     <div class="tick-row">
                                                         <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                        <p class="tick-input">Actionable editable templates</p>
+                                                        <p class="tick-input">Successful 8-page long cover letter</p>
                                                     </div>
                                                 </div>
 
                                             <div class="d-block d-sm-none">
                                                 <div class="tick-row">
                                                     <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                    <p class="tick-input" style="color: #5457c1; font-weight: 600">Successful 8-page long cover letter</p>
+                                                    <p class="tick-input">Examples of 3 reference letters</p>
                                                 </div>
                                             </div>
 
                                                 <div class="d-none d-sm-block">
                                                     <div class="tick-row">
                                                         <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                        <p class="tick-input" style="color: #5457c1; font-weight: 600">Successful 8-page long cover letter</p>
+                                                        <p class="tick-input">Examples of 3 reference letters</p>
                                                     </div>
                                                 </div>
 
-                                            <div class="d-block d-sm-none">
-                                                <div class="tick-row">
-                                                    <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                    <p class="tick-input" style="color: #5457c1; font-weight: 600">Examples of 3 reference letters</p>
-                                                </div>
-                                            </div>
-
-                                                <div class="d-none d-sm-block">
-                                                    <div class="tick-row">
-                                                        <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                        <p class="tick-input" style="color: #5457c1; font-weight: 600">Examples of 3 reference letters</p>
-                                                    </div>
-                                                </div>
                                             <div class="d-block d-sm-none">
                                                 <div class="tick-row">
                                                     <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
@@ -75,6 +62,20 @@
                                                     <div class="tick-row">
                                                         <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
                                                         <p class="tick-input">Tips to request and prepare reference letters</p>
+                                                    </div>
+                                                </div>
+                                            
+                                            <div class="d-block d-sm-none">
+                                                <div class="tick-row">
+                                                    <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
+                                                    <p class="tick-input">User community<img src="../resources/discord-logo.svg" style="width: 120px; margin-left: 10px" /></p>
+                                                </div>
+                                            </div>
+
+                                                <div class="d-none d-sm-block">
+                                                    <div class="tick-row">
+                                                        <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
+                                                        <p class="tick-input">User community<img src="../resources/discord-logo.svg" style="width: 120px; margin-left: 10px" /></p>
                                                     </div>
                                                 </div>
                                         </div>
