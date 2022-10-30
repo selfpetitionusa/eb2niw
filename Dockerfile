@@ -1,5 +1,5 @@
 # develop stage
-FROM node:lts-alpine as develop-stage
+FROM node:16-alpine as develop-stage
 ARG VERSION
 WORKDIR /app
 COPY package*.json ./
