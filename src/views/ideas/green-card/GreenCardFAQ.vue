@@ -87,7 +87,7 @@
                     <div style="margin: 1rem; margin-top: 2rem; max-width: 1000px">You can self-petition with or without a lawyer.</div>
                     <div style="margin: 1rem; max-width: 1000px">Filing fees are around $2k per applicant. If you decide to file with a lawyer, typical legal fees are around $8k for the main applicant (dependents, like children & spouses, usually at ~50% discount). The exact figure might depend on the complexity of your case and the lawyer that you decided to work with.</div>
                     <div style="margin: 1rem; max-width: 1000px">Check our self-apply starter kit.<br> Even if you apply with a lawyer, you will still need to prepare reference letters and possibly also a cover letter.</div>
-                    <a style="margin-left: 1rem; max-width: 1000px; text-decoration: underline" target="_blank" href="https://checkout.stripe.com/pay/cs_live_a1qNyGjaPCfAQFuj7MBooXupRt0n3gtqfiNtsv7K0zAGkoNEee0B1svkIn#fidkdWxOYHwnPyd1blppbHNgWjA0T290ckNBSGlgSWtqdWJTazBTbnJRPU1kdmBgRlBXVEsyYXQxdURCZlJ3XGlAZnFDdm00cmJgSzJXN21SZjxnT3ZUfGZqaHxmPHVCVXRNVFF1cDc1TmdLNTVgQ0I2QjVATCcpJ3VpbGtuQH11anZgYUxhJz8nMnZMMGtQNXV1NnJ1ZnNgY1xfJ3gl">Purchase our EB-2 NIW templates</a>
+                    <a style="margin-left: 1rem; max-width: 1000px; text-decoration: underline" target="_blank" href="/">Purchase our EB-2 NIW templates</a>
                 </div>
 
                 <div class="section-title" style="background-color: white; padding: 1rem; text-align: left; text-align: justify; text-justify: inter-word;">

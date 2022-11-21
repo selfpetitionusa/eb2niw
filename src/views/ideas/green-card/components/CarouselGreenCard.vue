@@ -25,7 +25,7 @@
 
                         <div class="works-content">
                             <h3><a href="#">Successful real cover letter</a></h3>
-                            <p>Candidate with banking and finance background</p>
+                            <p>For various professional backgrounds</p>
                         </div>
                     </div>
                 </slide>
