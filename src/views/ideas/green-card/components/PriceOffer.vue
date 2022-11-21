@@ -42,7 +42,7 @@
         data () {
             return {
               now: Math.trunc((new Date()).getTime() / 1000),
-              event: new Date('2022-11-11T21:02:00'),
+              event: new Date('2022-12-05T21:02:00'),
               finish: false
             }
           },
