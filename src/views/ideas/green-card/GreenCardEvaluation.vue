@@ -128,8 +128,9 @@
         },
         watch: {
           'account.status': function (val) {
-            if(val.applied)
-              this.goToFinalPage();
+            if(val.applied) {
+                this.goToFinalPage();
+            }
           }
         },
         computed: {
