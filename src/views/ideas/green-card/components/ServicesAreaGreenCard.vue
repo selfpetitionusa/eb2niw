@@ -1,8 +1,45 @@
 <template>
     <!-- Start Design & Development Services -->
-    <section class="services-area ptb-80" style="background: white; padding-bottom: 40px; margin-top: 1rem">
+    <section class="services-area ptb-80" style="background: white; padding-bottom: 40px; padding-top: 2rem; margin-top: 0rem">
+        
+        <div class="col-12" style="margin-bottom: 7rem">
+            <div class="row">
+                <div class="col-sm-2 col-4" style="padding: 0px 5px">
+                    <a href="/green-card-evaluation" @click="$gtag.event('register')">
+                        <img src="../resources/Stem.png" alt="i-140 for STEM">
+                    </a>
+                </div>
+                <div class="col-sm-2 col-4" style="padding: 0px 5px">
+                    <a href="/green-card-evaluation" @click="$gtag.event('register')">
+                        <img src="../resources/Entrepreneurs.png" alt="i-485 for entrepreneurs">
+                    </a>
+                </div>
+                <div class="col-sm-2 col-4" style="padding: 0px 5px">
+                    <a href="/green-card-evaluation" @click="$gtag.event('register')">
+                        <img src="../resources/Finance.png" alt="i-140 for finance">
+                    </a>
+                </div>
+                <div class="col-sm-2 col-4" style="padding: 0px 5px">
+                    <a href="/green-card-evaluation" @click="$gtag.event('register')">
+                        <img src="../resources/Sciences.png" alt="i-485 for sciences">
+                    </a>
+                </div>
+                <div class="col-sm-2 col-4" style="padding: 0px 5px">
+                    <a href="/green-card-evaluation" @click="$gtag.event('register')">
+                        <img src="../resources/Business.png" alt="i-140 for business professionals">
+                    </a>
+                </div>
+                <div class="col-sm-2 col-4" style="padding: 0px 5px">
+                    <a href="/green-card-evaluation" @click="$gtag.event('register')">
+                        <img src="../resources/Other.png" alt="i-485 for business professionals">
+                    </a>
+                </div>
+            </div>
+        </div>
+        
         <SectionThree id="solutions"/>
         <div class="container">
+
             <div class="section-title">
                 <h2>What EB2-NIW Starter Kit includes</h2>
                 <div class="bar"></div>

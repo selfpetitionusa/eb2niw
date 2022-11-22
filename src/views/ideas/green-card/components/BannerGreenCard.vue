@@ -101,7 +101,7 @@
                         </div>
                     </div>
                     <PriceOffer></PriceOffer>
-
+                        
                 </div>
             </div>
         </div>
