@@ -5,34 +5,22 @@
         <div class="col-12" style="margin-bottom: 7rem">
             <div class="row">
                 <div class="col-sm-2 col-4" style="padding: 0px 5px">
-                    <a href="/green-card-evaluation" @click="$gtag.event('register')">
-                        <img src="../resources/Stem.png" alt="i-140 for STEM">
-                    </a>
+                    <img src="../resources/Stem.png" alt="i-140 for STEM">
                 </div>
                 <div class="col-sm-2 col-4" style="padding: 0px 5px">
-                    <a href="/green-card-evaluation" @click="$gtag.event('register')">
-                        <img src="../resources/Entrepreneurs.png" alt="i-485 for entrepreneurs">
-                    </a>
+                    <img src="../resources/Entrepreneurs.png" alt="i-485 for entrepreneurs">
                 </div>
                 <div class="col-sm-2 col-4" style="padding: 0px 5px">
-                    <a href="/green-card-evaluation" @click="$gtag.event('register')">
-                        <img src="../resources/Finance.png" alt="i-140 for finance">
-                    </a>
+                    <img src="../resources/Finance.png" alt="i-140 for finance">
                 </div>
                 <div class="col-sm-2 col-4" style="padding: 0px 5px">
-                    <a href="/green-card-evaluation" @click="$gtag.event('register')">
-                        <img src="../resources/Sciences.png" alt="i-485 for sciences">
-                    </a>
+                    <img src="../resources/Sciences.png" alt="i-485 for sciences">
                 </div>
                 <div class="col-sm-2 col-4" style="padding: 0px 5px">
-                    <a href="/green-card-evaluation" @click="$gtag.event('register')">
-                        <img src="../resources/Business.png" alt="i-140 for business professionals">
-                    </a>
+                    <img src="../resources/Business.png" alt="i-140 for business professionals">
                 </div>
                 <div class="col-sm-2 col-4" style="padding: 0px 5px">
-                    <a href="/green-card-evaluation" @click="$gtag.event('register')">
-                        <img src="../resources/Other.png" alt="i-485 for business professionals">
-                    </a>
+                    <img src="../resources/Other.png" alt="i-485 for business professionals">
                 </div>
             </div>
         </div>
