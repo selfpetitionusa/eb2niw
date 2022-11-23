@@ -1,19 +1,19 @@
 import VueRouter from 'vue-router';
 // Pages
 
-import HomeGreenCard from "./views/ideas/green-card/HomeGreenCard";
+import HomeGreenCard from "./ideas/green-card/HomeGreenCard";
 
-import HomeGreenCardServices from "./views/ideas/green-card/HomeGreenCardServices";
-import HomeGreenCardProcess from "./views/ideas/green-card/HomeGreenCardProcess";
-import HomeGreenCardTestimonials from "./views/ideas/green-card/HomeGreenCardTestimonials";
-import HomeGreenCardAboutUs from "./views/ideas/green-card/HomeGreenCardAboutUs";
-import GreenCardEvaluation from "./views/ideas/green-card/GreenCardEvaluation";
-import GreenCardApplication from "./views/ideas/green-card/GreenCardApplication";
-import GreenCardEvaluationContinued from "./views/ideas/green-card/GreenCardEvaluationContinued";
-import GreenCardConfirmation from "./views/ideas/green-card/GreenCardConfirmation";
-import GreenCardConfirmed from "./views/ideas/green-card/GreenCardConfirmed";
-import GreenCardOrdered from "./views/ideas/green-card/GreenCardOrdered";
-import GreenCardFAQ from "./views/ideas/green-card/GreenCardFAQ";
+import HomeGreenCardServices from "./ideas/green-card/HomeGreenCardServices";
+import HomeGreenCardProcess from "./ideas/green-card/HomeGreenCardProcess";
+import HomeGreenCardTestimonials from "./ideas/green-card/HomeGreenCardTestimonials";
+import HomeGreenCardAboutUs from "./ideas/green-card/HomeGreenCardAboutUs";
+import GreenCardEvaluation from "./ideas/green-card/GreenCardEvaluation";
+import GreenCardApplication from "./ideas/green-card/GreenCardApplication";
+import GreenCardEvaluationContinued from "./ideas/green-card/GreenCardEvaluationContinued";
+import GreenCardConfirmation from "./ideas/green-card/GreenCardConfirmation";
+import GreenCardConfirmed from "./ideas/green-card/GreenCardConfirmed";
+import GreenCardOrdered from "./ideas/green-card/GreenCardOrdered";
+import GreenCardFAQ from "./ideas/green-card/GreenCardFAQ";
 
 export const router = new VueRouter({
     mode: 'history',
