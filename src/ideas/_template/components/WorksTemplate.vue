@@ -86,19 +86,19 @@ export default {
             modalProperties: [
                 {
                    title : "Aggregate feedback into actionable reports",
-                   img: "./aggregate.png"
+                   img: "./template1.png"
                 },
                 {
                     title : "Resolve unclear or conflicting feedback",
-                    img: "./upvotes.png"
+                    img: "./template6.png"
                 },
                 {
                     title : "Capture your visitors emotions",
-                    img: "./emoji.png"
+                    img: "./template5.png"
                 },
                 {
                     title : "Collect visual feedback",
-                    img: "./annotate.png"
+                    img: "./template4.png"
                 }
 
             ]
