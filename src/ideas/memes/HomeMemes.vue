@@ -31,7 +31,7 @@
 
 
   export default {
-    name: 'HomeAnnotate',
+    name: 'HomeMemes',
     components: {
       BannerMemes,
       ServicesMemes,

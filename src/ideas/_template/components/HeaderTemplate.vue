@@ -5,7 +5,7 @@
             <div class="container">
                 <nav class="navbar navbar-expand-md navbar-light">
                     <router-link class="navbar-brand" to="/">
-                        <img width="110px" src="./../resources/blendfeedback-logo.svg"/>
+                        <img width="110px" src="./../resources/template-logo.svg"/>
                     </router-link>
 
                     <b-navbar-toggle target="navbarSupportedContent"></b-navbar-toggle>
@@ -42,7 +42,7 @@
 
 <script>
 export default {
-    name: 'HeaderMemes',
+    name: 'HeaderTemplate',
     data(){
         return {
             isSticky: false

@@ -63,7 +63,7 @@
 
 <script>
     export default {
-        name: 'ContactMemes',
+        name: 'ContactTemplate',
         data() {
             return {
                 contact_name: '',

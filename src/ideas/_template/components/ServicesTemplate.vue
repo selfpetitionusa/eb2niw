@@ -15,7 +15,7 @@
 
             <div class="row h-100 justify-content-center align-items-center">
                 <div class="col-lg-5 col-md-12">
-                    <img src="../resources/aggregate.png">
+                    <img src="../resources/template1.png">
                 </div>
 
                 <div class="col-lg-6 col-md-12 services-content" style="padding-right: 0">
@@ -101,6 +101,6 @@
 
 <script>
 export default {
-    name: 'ServicesMemes'
+    name: 'ServicesTemplate'
 }
 </script>

@@ -7,7 +7,7 @@
                     <div class="single-footer-widget">
                         <div class="logo">
                             <a href="/">
-                                <img width="120px" src="../resources/blendfeedback-logo.svg"/>
+                                <img width="120px" src="../resources/template-logo.svg"/>
                             </a>
                         </div>
                         <p style="font-weight: 600">Aggregate visual feedback and emotions</p>
@@ -59,7 +59,7 @@
 <script>
 import BackToTop from 'vue-backtotop'
 export default {
-    name: 'FooterMemes',
+    name: 'FooterTemplate',
     components: { BackToTop }
 }
 </script>

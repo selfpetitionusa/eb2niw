@@ -71,8 +71,8 @@
                                                 controls
                                                 crossorigin
                                                 playsinline
-                                                poster="../resources/annotate-poster.png" style="background: white;">
-                                            <source src="../resources/annotate-video.mp4" type="video/mp4">
+                                                poster="../resources/template2.png" style="background: white;">
+                                            <source src="../resources/template3.mp4" type="video/mp4">
                                             Your browser does not support the video tag
                                         </video>
                                     </vue-plyr>
@@ -84,8 +84,8 @@
                                                 controls
                                                 crossorigin
                                                 playsinline
-                                                poster="../resources/annotate-poster.png" style="background: white;">
-                                            <source src="../resources/annotate-video.mp4" type="video/mp4">
+                                                poster="../resources/template2.png" style="background: white;">
+                                            <source src="../resources/template3.mp4" type="video/mp4">
                                             Your browser does not support the video tag
                                         </video>
                                     </vue-plyr>
@@ -143,7 +143,7 @@
 <script>
 
     export default {
-        name: 'BannerMemes',
+        name: 'BannerTemplate',
         data() {
             return {
                 fired: false

@@ -20,7 +20,7 @@
             >
                 <slide>
                     <div class="single-works">
-                        <img src="../resources/aggregate.png">
+                        <img src="../resources/template1.png">
                         <a v-if="windowWidth > 767" @click="index = 0;$refs['modal-zoom'].show()" style="cursor: pointer;" class="icon"><feather type="zoom-in"></feather></a>
 
                         <div class="works-content">
@@ -32,7 +32,7 @@
 
                 <slide>
                     <div class="single-works">
-                        <img src="../resources/upvotes.png">
+                        <img src="../resources/template6.png">
                         <a v-if="windowWidth > 767" @click="index = 1;$refs['modal-zoom'].show()" style="cursor: pointer;" class="icon"><feather type="zoom-in"></feather></a>
 
                         <div class="works-content">
@@ -44,7 +44,7 @@
 
                 <slide>
                     <div class="single-works">
-                        <img src="../resources/emoji.png" >
+                        <img src="../resources/template5.png" >
                         <a v-if="windowWidth > 767" @click="index = 2;$refs['modal-zoom'].show()" style="cursor: pointer;" class="icon"><feather type="zoom-in"></feather></a>
 
                         <div class="works-content">
@@ -56,7 +56,7 @@
 
                 <slide>
                     <div class="single-works">
-                        <img src="../resources/annotate.png" >
+                        <img src="../resources/template4.png" >
                         <a v-if="windowWidth > 767" @click="index = 3;$refs['modal-zoom'].show()" style="cursor: pointer;" class="icon"><feather type="zoom-in"></feather></a>
 
                         <div class="works-content">
@@ -76,7 +76,7 @@
 import { Carousel, Slide } from 'vue-carousel';
 
 export default {
-    name: 'WorksMemes',
+    name: 'WorksTemplate',
     components: { Carousel, Slide },
     data() {
         return {

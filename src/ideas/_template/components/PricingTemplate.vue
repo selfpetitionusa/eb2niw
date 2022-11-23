@@ -76,6 +76,6 @@
 
 <script>
 export default {
-    name: 'PricingMemes'
+    name: 'PricingTemplate'
 }
 </script>
