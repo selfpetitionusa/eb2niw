@@ -80,7 +80,7 @@
                 <div class="col-xl-7 col-lg-9">
                     <div class="row justify-content-center">
                         <div class="col-sm-8 col-10">
-                            <a href="/annotate-application" @click="$gtag.event('register')" class="btn btn-primary btn-register btn-profile">GET STARTED NOW</a>
+                            <a href="/register" @click="$gtag.event('register')" class="btn btn-primary btn-register btn-profile">GET STARTED NOW</a>
                         </div>
                     </div>
                 </div>

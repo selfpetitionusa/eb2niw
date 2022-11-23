@@ -2,45 +2,45 @@
 
   <div>
     <div v-if="currentUrl == '/not-found' || currentUrl == '/coming-soon'"></div>
-    <HeaderAnnotate v-else></HeaderAnnotate>
-    <PreLoaderAnnotate v-if="isLoading" />
+    <HeaderMemes v-else></HeaderMemes>
+    <PreLoaderMemes v-if="isLoading" />
     <div>
-      <BannerAnnotate></BannerAnnotate>
-      <ServicesAreaAnnotate></ServicesAreaAnnotate>
-      <WorksAnnotate></WorksAnnotate>
-      <PricingAnnotate></PricingAnnotate>
-      <ContactAnnotate></ContactAnnotate>
+      <BannerMemes></BannerMemes>
+      <ServicesMemes></ServicesMemes>
+      <WorksMemes></WorksMemes>
+      <PricingMemes></PricingMemes>
+      <ContactMemes></ContactMemes>
     </div>
     <div v-if="currentUrl == '/not-found' || currentUrl == '/coming-soon'"></div>
-    <FooterAnnotate v-else></FooterAnnotate>
+    <FooterMemes v-else></FooterMemes>
   </div>
 
 </template>
 
 
 <script>
-  import BannerAnnotate from './components/BannerAnnotate';
-  import ServicesAreaAnnotate from './components/ServicesAreaAnnotate';
-  import PricingAnnotate from './components/PricingAnnotate';
-  import ContactAnnotate from './components/ContactAnnotate';
-  import HeaderAnnotate from "./components/HeaderAnnotate";
-  import FooterAnnotate from "./components/FooterAnnotate";
-  import PreLoaderAnnotate from "./components/PreLoaderAnnotate";
-  import WorksAnnotate from "./components/WorksAnnotate";
+  import BannerMemes from './components/BannerMemes';
+  import ServicesMemes from './components/ServicesMemes';
+  import PricingMemes from './components/PricingMemes';
+  import ContactMemes from './components/ContactMemes';
+  import HeaderMemes from "./components/HeaderMemes";
+  import FooterMemes from "./components/FooterMemes";
+  import PreLoaderMemes from "./components/PreLoaderMemes";
+  import WorksMemes from "./components/WorksMemes";
 
 
 
   export default {
     name: 'HomeAnnotate',
     components: {
-      BannerAnnotate,
-      ServicesAreaAnnotate,
-      PricingAnnotate,
-      ContactAnnotate,
-      HeaderAnnotate,
-      FooterAnnotate,
-      PreLoaderAnnotate,
-      WorksAnnotate
+      BannerMemes,
+      ServicesMemes,
+      PricingMemes,
+      ContactMemes,
+      HeaderMemes,
+      FooterMemes,
+      PreLoaderMemes,
+      WorksMemes
     },
     data() {
       return {
