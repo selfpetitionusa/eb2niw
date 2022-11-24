@@ -19,7 +19,7 @@
                 :perPageCustom = "[[0, 1],[768, 2],[1200, 3], [1500, 4]]"
             >
                 <slide>
-                    <div class="single-works">
+                    <div class="single-works carousel-green-hover">
                         <img src="../resources/aggregate.png">
                         <a v-if="windowWidth > 767" @click="index = 0;$refs['modal-zoom'].show()" style="cursor: pointer;" class="icon"><feather type="zoom-in"></feather></a>
 
@@ -31,7 +31,7 @@
                 </slide>
 
                 <slide>
-                    <div class="single-works">
+                    <div class="single-works carousel-green-hover">
                         <img src="../resources/upvotes.png">
                         <a v-if="windowWidth > 767" @click="index = 1;$refs['modal-zoom'].show()" style="cursor: pointer;" class="icon"><feather type="zoom-in"></feather></a>
 
@@ -43,7 +43,7 @@
                 </slide>
 
                 <slide>
-                    <div class="single-works">
+                    <div class="single-works carousel-green-hover">
                         <img src="../resources/emoji.png" >
                         <a v-if="windowWidth > 767" @click="index = 2;$refs['modal-zoom'].show()" style="cursor: pointer;" class="icon"><feather type="zoom-in"></feather></a>
 
@@ -55,7 +55,7 @@
                 </slide>
 
                 <slide>
-                    <div class="single-works">
+                    <div class="single-works carousel-green-hover">
                         <img src="../resources/annotate.png" >
                         <a v-if="windowWidth > 767" @click="index = 3;$refs['modal-zoom'].show()" style="cursor: pointer;" class="icon"><feather type="zoom-in"></feather></a>
 
