@@ -8,15 +8,15 @@
 <rect x="999" y="400" width="1500" height="55" fill="url(#paint3_linear_454_17)"/>
 <rect x="3759" y="400" width="1500" height="55" fill="url(#paint4_linear_454_17)"/>
 <defs>
-<linearGradient id="paint0_linear_454_17" x1="5455" y1="320" x2="5855" y2="1000" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint0_linear_454_17" x1="6226" y1="320" x2="5855" y2="1000" gradientUnits="userSpaceOnUse">
 <stop stop-color="#43E794"/>
 <stop offset="0" stop-color="#000"/>
 </linearGradient>
-<linearGradient id="paint1_linear_454_17" x1="2719" y1="320" x2="3119" y2="1000" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint1_linear_454_17" x1="3490" y1="320" x2="3119" y2="1000" gradientUnits="userSpaceOnUse">
 <stop stop-color="#43E794"/>
 <stop offset="0" stop-color="#000"/>
 </linearGradient>
-<linearGradient id="paint2_linear_454_17" x1="1.17432e-05" y1="320" x2="400" y2="1000" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint2_linear_454_17" x1="771" y1="320" x2="400" y2="1000" gradientUnits="userSpaceOnUse">
 <stop stop-color="#43E794"/>
 <stop offset="0" stop-color="#000"/>
 </linearGradient>
