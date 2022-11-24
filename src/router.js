@@ -1,8 +1,8 @@
 import VueRouter from 'vue-router';
 // Pages
 
-import HomeTemplate from "./ideas/_template/HomeTemplate";
-import RegisterTemplate from "./ideas/_template/RegisterTemplate";
+import HomeMemes from "./ideas/memes/HomeMemes";
+import RegisterMemes from "./ideas/memes/RegisterMemes";
 
 export const router = new VueRouter({
     mode: 'history',
@@ -11,8 +11,8 @@ export const router = new VueRouter({
       return { x: 0, y: 0 };
     },
     routes: [
-      { path: '/', component: HomeTemplate },
-      { path: '/register', component: RegisterTemplate },
+      { path: '/', component: HomeMemes },
+      { path: '/register', component: RegisterMemes },
       // otherwise redirect to home
       { path: '*', redirect: '/' }
     ]
