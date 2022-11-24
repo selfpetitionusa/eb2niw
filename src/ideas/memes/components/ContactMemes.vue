@@ -5,7 +5,7 @@
             <div class="section-title contact-title">
                 <h2>Get In Touch</h2>
                 <div class="bar"></div>
-                <p>Aggregate and prioritize visual feedback - how can we help?</p>
+                <p>Personalize your memes - how can we help?</p>
             </div>
 
             <div class="row h-100 justify-content-center align-items-center">

@@ -10,8 +10,8 @@
                                 <img width="120px" src="../resources/picMemes-logo.png"/>
                             </a>
                         </div>
-                        <p style="font-weight: 600">Aggregate visual feedback and emotions</p>
-                        <p>Let users comment directly on your website</p>
+                        <p style="font-weight: 600">Personalized MEMES</p>
+                        <p>Crop friends' faces to insert into a meme</p>
                     </div>
                 </div>
 
@@ -38,7 +38,7 @@
 
                 <div class="col-lg-12 col-md-12">
                     <div class="copyright-area">
-                        <p>Copyright &copy;2022 BLEND Feedback. All Rights Reserved</p>
+                        <p>Copyright &copy;2022 PicMeme. All Rights Reserved</p>
                     </div>
                 </div>
             </div>

@@ -84,7 +84,7 @@ $purple-color: #c679e3;
 $bg-color: #f7fafd;
 $bg-color2: #f9f6f6;
 $hosting-main-color: #032b8d;
-$gradient-color: linear-gradient(135deg, #23bdb8 0%, #43e794 100%);
+$gradient-color: linear-gradient(35deg, #000 85%, #43e794 50%);
 $gradient-color2: linear-gradient(to right bottom, #1fa2ff, #00c0ff, #00d9f2, #53eedd, #a6ffcb);
 $transition: .5s;
 $font-size: 14px;
@@ -1245,11 +1245,11 @@ Main Banner CSS
     box-shadow: 0 13px 27px 0 rgba(68, 206, 111, 0.25);
 
     &:hover, &:focus, &:active {
-        box-shadow: 0 13px 27px 0 rgba(84, 87, 193, 0.25);
+        box-shadow: 0 13px 27px 0 rgba(0, 0, 0, 0.25);
     }
 
     &::after, &::before {
-        background-color: #5457C1;
+        background-color: #000;
     }
 }
 
@@ -2308,8 +2308,8 @@ Pricing CSS
         }
     }
     .btn-primary {
-        background: #5457c1;
-        box-shadow: 0 13px 27px 0 rgba(84, 87, 193, 0.25);
+        background: #000;
+        box-shadow: 0 13px 27px 0 rgba(0, 0, 0, 0.25);
 
         &::after, &::before {
             background: $light-green-color;
@@ -3121,7 +3121,7 @@ Works CSS
 }
 
 .carousel-green-hover::before {
-    background: linear-gradient(135deg, #43e794 0%, #23bdb8 70%);
+    background: linear-gradient(35deg, #000 85%, #43e794 50%);
     -webkit-transition: 0.5s;
     transition: 0.5s;
 }
