@@ -10,49 +10,49 @@
                             <div class="hero-content">
                                 <div class="row">
                                     <div class="col-lg-11">
-                                        <h1>Let users comment directly on your website</h1>
-                                        <h5>Visual and actionable feedback</h5>
+                                        <h1>Personalized MEMES</h1>
+                                        <h5>Crop friends' faces to insert into a meme</h5>
 
                                         <div class="tick-section">
                                             <div class="d-block d-sm-none">
                                                 <div class="tick-row">
-                                                    <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                    <p class="tick-input">Comments & upvotes</p>
+                                                    <font-awesome-icon class="fa-2x tick-icon" icon="check-square" style="color: black" />
+                                                    <p class="tick-input">Generate a meme with friends' faces</p>
                                                 </div>
                                             </div>
 
                                                 <div class="d-none d-sm-block">
                                                     <div class="tick-row">
-                                                        <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                        <p class="tick-input">Comments & upvotes</p>
+                                                        <font-awesome-icon class="fa-2x tick-icon" icon="check-square" style="color: black" />
+                                                        <p class="tick-input">Generate a meme with friends' faces</p>
                                                     </div>
                                                 </div>
 
                                             <div class="d-block d-sm-none">
                                                 <div class="tick-row">
-                                                    <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                    <p class="tick-input">Reactions</p>
+                                                    <font-awesome-icon class="fa-2x tick-icon" icon="check-square" style="color: black" />
+                                                    <p class="tick-input">Easily add text to images or memes</p>
                                                 </div>
                                             </div>
 
                                                 <div class="d-none d-sm-block">
                                                     <div class="tick-row">
-                                                        <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                        <p class="tick-input">Reactions</p>
+                                                        <font-awesome-icon class="fa-2x tick-icon" icon="check-square" style="color: black" />
+                                                        <p class="tick-input">Easily add text to images or memes</p>
                                                     </div>
                                                 </div>
 
                                             <div class="d-block d-sm-none">
                                                 <div class="tick-row">
-                                                    <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                    <p class="tick-input">Easy aggregation</p>
+                                                    <font-awesome-icon class="fa-2x tick-icon" icon="check-square" style="color: black" />
+                                                    <p class="tick-input">...in just a few clicks</p>
                                                 </div>
                                             </div>
 
                                                 <div class="d-none d-sm-block">
                                                     <div class="tick-row">
-                                                        <font-awesome-icon class="fa-2x tick-icon" icon="check-square" />
-                                                        <p class="tick-input">Easy aggregation</p>
+                                                        <font-awesome-icon class="fa-2x tick-icon" icon="check-square" style="color: black" />
+                                                        <p class="tick-input">...in just a few clicks</p>
                                                     </div>
                                                 </div>
                                         </div>
