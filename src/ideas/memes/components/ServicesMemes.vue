@@ -4,12 +4,12 @@
         <SectionThree id="solutions"/>
         <div class="container">
             <div class="section-title">
-                <h2>What is Blend Feedback?</h2>
+                <h2>What is PicMeme?</h2>
                 <div class="bar"></div>
 
                 <div class="paragraph">
-                    <p>Let anyone express what they think and feel about the website.</p>
-                    <p>Aggregate feedback to resolve unclear or conflicting opinions.</p>
+                    <p>Personalize meme with your friends faces.</p>
+                    <p>It takes one funny meme to brighten your interactions <br>with colleagues at work or friends after hours.</p>
                 </div>
             </div>
 
@@ -18,30 +18,30 @@
                     <img src="../resources/aggregate.png">
                 </div>
 
-                <div class="col-lg-6 col-md-12 services-content" style="padding-right: 0">
+                <div class="col-lg-7 col-md-12 services-content" style="padding-right: 0">
 
-                    <h6 style="margin-top: 1rem">Who uses BLEND Feedback:</h6>
+                    <h6 style="margin-top: 1rem">Who uses PicMeme:</h6>
 
                     <div class="d-block d-sm-none">
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="box">
-                                    <feather type="code"></feather> Marketing agency
+                                    <feather type="code"></feather> Agencies for meme marketing
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="box">
-                                    <feather type="layout"></feather> Web development agency
+                                    <feather type="layout"></feather> Product managers to motivate team
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="box">
-                                    <feather type="pen-tool"></feather> In-house team
+                                    <feather type="pen-tool"></feather> Social media influencers for posts
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="box">
-                                    <feather type="message-circle"></feather> Customer feedback
+                                    <feather type="message-circle"></feather> Anybody to put a smile on your face
                                 </div>
                             </div>
                         </div>
@@ -52,22 +52,22 @@
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="box" style="padding-right: 5px; padding-left: 5px">
-                                    <feather type="code"></feather>  Marketing agency
+                                    <feather type="code"></feather>  Agencies for meme marketing
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="box" style="padding-right: 5px; padding-left: 5px">
-                                    <feather type="layout"></feather> Web development agency
+                                    <feather type="layout"></feather> Product managers to motivate team
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="box" style="padding-right: 5px; padding-left: 5px">
-                                    <feather type="pen-tool"></feather> In-house team
+                                    <feather type="pen-tool"></feather> Social media influencers for posts
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="box" style="padding-right: 5px; padding-left: 5px">
-                                    <feather type="message-circle"></feather> Customer feedback
+                                    <feather type="message-circle"></feather> Anybody to put a smile on your face
                                 </div>
                             </div>
                         </div>

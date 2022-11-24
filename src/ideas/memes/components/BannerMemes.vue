@@ -104,9 +104,9 @@
                         <div class="row">
                             <div class="col-lg-8 col-sm-10 col-12 offset-lg-2 offset-sm-1">
                                 <div class="row">
-                                    <div class="col-4" style="text-align: center; padding: 0">Select elements <br> for users to comment on</div>
-                                    <div class="col-4" style="text-align: center; padding: 0 10px">Get comments, <br> upvotes & reactions</div>
-                                    <div class="col-4" style="text-align: center; padding: 0">Aggregate feedback <br>into actionable reports</div>
+                                    <div class="col-4" style="text-align: center; padding: 0">Upload image for meme background and friend's photo</div>
+                                    <div class="col-4" style="text-align: center; padding: 0 10px">Crop your <br>friend's face</div>
+                                    <div class="col-4" style="text-align: center; padding: 0">Overlay face and <br>add text to meme</div>
                                 </div>
                             </div>
                         </div>
@@ -116,7 +116,7 @@
                         <div class="col-xl-7 col-lg-9">
                             <div class="row justify-content-center">
                                 <div class="col-sm-8 col-10">
-                                    <a href="/register" @click="$gtag.event('register')" class="btn btn-primary btn-register btn-profile">GET STARTED NOW</a>
+                                    <a href="/register" @click="$gtag.event('register')" class="btn btn-primary btn-register btn-profile">CREATE A MEME</a>
                                 </div>
                             </div>
                         </div>
