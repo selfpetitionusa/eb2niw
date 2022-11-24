@@ -24,8 +24,7 @@
                         <a v-if="windowWidth > 767" @click="index = 0;$refs['modal-zoom'].show()" style="cursor: pointer;" class="icon"><feather type="zoom-in"></feather></a>
 
                         <div class="works-content">
-                            <h3><a href="#">Aggregate feedback into actionable reports</a></h3>
-                            <p>At first glance you know which areas to prioritize</p>
+                            <h3><a href="#">Upload your meme background</a></h3>
                         </div>
                     </div>
                 </slide>
@@ -36,8 +35,7 @@
                         <a v-if="windowWidth > 767" @click="index = 1;$refs['modal-zoom'].show()" style="cursor: pointer;" class="icon"><feather type="zoom-in"></feather></a>
 
                         <div class="works-content">
-                            <h3><a href="#">Resolve unclear or conflicting feedback</a></h3>
-                            <p>It has never been more obvious which feedback to implement</p>
+                            <h3><a href="#">Select photos to extract faces</a></h3>
                         </div>
                     </div>
                 </slide>
@@ -48,8 +46,7 @@
                         <a v-if="windowWidth > 767" @click="index = 2;$refs['modal-zoom'].show()" style="cursor: pointer;" class="icon"><feather type="zoom-in"></feather></a>
 
                         <div class="works-content">
-                            <h3><a href="#">Capture your visitors emotions</a></h3>
-                            <p>Choose the emojis that better capture feedback in your project</p>
+                            <h3><a href="#">Personalize your meme</a></h3>
                         </div>
                     </div>
                 </slide>
@@ -60,8 +57,7 @@
                         <a v-if="windowWidth > 767" @click="index = 3;$refs['modal-zoom'].show()" style="cursor: pointer;" class="icon"><feather type="zoom-in"></feather></a>
 
                         <div class="works-content">
-                            <h3><a href="#">Collect visual feedback</a></h3>
-                            <p>Spend less time collecting and organizing feedback</p>
+                            <h3><a href="#">Easily add the relevant text</a></h3>
                         </div>
                     </div>
                 </slide>
@@ -85,19 +81,19 @@ export default {
             index: 0,
             modalProperties: [
                 {
-                   title : "Aggregate feedback into actionable reports",
+                   title : "Upload your meme background",
                    img: "./aggregate.png"
                 },
                 {
-                    title : "Resolve unclear or conflicting feedback",
+                    title : "Select photos to extract faces",
                     img: "./upvotes.png"
                 },
                 {
-                    title : "Capture your visitors emotions",
+                    title : "Personalize your meme",
                     img: "./emoji.png"
                 },
                 {
-                    title : "Collect visual feedback",
+                    title : "Easily add the relevant text",
                     img: "./annotate.png"
                 }
 
