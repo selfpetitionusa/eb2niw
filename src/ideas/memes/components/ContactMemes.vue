@@ -9,8 +9,8 @@
             </div>
 
             <div class="row h-100 justify-content-center align-items-center">
-                <div class="col-lg-5 col-md-12">
-                    <img src="../../../assets/img/contact.svg" >
+                <div class="col-lg-4 col-md-12">
+                    <img src="../../../assets/img/contact2.svg" >
                 </div>
 
                 <div class="col-lg-6 offset-lg-1 col-md-12">

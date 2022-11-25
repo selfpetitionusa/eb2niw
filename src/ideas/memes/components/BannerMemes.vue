@@ -62,35 +62,8 @@
                         </div>
 
 
-                        <div class="col-xl-6 col-lg-5 video" style="margin-top: 2rem">
-                            <div class="row">
-
-                                <div class="d-block d-lg-none">
-                                    <vue-plyr ref="plyr">
-                                        <video
-                                                controls
-                                                crossorigin
-                                                playsinline
-                                                poster="../resources/annotate-poster.png" style="background: white;">
-                                            <source src="../resources/annotate-video.mp4" type="video/mp4">
-                                            Your browser does not support the video tag
-                                        </video>
-                                    </vue-plyr>
-                                </div>
-
-                                <div class="d-none d-lg-block">
-                                    <vue-plyr ref="plyr">
-                                        <video
-                                                controls
-                                                crossorigin
-                                                playsinline
-                                                poster="../resources/annotate-poster.png" style="background: white;">
-                                            <source src="../resources/annotate-video.mp4" type="video/mp4">
-                                            Your browser does not support the video tag
-                                        </video>
-                                    </vue-plyr>
-                                </div>
-                            </div>
+                        <div class="col-xl-4 col-lg-4" style="margin-top: 2rem">
+                            <img style="border-radius: 5%; box-shadow: 0 13px 27px 0 rgba(0, 0, 0, .25);" src="../resources/skeleton.png" />
                         </div>
                     </div>
 
