@@ -15,49 +15,71 @@
                 :paginationEnabled = "false"
                 :loop = "true"
                 :autoplaySpeed = "true"
-                :autoplayTimeout = "5000"
+                :autoplayTimeout = "7000"
                 :perPageCustom = "[[0, 1],[768, 2],[1200, 3], [1500, 4]]"
             >
                 <slide>
                     <div class="single-works carousel-green-hover">
-                        <img src="../resources/aggregate.png">
+                        <img src="../resources/carousel1.png">
                         <a v-if="windowWidth > 767" @click="index = 0;$refs['modal-zoom'].show()" style="cursor: pointer;" class="icon"><feather type="zoom-in"></feather></a>
 
                         <div class="works-content">
-                            <h3><a href="#">Upload your meme background</a></h3>
+                            <h3><a href="#">Upload image for meme background</a></h3>
                         </div>
                     </div>
                 </slide>
 
                 <slide>
                     <div class="single-works carousel-green-hover">
-                        <img src="../resources/upvotes.png">
+                        <img src="../resources/carousel2.png">
                         <a v-if="windowWidth > 767" @click="index = 1;$refs['modal-zoom'].show()" style="cursor: pointer;" class="icon"><feather type="zoom-in"></feather></a>
 
                         <div class="works-content">
-                            <h3><a href="#">Select photos to extract faces</a></h3>
+                            <h3><a href="#">Upload photo to crop face</a></h3>
                         </div>
                     </div>
                 </slide>
 
                 <slide>
                     <div class="single-works carousel-green-hover">
-                        <img src="../resources/emoji.png" >
+                        <img src="../resources/carousel3.png" >
                         <a v-if="windowWidth > 767" @click="index = 2;$refs['modal-zoom'].show()" style="cursor: pointer;" class="icon"><feather type="zoom-in"></feather></a>
 
                         <div class="works-content">
-                            <h3><a href="#">Personalize your meme</a></h3>
+                            <h3><a href="#">Position face to create a meme</a></h3>
                         </div>
                     </div>
                 </slide>
 
                 <slide>
                     <div class="single-works carousel-green-hover">
-                        <img src="../resources/annotate.png" >
+                        <img src="../resources/carousel4.png" >
                         <a v-if="windowWidth > 767" @click="index = 3;$refs['modal-zoom'].show()" style="cursor: pointer;" class="icon"><feather type="zoom-in"></feather></a>
 
                         <div class="works-content">
-                            <h3><a href="#">Easily add the relevant text</a></h3>
+                            <h3><a href="#">Remove background from photo</a></h3>
+                        </div>
+                    </div>
+                </slide>
+
+                <slide>
+                    <div class="single-works carousel-green-hover">
+                        <img src="../resources/carousel5.png" >
+                        <a v-if="windowWidth > 767" @click="index = 4;$refs['modal-zoom'].show()" style="cursor: pointer;" class="icon"><feather type="zoom-in"></feather></a>
+
+                        <div class="works-content">
+                            <h3><a href="#">Add some text</a></h3>
+                        </div>
+                    </div>
+                </slide>
+
+                <slide>
+                    <div class="single-works carousel-green-hover">
+                        <img src="../resources/carousel6.png" >
+                        <a v-if="windowWidth > 767" @click="index = 5;$refs['modal-zoom'].show()" style="cursor: pointer;" class="icon"><feather type="zoom-in"></feather></a>
+
+                        <div class="works-content">
+                            <h3><a href="#">Download your finished meme</a></h3>
                         </div>
                     </div>
                 </slide>
@@ -81,20 +103,28 @@ export default {
             index: 0,
             modalProperties: [
                 {
-                   title : "Upload your meme background",
-                   img: "./aggregate.png"
+                   title : "Upload image for meme background",
+                   img: "./carousel1.png"
                 },
                 {
-                    title : "Select photos to extract faces",
-                    img: "./upvotes.png"
+                    title : "Upload photo to crop face",
+                    img: "./carousel2.png"
                 },
                 {
-                    title : "Personalize your meme",
-                    img: "./emoji.png"
+                    title : "Position face to create a meme",
+                    img: "./carousel3.png"
                 },
                 {
-                    title : "Easily add the relevant text",
-                    img: "./annotate.png"
+                    title : "Remove background from photo",
+                    img: "./carousel4.png"
+                },
+                {
+                    title : "Add some text",
+                    img: "./carousel5.png"
+                },
+                {
+                    title : "Download your finished meme",
+                    img: "./carousel6.png"
                 }
 
             ]
