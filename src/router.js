@@ -10,6 +10,9 @@ import RemoveBackgroundMemes from "./ideas/memes/RemoveBackgroundMemes";
 import AddTextMemes from "./ideas/memes/AddTextMemes";
 import DownloadMemes from "./ideas/memes/DownloadMemes";
 
+import PhotoPopup from "./ideas/memes/PhotoPopup";
+
+
 export const router = new VueRouter({
     mode: 'history',
     linkExactActiveClass: 'active',
@@ -25,6 +28,7 @@ export const router = new VueRouter({
       { path: '/remove-background', component: RemoveBackgroundMemes },
       { path: '/add-text', component: AddTextMemes },
       { path: '/download-meme', component: DownloadMemes },
+      { path: '/photo', component: PhotoPopup },
       // otherwise redirect to home
       { path: '*', redirect: '/' }
     ]
