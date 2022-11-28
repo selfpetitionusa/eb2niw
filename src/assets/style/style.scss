@@ -5546,6 +5546,47 @@ input[type="range"]::-ms-fill-upper {
     }
 }
 
+.btn-cancel-dark {
+    color: #0e314c;
+    background-color: $white-color;
+    width: 9rem;
+    margin-right: 20px;
+    box-shadow: 0 13px 27px 0 rgba(14, 49, 76, .15);
+
+    &:hover, &:focus, &:active {
+        color: $white-color;
+        box-shadow: 0 13px 27px 0 rgba(14, 49, 76, .15);
+    }
+
+    &::after, &::before {
+        background-color: #0e314c;
+    }
+}
+
+.btn-border-dark {
+    border: 1px solid #0e314c;
+
+    &:hover, &:focus, &:active {
+        border: none;
+    }
+
+    &.focus, &:focus {
+        border: none;
+    }
+
+    &:not(:disabled):not(.disabled).active:focus, &:not(:disabled):not(.disabled):active:focus, .show>.btn-primary.dropdown-toggle:focus {
+        border: none;
+    }
+
+    &:not(:disabled):not(.disabled).active, &:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+        border: none;
+    }
+
+    &.disabled, &:disabled {
+        border: none;
+    }
+}
+
 .btn-save {
     width: 9rem;
 }
