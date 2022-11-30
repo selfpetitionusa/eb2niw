@@ -1,67 +1,107 @@
 <template>
-    <div class="container" style="padding-top: 4rem; padding-bottom: 4rem">
-        <div id="meme">
+  <div class="container" style="padding-top: 4rem; padding-bottom: 4rem">
+    <div id="meme">
 
-            <canvas id="canvas" v-bind:width="width" v-bind:height="height" style="margin-bottom: 1rem"></canvas>
+      <canvas id="canvas" v-bind:width="width" v-bind:height="height" style="margin-bottom: 1rem"></canvas>
 
-            <div class="row">
-              <div class="col-sm-6">
-                  <!-- Image settings -->
-                  <div class="form-group" style="margin-bottom: 2rem">
-                    <label for="image" class="control-label" style="margin-right: 10px">
-                        Upload custom image:
-                    </label>
-                    <input type="file" id="image" @change="onFileChange">
-                  </div>
+      <!-- Image settings -->
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="form-group" style="margin-bottom: 2rem">
+            <label for="image" class="control-label" style="margin-right: 10px">
+                Upload custom image:
+            </label>
+            <input type="file" id="image" @change="onFileChange">
+          </div>
 
-                  <div class="form-group">
-                    <label for="width" class="control-label">
-                        Image width
-                    </label>
-                    <input type="number" id="width" v-model="width" class="form-control">
-                  </div>
+          <div class="form-group">
+            <label for="width" class="control-label">
+                Image width
+            </label>
+            <input type="number" id="width" v-model="width" class="form-control">
+          </div>
 
-                  <div class="form-group">
-                    <label for="height" class="control-label">
-                        Image height
-                    </label>
-                    <input type="number" id="height" v-model="height" class="form-control">
-                  </div>
-              
-              
-                  <!-- Text settings -->
-                  <div class="form-group">
-                    <label for="text" class="control-label">
-                        Add text
-                    </label>
-                    <textarea id="text" v-model="text" class="form-control" rows="8" @keyup="onTextChange" placeholder="Write your text"></textarea>
-                  </div>
+          <div class="form-group">
+            <label for="height" class="control-label">
+                Image height
+            </label>
+            <input type="number" id="height" v-model="height" class="form-control">
+          </div>
+        </div>
+      </div>
 
-                  <div class="row">                  
-                    <div class="form-group col-sm-3">
-                      <label for="textStrokeStyle" class="control-label" style="margin-right: 5px">
-                          Stroke
-                      </label>
-                      <input type="color" id="textStrokeStyle" v-model="textStrokeStyle" @change="onTextChange">
-                    </div>
 
-                    <div class="form-group col-sm-3">
-                      <label for="textFillStyle" class="control-label" style="margin-right: 5px">
-                          Fill
-                      </label>
-                      <input type="color" id="textFillStyle" v-model="textFillStyle" @change="onTextChange">
-                    </div>
-                  </div>
+      <!-- Photo crop -->
+      <div class="row" style="margin-top: 4rem;">
+        <div class="col-12">
+          <div class="container" style="background-color: #eee; padding-top: 2rem">
+            <div class="row justify-content-md-center">
+              <div class="col-xs-12 col-md-6">
+                <vue-croppie
+                    ref="croppieRef"
+                    :enableOrientation="true"
+                    @result="result"
+                    :boundary="{height: 350, width: 350}"
+                    :viewport="{ width:250, height:250, 'type':'circle' }"
+                    @update="update"
+                    :croppieInitialized="croppieInitialized">
+                </vue-croppie>
+              </div>
+              <div class="col-xs-12 col-md-6">
+                <img width="350" :src="cropped" alt="" class="rounded mx-auto d-block img-thumbnail" style="min-height: 350px;">
               </div>
             </div>
+          </div>
+          
+          <div class="row mt-5 mb-5">
+            <div class="col-xs-12 col-md-12 text-left">
+              <button class="btn btn-dark" @click="bind()" style="margin-right: 5px">Bind</button>
+              <button class="btn btn-dark" @click="rotate(+90)" style="margin-right: 5px">Rotate Left</button>
+              <button class="btn btn-dark" @click="rotate(-90)" style="margin-right: 5px">Rotate Right</button>
+              <button class="btn btn-dark" @click="crop()">Crop</button>
+            </div>
+          </div>
+        
+        </div>
+      </div>
 
-            <div class="row" style="margin-top: 2rem; margin-bottom: 3rem">
-              <a class="col-sm-3 btn btn-primary btn-register btn-profile" download="Meme.png" @click="download" id="download" href="#" style="margin-right: 10px">Download</a>
-              <button type="button" class="btn btn-primary btn-assess" @click="reset">Reset</button>
+        
+      <!-- Text settings -->
+      <div class="row" style="margin-top: 4rem">
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label for="text" class="control-label">
+                Add text
+            </label>
+            <textarea id="text" v-model="text" class="form-control" rows="8" @keyup="onTextChange" placeholder="Write your text"></textarea>
+          </div>
+
+          <div class="row">                  
+            <div class="form-group col-sm-3">
+              <label for="textStrokeStyle" class="control-label" style="margin-right: 5px">
+                  Stroke
+              </label>
+              <input type="color" id="textStrokeStyle" v-model="textStrokeStyle" @change="onTextChange">
             </div>
 
+            <div class="form-group col-sm-3">
+              <label for="textFillStyle" class="control-label" style="margin-right: 5px">
+                  Fill
+              </label>
+              <input type="color" id="textFillStyle" v-model="textFillStyle" @change="onTextChange">
+            </div>
+          </div>
         </div>
+      </div>
+    
+
+      <div class="row" style="margin-top: 2rem; margin-bottom: 3rem">
+        <a class="col-sm-3 btn btn-primary btn-register btn-profile" download="Meme.png" @click="download" id="download" href="#" style="margin-right: 10px">Download</a>
+        <button type="button" class="btn btn-primary btn-assess" @click="reset">Reset</button>
+      </div>
+
     </div>
+  </div>
 </template>
 
 <script>
