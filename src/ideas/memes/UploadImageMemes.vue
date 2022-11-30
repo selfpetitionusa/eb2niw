@@ -66,6 +66,8 @@
 
 <script>
 
+// https://github.com/rozklad/vue-meme-generator
+
   CanvasRenderingContext2D.prototype.wrapFillText = function (text, x, y, maxWidth, lineHeight) {
 
       var lines = text.split("\n");
