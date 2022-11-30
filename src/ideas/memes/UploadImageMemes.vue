@@ -166,8 +166,26 @@
 
   export default {
     name: '#meme',
+    mounted () {
+      // Upon mounting of the component, we accessed the .bind({...})
+      // function to put an initial image on the canvas.
+      this.$refs.croppieRef.bind({
+        url: 'http://i.imgur.com/Fv2YOM6.jpg'
+      })
+      setTimeout(() => {
+        this.crop()
+      }, 1000)
+    },
     data() {
         return {
+            cropped: null,
+            images: [
+              'http://i.imgur.com/fHNtPXX.jpg',
+              'http://i.imgur.com/ecMUngU.jpg',
+              'http://i.imgur.com/7oO6zrh.jpg',
+              'http://i.imgur.com/miVkBH2.jpg',
+              'http://i.imgur.com/Fv2YOM6.jpg'
+            ],
             canvasElementId: 'canvas',
             width: 600,
             height: 400,
@@ -190,6 +208,56 @@
         }
     },
     methods: {
+
+      bind() {
+        // Randomize cat photos, nothing special here.
+        let url = this.images[Math.floor(Math.random() * this.images.length)];
+        // Just like what we did with .bind({...}) on 
+        // the mounted() function above.
+        this.$refs.croppieRef.bind({
+          url: url,
+        });
+      },
+
+      // CALLBACK USAGE
+      crop() {
+        // Here we are getting the result via callback function
+        // and set the result to this.cropped which is being 
+        // used to display the result above.
+        let options = {
+          format: 'jpeg'
+        }
+        this.$refs.croppieRef.result(options, (output) => {
+          this.cropped = output;
+        });
+      },
+
+      // EVENT USAGE
+      cropViaEvent() {
+        this.$refs.croppieRef.result(this.options);
+      },
+
+      result(output) {
+        this.cropped = output;
+      },
+
+      update(val) {
+        console.log(val);
+      },
+
+      rotate(rotationAngle) {
+        // Rotates the image
+        this.$refs.croppieRef.rotate(rotationAngle);
+      },
+
+      croppieInitialized() {
+        // This method will be executed when the croppie is initialized
+        // You can use it to set the image
+        // this.$refs.croppieRef.bind({
+        //   url: 'http://i.imgur.com/Fv2YOM6.jpg',
+        // });
+        console.log('Croppie was initialized');
+      },
   
       onFileChange: function(event) {
         var files = event.target.files || event.dataTransfer.files;
