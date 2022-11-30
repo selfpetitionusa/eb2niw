@@ -6138,10 +6138,25 @@ Green card
 
 // Possible options to configure video  https://github.com/sampotts/plyr
 
+
+
+/*================================================
+Memes
+=================================================*/
+
 html{
   --plyr-color-main: rgba(84, 87, 193, 1);
 }
 
+
+.preset img {
+    width: 100%;
+    height: auto;
+  }
+  
+#canvas {
+background-color: #eee;
+}
 
 /*================================================
 Testing Environment
