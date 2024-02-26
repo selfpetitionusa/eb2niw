@@ -1,4 +1,4 @@
-# tutomy-frontend
+# MVP
 
 ## Project setup
 ```

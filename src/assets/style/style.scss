@@ -85,6 +85,7 @@ $bg-color: #f7fafd;
 $bg-color2: #f9f6f6;
 $hosting-main-color: #032b8d;
 $gradient-color: linear-gradient(35deg, #000 85%, #43e794 50%);
+$gradient-color-A: linear-gradient(35deg, #0b5345 85%, #DDAC4A 50%);
 $gradient-color2: linear-gradient(to right bottom, #1fa2ff, #00c0ff, #00d9f2, #53eedd, #a6ffcb);
 $transition: .5s;
 $font-size: 14px;
@@ -760,7 +761,7 @@ Navbar CSS
                 background-color: $white-color;
                 border: 1px solid #eeeeee;
                 margin-top: 15px;
-                height: 320px;
+                height: 200px;
                 display: block;
                 overflow-y: scroll;
                 padding: {
@@ -831,7 +832,6 @@ Navbar CSS
     }
 
 }
-
 
 /*================================================
 Main Banner CSS
@@ -1494,7 +1494,7 @@ Services CSS
             top: 0;
             height: 100%;
             width: 100%;
-            background: $gradient-color;
+            background: $gradient-color-A;
             opacity: 0;
             visibility: hidden;
             position: absolute;
@@ -3095,7 +3095,7 @@ Works CSS
 =================================================*/
 .works-area {
     position: relative;
-    z-index: 2;
+    z-index: 1;
     padding-bottom: 50px;
 }
 
@@ -3121,7 +3121,7 @@ Works CSS
 }
 
 .carousel-green-hover::before {
-    background: linear-gradient(35deg, #000 85%, #43e794 50%);
+    background: linear-gradient(135deg, #43e794 0%, #23bdb8 70%);
     -webkit-transition: 0.5s;
     transition: 0.5s;
 }
@@ -3138,22 +3138,21 @@ Works CSS
         font-weight: 500;
         position: absolute;
         z-index: 2;
-        margin-top: 1.5rem;
         margin-left: auto;
         margin-right: auto;
+        top: 20%;
         left: 0;
         right: 0;
         text-align: center;
     }
 
     .glass-zoom {
-        margin-top: 4.5rem;
         position: absolute;
         z-index: 2;
         width: 8rem;
-        margin-top: 4.3rem;
         margin-left: auto;
         margin-right: auto;
+        top: 31%;
         left: 0;
         right: 0;
         text-align: center;
@@ -3233,6 +3232,7 @@ Works CSS
     visibility: visible;
     bottom: 0;
 }
+
 
 /*==========================================
 Contact CSS
@@ -6134,7 +6134,65 @@ Green card
     }
 }
 
+.features-list {
+    list-style-type: none;
+    padding-left: 15px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
 
+.features-list li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 25px;
+}
+
+.features-list li i {
+    color: #44ce6f;
+    display: inline-block;
+    width: 20px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.btn-sample-redirect {
+    height: 40px; 
+    font-size: 13px; 
+    margin-top: 20px; 
+    margin-bottom: 20px; 
+    width: 50%;
+    border: 1px solid #44ce6f;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 991px) {
+    .robot-img {
+        display: none;
+    }
+
+    .btn-center {
+        display: flex;
+        justify-content: center;
+    }
+
+    .banner-subtitle h3 {
+        font-size: 18px;
+    }
+
+    .banner-title {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 767px) {
+    .banner-subtitle {
+        display: none;
+    }
+}
 
 // Possible options to configure video  https://github.com/sampotts/plyr
 
