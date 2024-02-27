@@ -1,5 +1,5 @@
 export default {
 
-    apiUrl: 'https://github.com/selfpetitionusa/eb2niw.com'
+    apiUrl: 'https://selfpetitionusa.github.io/eb2niw/'
 
 }
