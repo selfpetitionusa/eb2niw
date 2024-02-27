@@ -28,9 +28,9 @@
             </div>
         </div>
 
-        <img src="../resources/map.png" class="map" alt="national interest waiver examples">
-        <div class="shape1"><img src="../resources/shape1.png" alt="national interest waiver templates"></div>
-        <div class="shape8 rotateme"><img src="../resources/shape2.svg" alt="niw templates"></div>
+        <img src="../../../assets/img/map.png" class="map" alt="national interest waiver examples">
+        <div class="shape1"><img src="../../../assets/img/shape1.png" alt="national interest waiver templates"></div>
+        <div class="shape8 rotateme"><img src="../../../assets/img/shape2.svg" alt="niw templates"></div>
     </footer>
     <!-- End Footer Area -->
 </template>
